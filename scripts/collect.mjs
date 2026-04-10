@@ -268,6 +268,7 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
   const genericFallbackPattern =
     /の更新です。.+に関する内容で、.+(?:案内されています|進行中です|廃止や移行対応が案内されています|更新内容が案内されています)。/;
   return (
+    !isLikelyJapanese(String(summaryJa ?? "")) ||
     genericFallbackPattern.test(String(summaryJa ?? "")) ||
     (source.sourceFamily === "Tech Community" &&
       /公開ドキュメント由来の更新です。?$/.test(String(summaryJa ?? "")))
