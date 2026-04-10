@@ -1,0 +1,163 @@
+name: Request Copilot review
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - ready_for_review
+      - synchronize
+      - edited
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  request-review:
+    if: github.event.pull_request.head.repo.full_name == github.repository && (contains(github.event.pull_request.user.login, 'copilot') || contains(github.event.pull_request.body, 'Generated from data/events/') || contains(github.event.pull_request.title, 'Digest automation request'))
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Label and normalize generated PR
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const marker = '<!-- copilot-review-requested -->';
+            const normalizedMarker = '<!-- copilot-metadata-normalized -->';
+            const prNumber = context.payload.pull_request.number;
+
+            function resolveDateKey(pr, files) {
+              const eventFile = files
+                .map((file) => file.filename.match(/^data\/events\/(\d{4}-\d{2}-\d{2})\.json$/))
+                .find(Boolean);
+              if (eventFile) {
+                return eventFile[1];
+              }
+
+              const summaryFile = files
+                .map((file) => file.filename.match(/^summaries\/daily\/(\d{4}-\d{2}-\d{2})\.md$/))
+                .find(Boolean);
+              if (summaryFile) {
+                return summaryFile[1];
+              }
+
+              const bodyMatch = (pr.body || '').match(/Generated from `?data\/events\/(\d{4}-\d{2}-\d{2})\.json`?/);
+              if (bodyMatch) {
+                return bodyMatch[1];
+              }
+
+              const titleMatch = (pr.title || '').match(/(\d{4}-\d{2}-\d{2})/);
+              return titleMatch ? titleMatch[1] : null;
+            }
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              labels: ['copilot', 'auto-pr'],
+            });
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              per_page: 100,
+            });
+
+            const pull = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+            });
+            const pr = pull.data;
+            const dateKey = resolveDateKey(pr, files);
+
+            if (dateKey) {
+              const expectedTitle = `chore: improve digest automation ${dateKey}`;
+              const expectedMarkerLine = `Generated from data/events/${dateKey}.json`;
+              let nextBody = pr.body || '';
+
+              if (/Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/.test(nextBody)) {
+                nextBody = nextBody.replace(
+                  /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/,
+                  expectedMarkerLine,
+                );
+              } else {
+                nextBody = [expectedMarkerLine, '', nextBody].filter(Boolean).join('\n');
+              }
+
+              const automationIssues = await github.paginate(github.rest.issues.listForRepo, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'digest-automation',
+                per_page: 100,
+              });
+              const linkedIssue = automationIssues.find((issue) =>
+                !issue.pull_request && issue.title === `Digest automation request: ${dateKey}`,
+              );
+
+              if (
+                linkedIssue &&
+                !new RegExp(`(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\\s+#${linkedIssue.number}\\b`, 'i').test(nextBody)
+              ) {
+                nextBody = [nextBody, '', `Closes #${linkedIssue.number}`].filter(Boolean).join('\n');
+              }
+
+              if (pr.title !== expectedTitle || nextBody !== (pr.body || '')) {
+                await github.rest.pulls.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: prNumber,
+                  title: expectedTitle,
+                  body: nextBody,
+                });
+              }
+            }
+
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+                reviewers: ['copilot'],
+              });
+            } catch (error) {
+              core.warning(`Could not request Copilot reviewer via API: ${error.message}`);
+            }
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              per_page: 100,
+            });
+
+            if (dateKey && !comments.some((comment) => comment.body?.includes(normalizedMarker))) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: [
+                  normalizedMarker,
+                  `Generated PR metadata was normalized automatically for ${dateKey}.`,
+                  '- Title and source marker were aligned to the repository PR convention.',
+                ].join('\n'),
+              });
+            }
+
+            if (!comments.some((comment) => comment.body?.includes(marker))) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: [
+                  marker,
+                  'Copilot-generated PR was labeled for automation.',
+                  '- Copilot reviewer request was attempted.',
+                  '- Merge is gated by Validate generated PR and needs-human-review.',
+                ].join('\n'),
+              });
+            }

@@ -1,0 +1,172 @@
+name: Validate generated PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+      - edited
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      PR_TITLE: ${{ github.event.pull_request.title }}
+      PR_BODY: ${{ github.event.pull_request.body }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Collect changed files
+        id: changed
+        shell: bash
+        run: |
+          base_ref="origin/${{ github.base_ref }}"
+          git fetch --no-tags --prune origin "${{ github.base_ref }}" --depth=50
+          merge_base="$(git merge-base "$base_ref" HEAD || true)"
+
+          if [ -z "$merge_base" ]; then
+            git fetch --no-tags --prune origin "${{ github.base_ref }}" --depth=500
+            merge_base="$(git merge-base "$base_ref" HEAD || true)"
+          fi
+
+          if [ -z "$merge_base" ]; then
+            git fetch --no-tags --prune origin "${{ github.base_ref }}" --unshallow || true
+            merge_base="$(git merge-base "$base_ref" HEAD || true)"
+          fi
+
+          if [ -z "$merge_base" ]; then
+            echo "Could not determine a merge base with $base_ref" >&2
+            exit 1
+          fi
+
+          {
+            echo 'files<<EOF'
+            git diff --name-only "$merge_base..HEAD"
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Validate changed paths
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+        run: |
+          node <<'NODE'
+          const changed = (process.env.CHANGED_FILES || '').split(/\r?\n/).filter(Boolean);
+          const allowed = [
+            /^scripts\/collect\.mjs$/,
+            /^scripts\/lib\/reporting\.mjs$/,
+            /^config\/sources\.json$/,
+            /^config\/summary-ja-cache\.json$/,
+            /^data\/events\/.*\.json$/,
+            /^summaries\/daily\/.*\.md$/,
+            /^data\/state\.json$/,
+            /^data\/run-summary\.json$/,
+          ];
+          const blocked = changed.filter((file) => !allowed.some((pattern) => pattern.test(file)));
+          if (blocked.length > 0) {
+            console.error('Generated PR changed files outside the allow-list:');
+            for (const file of blocked) {
+              console.error(`- ${file}`);
+            }
+            process.exit(1);
+          }
+          NODE
+
+      - name: Validate PR metadata
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+        run: |
+          node <<'NODE'
+          const title = process.env.PR_TITLE || '';
+          const body = process.env.PR_BODY || '';
+          const changed = (process.env.CHANGED_FILES || '').split(/\r?\n/).filter(Boolean);
+          const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
+          const requestTitlePattern = /^Digest automation request: \d{4}-\d{2}-\d{2}$/;
+          const copilotWipTitlePattern = /^\[WIP\] .*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4})$/;
+          const bodyPattern = /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/;
+          const inferableSource =
+            bodyPattern.test(body) ||
+            changed.some((file) => /^data\/events\/\d{4}-\d{2}-\d{2}\.json$/.test(file)) ||
+            changed.some((file) => /^summaries\/daily\/\d{4}-\d{2}-\d{2}\.md$/.test(file)) ||
+            titlePattern.test(title);
+          const isPendingNormalization = requestTitlePattern.test(title) || copilotWipTitlePattern.test(title);
+
+          if (!titlePattern.test(title) && !isPendingNormalization) {
+            console.error(`PR title does not match the generated PR rule: ${title}`);
+            process.exit(1);
+          }
+
+          if (!inferableSource && !isPendingNormalization) {
+            console.error('PR metadata is missing an inferable source date.');
+            process.exit(1);
+          }
+          NODE
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate collect command
+        run: npm run collect
+
+      - name: Validate Pages build
+        run: npm run build:pages
+
+      - name: Validate localization quality
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const eventsDir = path.join(process.cwd(), 'data', 'events');
+          const genericPattern = /の更新です。.+に関する内容で、.+(案内されています|進行中です|更新内容が案内されています|廃止や移行対応が案内されています)。/;
+          const nonJapanese = [];
+          const genericSummaries = [];
+          const invalidTitles = [];
+
+          for (const file of fs.readdirSync(eventsDir).filter((name) => name.endsWith('.json'))) {
+            const log = JSON.parse(fs.readFileSync(path.join(eventsDir, file), 'utf8'));
+            for (const event of log.events || []) {
+              const titleJa = String(event.titleJa || '');
+              const summaryJa = String(event.summaryJa || '');
+              if (!/[\u3040-\u30ff\u3400-\u9fff]/.test(titleJa)) {
+                nonJapanese.push(`${file}: ${event.titleEn || event.title}`);
+              }
+              if (genericPattern.test(summaryJa)) {
+                genericSummaries.push(`${file}: ${event.titleEn || event.title}`);
+              }
+              if (/^Last updated on$/i.test(String(event.titleEn || event.title || ''))) {
+                invalidTitles.push(`${file}: ${event.titleEn || event.title}`);
+              }
+            }
+          }
+
+          if (nonJapanese.length > 0 || genericSummaries.length > 0 || invalidTitles.length > 0) {
+            if (nonJapanese.length > 0) {
+              console.error('Non-Japanese titleJa entries remain:');
+              for (const line of nonJapanese.slice(0, 20)) console.error(`- ${line}`);
+            }
+            if (genericSummaries.length > 0) {
+              console.error('Generic fallback summaries remain:');
+              for (const line of genericSummaries.slice(0, 20)) console.error(`- ${line}`);
+            }
+            if (invalidTitles.length > 0) {
+              console.error('Invalid Last updated on entries remain:');
+              for (const line of invalidTitles.slice(0, 20)) console.error(`- ${line}`);
+            }
+            process.exit(1);
+          }
+          NODE

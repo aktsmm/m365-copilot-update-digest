@@ -1,0 +1,310 @@
+name: Author automation PR
+
+on:
+  workflow_run:
+    workflows:
+      - Collect updates
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      date_key:
+        description: Target date (YYYY-MM-DD). Leave blank to use the latest event log.
+        required: false
+        type: string
+      force_issue:
+        description: Create or update the issue even if the latest run has 0 new events.
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  author-request:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Prepare automation target
+        id: target
+        uses: actions/github-script@v8
+        env:
+          MANUAL_DATE_KEY: ${{ inputs.date_key }}
+          FORCE_ISSUE: ${{ inputs.force_issue }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const workspace = process.env.GITHUB_WORKSPACE;
+            const eventsDir = path.join(workspace, 'data', 'events');
+            const runSummaryPath = path.join(workspace, 'data', 'run-summary.json');
+            const files = fs.readdirSync(eventsDir)
+              .filter((file) => file.endsWith('.json'))
+              .sort();
+            if (files.length === 0) {
+              core.setOutput('should_run', 'false');
+              return;
+            }
+
+            const requestedDateKey = (process.env.MANUAL_DATE_KEY || '').trim();
+            const selectedFile = requestedDateKey ? `${requestedDateKey}.json` : files[files.length - 1];
+            if (!files.includes(selectedFile)) {
+              core.setFailed(`Event log not found: ${selectedFile}`);
+              return;
+            }
+
+            const dateKey = selectedFile.replace(/\.json$/, '');
+            const eventLog = JSON.parse(fs.readFileSync(path.join(eventsDir, selectedFile), 'utf8'));
+            const runSummary = fs.existsSync(runSummaryPath)
+              ? JSON.parse(fs.readFileSync(runSummaryPath, 'utf8'))
+              : { newEventCount: 0, errorCount: 0 };
+            const forceIssue = process.env.FORCE_ISSUE === 'true';
+            const genericPattern = /の更新です。.+に関する内容で、.+(案内されています|進行中です|更新内容が案内されています|廃止や移行対応が案内されています)。/;
+            const isLikelyJapanese = (value) => /[\u3040-\u30ff\u3400-\u9fff]/.test(String(value || ''));
+
+            const suspicious = (eventLog.events || []).filter((event) =>
+              !isLikelyJapanese(event.titleJa) ||
+              !isLikelyJapanese(event.summaryJa) ||
+              event.titleJa === (event.titleEn || event.title) ||
+              event.summaryJa === (event.summaryEn || event.summary) ||
+              genericPattern.test(event.summaryJa || '') ||
+              /^Last updated on$/i.test(event.titleEn || event.title || ''),
+            );
+
+            if (Number(runSummary.newEventCount || 0) === 0 && suspicious.length === 0 && !forceIssue) {
+              core.info(`No new events or suspicious localizations found for ${dateKey}.`);
+              core.setOutput('should_run', 'false');
+              return;
+            }
+
+            const highlights = (eventLog.events || [])
+              .slice(0, 6)
+              .map((event, index) => `${index + 1}. ${event.titleJa || event.title}\n   - ${event.url}`)
+              .join('\n');
+
+            const suspiciousList = suspicious
+              .slice(0, 12)
+              .map((event, index) => `${index + 1}. ${event.titleEn}\n   - titleJa: ${event.titleJa || '(empty)'}\n   - summaryJa: ${(event.summaryJa || '(empty)').slice(0, 160)}`)
+              .join('\n');
+
+            const body = [
+              '## Cloud automation improvement request',
+              '',
+              'GitHub Copilot Cloud Agent で、このリポジトリの収集・翻訳ロジック改善を行い、PR を作成してください。',
+              '',
+              '### 対象データ',
+              `- 最新イベント: \`data/events/${dateKey}.json\``,
+              '- 実行概要: `data/run-summary.json`',
+              `- 日次 Markdown: \`summaries/daily/${dateKey}.md\``,
+              '',
+              '### 触ってよいファイル',
+              '- `scripts/collect.mjs`',
+              '- `scripts/lib/reporting.mjs`',
+              '- `config/sources.json`',
+              '- `config/summary-ja-cache.json`',
+              '- `data/events/**` と `summaries/daily/**` と `data/state.json` と `data/run-summary.json` のうち、`npm run collect` で再生成されるもの',
+              '',
+              '### やってほしいこと',
+              `1. \`data/events/${dateKey}.json\` を読み、英語のまま残っている titleJa / summaryJa、generic fallback、誤分類 title を確認する`,
+              '2. 必要なら `scripts/collect.mjs` と `scripts/lib/reporting.mjs` と `config/sources.json` を更新する',
+              '3. `npm run collect` を実行して生成物を更新する',
+              '4. `npm run build:pages` を実行して壊れていないことを確認する',
+              '5. 変更を PR として作成する',
+              '',
+              '### 制約',
+              '- `public/assets/**` や workflow ファイルは触らない',
+              '- `site/**` はコミットしない',
+              '- 不確実なら `needs-human-review` を付けて停止する',
+              '',
+              '### PR ルール',
+              `- PR タイトルは \`chore: improve digest automation ${dateKey}\``,
+              `- PR 本文に \`Generated from data/events/${dateKey}.json\` を含める`,
+              '',
+              '### 新着ハイライト',
+              highlights || '- なし',
+              '',
+              '### 要確認の候補',
+              suspiciousList || '- なし',
+            ].join('\n');
+
+            core.setOutput('should_run', 'true');
+            core.setOutput('date_key', dateKey);
+            core.setOutput('issue_title', `Digest automation request: ${dateKey}`);
+            core.setOutput('issue_body', body);
+
+      - name: Create or update automation issue and assign Copilot
+        id: automation_issue
+        if: steps.target.outputs.should_run == 'true'
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.COPILOT_ASSIGN_TOKEN || github.token }}
+          script: |
+            const marker = '<!-- copilot-automation-request -->';
+            const title = process.env.ISSUE_TITLE;
+            const body = process.env.ISSUE_BODY;
+            const labels = ['copilot', 'digest-automation', 'auto-pr'];
+            const copilotLogins = new Set(['Copilot', 'copilot-swe-agent']);
+            const assignmentInstructions = [
+              'Allowed edits are limited to the files listed in the issue body.',
+              'Run npm run collect and npm run build:pages before opening the PR.',
+              'If confidence is low, add needs-human-review and stop.',
+            ].join('\n');
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'digest-automation',
+              per_page: 100,
+            });
+            const existing = issues.find((issue) => issue.title === title && !issue.pull_request);
+
+            let issueNumber;
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+              issueNumber = existing.number;
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels,
+              });
+              issueNumber = created.data.number;
+            }
+
+            await github.rest.issues.setLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              labels,
+            });
+
+            let assignmentStatus = 'manual-required';
+            let assignmentDetail = 'Copilot actor was not resolved.';
+
+            try {
+              const assignmentContext = await github.graphql(
+                `query($owner: String!, $repo: String!) {
+                  repository(owner: $owner, name: $repo) {
+                    id
+                    suggestedActors(capabilities: [CAN_BE_ASSIGNED], first: 20) {
+                      nodes {
+                        login
+                        __typename
+                        ... on Bot { id }
+                        ... on User { id }
+                      }
+                    }
+                  }
+                }`,
+                {
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                },
+              );
+
+              const currentIssue = await github.rest.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+              });
+
+              const issueId = currentIssue.data.node_id;
+              const repositoryId = assignmentContext.repository.id;
+              const existingAssignees = currentIssue.data.assignees ?? [];
+              const copilotActor = (assignmentContext.repository.suggestedActors?.nodes ?? []).find(
+                (actor) => copilotLogins.has(actor.login) && actor.id,
+              );
+
+              if (issueId && repositoryId && copilotActor?.id) {
+                if (existingAssignees.some((assignee) => copilotLogins.has(assignee.login))) {
+                  assignmentStatus = 'already-assigned';
+                  assignmentDetail = 'Issue already has Copilot assigned.';
+                } else {
+                  await github.graphql(
+                    `mutation($assignableId: ID!, $actorIds: [ID!]!, $targetRepositoryId: ID!, $customInstructions: String!) {
+                      replaceActorsForAssignable(input: {
+                        assignableId: $assignableId,
+                        actorIds: $actorIds,
+                        agentAssignment: {
+                          targetRepositoryId: $targetRepositoryId,
+                          baseRef: "main",
+                          customInstructions: $customInstructions,
+                        }
+                      }) {
+                        assignable {
+                          ... on Issue {
+                            id
+                          }
+                        }
+                      }
+                    }`,
+                    {
+                      assignableId: issueId,
+                      actorIds: [copilotActor.id],
+                      targetRepositoryId: repositoryId,
+                      customInstructions: assignmentInstructions,
+                    },
+                  );
+                  assignmentStatus = 'assigned';
+                  assignmentDetail = 'Workflow assigned Copilot cloud agent successfully.';
+                }
+              }
+            } catch (error) {
+              assignmentStatus = 'manual-required';
+              assignmentDetail = error.message;
+              core.warning(`Failed to assign Copilot via GraphQL: ${error.message}`);
+            }
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              per_page: 100,
+            });
+
+            const commentBody = [
+              marker,
+              'Copilot cloud agent assignment was attempted from workflow.',
+              `- Status: ${assignmentStatus}`,
+              assignmentDetail ? `- Detail: ${assignmentDetail}` : null,
+              '- If assignment did not succeed, use Assign to Agent from the issue sidebar as a fallback.',
+            ].filter(Boolean).join('\n');
+
+            const existingMarkerComment = comments.find((comment) => comment.body?.includes(marker));
+            if (existingMarkerComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existingMarkerComment.id,
+                body: commentBody,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                body: commentBody,
+              });
+            }
+
+            core.setOutput('issue_number', String(issueNumber));
+        env:
+          ISSUE_TITLE: ${{ steps.target.outputs.issue_title }}
+          ISSUE_BODY: ${{ steps.target.outputs.issue_body }}

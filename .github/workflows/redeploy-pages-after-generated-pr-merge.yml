@@ -1,0 +1,28 @@
+name: Redeploy Pages after generated PR merge
+
+on:
+  pull_request_target:
+    types:
+      - closed
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  redeploy:
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.repo.full_name == github.repository && (contains(github.event.pull_request.user.login, 'copilot') || contains(toJson(github.event.pull_request.labels), 'auto-pr'))
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Dispatch Deploy GitHub Pages
+        uses: actions/github-script@v8
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy-pages.yml',
+              ref: 'main',
+            });
+            core.info(`Dispatched Deploy GitHub Pages after generated PR #${context.payload.pull_request.number} merged.`);

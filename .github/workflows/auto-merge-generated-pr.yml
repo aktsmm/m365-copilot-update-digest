@@ -1,0 +1,184 @@
+name: Auto-merge generated PR
+
+on:
+  workflow_run:
+    workflows:
+      - Validate generated PR
+    types:
+      - completed
+
+permissions:
+  actions: write
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Enable auto-merge when PR is safe
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const pullRequests = context.payload.workflow_run.pull_requests || [];
+            if (pullRequests.length === 0) {
+              core.info('No pull request is associated with this workflow run.');
+              return;
+            }
+
+            const pull = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pullRequests[0].number,
+            });
+            let pr = pull.data;
+            const labels = new Set((pr.labels || []).map((label) => label.name));
+            const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
+            const bodyPattern = /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/;
+            const allowed = [
+              /^scripts\/collect\.mjs$/,
+              /^scripts\/lib\/reporting\.mjs$/,
+              /^config\/sources\.json$/,
+              /^config\/summary-ja-cache\.json$/,
+              /^data\/events\/.*\.json$/,
+              /^summaries\/daily\/.*\.md$/,
+              /^data\/state\.json$/,
+              /^data\/run-summary\.json$/,
+            ];
+
+            async function dispatchPagesDeploy() {
+              await github.rest.actions.createWorkflowDispatch({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                workflow_id: 'deploy-pages.yml',
+                ref: 'main',
+              });
+            }
+
+            async function closeLinkedIssuesFromBody(bodyText) {
+              const closingRefs = [...new Set(
+                [...String(bodyText || '').matchAll(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi)]
+                  .map((match) => Number(match[1]))
+                  .filter((value) => Number.isInteger(value)),
+              )];
+
+              for (const issueNumber of closingRefs) {
+                try {
+                  await github.rest.issues.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    state: 'closed',
+                  });
+                } catch (error) {
+                  core.warning(`Failed to close linked issue #${issueNumber}: ${error.message}`);
+                }
+              }
+            }
+
+            async function markForHumanReview(reason) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                labels: ['needs-human-review'],
+              });
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: `Auto-merge stopped: ${reason}`,
+              });
+            }
+
+            if (pr.state !== 'open') {
+              core.info(`PR #${pr.number} is not open.`);
+              return;
+            }
+
+            if (!labels.has('auto-pr') && !(pr.user?.login || '').includes('copilot')) {
+              core.info(`PR #${pr.number} is not marked as a generated PR.`);
+              return;
+            }
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              per_page: 100,
+            });
+
+            const blocked = files
+              .map((file) => file.filename)
+              .filter((file) => !allowed.some((pattern) => pattern.test(file)));
+
+            if (blocked.length > 0) {
+              await markForHumanReview(`PR #${pr.number} changed disallowed files: ${blocked.join(', ')}`);
+              return;
+            }
+
+            if (!titlePattern.test(pr.title || '')) {
+              await markForHumanReview(`PR #${pr.number} title does not match the generated rule: ${pr.title}`);
+              return;
+            }
+
+            if (!bodyPattern.test(pr.body || '')) {
+              await markForHumanReview(`PR #${pr.number} body is missing the source marker.`);
+              return;
+            }
+
+            if (labels.has('needs-human-review')) {
+              core.info(`PR #${pr.number} is marked for human review.`);
+              return;
+            }
+
+            if (pr.draft) {
+              try {
+                await github.graphql(
+                  `mutation($pullRequestId: ID!) {
+                    markPullRequestReadyForReview(input: {pullRequestId: $pullRequestId}) {
+                      pullRequest { number }
+                    }
+                  }`,
+                  { pullRequestId: pr.node_id },
+                );
+                const refreshed = await github.rest.pulls.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pr.number,
+                });
+                pr = refreshed.data;
+              } catch (error) {
+                core.warning(`Failed to mark PR #${pr.number} ready for review: ${error.message}`);
+                return;
+              }
+            }
+
+            try {
+              await github.graphql(
+                `mutation($pullRequestId: ID!) {
+                  enablePullRequestAutoMerge(input: {pullRequestId: $pullRequestId, mergeMethod: SQUASH}) {
+                    pullRequest { number }
+                  }
+                }`,
+                { pullRequestId: pr.node_id },
+              );
+              core.info(`Enabled auto-merge for PR #${pr.number}.`);
+            } catch (error) {
+              if ((error.message || '').includes('Pull request is in clean status')) {
+                await github.rest.pulls.merge({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pr.number,
+                  merge_method: 'squash',
+                });
+                await closeLinkedIssuesFromBody(pr.body || '');
+                await dispatchPagesDeploy();
+                core.info(`Merged PR #${pr.number} directly because auto-merge is not available for clean PRs in this repository.`);
+                return;
+              }
+              core.warning(`Failed to enable auto-merge for PR #${pr.number}: ${error.message}`);
+            }

@@ -66,3 +66,36 @@ npm run build:pages
 - source family ごとのフィルタ拡張
 - AI 要約の後段追加
 - notify / draft 生成の追加
+
+## Cloud Automation
+
+このリポジトリでは、GitHub Actions と GitHub Copilot Cloud Agent を組み合わせた自動運用を前提にできます。
+
+流れ:
+
+1. `Collect updates` が定期実行され、`npm run collect` で収集と翻訳を行う
+2. 生成された `data/**` と `summaries/**` と `config/summary-ja-cache.json` を main に自動 push する
+3. `Deploy GitHub Pages` が Pages を再生成して公開する
+4. `Author automation PR` が最新イベントを見て、改善が必要な場合は Issue を作成し、Copilot Cloud Agent に assignment する
+5. Copilot が PR を作ると `Request Copilot review` と `Validate generated PR` が走る
+6. 検証が通れば `Auto-merge generated PR` が merge し、`Redeploy Pages after generated PR merge` が再デプロイする
+
+必要な設定:
+
+- repository で GitHub Copilot coding agent を有効にする
+- secret `COPILOT_ASSIGN_TOKEN` を設定する
+- token には少なくとも Issues / Pull requests / Contents / Actions を扱える権限を持たせる
+
+Cloud Agent に許可している変更対象:
+
+- `scripts/collect.mjs`
+- `scripts/lib/reporting.mjs`
+- `config/sources.json`
+- `config/summary-ja-cache.json`
+- `npm run collect` で再生成される `data/**` と `summaries/daily/**`
+
+Cloud Agent に触らせないもの:
+
+- `public/assets/**`
+- `site/**`
+- workflow ファイル全般
