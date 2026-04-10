@@ -265,12 +265,14 @@ function isLikelyJapanese(value) {
 }
 
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
+  const normalizedSummaryJa = String(summaryJa ?? "");
   const genericFallbackPattern =
     /の更新です。.+に関する内容で、.+(?:案内されています|進行中です|廃止や移行対応が案内されています|更新内容が案内されています)。/;
   return (
-    genericFallbackPattern.test(String(summaryJa ?? "")) ||
+    !isLikelyJapanese(normalizedSummaryJa) ||
+    genericFallbackPattern.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
-      /公開ドキュメント由来の更新です。?$/.test(String(summaryJa ?? "")))
+      /公開ドキュメント由来の更新です。?$/.test(normalizedSummaryJa))
   );
 }
 
@@ -299,7 +301,10 @@ function buildJapaneseFallbackSummary(event) {
       String(event.summaryEn || event.summary || "")
         .replace(/\bLearn more\.?$/i, "")
         .replace(/\bUpdated [A-Za-z]+ \d{1,2}, \d{4}:.*$/i, "")
-        .replace(/\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi, "")
+        .replace(
+          /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
+          "",
+        )
         .trim(),
     ),
     280,
@@ -309,7 +314,11 @@ function buildJapaneseFallbackSummary(event) {
     return extractedSummary;
   }
 
-  if (/redesigned channels page/.test(String(event.titleEn || event.title || "").toLowerCase())) {
+  if (
+    /redesigned channels page/.test(
+      String(event.titleEn || event.title || "").toLowerCase(),
+    )
+  ) {
     return "Copilot Studio の Channels ページを刷新。";
   }
 
@@ -376,10 +385,6 @@ function buildJapaneseFallbackTitle(event) {
 
   if (/copilot in word/.test(text)) {
     return `Word の Copilot 機能強化`;
-  }
-
-  if (/redesigned channels page/.test(text)) {
-    return `Channels ページを刷新`;
   }
 
   if (/redesigned channels page/.test(text)) {
@@ -648,8 +653,12 @@ function buildJapaneseFallbackTitle(event) {
       : `${event.productArea} の Roadmap 更新`;
   }
 
+  if (/copilot in /.test(titleText)) {
+    return `${event.productArea} の Copilot 機能を更新`;
+  }
+
   if (normalizedTitle) {
-    return excerptText(normalizedTitle, 72);
+    return `${event.productArea} の更新`;
   }
 
   return `${event.productArea} の更新`;
@@ -1508,7 +1517,10 @@ function isInvalidPersistedEvent(event) {
     return true;
   }
 
-  if (/^\d{4}-\d{2}-\d{2}$/.test(summaryEn) && /^Last updated on$/i.test(titleEn)) {
+  if (
+    /^\d{4}-\d{2}-\d{2}$/.test(summaryEn) &&
+    /^Last updated on$/i.test(titleEn)
+  ) {
     return true;
   }
 
@@ -1517,9 +1529,15 @@ function isInvalidPersistedEvent(event) {
 
 function logicalEventKey(event) {
   return [
-    String(event.sourceId || "").trim().toLowerCase(),
-    String(event.url || "").trim().toLowerCase(),
-    String(event.titleEn || event.title || "").trim().toLowerCase(),
+    String(event.sourceId || "")
+      .trim()
+      .toLowerCase(),
+    String(event.url || "")
+      .trim()
+      .toLowerCase(),
+    String(event.titleEn || event.title || "")
+      .trim()
+      .toLowerCase(),
     tokyoDateOnly(event.publishedAt || event.capturedAt || Date.now()),
   ].join("\n");
 }
@@ -1529,7 +1547,9 @@ function logicalEventScore(event) {
   const summaryLength = String(event.summaryJa || event.summary || "").length;
   const japaneseScore = isLikelyJapanese(event.titleJa) ? 1000 : 0;
   const importance = Number(event.importanceScore ?? 0) * 100;
-  return japaneseScore + importance + summaryLength + publishedAt / 1_000_000_000_000;
+  return (
+    japaneseScore + importance + summaryLength + publishedAt / 1_000_000_000_000
+  );
 }
 
 function dedupeLogicalEvents(events) {
@@ -1659,7 +1679,8 @@ async function main() {
     const logPath = path.join(eventsDir, `${date}.json`);
     const existingLog = await readJson(logPath, null);
     const sameEvents =
-      JSON.stringify(existingLog?.events ?? null) === JSON.stringify(sortedEvents);
+      JSON.stringify(existingLog?.events ?? null) ===
+      JSON.stringify(sortedEvents);
     const nextLog = {
       date,
       generatedAt: sameEvents ? existingLog?.generatedAt || nowIso : nowIso,
