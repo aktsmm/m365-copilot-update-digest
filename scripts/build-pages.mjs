@@ -637,15 +637,14 @@ function renderIndexPage(
   );
   const importantEvents = (
     importantWindow.length > 0 ? importantWindow : sorted
-  ).slice(0, 6);
+  ).slice(0, 4);
   const recentWindow = sorted.filter((event) =>
     withinHours(event.publishedAt, 72, now),
   );
   const recentEvents = (recentWindow.length > 0 ? recentWindow : sorted).slice(
     0,
-    8,
+    24,
   );
-  const productPool = sorted.slice(0, 24);
   const recentDaily = dailyLogs.slice(0, 12);
   const recentWeekly = weeklyGroups.slice(0, 6);
   const sourceTypeCounts = ["docs", "blog", "roadmap"]
@@ -692,23 +691,16 @@ function renderIndexPage(
       linkHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, "search/")),
     })}
 
-    <section class="section-block" data-card-filters>
-      ${renderSectionHeading(text.importantTitle)}
-      ${importantEvents.length > 0 ? renderFilterToolbar(importantEvents, text) : ""}
-      <div class="card-grid" data-filter-cards>${importantEvents.length > 0 ? importantEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
-      <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
-    </section>
-
     <section class="section-block">
-      ${renderSectionHeading(text.recentTitle)}
-      ${recentWindow.length === 0 ? `<p class="section-note">${escapeHtml(text.noRecent)}</p>` : ""}
-      <div class="card-grid">${recentEvents.length > 0 ? recentEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
+      ${renderSectionHeading(text.importantTitle)}
+      <div class="card-grid">${importantEvents.length > 0 ? importantEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
     </section>
 
     <section class="section-block" data-card-filters>
-      ${renderSectionHeading(text.filterTitle)}
-      ${renderFilterToolbar(productPool, text)}
-      <div class="card-grid" data-filter-cards>${productPool.length > 0 ? productPool.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
+      ${renderSectionHeading(text.recentTitle)}
+      ${recentEvents.length > 0 ? renderFilterToolbar(recentEvents, text) : ""}
+      ${recentWindow.length === 0 ? `<p class="section-note">${escapeHtml(text.noRecent)}</p>` : ""}
+      <div class="card-grid" data-filter-cards>${recentEvents.length > 0 ? recentEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
       <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
     </section>
 

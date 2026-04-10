@@ -71,6 +71,7 @@ a {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--panel);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
 }
@@ -357,20 +358,29 @@ h3 {
 }
 
 .filter-toolbar {
-  display: grid;
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
   margin-bottom: 14px;
 }
 
 .filter-group {
-  display: grid;
-  gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
 }
 
 .filter-group span {
   font-size: 0.86rem;
   font-weight: 700;
   color: var(--muted);
+  white-space: nowrap;
+}
+
+.filter-group .chip-row {
+  gap: 8px;
 }
 
 .chip {
@@ -502,5 +512,11 @@ h3 {
   .site-nav,
   .site-footer {
     justify-content: flex-start;
+  }
+
+  .filter-toolbar,
+  .filter-group {
+    display: grid;
+    align-items: stretch;
   }
 }
