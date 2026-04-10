@@ -418,6 +418,23 @@ h3 {
   gap: 12px;
 }
 
+.search-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.home-search-shell {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(236, 249, 255, 0.86)),
+    var(--panel);
+}
+
+.search-results {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
 .search-input {
   width: 100%;
   padding: 14px 16px;

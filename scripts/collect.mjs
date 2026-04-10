@@ -3,6 +3,7 @@ import path from "node:path";
 
 import * as cheerio from "cheerio";
 import { XMLParser } from "fast-xml-parser";
+import { translate } from "@vitalets/google-translate-api";
 
 import {
   buildDailyMarkdown,
@@ -21,10 +22,19 @@ import {
 
 const workspaceRoot = process.cwd();
 const sourcesFile = path.join(workspaceRoot, "config", "sources.json");
+const summaryCacheFile = path.join(
+  workspaceRoot,
+  "config",
+  "summary-ja-cache.json",
+);
 const eventsDir = path.join(workspaceRoot, "data", "events");
 const summariesDir = path.join(workspaceRoot, "summaries", "daily");
 const stateFile = path.join(workspaceRoot, "data", "state.json");
 const runSummaryFile = path.join(workspaceRoot, "data", "run-summary.json");
+const TRANSLATION_MARKER_PREFIX = "[[[M365_DIGEST_ITEM_";
+const MAX_TRANSLATION_BATCH_CHARS = 3600;
+const MAX_TRANSLATION_BATCH_ITEMS = 12;
+const MAX_TRANSLATED_EVENTS_PER_RUN = 80;
 
 const xmlParser = new XMLParser({
   ignoreAttributes: false,
@@ -163,6 +173,222 @@ function matchesKeywords(source, entry) {
   }
 
   return true;
+}
+
+function isLikelyJapanese(value) {
+  return /[\u3040-\u30ff\u3400-\u9fff]/.test(String(value ?? ""));
+}
+
+function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
+  return (
+    source.sourceFamily === "Tech Community" &&
+    /公開ドキュメント由来の更新です。?$/.test(String(summaryJa ?? ""))
+  );
+}
+
+function stageDescription(stage) {
+  switch (stage) {
+    case "GA":
+      return "一般提供として案内されています";
+    case "Preview":
+      return "プレビューとして案内されています";
+    case "Rolling out":
+      return "ロールアウトが進行中です";
+    case "Retirement":
+      return "廃止や移行対応が案内されています";
+    default:
+      return "更新内容が案内されています";
+  }
+}
+
+function buildJapaneseFallbackSummary(event) {
+  const audienceText =
+    event.roleTags && event.roleTags.length > 0
+      ? ` 主な対象は ${event.roleTags.join(" / ")} です。`
+      : "";
+  const sourceText =
+    event.sourceFamily === "Tech Community"
+      ? "公式ブログ由来の更新です。"
+      : "公開ドキュメント由来の更新です。";
+  const compactTitle = String(event.title ?? "").replace(/\s*\[[^\]]+\]\s*$/g, "");
+  return normalizeWhitespace(
+    `${event.productArea} の更新です。${compactTitle} に関する内容で、${stageDescription(event.releaseStage)}。${sourceText}${audienceText}`,
+  );
+}
+
+function buildTranslationBatches(events) {
+  const batches = [];
+  let currentBatch = [];
+  let currentChars = 0;
+
+  for (const event of events) {
+    const summary = normalizeWhitespace(event.summaryEn || event.summary || "");
+    if (!summary) {
+      continue;
+    }
+
+    const estimatedChars = summary.length + 48;
+    const exceedsBatch =
+      currentBatch.length >= MAX_TRANSLATION_BATCH_ITEMS ||
+      currentChars + estimatedChars > MAX_TRANSLATION_BATCH_CHARS;
+
+    if (currentBatch.length > 0 && exceedsBatch) {
+      batches.push(currentBatch);
+      currentBatch = [];
+      currentChars = 0;
+    }
+
+    currentBatch.push(event);
+    currentChars += estimatedChars;
+  }
+
+  if (currentBatch.length > 0) {
+    batches.push(currentBatch);
+  }
+
+  return batches;
+}
+
+function splitTranslatedBatch(translatedText, batch) {
+  const matches = [...String(translatedText ?? "").matchAll(/\[\[\[M365_DIGEST_ITEM_(\d+)\]\]\]/g)];
+  const translatedByIndex = new Map();
+
+  for (let index = 0; index < matches.length; index += 1) {
+    const current = matches[index];
+    const next = matches[index + 1];
+    const itemIndex = Number.parseInt(current[1], 10);
+    const start = current.index + current[0].length;
+    const end = next ? next.index : translatedText.length;
+    translatedByIndex.set(itemIndex, normalizeWhitespace(translatedText.slice(start, end)));
+  }
+
+  return batch.map((event, index) => ({
+    event,
+    text: translatedByIndex.get(index) || "",
+  }));
+}
+
+async function localizeJapaneseSummaries(
+  source,
+  events,
+  existingById,
+  summaryCache,
+  nowIso,
+) {
+  const pending = [];
+
+  for (const event of events) {
+    event.summaryEn = normalizeWhitespace(event.summaryEn || event.summary || "");
+    event.sourceFamily = event.sourceFamily || source.sourceFamily || "Other";
+    event.productArea = event.productArea || source.productArea;
+
+    if (!event.summaryEn) {
+      event.summaryJa = "";
+      continue;
+    }
+
+    if (isLikelyJapanese(event.summaryJa || event.summaryEn)) {
+      event.summaryJa = normalizeWhitespace(event.summaryJa || event.summaryEn);
+      summaryCache[event.id] = {
+        summary: event.summaryEn,
+        summaryJa: event.summaryJa,
+        updatedAt: nowIso,
+      };
+      continue;
+    }
+
+    const cached = summaryCache[event.id];
+    if (
+      cached &&
+      cached.summary === event.summaryEn &&
+      cached.summaryJa &&
+      !shouldIgnoreCachedJapaneseSummary(source, cached.summaryJa)
+    ) {
+      event.summaryJa = cached.summaryJa;
+      continue;
+    }
+
+    const existing = existingById.get(event.id);
+    if (
+      existing &&
+      existing.summary === event.summary &&
+      existing.summaryJa &&
+      existing.summaryJa !== (existing.summaryEn || existing.summary) &&
+      !shouldIgnoreCachedJapaneseSummary(source, existing.summaryJa)
+    ) {
+      event.summaryJa = existing.summaryJa;
+      summaryCache[event.id] = {
+        summary: event.summaryEn,
+        summaryJa: event.summaryJa,
+        updatedAt: nowIso,
+      };
+      continue;
+    }
+
+    pending.push(event);
+  }
+
+  pending.sort(
+    (left, right) =>
+      new Date(right.publishedAt || 0) - new Date(left.publishedAt || 0),
+  );
+
+  const translatable = pending.slice(0, MAX_TRANSLATED_EVENTS_PER_RUN);
+  const fallbackOnly = pending.slice(MAX_TRANSLATED_EVENTS_PER_RUN);
+  const batches = buildTranslationBatches(translatable);
+
+  for (const batch of batches) {
+    const requestText = batch
+      .map((event, index) => `${TRANSLATION_MARKER_PREFIX}${index}]]]\n${event.summaryEn}`)
+      .join("\n");
+
+    try {
+      const result = await translate(requestText, { to: "ja" });
+      const translatedEntries = splitTranslatedBatch(result.text, batch);
+      for (const entry of translatedEntries) {
+        entry.event.summaryJa =
+          entry.text && entry.text !== entry.event.summaryEn
+            ? excerptText(entry.text, 280)
+            : buildJapaneseFallbackSummary(entry.event);
+        summaryCache[entry.event.id] = {
+          summary: entry.event.summaryEn,
+          summaryJa: entry.event.summaryJa,
+          updatedAt: nowIso,
+        };
+      }
+    } catch {
+      for (const event of batch) {
+        event.summaryJa = buildJapaneseFallbackSummary(event);
+        summaryCache[event.id] = {
+          summary: event.summaryEn,
+          summaryJa: event.summaryJa,
+          updatedAt: nowIso,
+        };
+      }
+    }
+  }
+
+  for (const event of fallbackOnly) {
+    event.summaryJa = buildJapaneseFallbackSummary(event);
+    summaryCache[event.id] = {
+      summary: event.summaryEn,
+      summaryJa: event.summaryJa,
+      updatedAt: nowIso,
+    };
+  }
+
+  for (const event of pending) {
+    if (!event.summaryJa) {
+      event.summaryJa = buildJapaneseFallbackSummary(event);
+      summaryCache[event.id] = {
+        summary: event.summaryEn,
+        summaryJa: event.summaryJa,
+        updatedAt: nowIso,
+      };
+    }
+  }
+
+  return events;
 }
 
 function rootElement($) {
@@ -523,6 +749,9 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
 
   normalized.importanceScore = importanceScore(normalized);
   normalized.importanceReason = importanceReason(normalized, "ja");
+  if (!normalized.summaryJa || normalized.summaryJa === normalized.summaryEn) {
+    normalized.summaryJa = buildJapaneseFallbackSummary(normalized);
+  }
   return normalized;
 }
 
@@ -543,6 +772,7 @@ function groupEventsByDate(events) {
 async function main() {
   const nowIso = new Date().toISOString();
   const sources = await readJson(sourcesFile, []);
+  const summaryCache = await readJson(summaryCacheFile, {});
   const existingEvents = await readExistingEvents();
   const existingById = new Map(
     existingEvents.map((event) => [event.id, event]),
@@ -554,7 +784,13 @@ async function main() {
   for (const source of sources) {
     try {
       const html = await fetchText(source.url);
-      const parsedEvents = parseSource(source, html, nowIso);
+      const parsedEvents = await localizeJapaneseSummaries(
+        source,
+        parseSource(source, html, nowIso),
+        existingById,
+        summaryCache,
+        nowIso,
+      );
 
       for (const parsedEvent of parsedEvents) {
         const previous = existingById.get(parsedEvent.id);
@@ -624,6 +860,8 @@ async function main() {
     errorCount: errors.length,
     errors,
   });
+
+  await writeJson(summaryCacheFile, summaryCache);
 
   console.log(
     JSON.stringify(

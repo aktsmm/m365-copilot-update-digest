@@ -61,6 +61,9 @@ const TEXT = {
     searchTitle: "公開済みアップデートを横断検索する。",
     searchBody:
       "タイトル、要約、製品、タグ、日付から、公開済みの更新をまとめて探せます。",
+    homeSearchTitle: "トップページから検索する。",
+    homeSearchBody:
+      "参考サイトのように、トップページ上でそのまま検索できます。最近の更新をその場で探して、必要なら全文検索ページに移れます。",
     searchLink: "検索ページを開く",
     aboutTitle: "About",
     aboutIntro:
@@ -132,6 +135,9 @@ const TEXT = {
     searchTitle: "Search published updates.",
     searchBody:
       "Search across titles, summaries, products, tags, and dates from published updates.",
+    homeSearchTitle: "Search directly from the home page.",
+    homeSearchBody:
+      "Use the top page to find recent updates immediately, then move to the full search page when you want a wider scan.",
     searchLink: "Open search",
     aboutTitle: "About",
     aboutIntro:
@@ -473,6 +479,26 @@ function renderEmptyState(message) {
   return `<div class="empty-state">${escapeHtml(message)}</div>`;
 }
 
+function renderSearchShell(locale, depth, text, options = {}) {
+  const sectionClass = options.sectionClass ?? "section-block search-shell";
+  const limit = options.limit ?? 50;
+  const heading = options.heading ?? text.searchTitle;
+  const body = options.body ?? text.searchBody;
+  const showLink = options.showLink ?? false;
+  const linkHref = options.linkHref ?? "";
+
+  return `
+    <section class="${escapeHtml(sectionClass)}" data-search-root data-search-limit="${escapeHtml(String(limit))}">
+      <div class="section-heading"><h2>${escapeHtml(heading)}</h2>${showLink && linkHref ? `<a class="section-link" href="${escapeHtml(linkHref)}">${escapeHtml(text.searchLink)}</a>` : ""}</div>
+      <p>${escapeHtml(body)}</p>
+      <label class="search-label" for="site-search-input">${escapeHtml(heading)}</label>
+      <input id="site-search-input" class="search-input" data-search-input type="search" placeholder="${escapeHtml(text.searchInputPlaceholder)}" />
+      <p class="search-status" data-search-status>${escapeHtml(text.searchStatusLoading)}</p>
+      <div class="search-results" data-search-results></div>
+    </section>
+  `;
+}
+
 function buildSearchIndex(events) {
   return events.map((event) => ({
     id: event.id,
@@ -571,6 +597,15 @@ function renderIndexPage(
       </div>
     </section>
 
+    ${renderSearchShell(locale, locale === "en" ? 1 : 0, text, {
+      sectionClass: "section-block search-shell home-search-shell",
+      limit: 6,
+      heading: text.homeSearchTitle,
+      body: text.homeSearchBody,
+      showLink: true,
+      linkHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, "search/")),
+    })}
+
     <section class="section-block">
       ${renderSectionHeading(text.importantTitle)}
       <div class="card-grid">${importantEvents.length > 0 ? importantEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
@@ -642,6 +677,8 @@ function renderIndexPage(
     activeNav: "home",
     alternatePath: locale === "en" ? "" : "en/",
     siteMeta,
+    bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(relativeHref(locale === "en" ? 1 : 0, "search-index.json"))}" data-search-base="${escapeHtml(relativeHref(locale === "en" ? 1 : 0, ""))}"`,
+    extraScripts: [relativeHref(locale === "en" ? 1 : 0, "assets/search.js")],
     content,
   });
 }
@@ -808,12 +845,13 @@ function renderSearchPage(locale, siteMeta) {
       <h1>${escapeHtml(text.searchTitle)}</h1>
       <p>${escapeHtml(text.searchBody)}</p>
     </section>
-    <section class="section-block search-shell">
-      <label class="search-label" for="site-search-input">${escapeHtml(text.searchTitle)}</label>
-      <input id="site-search-input" class="search-input" data-search-input type="search" placeholder="${escapeHtml(text.searchInputPlaceholder)}" />
-      <p class="search-status" data-search-status>${escapeHtml(text.searchStatusLoading)}</p>
-      <div class="search-results" data-search-results></div>
-    </section>
+    ${renderSearchShell(locale, depth, text, {
+      sectionClass: "section-block search-shell",
+      limit: 50,
+      heading: text.searchTitle,
+      body: text.searchBody,
+      showLink: false,
+    })}
   `;
 
   return renderLayout({
@@ -823,7 +861,7 @@ function renderSearchPage(locale, siteMeta) {
     activeNav: "search",
     alternatePath: locale === "en" ? "search/" : "en/search/",
     siteMeta,
-    bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(relativeHref(depth, "search-index.json"))}"`,
+    bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(relativeHref(depth, "search-index.json"))}" data-search-base="${escapeHtml(relativeHref(depth, ""))}"`,
     extraScripts: [searchScript],
     content,
   });

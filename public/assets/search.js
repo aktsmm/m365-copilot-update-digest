@@ -1,11 +1,14 @@
 (() => {
+  const root = document.querySelector("[data-search-root]");
   const locale = document.body.dataset.locale || "ja";
   const indexUrl = document.body.dataset.searchIndex;
-  const input = document.querySelector("[data-search-input]");
-  const results = document.querySelector("[data-search-results]");
-  const status = document.querySelector("[data-search-status]");
+  const basePath = document.body.dataset.searchBase || "";
+  const input = root?.querySelector("[data-search-input]");
+  const results = root?.querySelector("[data-search-results]");
+  const status = root?.querySelector("[data-search-status]");
+  const maxResults = Number.parseInt(root?.dataset.searchLimit || "50", 10);
 
-  if (!indexUrl || !input || !results || !status) {
+  if (!root || !indexUrl || !input || !results || !status) {
     return;
   }
 
@@ -60,7 +63,7 @@
     status.textContent = `${entries.length} ${text.matches}`;
     results.innerHTML = entries
       .map((entry) => {
-        const href = `../${entry.detailPath}`;
+        const href = `${basePath}${entry.detailPath}`;
         const summary = locale === "en" ? entry.summaryEn : entry.summaryJa;
         return `
           <article class="search-result-card">
@@ -107,7 +110,7 @@
             );
             return tokens.every((token) => haystack.includes(token));
           })
-          .slice(0, 50);
+          .slice(0, maxResults);
 
         renderResults(filtered);
       };
