@@ -48,8 +48,6 @@ const TEXT = {
     statsSourcesDetail: "現在有効な公開ソース数",
     statsRun: "直近 run の新規",
     statsRunDetail: "最後の collect で検知した件数",
-    statsUpdatedAt: "最終更新",
-    statsUpdatedAtDetail: "公開データを最後に反映した時刻",
     importantTitle: "今日 / 今週の重要更新",
     recentTitle: "直近72時間の新着",
     filterTitle: "製品別アップデート",
@@ -131,8 +129,6 @@ const TEXT = {
     statsSourcesDetail: "Active public sources",
     statsRun: "Latest run new items",
     statsRunDetail: "Detected in the most recent collect run",
-    statsUpdatedAt: "Last updated",
-    statsUpdatedAtDetail: "Most recent published data refresh",
     importantTitle: "Important updates for today / this week",
     recentTitle: "New in the last 72 hours",
     filterTitle: "Updates by product",
@@ -473,13 +469,18 @@ function renderArchiveRow(href, title, subtitle) {
   return `<a class="archive-row" href="${escapeHtml(href)}"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(subtitle)}</span></a>`;
 }
 
-function renderLastUpdated(locale, siteMeta, className = "site-updated") {
+function renderLastUpdated(locale, siteMeta, className = "hero-meta-item") {
   if (!siteMeta.lastUpdatedAt) {
     return "";
   }
 
   const text = TEXT[locale];
   return `<p class="${escapeHtml(className)}"><span>${escapeHtml(text.lastUpdatedLabel)}</span><strong>${escapeHtml(formatDateTime(siteMeta.lastUpdatedAt, locale))}</strong></p>`;
+}
+
+function renderHeroMeta(locale, siteMeta) {
+  const updated = renderLastUpdated(locale, siteMeta);
+  return updated ? `<div class="hero-meta">${updated}</div>` : "";
 }
 
 function renderNav(locale, depth, activeNav, siteMeta, alternatePath) {
@@ -520,7 +521,7 @@ function renderNav(locale, depth, activeNav, siteMeta, alternatePath) {
     ? `<a class="lang-switch" href="${escapeHtml(relativeHref(depth, alternatePath))}">${escapeHtml(text.switchLabel)}</a>`
     : "";
 
-  return `<header class="site-header"><div class="site-header-copy"><a class="site-brand" href="${escapeHtml(relativeHref(depth, localePath(locale, "")))}">${escapeHtml(siteMeta.siteName)}</a><p class="site-lead">${escapeHtml(text.headerLead)}</p>${renderLastUpdated(locale, siteMeta)}</div><nav class="site-nav">${navHtml}${repoHtml}${switchHtml}</nav></header>`;
+  return `<header class="site-header"><div class="site-header-copy"><a class="site-brand" href="${escapeHtml(relativeHref(depth, localePath(locale, "")))}">${escapeHtml(siteMeta.siteName)}</a><p class="site-lead">${escapeHtml(text.headerLead)}</p></div><nav class="site-nav">${navHtml}${repoHtml}${switchHtml}</nav></header>`;
 }
 
 function renderLayout({
@@ -557,7 +558,6 @@ function renderLayout({
       ${content}
       <footer class="site-footer">
         <p>${escapeHtml(TEXT[locale].footerLead)}</p>
-        ${renderLastUpdated(locale, siteMeta, "site-footer-updated")}
       </footer>
     </div>
     ${scripts}
@@ -682,22 +682,18 @@ function renderIndexPage(
       }, new Map())
       .entries(),
   ].sort((left, right) => right[1] - left[1]);
-  const lastUpdatedMetric = siteMeta.lastUpdatedAt
-    ? `<article class="metric-card metric-card-datetime"><span>${escapeHtml(text.statsUpdatedAt)}</span><strong>${escapeHtml(formatDateTime(siteMeta.lastUpdatedAt, locale))}</strong><small>${escapeHtml(text.statsUpdatedAtDetail)}</small></article>`
-    : "";
-
   const content = `
     <section class="hero">
       <div class="hero-copy-block">
         <span class="eyebrow">${escapeHtml(text.unofficialBadge)}</span>
         <h1>${escapeHtml(text.heroTitle)}</h1>
         <p class="hero-copy">${escapeHtml(text.heroCopy)}</p>
+        ${renderHeroMeta(locale, siteMeta)}
       </div>
       <div class="metric-grid">
         <article class="metric-card"><span>${escapeHtml(text.statsUpdates)}</span><strong>${escapeHtml(String(sorted.length))}</strong><small>${escapeHtml(text.statsUpdatesDetail)}</small></article>
         <article class="metric-card"><span>${escapeHtml(text.statsSources)}</span><strong>${escapeHtml(String(runSummary.sourceCount ?? sourceCounts.length))}</strong><small>${escapeHtml(text.statsSourcesDetail)}</small></article>
         <article class="metric-card"><span>${escapeHtml(text.statsRun)}</span><strong>${escapeHtml(String(runSummary.newEventCount ?? 0))}</strong><small>${escapeHtml(text.statsRunDetail)}</small></article>
-        ${lastUpdatedMetric}
       </div>
     </section>
 
@@ -777,6 +773,7 @@ function renderDailyPage(locale, siteMeta, log) {
       <span class="eyebrow">${escapeHtml(locale === "en" ? "Daily digest" : "日次ダイジェスト")}</span>
       <h1>${escapeHtml(locale === "en" ? log.date : formatDate(log.date, "ja"))}</h1>
       <p>${escapeHtml(siteMeta[`tagline${locale === "en" ? "En" : "Ja"}`] || siteMeta.taglineJa)}</p>
+      ${renderHeroMeta(locale, siteMeta)}
       <div class="hero-links"><a href="${escapeHtml(rawJsonHref)}">${escapeHtml(text.rawJson)}</a><a href="${escapeHtml(rawMdHref)}">${escapeHtml(text.rawMarkdown)}</a></div>
     </section>
     <section class="section-block">
@@ -811,6 +808,7 @@ function renderWeeklyPage(locale, siteMeta, week) {
       <span class="eyebrow">${escapeHtml(locale === "en" ? "Weekly summary" : "週間まとめ")}</span>
       <h1>${escapeHtml(titleLabel)}</h1>
       <p>${escapeHtml(locale === "en" ? `${week.events.length} updates in this week window.` : `この週の更新は ${week.events.length} 件です。`)}</p>
+      ${renderHeroMeta(locale, siteMeta)}
     </section>
     <section class="section-block">
       ${renderSectionHeading(text.highlightsTitle)}
@@ -872,6 +870,7 @@ function renderArchivePage(locale, siteMeta, dailyLogs, weeklyGroups, type) {
       <span class="eyebrow">${escapeHtml(isWeekly ? text.navWeekly : text.navHome)}</span>
       <h1>${escapeHtml(title)}</h1>
       <p>${escapeHtml(locale === "en" ? "Browse generated archives." : "生成済みアーカイブを一覧で確認できます。")}</p>
+      ${renderHeroMeta(locale, siteMeta)}
     </section>
     <section class="section-block archive-page-list">
       <div class="archive-list">${listHtml || renderEmptyState(text.noItems)}</div>
@@ -897,6 +896,7 @@ function renderAboutPage(locale, siteMeta) {
       <span class="eyebrow">${escapeHtml(text.unofficialBadge)}</span>
       <h1>${escapeHtml(text.aboutTitle)}</h1>
       <p>${escapeHtml(text.aboutIntro)}</p>
+      ${renderHeroMeta(locale, siteMeta)}
     </section>
     <section class="section-block prose-card">
       <p>${escapeHtml(text.aboutBody1)}</p>
@@ -926,6 +926,7 @@ function renderSearchPage(locale, siteMeta) {
       <span class="eyebrow">${escapeHtml(text.navSearch)}</span>
       <h1>${escapeHtml(text.searchTitle)}</h1>
       <p>${escapeHtml(text.searchBody)}</p>
+      ${renderHeroMeta(locale, siteMeta)}
     </section>
     ${renderSearchShell(locale, depth, text, {
       sectionClass: "section-block search-shell",
