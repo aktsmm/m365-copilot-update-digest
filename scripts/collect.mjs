@@ -37,7 +37,7 @@ const MAX_TRANSLATION_BATCH_CHARS = 3600;
 const MAX_TRANSLATION_BATCH_ITEMS = 12;
 const MAX_TITLE_TRANSLATION_BATCH_CHARS = 2200;
 const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
-const MAX_TRANSLATED_SUMMARIES_PER_RUN = 80;
+const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
 
 const xmlParser = new XMLParser({
@@ -160,19 +160,22 @@ function readXmlText(value) {
 function matchesKeywords(source, entry) {
   const includes = source.includeKeywords ?? [];
   const excludes = source.excludeKeywords ?? [];
-  const haystack = [
-    entry.title,
-    entry.summary,
-    ...(entry.categories || []),
-  ]
+  const haystack = [entry.title, entry.summary, ...(entry.categories || [])]
     .join("\n")
     .toLowerCase();
 
-  if (includes.length > 0 && !includes.some((keyword) => haystack.includes(String(keyword).toLowerCase()))) {
+  if (
+    includes.length > 0 &&
+    !includes.some((keyword) =>
+      haystack.includes(String(keyword).toLowerCase()),
+    )
+  ) {
     return false;
   }
 
-  if (excludes.some((keyword) => haystack.includes(String(keyword).toLowerCase()))) {
+  if (
+    excludes.some((keyword) => haystack.includes(String(keyword).toLowerCase()))
+  ) {
     return false;
   }
 
@@ -184,9 +187,12 @@ function isLikelyJapanese(value) {
 }
 
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
+  const genericFallbackPattern =
+    /の更新です。.+に関する内容で、.+(?:案内されています|進行中です|廃止や移行対応が案内されています|更新内容が案内されています)。/;
   return (
-    source.sourceFamily === "Tech Community" &&
-    /公開ドキュメント由来の更新です。?$/.test(String(summaryJa ?? ""))
+    genericFallbackPattern.test(String(summaryJa ?? "")) ||
+    (source.sourceFamily === "Tech Community" &&
+      /公開ドキュメント由来の更新です。?$/.test(String(summaryJa ?? "")))
   );
 }
 
@@ -210,6 +216,33 @@ function stageDescription(stage) {
 }
 
 function buildJapaneseFallbackSummary(event) {
+  const extractedSummary = excerptText(
+    normalizeWhitespace(
+      String(event.summaryEn || event.summary || "")
+        .replace(/\bLearn more\.?$/i, "")
+        .replace(/\bUpdated [A-Za-z]+ \d{1,2}, \d{4}:.*$/i, "")
+        .replace(/\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi, "")
+        .trim(),
+    ),
+    280,
+  );
+
+  if (isLikelyJapanese(extractedSummary) && extractedSummary.length >= 12) {
+    return extractedSummary;
+  }
+
+  if (extractedSummary && extractedSummary.length >= 18) {
+    return extractedSummary;
+  }
+
+  if (
+    event.titleJa &&
+    event.titleJa !== (event.titleEn || event.title) &&
+    event.titleJa.length >= 8
+  ) {
+    return `${event.titleJa} に関する更新。`;
+  }
+
   const audienceText =
     event.roleTags && event.roleTags.length > 0
       ? ` 主な対象は ${event.roleTags.join(" / ")} です。`
@@ -220,14 +253,18 @@ function buildJapaneseFallbackSummary(event) {
       : event.sourceFamily === "Roadmap"
         ? `Microsoft 365 Roadmap 由来の更新です${event.roadmapIds?.[0] ? ` (Roadmap ${event.roadmapIds[0]})` : ""}。`
         : "公開ドキュメント由来の更新です。";
-  const compactTitle = String(event.title ?? "").replace(/\s*\[[^\]]+\]\s*$/g, "");
+  const compactTitle = String(event.title ?? "").replace(
+    /\s*\[[^\]]+\]\s*$/g,
+    "",
+  );
   return normalizeWhitespace(
     `${event.productArea} の更新です。${compactTitle} に関する内容で、${stageDescription(event.releaseStage)}。${sourceText}${audienceText}`,
   );
 }
 
 function buildJapaneseFallbackTitle(event) {
-  const text = `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+  const text =
+    `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
   const normalizedTitle = String(event.titleEn || event.title || "")
     .replace(/^microsoft copilot \(microsoft 365\):\s*/i, "")
     .replace(/^microsoft copilot studio:\s*/i, "")
@@ -257,6 +294,14 @@ function buildJapaneseFallbackTitle(event) {
 
   if (/copilot in word/.test(text)) {
     return `Word の Copilot 機能強化`;
+  }
+
+  if (/redesigned channels page/.test(text)) {
+    return `Channels ページを刷新`;
+  }
+
+  if (/redesigned channels page/.test(text)) {
+    return `Channels ページを刷新`;
   }
 
   if (/code interpreter/.test(text)) {
@@ -411,7 +456,10 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot プロンプト向け Inline DLP に対応`;
   }
 
-  if (/data loss prevention/.test(text) && /sensitivity labels|all storage locations|safeguard prompts/.test(text)) {
+  if (
+    /data loss prevention/.test(text) &&
+    /sensitivity labels|all storage locations|safeguard prompts/.test(text)
+  ) {
     return `Purview DLP で Copilot の機密データ保護を強化`;
   }
 
@@ -479,15 +527,24 @@ function buildJapaneseFallbackTitle(event) {
     return `PowerPoint で Copilot による文書編集に対応`;
   }
 
-  if (/prepare for your meeting with copilot chat in outlook mobile/.test(text)) {
+  if (
+    /prepare for your meeting with copilot chat in outlook mobile/.test(text)
+  ) {
     return `Outlook mobile で会議準備向け Copilot Chat に対応`;
   }
 
-  if (/copilot notebooks?/.test(text) && /overview|summary|insights/.test(text)) {
+  if (
+    /copilot notebooks?/.test(text) &&
+    /overview|summary|insights/.test(text)
+  ) {
     return `Copilot Notebooks の要約・インサイトを強化`;
   }
 
-  if (/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(titleText)) {
+  if (
+    /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
+      titleText,
+    )
+  ) {
     return `${event.productArea} の会議・チャット機能を更新`;
   }
 
@@ -495,12 +552,18 @@ function buildJapaneseFallbackTitle(event) {
     return `${event.productArea} の連携機能を拡張`;
   }
 
-  if (/(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(titleText)) {
+  if (
+    /(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(
+      titleText,
+    )
+  ) {
     return `${event.productArea} のライセンス・課金関連更新`;
   }
 
   if (/roadmap/.test(text) && /agent|copilot/.test(text)) {
-    return normalizedTitle ? excerptText(normalizedTitle, 72) : `${event.productArea} の Roadmap 更新`;
+    return normalizedTitle
+      ? excerptText(normalizedTitle, 72)
+      : `${event.productArea} の Roadmap 更新`;
   }
 
   if (normalizedTitle) {
@@ -538,7 +601,10 @@ function roadmapStatus(categories) {
 
 function cleanupRoadmapSummary(rawSummary) {
   const summary = stripHtmlText(rawSummary)
-    .replace(/\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi, "")
+    .replace(
+      /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
+      "",
+    )
     .replace(/\s+/g, " ")
     .trim();
   return excerptText(summary, 320);
@@ -551,7 +617,9 @@ function parseRoadmapRssFeed(source, xmlText) {
   return items
     .map((item) => {
       const title = normalizeWhitespace(readXmlText(item.title));
-      const rawSummary = readXmlText(item.description || item["content:encoded"] || "");
+      const rawSummary = readXmlText(
+        item.description || item["content:encoded"] || "",
+      );
       const categories = toArray(item.category)
         .map((category) => normalizeWhitespace(readXmlText(category)))
         .filter(Boolean);
@@ -575,9 +643,17 @@ function parseRoadmapRssFeed(source, xmlText) {
         publishedAt,
         productArea: roadmapProductArea(title, categories, source),
         section: roadmapProductArea(title, categories, source),
-        roadmapIds: extractRoadmapIds(rawSummary, [link, readXmlText(item.guid)]),
+        roadmapIds: extractRoadmapIds(rawSummary, [
+          link,
+          readXmlText(item.guid),
+        ]),
         releaseStage: roadmapStatus(categories),
-        tags: [...new Set([roadmapProductArea(title, categories, source), ...categories])],
+        tags: [
+          ...new Set([
+            roadmapProductArea(title, categories, source),
+            ...categories,
+          ]),
+        ],
         categories,
       };
     })
@@ -620,7 +696,11 @@ function buildTranslationBatches(events, pickText, maxChars, maxItems) {
 }
 
 function splitTranslatedBatch(translatedText, batch) {
-  const matches = [...String(translatedText ?? "").matchAll(/\[\[\[M365_DIGEST_(?:ITEM|TITLE)_(\d+)\]\]\]/g)];
+  const matches = [
+    ...String(translatedText ?? "").matchAll(
+      /\[\[\[M365_DIGEST_(?:ITEM|TITLE)_(\d+)\]\]\]/g,
+    ),
+  ];
   const translatedByIndex = new Map();
 
   for (let index = 0; index < matches.length; index += 1) {
@@ -629,7 +709,10 @@ function splitTranslatedBatch(translatedText, batch) {
     const itemIndex = Number.parseInt(current[1], 10);
     const start = current.index + current[0].length;
     const end = next ? next.index : translatedText.length;
-    translatedByIndex.set(itemIndex, normalizeWhitespace(translatedText.slice(start, end)));
+    translatedByIndex.set(
+      itemIndex,
+      normalizeWhitespace(translatedText.slice(start, end)),
+    );
   }
 
   return batch.map((event, index) => ({
@@ -653,7 +736,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       !/(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(
         normalizedTitleEn,
       )) ||
-    (/edit with the model of your choice in powerpoint/.test(normalizedTitleEn) &&
+    (/edit with the model of your choice in powerpoint/.test(
+      normalizedTitleEn,
+    ) &&
       titleJa !== "PowerPoint で使用モデルを選択可能に") ||
     (/ai-generated meeting archive/.test(normalizedTitleEn) &&
       titleJa !== "Teams で AI 生成の会議アーカイブに対応") ||
@@ -700,7 +785,11 @@ async function localizeJapaneseTitles(
       cached &&
       cached.title === event.titleEn &&
       cached.titleJa &&
-      !shouldIgnoreCachedJapaneseTitle(cached.titleJa, event.titleEn, event.productArea)
+      !shouldIgnoreCachedJapaneseTitle(
+        cached.titleJa,
+        event.titleEn,
+        event.productArea,
+      )
     ) {
       event.titleJa = cached.titleJa;
       continue;
@@ -711,7 +800,11 @@ async function localizeJapaneseTitles(
       existing &&
       existing.titleEn === event.titleEn &&
       existing.titleJa &&
-      !shouldIgnoreCachedJapaneseTitle(existing.titleJa, event.titleEn, event.productArea)
+      !shouldIgnoreCachedJapaneseTitle(
+        existing.titleJa,
+        event.titleEn,
+        event.productArea,
+      )
     ) {
       event.titleJa = existing.titleJa;
       summaryCache[event.id] = {
@@ -742,7 +835,10 @@ async function localizeJapaneseTitles(
 
   for (const batch of batches) {
     const requestText = batch
-      .map((event, index) => `${TITLE_TRANSLATION_MARKER_PREFIX}${index}]]]\n${event.titleEn}`)
+      .map(
+        (event, index) =>
+          `${TITLE_TRANSLATION_MARKER_PREFIX}${index}]]]\n${event.titleEn}`,
+      )
       .join("\n");
 
     try {
@@ -808,7 +904,9 @@ async function localizeJapaneseSummaries(
   const pending = [];
 
   for (const event of events) {
-    event.summaryEn = normalizeWhitespace(event.summaryEn || event.summary || "");
+    event.summaryEn = normalizeWhitespace(
+      event.summaryEn || event.summary || "",
+    );
     event.sourceFamily = event.sourceFamily || source.sourceFamily || "Other";
     event.productArea = event.productArea || source.productArea;
 
@@ -874,7 +972,10 @@ async function localizeJapaneseSummaries(
 
   for (const batch of batches) {
     const requestText = batch
-      .map((event, index) => `${TRANSLATION_MARKER_PREFIX}${index}]]]\n${event.summaryEn}`)
+      .map(
+        (event, index) =>
+          `${TRANSLATION_MARKER_PREFIX}${index}]]]\n${event.summaryEn}`,
+      )
       .join("\n");
 
     try {
@@ -1112,7 +1213,12 @@ function extractCopilotStudioWhatsNew(source, html) {
         .map((line) => line.trim())
         .filter(Boolean)[0] || rawText.split(/\.(?=\s+[A-Z(])|:\s+/)[0].trim();
     const title = excerptText(tentativeTitle || rawText, 120);
-    if (!title || title.length < 6) {
+    if (
+      !title ||
+      title.length < 6 ||
+      /^Last updated on$/i.test(title) ||
+      /^\d{4}-\d{2}-\d{2}$/.test(rawText)
+    ) {
       return;
     }
 
@@ -1171,21 +1277,34 @@ function parseRssFeed(source, xmlText) {
 
   return items
     .map((item) => {
-      const rawSummary = readXmlText(item.description || item["content:encoded"] || "");
+      const rawSummary = readXmlText(
+        item.description || item["content:encoded"] || "",
+      );
       const title = normalizeWhitespace(readXmlText(item.title));
-      const categories = toArray(item.category).map((category) => normalizeWhitespace(readXmlText(category))).filter(Boolean);
+      const categories = toArray(item.category)
+        .map((category) => normalizeWhitespace(readXmlText(category)))
+        .filter(Boolean);
       return {
-        id: buildEventId(source.id, title, item.pubDate || item.isoDate || source.id, readXmlText(item.guid) || readXmlText(item.link)),
+        id: buildEventId(
+          source.id,
+          title,
+          item.pubDate || item.isoDate || source.id,
+          readXmlText(item.guid) || readXmlText(item.link),
+        ),
         title,
         summary: excerptText(stripHtmlText(rawSummary), 280),
         summaryEn: excerptText(stripHtmlText(rawSummary), 280),
         summaryJa: excerptText(stripHtmlText(rawSummary), 280),
         url: normalizeWhitespace(readXmlText(item.link)),
-        publishedAt: new Date(item.pubDate || item.isoDate || Date.now()).toISOString(),
+        publishedAt: new Date(
+          item.pubDate || item.isoDate || Date.now(),
+        ).toISOString(),
         productArea: source.productArea,
         section: source.productArea,
         roadmapIds: [],
-        releaseStage: detectReleaseStage(`${title}\n${rawSummary}\n${categories.join(" ")}`),
+        releaseStage: detectReleaseStage(
+          `${title}\n${rawSummary}\n${categories.join(" ")}`,
+        ),
         tags: [...new Set([source.productArea, ...categories])],
         categories,
       };
@@ -1294,6 +1413,21 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
   return normalized;
 }
 
+function isInvalidPersistedEvent(event) {
+  const titleEn = String(event?.titleEn || event?.title || "").trim();
+  const summaryEn = String(event?.summaryEn || event?.summary || "").trim();
+
+  if (/^Last updated on$/i.test(titleEn)) {
+    return true;
+  }
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(summaryEn) && /^Last updated on$/i.test(titleEn)) {
+    return true;
+  }
+
+  return false;
+}
+
 function groupEventsByDate(events) {
   const groups = new Map();
   for (const event of events) {
@@ -1312,7 +1446,9 @@ async function main() {
   const nowIso = new Date().toISOString();
   const sources = await readJson(sourcesFile, []);
   const summaryCache = await readJson(summaryCacheFile, {});
-  const existingEvents = await readExistingEvents();
+  const existingEvents = (await readExistingEvents()).filter(
+    (event) => !isInvalidPersistedEvent(event),
+  );
   const existingById = new Map(
     existingEvents.map((event) => [event.id, event]),
   );
@@ -1345,6 +1481,10 @@ async function main() {
           previous,
           nowIso,
         );
+
+        if (isInvalidPersistedEvent(normalized)) {
+          continue;
+        }
 
         if (!previous) {
           newEventIds.add(normalized.id);
