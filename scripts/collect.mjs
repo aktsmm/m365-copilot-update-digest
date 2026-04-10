@@ -230,7 +230,18 @@ function buildJapaneseFallbackTitle(event) {
   const text = `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
   const normalizedTitle = String(event.titleEn || event.title || "")
     .replace(/^microsoft copilot \(microsoft 365\):\s*/i, "")
+    .replace(/^microsoft copilot studio:\s*/i, "")
+    .replace(/^microsoft copilot:\s*/i, "")
+    .replace(/^microsoft viva:\s*/i, "")
+    .replace(/^microsoft purview:\s*/i, "")
+    .replace(/^microsoft 365 admin center:\s*/i, "")
+    .replace(/^outlook:\s*/i, "")
+    .replace(/^onedrive:\s*/i, "")
+    .replace(/^sharepoint:\s*/i, "")
+    .replace(/^powerpoint:\s*/i, "")
+    .replace(/^microsoft edge:\s*/i, "")
     .trim();
+  const titleText = normalizedTitle.toLowerCase();
 
   if (/welcome to the .*blog|launch of the .*blog/.test(text)) {
     return `${event.productArea} 公式ブログ開始`;
@@ -254,6 +265,202 @@ function buildJapaneseFallbackTitle(event) {
 
   if (/onedrive/.test(text) && /summary/.test(text)) {
     return `OneDrive 共有時の Copilot 要約に対応`;
+  }
+
+  if (/enhanced m365 copilot memory|personalized with work data/.test(text)) {
+    return `M365 Copilot Memory の個人最適化を強化`;
+  }
+
+  if (/create word documents from copilot notebooks/.test(text)) {
+    return `Copilot Notebooks から Word 文書生成に対応`;
+  }
+
+  if (/create excel spreadsheets from copilot notebooks/.test(text)) {
+    return `Copilot Notebooks から Excel 作成に対応`;
+  }
+
+  if (/web link as a reference in copilot notebooks/.test(text)) {
+    return `Copilot Notebooks で Web リンクを参照元に追加可能に`;
+  }
+
+  if (/quickly edit an image in powerpoint/.test(text)) {
+    return `PowerPoint で画像の即時編集に対応`;
+  }
+
+  if (/create interactive visuals in copilot pages/.test(text)) {
+    return `Copilot Pages でインタラクティブな可視化を作成可能に`;
+  }
+
+  if (/copilot pages/.test(text) && /outlook mobile|android/.test(text)) {
+    return `Outlook モバイルで Copilot Pages の閲覧・編集・共有に対応`;
+  }
+
+  if (/ai-generated meeting archive/.test(text)) {
+    return `Teams で AI 生成の会議アーカイブに対応`;
+  }
+
+  if (/copilot search suggestions for outlook/.test(text)) {
+    return `Outlook の Copilot 検索候補を強化`;
+  }
+
+  if (/triage your inbox on-the-go with copilot voice/.test(text)) {
+    return `Outlook mobile の Copilot 音声で受信トレイ整理に対応`;
+  }
+
+  if (/discover copilot actions in file preview/.test(text)) {
+    return `ファイル プレビューで Copilot アクション提案を表示`;
+  }
+
+  if (/scatter image effect/.test(text)) {
+    return `Copilot で scatter image effect に対応`;
+  }
+
+  if (/copilot settings.*optimize view/.test(text)) {
+    return `管理センターの Copilot 設定を最適化ビューへ刷新`;
+  }
+
+  if (/agents usage report/.test(text)) {
+    return `管理センターに Agents 利用レポートを追加`;
+  }
+
+  if (/list email attachments/.test(text)) {
+    return `M365 Copilot でメール添付ファイル一覧に対応`;
+  }
+
+  if (/export copilot metrics/.test(text)) {
+    return `Copilot Dashboard でメトリクスのエクスポートに対応`;
+  }
+
+  if (/intelligent summaries in copilot dashboard/.test(text)) {
+    return `Copilot Dashboard にインテリジェント要約を追加`;
+  }
+
+  if (/satisfaction rate metric/.test(text)) {
+    return `Copilot Dashboard に満足度メトリクスを追加`;
+  }
+
+  if (/new copilot metrics available/.test(text)) {
+    return `Copilot 向け新規メトリクスを追加`;
+  }
+
+  if (/deeper copilot insights/.test(text) && /power bi filtering/.test(text)) {
+    return `Power BI フィルタリング強化で Copilot インサイトを拡充`;
+  }
+
+  if (/researcher council/.test(text)) {
+    return `Researcher Council を追加`;
+  }
+
+  if (/researcher agent for gcc/.test(text)) {
+    return `GCC で Researcher Agent に対応`;
+  }
+
+  if (/employee self-service agent in m365 copilot/.test(text)) {
+    return `M365 Copilot に従業員セルフサービス Agent を追加`;
+  }
+
+  if (/critique in researcher/.test(text)) {
+    return `Researcher に Critique 機能を追加`;
+  }
+
+  if (/researcher output formats/.test(text)) {
+    return `Researcher の出力形式を拡張`;
+  }
+
+  if (/project manager agent/.test(text)) {
+    return `M365 Copilot に Project Manager Agent を追加`;
+  }
+
+  if (/audio overviews/.test(text)) {
+    return `Word 文書上部から音声概要にアクセス可能に`;
+  }
+
+  if (/mind maps in copilot notebooks/.test(text)) {
+    return `Copilot Notebooks に Mind Maps を追加`;
+  }
+
+  if (/engage private content in m365 copilot/.test(text)) {
+    return `M365 Copilot でプライベート コンテンツ活用を強化`;
+  }
+
+  if (/create and edit images with the model of your choice/.test(text)) {
+    return `PowerPoint で画像生成・編集モデルを選択可能に`;
+  }
+
+  if (/anthropic models/.test(titleText)) {
+    return `Anthropic モデルのユーザー・グループ別有効化に対応`;
+  }
+
+  if (/enterprise data protection/.test(text) && /edge/.test(text)) {
+    return `Edge の Rewrite by Copilot でエンタープライズ データ保護に対応`;
+  }
+
+  if (/address bar/.test(text) && /summarizing webpages/.test(text)) {
+    return `Edge アドレスバーで要約提案を表示`;
+  }
+
+  if (/copilot new tab page/.test(text)) {
+    return `Edge の Copilot New Tab Page を刷新`;
+  }
+
+  if (/purview in microsoft admin center/.test(text)) {
+    return `Microsoft 管理センターで Purview 管理に対応`;
+  }
+
+  if (/inline dlp/.test(text) && /prompts/.test(text)) {
+    return `Copilot プロンプト向け Inline DLP に対応`;
+  }
+
+  if (/data loss prevention/.test(text) && /sensitivity labels|all storage locations|safeguard prompts/.test(text)) {
+    return `Purview DLP で Copilot の機密データ保護を強化`;
+  }
+
+  if (/embedded images/.test(text)) {
+    return `埋め込み画像を使った応答精度向上に対応`;
+  }
+
+  if (/adobe experience manager/.test(text)) {
+    return `Adobe Experience Manager の企業アセット参照に対応`;
+  }
+
+  if (/news page in sharepoint sites/.test(text)) {
+    return `SharePoint サイトの News ページを刷新`;
+  }
+
+  if (/new web part for faqs/.test(text)) {
+    return `SharePoint に FAQ 用新規 web part を追加`;
+  }
+
+  if (/federated copilot connectors/.test(text)) {
+    return `Federated Copilot Connectors に対応`;
+  }
+
+  if (/domain exclusion for web grounding/.test(text)) {
+    return `Web grounding のドメイン除外に対応`;
+  }
+
+  if (/custom skills/.test(text) && /sharepoint/.test(text)) {
+    return `SharePoint で custom skills による AI 拡張に対応`;
+  }
+
+  if (/lists as a knowledge source/.test(text)) {
+    return `SharePoint と OneDrive の Lists を agent の知識ソースに対応`;
+  }
+
+  if (/dynamic topics/.test(text)) {
+    return `Dynamic Topics を追加`;
+  }
+
+  if (/edit with the model of your choice in powerpoint/.test(text)) {
+    return `PowerPoint で使用モデルを選択可能に`;
+  }
+
+  if (/planner agent in group-based basic plans/.test(text)) {
+    return `グループベースの basic plans で Planner Agent に対応`;
+  }
+
+  if (/overview experience/.test(text) && /agent dashboard/.test(text)) {
+    return `Agent Dashboard の overview と agent categories を刷新`;
   }
 
   if (/submit agent to agent store/.test(text)) {
@@ -280,7 +487,7 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot Notebooks の要約・インサイトを強化`;
   }
 
-  if (/teams|meeting|chat|channel/.test(text)) {
+  if (/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(titleText)) {
     return `${event.productArea} の会議・チャット機能を更新`;
   }
 
@@ -288,12 +495,16 @@ function buildJapaneseFallbackTitle(event) {
     return `${event.productArea} の連携機能を拡張`;
   }
 
-  if (/license|pricing|billing|cost|capacity/.test(text)) {
+  if (/(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(titleText)) {
     return `${event.productArea} のライセンス・課金関連更新`;
   }
 
   if (/roadmap/.test(text) && /agent|copilot/.test(text)) {
     return normalizedTitle ? excerptText(normalizedTitle, 72) : `${event.productArea} の Roadmap 更新`;
+  }
+
+  if (normalizedTitle) {
+    return excerptText(normalizedTitle, 72);
   }
 
   return `${event.productArea} の更新`;
@@ -432,11 +643,28 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     `${productArea} の更新`,
     `${productArea} の Roadmap 更新`,
   ]);
+  const normalizedTitleEn = String(titleEn ?? "").toLowerCase();
   return (
     !titleJa ||
     !isLikelyJapanese(titleJa) ||
     titleJa === titleEn ||
-    genericTitles.has(titleJa)
+    genericTitles.has(titleJa) ||
+    (titleJa === "Microsoft 365 Copilot のライセンス・課金関連更新" &&
+      !/(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(
+        normalizedTitleEn,
+      )) ||
+    (/edit with the model of your choice in powerpoint/.test(normalizedTitleEn) &&
+      titleJa !== "PowerPoint で使用モデルを選択可能に") ||
+    (/ai-generated meeting archive/.test(normalizedTitleEn) &&
+      titleJa !== "Teams で AI 生成の会議アーカイブに対応") ||
+    (/scatter image effect/.test(normalizedTitleEn) &&
+      titleJa !== "Copilot で scatter image effect に対応") ||
+    (titleJa === "Microsoft 365 Copilot の会議・チャット機能を更新" &&
+      !/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
+        normalizedTitleEn,
+      )) ||
+    (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
+      !/anthropic models/.test(normalizedTitleEn))
   );
 }
 
