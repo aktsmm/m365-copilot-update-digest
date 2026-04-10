@@ -194,6 +194,10 @@ function stageDescription(stage) {
   switch (stage) {
     case "GA":
       return "一般提供として案内されています";
+    case "Launched":
+      return "提供開始済みとして案内されています";
+    case "In development":
+      return "開発中として案内されています";
     case "Preview":
       return "プレビューとして案内されています";
     case "Rolling out":
@@ -213,7 +217,9 @@ function buildJapaneseFallbackSummary(event) {
   const sourceText =
     event.sourceFamily === "Tech Community"
       ? "公式ブログ由来の更新です。"
-      : "公開ドキュメント由来の更新です。";
+      : event.sourceFamily === "Roadmap"
+        ? `Microsoft 365 Roadmap 由来の更新です${event.roadmapIds?.[0] ? ` (Roadmap ${event.roadmapIds[0]})` : ""}。`
+        : "公開ドキュメント由来の更新です。";
   const compactTitle = String(event.title ?? "").replace(/\s*\[[^\]]+\]\s*$/g, "");
   return normalizeWhitespace(
     `${event.productArea} の更新です。${compactTitle} に関する内容で、${stageDescription(event.releaseStage)}。${sourceText}${audienceText}`,
@@ -222,6 +228,9 @@ function buildJapaneseFallbackSummary(event) {
 
 function buildJapaneseFallbackTitle(event) {
   const text = `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+  const normalizedTitle = String(event.titleEn || event.title || "")
+    .replace(/^microsoft copilot \(microsoft 365\):\s*/i, "")
+    .trim();
 
   if (/welcome to the .*blog|launch of the .*blog/.test(text)) {
     return `${event.productArea} 公式ブログ開始`;
@@ -247,6 +256,30 @@ function buildJapaneseFallbackTitle(event) {
     return `OneDrive 共有時の Copilot 要約に対応`;
   }
 
+  if (/submit agent to agent store/.test(text)) {
+    return `Agent Builder から Agent Store へ申請可能に`;
+  }
+
+  if (/generate text for a powerpoint slide using slide context/.test(text)) {
+    return `PowerPoint のスライド文面生成を強化`;
+  }
+
+  if (/content sources in copilot chat/.test(text)) {
+    return `Copilot Chat のコンテンツ ソース表示を強化`;
+  }
+
+  if (/copilot can edit your document in powerpoint/.test(text)) {
+    return `PowerPoint で Copilot による文書編集に対応`;
+  }
+
+  if (/prepare for your meeting with copilot chat in outlook mobile/.test(text)) {
+    return `Outlook mobile で会議準備向け Copilot Chat に対応`;
+  }
+
+  if (/copilot notebooks?/.test(text) && /overview|summary|insights/.test(text)) {
+    return `Copilot Notebooks の要約・インサイトを強化`;
+  }
+
   if (/teams|meeting|chat|channel/.test(text)) {
     return `${event.productArea} の会議・チャット機能を更新`;
   }
@@ -259,7 +292,87 @@ function buildJapaneseFallbackTitle(event) {
     return `${event.productArea} のライセンス・課金関連更新`;
   }
 
+  if (/roadmap/.test(text) && /agent|copilot/.test(text)) {
+    return normalizedTitle ? excerptText(normalizedTitle, 72) : `${event.productArea} の Roadmap 更新`;
+  }
+
   return `${event.productArea} の更新`;
+}
+
+function roadmapProductArea(title, categories, source) {
+  const text = `${title}\n${categories.join("\n")}`.toLowerCase();
+  if (/copilot studio/.test(text)) {
+    return "Copilot Studio";
+  }
+
+  return source.productArea || "Microsoft 365 Copilot";
+}
+
+function roadmapStatus(categories) {
+  const normalized = categories.map((category) => category.toLowerCase());
+  if (normalized.includes("launched")) {
+    return "Launched";
+  }
+
+  if (normalized.includes("rolling out")) {
+    return "Rolling out";
+  }
+
+  if (normalized.includes("in development")) {
+    return "In development";
+  }
+
+  return "Update";
+}
+
+function cleanupRoadmapSummary(rawSummary) {
+  const summary = stripHtmlText(rawSummary)
+    .replace(/\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return excerptText(summary, 320);
+}
+
+function parseRoadmapRssFeed(source, xmlText) {
+  const parsed = xmlParser.parse(xmlText);
+  const items = toArray(parsed?.rss?.channel?.item);
+
+  return items
+    .map((item) => {
+      const title = normalizeWhitespace(readXmlText(item.title));
+      const rawSummary = readXmlText(item.description || item["content:encoded"] || "");
+      const categories = toArray(item.category)
+        .map((category) => normalizeWhitespace(readXmlText(category)))
+        .filter(Boolean);
+      const link = normalizeWhitespace(readXmlText(item.link));
+      const publishedAt = new Date(
+        readXmlText(item["a10:updated"]) || item.pubDate || Date.now(),
+      ).toISOString();
+
+      return {
+        id: buildEventId(
+          source.id,
+          title,
+          publishedAt,
+          readXmlText(item.guid) || link,
+        ),
+        title,
+        summary: cleanupRoadmapSummary(rawSummary),
+        summaryEn: cleanupRoadmapSummary(rawSummary),
+        summaryJa: cleanupRoadmapSummary(rawSummary),
+        url: link,
+        publishedAt,
+        productArea: roadmapProductArea(title, categories, source),
+        section: roadmapProductArea(title, categories, source),
+        roadmapIds: extractRoadmapIds(rawSummary, [link, readXmlText(item.guid)]),
+        releaseStage: roadmapStatus(categories),
+        tags: [...new Set([roadmapProductArea(title, categories, source), ...categories])],
+        categories,
+      };
+    })
+    .filter((entry) => entry.title && entry.url)
+    .filter((entry) => matchesKeywords(source, entry))
+    .slice(0, source.maxItems ?? items.length);
 }
 
 function buildTranslationBatches(events, pickText, maxChars, maxItems) {
@@ -314,8 +427,17 @@ function splitTranslatedBatch(translatedText, batch) {
   }));
 }
 
-function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn) {
-  return !titleJa || !isLikelyJapanese(titleJa) || titleJa === titleEn;
+function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
+  const genericTitles = new Set([
+    `${productArea} の更新`,
+    `${productArea} の Roadmap 更新`,
+  ]);
+  return (
+    !titleJa ||
+    !isLikelyJapanese(titleJa) ||
+    titleJa === titleEn ||
+    genericTitles.has(titleJa)
+  );
 }
 
 async function localizeJapaneseTitles(
@@ -350,7 +472,7 @@ async function localizeJapaneseTitles(
       cached &&
       cached.title === event.titleEn &&
       cached.titleJa &&
-      !shouldIgnoreCachedJapaneseTitle(cached.titleJa, event.titleEn)
+      !shouldIgnoreCachedJapaneseTitle(cached.titleJa, event.titleEn, event.productArea)
     ) {
       event.titleJa = cached.titleJa;
       continue;
@@ -361,7 +483,7 @@ async function localizeJapaneseTitles(
       existing &&
       existing.titleEn === event.titleEn &&
       existing.titleJa &&
-      !shouldIgnoreCachedJapaneseTitle(existing.titleJa, event.titleEn)
+      !shouldIgnoreCachedJapaneseTitle(existing.titleJa, event.titleEn, event.productArea)
     ) {
       event.titleJa = existing.titleJa;
       summaryCache[event.id] = {
@@ -820,7 +942,6 @@ function parseRssFeed(source, xmlText) {
   const items = toArray(parsed?.rss?.channel?.item);
 
   return items
-    .slice(0, source.maxItems ?? items.length)
     .map((item) => {
       const rawSummary = readXmlText(item.description || item["content:encoded"] || "");
       const title = normalizeWhitespace(readXmlText(item.title));
@@ -842,7 +963,8 @@ function parseRssFeed(source, xmlText) {
       };
     })
     .filter((entry) => entry.title && entry.url)
-    .filter((entry) => matchesKeywords(source, entry));
+    .filter((entry) => matchesKeywords(source, entry))
+    .slice(0, source.maxItems ?? items.length);
 }
 
 function extractSinglePageUpdate(source, html, nowIso) {
@@ -894,6 +1016,8 @@ function parseSource(source, html, nowIso) {
       return extractM365ReleaseNotes(source, html);
     case "copilot_studio_whats_new":
       return extractCopilotStudioWhatsNew(source, html);
+    case "m365_roadmap_rss":
+      return parseRoadmapRssFeed(source, html);
     case "rss_feed":
       return parseRssFeed(source, html);
     case "single_page_update":

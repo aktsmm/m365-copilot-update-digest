@@ -113,6 +113,14 @@ export function detectReleaseStage(value) {
     return "Retirement";
   }
 
+  if (/launched/.test(text)) {
+    return "Launched";
+  }
+
+  if (/in development/.test(text)) {
+    return "In development";
+  }
+
   if (/general availability|generally available|\bga\b/.test(text)) {
     return "GA";
   }
@@ -199,11 +207,26 @@ const SIGNAL_DEFINITIONS = [
     reasonEn: "because it establishes or expands an official update channel",
   },
   {
-    key: "licensing",
+    key: "license-adoption",
+    score: 18,
+    pattern:
+      /adoption report|usage metrics|usage report|organization reports|power bi report|power user insights|adoption power bi|adoption dashboard/,
+    reasonJa: "ライセンス評価や定着施策の精度が上がるため",
+    reasonEn: "because it improves license evaluation and adoption planning",
+  },
+  {
+    key: "licensing-cost-control",
     score: 20,
-    pattern: /license|licensing|billing|cost|capacity|pricing|pay-as-you-go/,
-    reasonJa: "コストやライセンス判断に関わるため",
-    reasonEn: "because it impacts cost or licensing decisions",
+    pattern: /billing|cost|capacity|pricing|pay-as-you-go|prepurchase|message pack|capacity pack/,
+    reasonJa: "コスト配分や予算管理の見直しに直結するため",
+    reasonEn: "because it directly affects cost allocation and budget planning",
+  },
+  {
+    key: "licensing",
+    score: 18,
+    pattern: /license|licensing|sku|plan|premium license|copilot license/,
+    reasonJa: "ライセンス設計や展開判断に直結するため",
+    reasonEn: "because it directly affects licensing and rollout decisions",
   },
   {
     key: "security-governance",
@@ -216,7 +239,7 @@ const SIGNAL_DEFINITIONS = [
   {
     key: "analytics",
     score: 14,
-    pattern: /analytics|adoption|report|dashboard|insights|power bi|usage/,
+    pattern: /analytics|analytics page|dashboard|reporting|power bi/,
     reasonJa: "導入状況の可視化や分析に関わるため",
     reasonEn: "because it affects adoption visibility or analytics",
   },
@@ -276,7 +299,9 @@ function matchedSignals(event) {
 export function importanceScore(event) {
   const stageWeights = {
     Retirement: 95,
+    Launched: 88,
     GA: 85,
+    "In development": 72,
     Preview: 70,
     "Rolling out": 65,
     Update: 50,
@@ -319,11 +344,23 @@ export function importanceReason(event, locale = "ja") {
         ? "廃止や移行判断に影響するため"
         : "because it affects deprecation and migration planning",
     );
+  } else if (event.releaseStage === "Launched") {
+    reasons.push(
+      locale === "ja"
+        ? "提供開始済みで利用可否の確認に直結するため"
+        : "because it is already launched and immediately actionable",
+    );
   } else if (event.releaseStage === "GA") {
     reasons.push(
       locale === "ja"
         ? "GA になり実運用へ直結するため"
         : "because it is generally available and production-relevant",
+    );
+  } else if (event.releaseStage === "In development") {
+    reasons.push(
+      locale === "ja"
+        ? "今後の展開計画や事前準備に影響するため"
+        : "because it affects forward planning and preparation",
     );
   } else if (event.releaseStage === "Preview") {
     reasons.push(

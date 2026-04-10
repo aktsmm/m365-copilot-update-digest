@@ -53,10 +53,15 @@ const TEXT = {
     filterTitle: "製品別アップデート",
     productFilterLabel: "製品",
     roleFilterLabel: "役割タグ",
+    sourceTypeFilterLabel: "ソース種別",
     allProducts: "すべて",
     allRoles: "すべて",
+    allSourceTypes: "すべて",
     adminRole: "管理者向け",
     makerRole: "作成者向け",
+    sourceTypeDocs: "公式ドキュメント",
+    sourceTypeBlog: "公式ブログ",
+    sourceTypeRoadmap: "Roadmap",
     sourceBreakdownTitle: "ソース別一覧",
     weeklyArchiveTitle: "週間まとめ",
     dailyArchiveTitle: "日次アーカイブ",
@@ -128,10 +133,15 @@ const TEXT = {
     filterTitle: "Updates by product",
     productFilterLabel: "Product",
     roleFilterLabel: "Role",
+    sourceTypeFilterLabel: "Source type",
     allProducts: "All",
     allRoles: "All",
+    allSourceTypes: "All",
     adminRole: "Admin-focused",
     makerRole: "Builder-focused",
+    sourceTypeDocs: "Official docs",
+    sourceTypeBlog: "Official blogs",
+    sourceTypeRoadmap: "Roadmap",
     sourceBreakdownTitle: "By source",
     weeklyArchiveTitle: "Weekly summaries",
     dailyArchiveTitle: "Daily archive",
@@ -287,6 +297,31 @@ function roleSlug(value) {
   return slugify(value) || "other";
 }
 
+function sourceTypeSlug(value) {
+  if (value === "Tech Community") {
+    return "blog";
+  }
+
+  if (value === "Roadmap") {
+    return "roadmap";
+  }
+
+  return "docs";
+}
+
+function sourceTypeLabel(sourceFamily, text) {
+  const type = sourceTypeSlug(sourceFamily);
+  if (type === "blog") {
+    return text.sourceTypeBlog;
+  }
+
+  if (type === "roadmap") {
+    return text.sourceTypeRoadmap;
+  }
+
+  return text.sourceTypeDocs;
+}
+
 function overrideIds(entries) {
   return new Set(
     (entries || [])
@@ -343,6 +378,7 @@ function renderSectionHeading(title, actionHtml = "") {
 
 function renderFilterToolbar(events, text) {
   const products = [...new Set(events.map((event) => event.productArea))];
+  const sourceTypes = ["docs", "blog", "roadmap"];
 
   return `
       <div class="filter-toolbar">
@@ -361,6 +397,13 @@ function renderFilterToolbar(events, text) {
             <button class="chip" type="button" data-role-filter="maker">${escapeHtml(text.makerRole)}</button>
           </div>
         </div>
+        <div class="filter-group">
+          <span>${escapeHtml(text.sourceTypeFilterLabel)}</span>
+          <div class="chip-row">
+            <button class="chip is-active" type="button" data-source-filter="all">${escapeHtml(text.allSourceTypes)}</button>
+            ${sourceTypes.map((type) => `<button class="chip" type="button" data-source-filter="${escapeHtml(type)}">${escapeHtml(type === "blog" ? text.sourceTypeBlog : type === "roadmap" ? text.sourceTypeRoadmap : text.sourceTypeDocs)}</button>`).join("")}
+          </div>
+        </div>
       </div>`;
 }
 
@@ -369,6 +412,7 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
   const localizedTitle = titleForLocale(event, locale);
   const originalTitle = originalTitleForLocale(event, locale);
   const product = escapeHtml(event.productArea);
+  const sourceType = sourceTypeSlug(event.sourceFamily);
   const detailHref = options.detailHref || "";
   const originalHref = escapeHtml(event.url);
   const why =
@@ -393,10 +437,11 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
     .join("");
 
   return `
-    <article class="update-card" data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}">
+    <article class="update-card" data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}">
       <div class="badge-row">
         ${event.isPinned ? renderBadge("Pinned", "pinned") : ""}
         ${renderBadge(product, "product")}
+        ${renderBadge(sourceTypeLabel(event.sourceFamily, text), "source-type")}
         ${renderBadge(locale === "en" ? event.sourceName : event.sourceName, "source")}
         ${renderBadge(event.releaseStage, "stage")}
         ${roleBadges}
@@ -603,6 +648,17 @@ function renderIndexPage(
   const productPool = sorted.slice(0, 24);
   const recentDaily = dailyLogs.slice(0, 12);
   const recentWeekly = weeklyGroups.slice(0, 6);
+  const sourceTypeCounts = ["docs", "blog", "roadmap"]
+    .map((type) => ({
+      type,
+      events: sorted.filter((event) => sourceTypeSlug(event.sourceFamily) === type),
+    }))
+    .filter((entry) => entry.events.length > 0)
+    .map((entry) => ({
+      ...entry,
+      count: entry.events.length,
+      sourceNames: [...new Set(entry.events.map((event) => event.sourceName))],
+    }));
   const sourceCounts = [
     ...sorted
       .reduce((map, event) => {
@@ -659,11 +715,10 @@ function renderIndexPage(
     <section class="section-block two-column">
       <div class="column-card">
         ${renderSectionHeading(text.sourceBreakdownTitle)}
-        <div class="source-list">${sourceCounts
-          .slice(0, 8)
+        <div class="source-list">${sourceTypeCounts
           .map(
-            ([sourceName, count]) =>
-              `<div class="source-row"><span>${escapeHtml(sourceName)}</span><strong>${escapeHtml(String(count))}</strong></div>`,
+            (entry) =>
+              `<div class="source-row"><span class="source-row-copy"><strong>${escapeHtml(entry.type === "blog" ? text.sourceTypeBlog : entry.type === "roadmap" ? text.sourceTypeRoadmap : text.sourceTypeDocs)}</strong><small>${escapeHtml(entry.sourceNames.join(" / "))}</small></span><strong>${escapeHtml(String(entry.count))}</strong></div>`,
           )
           .join("")}</div>
       </div>

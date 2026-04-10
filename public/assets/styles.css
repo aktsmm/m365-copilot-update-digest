@@ -282,6 +282,11 @@ h3 {
   color: var(--accent-strong);
 }
 
+.badge-source-type {
+  background: rgba(29, 184, 168, 0.16);
+  color: #0f7f72;
+}
+
 .badge-product {
   background: rgba(37, 105, 246, 0.1);
   color: var(--accent-strong);
@@ -417,6 +422,16 @@ h3 {
 .archive-row strong,
 .source-row strong {
   color: var(--text);
+}
+
+.source-row-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.source-row-copy small {
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .search-shell {
