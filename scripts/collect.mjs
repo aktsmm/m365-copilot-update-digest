@@ -32,9 +32,13 @@ const summariesDir = path.join(workspaceRoot, "summaries", "daily");
 const stateFile = path.join(workspaceRoot, "data", "state.json");
 const runSummaryFile = path.join(workspaceRoot, "data", "run-summary.json");
 const TRANSLATION_MARKER_PREFIX = "[[[M365_DIGEST_ITEM_";
+const TITLE_TRANSLATION_MARKER_PREFIX = "[[[M365_DIGEST_TITLE_";
 const MAX_TRANSLATION_BATCH_CHARS = 3600;
 const MAX_TRANSLATION_BATCH_ITEMS = 12;
-const MAX_TRANSLATED_EVENTS_PER_RUN = 80;
+const MAX_TITLE_TRANSLATION_BATCH_CHARS = 2200;
+const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
+const MAX_TRANSLATED_SUMMARIES_PER_RUN = 80;
+const MAX_TRANSLATED_TITLES_PER_RUN = 240;
 
 const xmlParser = new XMLParser({
   ignoreAttributes: false,
@@ -216,21 +220,63 @@ function buildJapaneseFallbackSummary(event) {
   );
 }
 
-function buildTranslationBatches(events) {
+function buildJapaneseFallbackTitle(event) {
+  const text = `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/welcome to the .*blog|launch of the .*blog/.test(text)) {
+    return `${event.productArea} 公式ブログ開始`;
+  }
+
+  if (/agent evaluation/.test(text)) {
+    return `${event.productArea} のエージェント評価`;
+  }
+
+  if (/security|governance|analytics/.test(text)) {
+    return `${event.productArea} のセキュリティ・管理・分析機能を強化`;
+  }
+
+  if (/copilot in word/.test(text)) {
+    return `Word の Copilot 機能強化`;
+  }
+
+  if (/code interpreter/.test(text)) {
+    return `コード インタープリタ機能の拡張`;
+  }
+
+  if (/onedrive/.test(text) && /summary/.test(text)) {
+    return `OneDrive 共有時の Copilot 要約に対応`;
+  }
+
+  if (/teams|meeting|chat|channel/.test(text)) {
+    return `${event.productArea} の会議・チャット機能を更新`;
+  }
+
+  if (/connector|connect to|integration/.test(text)) {
+    return `${event.productArea} の連携機能を拡張`;
+  }
+
+  if (/license|pricing|billing|cost|capacity/.test(text)) {
+    return `${event.productArea} のライセンス・課金関連更新`;
+  }
+
+  return `${event.productArea} の更新`;
+}
+
+function buildTranslationBatches(events, pickText, maxChars, maxItems) {
   const batches = [];
   let currentBatch = [];
   let currentChars = 0;
 
   for (const event of events) {
-    const summary = normalizeWhitespace(event.summaryEn || event.summary || "");
-    if (!summary) {
+    const text = normalizeWhitespace(pickText(event));
+    if (!text) {
       continue;
     }
 
-    const estimatedChars = summary.length + 48;
+    const estimatedChars = text.length + 48;
     const exceedsBatch =
-      currentBatch.length >= MAX_TRANSLATION_BATCH_ITEMS ||
-      currentChars + estimatedChars > MAX_TRANSLATION_BATCH_CHARS;
+      currentBatch.length >= maxItems ||
+      currentChars + estimatedChars > maxChars;
 
     if (currentBatch.length > 0 && exceedsBatch) {
       batches.push(currentBatch);
@@ -250,7 +296,7 @@ function buildTranslationBatches(events) {
 }
 
 function splitTranslatedBatch(translatedText, batch) {
-  const matches = [...String(translatedText ?? "").matchAll(/\[\[\[M365_DIGEST_ITEM_(\d+)\]\]\]/g)];
+  const matches = [...String(translatedText ?? "").matchAll(/\[\[\[M365_DIGEST_(?:ITEM|TITLE)_(\d+)\]\]\]/g)];
   const translatedByIndex = new Map();
 
   for (let index = 0; index < matches.length; index += 1) {
@@ -266,6 +312,140 @@ function splitTranslatedBatch(translatedText, batch) {
     event,
     text: translatedByIndex.get(index) || "",
   }));
+}
+
+function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn) {
+  return !titleJa || !isLikelyJapanese(titleJa) || titleJa === titleEn;
+}
+
+async function localizeJapaneseTitles(
+  events,
+  existingById,
+  summaryCache,
+  nowIso,
+) {
+  const pending = [];
+
+  for (const event of events) {
+    event.titleEn = normalizeWhitespace(event.titleEn || event.title || "");
+
+    if (!event.titleEn) {
+      event.titleJa = "";
+      continue;
+    }
+
+    if (isLikelyJapanese(event.titleJa || event.titleEn)) {
+      event.titleJa = normalizeWhitespace(event.titleJa || event.titleEn);
+      summaryCache[event.id] = {
+        ...summaryCache[event.id],
+        title: event.titleEn,
+        titleJa: event.titleJa,
+        updatedAt: nowIso,
+      };
+      continue;
+    }
+
+    const cached = summaryCache[event.id];
+    if (
+      cached &&
+      cached.title === event.titleEn &&
+      cached.titleJa &&
+      !shouldIgnoreCachedJapaneseTitle(cached.titleJa, event.titleEn)
+    ) {
+      event.titleJa = cached.titleJa;
+      continue;
+    }
+
+    const existing = existingById.get(event.id);
+    if (
+      existing &&
+      existing.titleEn === event.titleEn &&
+      existing.titleJa &&
+      !shouldIgnoreCachedJapaneseTitle(existing.titleJa, event.titleEn)
+    ) {
+      event.titleJa = existing.titleJa;
+      summaryCache[event.id] = {
+        ...summaryCache[event.id],
+        title: event.titleEn,
+        titleJa: event.titleJa,
+        updatedAt: nowIso,
+      };
+      continue;
+    }
+
+    pending.push(event);
+  }
+
+  pending.sort(
+    (left, right) =>
+      new Date(right.publishedAt || 0) - new Date(left.publishedAt || 0),
+  );
+
+  const translatable = pending.slice(0, MAX_TRANSLATED_TITLES_PER_RUN);
+  const fallbackOnly = pending.slice(MAX_TRANSLATED_TITLES_PER_RUN);
+  const batches = buildTranslationBatches(
+    translatable,
+    (event) => event.titleEn,
+    MAX_TITLE_TRANSLATION_BATCH_CHARS,
+    MAX_TITLE_TRANSLATION_BATCH_ITEMS,
+  );
+
+  for (const batch of batches) {
+    const requestText = batch
+      .map((event, index) => `${TITLE_TRANSLATION_MARKER_PREFIX}${index}]]]\n${event.titleEn}`)
+      .join("\n");
+
+    try {
+      const result = await translate(requestText, { to: "ja" });
+      const translatedEntries = splitTranslatedBatch(result.text, batch);
+      for (const entry of translatedEntries) {
+        entry.event.titleJa =
+          entry.text && entry.text !== entry.event.titleEn
+            ? excerptText(entry.text, 96)
+            : buildJapaneseFallbackTitle(entry.event);
+        summaryCache[entry.event.id] = {
+          ...summaryCache[entry.event.id],
+          title: entry.event.titleEn,
+          titleJa: entry.event.titleJa,
+          updatedAt: nowIso,
+        };
+      }
+    } catch {
+      for (const event of batch) {
+        event.titleJa = buildJapaneseFallbackTitle(event);
+        summaryCache[event.id] = {
+          ...summaryCache[event.id],
+          title: event.titleEn,
+          titleJa: event.titleJa,
+          updatedAt: nowIso,
+        };
+      }
+    }
+  }
+
+  for (const event of fallbackOnly) {
+    event.titleJa = buildJapaneseFallbackTitle(event);
+    summaryCache[event.id] = {
+      ...summaryCache[event.id],
+      title: event.titleEn,
+      titleJa: event.titleJa,
+      updatedAt: nowIso,
+    };
+  }
+
+  for (const event of pending) {
+    if (!event.titleJa) {
+      event.titleJa = buildJapaneseFallbackTitle(event);
+      summaryCache[event.id] = {
+        ...summaryCache[event.id],
+        title: event.titleEn,
+        titleJa: event.titleJa,
+        updatedAt: nowIso,
+      };
+    }
+  }
+
+  return events;
 }
 
 async function localizeJapaneseSummaries(
@@ -333,9 +513,14 @@ async function localizeJapaneseSummaries(
       new Date(right.publishedAt || 0) - new Date(left.publishedAt || 0),
   );
 
-  const translatable = pending.slice(0, MAX_TRANSLATED_EVENTS_PER_RUN);
-  const fallbackOnly = pending.slice(MAX_TRANSLATED_EVENTS_PER_RUN);
-  const batches = buildTranslationBatches(translatable);
+  const translatable = pending.slice(0, MAX_TRANSLATED_SUMMARIES_PER_RUN);
+  const fallbackOnly = pending.slice(MAX_TRANSLATED_SUMMARIES_PER_RUN);
+  const batches = buildTranslationBatches(
+    translatable,
+    (event) => event.summaryEn,
+    MAX_TRANSLATION_BATCH_CHARS,
+    MAX_TRANSLATION_BATCH_ITEMS,
+  );
 
   for (const batch of batches) {
     const requestText = batch
@@ -732,6 +917,8 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
     productArea: event.productArea || source.productArea,
     section: event.section || source.productArea,
     title: event.title,
+    titleJa: event.titleJa || event.title,
+    titleEn: event.titleEn || event.title,
     summary: event.summary,
     summaryJa: event.summaryJa || event.summary,
     summaryEn: event.summaryEn || event.summary,
@@ -784,9 +971,15 @@ async function main() {
   for (const source of sources) {
     try {
       const html = await fetchText(source.url);
+      const localizedEvents = await localizeJapaneseTitles(
+        parseSource(source, html, nowIso),
+        existingById,
+        summaryCache,
+        nowIso,
+      );
       const parsedEvents = await localizeJapaneseSummaries(
         source,
-        parseSource(source, html, nowIso),
+        localizedEvents,
         existingById,
         summaryCache,
         nowIso,

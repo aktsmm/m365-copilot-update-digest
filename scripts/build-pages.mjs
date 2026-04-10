@@ -6,10 +6,12 @@ import {
   formatDateTime,
   importanceReason,
   importanceScore,
+  originalTitleForLocale,
   safeDate,
   slugify,
   sortEvents,
   summaryForLocale,
+  titleForLocale,
   toDateOnly,
   weekKey,
   weekRangeLabel,
@@ -100,6 +102,7 @@ const TEXT = {
     searchStatusEmpty: "一致する更新は見つかりませんでした。",
     searchResultCount: "件ヒット",
     weekOf: "週次",
+    originalTitleLabel: "原題",
   },
   en: {
     htmlLang: "en",
@@ -174,6 +177,7 @@ const TEXT = {
     searchStatusEmpty: "No matching updates were found.",
     searchResultCount: "matches",
     weekOf: "Week of",
+    originalTitleLabel: "Original",
   },
 };
 
@@ -337,8 +341,33 @@ function renderSectionHeading(title, actionHtml = "") {
   return `<div class="section-heading"><h2>${escapeHtml(title)}</h2>${actionHtml}</div>`;
 }
 
+function renderFilterToolbar(events, text) {
+  const products = [...new Set(events.map((event) => event.productArea))];
+
+  return `
+      <div class="filter-toolbar">
+        <div class="filter-group">
+          <span>${escapeHtml(text.productFilterLabel)}</span>
+          <div class="chip-row">
+            <button class="chip is-active" type="button" data-product-filter="all">${escapeHtml(text.allProducts)}</button>
+            ${products.map((product) => `<button class="chip" type="button" data-product-filter="${escapeHtml(productSlug(product))}">${escapeHtml(product)}</button>`).join("")}
+          </div>
+        </div>
+        <div class="filter-group">
+          <span>${escapeHtml(text.roleFilterLabel)}</span>
+          <div class="chip-row">
+            <button class="chip is-active" type="button" data-role-filter="all">${escapeHtml(text.allRoles)}</button>
+            <button class="chip" type="button" data-role-filter="admin">${escapeHtml(text.adminRole)}</button>
+            <button class="chip" type="button" data-role-filter="maker">${escapeHtml(text.makerRole)}</button>
+          </div>
+        </div>
+      </div>`;
+}
+
 function renderUpdateCard(event, locale, depth, text, options = {}) {
   const summary = summaryForLocale(event, locale);
+  const localizedTitle = titleForLocale(event, locale);
+  const originalTitle = originalTitleForLocale(event, locale);
   const product = escapeHtml(event.productArea);
   const detailHref = options.detailHref || "";
   const originalHref = escapeHtml(event.url);
@@ -373,7 +402,8 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
         ${roleBadges}
         ${roadmapBadges}
       </div>
-      <h3>${escapeHtml(event.title)}</h3>
+      <h3>${escapeHtml(localizedTitle)}</h3>
+      ${originalTitle ? `<p class="card-original-title"><strong>${escapeHtml(text.originalTitleLabel)}:</strong> ${escapeHtml(originalTitle)}</p>` : ""}
       <p>${escapeHtml(summary)}</p>
       <dl class="meta-list">
         <div><dt>${escapeHtml(text.publishedLabel)}</dt><dd>${escapeHtml(formatDate(event.publishedAt, locale))}</dd></div>
@@ -502,7 +532,8 @@ function renderSearchShell(locale, depth, text, options = {}) {
 function buildSearchIndex(events) {
   return events.map((event) => ({
     id: event.id,
-    title: event.title,
+    titleJa: event.titleJa || event.title,
+    titleEn: event.titleEn || event.title,
     summaryJa: event.summaryJa || event.summary,
     summaryEn: event.summaryEn || event.summary,
     productArea: event.productArea,
@@ -570,7 +601,6 @@ function renderIndexPage(
     8,
   );
   const productPool = sorted.slice(0, 24);
-  const products = [...new Set(productPool.map((event) => event.productArea))];
   const recentDaily = dailyLogs.slice(0, 12);
   const recentWeekly = weeklyGroups.slice(0, 6);
   const sourceCounts = [
@@ -606,9 +636,11 @@ function renderIndexPage(
       linkHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, "search/")),
     })}
 
-    <section class="section-block">
+    <section class="section-block" data-card-filters>
       ${renderSectionHeading(text.importantTitle)}
-      <div class="card-grid">${importantEvents.length > 0 ? importantEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
+      ${importantEvents.length > 0 ? renderFilterToolbar(importantEvents, text) : ""}
+      <div class="card-grid" data-filter-cards>${importantEvents.length > 0 ? importantEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
+      <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
     </section>
 
     <section class="section-block">
@@ -619,23 +651,7 @@ function renderIndexPage(
 
     <section class="section-block" data-card-filters>
       ${renderSectionHeading(text.filterTitle)}
-      <div class="filter-toolbar">
-        <div class="filter-group">
-          <span>${escapeHtml(text.productFilterLabel)}</span>
-          <div class="chip-row">
-            <button class="chip is-active" type="button" data-product-filter="all">${escapeHtml(text.allProducts)}</button>
-            ${products.map((product) => `<button class="chip" type="button" data-product-filter="${escapeHtml(productSlug(product))}">${escapeHtml(product)}</button>`).join("")}
-          </div>
-        </div>
-        <div class="filter-group">
-          <span>${escapeHtml(text.roleFilterLabel)}</span>
-          <div class="chip-row">
-            <button class="chip is-active" type="button" data-role-filter="all">${escapeHtml(text.allRoles)}</button>
-            <button class="chip" type="button" data-role-filter="admin">${escapeHtml(text.adminRole)}</button>
-            <button class="chip" type="button" data-role-filter="maker">${escapeHtml(text.makerRole)}</button>
-          </div>
-        </div>
-      </div>
+      ${renderFilterToolbar(productPool, text)}
       <div class="card-grid" data-filter-cards>${productPool.length > 0 ? productPool.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
       <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
     </section>

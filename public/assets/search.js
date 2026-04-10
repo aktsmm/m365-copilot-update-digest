@@ -65,9 +65,10 @@
       .map((entry) => {
         const href = `${basePath}${entry.detailPath}`;
         const summary = locale === "en" ? entry.summaryEn : entry.summaryJa;
+        const title = locale === "en" ? entry.titleEn : entry.titleJa;
         return `
           <article class="search-result-card">
-            <h2><a href="${escapeHtml(href)}">${escapeHtml(entry.title)}</a></h2>
+            <h2><a href="${escapeHtml(href)}">${escapeHtml(title)}</a></h2>
             <p>${escapeHtml(summary)}</p>
             <dl class="meta-list compact">
               <div><dt>${escapeHtml(text.published)}</dt><dd>${escapeHtml(entry.publishedAt.slice(0, 10))}</dd></div>
@@ -98,7 +99,8 @@
           .filter((entry) => {
             const haystack = normalize(
               [
-                entry.title,
+                entry.titleJa,
+                entry.titleEn,
                 entry.summaryJa,
                 entry.summaryEn,
                 entry.productArea,

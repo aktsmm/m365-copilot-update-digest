@@ -168,9 +168,112 @@ export function detectAudienceTags(title, summary, productArea = "") {
   return [...tags];
 }
 
+function analysisText(event) {
+  return [
+    event.title,
+    event.titleEn,
+    event.titleJa,
+    event.summary,
+    event.summaryEn,
+    event.summaryJa,
+    event.productArea,
+    event.section,
+    event.releaseStage,
+    event.sourceName,
+    event.sourceFamily,
+    ...(event.tags || []),
+    ...(event.roleTags || []),
+  ]
+    .filter(Boolean)
+    .join("\n")
+    .toLowerCase();
+}
+
+const SIGNAL_DEFINITIONS = [
+  {
+    key: "official-channel",
+    score: 18,
+    pattern:
+      /welcome to the .*blog|launch of the .*blog|blog launch|ブログ開始|ブログ開設/,
+    reasonJa: "新しい公式発信チャネルの開始や強化が案内されたため",
+    reasonEn: "because it establishes or expands an official update channel",
+  },
+  {
+    key: "licensing",
+    score: 20,
+    pattern: /license|licensing|billing|cost|capacity|pricing|pay-as-you-go/,
+    reasonJa: "コストやライセンス判断に関わるため",
+    reasonEn: "because it impacts cost or licensing decisions",
+  },
+  {
+    key: "security-governance",
+    score: 18,
+    pattern:
+      /admin|governance|security|policy|policies|compliance|purview|sharing|permissions|tenant|dlp|resilien|backup|archive/,
+    reasonJa: "管理やガバナンスへの影響が大きいため",
+    reasonEn: "because it materially affects administration or governance",
+  },
+  {
+    key: "analytics",
+    score: 14,
+    pattern: /analytics|adoption|report|dashboard|insights|power bi|usage/,
+    reasonJa: "導入状況の可視化や分析に関わるため",
+    reasonEn: "because it affects adoption visibility or analytics",
+  },
+  {
+    key: "builder",
+    score: 16,
+    pattern:
+      /agent evaluation|evaluation|copilot studio|agent builder|mcp|orchestration|model|models|gpt|claude|code interpreter|prompt builder|sdk|api/,
+    reasonJa: "エージェント構築や品質管理に関わるため",
+    reasonEn: "because it changes builder workflows or agent quality management",
+  },
+  {
+    key: "integration",
+    score: 14,
+    pattern:
+      /connector|connect to|integration|bitbucket|gitlab|zendesk|coda|hubspot|notion|veeva|external services|federated/,
+    reasonJa: "外部サービス連携や拡張性に影響するため",
+    reasonEn: "because it affects integrations or extensibility",
+  },
+  {
+    key: "documents",
+    score: 12,
+    pattern:
+      /word|excel|powerpoint|ppt|onedrive|pdf|document|documents|presentation|slide|notebook|onenote/,
+    reasonJa: "文書や資料作成の体験変化が大きいため",
+    reasonEn: "because it changes document or presentation workflows",
+  },
+  {
+    key: "communication",
+    score: 12,
+    pattern:
+      /teams|meeting|meetings|chat|channel|calendar|outlook|email|recap|conversation/,
+    reasonJa: "会議やコミュニケーションの業務導線に直結するため",
+    reasonEn: "because it directly affects meetings or communication workflows",
+  },
+  {
+    key: "search-knowledge",
+    score: 12,
+    pattern: /search|knowledge|retriev|ground|file summary|query|wiki|faq/,
+    reasonJa: "検索やナレッジ活用の精度に影響するため",
+    reasonEn: "because it affects search or knowledge workflows",
+  },
+  {
+    key: "ux",
+    score: 10,
+    pattern: /ui|ux|experience|streamlined|fewer confirmation|workflow|app learning/,
+    reasonJa: "日常利用時の体験変化が大きいため",
+    reasonEn: "because it noticeably changes the day-to-day user experience",
+  },
+];
+
+function matchedSignals(event) {
+  const text = analysisText(event);
+  return SIGNAL_DEFINITIONS.filter((signal) => signal.pattern.test(text));
+}
+
 export function importanceScore(event) {
-  const text =
-    `${event.title}\n${event.summary}\n${event.productArea}\n${event.releaseStage}\n${event.sourceName}\n${event.sourceFamily}`.toLowerCase();
   const stageWeights = {
     Retirement: 95,
     GA: 85,
@@ -180,41 +283,16 @@ export function importanceScore(event) {
   };
 
   let score = stageWeights[event.releaseStage] ?? 50;
+  score += matchedSignals(event)
+    .slice(0, 3)
+    .reduce((sum, signal) => sum + signal.score, 0);
 
-  if (/license|licensing|billing|cost|capacity|pricing/.test(text)) {
-    score += 20;
-  }
-
-  if (/what'?s new|whats new|release notes/.test(text)) {
+  if (/what'?s new|whats new|release notes/.test(analysisText(event))) {
     score += 10;
   }
 
-  if (/tech community/.test(text)) {
+  if (/tech community/.test(analysisText(event))) {
     score += 4;
-  }
-
-  if (
-    /admin|governance|security|policy|compliance|purview|sharing|permissions|dashboard/.test(
-      text,
-    )
-  ) {
-    score += 16;
-  }
-
-  if (
-    /agent builder|copilot studio|mcp|connector|evaluation|orchestration|model|models/.test(
-      text,
-    )
-  ) {
-    score += 14;
-  }
-
-  if (
-    /ui|experience|chat|search|teams|word|excel|powerpoint|onedrive|outlook/.test(
-      text,
-    )
-  ) {
-    score += 8;
   }
 
   if (event.roleTags?.includes("管理者向け")) {
@@ -233,8 +311,6 @@ export function importanceScore(event) {
 }
 
 export function importanceReason(event, locale = "ja") {
-  const text =
-    `${event.title}\n${event.summary}\n${event.productArea}\n${event.releaseStage}\n${event.sourceName}\n${event.sourceFamily}`.toLowerCase();
   const reasons = [];
 
   if (event.releaseStage === "Retirement") {
@@ -257,15 +333,7 @@ export function importanceReason(event, locale = "ja") {
     );
   }
 
-  if (/license|licensing|billing|cost|capacity|pricing/.test(text)) {
-    reasons.push(
-      locale === "ja"
-        ? "コストやライセンス判断に関わるため"
-        : "because it impacts cost or licensing decisions",
-    );
-  }
-
-  if (/what'?s new|whats new|release notes/.test(text)) {
+  if (/what'?s new|whats new|release notes/.test(analysisText(event))) {
     reasons.push(
       locale === "ja"
         ? "更新まとめや公式リリース整理として追いやすいため"
@@ -273,40 +341,24 @@ export function importanceReason(event, locale = "ja") {
     );
   }
 
-  if (
-    /admin|governance|security|policy|compliance|purview|sharing|permissions|dashboard/.test(
-      text,
-    )
-  ) {
-    reasons.push(
-      locale === "ja"
-        ? "管理やガバナンスへの影響があるため"
-        : "because it affects administration or governance",
-    );
+  for (const signal of matchedSignals(event)) {
+    reasons.push(locale === "ja" ? signal.reasonJa : signal.reasonEn);
   }
 
-  if (
-    /agent builder|copilot studio|mcp|connector|evaluation|orchestration|model|models/.test(
-      text,
-    )
-  ) {
-    reasons.push(
-      locale === "ja"
-        ? "Agent Builder や Copilot Studio の構築体験に影響するため"
-        : "because it changes builder or Copilot Studio workflows",
-    );
-  }
-
-  if (
-    /ui|experience|chat|search|teams|word|excel|powerpoint|onedrive|outlook/.test(
-      text,
-    )
-  ) {
-    reasons.push(
-      locale === "ja"
-        ? "日常利用時の体験変化が大きいため"
-        : "because it changes everyday user experience",
-    );
+  if (reasons.length === 1) {
+    if (event.roleTags?.includes("管理者向け")) {
+      reasons.push(
+        locale === "ja"
+          ? "管理者の運用判断に関わるため"
+          : "because it matters for admin operations",
+      );
+    } else if (event.roleTags?.includes("作成者向け")) {
+      reasons.push(
+        locale === "ja"
+          ? "作成者の構築判断に関わるため"
+          : "because it matters for builder decisions",
+      );
+    }
   }
 
   if (reasons.length === 0) {
@@ -315,7 +367,7 @@ export function importanceReason(event, locale = "ja") {
       : "because the update was confirmed on a public source";
   }
 
-  return reasons.slice(0, 2).join(locale === "ja" ? " / " : " / ");
+  return [...new Set(reasons)].slice(0, 2).join(locale === "ja" ? " / " : " / ");
 }
 
 export function dedupeEvents(events) {
@@ -364,6 +416,24 @@ export function sortEvents(events) {
   });
 }
 
+export function titleForLocale(event, locale = "ja") {
+  if (locale === "en") {
+    return event.titleEn || event.title || "";
+  }
+
+  return event.titleJa || event.title || "";
+}
+
+export function originalTitleForLocale(event, locale = "ja") {
+  if (locale === "en") {
+    return "";
+  }
+
+  const localized = titleForLocale(event, locale);
+  const original = event.titleEn || event.title || "";
+  return localized && original && localized !== original ? original : "";
+}
+
 export function summaryForLocale(event, locale = "ja") {
   if (locale === "en") {
     return event.summaryEn || event.summary || "";
@@ -402,7 +472,7 @@ export function buildDailyMarkdown(date, events) {
   ];
 
   for (const event of highlights) {
-    lines.push(`- [${event.title}](${event.url})`);
+    lines.push(`- [${titleForLocale(event, "ja")}](${event.url})`);
     lines.push(`  - ソース: ${event.sourceName}`);
     lines.push(`  - 領域: ${event.productArea}`);
     lines.push(`  - なぜ重要か: ${event.importanceReason}`);
@@ -411,8 +481,11 @@ export function buildDailyMarkdown(date, events) {
   lines.push("", "## 全件", "");
 
   for (const event of sorted) {
-    lines.push(`### ${event.title}`);
+    lines.push(`### ${titleForLocale(event, "ja")}`);
     lines.push("");
+    if (originalTitleForLocale(event, "ja")) {
+      lines.push(`- 原題: ${originalTitleForLocale(event, "ja")}`);
+    }
     lines.push(`- ソース: ${event.sourceName}`);
     lines.push(`- 公開日: ${formatDate(event.publishedAt, "ja")}`);
     lines.push(`- リリース段階: ${event.releaseStage}`);
