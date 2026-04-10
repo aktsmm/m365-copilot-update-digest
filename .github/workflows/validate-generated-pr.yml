@@ -134,6 +134,7 @@ jobs:
           const eventsDir = path.join(process.cwd(), 'data', 'events');
           const genericPattern = /の更新です。.+に関する内容で、.+(案内されています|進行中です|更新内容が案内されています|廃止や移行対応が案内されています)。/;
           const nonJapanese = [];
+          const nonJapaneseSummaries = [];
           const genericSummaries = [];
           const invalidTitles = [];
 
@@ -145,6 +146,9 @@ jobs:
               if (!/[\u3040-\u30ff\u3400-\u9fff]/.test(titleJa)) {
                 nonJapanese.push(`${file}: ${event.titleEn || event.title}`);
               }
+              if (summaryJa && !/[\u3040-\u30ff\u3400-\u9fff]/.test(summaryJa)) {
+                nonJapaneseSummaries.push(`${file}: ${event.titleEn || event.title}`);
+              }
               if (genericPattern.test(summaryJa)) {
                 genericSummaries.push(`${file}: ${event.titleEn || event.title}`);
               }
@@ -154,10 +158,14 @@ jobs:
             }
           }
 
-          if (nonJapanese.length > 0 || genericSummaries.length > 0 || invalidTitles.length > 0) {
+          if (nonJapanese.length > 0 || nonJapaneseSummaries.length > 0 || genericSummaries.length > 0 || invalidTitles.length > 0) {
             if (nonJapanese.length > 0) {
               console.error('Non-Japanese titleJa entries remain:');
               for (const line of nonJapanese.slice(0, 20)) console.error(`- ${line}`);
+            }
+            if (nonJapaneseSummaries.length > 0) {
+              console.error('Non-Japanese summaryJa entries remain:');
+              for (const line of nonJapaneseSummaries.slice(0, 20)) console.error(`- ${line}`);
             }
             if (genericSummaries.length > 0) {
               console.error('Generic fallback summaries remain:');

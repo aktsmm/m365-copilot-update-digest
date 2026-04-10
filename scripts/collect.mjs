@@ -322,10 +322,6 @@ function buildJapaneseFallbackSummary(event) {
     return "Copilot Studio の Channels ページを刷新。";
   }
 
-  if (extractedSummary && extractedSummary.length >= 18) {
-    return extractedSummary;
-  }
-
   if (
     event.titleJa &&
     event.titleJa !== (event.titleEn || event.title) &&
