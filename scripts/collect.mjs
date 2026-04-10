@@ -309,6 +309,10 @@ function buildJapaneseFallbackSummary(event) {
     return extractedSummary;
   }
 
+  if (/redesigned channels page/.test(String(event.titleEn || event.title || "").toLowerCase())) {
+    return "Copilot Studio の Channels ページを刷新。";
+  }
+
   if (extractedSummary && extractedSummary.length >= 18) {
     return extractedSummary;
   }
@@ -822,6 +826,8 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       titleJa !== "Teams で AI 生成の会議アーカイブに対応") ||
     (/scatter image effect/.test(normalizedTitleEn) &&
       titleJa !== "Copilot で scatter image effect に対応") ||
+    (/redesigned channels page/.test(normalizedTitleEn) &&
+      titleJa !== "Channels ページを刷新") ||
     (titleJa === "Microsoft 365 Copilot の会議・チャット機能を更新" &&
       !/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
