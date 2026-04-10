@@ -39,6 +39,12 @@ const MAX_TITLE_TRANSLATION_BATCH_CHARS = 2200;
 const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
 const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
+const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Tokyo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
 
 const xmlParser = new XMLParser({
   ignoreAttributes: false,
@@ -99,6 +105,48 @@ async function writeTextFile(filePath, content) {
 
   await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.writeFile(filePath, content, "utf8");
+}
+
+function tokyoDateOnly(value) {
+  const date = safeDate(value);
+  const parts = TOKYO_DATE_FORMATTER.formatToParts(date).reduce(
+    (accumulator, part) => {
+      if (part.type !== "literal") {
+        accumulator[part.type] = part.value;
+      }
+      return accumulator;
+    },
+    {},
+  );
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+function stablePublishedAt(value, fallbackValue) {
+  const dateKey = tokyoDateOnly(value || fallbackValue);
+  return `${dateKey}T12:00:00.000Z`;
+}
+
+async function removeStaleGeneratedFiles(directoryPath, extension, validKeys) {
+  const entries = await fs
+    .readdir(directoryPath, { withFileTypes: true })
+    .catch((error) => {
+      if (error.code === "ENOENT") {
+        return [];
+      }
+
+      throw error;
+    });
+
+  for (const entry of entries) {
+    if (!entry.isFile() || !entry.name.endsWith(extension)) {
+      continue;
+    }
+
+    const key = entry.name.slice(0, -extension.length);
+    if (!validKeys.has(key)) {
+      await fs.unlink(path.join(directoryPath, entry.name));
+    }
+  }
 }
 
 async function fetchText(url) {
@@ -1424,7 +1472,10 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
     summaryJa: event.summaryJa || event.summary,
     summaryEn: event.summaryEn || event.summary,
     url: event.url || source.url,
-    publishedAt: event.publishedAt || nowIso,
+    publishedAt: stablePublishedAt(
+      event.publishedAt || existingEvent?.publishedAt,
+      nowIso,
+    ),
     capturedAt: existingEvent?.capturedAt || nowIso,
     sourceLastSeen: existingEvent?.sourceLastSeen || nowIso,
     roadmapIds: event.roadmapIds || [],
@@ -1458,6 +1509,53 @@ function isInvalidPersistedEvent(event) {
   return false;
 }
 
+function logicalEventKey(event) {
+  return [
+    String(event.sourceId || "").trim().toLowerCase(),
+    String(event.url || "").trim().toLowerCase(),
+    String(event.titleEn || event.title || "").trim().toLowerCase(),
+    tokyoDateOnly(event.publishedAt || event.capturedAt || Date.now()),
+  ].join("\n");
+}
+
+function logicalEventScore(event) {
+  const publishedAt = safeDate(event.publishedAt).getTime();
+  const summaryLength = String(event.summaryJa || event.summary || "").length;
+  const japaneseScore = isLikelyJapanese(event.titleJa) ? 1000 : 0;
+  const importance = Number(event.importanceScore ?? 0) * 100;
+  return japaneseScore + importance + summaryLength + publishedAt / 1_000_000_000_000;
+}
+
+function dedupeLogicalEvents(events) {
+  const map = new Map();
+
+  for (const event of events) {
+    const key = logicalEventKey(event);
+    const existing = map.get(key);
+    if (!existing) {
+      map.set(key, event);
+      continue;
+    }
+
+    const replacement =
+      logicalEventScore(event) >= logicalEventScore(existing)
+        ? {
+            ...existing,
+            ...event,
+            id: existing.id,
+            capturedAt: existing.capturedAt ?? event.capturedAt,
+          }
+        : {
+            ...event,
+            ...existing,
+            sourceLastSeen: event.sourceLastSeen ?? existing.sourceLastSeen,
+          };
+    map.set(key, replacement);
+  }
+
+  return [...map.values()];
+}
+
 function groupEventsByDate(events) {
   const groups = new Map();
   for (const event of events) {
@@ -1481,11 +1579,11 @@ async function main() {
   const existingEvents = (await readExistingEvents()).filter(
     (event) => !isInvalidPersistedEvent(event),
   );
+  const existingLogicalKeys = new Set(existingEvents.map(logicalEventKey));
   const existingById = new Map(
     existingEvents.map((event) => [event.id, event]),
   );
   const mergedById = new Map(existingEvents.map((event) => [event.id, event]));
-  const newEventIds = new Set();
   const errors = [];
 
   for (const source of sources) {
@@ -1518,10 +1616,6 @@ async function main() {
           continue;
         }
 
-        if (!previous) {
-          newEventIds.add(normalized.id);
-        }
-
         mergedById.set(normalized.id, normalized);
       }
     } catch (error) {
@@ -1533,11 +1627,17 @@ async function main() {
     }
   }
 
-  const allEvents = dedupeEvents([...mergedById.values()]);
+  const allEvents = dedupeLogicalEvents(dedupeEvents([...mergedById.values()]));
+  const newEventCount = allEvents.filter(
+    (event) => !existingLogicalKeys.has(logicalEventKey(event)),
+  ).length;
   const groupedEvents = groupEventsByDate(allEvents);
+  const groupedDateKeys = new Set(groupedEvents.keys());
 
   await fs.mkdir(eventsDir, { recursive: true });
   await fs.mkdir(summariesDir, { recursive: true });
+  await removeStaleGeneratedFiles(eventsDir, ".json", groupedDateKeys);
+  await removeStaleGeneratedFiles(summariesDir, ".md", groupedDateKeys);
 
   for (const [date, events] of groupedEvents) {
     const sortedEvents = events.sort((left, right) => {
@@ -1567,7 +1667,7 @@ async function main() {
 
   const nextState = {
     lastRunAt:
-      newEventIds.size === 0 &&
+      newEventCount === 0 &&
       errors.length === 0 &&
       existingState?.totalEvents === allEvents.length &&
       JSON.stringify(existingState?.sources ?? []) ===
@@ -1580,7 +1680,7 @@ async function main() {
 
   const nextRunSummary = {
     generatedAt:
-      newEventIds.size === 0 &&
+      newEventCount === 0 &&
       errors.length === 0 &&
       existingRunSummary?.totalEvents === allEvents.length &&
       existingRunSummary?.sourceCount === sources.length &&
@@ -1590,7 +1690,7 @@ async function main() {
         : nowIso,
     sourceCount: sources.length,
     totalEvents: allEvents.length,
-    newEventCount: newEventIds.size,
+    newEventCount,
     errorCount: errors.length,
     errors,
   };
@@ -1606,7 +1706,7 @@ async function main() {
         generatedAt: nowIso,
         sourceCount: sources.length,
         totalEvents: allEvents.length,
-        newEventCount: newEventIds.size,
+        newEventCount,
         errorCount: errors.length,
       },
       null,
