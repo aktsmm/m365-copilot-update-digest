@@ -99,3 +99,11 @@ Cloud Agent に触らせないもの:
 - `public/assets/**`
 - `site/**`
 - workflow ファイル全般
+
+## License
+
+このリポジトリには [LICENSE](LICENSE) を追加しています。
+
+- README や generated content は CC BY-NC-SA 4.0 を基本に扱う
+- Microsoft Corporation とその affiliates には追加許諾を付ける
+- Third-party content や trademark は各権利者に帰属する
