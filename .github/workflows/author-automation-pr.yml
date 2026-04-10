@@ -47,6 +47,11 @@ jobs:
             const workspace = process.env.GITHUB_WORKSPACE;
             const eventsDir = path.join(workspace, 'data', 'events');
             const runSummaryPath = path.join(workspace, 'data', 'run-summary.json');
+            if (!fs.existsSync(eventsDir)) {
+              core.info('data/events is not tracked on the current main branch yet. Skipping automation issue creation.');
+              core.setOutput('should_run', 'false');
+              return;
+            }
             const files = fs.readdirSync(eventsDir)
               .filter((file) => file.endsWith('.json'))
               .sort();

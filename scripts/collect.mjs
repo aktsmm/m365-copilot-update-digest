@@ -67,8 +67,38 @@ async function readJson(filePath, fallbackValue) {
 }
 
 async function writeJson(filePath, value) {
+  const next = `${JSON.stringify(value, null, 2)}\n`;
+  const current = await fs.readFile(filePath, "utf8").catch((error) => {
+    if (error.code === "ENOENT") {
+      return null;
+    }
+
+    throw error;
+  });
+
+  if (current === next) {
+    return;
+  }
+
   await fs.mkdir(path.dirname(filePath), { recursive: true });
-  await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+  await fs.writeFile(filePath, next, "utf8");
+}
+
+async function writeTextFile(filePath, content) {
+  const current = await fs.readFile(filePath, "utf8").catch((error) => {
+    if (error.code === "ENOENT") {
+      return null;
+    }
+
+    throw error;
+  });
+
+  if (current === content) {
+    return;
+  }
+
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
+  await fs.writeFile(filePath, content, "utf8");
 }
 
 async function fetchText(url) {
@@ -1396,7 +1426,7 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
     url: event.url || source.url,
     publishedAt: event.publishedAt || nowIso,
     capturedAt: existingEvent?.capturedAt || nowIso,
-    sourceLastSeen: nowIso,
+    sourceLastSeen: existingEvent?.sourceLastSeen || nowIso,
     roadmapIds: event.roadmapIds || [],
     releaseStage:
       event.releaseStage ||
@@ -1446,6 +1476,8 @@ async function main() {
   const nowIso = new Date().toISOString();
   const sources = await readJson(sourcesFile, []);
   const summaryCache = await readJson(summaryCacheFile, {});
+  const existingState = await readJson(stateFile, null);
+  const existingRunSummary = await readJson(runSummaryFile, null);
   const existingEvents = (await readExistingEvents()).filter(
     (event) => !isInvalidPersistedEvent(event),
   );
@@ -1518,33 +1550,53 @@ async function main() {
       return left.title.localeCompare(right.title);
     });
 
-    await writeJson(path.join(eventsDir, `${date}.json`), {
+    const logPath = path.join(eventsDir, `${date}.json`);
+    const existingLog = await readJson(logPath, null);
+    const sameEvents =
+      JSON.stringify(existingLog?.events ?? null) === JSON.stringify(sortedEvents);
+    const nextLog = {
       date,
-      generatedAt: nowIso,
+      generatedAt: sameEvents ? existingLog?.generatedAt || nowIso : nowIso,
       events: sortedEvents,
-    });
+    };
+    const markdown = buildDailyMarkdown(date, sortedEvents);
 
-    await fs.writeFile(
-      path.join(summariesDir, `${date}.md`),
-      buildDailyMarkdown(date, sortedEvents),
-      "utf8",
-    );
+    await writeJson(logPath, nextLog);
+    await writeTextFile(path.join(summariesDir, `${date}.md`), markdown);
   }
 
-  await writeJson(stateFile, {
-    lastRunAt: nowIso,
+  const nextState = {
+    lastRunAt:
+      newEventIds.size === 0 &&
+      errors.length === 0 &&
+      existingState?.totalEvents === allEvents.length &&
+      JSON.stringify(existingState?.sources ?? []) ===
+        JSON.stringify(sources.map((source) => source.id))
+        ? existingState?.lastRunAt || nowIso
+        : nowIso,
     totalEvents: allEvents.length,
     sources: sources.map((source) => source.id),
-  });
+  };
 
-  await writeJson(runSummaryFile, {
-    generatedAt: nowIso,
+  const nextRunSummary = {
+    generatedAt:
+      newEventIds.size === 0 &&
+      errors.length === 0 &&
+      existingRunSummary?.totalEvents === allEvents.length &&
+      existingRunSummary?.sourceCount === sources.length &&
+      Number(existingRunSummary?.newEventCount ?? -1) === 0 &&
+      Number(existingRunSummary?.errorCount ?? -1) === 0
+        ? existingRunSummary?.generatedAt || nowIso
+        : nowIso,
     sourceCount: sources.length,
     totalEvents: allEvents.length,
     newEventCount: newEventIds.size,
     errorCount: errors.length,
     errors,
-  });
+  };
+
+  await writeJson(stateFile, nextState);
+  await writeJson(runSummaryFile, nextRunSummary);
 
   await writeJson(summaryCacheFile, summaryCache);
 
