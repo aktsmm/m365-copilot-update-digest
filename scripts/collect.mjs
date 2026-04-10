@@ -276,6 +276,24 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
   );
 }
 
+function updateSummaryCacheEntry(summaryCache, id, patch, nowIso) {
+  const previous = summaryCache[id] ?? {};
+  const changed =
+    !summaryCache[id] ||
+    !previous.updatedAt ||
+    Object.entries(patch).some(([key, value]) => previous[key] !== value);
+
+  if (!changed) {
+    return;
+  }
+
+  summaryCache[id] = {
+    ...previous,
+    ...patch,
+    updatedAt: nowIso,
+  };
+}
+
 function stageDescription(stage) {
   switch (stage) {
     case "GA":
@@ -860,12 +878,10 @@ async function localizeJapaneseTitles(
 
     if (isLikelyJapanese(event.titleJa || event.titleEn)) {
       event.titleJa = normalizeWhitespace(event.titleJa || event.titleEn);
-      summaryCache[event.id] = {
-        ...summaryCache[event.id],
+      updateSummaryCacheEntry(summaryCache, event.id, {
         title: event.titleEn,
         titleJa: event.titleJa,
-        updatedAt: nowIso,
-      };
+      }, nowIso);
       continue;
     }
 
@@ -896,12 +912,10 @@ async function localizeJapaneseTitles(
       )
     ) {
       event.titleJa = existing.titleJa;
-      summaryCache[event.id] = {
-        ...summaryCache[event.id],
+      updateSummaryCacheEntry(summaryCache, event.id, {
         title: event.titleEn,
         titleJa: event.titleJa,
-        updatedAt: nowIso,
-      };
+      }, nowIso);
       continue;
     }
 
@@ -938,45 +952,37 @@ async function localizeJapaneseTitles(
           entry.text && entry.text !== entry.event.titleEn
             ? excerptText(entry.text, 96)
             : buildJapaneseFallbackTitle(entry.event);
-        summaryCache[entry.event.id] = {
-          ...summaryCache[entry.event.id],
+        updateSummaryCacheEntry(summaryCache, entry.event.id, {
           title: entry.event.titleEn,
           titleJa: entry.event.titleJa,
-          updatedAt: nowIso,
-        };
+        }, nowIso);
       }
     } catch {
       for (const event of batch) {
         event.titleJa = buildJapaneseFallbackTitle(event);
-        summaryCache[event.id] = {
-          ...summaryCache[event.id],
+        updateSummaryCacheEntry(summaryCache, event.id, {
           title: event.titleEn,
           titleJa: event.titleJa,
-          updatedAt: nowIso,
-        };
+        }, nowIso);
       }
     }
   }
 
   for (const event of fallbackOnly) {
     event.titleJa = buildJapaneseFallbackTitle(event);
-    summaryCache[event.id] = {
-      ...summaryCache[event.id],
+    updateSummaryCacheEntry(summaryCache, event.id, {
       title: event.titleEn,
       titleJa: event.titleJa,
-      updatedAt: nowIso,
-    };
+    }, nowIso);
   }
 
   for (const event of pending) {
     if (!event.titleJa) {
       event.titleJa = buildJapaneseFallbackTitle(event);
-      summaryCache[event.id] = {
-        ...summaryCache[event.id],
+      updateSummaryCacheEntry(summaryCache, event.id, {
         title: event.titleEn,
         titleJa: event.titleJa,
-        updatedAt: nowIso,
-      };
+      }, nowIso);
     }
   }
 
@@ -1006,11 +1012,10 @@ async function localizeJapaneseSummaries(
 
     if (isLikelyJapanese(event.summaryJa || event.summaryEn)) {
       event.summaryJa = normalizeWhitespace(event.summaryJa || event.summaryEn);
-      summaryCache[event.id] = {
+      updateSummaryCacheEntry(summaryCache, event.id, {
         summary: event.summaryEn,
         summaryJa: event.summaryJa,
-        updatedAt: nowIso,
-      };
+      }, nowIso);
       continue;
     }
 
@@ -1034,11 +1039,10 @@ async function localizeJapaneseSummaries(
       !shouldIgnoreCachedJapaneseSummary(source, existing.summaryJa)
     ) {
       event.summaryJa = existing.summaryJa;
-      summaryCache[event.id] = {
+      updateSummaryCacheEntry(summaryCache, event.id, {
         summary: event.summaryEn,
         summaryJa: event.summaryJa,
-        updatedAt: nowIso,
-      };
+      }, nowIso);
       continue;
     }
 
@@ -1075,41 +1079,37 @@ async function localizeJapaneseSummaries(
           entry.text && entry.text !== entry.event.summaryEn
             ? excerptText(entry.text, 280)
             : buildJapaneseFallbackSummary(entry.event);
-        summaryCache[entry.event.id] = {
+        updateSummaryCacheEntry(summaryCache, entry.event.id, {
           summary: entry.event.summaryEn,
           summaryJa: entry.event.summaryJa,
-          updatedAt: nowIso,
-        };
+        }, nowIso);
       }
     } catch {
       for (const event of batch) {
         event.summaryJa = buildJapaneseFallbackSummary(event);
-        summaryCache[event.id] = {
+        updateSummaryCacheEntry(summaryCache, event.id, {
           summary: event.summaryEn,
           summaryJa: event.summaryJa,
-          updatedAt: nowIso,
-        };
+        }, nowIso);
       }
     }
   }
 
   for (const event of fallbackOnly) {
     event.summaryJa = buildJapaneseFallbackSummary(event);
-    summaryCache[event.id] = {
+    updateSummaryCacheEntry(summaryCache, event.id, {
       summary: event.summaryEn,
       summaryJa: event.summaryJa,
-      updatedAt: nowIso,
-    };
+    }, nowIso);
   }
 
   for (const event of pending) {
     if (!event.summaryJa) {
       event.summaryJa = buildJapaneseFallbackSummary(event);
-      summaryCache[event.id] = {
+      updateSummaryCacheEntry(summaryCache, event.id, {
         summary: event.summaryEn,
         summaryJa: event.summaryJa,
-        updatedAt: nowIso,
-      };
+      }, nowIso);
     }
   }
 

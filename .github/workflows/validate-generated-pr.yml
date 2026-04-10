@@ -126,6 +126,16 @@ jobs:
       - name: Validate Pages build
         run: npm run build:pages
 
+      - name: Validate generated files are canonical
+        run: |
+          if ! git diff --quiet -- \
+            data \
+            summaries; then
+            echo 'Generated files drifted after running collect/build. Commit the regenerated artifacts before merging.' >&2
+            git diff -- data summaries
+            exit 1
+          fi
+
       - name: Validate localization quality
         run: |
           node <<'NODE'
