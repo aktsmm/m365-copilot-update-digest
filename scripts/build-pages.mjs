@@ -478,9 +478,18 @@ function renderLastUpdated(locale, siteMeta, className = "hero-meta-item") {
   return `<p class="${escapeHtml(className)}"><span>${escapeHtml(text.lastUpdatedLabel)}</span><strong>${escapeHtml(formatDateTime(siteMeta.lastUpdatedAt, locale))}</strong></p>`;
 }
 
-function renderHeroMeta(locale, siteMeta) {
-  const updated = renderLastUpdated(locale, siteMeta);
-  return updated ? `<div class="hero-meta">${updated}</div>` : "";
+function renderSourceCount(locale, sourceCount, className = "hero-meta-item") {
+  if (sourceCount == null) {
+    return "";
+  }
+
+  const text = TEXT[locale];
+  return `<p class="${escapeHtml(className)}"><span>${escapeHtml(text.statsSources)}</span><strong>${escapeHtml(String(sourceCount))}</strong></p>`;
+}
+
+function renderHeroMeta(...items) {
+  const html = items.filter(Boolean).join("");
+  return html ? `<div class="hero-meta">${html}</div>` : "";
 }
 
 function renderNav(locale, depth, activeNav, siteMeta, alternatePath) {
@@ -688,11 +697,16 @@ function renderIndexPage(
         <span class="eyebrow">${escapeHtml(text.unofficialBadge)}</span>
         <h1>${escapeHtml(text.heroTitle)}</h1>
         <p class="hero-copy">${escapeHtml(text.heroCopy)}</p>
-        ${renderHeroMeta(locale, siteMeta)}
+        ${renderHeroMeta(
+          renderLastUpdated(locale, siteMeta),
+          renderSourceCount(
+            locale,
+            runSummary.sourceCount ?? sourceCounts.length,
+          ),
+        )}
       </div>
       <div class="metric-grid">
         <article class="metric-card"><span>${escapeHtml(text.statsUpdates)}</span><strong>${escapeHtml(String(sorted.length))}</strong><small>${escapeHtml(text.statsUpdatesDetail)}</small></article>
-        <article class="metric-card"><span>${escapeHtml(text.statsSources)}</span><strong>${escapeHtml(String(runSummary.sourceCount ?? sourceCounts.length))}</strong><small>${escapeHtml(text.statsSourcesDetail)}</small></article>
         <article class="metric-card"><span>${escapeHtml(text.statsRun)}</span><strong>${escapeHtml(String(runSummary.newEventCount ?? 0))}</strong><small>${escapeHtml(text.statsRunDetail)}</small></article>
       </div>
     </section>
@@ -773,7 +787,7 @@ function renderDailyPage(locale, siteMeta, log) {
       <span class="eyebrow">${escapeHtml(locale === "en" ? "Daily digest" : "日次ダイジェスト")}</span>
       <h1>${escapeHtml(locale === "en" ? log.date : formatDate(log.date, "ja"))}</h1>
       <p>${escapeHtml(siteMeta[`tagline${locale === "en" ? "En" : "Ja"}`] || siteMeta.taglineJa)}</p>
-      ${renderHeroMeta(locale, siteMeta)}
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
       <div class="hero-links"><a href="${escapeHtml(rawJsonHref)}">${escapeHtml(text.rawJson)}</a><a href="${escapeHtml(rawMdHref)}">${escapeHtml(text.rawMarkdown)}</a></div>
     </section>
     <section class="section-block">
@@ -808,7 +822,7 @@ function renderWeeklyPage(locale, siteMeta, week) {
       <span class="eyebrow">${escapeHtml(locale === "en" ? "Weekly summary" : "週間まとめ")}</span>
       <h1>${escapeHtml(titleLabel)}</h1>
       <p>${escapeHtml(locale === "en" ? `${week.events.length} updates in this week window.` : `この週の更新は ${week.events.length} 件です。`)}</p>
-      ${renderHeroMeta(locale, siteMeta)}
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     <section class="section-block">
       ${renderSectionHeading(text.highlightsTitle)}
@@ -870,7 +884,7 @@ function renderArchivePage(locale, siteMeta, dailyLogs, weeklyGroups, type) {
       <span class="eyebrow">${escapeHtml(isWeekly ? text.navWeekly : text.navHome)}</span>
       <h1>${escapeHtml(title)}</h1>
       <p>${escapeHtml(locale === "en" ? "Browse generated archives." : "生成済みアーカイブを一覧で確認できます。")}</p>
-      ${renderHeroMeta(locale, siteMeta)}
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     <section class="section-block archive-page-list">
       <div class="archive-list">${listHtml || renderEmptyState(text.noItems)}</div>
@@ -896,7 +910,7 @@ function renderAboutPage(locale, siteMeta) {
       <span class="eyebrow">${escapeHtml(text.unofficialBadge)}</span>
       <h1>${escapeHtml(text.aboutTitle)}</h1>
       <p>${escapeHtml(text.aboutIntro)}</p>
-      ${renderHeroMeta(locale, siteMeta)}
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     <section class="section-block prose-card">
       <p>${escapeHtml(text.aboutBody1)}</p>
@@ -926,7 +940,7 @@ function renderSearchPage(locale, siteMeta) {
       <span class="eyebrow">${escapeHtml(text.navSearch)}</span>
       <h1>${escapeHtml(text.searchTitle)}</h1>
       <p>${escapeHtml(text.searchBody)}</p>
-      ${renderHeroMeta(locale, siteMeta)}
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     ${renderSearchShell(locale, depth, text, {
       sectionClass: "section-block search-shell",
