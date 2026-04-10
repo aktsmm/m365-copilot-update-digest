@@ -108,7 +108,22 @@ function toArray(value) {
 }
 
 function stripHtmlText(html) {
-  const $ = cheerio.load(String(html ?? ""));
+  let decoded = String(html ?? "");
+  for (let index = 0; index < 3; index += 1) {
+    const next = decoded
+      .replace(/&lt;/gi, "<")
+      .replace(/&gt;/gi, ">")
+      .replace(/&amp;/gi, "&")
+      .replace(/&quot;/gi, '"')
+      .replace(/&#39;/gi, "'")
+      .replace(/&nbsp;|&#160;/gi, " ");
+    if (next === decoded) {
+      break;
+    }
+
+    decoded = next;
+  }
+  const $ = cheerio.load(decoded);
   return normalizeWhitespace($.text());
 }
 
