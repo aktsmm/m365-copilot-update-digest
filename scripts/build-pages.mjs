@@ -99,6 +99,7 @@ const TEXT = {
     sourceLabel: "ソース",
     whyLabel: "なぜ重要か",
     stageLabel: "リリース段階",
+    lastUpdatedLabel: "最終更新",
     footerLead:
       "Public-source based, unofficial curation for M365 Copilot updates.",
     searchInputPlaceholder: "更新、製品、タグ、日付で検索",
@@ -179,6 +180,7 @@ const TEXT = {
     sourceLabel: "Source",
     whyLabel: "Why it matters",
     stageLabel: "Release stage",
+    lastUpdatedLabel: "Last updated",
     footerLead:
       "Public-source based, unofficial curation for M365 Copilot updates.",
     searchInputPlaceholder: "Search by update, product, tag, or date",
@@ -467,6 +469,29 @@ function renderArchiveRow(href, title, subtitle) {
   return `<a class="archive-row" href="${escapeHtml(href)}"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(subtitle)}</span></a>`;
 }
 
+function renderLastUpdated(locale, siteMeta, className = "hero-meta-item") {
+  if (!siteMeta.lastUpdatedAt) {
+    return "";
+  }
+
+  const text = TEXT[locale];
+  return `<p class="${escapeHtml(className)}"><span>${escapeHtml(text.lastUpdatedLabel)}</span><strong>${escapeHtml(formatDateTime(siteMeta.lastUpdatedAt, locale))}</strong></p>`;
+}
+
+function renderSourceCount(locale, sourceCount, className = "hero-meta-item") {
+  if (sourceCount == null) {
+    return "";
+  }
+
+  const text = TEXT[locale];
+  return `<p class="${escapeHtml(className)}"><span>${escapeHtml(text.statsSources)}</span><strong>${escapeHtml(String(sourceCount))}</strong></p>`;
+}
+
+function renderHeroMeta(...items) {
+  const html = items.filter(Boolean).join("");
+  return html ? `<div class="hero-meta">${html}</div>` : "";
+}
+
 function renderNav(locale, depth, activeNav, siteMeta, alternatePath) {
   const text = TEXT[locale];
   const navItems = [
@@ -505,7 +530,7 @@ function renderNav(locale, depth, activeNav, siteMeta, alternatePath) {
     ? `<a class="lang-switch" href="${escapeHtml(relativeHref(depth, alternatePath))}">${escapeHtml(text.switchLabel)}</a>`
     : "";
 
-  return `<header class="site-header"><div><a class="site-brand" href="${escapeHtml(relativeHref(depth, localePath(locale, "")))}">${escapeHtml(siteMeta.siteName)}</a><p class="site-lead">${escapeHtml(text.headerLead)}</p></div><nav class="site-nav">${navHtml}${repoHtml}${switchHtml}</nav></header>`;
+  return `<header class="site-header"><div class="site-header-copy"><a class="site-brand" href="${escapeHtml(relativeHref(depth, localePath(locale, "")))}">${escapeHtml(siteMeta.siteName)}</a><p class="site-lead">${escapeHtml(text.headerLead)}</p></div><nav class="site-nav">${navHtml}${repoHtml}${switchHtml}</nav></header>`;
 }
 
 function renderLayout({
@@ -542,7 +567,6 @@ function renderLayout({
       ${content}
       <footer class="site-footer">
         <p>${escapeHtml(TEXT[locale].footerLead)}</p>
-        <p>${escapeHtml(formatDateTime(new Date().toISOString(), locale))}</p>
       </footer>
     </div>
     ${scripts}
@@ -667,17 +691,22 @@ function renderIndexPage(
       }, new Map())
       .entries(),
   ].sort((left, right) => right[1] - left[1]);
-
   const content = `
     <section class="hero">
       <div class="hero-copy-block">
         <span class="eyebrow">${escapeHtml(text.unofficialBadge)}</span>
         <h1>${escapeHtml(text.heroTitle)}</h1>
         <p class="hero-copy">${escapeHtml(text.heroCopy)}</p>
+        ${renderHeroMeta(
+          renderLastUpdated(locale, siteMeta),
+          renderSourceCount(
+            locale,
+            runSummary.sourceCount ?? sourceCounts.length,
+          ),
+        )}
       </div>
       <div class="metric-grid">
         <article class="metric-card"><span>${escapeHtml(text.statsUpdates)}</span><strong>${escapeHtml(String(sorted.length))}</strong><small>${escapeHtml(text.statsUpdatesDetail)}</small></article>
-        <article class="metric-card"><span>${escapeHtml(text.statsSources)}</span><strong>${escapeHtml(String(runSummary.sourceCount ?? sourceCounts.length))}</strong><small>${escapeHtml(text.statsSourcesDetail)}</small></article>
         <article class="metric-card"><span>${escapeHtml(text.statsRun)}</span><strong>${escapeHtml(String(runSummary.newEventCount ?? 0))}</strong><small>${escapeHtml(text.statsRunDetail)}</small></article>
       </div>
     </section>
@@ -758,6 +787,7 @@ function renderDailyPage(locale, siteMeta, log) {
       <span class="eyebrow">${escapeHtml(locale === "en" ? "Daily digest" : "日次ダイジェスト")}</span>
       <h1>${escapeHtml(locale === "en" ? log.date : formatDate(log.date, "ja"))}</h1>
       <p>${escapeHtml(siteMeta[`tagline${locale === "en" ? "En" : "Ja"}`] || siteMeta.taglineJa)}</p>
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
       <div class="hero-links"><a href="${escapeHtml(rawJsonHref)}">${escapeHtml(text.rawJson)}</a><a href="${escapeHtml(rawMdHref)}">${escapeHtml(text.rawMarkdown)}</a></div>
     </section>
     <section class="section-block">
@@ -792,6 +822,7 @@ function renderWeeklyPage(locale, siteMeta, week) {
       <span class="eyebrow">${escapeHtml(locale === "en" ? "Weekly summary" : "週間まとめ")}</span>
       <h1>${escapeHtml(titleLabel)}</h1>
       <p>${escapeHtml(locale === "en" ? `${week.events.length} updates in this week window.` : `この週の更新は ${week.events.length} 件です。`)}</p>
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     <section class="section-block">
       ${renderSectionHeading(text.highlightsTitle)}
@@ -853,6 +884,7 @@ function renderArchivePage(locale, siteMeta, dailyLogs, weeklyGroups, type) {
       <span class="eyebrow">${escapeHtml(isWeekly ? text.navWeekly : text.navHome)}</span>
       <h1>${escapeHtml(title)}</h1>
       <p>${escapeHtml(locale === "en" ? "Browse generated archives." : "生成済みアーカイブを一覧で確認できます。")}</p>
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     <section class="section-block archive-page-list">
       <div class="archive-list">${listHtml || renderEmptyState(text.noItems)}</div>
@@ -878,6 +910,7 @@ function renderAboutPage(locale, siteMeta) {
       <span class="eyebrow">${escapeHtml(text.unofficialBadge)}</span>
       <h1>${escapeHtml(text.aboutTitle)}</h1>
       <p>${escapeHtml(text.aboutIntro)}</p>
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     <section class="section-block prose-card">
       <p>${escapeHtml(text.aboutBody1)}</p>
@@ -907,6 +940,7 @@ function renderSearchPage(locale, siteMeta) {
       <span class="eyebrow">${escapeHtml(text.navSearch)}</span>
       <h1>${escapeHtml(text.searchTitle)}</h1>
       <p>${escapeHtml(text.searchBody)}</p>
+      ${renderHeroMeta(renderLastUpdated(locale, siteMeta))}
     </section>
     ${renderSearchShell(locale, depth, text, {
       sectionClass: "section-block search-shell",
@@ -956,6 +990,11 @@ async function main() {
     }))
     .filter((log) => log.events.length > 0);
   const weeklyGroups = buildWeeklyGroups(allEvents);
+  const siteContext = {
+    ...siteMeta,
+    lastUpdatedAt:
+      runSummary.generatedAt || dailyLogs[0]?.generatedAt || null,
+  };
 
   await fs.rm(siteDir, { recursive: true, force: true });
   await fs.mkdir(siteDir, { recursive: true });
@@ -964,7 +1003,7 @@ async function main() {
   await writeText(path.join(siteDir, ".nojekyll"), "\n");
   await writeText(
     path.join(siteDir, "search-index.json"),
-    `${JSON.stringify({ generatedAt: new Date().toISOString(), entries: buildSearchIndex(allEvents) }, null, 2)}\n`,
+    `${JSON.stringify({ generatedAt: siteContext.lastUpdatedAt || new Date().toISOString(), entries: buildSearchIndex(allEvents) }, null, 2)}\n`,
   );
 
   for (const locale of ["ja", "en"]) {
@@ -974,7 +1013,7 @@ async function main() {
       path.join(localeRoot, "index.html"),
       renderIndexPage(
         locale,
-        siteMeta,
+        siteContext,
         allEvents,
         dailyLogs,
         weeklyGroups,
@@ -983,32 +1022,32 @@ async function main() {
     );
     await writeText(
       path.join(localeRoot, "search", "index.html"),
-      renderSearchPage(locale, siteMeta),
+      renderSearchPage(locale, siteContext),
     );
     await writeText(
       path.join(localeRoot, "about", "index.html"),
-      renderAboutPage(locale, siteMeta),
+      renderAboutPage(locale, siteContext),
     );
     await writeText(
       path.join(localeRoot, "daily", "index.html"),
-      renderArchivePage(locale, siteMeta, dailyLogs, weeklyGroups, "daily"),
+      renderArchivePage(locale, siteContext, dailyLogs, weeklyGroups, "daily"),
     );
     await writeText(
       path.join(localeRoot, "weekly", "index.html"),
-      renderArchivePage(locale, siteMeta, dailyLogs, weeklyGroups, "weekly"),
+      renderArchivePage(locale, siteContext, dailyLogs, weeklyGroups, "weekly"),
     );
 
     for (const log of dailyLogs) {
       await writeText(
         path.join(localeRoot, "daily", log.date, "index.html"),
-        renderDailyPage(locale, siteMeta, log),
+        renderDailyPage(locale, siteContext, log),
       );
     }
 
     for (const week of weeklyGroups) {
       await writeText(
         path.join(localeRoot, "weekly", week.key, "index.html"),
-        renderWeeklyPage(locale, siteMeta, week),
+        renderWeeklyPage(locale, siteContext, week),
       );
     }
   }

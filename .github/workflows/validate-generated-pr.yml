@@ -10,7 +10,7 @@ on:
       - edited
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: read
 
 jobs:
@@ -19,6 +19,8 @@ jobs:
     env:
       PR_TITLE: ${{ github.event.pull_request.title }}
       PR_BODY: ${{ github.event.pull_request.body }}
+      PR_USER_LOGIN: ${{ github.event.pull_request.user.login }}
+      PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
 
     steps:
       - name: Checkout
@@ -69,11 +71,14 @@ jobs:
           const changed = (process.env.CHANGED_FILES || '').split(/\r?\n/).filter(Boolean);
           const allowed = [
             /^scripts\/collect\.mjs$/,
+            /^scripts\/generate-drafts\.mjs$/,
             /^scripts\/lib\/reporting\.mjs$/,
             /^config\/sources\.json$/,
             /^config\/summary-ja-cache\.json$/,
             /^data\/events\/.*\.json$/,
             /^summaries\/daily\/.*\.md$/,
+            /^drafts\/articles\/daily\/.*\.md$/,
+            /^drafts\/posts\/x\/.*\.md$/,
             /^data\/state\.json$/,
             /^data\/run-summary\.json$/,
           ];
@@ -126,13 +131,49 @@ jobs:
       - name: Validate Pages build
         run: npm run build:pages
 
+      - name: Validate article and post drafts
+        run: npm run generate:drafts
+
+      - name: Auto-fix canonical generated outputs
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        shell: bash
+        run: |
+          title_pattern='^chore: improve digest automation [0-9]{4}-[0-9]{2}-[0-9]{2}$'
+
+          if [[ "$PR_USER_LOGIN" != *copilot* ]] && \
+             [[ ! "$PR_TITLE" =~ $title_pattern ]] && \
+             [[ "$PR_BODY" != *"Generated from data/events/"* ]]; then
+            echo "Canonical auto-fix skipped for non-generated PR."
+            exit 0
+          fi
+
+          if git diff --quiet -- data summaries drafts; then
+            echo "No canonical generated output drift detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data summaries drafts config/summary-ja-cache.json
+
+          if git diff --cached --quiet; then
+            echo "No staged canonical outputs detected."
+            exit 0
+          fi
+
+          git commit -m "chore: regenerate canonical digest outputs"
+          git push origin "HEAD:${PR_HEAD_REF}"
+          echo "Canonical generated outputs were pushed back to the PR branch. Wait for the rerun." >&2
+          exit 1
+
       - name: Validate generated files are canonical
         run: |
           if ! git diff --quiet -- \
             data \
-            summaries; then
+            summaries \
+            drafts; then
             echo 'Generated files drifted after running collect/build. Commit the regenerated artifacts before merging.' >&2
-            git diff -- data summaries
+            git diff -- data summaries drafts
             exit 1
           fi
 
