@@ -97,21 +97,21 @@ npm run generate:drafts
 
 ### 日次自動更新の流れ
 
-| ステップ | Workflow | 何が起きるか |
-|---|---|---|
-| 1 | **Collect updates** (schedule: 毎日) | RSS / HTML から新着を収集し、翻訳・要約・重要度スコアリングを実行 |
-| 2 | （同じ run 内） | `generate:drafts` で記事 draft と X 投稿 draft を自動生成 |
-| 3 | （同じ run 内） | `data/`, `summaries/`, `drafts/`, `config/summary-ja-cache.json` を main に自動 push |
-| 4 | **Deploy GitHub Pages** (push トリガー) | 静的サイトをビルドして GitHub Pages に公開 |
+| ステップ | Workflow                                | 何が起きるか                                                                         |
+| -------- | --------------------------------------- | ------------------------------------------------------------------------------------ |
+| 1        | **Collect updates** (schedule: 毎日)    | RSS / HTML から新着を収集し、翻訳・要約・重要度スコアリングを実行                    |
+| 2        | （同じ run 内）                         | `generate:drafts` で記事 draft と X 投稿 draft を自動生成                            |
+| 3        | （同じ run 内）                         | `data/`, `summaries/`, `drafts/`, `config/summary-ja-cache.json` を main に自動 push |
+| 4        | **Deploy GitHub Pages** (push トリガー) | 静的サイトをビルドして GitHub Pages に公開                                           |
 
 ### Copilot による自動改善の流れ
 
-| ステップ | Workflow | 何が起きるか |
-|---|---|---|
-| 5 | **Author automation PR** | 最新イベントを見て改善が必要なら Issue を作成し、Copilot Cloud Agent にアサイン |
-| 6 | **Copilot cloud agent** | Issue をもとに PR を自動作成 |
-| 7 | **Validate generated PR** | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push |
-| 8 | **Auto-merge generated PR** | 検証 success → draft 解除 → squash merge → linked issue close → Pages 再デプロイ |
+| ステップ | Workflow                    | 何が起きるか                                                                                             |
+| -------- | --------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 5        | **Author automation PR**    | 最新イベントを見て改善が必要なら Issue を作成し、Copilot Cloud Agent にアサイン                          |
+| 6        | **Copilot cloud agent**     | Issue をもとに PR を自動作成                                                                             |
+| 7        | **Validate generated PR**   | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push |
+| 8        | **Auto-merge generated PR** | 検証 success → draft 解除 → squash merge → linked issue close → Pages 再デプロイ                         |
 
 ### 必要な設定
 
