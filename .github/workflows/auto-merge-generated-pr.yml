@@ -40,11 +40,14 @@ jobs:
             const bodyPattern = /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/;
             const allowed = [
               /^scripts\/collect\.mjs$/,
+              /^scripts\/generate-drafts\.mjs$/,
               /^scripts\/lib\/reporting\.mjs$/,
               /^config\/sources\.json$/,
               /^config\/summary-ja-cache\.json$/,
               /^data\/events\/.*\.json$/,
               /^summaries\/daily\/.*\.md$/,
+              /^drafts\/articles\/daily\/.*\.md$/,
+              /^drafts\/posts\/x\/.*\.md$/,
               /^data\/state\.json$/,
               /^data\/run-summary\.json$/,
             ];
