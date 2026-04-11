@@ -641,6 +641,22 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot Notebooks の要約・インサイトを強化`;
   }
 
+  if (/share agents? (?:to|with) teams/.test(titleText)) {
+    return `Teams にエージェントを共有可能に`;
+  }
+
+  if (/knowledge agent/.test(titleText)) {
+    return `ナレッジ エージェント機能を追加`;
+  }
+
+  if (/explain.*slide selection|slide selection.*powerpoint live/.test(titleText)) {
+    return `PowerPoint Live でスライド選択の説明機能を追加`;
+  }
+
+  if (/real-?time voice interactions.*podcast|podcast.*real-?time voice/.test(titleText)) {
+    return `Word の Copilot ポッドキャストにリアルタイム音声対話機能を追加`;
+  }
+
   if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
