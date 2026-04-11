@@ -2,12 +2,13 @@
 
 Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデートを継続的に収集し、日次 JSON、日次 Markdown、記事 draft、X 投稿 draft、GitHub Pages 向けの静的サイトを生成するリポジトリです。
 
-現段階の実装は MVP で、まずは次の 4 系統を収集対象にしています。
+現段階の実装は MVP で、次の 5 系統を収集対象にしています。
 
-- Microsoft 365 Copilot release notes
-- What's new in Copilot Studio
+- Microsoft 365 Copilot release notes (Microsoft Learn)
+- What's new in Copilot Studio (Microsoft Learn)
 - Microsoft 365 Copilot Blog (Tech Community RSS)
 - Copilot Studio Blog (Tech Community RSS)
+- Microsoft 365 Roadmap (RSS)
 
 ## できること
 
@@ -70,28 +71,49 @@ npm run generate:drafts
 
 ## 今後の拡張候補
 
-- Tech Community blog 系ソースの追加
 - 公開で安定取得できる release plan 系ソースの追加
-- source family ごとのフィルタ拡張
-- AI 要約の後段追加
-- notify / draft 生成の追加
+- RSS フィード出力（キュレーション結果を他ツールで購読可能にする）
+- AI 要約の精度改善（ソース種別ごとの特化）
+- SSG（Astro / 11ty 等）への移行検討
 
 ## Cloud Automation
 
-このリポジトリでは、GitHub Actions と GitHub Copilot Cloud Agent を組み合わせた自動運用を前提にできます。
+このリポジトリは **手動操作なしで毎日サイトが更新される** 全自動パイプラインで運用されています。
 
-流れ:
+```
+┌─────────────┐    ┌──────────────┐    ┌────────────────┐    ┌─────────────┐
+│  Collect     │───>│  Generate    │───>│  Commit & Push │───>│  Deploy     │
+│  updates     │    │  drafts      │    │  to main       │    │  Pages      │
+│  (schedule)  │    │              │    │                │    │             │
+└─────────────┘    └──────────────┘    └────────────────┘    └─────────────┘
+       │                                                            │
+       v                                                            v
+┌─────────────┐    ┌──────────────┐    ┌────────────────┐    ┌─────────────┐
+│  Author      │───>│  Copilot SWE │───>│  Validate PR   │───>│  Auto-merge │
+│  automation  │    │  agent が PR │    │  (canonical    │    │  & Redeploy │
+│  (Issue作成) │    │  を自動作成  │    │   検証)        │    │             │
+└─────────────┘    └──────────────┘    └────────────────┘    └─────────────┘
+```
 
-1. `Collect updates` が定期実行され、`npm run collect` で収集、翻訳、要約生成を行う
-2. 同じ run で `npm run generate:drafts` を実行し、記事 draft と X 投稿 draft を生成する
-3. 生成された `data/**` と `summaries/**` と `drafts/**` と `config/summary-ja-cache.json` を main に自動 push する
-4. `Deploy GitHub Pages` が Pages を再生成して公開する
-5. `Author automation PR` が最新イベントを見て、改善が必要な場合は Issue を作成し、Copilot Cloud Agent に assignment する
-6. Copilot が PR を作ると `Request Copilot review` と `Validate generated PR` が走る
-7. `Validate generated PR` は `npm run collect` と `npm run generate:drafts` の結果が canonical でなければ PR branch に自動で書き戻す
-8. 検証が通れば `Auto-merge generated PR` が merge し、`Redeploy Pages after generated PR merge` が再デプロイする
+### 日次自動更新の流れ
 
-必要な設定:
+| ステップ | Workflow | 何が起きるか |
+|---|---|---|
+| 1 | **Collect updates** (schedule: 毎日) | RSS / HTML から新着を収集し、翻訳・要約・重要度スコアリングを実行 |
+| 2 | （同じ run 内） | `generate:drafts` で記事 draft と X 投稿 draft を自動生成 |
+| 3 | （同じ run 内） | `data/`, `summaries/`, `drafts/`, `config/summary-ja-cache.json` を main に自動 push |
+| 4 | **Deploy GitHub Pages** (push トリガー) | 静的サイトをビルドして GitHub Pages に公開 |
+
+### Copilot による自動改善の流れ
+
+| ステップ | Workflow | 何が起きるか |
+|---|---|---|
+| 5 | **Author automation PR** | 最新イベントを見て改善が必要なら Issue を作成し、Copilot Cloud Agent にアサイン |
+| 6 | **Copilot cloud agent** | Issue をもとに PR を自動作成 |
+| 7 | **Validate generated PR** | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push |
+| 8 | **Auto-merge generated PR** | 検証 success → draft 解除 → squash merge → linked issue close → Pages 再デプロイ |
+
+### 必要な設定
 
 - repository で GitHub Copilot coding agent を有効にする
 - secret `COPILOT_ASSIGN_TOKEN` を設定する
