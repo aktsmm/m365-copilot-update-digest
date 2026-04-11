@@ -96,11 +96,15 @@ async function readDailyLogs() {
     }
   }
 
-  return logs.sort((left, right) => String(right.date).localeCompare(left.date));
+  return logs.sort((left, right) =>
+    String(right.date).localeCompare(left.date),
+  );
 }
 
 function normalizeText(value) {
-  return String(value ?? "").replace(/\s+/g, " ").trim();
+  return String(value ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function clipText(value, maxLength = 140) {
@@ -125,11 +129,15 @@ function derivePagesBaseUrl(repositoryUrl) {
 }
 
 function buildProductBreakdown(events) {
-  return [...events.reduce((map, event) => {
-    const key = String(event.productArea || "Other").trim() || "Other";
-    map.set(key, (map.get(key) ?? 0) + 1);
-    return map;
-  }, new Map()).entries()]
+  return [
+    ...events
+      .reduce((map, event) => {
+        const key = String(event.productArea || "Other").trim() || "Other";
+        map.set(key, (map.get(key) ?? 0) + 1);
+        return map;
+      }, new Map())
+      .entries(),
+  ]
     .sort((left, right) => right[1] - left[1])
     .map(([label, count]) => `- ${label}: ${count}件`)
     .join("\n");
@@ -142,36 +150,37 @@ function buildArticleDraft(log, runSummary, siteMeta) {
   const pagesBaseUrl = derivePagesBaseUrl(siteMeta.repositoryUrl);
   const digestUrl = pagesBaseUrl ? `${pagesBaseUrl}/daily/${log.date}/` : "";
   const generatedAt = log.generatedAt || runSummary.generatedAt || "";
-  const lead =
-    `本日の公開アップデートは ${sorted.length} 件です。監視ソース ${Number(runSummary.sourceCount ?? 0)} 件を継続確認し、重要度の高い更新から優先的に整理しました。`;
-  const topPointLines = topPoints.length > 0
-    ? topPoints
-        .map(
-          (event) =>
-            `- ${titleForLocale(event, "ja")}\n  ${clipText(event.importanceReason || "重要更新として抽出", 96)}`,
-        )
-        .join("\n")
-    : "- 重要更新はありません。";
-  const detailSections = highlights.length > 0
-    ? highlights
-        .map((event) => {
-          const lines = [
-            `### ${titleForLocale(event, "ja")}`,
-            "",
-            `- ソース: ${event.sourceName}`,
-            `- 領域: ${event.productArea}`,
-            `- 公開日: ${formatDate(event.publishedAt, "ja")}`,
-            `- なぜ重要か: ${event.importanceReason || "重要更新として抽出"}`,
-            event.url ? `- URL: ${event.url}` : "",
-            "",
-            clipText(summaryForLocale(event, "ja"), 220) || "要約なし",
-            "",
-          ].filter(Boolean);
+  const lead = `本日の公開アップデートは ${sorted.length} 件です。監視ソース ${Number(runSummary.sourceCount ?? 0)} 件を継続確認し、重要度の高い更新から優先的に整理しました。`;
+  const topPointLines =
+    topPoints.length > 0
+      ? topPoints
+          .map(
+            (event) =>
+              `- ${titleForLocale(event, "ja")}\n  ${clipText(event.importanceReason || "重要更新として抽出", 96)}`,
+          )
+          .join("\n")
+      : "- 重要更新はありません。";
+  const detailSections =
+    highlights.length > 0
+      ? highlights
+          .map((event) => {
+            const lines = [
+              `### ${titleForLocale(event, "ja")}`,
+              "",
+              `- ソース: ${event.sourceName}`,
+              `- 領域: ${event.productArea}`,
+              `- 公開日: ${formatDate(event.publishedAt, "ja")}`,
+              `- なぜ重要か: ${event.importanceReason || "重要更新として抽出"}`,
+              event.url ? `- URL: ${event.url}` : "",
+              "",
+              clipText(summaryForLocale(event, "ja"), 220) || "要約なし",
+              "",
+            ].filter(Boolean);
 
-          return lines.join("\n");
-        })
-        .join("\n")
-    : "### 重要更新はありません。\n";
+            return lines.join("\n");
+          })
+          .join("\n")
+      : "### 重要更新はありません。\n";
 
   const lines = [
     "---",
@@ -221,10 +230,14 @@ function buildXDraft(log, runSummary, siteMeta) {
   const highlights = sorted.slice(0, Math.min(3, sorted.length));
   const pagesBaseUrl = derivePagesBaseUrl(siteMeta.repositoryUrl);
   const digestUrl = pagesBaseUrl ? `${pagesBaseUrl}/daily/${log.date}/` : "";
-  const highlightTitles = highlights.map((event) => `「${clipText(titleForLocale(event, "ja"), 34)}」`);
+  const highlightTitles = highlights.map(
+    (event) => `「${clipText(titleForLocale(event, "ja"), 34)}」`,
+  );
   const mainPost = [
     `M365 Copilot / Copilot Studio の更新を ${sorted.length} 件整理しました。`,
-    highlightTitles.length > 0 ? `特に ${highlightTitles.join("、")} が重要です。` : "本日は大きな更新は少なめです。",
+    highlightTitles.length > 0
+      ? `特に ${highlightTitles.join("、")} が重要です。`
+      : "本日は大きな更新は少なめです。",
     digestUrl ? `日次まとめ: ${digestUrl}` : "",
     "#Microsoft365Copilot #CopilotStudio",
   ]
@@ -292,7 +305,8 @@ async function main() {
   console.log(
     JSON.stringify(
       {
-        generatedAt: runSummary.generatedAt || dailyLogs[0]?.generatedAt || null,
+        generatedAt:
+          runSummary.generatedAt || dailyLogs[0]?.generatedAt || null,
         articleDraftCount: dailyLogs.length,
         xDraftCount: dailyLogs.length,
       },

@@ -59,7 +59,7 @@ const TEXT = {
     allSourceTypes: "すべて",
     adminRole: "管理者向け",
     makerRole: "作成者向け",
-    sourceTypeDocs: "公式ドキュメント",
+    sourceTypeDocs: "Microsoft Learn",
     sourceTypeBlog: "公式ブログ",
     sourceTypeRoadmap: "Roadmap",
     sourceBreakdownTitle: "ソース別一覧",
@@ -140,7 +140,7 @@ const TEXT = {
     allSourceTypes: "All",
     adminRole: "Admin-focused",
     makerRole: "Builder-focused",
-    sourceTypeDocs: "Official docs",
+    sourceTypeDocs: "Microsoft Learn",
     sourceTypeBlog: "Official blogs",
     sourceTypeRoadmap: "Roadmap",
     sourceBreakdownTitle: "By source",
@@ -308,7 +308,7 @@ function sourceTypeSlug(value) {
     return "roadmap";
   }
 
-  return "docs";
+  return "learn";
 }
 
 function sourceTypeLabel(sourceFamily, text) {
@@ -380,7 +380,7 @@ function renderSectionHeading(title, actionHtml = "") {
 
 function renderFilterToolbar(events, text) {
   const products = [...new Set(events.map((event) => event.productArea))];
-  const sourceTypes = ["docs", "blog", "roadmap"];
+  const sourceTypes = ["learn", "blog", "roadmap"];
 
   return `
       <div class="filter-toolbar">
@@ -671,10 +671,12 @@ function renderIndexPage(
   );
   const recentDaily = dailyLogs.slice(0, 12);
   const recentWeekly = weeklyGroups.slice(0, 6);
-  const sourceTypeCounts = ["docs", "blog", "roadmap"]
+  const sourceTypeCounts = ["learn", "blog", "roadmap"]
     .map((type) => ({
       type,
-      events: sorted.filter((event) => sourceTypeSlug(event.sourceFamily) === type),
+      events: sorted.filter(
+        (event) => sourceTypeSlug(event.sourceFamily) === type,
+      ),
     }))
     .filter((entry) => entry.events.length > 0)
     .map((entry) => ({
@@ -717,7 +719,10 @@ function renderIndexPage(
       heading: text.homeSearchTitle,
       body: text.homeSearchBody,
       showLink: true,
-      linkHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, "search/")),
+      linkHref: relativeHref(
+        locale === "en" ? 1 : 0,
+        localePath(locale, "search/"),
+      ),
     })}
 
     <section class="section-block">
@@ -992,8 +997,7 @@ async function main() {
   const weeklyGroups = buildWeeklyGroups(allEvents);
   const siteContext = {
     ...siteMeta,
-    lastUpdatedAt:
-      runSummary.generatedAt || dailyLogs[0]?.generatedAt || null,
+    lastUpdatedAt: runSummary.generatedAt || dailyLogs[0]?.generatedAt || null,
   };
 
   await fs.rm(siteDir, { recursive: true, force: true });
