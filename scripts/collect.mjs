@@ -1734,21 +1734,32 @@ async function main() {
 
     const logPath = path.join(eventsDir, `${date}.json`);
     const existingLog = await readJson(logPath, null);
-    // Compare events ignoring volatile timestamp fields so regeneration
-    // from the same source data produces identical output (no drift loop).
-    const stripTimestamps = (evt) => {
-      const { capturedAt, sourceLastSeen, ...rest } = evt;
+    // Compare events ignoring volatile fields (timestamps and translation
+    // outputs that may differ slightly between runs) so regeneration from
+    // the same source data produces identical output (no drift loop).
+    const stableKey = (evt) => {
+      const {
+        capturedAt,
+        sourceLastSeen,
+        titleJa,
+        summaryJa,
+        generatedAt,
+        ...rest
+      } = evt;
       return rest;
     };
     const sameEvents =
-      JSON.stringify((existingLog?.events ?? []).map(stripTimestamps)) ===
-      JSON.stringify(sortedEvents.map(stripTimestamps));
+      JSON.stringify((existingLog?.events ?? []).map(stableKey)) ===
+      JSON.stringify(sortedEvents.map(stableKey));
     const nextLog = {
       date,
       generatedAt: sameEvents ? existingLog?.generatedAt || nowIso : nowIso,
       events: sameEvents ? existingLog.events : sortedEvents,
     };
-    const markdown = buildDailyMarkdown(date, sortedEvents);
+    const markdown = buildDailyMarkdown(
+      date,
+      sameEvents ? existingLog.events : sortedEvents,
+    );
 
     await writeJson(logPath, nextLog);
     await writeTextFile(path.join(summariesDir, `${date}.md`), markdown);
