@@ -393,6 +393,38 @@ function buildJapaneseFallbackTitle(event) {
     return `${event.productArea} のエージェント評価`;
   }
 
+  if (/usage report.*business chat|business chat.*usage report/.test(text)) {
+    return `Business Chat の Copilot 使用状況レポートを追加`;
+  }
+
+  if (/usage report|copilot report/.test(titleText)) {
+    return `${event.productArea} の利用状況レポートを追加`;
+  }
+
+  if (/gcc.*general availability|general availability.*gcc/.test(text)) {
+    return `${event.productArea} GCC が一般提供開始`;
+  }
+
+  if (/ediscovery.*natural language|natural language.*ediscovery/.test(text)) {
+    return `eDiscovery で自然言語から検索クエリを生成 (Copilot for Security)`;
+  }
+
+  if (/ask copilot about visuals.*powerpoint|visuals.*in powerpoint/.test(text)) {
+    return `PowerPoint で Copilot に画像・グラフについて質問可能に`;
+  }
+
+  if (/ask copilot about visuals.*word|visuals.*in word/.test(text)) {
+    return `Word で Copilot に画像・グラフについて質問可能に`;
+  }
+
+  if (/copilot.*onenote on mac|onenote.*mac.*ipad/.test(text)) {
+    return `OneNote for Mac / iPad で Copilot を利用可能に`;
+  }
+
+  if (/copilot readiness.*adoption|readiness.*adoption.*impact/.test(text)) {
+    return `Viva Pulse で Copilot 定着度測定テンプレートを追加`;
+  }
+
   if (/security|governance|analytics/.test(text)) {
     return `${event.productArea} のセキュリティ・管理・分析機能を強化`;
   }
@@ -830,6 +862,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
   const genericTitles = new Set([
     `${productArea} の更新`,
     `${productArea} の Roadmap 更新`,
+    `${productArea} の Copilot 機能を更新`,
   ]);
   const normalizedTitleEn = String(titleEn ?? "").toLowerCase();
   return (
@@ -852,9 +885,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     (/redesigned channels page/.test(normalizedTitleEn) &&
       titleJa !== "Channels ページを刷新") ||
     (titleJa === "Microsoft 365 Copilot の会議・チャット機能を更新" &&
-      !/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
+      (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
-      )) ||
+      ) ||
+        /usage report|report for/.test(normalizedTitleEn))) ||
     (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
       !/anthropic models/.test(normalizedTitleEn))
   );
