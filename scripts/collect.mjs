@@ -878,10 +878,15 @@ async function localizeJapaneseTitles(
 
     if (isLikelyJapanese(event.titleJa || event.titleEn)) {
       event.titleJa = normalizeWhitespace(event.titleJa || event.titleEn);
-      updateSummaryCacheEntry(summaryCache, event.id, {
-        title: event.titleEn,
-        titleJa: event.titleJa,
-      }, nowIso);
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        {
+          title: event.titleEn,
+          titleJa: event.titleJa,
+        },
+        nowIso,
+      );
       continue;
     }
 
@@ -912,10 +917,15 @@ async function localizeJapaneseTitles(
       )
     ) {
       event.titleJa = existing.titleJa;
-      updateSummaryCacheEntry(summaryCache, event.id, {
-        title: event.titleEn,
-        titleJa: event.titleJa,
-      }, nowIso);
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        {
+          title: event.titleEn,
+          titleJa: event.titleJa,
+        },
+        nowIso,
+      );
       continue;
     }
 
@@ -952,37 +962,57 @@ async function localizeJapaneseTitles(
           entry.text && entry.text !== entry.event.titleEn
             ? excerptText(entry.text, 96)
             : buildJapaneseFallbackTitle(entry.event);
-        updateSummaryCacheEntry(summaryCache, entry.event.id, {
-          title: entry.event.titleEn,
-          titleJa: entry.event.titleJa,
-        }, nowIso);
+        updateSummaryCacheEntry(
+          summaryCache,
+          entry.event.id,
+          {
+            title: entry.event.titleEn,
+            titleJa: entry.event.titleJa,
+          },
+          nowIso,
+        );
       }
     } catch {
       for (const event of batch) {
         event.titleJa = buildJapaneseFallbackTitle(event);
-        updateSummaryCacheEntry(summaryCache, event.id, {
-          title: event.titleEn,
-          titleJa: event.titleJa,
-        }, nowIso);
+        updateSummaryCacheEntry(
+          summaryCache,
+          event.id,
+          {
+            title: event.titleEn,
+            titleJa: event.titleJa,
+          },
+          nowIso,
+        );
       }
     }
   }
 
   for (const event of fallbackOnly) {
     event.titleJa = buildJapaneseFallbackTitle(event);
-    updateSummaryCacheEntry(summaryCache, event.id, {
-      title: event.titleEn,
-      titleJa: event.titleJa,
-    }, nowIso);
+    updateSummaryCacheEntry(
+      summaryCache,
+      event.id,
+      {
+        title: event.titleEn,
+        titleJa: event.titleJa,
+      },
+      nowIso,
+    );
   }
 
   for (const event of pending) {
     if (!event.titleJa) {
       event.titleJa = buildJapaneseFallbackTitle(event);
-      updateSummaryCacheEntry(summaryCache, event.id, {
-        title: event.titleEn,
-        titleJa: event.titleJa,
-      }, nowIso);
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        {
+          title: event.titleEn,
+          titleJa: event.titleJa,
+        },
+        nowIso,
+      );
     }
   }
 
@@ -1012,10 +1042,15 @@ async function localizeJapaneseSummaries(
 
     if (isLikelyJapanese(event.summaryJa || event.summaryEn)) {
       event.summaryJa = normalizeWhitespace(event.summaryJa || event.summaryEn);
-      updateSummaryCacheEntry(summaryCache, event.id, {
-        summary: event.summaryEn,
-        summaryJa: event.summaryJa,
-      }, nowIso);
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        {
+          summary: event.summaryEn,
+          summaryJa: event.summaryJa,
+        },
+        nowIso,
+      );
       continue;
     }
 
@@ -1039,10 +1074,15 @@ async function localizeJapaneseSummaries(
       !shouldIgnoreCachedJapaneseSummary(source, existing.summaryJa)
     ) {
       event.summaryJa = existing.summaryJa;
-      updateSummaryCacheEntry(summaryCache, event.id, {
-        summary: event.summaryEn,
-        summaryJa: event.summaryJa,
-      }, nowIso);
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        {
+          summary: event.summaryEn,
+          summaryJa: event.summaryJa,
+        },
+        nowIso,
+      );
       continue;
     }
 
@@ -1079,37 +1119,57 @@ async function localizeJapaneseSummaries(
           entry.text && entry.text !== entry.event.summaryEn
             ? excerptText(entry.text, 280)
             : buildJapaneseFallbackSummary(entry.event);
-        updateSummaryCacheEntry(summaryCache, entry.event.id, {
-          summary: entry.event.summaryEn,
-          summaryJa: entry.event.summaryJa,
-        }, nowIso);
+        updateSummaryCacheEntry(
+          summaryCache,
+          entry.event.id,
+          {
+            summary: entry.event.summaryEn,
+            summaryJa: entry.event.summaryJa,
+          },
+          nowIso,
+        );
       }
     } catch {
       for (const event of batch) {
         event.summaryJa = buildJapaneseFallbackSummary(event);
-        updateSummaryCacheEntry(summaryCache, event.id, {
-          summary: event.summaryEn,
-          summaryJa: event.summaryJa,
-        }, nowIso);
+        updateSummaryCacheEntry(
+          summaryCache,
+          event.id,
+          {
+            summary: event.summaryEn,
+            summaryJa: event.summaryJa,
+          },
+          nowIso,
+        );
       }
     }
   }
 
   for (const event of fallbackOnly) {
     event.summaryJa = buildJapaneseFallbackSummary(event);
-    updateSummaryCacheEntry(summaryCache, event.id, {
-      summary: event.summaryEn,
-      summaryJa: event.summaryJa,
-    }, nowIso);
+    updateSummaryCacheEntry(
+      summaryCache,
+      event.id,
+      {
+        summary: event.summaryEn,
+        summaryJa: event.summaryJa,
+      },
+      nowIso,
+    );
   }
 
   for (const event of pending) {
     if (!event.summaryJa) {
       event.summaryJa = buildJapaneseFallbackSummary(event);
-      updateSummaryCacheEntry(summaryCache, event.id, {
-        summary: event.summaryEn,
-        summaryJa: event.summaryJa,
-      }, nowIso);
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        {
+          summary: event.summaryEn,
+          summaryJa: event.summaryJa,
+        },
+        nowIso,
+      );
     }
   }
 
@@ -1674,13 +1734,19 @@ async function main() {
 
     const logPath = path.join(eventsDir, `${date}.json`);
     const existingLog = await readJson(logPath, null);
+    // Compare events ignoring volatile timestamp fields so regeneration
+    // from the same source data produces identical output (no drift loop).
+    const stripTimestamps = (evt) => {
+      const { capturedAt, sourceLastSeen, ...rest } = evt;
+      return rest;
+    };
     const sameEvents =
-      JSON.stringify(existingLog?.events ?? null) ===
-      JSON.stringify(sortedEvents);
+      JSON.stringify((existingLog?.events ?? []).map(stripTimestamps)) ===
+      JSON.stringify(sortedEvents.map(stripTimestamps));
     const nextLog = {
       date,
       generatedAt: sameEvents ? existingLog?.generatedAt || nowIso : nowIso,
-      events: sortedEvents,
+      events: sameEvents ? existingLog.events : sortedEvents,
     };
     const markdown = buildDailyMarkdown(date, sortedEvents);
 
