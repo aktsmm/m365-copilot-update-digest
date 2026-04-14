@@ -471,6 +471,24 @@ function renderArchiveRow(href, title, subtitle) {
   return `<a class="archive-row" href="${escapeHtml(href)}"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(subtitle)}</span></a>`;
 }
 
+function sortEventsByRecency(events) {
+  return [...events].sort((left, right) => {
+    const publishedDiff =
+      safeDate(right.publishedAt) - safeDate(left.publishedAt);
+    if (publishedDiff !== 0) {
+      return publishedDiff;
+    }
+
+    const importanceDiff =
+      (right.importanceScore ?? 0) - (left.importanceScore ?? 0);
+    if (importanceDiff !== 0) {
+      return importanceDiff;
+    }
+
+    return left.title.localeCompare(right.title);
+  });
+}
+
 function renderLastUpdated(locale, siteMeta, className = "hero-meta-item") {
   if (!siteMeta.lastUpdatedAt) {
     return "";
@@ -670,16 +688,16 @@ function renderIndexPage(
   const importantWindow = sorted.filter((event) =>
     withinDays(event.publishedAt, 7, now),
   );
-  const importantEvents = (
+  const importantCandidates = (
     importantWindow.length > 0 ? importantWindow : sorted
   ).slice(0, 4);
+  const importantEvents = sortEventsByRecency(importantCandidates);
   const recentWindow = sorted.filter((event) =>
     withinHours(event.publishedAt, 72, now),
   );
-  const recentEvents = (recentWindow.length > 0 ? recentWindow : sorted).slice(
-    0,
-    24,
-  );
+  const recentEvents = sortEventsByRecency(
+    recentWindow.length > 0 ? recentWindow : sorted,
+  ).slice(0, 24);
   const recentDaily = dailyLogs.slice(0, 12);
   const recentWeekly = weeklyGroups.slice(0, 6);
   const sourceTypeCounts = ["learn", "blog", "roadmap"]
