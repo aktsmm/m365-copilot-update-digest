@@ -688,10 +688,9 @@ function renderIndexPage(
   const importantWindow = sorted.filter((event) =>
     withinDays(event.publishedAt, 7, now),
   );
-  const importantCandidates = (
-    importantWindow.length > 0 ? importantWindow : sorted
+  const importantEvents = sortEventsByRecency(
+    importantWindow.length > 0 ? importantWindow : sorted,
   ).slice(0, 4);
-  const importantEvents = sortEventsByRecency(importantCandidates);
   const recentWindow = sorted.filter((event) =>
     withinHours(event.publishedAt, 72, now),
   );
