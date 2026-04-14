@@ -126,6 +126,16 @@ function stablePublishedAt(value, fallbackValue) {
   return `${dateKey}T12:00:00.000Z`;
 }
 
+function stableDailyHeartbeat(existingValue, fallbackValue) {
+  if (!existingValue) {
+    return fallbackValue;
+  }
+
+  return tokyoDateOnly(existingValue) === tokyoDateOnly(fallbackValue)
+    ? existingValue
+    : fallbackValue;
+}
+
 async function removeStaleGeneratedFiles(directoryPath, extension, validKeys) {
   const entries = await fs
     .readdir(directoryPath, { withFileTypes: true })
@@ -1765,29 +1775,43 @@ async function main() {
     await writeTextFile(path.join(summariesDir, `${date}.md`), markdown);
   }
 
+  const stateUnchanged =
+    newEventCount === 0 &&
+    errors.length === 0 &&
+    existingState?.totalEvents === allEvents.length &&
+    JSON.stringify(existingState?.sources ?? []) ===
+      JSON.stringify(sources.map((source) => source.id));
+
+  const summaryUnchanged =
+    newEventCount === 0 &&
+    errors.length === 0 &&
+    existingRunSummary?.totalEvents === allEvents.length &&
+    existingRunSummary?.sourceCount === sources.length &&
+    Number(existingRunSummary?.newEventCount ?? -1) === 0 &&
+    Number(existingRunSummary?.errorCount ?? -1) === 0;
+
   const nextState = {
-    lastRunAt:
-      newEventCount === 0 &&
-      errors.length === 0 &&
-      existingState?.totalEvents === allEvents.length &&
-      JSON.stringify(existingState?.sources ?? []) ===
-        JSON.stringify(sources.map((source) => source.id))
-        ? existingState?.lastRunAt || nowIso
-        : nowIso,
+    lastRunAt: stateUnchanged ? existingState?.lastRunAt || nowIso : nowIso,
+    lastCheckedAt: stateUnchanged
+      ? stableDailyHeartbeat(
+          existingState?.lastCheckedAt || existingState?.lastRunAt,
+          nowIso,
+        )
+      : nowIso,
     totalEvents: allEvents.length,
     sources: sources.map((source) => source.id),
   };
 
   const nextRunSummary = {
-    generatedAt:
-      newEventCount === 0 &&
-      errors.length === 0 &&
-      existingRunSummary?.totalEvents === allEvents.length &&
-      existingRunSummary?.sourceCount === sources.length &&
-      Number(existingRunSummary?.newEventCount ?? -1) === 0 &&
-      Number(existingRunSummary?.errorCount ?? -1) === 0
-        ? existingRunSummary?.generatedAt || nowIso
-        : nowIso,
+    generatedAt: summaryUnchanged
+      ? existingRunSummary?.generatedAt || nowIso
+      : nowIso,
+    lastCheckedAt: summaryUnchanged
+      ? stableDailyHeartbeat(
+          existingRunSummary?.lastCheckedAt || existingRunSummary?.generatedAt,
+          nowIso,
+        )
+      : nowIso,
     sourceCount: sources.length,
     totalEvents: allEvents.length,
     newEventCount,
