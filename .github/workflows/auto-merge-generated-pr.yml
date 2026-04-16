@@ -37,6 +37,9 @@ jobs:
             let pr = pull.data;
             const labels = new Set((pr.labels || []).map((label) => label.name));
             const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
+            const requestTitlePattern = /^Digest automation request: \d{4}-\d{2}-\d{2}$/;
+            const genericWipTitlePattern = /^\[WIP\] Copilot Request$/;
+            const datedWipTitlePattern = /^\[WIP\] .*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4})$/;
             const bodyPattern = /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/;
             const allowed = [
               /^scripts\/collect\.mjs$/,
@@ -107,12 +110,27 @@ jobs:
               return;
             }
 
+            const isPendingNormalization =
+              requestTitlePattern.test(pr.title || '') ||
+              genericWipTitlePattern.test(pr.title || '') ||
+              datedWipTitlePattern.test(pr.title || '');
+
+            if (isPendingNormalization) {
+              core.info(`PR #${pr.number} is still waiting for generated metadata normalization.`);
+              return;
+            }
+
             const files = await github.paginate(github.rest.pulls.listFiles, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pr.number,
               per_page: 100,
             });
+
+            if (files.length === 0) {
+              core.info(`PR #${pr.number} has no file changes yet. Waiting for Copilot commits.`);
+              return;
+            }
 
             const blocked = files
               .map((file) => file.filename)

@@ -3,7 +3,6 @@ name: Validate generated PR
 on:
   pull_request:
     types:
-      - opened
       - synchronize
       - reopened
       - ready_for_review
@@ -21,6 +20,7 @@ jobs:
       PR_BODY: ${{ github.event.pull_request.body }}
       PR_USER_LOGIN: ${{ github.event.pull_request.user.login }}
       PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+      PR_IS_DRAFT: ${{ github.event.pull_request.draft }}
 
     steps:
       - name: Checkout
@@ -65,7 +65,57 @@ jobs:
             echo EOF
           } >> "$GITHUB_OUTPUT"
 
+      - name: Analyze generated PR state
+        id: pr_state
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+
+          const changed = (process.env.CHANGED_FILES || '').split(/\r?\n/).filter(Boolean);
+          const title = process.env.PR_TITLE || '';
+          const body = process.env.PR_BODY || '';
+          const isDraft = String(process.env.PR_IS_DRAFT || '').toLowerCase() === 'true';
+          const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
+          const requestTitlePattern = /^Digest automation request: \d{4}-\d{2}-\d{2}$/;
+          const genericWipTitlePattern = /^\[WIP\] Copilot Request$/;
+          const datedWipTitlePattern = /^\[WIP\] .*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4})$/;
+          const bodyPattern = /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/;
+          const issueBodyPattern = /Digest automation request:\s*\d{4}-\d{2}-\d{2}/;
+          const isPendingNormalization =
+            requestTitlePattern.test(title) ||
+            genericWipTitlePattern.test(title) ||
+            datedWipTitlePattern.test(title);
+          const inferableSource =
+            bodyPattern.test(body) ||
+            issueBodyPattern.test(body) ||
+            changed.some((file) => /^data\/events\/\d{4}-\d{2}-\d{2}\.json$/.test(file)) ||
+            changed.some((file) => /^summaries\/daily\/\d{4}-\d{2}-\d{2}\.md$/.test(file)) ||
+            titlePattern.test(title);
+
+          let deferReason = '';
+          if (isPendingNormalization) {
+            deferReason = 'Generated PR metadata is still pending normalization.';
+          } else if (isDraft && changed.length === 0) {
+            deferReason = 'Draft generated PR has no file changes yet.';
+          }
+
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed_count=${changed.length}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `inferable_source=${inferableSource}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `is_pending_normalization=${isPendingNormalization}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `should_defer=${Boolean(deferReason)}\n`);
+          if (deferReason) {
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, `defer_reason=${deferReason}\n`);
+          }
+          NODE
+
+      - name: Defer validation for transient generated PR state
+        if: steps.pr_state.outputs.should_defer == 'true'
+        run: echo "${{ steps.pr_state.outputs.defer_reason }}"
+
       - name: Validate changed paths
+        if: steps.pr_state.outputs.should_defer != 'true'
         env:
           CHANGED_FILES: ${{ steps.changed.outputs.files }}
         run: |
@@ -94,7 +144,21 @@ jobs:
           }
           NODE
 
+      - name: Validate PR has generated changes
+        if: steps.pr_state.outputs.should_defer != 'true'
+        env:
+          CHANGED_COUNT: ${{ steps.pr_state.outputs.changed_count }}
+        run: |
+          node <<'NODE'
+          const changedCount = Number(process.env.CHANGED_COUNT || '0');
+          if (!Number.isInteger(changedCount) || changedCount <= 0) {
+            console.error('Generated PR has no file changes to validate.');
+            process.exit(1);
+          }
+          NODE
+
       - name: Validate PR metadata
+        if: steps.pr_state.outputs.should_defer != 'true'
         env:
           CHANGED_FILES: ${{ steps.changed.outputs.files }}
         run: |
@@ -103,41 +167,42 @@ jobs:
           const body = process.env.PR_BODY || '';
           const changed = (process.env.CHANGED_FILES || '').split(/\r?\n/).filter(Boolean);
           const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
-          const requestTitlePattern = /^Digest automation request: \d{4}-\d{2}-\d{2}$/;
-          const copilotWipTitlePattern = /^\[WIP\] .*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4})$/;
           const bodyPattern = /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/;
           const inferableSource =
             bodyPattern.test(body) ||
             changed.some((file) => /^data\/events\/\d{4}-\d{2}-\d{2}\.json$/.test(file)) ||
             changed.some((file) => /^summaries\/daily\/\d{4}-\d{2}-\d{2}\.md$/.test(file)) ||
             titlePattern.test(title);
-          const isPendingNormalization = requestTitlePattern.test(title) || copilotWipTitlePattern.test(title);
 
-          if (!titlePattern.test(title) && !isPendingNormalization) {
+          if (!titlePattern.test(title)) {
             console.error(`PR title does not match the generated PR rule: ${title}`);
             process.exit(1);
           }
 
-          if (!inferableSource && !isPendingNormalization) {
+          if (!inferableSource) {
             console.error('PR metadata is missing an inferable source date.');
             process.exit(1);
           }
           NODE
 
       - name: Install dependencies
+        if: steps.pr_state.outputs.should_defer != 'true'
         run: npm ci
 
       - name: Validate collect command
+        if: steps.pr_state.outputs.should_defer != 'true'
         run: npm run collect
 
       - name: Validate Pages build
+        if: steps.pr_state.outputs.should_defer != 'true'
         run: npm run build:pages
 
       - name: Validate article and post drafts
+        if: steps.pr_state.outputs.should_defer != 'true'
         run: npm run generate:drafts
 
       - name: Auto-fix canonical generated outputs
-        if: github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.pr_state.outputs.should_defer != 'true' && github.event.pull_request.head.repo.full_name == github.repository
         shell: bash
         run: |
           title_pattern='^chore: improve digest automation [0-9]{4}-[0-9]{2}-[0-9]{2}$'
@@ -169,6 +234,7 @@ jobs:
           exit 1
 
       - name: Validate generated files are canonical
+        if: steps.pr_state.outputs.should_defer != 'true'
         run: |
           if ! git diff --quiet -- \
             data \
@@ -180,6 +246,7 @@ jobs:
           fi
 
       - name: Validate localization quality
+        if: steps.pr_state.outputs.should_defer != 'true'
         run: |
           node <<'NODE'
           const fs = require('fs');

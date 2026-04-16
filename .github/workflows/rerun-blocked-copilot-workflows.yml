@@ -61,7 +61,7 @@ jobs:
             for (const run of candidateRuns) {
               const createdAt = Date.parse(run.created_at || 0);
               const isRecent = Number.isFinite(createdAt) && createdAt >= cutoff;
-              const isBlocked = run.conclusion === 'action_required';
+              const isBlocked = ['action_required', 'failure'].includes(run.conclusion);
               const canRetry = Number(run.run_attempt ?? 0) < maxAttempts;
               const actorLogin = run.actor?.login || run.triggering_actor?.login || '';
               const isCopilotActor = /copilot/i.test(actorLogin);

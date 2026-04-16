@@ -48,6 +48,16 @@ jobs:
                 return bodyMatch[1];
               }
 
+              const issueTitleMatch = (pr.body || '').match(/<issue_title>Digest automation request: (\d{4}-\d{2}-\d{2})<\/issue_title>/);
+              if (issueTitleMatch) {
+                return issueTitleMatch[1];
+              }
+
+              const issueBodyMatch = (pr.body || '').match(/Digest automation request:\s*(\d{4}-\d{2}-\d{2})/);
+              if (issueBodyMatch) {
+                return issueBodyMatch[1];
+              }
+
               const titleMatch = (pr.title || '').match(/(\d{4}-\d{2}-\d{2})/);
               return titleMatch ? titleMatch[1] : null;
             }
