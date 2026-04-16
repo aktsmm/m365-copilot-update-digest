@@ -1,0 +1,150 @@
+name: Reconcile generated PRs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Close stale no-op generated PRs
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const staleMinutes = 60;
+            const staleCutoff = Date.now() - staleMinutes * 60 * 1000;
+            const marker = '<!-- generated-pr-reconciler -->';
+            const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
+            const bodyPattern = /^Generated from data\/events\/\d{4}-\d{2}-\d{2}\.json/m;
+
+            async function upsertPrComment(prNumber, body) {
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                per_page: 100,
+              });
+              const existing = comments.find((comment) => comment.body?.includes(marker));
+
+              if (existing) {
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: existing.id,
+                  body,
+                });
+                return;
+              }
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+            }
+
+            async function closeLinkedIssues(bodyText, prNumber) {
+              const issueNumbers = [...new Set(
+                [...String(bodyText || '').matchAll(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi)]
+                  .map((match) => Number(match[1]))
+                  .filter((value) => Number.isInteger(value)),
+              )];
+
+              for (const issueNumber of issueNumbers) {
+                try {
+                  const issue = await github.rest.issues.get({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                  });
+
+                  if (issue.data.state !== 'open') {
+                    continue;
+                  }
+
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    body: [
+                      marker,
+                      `Closed automatically because generated PR #${prNumber} remained a draft with no file changes for more than ${staleMinutes} minutes.`,
+                    ].join('\n'),
+                  });
+
+                  await github.rest.issues.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    state: 'closed',
+                  });
+                } catch (error) {
+                  core.warning(`Failed to close linked issue #${issueNumber}: ${error.message}`);
+                }
+              }
+            }
+
+            const pulls = await github.paginate(github.rest.pulls.list, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+
+            let closedCount = 0;
+
+            for (const pr of pulls) {
+              const labels = new Set((pr.labels || []).map((label) => label.name));
+              const isGeneratedPr = labels.has('auto-pr') || /copilot/i.test(pr.user?.login || '');
+              const createdAt = Date.parse(pr.created_at || 0);
+              const isStale = Number.isFinite(createdAt) && createdAt < staleCutoff;
+
+              if (!isGeneratedPr || !pr.draft || !isStale) {
+                continue;
+              }
+
+              if (!titlePattern.test(pr.title || '') || !bodyPattern.test(pr.body || '')) {
+                continue;
+              }
+
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                per_page: 100,
+              });
+
+              if (files.length > 0) {
+                continue;
+              }
+
+              const commentBody = [
+                marker,
+                `Closed automatically because this generated PR remained a draft with no file changes for more than ${staleMinutes} minutes.`,
+                '- A future collection run can open a new automation issue if work is still needed.',
+              ].join('\n');
+
+              await upsertPrComment(pr.number, commentBody);
+              await closeLinkedIssues(pr.body || '', pr.number);
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                state: 'closed',
+              });
+              closedCount += 1;
+              core.info(`Closed stale no-op generated PR #${pr.number}.`);
+            }
+
+            if (closedCount === 0) {
+              core.info('No stale no-op generated PRs needed reconciliation.');
+            }
