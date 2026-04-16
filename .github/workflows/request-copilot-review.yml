@@ -88,12 +88,11 @@ jobs:
               const expectedTitle = `chore: improve digest automation ${dateKey}`;
               const expectedMarkerLine = `Generated from data/events/${dateKey}.json`;
               let nextBody = pr.body || '';
+              const lines = nextBody.split(/\r?\n/);
 
-              if (/Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/.test(nextBody)) {
-                nextBody = nextBody.replace(
-                  /Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/,
-                  expectedMarkerLine,
-                );
+              if (/^Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?$/.test(lines[0] || '')) {
+                lines[0] = expectedMarkerLine;
+                nextBody = lines.join('\n');
               } else {
                 nextBody = [expectedMarkerLine, '', nextBody].filter(Boolean).join('\n');
               }
