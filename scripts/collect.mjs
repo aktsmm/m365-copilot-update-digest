@@ -278,9 +278,11 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
   const normalizedSummaryJa = String(summaryJa ?? "");
   const genericFallbackPattern =
     /の更新です。.+に関する内容で、.+(?:案内されています|進行中です|廃止や移行対応が案内されています|更新内容が案内されています)。/;
+  const shortReferencePattern = /^.{3,60}に関する更新。$/;
   return (
     !isLikelyJapanese(normalizedSummaryJa) ||
     genericFallbackPattern.test(normalizedSummaryJa) ||
+    shortReferencePattern.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
       /公開ドキュメント由来の更新です。?$/.test(normalizedSummaryJa))
   );
@@ -651,6 +653,14 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot Notebooks の要約・インサイトを強化`;
   }
 
+  if (/share (?:your )?agents? (?:to|with) teams?/.test(titleText)) {
+    return `Teams にエージェントを共有可能に`;
+  }
+
+  if (/find meetings? based on topics?/.test(titleText)) {
+    return `トピック・キーワードで会議を検索可能に`;
+  }
+
   if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
@@ -862,9 +872,12 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     (/redesigned channels page/.test(normalizedTitleEn) &&
       titleJa !== "Channels ページを刷新") ||
     (titleJa === "Microsoft 365 Copilot の会議・チャット機能を更新" &&
-      !/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
+      (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
-      )) ||
+      ) ||
+        /share.*agents?.*teams?|find meetings? based on topics?/.test(
+          normalizedTitleEn,
+        ))) ||
     (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
       !/anthropic models/.test(normalizedTitleEn))
   );
