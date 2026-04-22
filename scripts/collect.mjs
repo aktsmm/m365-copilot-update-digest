@@ -274,6 +274,16 @@ function isLikelyJapanese(value) {
   return /[\u3040-\u30ff\u3400-\u9fff]/.test(String(value ?? ""));
 }
 
+function fixupJapaneseText(text) {
+  return String(text ?? "")
+    .replace(/副操縦士/g, "Copilot")
+    .replace(/コパイロット/g, "Copilot");
+}
+
+function cleanupRoadmapTitle(title) {
+  return normalizeWhitespace(title.replace(/\):\s*\):/g, "):"));
+}
+
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
   const normalizedSummaryJa = String(summaryJa ?? "");
   const genericFallbackPattern =
@@ -283,6 +293,7 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
     !isLikelyJapanese(normalizedSummaryJa) ||
     genericFallbackPattern.test(normalizedSummaryJa) ||
     shortReferencePattern.test(normalizedSummaryJa) ||
+    /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
       /公開ドキュメント由来の更新です。?$/.test(normalizedSummaryJa))
   );
@@ -741,7 +752,8 @@ function parseRoadmapRssFeed(source, xmlText) {
 
   return items
     .map((item) => {
-      const title = normalizeWhitespace(readXmlText(item.title));
+      const titleBeforeCleanup = normalizeWhitespace(readXmlText(item.title));
+      const title = cleanupRoadmapTitle(titleBeforeCleanup);
       const rawSummary = readXmlText(
         item.description || item["content:encoded"] || "",
       );
@@ -756,7 +768,7 @@ function parseRoadmapRssFeed(source, xmlText) {
       return {
         id: buildEventId(
           source.id,
-          title,
+          titleBeforeCleanup,
           publishedAt,
           readXmlText(item.guid) || link,
         ),
@@ -983,7 +995,7 @@ async function localizeJapaneseTitles(
       for (const entry of translatedEntries) {
         entry.event.titleJa =
           entry.text && entry.text !== entry.event.titleEn
-            ? excerptText(entry.text, 96)
+            ? fixupJapaneseText(excerptText(entry.text, 96))
             : buildJapaneseFallbackTitle(entry.event);
         updateSummaryCacheEntry(
           summaryCache,
@@ -1140,7 +1152,7 @@ async function localizeJapaneseSummaries(
       for (const entry of translatedEntries) {
         entry.event.summaryJa =
           entry.text && entry.text !== entry.event.summaryEn
-            ? excerptText(entry.text, 280)
+            ? fixupJapaneseText(excerptText(entry.text, 280))
             : buildJapaneseFallbackSummary(entry.event);
         updateSummaryCacheEntry(
           summaryCache,
@@ -1552,6 +1564,12 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
     event.summary,
     event.productArea || source.productArea,
   );
+  const cleanTitle = cleanupRoadmapTitle(
+    normalizeWhitespace(event.title || ""),
+  );
+  const cleanTitleEn = cleanupRoadmapTitle(
+    normalizeWhitespace(event.titleEn || event.title || ""),
+  );
   const normalized = {
     id: event.id,
     sourceId: source.id,
@@ -1559,11 +1577,11 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
     sourceFamily: source.sourceFamily || "Other",
     productArea: event.productArea || source.productArea,
     section: event.section || source.productArea,
-    title: event.title,
-    titleJa: event.titleJa || event.title,
-    titleEn: event.titleEn || event.title,
+    title: cleanTitle,
+    titleJa: fixupJapaneseText(event.titleJa || cleanTitle),
+    titleEn: cleanTitleEn,
     summary: event.summary,
-    summaryJa: event.summaryJa || event.summary,
+    summaryJa: fixupJapaneseText(event.summaryJa || event.summary),
     summaryEn: event.summaryEn || event.summary,
     url: event.url || source.url,
     publishedAt: stablePublishedAt(
