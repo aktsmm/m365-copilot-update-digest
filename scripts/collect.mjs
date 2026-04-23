@@ -277,7 +277,9 @@ function isLikelyJapanese(value) {
 function fixupJapaneseText(text) {
   return String(text ?? "")
     .replace(/副操縦士/g, "Copilot")
-    .replace(/コパイロット/g, "Copilot");
+    .replace(/コパイロット/g, "Copilot")
+    .replace(/を接地する/g, "をグラウンディングする")
+    .replace(/丸薬/g, "ピル");
 }
 
 function cleanupRoadmapTitle(title) {
@@ -294,6 +296,7 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
     genericFallbackPattern.test(normalizedSummaryJa) ||
     shortReferencePattern.test(normalizedSummaryJa) ||
     /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
+    /を接地する|丸薬/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
       /公開ドキュメント由来の更新です。?$/.test(normalizedSummaryJa))
   );
@@ -869,6 +872,8 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     !isLikelyJapanese(titleJa) ||
     titleJa === titleEn ||
     genericTitles.has(titleJa) ||
+    /副操縦士|コパイロット/.test(titleJa) ||
+    /を接地する|を接地 |を接地$/.test(titleJa) ||
     (titleJa === "Microsoft 365 Copilot のライセンス・課金関連更新" &&
       !/(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(
         normalizedTitleEn,
@@ -1792,14 +1797,22 @@ async function main() {
     const sameEvents =
       JSON.stringify((existingLog?.events ?? []).map(stableKey)) ===
       JSON.stringify(sortedEvents.map(stableKey));
+    // When events are otherwise unchanged, still apply text fixups so that
+    // translation-quality improvements (e.g. を接地する→をグラウンディングする)
+    // are reflected in the persisted events and markdown even on re-runs.
+    const fixedExistingEvents = (existingLog?.events ?? []).map((evt) => ({
+      ...evt,
+      titleJa: fixupJapaneseText(evt.titleJa || ""),
+      summaryJa: fixupJapaneseText(evt.summaryJa || ""),
+    }));
     const nextLog = {
       date,
       generatedAt: sameEvents ? existingLog?.generatedAt || nowIso : nowIso,
-      events: sameEvents ? existingLog.events : sortedEvents,
+      events: sameEvents ? fixedExistingEvents : sortedEvents,
     };
     const markdown = buildDailyMarkdown(
       date,
-      sameEvents ? existingLog.events : sortedEvents,
+      sameEvents ? fixedExistingEvents : sortedEvents,
     );
 
     await writeJson(logPath, nextLog);
