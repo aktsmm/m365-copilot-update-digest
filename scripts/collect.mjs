@@ -283,7 +283,15 @@ function fixupJapaneseText(text) {
 }
 
 function cleanupRoadmapTitle(title) {
-  return normalizeWhitespace(title.replace(/\):\s*\):/g, "):"));
+  return normalizeWhitespace(
+    title
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"')
+      .replace(/&apos;/g, "'")
+      .replace(/\):\s*\):/g, "):"),
+  );
 }
 
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
@@ -1799,9 +1807,12 @@ async function main() {
       JSON.stringify(sortedEvents.map(stableKey));
     // When events are otherwise unchanged, still apply text fixups so that
     // translation-quality improvements (e.g. を接地する→をグラウンディングする)
-    // are reflected in the persisted events and markdown even on re-runs.
+    // and title cleanups (e.g. &amp; → &) are reflected in the persisted
+    // events and markdown even on re-runs.
     const fixedExistingEvents = (existingLog?.events ?? []).map((evt) => ({
       ...evt,
+      title: cleanupRoadmapTitle(evt.title || ""),
+      titleEn: cleanupRoadmapTitle(evt.titleEn || evt.title || ""),
       titleJa: fixupJapaneseText(evt.titleJa || ""),
       summaryJa: fixupJapaneseText(evt.summaryJa || ""),
     }));
