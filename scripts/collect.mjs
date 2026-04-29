@@ -279,7 +279,9 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(/人体モデル/g, "Anthropic モデル")
+    .replace(/([\u3040-\u30ff\u3400-\u9fff])(Anthropic)/g, "$1 $2");
 }
 
 function cleanupRoadmapTitle(title) {
@@ -874,6 +876,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     genericTitles.has(titleJa) ||
     /副操縦士|コパイロット/.test(titleJa) ||
     /を接地する|を接地 |を接地$/.test(titleJa) ||
+    /人体モデル/.test(titleJa) ||
     (titleJa === "Microsoft 365 Copilot のライセンス・課金関連更新" &&
       !/(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(
         normalizedTitleEn,
