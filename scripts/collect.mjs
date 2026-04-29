@@ -415,6 +415,10 @@ function buildJapaneseFallbackTitle(event) {
     return `${event.productArea} 公式ブログ開始`;
   }
 
+  if (/automate.*agent evaluation|evaluation api/i.test(text)) {
+    return `評価 API を使用してエージェントの評価を自動化する`;
+  }
+
   if (/agent evaluation/.test(text)) {
     return `${event.productArea} のエージェント評価`;
   }
@@ -699,6 +703,10 @@ function buildJapaneseFallbackTitle(event) {
     return normalizedTitle
       ? excerptText(normalizedTitle, 72)
       : `${event.productArea} の Roadmap 更新`;
+  }
+
+  if (/copilot in onenote.*understand/.test(titleText)) {
+    return `OneNote の Copilot がメモをさらに理解できるようになりました`;
   }
 
   if (/copilot in /.test(titleText)) {
