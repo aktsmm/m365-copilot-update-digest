@@ -279,7 +279,8 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(/Word: 辺境の法律代理人/g, "Word: Frontier の Legal エージェント");
 }
 
 function cleanupRoadmapTitle(title) {
@@ -421,6 +422,10 @@ function buildJapaneseFallbackTitle(event) {
 
   if (/security|governance|analytics/.test(text)) {
     return `${event.productArea} のセキュリティ・管理・分析機能を強化`;
+  }
+
+  if (/legal agent in frontier/.test(text)) {
+    return `Word: Frontier の Legal エージェント`;
   }
 
   if (/copilot in word/.test(text)) {
@@ -896,7 +901,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
           normalizedTitleEn,
         ))) ||
     (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
-      !/anthropic models/.test(normalizedTitleEn))
+      !/anthropic models/.test(normalizedTitleEn)) ||
+    (/legal agent in frontier/.test(normalizedTitleEn) &&
+      titleJa !== "Word: Frontier の Legal エージェント")
   );
 }
 
