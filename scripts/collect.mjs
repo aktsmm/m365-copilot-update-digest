@@ -279,11 +279,15 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(/(Copilot)([\u3040-\u30ff\u3400-\u9fff])/g, "$1 $2")
+    .replace(/([\u3040-\u30ff\u3400-\u9fff])(Copilot)/g, "$1 $2");
 }
 
 function cleanupRoadmapTitle(title) {
-  return normalizeWhitespace(title.replace(/\):\s*\):/g, "):"));
+  return normalizeWhitespace(
+    title.replace(/\):\s*\):/g, "):").replace(/\n/g, " "),
+  );
 }
 
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
@@ -1798,11 +1802,16 @@ async function main() {
       JSON.stringify((existingLog?.events ?? []).map(stableKey)) ===
       JSON.stringify(sortedEvents.map(stableKey));
     // When events are otherwise unchanged, still apply text fixups so that
-    // translation-quality improvements (e.g. を接地する→をグラウンディングする)
-    // are reflected in the persisted events and markdown even on re-runs.
+    // translation-quality improvements (e.g. を接地する→をグラウンディングする,
+    // newlines collapsed in titles) are reflected in the persisted events and
+    // markdown even on re-runs.
     const fixedExistingEvents = (existingLog?.events ?? []).map((evt) => ({
       ...evt,
-      titleJa: fixupJapaneseText(evt.titleJa || ""),
+      title: cleanupRoadmapTitle(evt.title || ""),
+      titleEn: cleanupRoadmapTitle(evt.titleEn || ""),
+      titleJa: fixupJapaneseText(
+        cleanupRoadmapTitle(evt.titleJa || ""),
+      ),
       summaryJa: fixupJapaneseText(evt.summaryJa || ""),
     }));
     const nextLog = {
