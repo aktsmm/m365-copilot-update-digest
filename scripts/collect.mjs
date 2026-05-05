@@ -278,6 +278,7 @@ function fixupJapaneseText(text) {
   return String(text ?? "")
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
+    .replace(/\bCopilo\b/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
     .replace(/丸薬/g, "ピル");
 }
@@ -297,6 +298,7 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
     shortReferencePattern.test(normalizedSummaryJa) ||
     /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
     /を接地する|丸薬/.test(normalizedSummaryJa) ||
+    /\bCopilo\b/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
       /公開ドキュメント由来の更新です。?$/.test(normalizedSummaryJa))
   );
