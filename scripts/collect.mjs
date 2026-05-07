@@ -39,6 +39,14 @@ const MAX_TITLE_TRANSLATION_BATCH_CHARS = 2200;
 const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
 const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
+const ROADMAP_STATUS_IN_DEVELOPMENT_REPLACE_PATTERN =
+  /The correct status is In Development[.!]?/g;
+const ROADMAP_STATUS_IN_DEVELOPMENT_DETECT_PATTERN =
+  /The correct status is In Development[.!]?/i;
+const ROADMAP_APOLOGY_REPLACE_PATTERN =
+  /We apologize (?:for )?the inconvenience[.!]?/gi;
+const ROADMAP_APOLOGY_DETECT_PATTERN =
+  /We apologize (?:for )?the inconvenience[.!]?/i;
 const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
@@ -281,13 +289,10 @@ function fixupJapaneseText(text) {
     .replace(/を接地する/g, "をグラウンディングする")
     .replace(/丸薬/g, "ピル")
     .replace(
-      /The correct status is In Development\./g,
+      ROADMAP_STATUS_IN_DEVELOPMENT_REPLACE_PATTERN,
       "正しいステータスは「開発中」です。",
     )
-    .replace(
-      /We apologize (?:for )?the inconvenience\./gi,
-      "ご不便をおかけして申し訳ありません。",
-    )
+    .replace(ROADMAP_APOLOGY_REPLACE_PATTERN, "ご不便をおかけして申し訳ありません。")
     .replace(/([\u3040-\u30ff\u3400-\u9fff])(Copilot)/g, "$1 $2")
     .replace(/(Copilot)([\u3040-\u30ff\u3400-\u9fff])/g, "$1 $2");
 }
@@ -305,9 +310,8 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
     !isLikelyJapanese(normalizedSummaryJa) ||
     genericFallbackPattern.test(normalizedSummaryJa) ||
     shortReferencePattern.test(normalizedSummaryJa) ||
-    /The correct status is In Development|We apologize (?:for )?the inconvenience/i.test(
-      normalizedSummaryJa,
-    ) ||
+    ROADMAP_STATUS_IN_DEVELOPMENT_DETECT_PATTERN.test(normalizedSummaryJa) ||
+    ROADMAP_APOLOGY_DETECT_PATTERN.test(normalizedSummaryJa) ||
     /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
     /を接地する|丸薬/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
