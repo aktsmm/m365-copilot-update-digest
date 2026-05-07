@@ -279,7 +279,17 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(
+      /The correct status is In Development\./g,
+      "正しいステータスは「開発中」です。",
+    )
+    .replace(
+      /We apologize (?:for )?the inconvenience\./gi,
+      "ご不便をおかけして申し訳ありません。",
+    )
+    .replace(/([\u3040-\u30ff\u3400-\u9fff])(Copilot)/g, "$1 $2")
+    .replace(/(Copilot)([\u3040-\u30ff\u3400-\u9fff])/g, "$1 $2");
 }
 
 function cleanupRoadmapTitle(title) {
@@ -295,6 +305,9 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
     !isLikelyJapanese(normalizedSummaryJa) ||
     genericFallbackPattern.test(normalizedSummaryJa) ||
     shortReferencePattern.test(normalizedSummaryJa) ||
+    /The correct status is In Development|We apologize (?:for )?the inconvenience/i.test(
+      normalizedSummaryJa,
+    ) ||
     /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
     /を接地する|丸薬/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
