@@ -713,9 +713,14 @@ function buildJapaneseFallbackTitle(event) {
 }
 
 function roadmapProductArea(title, categories, source) {
-  const text = `${title}\n${categories.join("\n")}`.toLowerCase();
+  const titleText = String(title ?? "").toLowerCase();
+  const text = `${titleText}\n${categories.join("\n")}`.toLowerCase();
   if (/copilot studio/.test(text)) {
     return "Copilot Studio";
+  }
+
+  if (/^microsoft teams:/.test(titleText)) {
+    return "Microsoft Teams";
   }
 
   return source.productArea || "Microsoft 365 Copilot";
