@@ -719,7 +719,7 @@ function roadmapProductArea(title, categories, source) {
     return "Copilot Studio";
   }
 
-  if (/^microsoft teams:/.test(titleText)) {
+  if (titleText.startsWith("microsoft teams:")) {
     return "Microsoft Teams";
   }
 
