@@ -283,7 +283,7 @@ function fixupJapaneseText(text) {
     .replace(/管理と管理/g, "管理とガバナンス")
     .replace(/行政と政府/g, "管理とガバナンス")
     .replace(/プロ​​グラム/g, "プログラム")
-    .replace(/C\.\.\.\s*を使用する/g, "Copilot の機能を使用する");
+    .replace(/C(?:\.\.\.|…)\s*を使用する/g, "Copilot の機能を使用する");
 }
 
 function cleanupRoadmapTitle(title) {
