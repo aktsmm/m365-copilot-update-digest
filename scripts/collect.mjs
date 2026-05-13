@@ -229,6 +229,14 @@ function stripHtmlText(html) {
   return normalizeWhitespace($.text());
 }
 
+function cleanupRssSummaryText(text) {
+  return normalizeWhitespace(
+    String(text ?? "")
+      .replace(/\s+[A-Za-z]\.\.\.$/, "")
+      .replace(/^[A-Za-z]\.\.\.$/, ""),
+  );
+}
+
 function readXmlText(value) {
   if (value == null) {
     return "";
@@ -279,7 +287,9 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(/\.\s+[A-Za-z]\.\.\.$/, "...")
+    .replace(/\s+[A-Za-z]\.\.\.$/, "...");
 }
 
 function cleanupRoadmapTitle(title) {
@@ -1469,6 +1479,7 @@ function parseRssFeed(source, xmlText) {
       const rawSummary = readXmlText(
         item.description || item["content:encoded"] || "",
       );
+      const summary = cleanupRssSummaryText(stripHtmlText(rawSummary));
       const title = normalizeWhitespace(readXmlText(item.title));
       const categories = toArray(item.category)
         .map((category) => normalizeWhitespace(readXmlText(category)))
@@ -1481,9 +1492,9 @@ function parseRssFeed(source, xmlText) {
           readXmlText(item.guid) || readXmlText(item.link),
         ),
         title,
-        summary: excerptText(stripHtmlText(rawSummary), 280),
-        summaryEn: excerptText(stripHtmlText(rawSummary), 280),
-        summaryJa: excerptText(stripHtmlText(rawSummary), 280),
+        summary: excerptText(summary, 280),
+        summaryEn: excerptText(summary, 280),
+        summaryJa: excerptText(summary, 280),
         url: normalizeWhitespace(readXmlText(item.link)),
         publishedAt: new Date(
           item.pubDate || item.isoDate || Date.now(),

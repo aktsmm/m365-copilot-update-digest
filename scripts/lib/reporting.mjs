@@ -96,7 +96,9 @@ export function excerptText(value, maxLength = 260) {
     return normalized;
   }
 
-  return `${normalized.slice(0, maxLength - 1).trimEnd()}...`;
+  return `${normalized.slice(0, maxLength - 1).trimEnd()}...`
+    .replace(/\.\s+[A-Za-z]\.\.\.$/, "...")
+    .replace(/\s+[A-Za-z]\.\.\.$/, "...");
 }
 
 export function buildEventId(sourceId, title, publishedAt, section = "") {
