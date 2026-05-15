@@ -279,7 +279,14 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(/\bData Security Posture Agent\b/g, "データ セキュリティ体制エージェント")
+    .replace(
+      /\bMicrosoft Purview Data Loss Prevention\b/g,
+      "Microsoft Purview のデータ損失防止",
+    )
+    .replace(/データ セキュリティ体制エージェント\s+は/g, "データ セキュリティ体制エージェントは")
+    .replace(/Microsoft Purview のデータ損失防止\s+を/g, "Microsoft Purview のデータ損失防止を");
 }
 
 function cleanupRoadmapTitle(title) {
@@ -716,6 +723,18 @@ function roadmapProductArea(title, categories, source) {
   const text = `${title}\n${categories.join("\n")}`.toLowerCase();
   if (/copilot studio/.test(text)) {
     return "Copilot Studio";
+  }
+
+  if (/^microsoft purview:/.test(text)) {
+    return "Microsoft Purview";
+  }
+
+  if (/^microsoft viva:/.test(text)) {
+    return "Microsoft Viva";
+  }
+
+  if (/^microsoft teams:/.test(text)) {
+    return "Microsoft Teams";
   }
 
   return source.productArea || "Microsoft 365 Copilot";
