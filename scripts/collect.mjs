@@ -279,7 +279,11 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(
+      /新たなオープン アンド ソリューションが受け入れられます/g,
+      "新たなオープン標準の採用を後押しします",
+    );
 }
 
 function cleanupRoadmapTitle(title) {
