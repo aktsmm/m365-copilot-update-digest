@@ -279,7 +279,20 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(
+      /\bData Security Posture Agent\s*(?=は)/g,
+      "データ セキュリティ体制エージェント",
+    )
+    .replace(/\bData Security Posture Agent\b/g, "データ セキュリティ体制エージェント")
+    .replace(
+      /\bMicrosoft Purview Data Loss Prevention\s*(?=を)/g,
+      "Microsoft Purview のデータ損失防止",
+    )
+    .replace(
+      /\bMicrosoft Purview Data Loss Prevention\b/g,
+      "Microsoft Purview のデータ損失防止",
+    );
 }
 
 function cleanupRoadmapTitle(title) {
@@ -713,9 +726,22 @@ function buildJapaneseFallbackTitle(event) {
 }
 
 function roadmapProductArea(title, categories, source) {
-  const text = `${title}\n${categories.join("\n")}`.toLowerCase();
-  if (/copilot studio/.test(text)) {
+  const titleText = String(title ?? "").toLowerCase();
+  const categoryText = categories.join("\n").toLowerCase();
+  if (/copilot studio/.test(titleText) || /copilot studio/.test(categoryText)) {
     return "Copilot Studio";
+  }
+
+  if (/^microsoft purview:/.test(titleText)) {
+    return "Microsoft Purview";
+  }
+
+  if (/^microsoft viva:/.test(titleText)) {
+    return "Microsoft Viva";
+  }
+
+  if (/^microsoft teams:/.test(titleText)) {
+    return "Microsoft Teams";
   }
 
   return source.productArea || "Microsoft 365 Copilot";
