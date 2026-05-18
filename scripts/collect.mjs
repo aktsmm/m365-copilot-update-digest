@@ -276,8 +276,13 @@ function isLikelyJapanese(value) {
 
 function fixupJapaneseText(text) {
   return String(text ?? "")
+    .replace(/^発売:\s*/gm, "提供開始: ")
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
+    .replace(
+      /本日、再設計された Microsoft 365 Copilot ビジネス ユーザー ハブの最初のバージョンをリリースしました。見てください。/g,
+      "本日、再設計した Microsoft 365 Copilot Adoption Hub の初版を公開しました。",
+    )
     .replace(/を接地する/g, "をグラウンディングする")
     .replace(/丸薬/g, "ピル");
 }
