@@ -713,7 +713,21 @@ function buildJapaneseFallbackTitle(event) {
 }
 
 function roadmapProductArea(title, categories, source) {
-  const text = `${title}\n${categories.join("\n")}`.toLowerCase();
+  const normalizedTitle = String(title || "").toLowerCase();
+  const text = `${normalizedTitle}\n${categories.join("\n")}`.toLowerCase();
+
+  if (/^microsoft teams:/.test(normalizedTitle)) {
+    return "Microsoft Teams";
+  }
+
+  if (/^microsoft purview:/.test(normalizedTitle)) {
+    return "Microsoft Purview";
+  }
+
+  if (/^microsoft viva:/.test(normalizedTitle)) {
+    return "Microsoft Viva";
+  }
+
   if (/copilot studio/.test(text)) {
     return "Copilot Studio";
   }
