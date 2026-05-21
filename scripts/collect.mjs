@@ -713,7 +713,7 @@ function buildJapaneseFallbackTitle(event) {
 }
 
 function roadmapProductArea(title, categories, source) {
-  const normalizedTitle = String(title || "").toLowerCase();
+  const normalizedTitle = String(title ?? "").toLowerCase();
   const text = `${normalizedTitle}\n${categories.join("\n")}`.toLowerCase();
 
   if (/^microsoft teams:/.test(normalizedTitle)) {
