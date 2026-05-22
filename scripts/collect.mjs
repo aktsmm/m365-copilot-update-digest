@@ -283,7 +283,9 @@ function fixupJapaneseText(text) {
 }
 
 function cleanupRoadmapTitle(title) {
-  return normalizeWhitespace(title.replace(/\):\s*\):/g, "):"));
+  return normalizeWhitespace(String(title ?? ""))
+    .replace(/\):\s*\):/g, "):")
+    .replace(/^([^:]{3,120}):\s*\1:\s*/i, "$1: ");
 }
 
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
