@@ -284,7 +284,7 @@ function fixupJapaneseText(text) {
 
 const DUPLICATED_ROADMAP_PREFIX_MIN_CHARS = 3;
 const DUPLICATED_ROADMAP_PREFIX_MAX_CHARS = 120;
-// Lower bound avoids matching short labels like "A:", upper bound avoids over-capturing full titles.
+// Lower bound avoids matching short labels like "A:"; upper bound avoids collapsing long colon-rich headlines unless the duplicated prefix is reasonably short.
 const DUPLICATED_ROADMAP_PREFIX_PATTERN = new RegExp(
   `^([^:]{${DUPLICATED_ROADMAP_PREFIX_MIN_CHARS},${DUPLICATED_ROADMAP_PREFIX_MAX_CHARS}}):\\s*\\1:\\s*`,
   "i",
