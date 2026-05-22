@@ -284,14 +284,16 @@ function fixupJapaneseText(text) {
 
 const DUPLICATED_ROADMAP_PREFIX_MIN_CHARS = 3;
 const DUPLICATED_ROADMAP_PREFIX_MAX_CHARS = 120;
+// Lower bound avoids matching short labels like "A:", upper bound avoids over-capturing full titles.
 const DUPLICATED_ROADMAP_PREFIX_PATTERN = new RegExp(
   `^([^:]{${DUPLICATED_ROADMAP_PREFIX_MIN_CHARS},${DUPLICATED_ROADMAP_PREFIX_MAX_CHARS}}):\\s*\\1:\\s*`,
   "i",
 );
+const DUPLICATED_ROADMAP_PAREN_SUFFIX_PATTERN = /\):\s*\):/g;
 
 function cleanupRoadmapTitle(title) {
   return normalizeWhitespace(String(title ?? ""))
-    .replace(/\):\s*\):/g, "):")
+    .replace(DUPLICATED_ROADMAP_PAREN_SUFFIX_PATTERN, "):")
     .replace(DUPLICATED_ROADMAP_PREFIX_PATTERN, "$1: ");
 }
 
