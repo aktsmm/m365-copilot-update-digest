@@ -282,10 +282,17 @@ function fixupJapaneseText(text) {
     .replace(/丸薬/g, "ピル");
 }
 
+const DUPLICATED_ROADMAP_PREFIX_MIN_CHARS = 3;
+const DUPLICATED_ROADMAP_PREFIX_MAX_CHARS = 120;
+const DUPLICATED_ROADMAP_PREFIX_PATTERN = new RegExp(
+  `^([^:]{${DUPLICATED_ROADMAP_PREFIX_MIN_CHARS},${DUPLICATED_ROADMAP_PREFIX_MAX_CHARS}}):\\s*\\1:\\s*`,
+  "i",
+);
+
 function cleanupRoadmapTitle(title) {
   return normalizeWhitespace(String(title ?? ""))
     .replace(/\):\s*\):/g, "):")
-    .replace(/^([^:]{3,120}):\s*\1:\s*/i, "$1: ");
+    .replace(DUPLICATED_ROADMAP_PREFIX_PATTERN, "$1: ");
 }
 
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
