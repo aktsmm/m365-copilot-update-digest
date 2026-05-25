@@ -8,7 +8,6 @@ on:
       - completed
 
 permissions:
-  actions: write
   contents: write
   issues: write
   pull-requests: write
@@ -73,15 +72,6 @@ jobs:
               /^data\/state\.json$/,
               /^data\/run-summary\.json$/,
             ];
-
-            async function dispatchPagesDeploy() {
-              await github.rest.actions.createWorkflowDispatch({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                workflow_id: 'deploy-pages.yml',
-                ref: 'main',
-              });
-            }
 
             async function closeLinkedIssuesFromBody(bodyText) {
               const closingRefs = [...new Set(
@@ -217,7 +207,6 @@ jobs:
                     merge_method: 'squash',
                   });
                   await closeLinkedIssuesFromBody(pr.body || '');
-                  await dispatchPagesDeploy();
                   core.info(`Merged PR #${pr.number} directly because auto-merge is not available for clean PRs in this repository.`);
                 } catch (mergeError) {
                   await markForHumanReview(`PR #${pr.number} direct merge failed: ${mergeError.message}`);
