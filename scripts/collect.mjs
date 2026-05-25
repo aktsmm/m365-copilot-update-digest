@@ -160,19 +160,26 @@ async function removeStaleGeneratedFiles(directoryPath, extension, validKeys) {
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, {
-    headers: {
-      "User-Agent": "m365-copilot-update-digest/0.1",
-    },
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 30_000);
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "m365-copilot-update-digest/0.1",
+      },
+      signal: controller.signal,
+    });
 
-  if (!response.ok) {
-    throw new Error(
-      `Failed to fetch ${url}: ${response.status} ${response.statusText}`,
-    );
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch ${url}: ${response.status} ${response.statusText}`,
+      );
+    }
+
+    return await response.text();
+  } finally {
+    clearTimeout(timeout);
   }
-
-  return response.text();
 }
 
 async function readExistingEvents() {

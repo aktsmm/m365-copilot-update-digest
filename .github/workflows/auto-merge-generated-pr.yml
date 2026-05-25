@@ -48,7 +48,11 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: pullRequests[0].number,
+            }).catch((error) => {
+              core.info(`PR #${pullRequests[0].number} is no longer accessible: ${error.message}`);
+              return null;
             });
+            if (!pull) return;
             let pr = pull.data;
             const labels = new Set((pr.labels || []).map((label) => label.name));
             const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
@@ -205,15 +209,19 @@ jobs:
               core.info(`Enabled auto-merge for PR #${pr.number}.`);
             } catch (error) {
               if ((error.message || '').includes('Pull request is in clean status')) {
-                await github.rest.pulls.merge({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  pull_number: pr.number,
-                  merge_method: 'squash',
-                });
-                await closeLinkedIssuesFromBody(pr.body || '');
-                await dispatchPagesDeploy();
-                core.info(`Merged PR #${pr.number} directly because auto-merge is not available for clean PRs in this repository.`);
+                try {
+                  await github.rest.pulls.merge({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    pull_number: pr.number,
+                    merge_method: 'squash',
+                  });
+                  await closeLinkedIssuesFromBody(pr.body || '');
+                  await dispatchPagesDeploy();
+                  core.info(`Merged PR #${pr.number} directly because auto-merge is not available for clean PRs in this repository.`);
+                } catch (mergeError) {
+                  await markForHumanReview(`PR #${pr.number} direct merge failed: ${mergeError.message}`);
+                }
                 return;
               }
               core.warning(`Failed to enable auto-merge for PR #${pr.number}: ${error.message}`);
