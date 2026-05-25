@@ -6,7 +6,8 @@ on:
     - cron: "*/30 * * * *"
 
 permissions:
-  contents: read
+  actions: write
+  contents: write
   issues: write
   pull-requests: write
 
@@ -147,4 +148,169 @@ jobs:
 
             if (closedCount === 0) {
               core.info('No stale no-op generated PRs needed reconciliation.');
+            }
+
+      - name: Auto-merge stuck generated PRs
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const stuckMinutes = 120;
+            const stuckCutoff = Date.now() - stuckMinutes * 60 * 1000;
+            const marker = '<!-- generated-pr-reconciler -->';
+            const titlePattern = /^chore: improve digest automation (\d{4}-\d{2}-\d{2})$/;
+            const bodyPattern = /^Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/m;
+            const allowed = [
+              /^scripts\/collect\.mjs$/,
+              /^scripts\/generate-drafts\.mjs$/,
+              /^scripts\/lib\/reporting\.mjs$/,
+              /^config\/sources\.json$/,
+              /^config\/summary-ja-cache\.json$/,
+              /^data\/events\/.*\.json$/,
+              /^summaries\/daily\/.*\.md$/,
+              /^drafts\/articles\/daily\/.*\.md$/,
+              /^drafts\/posts\/x\/.*\.md$/,
+              /^data\/state\.json$/,
+              /^data\/run-summary\.json$/,
+            ];
+
+            function extractClosingRefs(bodyText) {
+              return [...new Set(
+                [...String(bodyText || '').matchAll(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi)]
+                  .map((match) => Number(match[1]))
+                  .filter((value) => Number.isInteger(value)),
+              )];
+            }
+
+            async function closeLinkedIssues(bodyText, prNumber, reason) {
+              for (const issueNumber of extractClosingRefs(bodyText)) {
+                try {
+                  const issue = await github.rest.issues.get({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                  });
+                  if (issue.data.state !== 'open') continue;
+
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    body: [marker, reason].join('\n'),
+                  });
+                  await github.rest.issues.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    state: 'closed',
+                  });
+                } catch (error) {
+                  core.warning(`Failed to close linked issue #${issueNumber}: ${error.message}`);
+                }
+              }
+            }
+
+            const pulls = await github.paginate(github.rest.pulls.list, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+
+            // Group generated PRs by date key; keep the newest per date
+            const byDate = new Map();
+            for (const pr of pulls) {
+              const labels = new Set((pr.labels || []).map((l) => l.name));
+              if (!labels.has('auto-pr') && !/copilot/i.test(pr.user?.login || '')) continue;
+              const match = titlePattern.exec(pr.title || '');
+              if (!match) continue;
+              const dateKey = match[1];
+              const existing = byDate.get(dateKey);
+              if (!existing || pr.number > existing.pr.number) {
+                byDate.set(dateKey, { pr, labels, dateKey });
+              }
+            }
+
+            // Close older duplicate PRs for the same date
+            for (const pr of pulls) {
+              const labels = new Set((pr.labels || []).map((l) => l.name));
+              if (!labels.has('auto-pr') && !/copilot/i.test(pr.user?.login || '')) continue;
+              const match = titlePattern.exec(pr.title || '');
+              if (!match) continue;
+              const dateKey = match[1];
+              const best = byDate.get(dateKey);
+              if (best && pr.number < best.pr.number) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: pr.number,
+                  body: [marker, `Closed as duplicate. PR #${best.pr.number} is the newer automation PR for ${dateKey}.`].join('\n'),
+                });
+                await closeLinkedIssues(pr.body || '', pr.number, `Superseded by PR #${best.pr.number}.`);
+                await github.rest.pulls.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pr.number,
+                  state: 'closed',
+                });
+                core.info(`Closed duplicate generated PR #${pr.number} for ${dateKey} (kept #${best.pr.number}).`);
+              }
+            }
+
+            // Auto-merge stuck PRs that meet all criteria
+            let mergedCount = 0;
+            for (const { pr, labels, dateKey } of byDate.values()) {
+              if (pr.draft) continue;
+              if (labels.has('needs-human-review')) continue;
+              if (!bodyPattern.test(pr.body || '')) continue;
+
+              const createdAt = Date.parse(pr.created_at || 0);
+              if (!Number.isFinite(createdAt) || createdAt >= stuckCutoff) continue;
+
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                per_page: 100,
+              });
+              if (files.length === 0) continue;
+
+              const blocked = files
+                .map((f) => f.filename)
+                .filter((f) => !allowed.some((p) => p.test(f)));
+              if (blocked.length > 0) {
+                core.info(`PR #${pr.number} has disallowed files: ${blocked.join(', ')}. Skipping auto-merge.`);
+                continue;
+              }
+
+              try {
+                await github.rest.pulls.merge({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pr.number,
+                  merge_method: 'squash',
+                });
+                await closeLinkedIssues(pr.body || '', pr.number, `Merged automatically by reconciler (PR #${pr.number}).`);
+                mergedCount += 1;
+                core.info(`Auto-merged stuck generated PR #${pr.number} for ${dateKey}.`);
+
+                // Dispatch pages deploy after merge
+                try {
+                  await github.rest.actions.createWorkflowDispatch({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    workflow_id: 'deploy-pages.yml',
+                    ref: 'main',
+                  });
+                } catch (deployError) {
+                  core.warning(`Failed to dispatch pages deploy after merging #${pr.number}: ${deployError.message}`);
+                }
+              } catch (mergeError) {
+                core.warning(`Failed to auto-merge PR #${pr.number}: ${mergeError.message}`);
+              }
+            }
+
+            if (mergedCount === 0) {
+              core.info('No stuck generated PRs needed auto-merge.');
+            } else {
+              core.info(`Auto-merged ${mergedCount} stuck generated PR(s).`);
             }
