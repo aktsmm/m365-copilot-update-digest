@@ -1637,16 +1637,27 @@ function isInvalidPersistedEvent(event) {
 }
 
 function logicalEventKey(event) {
+  const sourceId = String(event.sourceId || "")
+    .trim()
+    .toLowerCase();
+  const url = String(event.url || "")
+    .trim()
+    .toLowerCase();
+  const title = String(event.titleEn || event.title || "")
+    .trim()
+    .toLowerCase();
+
+  // Tech Community RSS items have stable per-article URLs. If an older run saved
+  // the same article under a neighboring Tokyo date, use URL + title as the
+  // logical identity so later runs collapse the duplicate.
+  if (sourceId.endsWith("-blog") && url.includes("/ba-p/")) {
+    return [sourceId, url, title].join("\n");
+  }
+
   return [
-    String(event.sourceId || "")
-      .trim()
-      .toLowerCase(),
-    String(event.url || "")
-      .trim()
-      .toLowerCase(),
-    String(event.titleEn || event.title || "")
-      .trim()
-      .toLowerCase(),
+    sourceId,
+    url,
+    title,
     tokyoDateOnly(event.publishedAt || event.capturedAt || Date.now()),
   ].join("\n");
 }
