@@ -23,7 +23,22 @@ jobs:
         uses: actions/github-script@v8
         with:
           script: |
-            const pullRequests = context.payload.workflow_run.pull_requests || [];
+            // workflow_run.pull_requests is empty when source uses pull_request_target.
+            // Fall back to searching by head branch.
+            let pullRequests = context.payload.workflow_run.pull_requests || [];
+            if (pullRequests.length === 0) {
+              const headBranch = context.payload.workflow_run.head_branch;
+              if (headBranch) {
+                const { data: prs } = await github.rest.pulls.list({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  head: `${context.repo.owner}:${headBranch}`,
+                  per_page: 1,
+                });
+                pullRequests = prs;
+              }
+            }
             if (pullRequests.length === 0) {
               core.info('No pull request is associated with this workflow run.');
               return;
