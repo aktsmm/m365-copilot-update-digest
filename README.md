@@ -106,12 +106,12 @@ npm run generate:drafts
 
 ### Copilot による自動改善の流れ
 
-| ステップ | Workflow                    | 何が起きるか                                                                                             |
-| -------- | --------------------------- | -------------------------------------------------------------------------------------------------------- |
-| 5        | **Author automation PR**    | 最新イベントを見て改善が必要なら Issue を作成し、Copilot Cloud Agent にアサイン                          |
-| 6        | **Copilot cloud agent**     | Issue をもとに PR を自動作成                                                                             |
-| 7        | **Validate generated PR**   | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push |
-| 8        | **Auto-merge generated PR** | 検証 success → draft 解除 → squash merge → linked issue close → Pages 再デプロイ                         |
+| ステップ | Workflow                    | 何が起きるか                                                                                               |
+| -------- | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| 5        | **Author automation PR**    | 最新イベントを見て改善が必要なら Issue を作成し、Copilot Cloud Agent にアサイン                            |
+| 6        | **Copilot cloud agent**     | Issue をもとに PR を自動作成                                                                               |
+| 7        | **Validate generated PR**   | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push   |
+| 8        | **Auto-merge generated PR** | 検証 success → draft 解除 → squash merge → linked issue close → Pages 再デプロイ                           |
 | 9        | **Reconcile generated PRs** | 30 分ごとに stuck PR の自動マージ、コンフリクト PR のクローズ、孤立 issue のクローズ、重複 PR の整理を実行 |
 
 ### 必要な設定
