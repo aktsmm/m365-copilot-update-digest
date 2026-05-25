@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "collect": "node scripts/collect.mjs",
+    "validate:data": "node scripts/validate-generated-data.mjs",
     "build:pages": "node scripts/build-pages.mjs",
     "generate:drafts": "node scripts/generate-drafts.mjs"
   },

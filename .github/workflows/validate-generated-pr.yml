@@ -195,6 +195,10 @@ jobs:
         if: steps.pr_state.outputs.should_defer != 'true'
         run: npm run collect
 
+      - name: Validate generated data invariants
+        if: steps.pr_state.outputs.should_defer != 'true'
+        run: npm run validate:data
+
       - name: Validate Pages build
         if: steps.pr_state.outputs.should_defer != 'true'
         run: npm run build:pages
