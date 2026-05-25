@@ -112,12 +112,14 @@ npm run generate:drafts
 | 6        | **Copilot cloud agent**     | Issue をもとに PR を自動作成                                                                             |
 | 7        | **Validate generated PR**   | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push |
 | 8        | **Auto-merge generated PR** | 検証 success → draft 解除 → squash merge → linked issue close → Pages 再デプロイ                         |
+| 9        | **Reconcile generated PRs** | 30 分ごとに stuck PR の自動マージ、コンフリクト PR のクローズ、孤立 issue のクローズ、重複 PR の整理を実行 |
 
 ### 必要な設定
 
 - repository で GitHub Copilot coding agent を有効にする
 - secret `COPILOT_ASSIGN_TOKEN` を設定する
 - token には少なくとも Issues / Pull requests / Contents / Actions を扱える権限を持たせる
+- **Settings → General → "Automatically delete head branches"** を有効にする
 
 Cloud Agent に許可している変更対象:
 
