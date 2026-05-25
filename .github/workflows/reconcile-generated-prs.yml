@@ -334,3 +334,64 @@ jobs:
             } else {
               core.info(`Auto-merged ${mergedCount} stuck generated PR(s).`);
             }
+
+      - name: Close orphaned automation issues
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const marker = '<!-- generated-pr-reconciler -->';
+            const staleHours = 48;
+            const staleCutoff = Date.now() - staleHours * 60 * 60 * 1000;
+            const issueTitlePattern = /^Digest automation request: \d{4}-\d{2}-\d{2}$/;
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'digest-automation',
+              per_page: 100,
+            });
+
+            const openPulls = await github.paginate(github.rest.pulls.list, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const openPrBodies = openPulls.map((pr) => pr.body || '');
+
+            let closedCount = 0;
+            for (const issue of issues) {
+              if (issue.pull_request) continue;
+              if (!issueTitlePattern.test(issue.title || '')) continue;
+
+              const createdAt = Date.parse(issue.created_at || 0);
+              if (!Number.isFinite(createdAt) || createdAt >= staleCutoff) continue;
+
+              // Check if any open PR references this issue
+              const hasLinkedPr = openPrBodies.some((body) =>
+                new RegExp(`(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\\s+#${issue.number}\\b`, 'i').test(body),
+              );
+              if (hasLinkedPr) continue;
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: [marker, `Closed automatically. No open PR references this issue and it has been open for more than ${staleHours} hours. A future collection run will create a new issue if needed.`].join('\n'),
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+              });
+              closedCount += 1;
+              core.info(`Closed orphaned automation issue #${issue.number}.`);
+            }
+
+            if (closedCount === 0) {
+              core.info('No orphaned automation issues found.');
+            } else {
+              core.info(`Closed ${closedCount} orphaned automation issue(s).`);
+            }
