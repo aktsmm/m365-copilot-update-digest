@@ -305,7 +305,27 @@ jobs:
                   core.warning(`Failed to dispatch pages deploy after merging #${pr.number}: ${deployError.message}`);
                 }
               } catch (mergeError) {
-                core.warning(`Failed to auto-merge PR #${pr.number}: ${mergeError.message}`);
+                const isConflict = /merge conflict/i.test(mergeError.message || '');
+                const staleHours = 24;
+                const isOldEnough = (Date.now() - Date.parse(pr.created_at || 0)) > staleHours * 60 * 60 * 1000;
+                if (isConflict && isOldEnough) {
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: pr.number,
+                    body: [marker, `Closed automatically because this generated PR has merge conflicts and has been open for more than ${staleHours} hours. A future collection run will create a fresh automation issue.`].join('\n'),
+                  });
+                  await closeLinkedIssues(pr.body || '', pr.number, `Closed because generated PR #${pr.number} had merge conflicts.`);
+                  await github.rest.pulls.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    pull_number: pr.number,
+                    state: 'closed',
+                  });
+                  core.info(`Closed conflicted generated PR #${pr.number} for ${dateKey}.`);
+                } else {
+                  core.warning(`Failed to auto-merge PR #${pr.number}: ${mergeError.message}`);
+                }
               }
             }
 
