@@ -286,7 +286,10 @@ function fixupJapaneseText(text) {
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
-    .replace(/丸薬/g, "ピル");
+    .replace(/丸薬/g, "ピル")
+    .replace(/人体\s*モデル/g, "Anthropic モデル")
+    .replace(/([\u3040-\u30ff\u3400-\u9fff])Anthropic/g, "$1 Anthropic")
+    .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1");
 }
 
 function cleanupRoadmapTitle(title) {
@@ -721,6 +724,26 @@ function buildJapaneseFallbackTitle(event) {
 
 function roadmapProductArea(title, categories, source) {
   const text = `${title}\n${categories.join("\n")}`.toLowerCase();
+  if (/^microsoft teams:|^teams:/.test(text)) {
+    return "Microsoft Teams";
+  }
+
+  if (/^microsoft edge:|^edge:/.test(text)) {
+    return "Microsoft Edge";
+  }
+
+  if (/^onenote:/.test(text)) {
+    return "OneNote";
+  }
+
+  if (/^outlook:/.test(text)) {
+    return "Outlook";
+  }
+
+  if (/^microsoft 365:|^onedrive:/.test(text)) {
+    return "Microsoft 365";
+  }
+
   if (/copilot studio/.test(text)) {
     return "Copilot Studio";
   }
