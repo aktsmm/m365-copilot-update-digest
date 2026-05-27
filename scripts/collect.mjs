@@ -287,7 +287,9 @@ function fixupJapaneseText(text) {
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
     .replace(/丸薬/g, "ピル")
-    .replace(/人体\s*モデル/g, "Anthropic モデル");
+    .replace(/人体\s*モデル/g, "Anthropic モデル")
+    .replace(/([\u3040-\u30ff\u3400-\u9fff])Anthropic/g, "$1 Anthropic")
+    .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1");
 }
 
 function cleanupRoadmapTitle(title) {
