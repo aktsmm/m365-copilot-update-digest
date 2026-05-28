@@ -39,6 +39,7 @@ const MAX_TITLE_TRANSLATION_BATCH_CHARS = 2200;
 const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
 const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
+const MAX_JAPANESE_TITLE_LENGTH = 140;
 const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
@@ -744,6 +745,22 @@ function roadmapProductArea(title, categories, source) {
     return "Microsoft 365";
   }
 
+  if (/^microsoft purview:|^purview:/.test(text)) {
+    return "Microsoft Purview";
+  }
+
+  if (/^microsoft planner:|^planner:/.test(text)) {
+    return "Planner";
+  }
+
+  if (/^sharepoint:/.test(text)) {
+    return "SharePoint";
+  }
+
+  if (/^microsoft 365 app:/.test(text)) {
+    return "Microsoft 365 app";
+  }
+
   if (/copilot studio/.test(text)) {
     return "Copilot Studio";
   }
@@ -902,6 +919,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     !isLikelyJapanese(titleJa) ||
     titleJa === titleEn ||
     genericTitles.has(titleJa) ||
+    (/(\.\.\.|…)$/.test(titleJa) && !/(\.\.\.|…)$/.test(titleEn)) ||
     /副操縦士|コパイロット/.test(titleJa) ||
     /を接地する|を接地 |を接地$/.test(titleJa) ||
     (titleJa === "Microsoft 365 Copilot のライセンス・課金関連更新" &&
@@ -1030,7 +1048,9 @@ async function localizeJapaneseTitles(
       for (const entry of translatedEntries) {
         entry.event.titleJa =
           entry.text && entry.text !== entry.event.titleEn
-            ? fixupJapaneseText(excerptText(entry.text, 96))
+            ? fixupJapaneseText(
+                excerptText(entry.text, MAX_JAPANESE_TITLE_LENGTH),
+              )
             : buildJapaneseFallbackTitle(entry.event);
         updateSummaryCacheEntry(
           summaryCache,
