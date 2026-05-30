@@ -5,6 +5,8 @@ const root = process.cwd();
 const workflowDir = path.join(root, ".github", "workflows");
 
 const files = {
+  collectUpdates: path.join(workflowDir, "collect-updates.yml"),
+  validateGeneratedPr: path.join(workflowDir, "validate-generated-pr.yml"),
   requestReview: path.join(workflowDir, "request-copilot-review.yml"),
   autoMerge: path.join(workflowDir, "auto-merge-generated-pr.yml"),
   reconcile: path.join(workflowDir, "reconcile-generated-prs.yml"),
@@ -30,6 +32,8 @@ function requireOccurrences(content, expected, minCount, description) {
   }
 }
 
+const collectUpdates = readWorkflow(files.collectUpdates);
+const validateGeneratedPr = readWorkflow(files.validateGeneratedPr);
 const requestReview = readWorkflow(files.requestReview);
 const autoMerge = readWorkflow(files.autoMerge);
 const reconcile = readWorkflow(files.reconcile);
@@ -114,6 +118,18 @@ requireText(
   workflowGuard,
   "github.event.pull_request.head.repo.full_name == github.repository",
   "Workflow guard pull_request runs must be limited to same-repository branches",
+);
+
+requireText(
+  collectUpdates,
+  "git diff --quiet -- data summaries drafts config/summary-ja-cache.json",
+  "Collect workflow must commit summary cache-only generated changes",
+);
+requireOccurrences(
+  validateGeneratedPr,
+  "config/summary-ja-cache.json",
+  4,
+  "Generated PR validation must include summary cache in allow-list, auto-fix, and canonical drift checks",
 );
 
 console.log("Workflow automation invariants OK");

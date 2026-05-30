@@ -220,7 +220,7 @@ jobs:
             exit 0
           fi
 
-          if git diff --quiet -- data summaries drafts; then
+          if git diff --quiet -- data summaries drafts config/summary-ja-cache.json; then
             echo "No canonical generated output drift detected."
             exit 0
           fi
@@ -245,9 +245,10 @@ jobs:
           if ! git diff --quiet -- \
             data \
             summaries \
-            drafts; then
+            drafts \
+            config/summary-ja-cache.json; then
             echo 'Generated files drifted after running collect/build. Commit the regenerated artifacts before merging.' >&2
-            git diff -- data summaries drafts
+            git diff -- data summaries drafts config/summary-ja-cache.json
             exit 1
           fi
 

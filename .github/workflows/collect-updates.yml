@@ -39,7 +39,7 @@ jobs:
         id: commit
         shell: bash
         run: |
-          if git diff --quiet -- data summaries drafts; then
+          if git diff --quiet -- data summaries drafts config/summary-ja-cache.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "pages_changed=false" >> "$GITHUB_OUTPUT"
             echo "No collected changes detected"

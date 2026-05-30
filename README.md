@@ -109,7 +109,7 @@ GitHub 上でも workflow / validator 変更時に **Validate automation workflo
 | -------- | --------------------------------------- | ------------------------------------------------------------------------------------ |
 | 1        | **Collect updates** (schedule: 毎日)    | RSS / HTML から新着を収集し、翻訳・要約・重要度スコアリングを実行                    |
 | 2        | （同じ run 内）                         | `generate:drafts` で記事 draft と X 投稿 draft を自動生成                            |
-| 3        | （同じ run 内）                         | `data/`, `summaries/`, `drafts/`, `config/summary-ja-cache.json` を main に自動 push |
+| 3        | （同じ run 内）                         | `data/`, `summaries/`, `drafts/`, `config/summary-ja-cache.json` を main に自動 push。summary cache だけの差分も取りこぼさない |
 | 4        | **Deploy GitHub Pages** (push トリガー) | 静的サイトをビルドして GitHub Pages に公開                                           |
 
 ### Copilot による自動改善の流れ
