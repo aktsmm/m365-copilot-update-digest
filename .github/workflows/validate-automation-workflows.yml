@@ -1,0 +1,42 @@
+name: Validate automation workflows
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/**
+      - scripts/validate-workflows.mjs
+      - package.json
+      - package-lock.json
+  pull_request:
+    paths:
+      - .github/workflows/**
+      - scripts/validate-workflows.mjs
+      - package.json
+      - package-lock.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate workflow automation invariants
+        run: npm run validate:workflows

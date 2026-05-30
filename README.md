@@ -58,6 +58,8 @@ npm run generate:drafts
 npm run validate:workflows
 ```
 
+GitHub 上でも workflow / validator 変更時に **Validate automation workflows** が同じガードを実行します。
+
 ## 出力先
 
 - data/events: 日次イベント JSON
@@ -120,6 +122,8 @@ npm run validate:workflows
 | 8        | **Auto-merge generated PR**                 | 検証 success → draft 解除 → squash merge / auto-merge 有効化 → linked issue close                                                                                                                                                     |
 | 9        | **Redeploy Pages after generated PR merge** | generated PR の merge 完了を検知し、GitHub Pages の再デプロイを dispatch                                                                                                                                                              |
 | 10       | **Reconcile generated PRs**                 | 30 分ごとに generated PR の title/body/label/linked issue を自己修復し、stuck PR の自動マージ、コンフリクト PR のクローズ、孤立 issue のクローズ、重複 PR の整理を実行。GitHub の linked issue 情報も参照して PR 本文だけに依存しない |
+
+workflow / validator 変更は **Validate automation workflows** が GitHub 上でも検証します。同一リポジトリ内の PR と main push で `npm run validate:workflows` を実行します。
 
 ### 必要な設定
 

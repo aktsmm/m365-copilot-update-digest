@@ -8,6 +8,7 @@ const files = {
   requestReview: path.join(workflowDir, "request-copilot-review.yml"),
   autoMerge: path.join(workflowDir, "auto-merge-generated-pr.yml"),
   reconcile: path.join(workflowDir, "reconcile-generated-prs.yml"),
+  workflowGuard: path.join(workflowDir, "validate-automation-workflows.yml"),
 };
 
 function readWorkflow(filePath) {
@@ -32,6 +33,7 @@ function requireOccurrences(content, expected, minCount, description) {
 const requestReview = readWorkflow(files.requestReview);
 const autoMerge = readWorkflow(files.autoMerge);
 const reconcile = readWorkflow(files.reconcile);
+const workflowGuard = readWorkflow(files.workflowGuard);
 
 requireText(
   requestReview,
@@ -96,6 +98,22 @@ requireText(
   reconcile,
   "const bodyPattern = /^Generated from `?data\\/events\\/\\d{4}-\\d{2}-\\d{2}\\.json`?/m;",
   "Reconciler stale no-op detection must accept canonical source markers with or without backticks",
+);
+
+requireText(
+  workflowGuard,
+  "npm run validate:workflows",
+  "Workflow guard must run the local automation invariant validator on GitHub Actions",
+);
+requireText(
+  workflowGuard,
+  ".github/workflows/**",
+  "Workflow guard must trigger when automation workflow files change",
+);
+requireText(
+  workflowGuard,
+  "github.event.pull_request.head.repo.full_name == github.repository",
+  "Workflow guard pull_request runs must be limited to same-repository branches",
 );
 
 console.log("Workflow automation invariants OK");
