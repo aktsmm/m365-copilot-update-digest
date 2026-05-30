@@ -112,14 +112,14 @@ npm run validate:workflows
 
 ### Copilot による自動改善の流れ
 
-| ステップ | Workflow                                    | 何が起きるか                                                                                               |
-| -------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| 5        | **Author automation PR**                    | 最新イベントを見て改善が必要なら Issue を作成し、Copilot Cloud Agent にアサイン                            |
-| 6        | **Copilot cloud agent**                     | Issue をもとに PR を自動作成                                                                               |
-| 7        | **Validate generated PR**                   | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push   |
-| 8        | **Auto-merge generated PR**                 | 検証 success → draft 解除 → squash merge / auto-merge 有効化 → linked issue close                          |
-| 9        | **Redeploy Pages after generated PR merge** | generated PR の merge 完了を検知し、GitHub Pages の再デプロイを dispatch                                   |
-| 10       | **Reconcile generated PRs**                 | 30 分ごとに stuck PR の自動マージ、コンフリクト PR のクローズ、孤立 issue のクローズ、重複 PR の整理を実行。GitHub の linked issue 情報も参照して PR 本文だけに依存しない |
+| ステップ | Workflow                                    | 何が起きるか                                                                                                                                                                                                                          |
+| -------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 5        | **Author automation PR**                    | 最新イベントを見て改善が必要なら Issue を作成し、Copilot Cloud Agent にアサイン                                                                                                                                                       |
+| 6        | **Copilot cloud agent**                     | Issue をもとに PR を自動作成                                                                                                                                                                                                          |
+| 7        | **Validate generated PR**                   | `collect` + `generate:drafts` を再実行し、出力が canonical と一致するか検証。drift があれば自動修正 push                                                                                                                              |
+| 8        | **Auto-merge generated PR**                 | 検証 success → draft 解除 → squash merge / auto-merge 有効化 → linked issue close                                                                                                                                                     |
+| 9        | **Redeploy Pages after generated PR merge** | generated PR の merge 完了を検知し、GitHub Pages の再デプロイを dispatch                                                                                                                                                              |
+| 10       | **Reconcile generated PRs**                 | 30 分ごとに generated PR の title/body/label/linked issue を自己修復し、stuck PR の自動マージ、コンフリクト PR のクローズ、孤立 issue のクローズ、重複 PR の整理を実行。GitHub の linked issue 情報も参照して PR 本文だけに依存しない |
 
 ### 必要な設定
 

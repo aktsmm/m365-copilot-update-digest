@@ -16,6 +16,163 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Normalize generated PR metadata
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const marker = '<!-- generated-pr-reconciler-normalized -->';
+            const sourceMarkerPattern = /^Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?\.?$/;
+
+            function collectDates(value, patterns) {
+              const dates = [];
+              const text = String(value || '');
+              for (const pattern of patterns) {
+                for (const match of text.matchAll(pattern)) {
+                  dates.push(match[1]);
+                }
+              }
+              return dates;
+            }
+
+            function latestDate(dates) {
+              return [...new Set(dates)].sort().at(-1) || null;
+            }
+
+            function resolveDateKey(pr, files) {
+              const headDate = latestDate(collectDates(pr.head?.ref, [
+                /digest-automation-request-(\d{4}-\d{2}-\d{2})/g,
+                /(\d{4}-\d{2}-\d{2})/g,
+              ]));
+              if (headDate) return headDate;
+
+              const bodyDate = latestDate(collectDates(pr.body, [
+                /<issue_title>Digest automation request: (\d{4}-\d{2}-\d{2})<\/issue_title>/g,
+                /Digest automation request:\s*(\d{4}-\d{2}-\d{2})/g,
+                /data\/events\/(\d{4}-\d{2}-\d{2})\.json/g,
+              ]));
+              if (bodyDate) return bodyDate;
+
+              const titleDate = latestDate(collectDates(pr.title, [/(\d{4}-\d{2}-\d{2})/g]));
+              if (titleDate) return titleDate;
+
+              return latestDate(files.flatMap((file) => collectDates(file.filename, [
+                /^data\/events\/(\d{4}-\d{2}-\d{2})\.json$/g,
+                /^summaries\/daily\/(\d{4}-\d{2}-\d{2})\.md$/g,
+              ])));
+            }
+
+            async function upsertPrComment(prNumber, body) {
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                per_page: 100,
+              });
+              const existing = comments.find((comment) => comment.body?.includes(marker));
+              if (existing) {
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: existing.id,
+                  body,
+                });
+                return;
+              }
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+            }
+
+            const pulls = await github.paginate(github.rest.pulls.list, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const automationIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'digest-automation',
+              per_page: 100,
+            });
+
+            let normalizedCount = 0;
+            for (const pr of pulls) {
+              const labels = new Set((pr.labels || []).map((label) => label.name));
+              const isGeneratedPr =
+                labels.has('auto-pr') ||
+                /copilot/i.test(pr.user?.login || '') ||
+                /copilot/i.test(pr.head?.ref || '') ||
+                /Digest automation request:|Generated from `?data\/events\//.test(pr.body || '');
+              if (!isGeneratedPr) continue;
+
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                per_page: 100,
+              });
+              const dateKey = resolveDateKey(pr, files);
+              if (!dateKey) continue;
+
+              const expectedTitle = `chore: improve digest automation ${dateKey}`;
+              const expectedMarkerLine = `Generated from data/events/${dateKey}.json`;
+              const bodyLines = String(pr.body || '')
+                .split(/\r?\n/)
+                .filter((line) => !sourceMarkerPattern.test(line.trim()));
+              let nextBody = [expectedMarkerLine, '', ...bodyLines]
+                .join('\n')
+                .replace(/\n{3,}/g, '\n\n')
+                .trim();
+              const linkedIssue = automationIssues.find((issue) =>
+                !issue.pull_request && issue.title === `Digest automation request: ${dateKey}`,
+              );
+              if (
+                linkedIssue &&
+                !new RegExp(`(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\\s+#${linkedIssue.number}\\b`, 'i').test(nextBody)
+              ) {
+                nextBody = [nextBody, '', `Closes #${linkedIssue.number}`].filter(Boolean).join('\n');
+              }
+
+              if (!labels.has('copilot') || !labels.has('auto-pr')) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: pr.number,
+                  labels: ['copilot', 'auto-pr'],
+                });
+              }
+
+              if (pr.title !== expectedTitle || nextBody !== (pr.body || '')) {
+                await github.rest.pulls.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pr.number,
+                  title: expectedTitle,
+                  body: nextBody,
+                });
+                await upsertPrComment(
+                  pr.number,
+                  [
+                    marker,
+                    `Normalized generated PR metadata for ${dateKey}.`,
+                    '- Title, source marker, labels, and linked issue reference were aligned by the reconciler.',
+                  ].join('\n'),
+                );
+                normalizedCount += 1;
+              }
+            }
+
+            if (normalizedCount === 0) {
+              core.info('No generated PR metadata needed normalization.');
+            } else {
+              core.info(`Normalized ${normalizedCount} generated PR(s).`);
+            }
+
       - name: Close stale no-op generated PRs
         uses: actions/github-script@v8
         with:

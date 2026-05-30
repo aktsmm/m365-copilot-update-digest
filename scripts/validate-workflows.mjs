@@ -74,6 +74,21 @@ requireOccurrences(
 );
 requireText(
   reconcile,
+  "Normalize generated PR metadata",
+  "Reconciler must normalize generated PR metadata when review normalization is missed",
+);
+requireText(
+  reconcile,
+  "generated-pr-reconciler-normalized",
+  "Reconciler metadata normalization must leave an idempotent audit comment marker",
+);
+requireText(
+  reconcile,
+  "Title, source marker, labels, and linked issue reference were aligned by the reconciler.",
+  "Reconciler metadata normalization must repair title, source marker, labels, and linked issue references",
+);
+requireText(
+  reconcile,
   "openLinkedIssueNumbers",
   "Reconciler orphan detection must consider GitHub-linked open PRs",
 );
