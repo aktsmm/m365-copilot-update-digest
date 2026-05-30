@@ -75,5 +75,10 @@ requireText(
   'openLinkedIssueNumbers',
   'Reconciler orphan detection must consider GitHub-linked open PRs',
 );
+requireText(
+  reconcile,
+  'const bodyPattern = /^Generated from `?data\\/events\\/\\d{4}-\\d{2}-\\d{2}\\.json`?/m;',
+  'Reconciler stale no-op detection must accept canonical source markers with or without backticks',
+);
 
 console.log('Workflow automation invariants OK');

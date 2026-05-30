@@ -24,7 +24,7 @@ jobs:
             const staleCutoff = Date.now() - staleMinutes * 60 * 1000;
             const marker = '<!-- generated-pr-reconciler -->';
             const titlePattern = /^chore: improve digest automation \d{4}-\d{2}-\d{2}$/;
-            const bodyPattern = /^Generated from data\/events\/\d{4}-\d{2}-\d{2}\.json/m;
+            const bodyPattern = /^Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/m;
 
             async function upsertPrComment(prNumber, body) {
               const comments = await github.paginate(github.rest.issues.listComments, {
