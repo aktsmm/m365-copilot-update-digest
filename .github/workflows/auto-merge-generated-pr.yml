@@ -73,15 +73,59 @@ jobs:
               /^data\/run-summary\.json$/,
             ];
 
-            async function closeLinkedIssuesFromBody(bodyText) {
-              const closingRefs = [...new Set(
+            async function getLinkedIssueNumbers(prNumber, bodyText) {
+              const issueNumbers = new Set(
                 [...String(bodyText || '').matchAll(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi)]
                   .map((match) => Number(match[1]))
                   .filter((value) => Number.isInteger(value)),
-              )];
+              );
+
+              try {
+                const result = await github.graphql(
+                  `query($owner: String!, $repo: String!, $number: Int!) {
+                    repository(owner: $owner, name: $repo) {
+                      pullRequest(number: $number) {
+                        closingIssuesReferences(first: 50) {
+                          nodes { number }
+                        }
+                      }
+                    }
+                  }`,
+                  {
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    number: prNumber,
+                  },
+                );
+                for (const issue of result.repository.pullRequest.closingIssuesReferences.nodes || []) {
+                  if (Number.isInteger(issue.number)) issueNumbers.add(issue.number);
+                }
+              } catch (error) {
+                core.warning(`Failed to read closing issue references for PR #${prNumber}: ${error.message}`);
+              }
+
+              return [...issueNumbers];
+            }
+
+            async function closeLinkedIssues(prNumber, bodyText) {
+              const closingRefs = await getLinkedIssueNumbers(prNumber, bodyText);
 
               for (const issueNumber of closingRefs) {
                 try {
+                  const issue = await github.rest.issues.get({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                  });
+                  if (issue.data.state !== 'open') {
+                    continue;
+                  }
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issueNumber,
+                    body: `<!-- generated-pr-auto-merge -->\nClosed automatically after generated PR #${prNumber} was merged.`,
+                  });
                   await github.rest.issues.update({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
@@ -206,7 +250,7 @@ jobs:
                     pull_number: pr.number,
                     merge_method: 'squash',
                   });
-                  await closeLinkedIssuesFromBody(pr.body || '');
+                  await closeLinkedIssues(pr.number, pr.body || '');
                   core.info(`Merged PR #${pr.number} directly because auto-merge is not available for clean PRs in this repository.`);
                 } catch (mergeError) {
                   await markForHumanReview(`PR #${pr.number} direct merge failed: ${mergeError.message}`);

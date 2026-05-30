@@ -28,38 +28,43 @@ jobs:
             const normalizedMarker = '<!-- copilot-metadata-normalized -->';
             const prNumber = context.payload.pull_request.number;
 
+            function collectDates(value, patterns) {
+              const dates = [];
+              const text = String(value || '');
+              for (const pattern of patterns) {
+                for (const match of text.matchAll(pattern)) {
+                  dates.push(match[1]);
+                }
+              }
+              return dates;
+            }
+
+            function latestDate(dates) {
+              return [...new Set(dates)].sort().at(-1) || null;
+            }
+
             function resolveDateKey(pr, files) {
-              const eventFile = files
-                .map((file) => file.filename.match(/^data\/events\/(\d{4}-\d{2}-\d{2})\.json$/))
-                .find(Boolean);
-              if (eventFile) {
-                return eventFile[1];
-              }
+              const headDate = latestDate(collectDates(pr.head?.ref, [
+                /digest-automation-request-(\d{4}-\d{2}-\d{2})/g,
+                /(\d{4}-\d{2}-\d{2})/g,
+              ]));
+              if (headDate) return headDate;
 
-              const summaryFile = files
-                .map((file) => file.filename.match(/^summaries\/daily\/(\d{4}-\d{2}-\d{2})\.md$/))
-                .find(Boolean);
-              if (summaryFile) {
-                return summaryFile[1];
-              }
+              const bodyDate = latestDate(collectDates(pr.body, [
+                /<issue_title>Digest automation request: (\d{4}-\d{2}-\d{2})<\/issue_title>/g,
+                /Digest automation request:\s*(\d{4}-\d{2}-\d{2})/g,
+                /data\/events\/(\d{4}-\d{2}-\d{2})\.json/g,
+              ]));
+              if (bodyDate) return bodyDate;
 
-              const bodyMatch = (pr.body || '').match(/Generated from `?data\/events\/(\d{4}-\d{2}-\d{2})\.json`?/);
-              if (bodyMatch) {
-                return bodyMatch[1];
-              }
+              const titleDate = latestDate(collectDates(pr.title, [/(\d{4}-\d{2}-\d{2})/g]));
+              if (titleDate) return titleDate;
 
-              const issueTitleMatch = (pr.body || '').match(/<issue_title>Digest automation request: (\d{4}-\d{2}-\d{2})<\/issue_title>/);
-              if (issueTitleMatch) {
-                return issueTitleMatch[1];
-              }
-
-              const issueBodyMatch = (pr.body || '').match(/Digest automation request:\s*(\d{4}-\d{2}-\d{2})/);
-              if (issueBodyMatch) {
-                return issueBodyMatch[1];
-              }
-
-              const titleMatch = (pr.title || '').match(/(\d{4}-\d{2}-\d{2})/);
-              return titleMatch ? titleMatch[1] : null;
+              const changedFileDate = latestDate(files.flatMap((file) => collectDates(file.filename, [
+                /^data\/events\/(\d{4}-\d{2}-\d{2})\.json$/g,
+                /^summaries\/daily\/(\d{4}-\d{2}-\d{2})\.md$/g,
+              ])));
+              return changedFileDate;
             }
 
             await github.rest.issues.addLabels({
@@ -87,15 +92,14 @@ jobs:
             if (dateKey) {
               const expectedTitle = `chore: improve digest automation ${dateKey}`;
               const expectedMarkerLine = `Generated from data/events/${dateKey}.json`;
-              let nextBody = pr.body || '';
-              const lines = nextBody.split(/\r?\n/);
-
-              if (/^Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?$/.test(lines[0] || '')) {
-                lines[0] = expectedMarkerLine;
-                nextBody = lines.join('\n');
-              } else {
-                nextBody = [expectedMarkerLine, '', nextBody].filter(Boolean).join('\n');
-              }
+              const sourceMarkerPattern = /^Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?\.?$/;
+              const bodyLines = (pr.body || '')
+                .split(/\r?\n/)
+                .filter((line) => !sourceMarkerPattern.test(line.trim()));
+              let nextBody = [expectedMarkerLine, '', ...bodyLines]
+                .join('\n')
+                .replace(/\n{3,}/g, '\n\n')
+                .trim();
 
               const automationIssues = await github.paginate(github.rest.issues.listForRepo, {
                 owner: context.repo.owner,

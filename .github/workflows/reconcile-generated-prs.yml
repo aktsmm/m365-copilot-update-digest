@@ -53,12 +53,36 @@ jobs:
               });
             }
 
-            async function closeLinkedIssues(bodyText, prNumber) {
-              const issueNumbers = [...new Set(
+            async function getLinkedIssueNumbers(prNumber, bodyText) {
+              const issueNumbers = new Set(
                 [...String(bodyText || '').matchAll(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi)]
                   .map((match) => Number(match[1]))
                   .filter((value) => Number.isInteger(value)),
-              )];
+              );
+
+              try {
+                const result = await github.graphql(
+                  `query($owner: String!, $repo: String!, $number: Int!) {
+                    repository(owner: $owner, name: $repo) {
+                      pullRequest(number: $number) {
+                        closingIssuesReferences(first: 50) { nodes { number } }
+                      }
+                    }
+                  }`,
+                  { owner: context.repo.owner, repo: context.repo.repo, number: prNumber },
+                );
+                for (const issue of result.repository.pullRequest.closingIssuesReferences.nodes || []) {
+                  if (Number.isInteger(issue.number)) issueNumbers.add(issue.number);
+                }
+              } catch (error) {
+                core.warning(`Failed to read closing issue references for PR #${prNumber}: ${error.message}`);
+              }
+
+              return [...issueNumbers];
+            }
+
+            async function closeLinkedIssues(bodyText, prNumber) {
+              const issueNumbers = await getLinkedIssueNumbers(prNumber, bodyText);
 
               for (const issueNumber of issueNumbers) {
                 try {
@@ -173,16 +197,36 @@ jobs:
               /^data\/run-summary\.json$/,
             ];
 
-            function extractClosingRefs(bodyText) {
-              return [...new Set(
+            async function getLinkedIssueNumbers(prNumber, bodyText) {
+              const issueNumbers = new Set(
                 [...String(bodyText || '').matchAll(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi)]
                   .map((match) => Number(match[1]))
                   .filter((value) => Number.isInteger(value)),
-              )];
+              );
+
+              try {
+                const result = await github.graphql(
+                  `query($owner: String!, $repo: String!, $number: Int!) {
+                    repository(owner: $owner, name: $repo) {
+                      pullRequest(number: $number) {
+                        closingIssuesReferences(first: 50) { nodes { number } }
+                      }
+                    }
+                  }`,
+                  { owner: context.repo.owner, repo: context.repo.repo, number: prNumber },
+                );
+                for (const issue of result.repository.pullRequest.closingIssuesReferences.nodes || []) {
+                  if (Number.isInteger(issue.number)) issueNumbers.add(issue.number);
+                }
+              } catch (error) {
+                core.warning(`Failed to read closing issue references for PR #${prNumber}: ${error.message}`);
+              }
+
+              return [...issueNumbers];
             }
 
             async function closeLinkedIssues(bodyText, prNumber, reason) {
-              for (const issueNumber of extractClosingRefs(bodyText)) {
+              for (const issueNumber of await getLinkedIssueNumbers(prNumber, bodyText)) {
                 try {
                   const issue = await github.rest.issues.get({
                     owner: context.repo.owner,
@@ -358,7 +402,40 @@ jobs:
               state: 'open',
               per_page: 100,
             });
-            const openPrBodies = openPulls.map((pr) => pr.body || '');
+            async function getLinkedIssueNumbers(pr) {
+              const issueNumbers = new Set(
+                [...String(pr.body || '').matchAll(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)\b/gi)]
+                  .map((match) => Number(match[1]))
+                  .filter((value) => Number.isInteger(value)),
+              );
+
+              try {
+                const result = await github.graphql(
+                  `query($owner: String!, $repo: String!, $number: Int!) {
+                    repository(owner: $owner, name: $repo) {
+                      pullRequest(number: $number) {
+                        closingIssuesReferences(first: 50) { nodes { number } }
+                      }
+                    }
+                  }`,
+                  { owner: context.repo.owner, repo: context.repo.repo, number: pr.number },
+                );
+                for (const issue of result.repository.pullRequest.closingIssuesReferences.nodes || []) {
+                  if (Number.isInteger(issue.number)) issueNumbers.add(issue.number);
+                }
+              } catch (error) {
+                core.warning(`Failed to read closing issue references for PR #${pr.number}: ${error.message}`);
+              }
+
+              return issueNumbers;
+            }
+
+            const openLinkedIssueNumbers = new Set();
+            for (const pr of openPulls) {
+              for (const issueNumber of await getLinkedIssueNumbers(pr)) {
+                openLinkedIssueNumbers.add(issueNumber);
+              }
+            }
 
             let closedCount = 0;
             for (const issue of issues) {
@@ -369,9 +446,7 @@ jobs:
               if (!Number.isFinite(createdAt) || createdAt >= staleCutoff) continue;
 
               // Check if any open PR references this issue
-              const hasLinkedPr = openPrBodies.some((body) =>
-                new RegExp(`(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\\s+#${issue.number}\\b`, 'i').test(body),
-              );
+              const hasLinkedPr = openLinkedIssueNumbers.has(issue.number);
               if (hasLinkedPr) continue;
 
               await github.rest.issues.createComment({
