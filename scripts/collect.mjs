@@ -724,6 +724,26 @@ function buildJapaneseFallbackTitle(event) {
 
 function roadmapProductArea(title, categories, source) {
   const text = `${title}\n${categories.join("\n")}`.toLowerCase();
+  if (/^microsoft purview:|^purview:/.test(text)) {
+    return "Microsoft Purview";
+  }
+
+  if (/^microsoft viva:|^viva:/.test(text)) {
+    return "Microsoft Viva";
+  }
+
+  if (/^planner:|^microsoft planner:/.test(text)) {
+    return "Planner";
+  }
+
+  if (/^sharepoint:|^microsoft sharepoint:/.test(text)) {
+    return "SharePoint";
+  }
+
+  if (/^microsoft 365 app:/.test(text)) {
+    return "Microsoft 365";
+  }
+
   if (/^microsoft teams:|^teams:/.test(text)) {
     return "Microsoft Teams";
   }
