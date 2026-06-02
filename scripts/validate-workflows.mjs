@@ -10,6 +10,7 @@ const files = {
   requestReview: path.join(workflowDir, "request-copilot-review.yml"),
   autoMerge: path.join(workflowDir, "auto-merge-generated-pr.yml"),
   reconcile: path.join(workflowDir, "reconcile-generated-prs.yml"),
+  rerunBlocked: path.join(workflowDir, "rerun-blocked-copilot-workflows.yml"),
   workflowGuard: path.join(workflowDir, "validate-automation-workflows.yml"),
 };
 
@@ -37,6 +38,7 @@ const validateGeneratedPr = readWorkflow(files.validateGeneratedPr);
 const requestReview = readWorkflow(files.requestReview);
 const autoMerge = readWorkflow(files.autoMerge);
 const reconcile = readWorkflow(files.reconcile);
+const rerunBlocked = readWorkflow(files.rerunBlocked);
 const workflowGuard = readWorkflow(files.workflowGuard);
 
 requireText(
@@ -130,6 +132,17 @@ requireOccurrences(
   "config/summary-ja-cache.json",
   4,
   "Generated PR validation must include summary cache in allow-list, auto-fix, and canonical drift checks",
+);
+
+requireText(
+  rerunBlocked,
+  "isExpectedGeneratedPrAutofix",
+  "Blocked workflow reruns must skip expected generated PR auto-fix failures",
+);
+requireText(
+  rerunBlocked,
+  "Auto-fix canonical generated outputs",
+  "Blocked workflow reruns must inspect the generated PR auto-fix step",
 );
 
 console.log("Workflow automation invariants OK");
