@@ -105,6 +105,16 @@ requireText(
   "const bodyPattern = /^Generated from `?data\\/events\\/\\d{4}-\\d{2}-\\d{2}\\.json`?/m;",
   "Reconciler stale no-op detection must accept canonical source markers with or without backticks",
 );
+requireText(
+  reconcile,
+  "generatedPrChecksArePassing",
+  "Reconciler stuck generated PR auto-merge must verify checks before merging",
+);
+requireText(
+  reconcile,
+  "check.name === 'validate' && check.conclusion === 'success'",
+  "Reconciler stuck generated PR auto-merge must require a successful generated PR validation check",
+);
 
 requireText(
   workflowGuard,

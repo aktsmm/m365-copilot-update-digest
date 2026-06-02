@@ -410,6 +410,45 @@ jobs:
               }
             }
 
+            async function generatedPrChecksArePassing(prNumber) {
+              const { data: pull } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+              });
+
+              if (pull.mergeable_state && !['clean', 'has_hooks', 'unstable'].includes(pull.mergeable_state)) {
+                core.info(`PR #${prNumber} mergeable_state is ${pull.mergeable_state}; skipping auto-merge.`);
+                return false;
+              }
+
+              const checks = await github.paginate(github.rest.checks.listForRef, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: pull.head.sha,
+                per_page: 100,
+              });
+              const relevantChecks = checks.filter((check) =>
+                ['Validate generated PR', 'Request Copilot review', 'GitGuardian Security Checks'].includes(check.name) ||
+                check.app?.slug === 'github-actions',
+              );
+              const incomplete = relevantChecks.filter((check) => check.status !== 'completed');
+              const failed = relevantChecks.filter((check) =>
+                !['success', 'neutral', 'skipped'].includes(check.conclusion || ''),
+              );
+
+              if (incomplete.length > 0 || failed.length > 0) {
+                core.info(
+                  `PR #${prNumber} has non-passing checks: ${[...incomplete, ...failed]
+                    .map((check) => `${check.name}:${check.status}/${check.conclusion || 'none'}`)
+                    .join(', ')}`,
+                );
+                return false;
+              }
+
+              return relevantChecks.some((check) => check.name === 'validate' && check.conclusion === 'success');
+            }
+
             const pulls = await github.paginate(github.rest.pulls.list, {
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -480,6 +519,10 @@ jobs:
                 .filter((f) => !allowed.some((p) => p.test(f)));
               if (blocked.length > 0) {
                 core.info(`PR #${pr.number} has disallowed files: ${blocked.join(', ')}. Skipping auto-merge.`);
+                continue;
+              }
+
+              if (!(await generatedPrChecksArePassing(pr.number))) {
                 continue;
               }
 
