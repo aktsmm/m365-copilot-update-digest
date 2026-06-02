@@ -281,6 +281,26 @@ function isLikelyJapanese(value) {
   return /[\u3040-\u30ff\u3400-\u9fff]/.test(String(value ?? ""));
 }
 
+function isMojibakeJapanese(value) {
+  const text = String(value ?? "");
+  if (!text) {
+    return false;
+  }
+
+  const mojibakeMarkers = text.match(
+    /[縺繧繝荳譁螳蜿邱蛹鬆髫謗雎莨蟆譛蠑陦邂]/g,
+  );
+  const markerCount = mojibakeMarkers?.length ?? 0;
+  return (
+    /縺[\uFF61-\uFF9F・]|繧[\uFF61-\uFF9F・]|繝[\uFF61-\uFF9F・]/.test(text) ||
+    markerCount >= Math.max(4, Math.floor(text.length * 0.08))
+  );
+}
+
+function isUsableJapanese(value) {
+  return isLikelyJapanese(value) && !isMojibakeJapanese(value);
+}
+
 function fixupJapaneseText(text) {
   return String(text ?? "")
     .replace(/副操縦士/g, "Copilot")
@@ -303,12 +323,36 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
   const shortReferencePattern = /^.{3,60}に関する更新。$/;
   return (
     !isLikelyJapanese(normalizedSummaryJa) ||
+    isMojibakeJapanese(normalizedSummaryJa) ||
     genericFallbackPattern.test(normalizedSummaryJa) ||
     shortReferencePattern.test(normalizedSummaryJa) ||
     /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
     /を接地する|丸薬/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
       /公開ドキュメント由来の更新です。?$/.test(normalizedSummaryJa))
+  );
+}
+
+function shouldPreservePastLocalization(event, nowIso) {
+  const eventDate = tokyoDateOnly(
+    event.publishedAt || event.capturedAt || nowIso,
+  );
+  const currentDate = tokyoDateOnly(nowIso);
+  return eventDate < currentDate;
+}
+
+function findExistingEvent(event, existingById, existingByLogicalKey) {
+  return (
+    existingById.get(event.id) ??
+    existingByLogicalKey.get(
+      logicalEventKey({
+        ...event,
+        sourceId: event.sourceId || "",
+        titleEn: event.titleEn || event.title,
+        title: event.title || event.titleEn,
+        url: event.url || "",
+      }),
+    )
   );
 }
 
@@ -920,6 +964,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
   return (
     !titleJa ||
     !isLikelyJapanese(titleJa) ||
+    isMojibakeJapanese(titleJa) ||
     titleJa === titleEn ||
     genericTitles.has(titleJa) ||
     /副操縦士|コパイロット/.test(titleJa) ||
@@ -953,6 +998,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
 async function localizeJapaneseTitles(
   events,
   existingById,
+  existingByLogicalKey,
   summaryCache,
   nowIso,
 ) {
@@ -966,7 +1012,17 @@ async function localizeJapaneseTitles(
       continue;
     }
 
-    if (isLikelyJapanese(event.titleJa || event.titleEn)) {
+    const existing = findExistingEvent(
+      event,
+      existingById,
+      existingByLogicalKey,
+    );
+    if (existing?.titleJa && shouldPreservePastLocalization(existing, nowIso)) {
+      event.titleJa = normalizeWhitespace(existing.titleJa);
+      continue;
+    }
+
+    if (isUsableJapanese(event.titleJa || event.titleEn)) {
       event.titleJa = normalizeWhitespace(event.titleJa || event.titleEn);
       updateSummaryCacheEntry(
         summaryCache,
@@ -995,7 +1051,6 @@ async function localizeJapaneseTitles(
       continue;
     }
 
-    const existing = existingById.get(event.id);
     if (
       existing &&
       existing.titleEn === event.titleEn &&
@@ -1048,9 +1103,18 @@ async function localizeJapaneseTitles(
       const result = await translate(requestText, { to: "ja" });
       const translatedEntries = splitTranslatedBatch(result.text, batch);
       for (const entry of translatedEntries) {
-        entry.event.titleJa =
+        const translatedTitleJa =
           entry.text && entry.text !== entry.event.titleEn
             ? fixupJapaneseText(excerptText(entry.text, 96))
+            : "";
+        entry.event.titleJa =
+          translatedTitleJa &&
+          !shouldIgnoreCachedJapaneseTitle(
+            translatedTitleJa,
+            entry.event.titleEn,
+            entry.event.productArea,
+          )
+            ? translatedTitleJa
             : buildJapaneseFallbackTitle(entry.event);
         updateSummaryCacheEntry(
           summaryCache,
@@ -1113,6 +1177,7 @@ async function localizeJapaneseSummaries(
   source,
   events,
   existingById,
+  existingByLogicalKey,
   summaryCache,
   nowIso,
 ) {
@@ -1130,7 +1195,20 @@ async function localizeJapaneseSummaries(
       continue;
     }
 
-    if (isLikelyJapanese(event.summaryJa || event.summaryEn)) {
+    const existing = findExistingEvent(
+      event,
+      existingById,
+      existingByLogicalKey,
+    );
+    if (
+      existing?.summaryJa &&
+      shouldPreservePastLocalization(existing, nowIso)
+    ) {
+      event.summaryJa = normalizeWhitespace(existing.summaryJa);
+      continue;
+    }
+
+    if (isUsableJapanese(event.summaryJa || event.summaryEn)) {
       event.summaryJa = normalizeWhitespace(event.summaryJa || event.summaryEn);
       updateSummaryCacheEntry(
         summaryCache,
@@ -1155,7 +1233,6 @@ async function localizeJapaneseSummaries(
       continue;
     }
 
-    const existing = existingById.get(event.id);
     if (
       existing &&
       existing.summary === event.summary &&
@@ -1205,9 +1282,14 @@ async function localizeJapaneseSummaries(
       const result = await translate(requestText, { to: "ja" });
       const translatedEntries = splitTranslatedBatch(result.text, batch);
       for (const entry of translatedEntries) {
-        entry.event.summaryJa =
+        const translatedSummaryJa =
           entry.text && entry.text !== entry.event.summaryEn
             ? fixupJapaneseText(excerptText(entry.text, 280))
+            : "";
+        entry.event.summaryJa =
+          translatedSummaryJa &&
+          !shouldIgnoreCachedJapaneseSummary(source, translatedSummaryJa)
+            ? translatedSummaryJa
             : buildJapaneseFallbackSummary(entry.event);
         updateSummaryCacheEntry(
           summaryCache,
@@ -1772,15 +1854,25 @@ async function main() {
   const existingById = new Map(
     existingEvents.map((event) => [event.id, event]),
   );
+  const existingByLogicalKey = new Map(
+    existingEvents.map((event) => [logicalEventKey(event), event]),
+  );
   const mergedById = new Map(existingEvents.map((event) => [event.id, event]));
   const errors = [];
 
   for (const source of sources) {
     try {
       const html = await fetchText(source.url);
+      const sourceEvents = parseSource(source, html, nowIso).map((event) => ({
+        ...event,
+        sourceId: source.id,
+        sourceName: source.name,
+        sourceFamily: source.sourceFamily || "Other",
+      }));
       const localizedEvents = await localizeJapaneseTitles(
-        parseSource(source, html, nowIso),
+        sourceEvents,
         existingById,
+        existingByLogicalKey,
         summaryCache,
         nowIso,
       );
@@ -1788,12 +1880,17 @@ async function main() {
         source,
         localizedEvents,
         existingById,
+        existingByLogicalKey,
         summaryCache,
         nowIso,
       );
 
       for (const parsedEvent of parsedEvents) {
-        const previous = existingById.get(parsedEvent.id);
+        const previous = findExistingEvent(
+          parsedEvent,
+          existingById,
+          existingByLogicalKey,
+        );
         const normalized = normalizeEvent(
           source,
           parsedEvent,
