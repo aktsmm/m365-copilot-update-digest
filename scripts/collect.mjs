@@ -517,6 +517,14 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot Pages でインタラクティブな可視化を作成可能に`;
   }
 
+  if (
+    /create a presentation with copilot in powerpoint directly from the powerpoint web app/.test(
+      text,
+    )
+  ) {
+    return `PowerPoint Web App から直接 Copilot でプレゼンテーション作成に対応`;
+  }
+
   if (/copilot pages/.test(text) && /outlook mobile|android/.test(text)) {
     return `Outlook モバイルで Copilot Pages の閲覧・編集・共有に対応`;
   }
@@ -966,6 +974,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     !isLikelyJapanese(titleJa) ||
     isMojibakeJapanese(titleJa) ||
     titleJa === titleEn ||
+    /(?:\.\.\.|…)\s*$/.test(titleJa) ||
     genericTitles.has(titleJa) ||
     /副操縦士|コパイロット/.test(titleJa) ||
     /を接地する|を接地 |を接地$/.test(titleJa) ||
@@ -995,6 +1004,31 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
   );
 }
 
+function refreshLocalizedFieldsFromCache(event, summaryCache) {
+  const cached = summaryCache[event.id];
+  if (!cached) {
+    return event;
+  }
+
+  const hasTruncatedJapaneseTitle = /(?:\.\.\.|…)\s*$/.test(
+    String(event.titleJa || ""),
+  );
+  if (
+    cached.title === event.titleEn &&
+    cached.titleJa &&
+    hasTruncatedJapaneseTitle &&
+    !shouldIgnoreCachedJapaneseTitle(
+      cached.titleJa,
+      event.titleEn,
+      event.productArea,
+    )
+  ) {
+    event.titleJa = cached.titleJa;
+  }
+
+  return event;
+}
+
 async function localizeJapaneseTitles(
   events,
   existingById,
@@ -1022,8 +1056,16 @@ async function localizeJapaneseTitles(
       continue;
     }
 
-    if (isUsableJapanese(event.titleJa || event.titleEn)) {
-      event.titleJa = normalizeWhitespace(event.titleJa || event.titleEn);
+    const existingTitleJa = normalizeWhitespace(event.titleJa || event.titleEn);
+    if (
+      isUsableJapanese(existingTitleJa) &&
+      !shouldIgnoreCachedJapaneseTitle(
+        existingTitleJa,
+        event.titleEn,
+        event.productArea,
+      )
+    ) {
+      event.titleJa = existingTitleJa;
       updateSummaryCacheEntry(
         summaryCache,
         event.id,
@@ -1913,7 +1955,9 @@ async function main() {
     }
   }
 
-  const allEvents = dedupeLogicalEvents(dedupeEvents([...mergedById.values()]));
+  const allEvents = dedupeLogicalEvents(dedupeEvents([...mergedById.values()])).map(
+    (event) => refreshLocalizedFieldsFromCache(event, summaryCache),
+  );
   const newEventCount = allEvents.filter(
     (event) => !existingLogicalKeys.has(logicalEventKey(event)),
   ).length;
@@ -1958,11 +2002,19 @@ async function main() {
     // When events are otherwise unchanged, still apply text fixups so that
     // translation-quality improvements (e.g. を接地する→をグラウンディングする)
     // are reflected in the persisted events and markdown even on re-runs.
-    const fixedExistingEvents = (existingLog?.events ?? []).map((evt) => ({
-      ...evt,
-      titleJa: fixupJapaneseText(evt.titleJa || ""),
-      summaryJa: fixupJapaneseText(evt.summaryJa || ""),
-    }));
+    const localizedById = new Map(sortedEvents.map((evt) => [evt.id, evt]));
+    const fixedExistingEvents = (existingLog?.events ?? []).map((evt) => {
+      const latestLocalized = localizedById.get(evt.id);
+      const fixedTitleJa = fixupJapaneseText(evt.titleJa || "");
+      return {
+        ...evt,
+        titleJa:
+          /(?:\.\.\.|…)\s*$/.test(fixedTitleJa) && latestLocalized?.titleJa
+            ? fixupJapaneseText(latestLocalized.titleJa)
+            : fixedTitleJa,
+        summaryJa: fixupJapaneseText(evt.summaryJa || ""),
+      };
+    });
     const nextLog = {
       date,
       generatedAt: sameEvents ? existingLog?.generatedAt || nowIso : nowIso,
