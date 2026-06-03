@@ -737,6 +737,10 @@ function buildJapaneseFallbackTitle(event) {
     return `トピック・キーワードで会議を検索可能に`;
   }
 
+  if (/copilot chat available when using copilot search/.test(titleText)) {
+    return `Copilot Search 利用時に Copilot Chat を利用可能に`;
+  }
+
   if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
@@ -996,6 +1000,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
       ) ||
+        /copilot search/.test(normalizedTitleEn) ||
         /share.*agents?.*teams?|find meetings? based on topics?/.test(
           normalizedTitleEn,
         ))) ||
@@ -2006,12 +2011,20 @@ async function main() {
     const fixedExistingEvents = (existingLog?.events ?? []).map((evt) => {
       const latestLocalized = localizedById.get(evt.id);
       const fixedTitleJa = fixupJapaneseText(evt.titleJa || "");
+      const latestTitleEn = latestLocalized?.titleEn || evt.titleEn || evt.title;
+      const refreshTitleFromLatest =
+        !!latestLocalized?.titleJa &&
+        (/(?:\.\.\.|…)\s*$/.test(fixedTitleJa) ||
+          shouldIgnoreCachedJapaneseTitle(
+            fixedTitleJa,
+            latestTitleEn,
+            evt.productArea || latestLocalized.productArea || "",
+          ));
       return {
         ...evt,
-        titleJa:
-          /(?:\.\.\.|…)\s*$/.test(fixedTitleJa) && latestLocalized?.titleJa
-            ? fixupJapaneseText(latestLocalized.titleJa)
-            : fixedTitleJa,
+        titleJa: refreshTitleFromLatest
+          ? fixupJapaneseText(latestLocalized.titleJa)
+          : fixedTitleJa,
         summaryJa: fixupJapaneseText(evt.summaryJa || ""),
       };
     });
