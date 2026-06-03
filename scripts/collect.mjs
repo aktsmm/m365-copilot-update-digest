@@ -39,6 +39,8 @@ const MAX_TITLE_TRANSLATION_BATCH_CHARS = 2200;
 const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
 const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
+const JAPANESE_TITLE_PREFIX_PATTERN =
+  /^(?:Microsoft Copilot \(Microsoft 365\)|Microsoft Copilot Studio|Microsoft Copilot|Microsoft Viva|Microsoft Purview|Microsoft 365 Admin Center|Microsoft Teams|Microsoft Edge|Microsoft 365 app|Outlook|OneDrive|SharePoint|PowerPoint|Planner)\s*[:：]\s*/i;
 const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
@@ -119,6 +121,12 @@ function tokyoDateOnly(value) {
     {},
   );
   return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+function shiftDateOnly(dateOnly, days) {
+  const date = new Date(`${dateOnly}T00:00:00.000Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
 }
 
 function stablePublishedAt(value, fallbackValue) {
@@ -307,6 +315,10 @@ function fixupJapaneseText(text) {
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
     .replace(/丸薬/g, "ピル")
+    .replace(/Agents in Notebooks\s+を/g, "Copilot ノートブックのエージェントを")
+    .replace(/Agents in Notebooks/g, "Copilot ノートブックのエージェント")
+    .replace(/Analyst\s+で/g, "アナリストで")
+    .replace(/Designer\s+で/g, "デザイナーで")
     .replace(/人体\s*モデル/g, "Anthropic モデル")
     .replace(/([\u3040-\u30ff\u3400-\u9fff])Anthropic/g, "$1 Anthropic")
     .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1");
@@ -314,6 +326,16 @@ function fixupJapaneseText(text) {
 
 function cleanupRoadmapTitle(title) {
   return normalizeWhitespace(title.replace(/\):\s*\):/g, "):"));
+}
+
+function cleanupJapaneseTitle(title) {
+  const normalized = normalizeWhitespace(title);
+  if (!normalized) {
+    return "";
+  }
+
+  const cleaned = normalized.replace(JAPANESE_TITLE_PREFIX_PATTERN, "");
+  return cleaned;
 }
 
 function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
@@ -338,7 +360,9 @@ function shouldPreservePastLocalization(event, nowIso) {
     event.publishedAt || event.capturedAt || nowIso,
   );
   const currentDate = tokyoDateOnly(nowIso);
-  return eventDate < currentDate;
+  // Keep the previous day in the refresh window so late quality fixes can still update yesterday's digest.
+  const refreshWindowStart = shiftDateOnly(currentDate, -1);
+  return eventDate < refreshWindowStart;
 }
 
 function findExistingEvent(event, existingById, existingByLogicalKey) {
@@ -977,6 +1001,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     !titleJa ||
     !isLikelyJapanese(titleJa) ||
     isMojibakeJapanese(titleJa) ||
+    JAPANESE_TITLE_PREFIX_PATTERN.test(titleJa) ||
     titleJa === titleEn ||
     /(?:\.\.\.|…)\s*$/.test(titleJa) ||
     genericTitles.has(titleJa) ||
@@ -1061,7 +1086,7 @@ async function localizeJapaneseTitles(
       continue;
     }
 
-    const existingTitleJa = normalizeWhitespace(event.titleJa || event.titleEn);
+    const existingTitleJa = cleanupJapaneseTitle(event.titleJa || event.titleEn);
     if (
       isUsableJapanese(existingTitleJa) &&
       !shouldIgnoreCachedJapaneseTitle(
@@ -1084,31 +1109,35 @@ async function localizeJapaneseTitles(
     }
 
     const cached = summaryCache[event.id];
+    const cleanedCachedTitleJa = cleanupJapaneseTitle(cached?.titleJa);
     if (
       cached &&
       cached.title === event.titleEn &&
       cached.titleJa &&
+      cleanedCachedTitleJa &&
       !shouldIgnoreCachedJapaneseTitle(
-        cached.titleJa,
+        cleanedCachedTitleJa,
         event.titleEn,
         event.productArea,
       )
     ) {
-      event.titleJa = cached.titleJa;
+      event.titleJa = cleanedCachedTitleJa;
       continue;
     }
 
+    const cleanedExistingTitleJa = cleanupJapaneseTitle(existing?.titleJa);
     if (
       existing &&
       existing.titleEn === event.titleEn &&
       existing.titleJa &&
+      cleanedExistingTitleJa &&
       !shouldIgnoreCachedJapaneseTitle(
-        existing.titleJa,
+        cleanedExistingTitleJa,
         event.titleEn,
         event.productArea,
       )
     ) {
-      event.titleJa = existing.titleJa;
+      event.titleJa = cleanedExistingTitleJa;
       updateSummaryCacheEntry(
         summaryCache,
         event.id,
@@ -1152,7 +1181,7 @@ async function localizeJapaneseTitles(
       for (const entry of translatedEntries) {
         const translatedTitleJa =
           entry.text && entry.text !== entry.event.titleEn
-            ? fixupJapaneseText(excerptText(entry.text, 96))
+            ? cleanupJapaneseTitle(fixupJapaneseText(excerptText(entry.text, 96)))
             : "";
         entry.event.titleJa =
           translatedTitleJa &&
@@ -1251,12 +1280,14 @@ async function localizeJapaneseSummaries(
       existing?.summaryJa &&
       shouldPreservePastLocalization(existing, nowIso)
     ) {
-      event.summaryJa = normalizeWhitespace(existing.summaryJa);
+      event.summaryJa = fixupJapaneseText(normalizeWhitespace(existing.summaryJa));
       continue;
     }
 
     if (isUsableJapanese(event.summaryJa || event.summaryEn)) {
-      event.summaryJa = normalizeWhitespace(event.summaryJa || event.summaryEn);
+      event.summaryJa = fixupJapaneseText(
+        normalizeWhitespace(event.summaryJa || event.summaryEn),
+      );
       updateSummaryCacheEntry(
         summaryCache,
         event.id,
@@ -1276,7 +1307,7 @@ async function localizeJapaneseSummaries(
       cached.summaryJa &&
       !shouldIgnoreCachedJapaneseSummary(source, cached.summaryJa)
     ) {
-      event.summaryJa = cached.summaryJa;
+      event.summaryJa = fixupJapaneseText(normalizeWhitespace(cached.summaryJa));
       continue;
     }
 
@@ -1287,7 +1318,7 @@ async function localizeJapaneseSummaries(
       existing.summaryJa !== (existing.summaryEn || existing.summary) &&
       !shouldIgnoreCachedJapaneseSummary(source, existing.summaryJa)
     ) {
-      event.summaryJa = existing.summaryJa;
+      event.summaryJa = fixupJapaneseText(normalizeWhitespace(existing.summaryJa));
       updateSummaryCacheEntry(
         summaryCache,
         event.id,
