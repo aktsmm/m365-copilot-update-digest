@@ -747,6 +747,13 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (
+    /reference the content of a powerpoint file/.test(text) &&
+    /agent mode/.test(text)
+  ) {
+    return `PowerPoint でエージェント モードでプレゼンテーションを作成する際に PowerPoint ファイルの内容を参照する`;
+  }
+
+  if (
     /copilot notebooks?/.test(text) &&
     /overview|summary|insights/.test(text)
   ) {
