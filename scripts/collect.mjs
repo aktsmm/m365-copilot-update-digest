@@ -40,7 +40,7 @@ const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
 const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
 const JAPANESE_TITLE_PREFIX_PATTERN =
-  /^(?:Microsoft Copilot \(Microsoft 365\)|Microsoft Copilot Studio|Microsoft Copilot|Microsoft Viva|Microsoft Purview|Microsoft 365 Admin Center|Microsoft Teams|Microsoft Edge|Microsoft 365 app|Outlook|OneDrive|SharePoint|PowerPoint|Planner)\s*[:：]\s*/i;
+  /^(?:Microsoft Copilot \(Microsoft 365\)|Microsoft Copilot Studio|Microsoft Copilot|Microsoft Viva|Microsoft Purview|Microsoft 365 Admin Center|Microsoft Teams|Microsoft Edge|Microsoft 365 app|Outlook|OneDrive|OneNote|SharePoint|PowerPoint|Planner)\s*[:：]\s*/i;
 const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
@@ -315,8 +315,14 @@ function fixupJapaneseText(text) {
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
     .replace(/丸薬/g, "ピル")
+    .replace(/Copilot Notebooks\s+での/g, "Copilot ノートブックでの")
+    .replace(/Copilot Notebooks\s+を/g, "Copilot ノートブックを")
+    .replace(/Copilot Notebooks/g, "Copilot ノートブック")
     .replace(/Agents in Notebooks\s+を/g, "Copilot ノートブックのエージェントを")
     .replace(/Agents in Notebooks/g, "Copilot ノートブックのエージェント")
+    .replace(/OneNote Mobile\s+で/g, "OneNote モバイルで")
+    .replace(/OneNote Mobile\s+の/g, "OneNote モバイルの")
+    .replace(/OneNote Mobile/g, "OneNote モバイル")
     .replace(/Analyst\s+で/g, "アナリストで")
     .replace(/Designer\s+で/g, "デザイナーで")
     .replace(/人体\s*モデル/g, "Anthropic モデル")
