@@ -722,6 +722,21 @@ function buildJapaneseFallbackTitle(event) {
     return `PowerPoint で使用モデルを選択可能に`;
   }
 
+  if (
+    /reference an email with work iq/.test(text) &&
+    /edit with copilot in powerpoint to create a presentation/.test(text)
+  ) {
+    return `PowerPoint で Edit with Copilot 利用時に Work IQ のメール参照に対応`;
+  }
+
+  if (
+    /reference an attached powerpoint deck/.test(text) &&
+    /style when creating a new presentation/.test(text) &&
+    /agent mode in powerpoint/.test(text)
+  ) {
+    return `PowerPoint の Agent Mode で添付デッキのスタイル参照に対応`;
+  }
+
   if (/planner agent in group-based basic plans/.test(text)) {
     return `グループベースの basic plans で Planner Agent に対応`;
   }
@@ -1027,6 +1042,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       titleJa !== "Copilot で scatter image effect に対応") ||
     (/redesigned channels page/.test(normalizedTitleEn) &&
       titleJa !== "Channels ページを刷新") ||
+    (titleJa === `${productArea} の Copilot 機能を更新` &&
+      /reference an email with work iq|reference an attached powerpoint deck/.test(
+        normalizedTitleEn,
+      )) ||
     (titleJa === "Microsoft 365 Copilot の会議・チャット機能を更新" &&
       (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
