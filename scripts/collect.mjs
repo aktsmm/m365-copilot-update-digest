@@ -327,7 +327,8 @@ function fixupJapaneseText(text) {
     .replace(/Designer\s+で/g, "デザイナーで")
     .replace(/人体\s*モデル/g, "Anthropic モデル")
     .replace(/([\u3040-\u30ff\u3400-\u9fff])Anthropic/g, "$1 Anthropic")
-    .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1");
+    .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1")
+    .replace(/\n.{1,8}\.{2,3}$/, "...");
 }
 
 function cleanupRoadmapTitle(title) {
