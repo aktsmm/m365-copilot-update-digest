@@ -906,6 +906,7 @@ function cleanupRoadmapSummary(rawSummary) {
       /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
       "",
     )
+    .replace(/\bmicrosfot\b/gi, "Microsoft")
     .replace(/\s+/g, " ")
     .trim();
   return excerptText(summary, 320);
