@@ -42,11 +42,11 @@ const MAX_TRANSLATED_TITLES_PER_RUN = 240;
 const JAPANESE_TITLE_PREFIX_PATTERN =
   /^(?:Microsoft Copilot \(Microsoft 365\)|Microsoft Copilot Studio|Microsoft Copilot|Microsoft Viva|Microsoft Purview|Microsoft 365 Admin Center|Microsoft Teams|Microsoft Edge|Microsoft 365 app|Outlook|OneDrive|OneNote|SharePoint|PowerPoint|Planner)\s*[:：]\s*/i;
 const COPILOT_CHAT_OPEN_OFFICE_FILES_PATTERN =
-  /open word, excel, and powerpoint files in copilot chat/;
+  /open word, excel, and powerpoint files in copilot chat/i;
 const COPILOT_IPHONE_PREVIEW_CHAT_PATTERN =
-  /preview and chat with microsoft word, excel, and powerpoint files/;
+  /preview and chat with microsoft word, excel, and powerpoint files/i;
 const COPILOT_CHAT_CENTERED_CREATE_PATTERN =
-  /copilot chat-centered experience for creating\s+new documents/;
+  /copilot chat-centered experience for creating\s+new documents/i;
 const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
