@@ -41,6 +41,12 @@ const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
 const JAPANESE_TITLE_PREFIX_PATTERN =
   /^(?:Microsoft Copilot \(Microsoft 365\)|Microsoft Copilot Studio|Microsoft Copilot|Microsoft Viva|Microsoft Purview|Microsoft 365 Admin Center|Microsoft Teams|Microsoft Edge|Microsoft 365 app|Outlook|OneDrive|OneNote|SharePoint|PowerPoint|Planner)\s*[:：]\s*/i;
+const COPILOT_CHAT_OPEN_OFFICE_FILES_PATTERN =
+  /open word, excel, and powerpoint files in copilot chat/i;
+const COPILOT_IPHONE_PREVIEW_CHAT_PATTERN =
+  /preview and chat with microsoft word, excel, and powerpoint files/i;
+const COPILOT_CHAT_CENTERED_CREATE_PATTERN =
+  /copilot chat-centered experience for creating\s+new documents/i;
 const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
@@ -772,6 +778,25 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot Search 利用時に Copilot Chat を利用可能に`;
   }
 
+  if (COPILOT_CHAT_OPEN_OFFICE_FILES_PATTERN.test(titleText)) {
+    return `Copilot Chat で Word・Excel・PowerPoint ファイルを直接開けるように`;
+  }
+
+  if (
+    COPILOT_IPHONE_PREVIEW_CHAT_PATTERN.test(titleText) &&
+    /iphone/.test(titleText)
+  ) {
+    return `iPhone の Copilot アプリで Word・Excel・PowerPoint をプレビューしながらチャット可能に`;
+  }
+
+  if (
+    COPILOT_CHAT_CENTERED_CREATE_PATTERN.test(titleText) &&
+    /iphone/.test(titleText) &&
+    /ipad/.test(titleText)
+  ) {
+    return `iPhone・iPad の Copilot アプリで新規ドキュメント作成のチャット中心体験に対応`;
+  }
+
   if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
@@ -881,6 +906,7 @@ function cleanupRoadmapSummary(rawSummary) {
       /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
       "",
     )
+    .replace(/\bmicrosfot\b/gi, "Microsoft")
     .replace(/\s+/g, " ")
     .trim();
   return excerptText(summary, 320);
@@ -1032,6 +1058,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
       ) ||
+        COPILOT_CHAT_OPEN_OFFICE_FILES_PATTERN.test(normalizedTitleEn) ||
+        COPILOT_IPHONE_PREVIEW_CHAT_PATTERN.test(normalizedTitleEn) ||
+        COPILOT_CHAT_CENTERED_CREATE_PATTERN.test(normalizedTitleEn) ||
         /copilot search/.test(normalizedTitleEn) ||
         /share.*agents?.*teams?|find meetings? based on topics?/.test(
           normalizedTitleEn,
