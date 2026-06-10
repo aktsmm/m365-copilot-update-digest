@@ -772,6 +772,29 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot Search 利用時に Copilot Chat を利用可能に`;
   }
 
+  if (/open word, excel, and powerpoint files in copilot chat/.test(titleText)) {
+    return `Copilot Chat で Word・Excel・PowerPoint ファイルを直接開けるように`;
+  }
+
+  if (
+    /preview and chat with microsoft word, excel, and powerpoint files/.test(
+      titleText,
+    ) &&
+    /iphone/.test(titleText)
+  ) {
+    return `iPhone の Copilot アプリで Word・Excel・PowerPoint をプレビューしながらチャット可能に`;
+  }
+
+  if (
+    /copilot chat-centered experience for creating\s*new documents/.test(
+      titleText,
+    ) &&
+    /iphone/.test(titleText) &&
+    /ipad/.test(titleText)
+  ) {
+    return `iPhone・iPad の Copilot アプリで新規ドキュメント作成のチャット中心体験に対応`;
+  }
+
   if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
@@ -1032,6 +1055,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
       ) ||
+        /open word, excel, and powerpoint files in copilot chat|preview and chat with microsoft word, excel, and powerpoint files|copilot chat-centered experience for creating\s*new documents/.test(
+          normalizedTitleEn,
+        ) ||
         /copilot search/.test(normalizedTitleEn) ||
         /share.*agents?.*teams?|find meetings? based on topics?/.test(
           normalizedTitleEn,
