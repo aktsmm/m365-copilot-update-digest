@@ -410,6 +410,23 @@ jobs:
               }
             }
 
+            async function getGraphqlMergeStateStatus(prNumber) {
+              try {
+                const result = await github.graphql(
+                  `query($owner: String!, $repo: String!, $number: Int!) {
+                    repository(owner: $owner, name: $repo) {
+                      pullRequest(number: $number) { mergeStateStatus }
+                    }
+                  }`,
+                  { owner: context.repo.owner, repo: context.repo.repo, number: prNumber },
+                );
+                return result.repository.pullRequest.mergeStateStatus || null;
+              } catch (error) {
+                core.warning(`Failed to read mergeStateStatus for PR #${prNumber}: ${error.message}`);
+                return null;
+              }
+            }
+
             async function generatedPrChecksArePassing(prNumber) {
               const { data: pull } = await github.rest.pulls.get({
                 owner: context.repo.owner,
@@ -460,7 +477,11 @@ jobs:
                 repo: context.repo.repo,
                 pull_number: pr.number,
               });
-              const isConflicted = pull.mergeable === false || pull.mergeable_state === 'dirty';
+              const mergeStateStatus = await getGraphqlMergeStateStatus(pr.number);
+              const isConflicted =
+                pull.mergeable === false ||
+                pull.mergeable_state === 'dirty' ||
+                mergeStateStatus === 'DIRTY';
               if (!isConflicted) return false;
 
               await github.rest.issues.createComment({

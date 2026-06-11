@@ -132,6 +132,11 @@ requireText(
 );
 requireText(
   reconcile,
+  "mergeStateStatus === 'DIRTY'",
+  "Reconciler stale conflict cleanup must use GraphQL mergeStateStatus to avoid REST mergeability timing gaps",
+);
+requireText(
+  reconcile,
   "Closed stale conflicted generated PR #",
   "Reconciler must leave an audit trail when it closes stale conflicted generated PRs",
 );
