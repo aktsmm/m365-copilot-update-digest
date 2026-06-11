@@ -242,7 +242,11 @@ jobs:
               );
               core.info(`Enabled auto-merge for PR #${pr.number}.`);
             } catch (error) {
-              if ((error.message || '').includes('Pull request is in clean status')) {
+              const autoMergeError = error.message || '';
+              if (
+                autoMergeError.includes('Pull request is in clean status') ||
+                autoMergeError.includes('Auto merge is not allowed for this repository')
+              ) {
                 try {
                   await github.rest.pulls.merge({
                     owner: context.repo.owner,
@@ -251,11 +255,13 @@ jobs:
                     merge_method: 'squash',
                   });
                   await closeLinkedIssues(pr.number, pr.body || '');
-                  core.info(`Merged PR #${pr.number} directly because auto-merge is not available for clean PRs in this repository.`);
+                  core.info(`Merged PR #${pr.number} directly because auto-merge is not available in this repository state.`);
                 } catch (mergeError) {
                   await markForHumanReview(`PR #${pr.number} direct merge failed: ${mergeError.message}`);
+                  core.setFailed(`PR #${pr.number} direct merge failed: ${mergeError.message}`);
                 }
                 return;
               }
-              core.warning(`Failed to enable auto-merge for PR #${pr.number}: ${error.message}`);
+              await markForHumanReview(`PR #${pr.number} auto-merge setup failed: ${error.message}`);
+              core.setFailed(`Failed to enable auto-merge for PR #${pr.number}: ${error.message}`);
             }

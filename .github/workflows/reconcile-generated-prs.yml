@@ -449,6 +449,37 @@ jobs:
               return relevantChecks.some((check) => check.name === 'validate' && check.conclusion === 'success');
             }
 
+            async function closeStaleConflictedGeneratedPr(pr, dateKey) {
+              const staleHours = 24;
+              const createdAt = Date.parse(pr.created_at || 0);
+              const isOldEnough = Number.isFinite(createdAt) && (Date.now() - createdAt) > staleHours * 60 * 60 * 1000;
+              if (!isOldEnough) return false;
+
+              const { data: pull } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+              });
+              const isConflicted = pull.mergeable === false || pull.mergeable_state === 'dirty';
+              if (!isConflicted) return false;
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: [marker, `Closed automatically because this generated PR has merge conflicts and has been open for more than ${staleHours} hours. A future collection run will create a fresh automation issue.`].join('\n'),
+              });
+              await closeLinkedIssues(pr.body || '', pr.number, `Closed because generated PR #${pr.number} had merge conflicts.`);
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pr.number,
+                state: 'closed',
+              });
+              core.info(`Closed stale conflicted generated PR #${pr.number} for ${dateKey}.`);
+              return true;
+            }
+
             const pulls = await github.paginate(github.rest.pulls.list, {
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -499,6 +530,7 @@ jobs:
             // Auto-merge stuck PRs that meet all criteria
             let mergedCount = 0;
             for (const { pr, labels, dateKey } of byDate.values()) {
+              if (await closeStaleConflictedGeneratedPr(pr, dateKey)) continue;
               if (pr.draft) continue;
               if (labels.has('needs-human-review')) continue;
               if (!bodyPattern.test(pr.body || '')) continue;

@@ -73,6 +73,16 @@ requireText(
   "Closed automatically after generated PR #",
   "Auto-merge must leave an audit trail when it closes linked issues",
 );
+requireText(
+  autoMerge,
+  "Auto merge is not allowed for this repository",
+  "Auto-merge must direct-merge generated PRs when repository auto-merge is disabled",
+);
+requireText(
+  autoMerge,
+  "core.setFailed(`Failed to enable auto-merge for PR #",
+  "Auto-merge must not report green when an unexpected auto-merge setup failure occurs",
+);
 
 requireOccurrences(
   reconcile,
@@ -114,6 +124,16 @@ requireText(
   reconcile,
   "check.name === 'validate' && check.conclusion === 'success'",
   "Reconciler stuck generated PR auto-merge must require a successful generated PR validation check",
+);
+requireText(
+  reconcile,
+  "closeStaleConflictedGeneratedPr",
+  "Reconciler must close stale conflicted generated PRs even when they are marked for human review",
+);
+requireText(
+  reconcile,
+  "Closed stale conflicted generated PR #",
+  "Reconciler must leave an audit trail when it closes stale conflicted generated PRs",
 );
 
 requireText(
