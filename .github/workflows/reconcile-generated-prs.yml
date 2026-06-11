@@ -259,7 +259,7 @@ jobs:
                     issue_number: issueNumber,
                     body: [
                       marker,
-                      `Closed automatically because generated PR #${prNumber} remained a draft with no file changes for more than ${staleMinutes} minutes.`,
+                      `Closed automatically because generated PR #${prNumber} remained with no file changes for more than ${staleMinutes} minutes.`,
                     ].join('\n'),
                   });
 
@@ -290,7 +290,7 @@ jobs:
               const createdAt = Date.parse(pr.created_at || 0);
               const isStale = Number.isFinite(createdAt) && createdAt < staleCutoff;
 
-              if (!isGeneratedPr || !pr.draft || !isStale) {
+              if (!isGeneratedPr || !isStale) {
                 continue;
               }
 
@@ -311,7 +311,7 @@ jobs:
 
               const commentBody = [
                 marker,
-                `Closed automatically because this generated PR remained a draft with no file changes for more than ${staleMinutes} minutes.`,
+                `Closed automatically because this generated PR remained with no file changes for more than ${staleMinutes} minutes.`,
                 '- A future collection run can open a new automation issue if work is still needed.',
               ].join('\n');
 
@@ -580,6 +580,14 @@ jobs:
                 ref: pull.head.sha,
                 per_page: 100,
               });
+              const validateRuns = await github.paginate(github.rest.actions.listWorkflowRuns, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                workflow_id: 'validate-generated-pr.yml',
+                head_sha: pull.head.sha,
+                per_page: 20,
+              });
+              const hasGeneratedPrValidationRun = validateRuns.some((run) => run.conclusion === 'success');
               const relevantChecks = checks.filter((check) =>
                 ['Validate generated PR', 'Request Copilot review', 'GitGuardian Security Checks'].includes(check.name) ||
                 check.app?.slug === 'github-actions',
@@ -598,7 +606,12 @@ jobs:
                 return false;
               }
 
-              return relevantChecks.some((check) => check.name === 'validate' && check.conclusion === 'success');
+              if (!hasGeneratedPrValidationRun) {
+                core.info(`PR #${prNumber} has no successful Validate generated PR workflow run for head SHA ${pull.head.sha}.`);
+                return false;
+              }
+
+              return true;
             }
 
             async function closeStaleConflictedGeneratedPr(pr, dateKey) {

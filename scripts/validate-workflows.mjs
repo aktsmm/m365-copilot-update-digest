@@ -5,6 +5,7 @@ const root = process.cwd();
 const workflowDir = path.join(root, ".github", "workflows");
 
 const files = {
+  gitAttributes: path.join(root, ".gitattributes"),
   collectUpdates: path.join(workflowDir, "collect-updates.yml"),
   validateGeneratedPr: path.join(workflowDir, "validate-generated-pr.yml"),
   requestReview: path.join(workflowDir, "request-copilot-review.yml"),
@@ -34,6 +35,7 @@ function requireOccurrences(content, expected, minCount, description) {
 }
 
 const collectUpdates = readWorkflow(files.collectUpdates);
+const gitAttributes = readWorkflow(files.gitAttributes);
 const validateGeneratedPr = readWorkflow(files.validateGeneratedPr);
 const requestReview = readWorkflow(files.requestReview);
 const autoMerge = readWorkflow(files.autoMerge);
@@ -83,6 +85,11 @@ requireText(
   "core.setFailed(`Failed to enable auto-merge for PR #",
   "Auto-merge must not report green when an unexpected auto-merge setup failure occurs",
 );
+requireText(
+  autoMerge,
+  "core.setFailed(`Failed to mark PR #${pr.number} ready for review:",
+  "Auto-merge must not report green when a draft generated PR cannot be marked ready for review",
+);
 
 requireOccurrences(
   reconcile,
@@ -117,13 +124,33 @@ requireText(
 );
 requireText(
   reconcile,
+  "if (!isGeneratedPr || !isStale)",
+  "Reconciler stale no-op cleanup must cover generated PRs with no file changes whether draft or ready",
+);
+requireText(
+  reconcile,
+  "remained with no file changes",
+  "Reconciler stale no-op cleanup audit text must not assume the PR is a draft",
+);
+requireText(
+  reconcile,
   "generatedPrChecksArePassing",
   "Reconciler stuck generated PR auto-merge must verify checks before merging",
 );
 requireText(
   reconcile,
-  "check.name === 'validate' && check.conclusion === 'success'",
-  "Reconciler stuck generated PR auto-merge must require a successful generated PR validation check",
+  "workflow_id: 'validate-generated-pr.yml'",
+  "Reconciler stuck generated PR auto-merge must require the Validate generated PR workflow, not any validate check",
+);
+requireText(
+  reconcile,
+  "head_sha: pull.head.sha",
+  "Reconciler stuck generated PR auto-merge must bind validation runs to the PR head SHA",
+);
+requireText(
+  reconcile,
+  "has no successful Validate generated PR workflow run for head SHA",
+  "Reconciler stuck generated PR auto-merge must log when generated PR validation is missing",
 );
 requireText(
   reconcile,
@@ -166,6 +193,21 @@ requireText(
   collectUpdates,
   "git diff --quiet -- data summaries drafts config/summary-ja-cache.json",
   "Collect workflow must commit summary cache-only generated changes",
+);
+requireText(
+  gitAttributes,
+  "drafts/**/*.md text eol=lf",
+  "Generated draft markdown must keep LF line endings across Windows and GitHub Actions",
+);
+requireText(
+  gitAttributes,
+  "summaries/**/*.md text eol=lf",
+  "Generated daily summaries must keep LF line endings across Windows and GitHub Actions",
+);
+requireText(
+  gitAttributes,
+  "data/**/*.json text eol=lf",
+  "Generated event JSON must keep LF line endings across Windows and GitHub Actions",
 );
 requireOccurrences(
   validateGeneratedPr,

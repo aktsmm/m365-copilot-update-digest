@@ -226,7 +226,8 @@ jobs:
                 });
                 pr = refreshed.data;
               } catch (error) {
-                core.warning(`Failed to mark PR #${pr.number} ready for review: ${error.message}`);
+                await markForHumanReview(`PR #${pr.number} could not be marked ready for review: ${error.message}`);
+                core.setFailed(`Failed to mark PR #${pr.number} ready for review: ${error.message}`);
                 return;
               }
             }

@@ -1,0 +1,8 @@
+# Keep generated and automation files stable across Windows and GitHub Actions.
+.gitattributes text eol=lf
+config/*.json text eol=lf
+data/**/*.json text eol=lf
+drafts/**/*.md text eol=lf
+summaries/**/*.md text eol=lf
+.github/workflows/*.yml text eol=lf
+scripts/**/*.mjs text eol=lf
