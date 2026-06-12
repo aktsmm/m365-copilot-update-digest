@@ -909,7 +909,11 @@ function cleanupRoadmapSummary(rawSummary) {
     .replace(/\bmicrosfot\b/gi, "Microsoft")
     .replace(/\s+/g, " ")
     .trim();
-  return excerptText(summary, 320);
+  const excerptedSummary = excerptText(summary, 320);
+  return excerptedSummary.replace(
+    /^(.*[.!?。！？])\s+[^.!?。！？]*\.\.\.$/,
+    "$1",
+  );
 }
 
 function parseRoadmapRssFeed(source, xmlText) {
