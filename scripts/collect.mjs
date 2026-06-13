@@ -802,6 +802,10 @@ function buildJapaneseFallbackTitle(event) {
       titleText,
     )
   ) {
+    if (/link unfurling/.test(titleText)) {
+      return `${event.productArea} でアプリ・エージェントのリンク展開を改善`;
+    }
+
     return `${event.productArea} の会議・チャット機能を更新`;
   }
 
@@ -1029,6 +1033,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     `${productArea} の更新`,
     `${productArea} の Roadmap 更新`,
   ]);
+  const genericMeetingTitle = `${productArea} の会議・チャット機能を更新`;
   const normalizedTitleEn = String(titleEn ?? "").toLowerCase();
   return (
     !titleJa ||
@@ -1054,7 +1059,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       titleJa !== "Copilot で scatter image effect に対応") ||
     (/redesigned channels page/.test(normalizedTitleEn) &&
       titleJa !== "Channels ページを刷新") ||
-    (titleJa === "Microsoft 365 Copilot の会議・チャット機能を更新" &&
+    (titleJa === genericMeetingTitle &&
       (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
       ) ||
@@ -1062,9 +1067,21 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
         COPILOT_IPHONE_PREVIEW_CHAT_PATTERN.test(normalizedTitleEn) ||
         COPILOT_CHAT_CENTERED_CREATE_PATTERN.test(normalizedTitleEn) ||
         /copilot search/.test(normalizedTitleEn) ||
-        /share.*agents?.*teams?|find meetings? based on topics?/.test(
+        /share.*agents?.*teams?|find meetings? based on topics?|link unfurling/.test(
           normalizedTitleEn,
         ))) ||
+    (/data loss prevention- data loss prevention to safeguard sensitive web search/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !== `${productArea} の会議・チャット機能を更新`) ||
+    (/improved request flows for apps and agents blocked by admins/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !== `${productArea} の会議・チャット機能を更新`) ||
+    (/adaptive card-based app .* copilot agent link unfurling in teams/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !== `${productArea} でアプリ・エージェントのリンク展開を改善`) ||
     (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
       !/anthropic models/.test(normalizedTitleEn))
   );
