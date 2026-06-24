@@ -329,11 +329,14 @@ function fixupJapaneseText(text) {
     .replace(/OneNote Mobile\s+で/g, "OneNote モバイルで")
     .replace(/OneNote Mobile\s+の/g, "OneNote モバイルの")
     .replace(/OneNote Mobile/g, "OneNote モバイル")
+    .replace(/([\u3040-\u30ff\u3400-\u9fff])Copilot/g, "$1 Copilot")
+    .replace(/Copilot([\u3040-\u30ff\u3400-\u9fff])/g, "Copilot $1")
     .replace(/Analyst\s+で/g, "アナリストで")
     .replace(/Designer\s+で/g, "デザイナーで")
     .replace(/人体\s*モデル/g, "Anthropic モデル")
     .replace(/([\u3040-\u30ff\u3400-\u9fff])Anthropic/g, "$1 Anthropic")
     .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1")
+    .replace(/\b[a-zA-Z]\.{3}(?=[\s\u3000、。]|$)/g, "...")
     .replace(/\n.{1,8}\.{2,3}$/, "...");
 }
 
