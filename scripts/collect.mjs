@@ -538,15 +538,15 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/create word documents from copilot notebooks/.test(text)) {
-    return `Copilot Notebooks から Word 文書生成に対応`;
+    return `Copilot ノートブック から Word 文書生成に対応`;
   }
 
   if (/create excel spreadsheets from copilot notebooks/.test(text)) {
-    return `Copilot Notebooks から Excel 作成に対応`;
+    return `Copilot ノートブック から Excel 作成に対応`;
   }
 
   if (/web link as a reference in copilot notebooks/.test(text)) {
-    return `Copilot Notebooks で Web リンクを参照元に追加可能に`;
+    return `Copilot ノートブック で Web リンクを参照元に追加可能に`;
   }
 
   if (/quickly edit an image in powerpoint/.test(text)) {
@@ -650,7 +650,7 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/mind maps in copilot notebooks/.test(text)) {
-    return `Copilot Notebooks に Mind Maps を追加`;
+    return `Copilot ノートブック に Mind Maps を追加`;
   }
 
   if (/engage private content in m365 copilot/.test(text)) {
@@ -766,7 +766,7 @@ function buildJapaneseFallbackTitle(event) {
     /copilot notebooks?/.test(text) &&
     /overview|summary|insights/.test(text)
   ) {
-    return `Copilot Notebooks の要約・インサイトを強化`;
+    return `Copilot ノートブック の要約・インサイトを強化`;
   }
 
   if (/share (?:your )?agents? (?:to|with) teams?/.test(titleText)) {
@@ -1340,7 +1340,10 @@ async function localizeJapaneseSummaries(
       continue;
     }
 
-    if (isUsableJapanese(event.summaryJa || event.summaryEn)) {
+    if (
+      isUsableJapanese(event.summaryJa || event.summaryEn) &&
+      !shouldIgnoreCachedJapaneseSummary(source, event.summaryJa)
+    ) {
       event.summaryJa = fixupJapaneseText(
         normalizeWhitespace(event.summaryJa || event.summaryEn),
       );
@@ -2107,12 +2110,26 @@ async function main() {
             latestTitleEn,
             evt.productArea || latestLocalized.productArea || "",
           ));
+      const fixedSummaryJa = fixupJapaneseText(evt.summaryJa || "");
+      const latestSummaryJa = latestLocalized?.summaryJa
+        ? fixupJapaneseText(latestLocalized.summaryJa)
+        : "";
+      const refreshSummaryFromLatest =
+        !!latestSummaryJa &&
+        shouldIgnoreCachedJapaneseSummary(
+          { sourceFamily: evt.sourceFamily || "" },
+          fixedSummaryJa,
+        ) &&
+        !shouldIgnoreCachedJapaneseSummary(
+          { sourceFamily: evt.sourceFamily || "" },
+          latestSummaryJa,
+        );
       return {
         ...evt,
         titleJa: refreshTitleFromLatest
           ? fixupJapaneseText(latestLocalized.titleJa)
           : fixedTitleJa,
-        summaryJa: fixupJapaneseText(evt.summaryJa || ""),
+        summaryJa: refreshSummaryFromLatest ? latestSummaryJa : fixedSummaryJa,
       };
     });
     const nextLog = {
