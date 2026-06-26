@@ -2102,14 +2102,25 @@ async function main() {
       const latestLocalized = localizedById.get(evt.id);
       const fixedTitleJa = fixupJapaneseText(evt.titleJa || "");
       const latestTitleEn = latestLocalized?.titleEn || evt.titleEn || evt.title;
+      const latestTitleJaFixed = latestLocalized?.titleJa
+        ? fixupJapaneseText(latestLocalized.titleJa)
+        : "";
       const refreshTitleFromLatest =
-        !!latestLocalized?.titleJa &&
+        !!latestTitleJaFixed &&
         (/(?:\.\.\.|…)\s*$/.test(fixedTitleJa) ||
           shouldIgnoreCachedJapaneseTitle(
             fixedTitleJa,
             latestTitleEn,
             evt.productArea || latestLocalized.productArea || "",
-          ));
+          ) ||
+          // Also refresh when the latest has a different, better title so that
+          // cache quality improvements are picked up on subsequent runs.
+          (latestTitleJaFixed !== fixedTitleJa &&
+            !shouldIgnoreCachedJapaneseTitle(
+              latestTitleJaFixed,
+              latestTitleEn,
+              evt.productArea || latestLocalized.productArea || "",
+            )));
       const fixedSummaryJa = fixupJapaneseText(evt.summaryJa || "");
       const latestSummaryJa = latestLocalized?.summaryJa
         ? fixupJapaneseText(latestLocalized.summaryJa)
@@ -2127,7 +2138,7 @@ async function main() {
       return {
         ...evt,
         titleJa: refreshTitleFromLatest
-          ? fixupJapaneseText(latestLocalized.titleJa)
+          ? latestTitleJaFixed
           : fixedTitleJa,
         summaryJa: refreshSummaryFromLatest ? latestSummaryJa : fixedSummaryJa,
       };
