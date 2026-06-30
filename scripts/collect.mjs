@@ -1120,6 +1120,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       titleJa !== "Copilot で scatter image effect に対応") ||
     (/redesigned channels page/.test(normalizedTitleEn) &&
       titleJa !== "Channels ページを刷新") ||
+    (/edit your document with copilot in powerpoint in government clouds/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !== `政府機関クラウドの PowerPoint で Copilot 文書編集に対応`) ||
     (titleJa === genericMeetingTitle &&
       (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
