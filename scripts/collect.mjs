@@ -434,6 +434,8 @@ function stageDescription(stage) {
 }
 
 function buildJapaneseFallbackSummary(event) {
+  const text =
+    `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
   const extractedSummary = excerptText(
     normalizeWhitespace(
       String(event.summaryEn || event.summary || "")
@@ -458,6 +460,34 @@ function buildJapaneseFallbackSummary(event) {
     )
   ) {
     return "Copilot Studio の Channels ページを刷新。";
+  }
+
+  if (/planner agent chat/.test(text)) {
+    return "Planner に組み込みの Agent チャットを追加し、自然言語でのQ&Aやタスク管理を強化。";
+  }
+
+  if (/planner agent in microsoft 365 copilot/.test(text)) {
+    return "Microsoft 365 Copilot で Planner Agent を提供し、タスクとプラン管理を効率化。";
+  }
+
+  if (/work iq apis/.test(text) && /remote mcp server support/.test(text)) {
+    return "Work IQ API からリモート MCP サーバーに接続し、外部ツール連携を安全に実行可能に。";
+  }
+
+  if (/intelliframe people labels/.test(text)) {
+    return "Teams Rooms on Windows の IntelliFrame で会議室参加者の人物ラベル表示に対応。";
+  }
+
+  if (/multimodal capture in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで音声・画像・メモのマルチモーダル取り込みに対応。";
+  }
+
+  if (/simplified design for the microsoft 365 copilot app/.test(text)) {
+    return "Microsoft 365 Copilot アプリの画面構成を刷新し、チャット導線と操作性を改善。";
+  }
+
+  if (/edit your document with copilot in powerpoint in government clouds/.test(text)) {
+    return "政府機関クラウド環境の PowerPoint で Copilot による資料作成・編集を利用可能に。";
   }
 
   if (
@@ -734,6 +764,34 @@ function buildJapaneseFallbackTitle(event) {
 
   if (/planner agent in group-based basic plans/.test(text)) {
     return `グループベースの basic plans で Planner Agent に対応`;
+  }
+
+  if (/planner agent chat/.test(text)) {
+    return `Planner Agent チャットを追加`;
+  }
+
+  if (/planner agent in microsoft 365 copilot/.test(text)) {
+    return `Microsoft 365 Copilot に Planner Agent を追加`;
+  }
+
+  if (/work iq apis/.test(text) && /remote mcp server support/.test(text)) {
+    return `Work IQ API でリモート MCP サーバー連携に対応`;
+  }
+
+  if (/intelliframe people labels in teams rooms on windows/.test(text)) {
+    return `Teams Rooms (Windows) の IntelliFrame に人物ラベルを追加`;
+  }
+
+  if (/multimodal capture in copilot notebooks/.test(text)) {
+    return `Copilot ノートブックでマルチモーダル キャプチャに対応`;
+  }
+
+  if (/simplified design for the microsoft 365 copilot app/.test(text)) {
+    return `Microsoft 365 Copilot アプリのデザインを簡素化`;
+  }
+
+  if (/edit your document with copilot in powerpoint in government clouds/.test(text)) {
+    return `政府機関クラウドの PowerPoint で Copilot 文書編集に対応`;
   }
 
   if (/overview experience/.test(text) && /agent dashboard/.test(text)) {
