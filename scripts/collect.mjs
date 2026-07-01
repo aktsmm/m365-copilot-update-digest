@@ -859,6 +859,15 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (
+    /copilot chat can now better match search results from scanned pdfs?/.test(
+      titleText,
+    ) &&
+    /text inside images embedded in word, excel, and powerpoint/.test(titleText)
+  ) {
+    return `Copilot Chat で PDF・画像内テキストの検索精度を向上`;
+  }
+
+  if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
     )
@@ -1147,6 +1156,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       normalizedTitleEn,
     ) &&
       titleJa !== `${productArea} でアプリ・エージェントのリンク展開を改善`) ||
+    (/copilot chat can now better match search results from scanned pdfs? and from text inside images embedded in word, excel, and powerpoint/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !== "Copilot Chat で PDF・画像内テキストの検索精度を向上") ||
     (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
       !/anthropic models/.test(normalizedTitleEn))
   );
