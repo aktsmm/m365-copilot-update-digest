@@ -1112,6 +1112,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     JAPANESE_TITLE_PREFIX_PATTERN.test(titleJa) ||
     titleJa === titleEn ||
     /(?:\.\.\.|…)\s*$/.test(titleJa) ||
+    /\n/.test(titleJa) ||
     genericTitles.has(titleJa) ||
     /副操縦士|コパイロット/.test(titleJa) ||
     /を接地する|を接地 |を接地$/.test(titleJa) ||
@@ -1151,7 +1152,8 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     (/improved request flows for apps and agents blocked by admins/.test(
       normalizedTitleEn,
     ) &&
-      titleJa !== `${productArea} の会議・チャット機能を更新`) ||
+      titleJa !==
+        "管理者によってブロックされたアプリとエージェントのリクエスト フローの改善") ||
     (/adaptive card-based app .* copilot agent link unfurling in teams/.test(
       normalizedTitleEn,
     ) &&
