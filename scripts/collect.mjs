@@ -317,6 +317,7 @@ function isUsableJapanese(value) {
 
 function fixupJapaneseText(text) {
   return String(text ?? "")
+    .replace(/Google の仕事検索バナー/g, "Google 向け Work Search バナー")
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
     .replace(/を接地する/g, "をグラウンディングする")
@@ -334,6 +335,7 @@ function fixupJapaneseText(text) {
     .replace(/Analyst\s+で/g, "アナリストで")
     .replace(/Designer\s+で/g, "デザイナーで")
     .replace(/人体\s*モデル/g, "Anthropic モデル")
+    .replace(/人間論は息子を説明します/g, "Anthropic は Claude Sonnet 5 を説明しています")
     .replace(/([\u3040-\u30ff\u3400-\u9fff])Anthropic/g, "$1 Anthropic")
     .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1")
     .replace(/\b[a-zA-Z]\.{3}(?=[\s\u3000、。]|$)/g, "...")
