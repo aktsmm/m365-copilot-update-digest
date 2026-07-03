@@ -868,6 +868,21 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (
+    /\[search ux\]/.test(titleText) &&
+    /data sources in search/.test(titleText)
+  ) {
+    return `${event.productArea} の検索・チャットでデータ ソース表示をカスタマイズ可能に`;
+  }
+
+  if (
+    /attach and reference an image/.test(titleText) &&
+    /copilot in powerpoint/.test(titleText) &&
+    /agent mode/.test(titleText)
+  ) {
+    return `PowerPoint の Agent Mode で画像の添付・参照に対応`;
+  }
+
+  if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
     )
@@ -1134,6 +1149,12 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       normalizedTitleEn,
     ) &&
       titleJa !== `政府機関クラウドの PowerPoint で Copilot 文書編集に対応`) ||
+    (titleJa === genericMeetingTitle &&
+      /\[search ux\].*data sources in search/.test(normalizedTitleEn)) ||
+    (titleJa === `${productArea} の Copilot 機能を更新` &&
+      /attach and reference an image/.test(normalizedTitleEn) &&
+      /copilot in powerpoint/.test(normalizedTitleEn) &&
+      /agent mode/.test(normalizedTitleEn)) ||
     (titleJa === genericMeetingTitle &&
       (!/(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
         normalizedTitleEn,
