@@ -884,6 +884,16 @@ function buildJapaneseFallbackTitle(event) {
     return `PowerPoint の Agent Mode で画像の添付・参照に対応`;
   }
 
+  if (/usage reports? - copilot chat for gcc/.test(titleText)) {
+    return `管理センターに GCC 向け Copilot Chat 使用状況レポートを追加`;
+  }
+
+  if (
+    /usage report for gcc high|copilot usage report.*gcc high/.test(titleText)
+  ) {
+    return `管理センターに GCC High・DoD 向け M365 Copilot 使用状況レポートを追加`;
+  }
+
   if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
@@ -1153,6 +1163,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       titleJa !== `政府機関クラウドの PowerPoint で Copilot 文書編集に対応`) ||
     (titleJa === genericMeetingTitle &&
       /\[search ux\].*data sources in search/.test(normalizedTitleEn)) ||
+    (titleJa === genericMeetingTitle &&
+      /admin center.*usage reports?|usage reports?.*copilot chat for gcc/.test(
+        normalizedTitleEn,
+      )) ||
     (titleJa === `${productArea} の Copilot 機能を更新` &&
       /attach and reference an image/.test(normalizedTitleEn) &&
       /copilot in powerpoint/.test(normalizedTitleEn) &&
