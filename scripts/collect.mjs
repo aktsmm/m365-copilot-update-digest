@@ -361,11 +361,14 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
   const genericFallbackPattern =
     /の更新です。.+に関する内容で、.+(?:案内されています|進行中です|廃止や移行対応が案内されています|更新内容が案内されています)。/;
   const shortReferencePattern = /^.{3,60}に関する更新。$/;
+  const embeddedEnglishSentencePattern =
+    /\s[A-Z][a-zA-Z]+(?:\s+[a-zA-Z]+){4,}[.]/;
   return (
     !isLikelyJapanese(normalizedSummaryJa) ||
     isMojibakeJapanese(normalizedSummaryJa) ||
     genericFallbackPattern.test(normalizedSummaryJa) ||
     shortReferencePattern.test(normalizedSummaryJa) ||
+    embeddedEnglishSentencePattern.test(normalizedSummaryJa) ||
     /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
     /を接地する|丸薬/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
