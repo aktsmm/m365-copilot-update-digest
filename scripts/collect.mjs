@@ -361,6 +361,9 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
   const genericFallbackPattern =
     /の更新です。.+に関する内容で、.+(?:案内されています|進行中です|廃止や移行対応が案内されています|更新内容が案内されています)。/;
   const shortReferencePattern = /^.{3,60}に関する更新。$/;
+  // Detects an untranslated English sentence (6+ words ending with a period) embedded
+  // within Japanese text. The threshold of {4,} (= 5 total words) avoids false positives
+  // from short product names like "Microsoft Copilot for Microsoft 365".
   const embeddedEnglishSentencePattern =
     /\s[A-Z][a-zA-Z]+(?:\s+[a-zA-Z]+){4,}[.]/;
   return (
