@@ -1203,7 +1203,11 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     ) &&
       titleJa !== "Copilot Chat で PDF・画像内テキストの検索精度を向上") ||
     (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
-      !/anthropic models/.test(normalizedTitleEn))
+      !/anthropic models/.test(normalizedTitleEn)) ||
+    (/data lifecycle management.*insights and policy recommendations/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa === "Microsoft Purview のセキュリティ・管理・分析機能を強化")
   );
 }
 
