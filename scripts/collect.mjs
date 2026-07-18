@@ -343,7 +343,12 @@ function fixupJapaneseText(text) {
 }
 
 function cleanupRoadmapTitle(title) {
-  return normalizeWhitespace(title.replace(/\):\s*\):/g, "):"));
+  return normalizeWhitespace(
+    title
+      .replace(/\):\s*\):/g, "):")
+      // Roadmap feed occasionally emits "Microsoft 356 Copilot"; normalize it.
+      .replace(/microsoft 356 copilot/gi, "Microsoft 365 Copilot"),
+  );
 }
 
 function cleanupJapaneseTitle(title) {
@@ -898,6 +903,22 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (
+    /use agent 365 agents within microsoft 365 copilot chat and declarative agents/.test(
+      titleText,
+    )
+  ) {
+    return `Copilot Chat と宣言型エージェントで Agent 365 エージェントを利用可能に`;
+  }
+
+  if (
+    /to safeguard sensitive information from external web search/.test(
+      titleText,
+    )
+  ) {
+    return `Microsoft Purview で外部 Web 検索向け DLP 保護を強化`;
+  }
+
+  if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
     )
@@ -1170,6 +1191,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       /admin center.*usage reports?|usage reports?.*copilot chat for gcc/.test(
         normalizedTitleEn,
       )) ||
+    (titleJa === genericMeetingTitle &&
+      /use agent 365 agents within microsoft 365 copilot chat and declarative agents/.test(
+        normalizedTitleEn,
+      )) ||
     (titleJa === `${productArea} の Copilot 機能を更新` &&
       /attach and reference an image/.test(normalizedTitleEn) &&
       /copilot in powerpoint/.test(normalizedTitleEn) &&
@@ -1185,10 +1210,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
         /share.*agents?.*teams?|find meetings? based on topics?|link unfurling/.test(
           normalizedTitleEn,
         ))) ||
-    (/data loss prevention- data loss prevention to safeguard sensitive web search/.test(
-      normalizedTitleEn,
-    ) &&
-      titleJa !== `${productArea} の会議・チャット機能を更新`) ||
+    (titleJa === genericMeetingTitle &&
+      /to safeguard sensitive information from external web search/.test(
+        normalizedTitleEn,
+      )) ||
     (/improved request flows for apps and agents blocked by admins/.test(
       normalizedTitleEn,
     ) &&
