@@ -347,7 +347,9 @@ function cleanupRoadmapTitle(title) {
     title
       .replace(/\):\s*\):/g, "):")
       // Roadmap feed occasionally emits "Microsoft 356 Copilot"; normalize it.
-      .replace(/microsoft 356 copilot/gi, "Microsoft 365 Copilot"),
+      .replace(/microsoft 356 copilot/gi, "Microsoft 365 Copilot")
+      // Remove duplicate consecutive bracket tags e.g. "[Copilot Search] [Copilot Search]".
+      .replace(/(\[[^\]]+\])\s+\1/g, "$1"),
   );
 }
 
@@ -1167,6 +1169,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     genericTitles.has(titleJa) ||
     /副操縦士|コパイロット/.test(titleJa) ||
     /を接地する|を接地 |を接地$/.test(titleJa) ||
+    // Reject titles where the translator preserved an English bracket tag at the start
+    // (e.g. "[Copilot Search] ..." → should use buildJapaneseFallbackTitle instead)
+    /^\[[A-Za-z]/.test(titleJa) ||
     (titleJa === "Microsoft 365 Copilot のライセンス・課金関連更新" &&
       !/(pay-as-you-go|pricing|billing|cost|capacity|sku|message pack|prepurchase|license assignment|license management|licensing)/.test(
         normalizedTitleEn,
