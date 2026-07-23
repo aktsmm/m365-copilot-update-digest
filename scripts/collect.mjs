@@ -932,6 +932,20 @@ function buildJapaneseFallbackTitle(event) {
     return `${event.productArea} の会議・チャット機能を更新`;
   }
 
+  if (/custom engine agent/.test(text)) {
+    const govEnv = /\bdod\b/i.test(text)
+      ? "DoD"
+      : /gcc high/i.test(text)
+        ? "GCC High"
+        : /\bgcc\b/i.test(text)
+          ? "GCC"
+          : null;
+    if (govEnv) {
+      return `${govEnv} のユーザーがカスタム エンジン エージェントを利用可能に`;
+    }
+    return `${event.productArea} でカスタム エンジン エージェントを利用可能に`;
+  }
+
   if (/connector|connect to|integration/.test(text)) {
     return `${event.productArea} の連携機能を拡張`;
   }
