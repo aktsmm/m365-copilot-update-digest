@@ -37,6 +37,7 @@ const TEXT = {
     navSearch: "検索",
     navAbout: "About",
     navRepository: "Repository",
+    demoNavLabel: "デモ一覧",
     unofficialBadge: "Unofficial update digest",
     headerLead: "非公式アップデートダイジェスト",
     heroTitle: "M365 Copilot の更新を、埋もれさせない。",
@@ -119,6 +120,7 @@ const TEXT = {
     navSearch: "Search",
     navAbout: "About",
     navRepository: "Repository",
+    demoNavLabel: "Demo sites",
     unofficialBadge: "Unofficial update digest",
     headerLead: "Unofficial update digest",
     heroTitle: "Keep M365 Copilot updates from getting buried.",
@@ -194,6 +196,30 @@ const TEXT = {
     originalTitleLabel: "Original",
   },
 };
+
+const DEMO_NAV_ITEMS = [
+  {
+    label: "Azure Ops Pulse",
+    href: "https://aktsmm.github.io/azure-ops-pulse-demo/#/overview",
+  },
+  {
+    label: "M365 Message Center Dashboard",
+    href: "https://aktsmm.github.io/m365-message-center-dashboard/",
+  },
+  {
+    label: "M365 Copilot Update Digest",
+    href: "https://aktsmm.github.io/m365-copilot-update-digest/",
+    current: true,
+  },
+  {
+    label: "Daily Dev Byte",
+    href: "https://aktsmm.github.io/daily-dev-byte/",
+  },
+  {
+    label: "VS Code Copilot Digest",
+    href: "https://aktsmm.github.io/vscode-copilot-digest/index.html",
+  },
+];
 
 async function readJson(filePath, fallbackValue) {
   try {
@@ -562,6 +588,19 @@ function renderNav(locale, depth, activeNav, siteMeta, alternatePath) {
   return `<header class="site-header"><div class="site-header-copy"><a class="site-brand" href="${escapeHtml(relativeHref(depth, localePath(locale, "")))}">${escapeHtml(siteMeta.siteName)}</a><p class="site-lead">${escapeHtml(text.headerLead)}</p></div><nav class="site-nav">${navHtml}${repoHtml}${switchHtml}</nav></header>`;
 }
 
+function renderDemoNav(locale) {
+  const text = TEXT[locale];
+  const items = DEMO_NAV_ITEMS.map((item) => {
+    if (item.current) {
+      return `<li><span class="demo-nav-current" aria-current="page">${escapeHtml(item.label)}</span></li>`;
+    }
+
+    return `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a></li>`;
+  }).join("");
+
+  return `<nav class="demo-nav" aria-label="${escapeHtml(text.demoNavLabel)}"><span class="demo-nav-label">${escapeHtml(text.demoNavLabel)}</span><ul class="demo-nav-links">${items}</ul></nav>`;
+}
+
 function renderLayout({
   locale,
   depth,
@@ -593,6 +632,7 @@ function renderLayout({
   <body class="${escapeHtml(bodyClass)}" ${bodyAttributes}>
     <div class="page-shell">
       ${renderNav(locale, depth, activeNav, siteMeta, alternatePath)}
+      ${renderDemoNav(locale)}
       ${content}
       <footer class="site-footer">
         <p>${escapeHtml(TEXT[locale].footerLead)}</p>

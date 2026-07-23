@@ -101,6 +101,8 @@ jobs:
             deferReason = 'Generated PR metadata is still pending normalization.';
           } else if (isDraft && changed.length === 0) {
             deferReason = 'Draft generated PR has no file changes yet.';
+          } else if (!inferableSource) {
+            deferReason = 'PR is not a generated digest automation PR.';
           }
 
           fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed_count=${changed.length}\n`);
