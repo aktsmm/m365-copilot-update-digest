@@ -921,6 +921,13 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (
+    /improved discovery of copilot connector sources/.test(text) &&
+    /content source filter/.test(text)
+  ) {
+    return `コンテンツ ソース フィルターによる Copilot コネクタ ソース検出の改善`;
+  }
+
+  if (
     /(teams|meeting|meetings|chat|channel|outlook|inbox|voice|archive)/.test(
       titleText,
     )
@@ -944,6 +951,18 @@ function buildJapaneseFallbackTitle(event) {
       return `${govEnv} のユーザーがカスタム エンジン エージェントを利用可能に`;
     }
     return `${event.productArea} でカスタム エンジン エージェントを利用可能に`;
+  }
+
+  if (
+    /rich entity representation/.test(text) &&
+    /connector/.test(text) &&
+    /search results?/.test(text)
+  ) {
+    return `検索結果のコネクタのリッチ エンティティ表現に対応`;
+  }
+
+  if (/people skills.*removal and deletion admin control/.test(text)) {
+    return `People Skills の削除管理コントロール`;
   }
 
   if (/connector|connect to|integration/.test(text)) {
@@ -1233,6 +1252,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       /to safeguard sensitive information from external web search/.test(
         normalizedTitleEn,
       )) ||
+    (titleJa === genericMeetingTitle &&
+      /improved discovery of copilot connector sources/.test(
+        normalizedTitleEn,
+      )) ||
     (/improved request flows for apps and agents blocked by admins/.test(
       normalizedTitleEn,
     ) &&
@@ -1251,7 +1274,15 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     (/data lifecycle management.*insights and policy recommendations/.test(
       normalizedTitleEn,
     ) &&
-      titleJa === "Microsoft Purview のセキュリティ・管理・分析機能を強化")
+      titleJa === "Microsoft Purview のセキュリティ・管理・分析機能を強化") ||
+    (/rich entity representation.*connector.*search results?/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !== "検索結果のコネクタのリッチ エンティティ表現に対応") ||
+    (/people skills.*removal and deletion admin control/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !== "People Skills の削除管理コントロール")
   );
 }
 
