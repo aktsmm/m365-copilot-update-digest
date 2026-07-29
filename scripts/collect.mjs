@@ -336,6 +336,8 @@ function fixupJapaneseText(text) {
     .replace(/Designer\s+で/g, "デザイナーで")
     .replace(/人体\s*モデル/g, "Anthropic モデル")
     .replace(/人間論は息子を説明します/g, "Anthropic は Claude Sonnet 5 を説明しています")
+    .replace(/Agent Dashboard の 概要 と エージェント カテゴリ を刷新/g, "Agent Dashboard の概要とエージェント カテゴリを刷新")
+    .replace(/新しい 概要 ページ/g, "新しい概要ページ")
     .replace(/([\u3040-\u30ff\u3400-\u9fff])Anthropic/g, "$1 Anthropic")
     .replace(/Anthropic([\u3040-\u30ff\u3400-\u9fff])/g, "Anthropic $1")
     .replace(/\b[a-zA-Z]\.{3}(?=[\s\u3000、。]|$)/g, "...")
@@ -595,6 +597,10 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot ノートブック から Excel 作成に対応`;
   }
 
+  if (/outlook emails in copilot notebooks/.test(text)) {
+    return `Copilot ノートブックで Outlook メールを参照可能に`;
+  }
+
   if (/web link as a reference in copilot notebooks/.test(text)) {
     return `Copilot ノートブック で Web リンクを参照元に追加可能に`;
   }
@@ -815,7 +821,7 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/overview experience/.test(text) && /agent dashboard/.test(text)) {
-    return `Agent Dashboard の overview と agent categories を刷新`;
+    return `Agent Dashboard の概要とエージェント カテゴリを刷新`;
   }
 
   if (/submit agent to agent store/.test(text)) {
@@ -1266,6 +1272,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     genericTitles.has(titleJa) ||
     /副操縦士|コパイロット/.test(titleJa) ||
     /を接地する|を接地 |を接地$/.test(titleJa) ||
+    titleJa === "Agent Dashboard の overview と agent categories を刷新" ||
+    titleJa === "New 概要 experience in Agent Dashboard" ||
+    titleJa === "Outlook Emails in Copilot ノートブック" ||
     // Reject titles where the translator preserved an English bracket tag at the start
     // (e.g. "[Copilot Search] ..." → should use buildJapaneseFallbackTitle instead)
     /^\[[A-Za-z]/.test(titleJa) ||
