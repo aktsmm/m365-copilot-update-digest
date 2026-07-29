@@ -555,6 +555,14 @@ function buildJapaneseFallbackTitle(event) {
     return `${event.productArea} のエージェント評価`;
   }
 
+  if (/data security triage agent|triage agent.*insider risk/.test(text)) {
+    return `内部リスク管理のデータ セキュリティ トリアージ エージェントを強化`;
+  }
+
+  if (/dlp policy change insights?/.test(text)) {
+    return `Security Copilot で DLP ポリシー変更の説明を自動生成`;
+  }
+
   if (/security|governance|analytics/.test(text)) {
     return `${event.productArea} のセキュリティ・管理・分析機能を強化`;
   }
@@ -925,6 +933,62 @@ function buildJapaneseFallbackTitle(event) {
     /content source filter/.test(text)
   ) {
     return `コンテンツ ソース フィルターによる Copilot コネクタ ソース検出の改善`;
+  }
+
+  if (/referenced sources.*cited.*content|cited.*referenced sources/.test(text)) {
+    return `Copilot の下書きに参照ソースの引用を表示`;
+  }
+
+  if (/manage built-?in.*agents?.*admin center|admin center.*manage.*built-?in.*agents?/.test(text)) {
+    return `Teams 管理センターで組み込みエージェントを管理可能に`;
+  }
+
+  if (/license requests? page|dedicated.*license requests?/.test(text)) {
+    return `管理センターに Copilot ライセンス申請専用ページを新設`;
+  }
+
+  if (/new rich answer cards?|rich answer cards?/.test(titleText)) {
+    return `Copilot にリッチ回答カードを追加`;
+  }
+
+  if (/facilitator.*(?:detects?|answers?).*questions?/.test(text)) {
+    return `Teams Facilitator が会議中の質問を自動検知・回答`;
+  }
+
+  if (/ad-?hoc room reservation/.test(text)) {
+    return `Teams Rooms on Windows でアドホック会議室予約に対応`;
+  }
+
+  if (/workforce insights/.test(titleText)) {
+    return `Copilot に Workforce Insights Agent を追加`;
+  }
+
+  if (/mcp agents?.*interactive ui|interactive ui.*widgets?.*(?:mcp|government)/.test(text)) {
+    return `政府機関クラウドで MCP エージェントのインタラクティブ UI に対応`;
+  }
+
+  if (/copilot enhanced topic assignment|enhanced topic assignment/.test(text)) {
+    return `Viva で Copilot によるトピック割り当て精度を向上`;
+  }
+
+  if (/ai.?generated status reports?.*planner|planner.*ai.?generated status reports?/.test(text)) {
+    return `Planner Agent に AI 生成ステータス レポート機能を追加`;
+  }
+
+  if (/outlook emails?.*copilot notebooks?|copilot notebooks?.*outlook emails?/.test(text)) {
+    return `Copilot ノートブックで Outlook メールを参照可能に`;
+  }
+
+  if (/intelligent.*recap.*without.*(?:saving|retaining).*transcript|without.*transcript.*recap/.test(text)) {
+    return `トランスクリプト保存不要でインテリジェント会議まとめを生成可能に`;
+  }
+
+  if (/copilot chat.*pop.?out|pop.?out.*copilot chat/.test(text)) {
+    return `Outlook for Mac・iPad で Copilot Chat のポップアウトに対応`;
+  }
+
+  if (/flexible layouts?.*rich ux|da's.*flexible layouts?|makers.*flexible.*agents?/.test(text)) {
+    return `宣言型エージェントでフレキシブル レイアウトとリッチ UI に対応`;
   }
 
   if (
