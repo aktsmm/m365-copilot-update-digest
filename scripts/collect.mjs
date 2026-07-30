@@ -347,6 +347,7 @@ function fixupJapaneseText(text) {
 function cleanupRoadmapTitle(title) {
   return normalizeWhitespace(
     title
+      .replace(/\s*\n+\s*/g, " ")
       .replace(/\):\s*\):/g, "):")
       // Roadmap feed occasionally emits "Microsoft 356 Copilot"; normalize it.
       .replace(/microsoft 356 copilot/gi, "Microsoft 365 Copilot")
@@ -993,6 +994,22 @@ function buildJapaneseFallbackTitle(event) {
     return `Outlook for Mac・iPad で Copilot Chat のポップアウトに対応`;
   }
 
+  if (
+    /ai-powered notes for in-person meetings with facilitator in teams rooms on android/.test(
+      text,
+    )
+  ) {
+    return `Android 上の Teams Rooms でのファシリテーターとの対面会議用の AI を活用したメモ`;
+  }
+
+  if (
+    /ai-powered notes for in-person meetings with facilitator in teams rooms on windows/.test(
+      text,
+    )
+  ) {
+    return `Windows 上の Teams Rooms でのファシリテーターとの対面会議用の AI を活用したメモ`;
+  }
+
   if (/flexible layouts?.*rich ux|da's.*flexible layouts?|makers.*flexible.*agents?/.test(text)) {
     return `宣言型エージェントでフレキシブル レイアウトとリッチ UI に対応`;
   }
@@ -1327,6 +1344,10 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       )) ||
     (titleJa === genericMeetingTitle &&
       /improved discovery of copilot connector sources/.test(
+        normalizedTitleEn,
+      )) ||
+    (titleJa === genericMeetingTitle &&
+      /ai-powered notes for in-person meetings with facilitator in teams rooms on (android|windows)/.test(
         normalizedTitleEn,
       )) ||
     (/improved request flows for apps and agents blocked by admins/.test(
