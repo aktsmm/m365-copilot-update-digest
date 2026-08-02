@@ -1029,11 +1029,13 @@ function buildJapaneseFallbackTitle(event) {
   if (/custom engine agent/.test(text)) {
     const govEnv = /\bdod\b/i.test(text)
       ? "DoD"
-      : /gcc high/i.test(text)
-        ? "GCC High"
-        : /\bgcc\b/i.test(text)
-          ? "GCC"
-          : null;
+      : /\bgcc[-\s]?h(?:igh)?\b/i.test(text)
+        ? "GCC-H"
+        : /\bgcc[-\s]?m\b/i.test(text)
+          ? "GCC-M"
+          : /\bgcc\b/i.test(text)
+            ? "GCC"
+            : null;
     if (govEnv) {
       return `${govEnv} のユーザーがカスタム エンジン エージェントを利用可能に`;
     }
@@ -1278,6 +1280,17 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
   ]);
   const genericMeetingTitle = `${productArea} の会議・チャット機能を更新`;
   const normalizedTitleEn = String(titleEn ?? "").toLowerCase();
+  const expectedCustomEngineEnv = /custom engine agent/.test(normalizedTitleEn)
+    ? /\bdod\b/.test(normalizedTitleEn)
+      ? "DoD"
+      : /\bgcc[-\s]?h(?:igh)?\b/.test(normalizedTitleEn)
+        ? "GCC-H"
+        : /\bgcc[-\s]?m\b/.test(normalizedTitleEn)
+          ? "GCC-M"
+          : /\bgcc\b/.test(normalizedTitleEn)
+            ? "GCC"
+            : ""
+    : "";
   return (
     !titleJa ||
     !isLikelyJapanese(titleJa) ||
@@ -1376,7 +1389,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     (/people skills.*removal and deletion admin control/.test(
       normalizedTitleEn,
     ) &&
-      titleJa !== "People Skills の削除管理コントロール")
+      titleJa !== "People Skills の削除管理コントロール") ||
+    (expectedCustomEngineEnv &&
+      !String(titleJa).includes(expectedCustomEngineEnv))
   );
 }
 
