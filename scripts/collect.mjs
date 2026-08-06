@@ -610,6 +610,14 @@ function buildJapaneseFallbackTitle(event) {
     return `PowerPoint で画像の即時編集に対応`;
   }
 
+  if (
+    /reference an attached powerpoint deck.?s style.*agent mode in powerpoint/.test(
+      text,
+    )
+  ) {
+    return `PowerPoint の Agent Mode で添付資料のスタイルを新規プレゼンテーションに適用可能に`;
+  }
+
   if (/create interactive visuals in copilot pages/.test(text)) {
     return `Copilot Pages でインタラクティブな可視化を作成可能に`;
   }
