@@ -317,9 +317,15 @@ function isUsableJapanese(value) {
 
 function fixupJapaneseText(text) {
   return String(text ?? "")
+    .replace(/Agent Readiness/g, "エージェント準備状況")
     .replace(/Google の仕事検索バナー/g, "Google 向け Work Search バナー")
     .replace(/副操縦士/g, "Copilot")
     .replace(/コパイロット/g, "Copilot")
+    .replace(/Queues app/g, "キュー アプリ")
+    .replace(/Queues アプリ/g, "キュー アプリ")
+    .replace(/([はがをにでと])\s+Notebook\s+([にはをでと])/g, "$1ノートブック$2")
+    .replace(/\bNotebook\b\s+([にはをでと])/g, "ノートブック$1")
+    .replace(/\bNotebook\b/g, "ノートブック")
     .replace(/を接地する/g, "をグラウンディングする")
     .replace(/丸薬/g, "ピル")
     .replace(/Copilot Notebooks\s+での/g, "Copilot ノートブックでの")
