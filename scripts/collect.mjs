@@ -387,6 +387,8 @@ function shouldIgnoreCachedJapaneseSummary(source, summaryJa) {
     embeddedEnglishSentencePattern.test(normalizedSummaryJa) ||
     /副操縦士|コパイロット/.test(normalizedSummaryJa) ||
     /を接地する|丸薬/.test(normalizedSummaryJa) ||
+    /顧客と同じ知識中心/.test(normalizedSummaryJa) ||
+    /のユーザーの受信トレイ全体/.test(normalizedSummaryJa) ||
     (source.sourceFamily === "Tech Community" &&
       /公開ドキュメント由来の更新です。?$/.test(normalizedSummaryJa))
   );
@@ -509,6 +511,30 @@ function buildJapaneseFallbackSummary(event) {
 
   if (/edit your document with copilot in powerpoint in government clouds/.test(text)) {
     return "政府機関クラウド環境の PowerPoint で Copilot による資料作成・編集を利用可能に。";
+  }
+
+  if (/sql server support in microsoft copilot studio/.test(text)) {
+    return "Copilot Studio の Azure SQL ナレッジ ソースにより、エージェントが Azure SQL に保存された業務データを参照できるようになります。";
+  }
+
+  if (/use copilot chat after a call in queues app/.test(text)) {
+    return "キュー アプリで録音済み通話後に Copilot Chat を使い、要点把握、洞察確認、顧客課題の解決を効率化できます。";
+  }
+
+  if (/intelligent call recaps in queues app/.test(text)) {
+    return "キュー アプリで録音済み通話の AI 要約、主要な議論ポイント、フォローアップ アクションを確認できるようになります。";
+  }
+
+  if (/language support for summarize in classic outlook/.test(text)) {
+    return "従来の Outlook で、コンテンツの言語と Outlook の表示言語が異なる場合に Copilot の要約応答の言語を選択できます。";
+  }
+
+  if (
+    /copilot chat in outlook expands to reason over inbox, calendar, and enterprise data/.test(
+      text,
+    )
+  ) {
+    return "Outlook の Copilot Chat が、受信トレイ、予定表、その他のエンタープライズ データを横断した推論に対応します。";
   }
 
   if (
@@ -984,6 +1010,30 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot に Workforce Insights Agent を追加`;
   }
 
+  if (/sql server support in microsoft copilot studio/.test(titleText)) {
+    return `Microsoft Copilot Studio での SQL サーバーのサポート`;
+  }
+
+  if (/use copilot chat after a call in queues app/.test(titleText)) {
+    return `キュー アプリでの通話後に Copilot チャットを使用する`;
+  }
+
+  if (/intelligent call recaps in queues app/.test(titleText)) {
+    return `キュー アプリでのインテリジェントな通話の要約`;
+  }
+
+  if (/language support for summarize in classic outlook/.test(titleText)) {
+    return `従来の Outlook での要約の言語サポート`;
+  }
+
+  if (
+    /copilot chat in outlook expands to reason over inbox, calendar, and enterprise data/.test(
+      titleText,
+    )
+  ) {
+    return `Outlook の Copilot Chat が受信トレイ、カレンダー、エンタープライズ データの推論に対応`;
+  }
+
   if (/mcp agents?.*interactive ui|interactive ui.*widgets?.*(?:mcp|government)/.test(text)) {
     return `政府機関クラウドで MCP エージェントのインタラクティブ UI に対応`;
   }
@@ -1404,8 +1454,25 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       normalizedTitleEn,
     ) &&
       titleJa !== "People Skills の削除管理コントロール") ||
+    (/copilot chat in outlook expands to reason over inbox, calendar, and enterprise data/.test(
+      normalizedTitleEn,
+    ) &&
+      titleJa !==
+        "Outlook の Copilot Chat が受信トレイ、カレンダー、エンタープライズ データの推論に対応") ||
     (expectedCustomEngineEnv &&
       !String(titleJa).includes(expectedCustomEngineEnv))
+  );
+}
+
+function shouldPreferKnownFallbackSummary(event) {
+  const text =
+    `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+  return (
+    event.sourceFamily === "Roadmap" &&
+    /(?:\.\.\.|…)\s*$/.test(event.summaryEn || event.summary || "") &&
+    /sql server support in microsoft copilot studio|use copilot chat after a call in queues app|intelligent call recaps in queues app/.test(
+      text,
+    )
   );
 }
 
@@ -1656,6 +1723,20 @@ async function localizeJapaneseSummaries(
       shouldPreservePastLocalization(existing, nowIso)
     ) {
       event.summaryJa = fixupJapaneseText(normalizeWhitespace(existing.summaryJa));
+      continue;
+    }
+
+    if (shouldPreferKnownFallbackSummary(event)) {
+      event.summaryJa = buildJapaneseFallbackSummary(event);
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        {
+          summary: event.summaryEn,
+          summaryJa: event.summaryJa,
+        },
+        nowIso,
+      );
       continue;
     }
 
@@ -2446,10 +2527,13 @@ async function main() {
         : "";
       const refreshSummaryFromLatest =
         !!latestSummaryJa &&
-        shouldIgnoreCachedJapaneseSummary(
+        (shouldIgnoreCachedJapaneseSummary(
           { sourceFamily: evt.sourceFamily || "" },
           fixedSummaryJa,
-        ) &&
+        ) ||
+          (latestLocalized &&
+            shouldPreferKnownFallbackSummary(latestLocalized) &&
+            latestSummaryJa !== fixedSummaryJa)) &&
         !shouldIgnoreCachedJapaneseSummary(
           { sourceFamily: evt.sourceFamily || "" },
           latestSummaryJa,
