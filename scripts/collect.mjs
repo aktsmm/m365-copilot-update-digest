@@ -634,6 +634,14 @@ function buildJapaneseFallbackTitle(event) {
     return `Copilot ノートブックで Outlook メールを参照可能に`;
   }
 
+  if (
+    /vision in microsoft 365 copilot/.test(text) &&
+    /desktop screen/.test(text) &&
+    /mobile camera/.test(text)
+  ) {
+    return `Microsoft 365 Copilot の Vision で画面共有・モバイル カメラの内容分析に対応`;
+  }
+
   if (/web link as a reference in copilot notebooks/.test(text)) {
     return `Copilot ノートブック で Web リンクを参照元に追加可能に`;
   }
