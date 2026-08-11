@@ -317,6 +317,8 @@ function isUsableJapanese(value) {
 
 function fixupJapaneseText(text) {
   return String(text ?? "")
+    .replace(/Data Security Posture Agent/g, "データ セキュリティ体制エージェント")
+    .replace(/Microsoft Dataverse/g, "Dataverse")
     .replace(/Agent Readiness/g, "エージェント準備状況")
     .replace(/Google の仕事検索バナー/g, "Google 向け Work Search バナー")
     .replace(/副操縦士/g, "Copilot")
