@@ -486,6 +486,14 @@ function knownJapaneseRoadmapSummary(event) {
     return "Copilot Pages の [ショートカット] メニューから [編集の提案] を選ぶと、Copilot がページ内容を分析し、文章の明瞭さや品質を改善するための具体的な提案を表示します。提案はページに直接適用できます。";
   }
 
+  if (/sharepoint: html pages/.test(text)) {
+    return "SharePoint で Copilot を使って HTML ページを作成したり、外部で作成した HTML をアップロードしたりできます。ページ ライブラリに保存後、SharePoint ページとして表示、編集、共有でき、既存の ASPX ページと並べて表現の幅を広げられます。";
+  }
+
+  if (/add agents and skills from the plus menu/.test(text)) {
+    return "Copilot のプラス (+) メニューから [作業内容の追加] を選び、[エージェントとスキル] タブで専用タスク向けのエージェントやスキルをプロンプトに追加できます。/ や @ の入力でも呼び出せます。";
+  }
+
   return "";
 }
 
@@ -628,6 +636,14 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/get actionable suggestions from copilot in your copilot page/.test(text)) {
     return "Copilot Pages で実用的な編集提案を取得可能に";
+  }
+
+  if (/sharepoint: html pages/.test(text)) {
+    return "SharePoint で HTML ページを作成・公開可能に";
+  }
+
+  if (/add agents and skills from the plus menu/.test(text)) {
+    return "Copilot のプラス メニューからエージェントとスキルを追加可能に";
   }
 
   return "";
