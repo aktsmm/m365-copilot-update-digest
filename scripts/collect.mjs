@@ -458,6 +458,37 @@ function stageDescription(stage) {
   }
 }
 
+function knownJapaneseRoadmapSummary(event) {
+  const text =
+    `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/agents usage report/.test(text)) {
+    return "Microsoft 365 管理センターで、M365 Copilot と Copilot Chat のエージェント使用状況を確認できる新しいレポートを提供。ライセンス有無別のアクティブ ユーザー数、アクティブなエージェント数、ユーザーの内訳を確認できます。";
+  }
+
+  if (/teams meetings in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで Teams 会議をナレッジ ソースとして参照可能に。トランスクリプト、メモ、チャット、共有コンテンツを基に、会議の議論や決定事項に沿った Copilot の応答を得られます。";
+  }
+
+  if (/csv and tsv references in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで CSV・TSV ファイルをナレッジ ソースとして参照可能に。構造化されたリストや表をプロジェクトに取り込み、より関連性の高いプレゼンテーション、レポート、概要を作成できます。";
+  }
+
+  if (/jpg and png references in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで JPG・PNG ファイルをナレッジ ソースとして参照可能に。画像内のテキスト、グラフ、図などをコンテキストとして活用し、より関連性の高い出力を生成できます。";
+  }
+
+  if (/new copilot notebooks design.*(?:dod|gcc)/.test(text)) {
+    return "DoD、GCC、GCC High 向け Microsoft 365 Copilot アプリで Copilot ノートブックの新デザインを提供。関連するチャット、作成物、参照を永続的な AI ワークスペースに整理し、蓄積したコンテキストをセッションをまたいで活用できます。";
+  }
+
+  if (/get actionable suggestions from copilot in your copilot page/.test(text)) {
+    return "Copilot Pages の [ショートカット] メニューから [編集の提案] を選ぶと、Copilot がページ内容を分析し、文章の明瞭さや品質を改善するための具体的な提案を表示します。提案はページに直接適用できます。";
+  }
+
+  return "";
+}
+
 function buildJapaneseFallbackSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
@@ -477,6 +508,11 @@ function buildJapaneseFallbackSummary(event) {
 
   if (isLikelyJapanese(extractedSummary) && extractedSummary.length >= 12) {
     return extractedSummary;
+  }
+
+  const knownSummary = knownJapaneseRoadmapSummary(event);
+  if (knownSummary) {
+    return knownSummary;
   }
 
   if (
@@ -566,6 +602,37 @@ function buildJapaneseFallbackSummary(event) {
   );
 }
 
+function knownJapaneseRoadmapTitle(event) {
+  const text =
+    `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/agents usage report/.test(text)) {
+    return "Microsoft 365 管理センター: エージェントの使用状況レポート";
+  }
+
+  if (/teams meetings in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックでの Teams ミーティング";
+  }
+
+  if (/csv and tsv references in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで CSV・TSV ファイルを参照可能に";
+  }
+
+  if (/jpg and png references in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで JPG・PNG ファイルを参照可能に";
+  }
+
+  if (/new copilot notebooks design.*(?:dod|gcc)/.test(text)) {
+    return "DoD・GCC・GCC High 向け Copilot ノートブックの新デザイン";
+  }
+
+  if (/get actionable suggestions from copilot in your copilot page/.test(text)) {
+    return "Copilot Pages で実用的な編集提案を取得可能に";
+  }
+
+  return "";
+}
+
 function buildJapaneseFallbackTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
@@ -583,6 +650,11 @@ function buildJapaneseFallbackTitle(event) {
     .replace(/^microsoft edge:\s*/i, "")
     .trim();
   const titleText = normalizedTitle.toLowerCase();
+
+  const knownTitle = knownJapaneseRoadmapTitle(event);
+  if (knownTitle) {
+    return knownTitle;
+  }
 
   if (/welcome to the .*blog|launch of the .*blog/.test(text)) {
     return `${event.productArea} 公式ブログ開始`;
@@ -1365,6 +1437,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
             ? "GCC"
             : ""
     : "";
+  const knownTitle = knownJapaneseRoadmapTitle({ titleEn });
   return (
     !titleJa ||
     !isLikelyJapanese(titleJa) ||
@@ -1373,6 +1446,7 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
     titleJa === titleEn ||
     /(?:\.\.\.|…)\s*$/.test(titleJa) ||
     /\n/.test(titleJa) ||
+    (knownTitle && titleJa !== knownTitle) ||
     genericTitles.has(titleJa) ||
     /副操縦士|コパイロット/.test(titleJa) ||
     /を接地する|を接地 |を接地$/.test(titleJa) ||
@@ -1479,10 +1553,11 @@ function shouldPreferKnownFallbackSummary(event) {
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
   return (
     event.sourceFamily === "Roadmap" &&
-    /(?:\.\.\.|…)\s*$/.test(event.summaryEn || event.summary || "") &&
-    /sql server support in microsoft copilot studio|use copilot chat after a call in queues app|intelligent call recaps in queues app/.test(
-      text,
-    )
+    (knownJapaneseRoadmapSummary(event) ||
+      (/(?:\.\.\.|…)\s*$/.test(event.summaryEn || event.summary || "") &&
+        /sql server support in microsoft copilot studio|use copilot chat after a call in queues app|intelligent call recaps in queues app/.test(
+          text,
+        )))
   );
 }
 
