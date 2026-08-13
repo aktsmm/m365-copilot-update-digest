@@ -646,6 +646,14 @@ function knownJapaneseRoadmapTitle(event) {
     return "Copilot のプラス メニューからエージェントとスキルを追加可能に";
   }
 
+  if (
+    /copilot improved long files navigation using document structure, enabling more accurate answers and clearer citations/.test(
+      text,
+    )
+  ) {
+    return "Copilot が文書構造を活用した長文ファイル ナビゲーションを強化";
+  }
+
   return "";
 }
 
