@@ -614,6 +614,10 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/data security triage agent summaries and categorizations for dlp alerts/.test(text)) {
+    return "DLP アラートのデータ セキュリティ トリアージ エージェントの要約・分類を Defender XDR で提供";
+  }
+
   if (/agents usage report/.test(text)) {
     return "Microsoft 365 管理センター: エージェントの使用状況レポート";
   }
