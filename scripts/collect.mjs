@@ -1259,7 +1259,7 @@ function buildJapaneseFallbackTitle(event) {
 
 function roadmapProductArea(title, categories, source) {
   const text = `${title}\n${categories.join("\n")}`.toLowerCase();
-  if (/^microsoft purview:|^purview:/.test(text)) {
+  if (/^microsoft purview(?: compliance portal)?:|^purview:/.test(text)) {
     return "Microsoft Purview";
   }
 
