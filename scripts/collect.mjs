@@ -462,6 +462,30 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/planner: available in outlook/.test(text)) {
+    return "Outlook の Planner で、受信トレイからタスクやプラン、新しい Planner エージェントを直接管理できます。";
+  }
+
+  if (/work iq apis - endpoints: declarative agent access/.test(text)) {
+    return "Work IQ API エンドポイントを通じて、ファーストパーティおよびテナント定義の宣言型エージェントにプログラムからアクセスできます。";
+  }
+
+  if (/updated ui for copilot chat entry point in word, excel and powerpoint apps/.test(text)) {
+    return "Word、Excel、PowerPoint で Copilot Chat のエントリ ポイントをリボンからキャンバスへ移動し、ファイルのコンテキスト内で見つけやすくします。";
+  }
+
+  if (/improvements to agent evaluations experience/.test(text)) {
+    return "Copilot Studio のエージェント評価に、詳細な説明、推論トレース、引用元、実行比較、大規模データセット、カスタマイズ可能なテスト生成を追加します。";
+  }
+
+  if (/save ai-generated filters in planner agent chat/.test(text)) {
+    return "Planner Agent が生成した AI フィルターを保存し、今後の計画で再利用できます。";
+  }
+
+  if (/attach and reference an image.*agent mode/.test(text)) {
+    return "PowerPoint の Agent Mode でプレゼンテーションを作成するときに、画像を添付して参照できます。";
+  }
+
   if (/agents usage report/.test(text)) {
     return "Microsoft 365 管理センターで、M365 Copilot と Copilot Chat のエージェント使用状況を確認できる新しいレポートを提供。ライセンス有無別のアクティブ ユーザー数、アクティブなエージェント数、ユーザーの内訳を確認できます。";
   }
@@ -613,6 +637,30 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/planner: available in outlook/.test(text)) {
+    return "プランナー: Outlook で利用可能";
+  }
+
+  if (/work iq apis - endpoints: declarative agent access/.test(text)) {
+    return "Work IQ API - エンドポイント: 宣言型エージェント アクセス";
+  }
+
+  if (/updated ui for copilot chat entry point in word, excel and powerpoint apps/.test(text)) {
+    return "Word、Excel、PowerPoint アプリの Copilot Chat エントリ ポイントの UI を更新";
+  }
+
+  if (/improvements to agent evaluations experience/.test(text)) {
+    return "エージェント評価エクスペリエンスの改善";
+  }
+
+  if (/save ai-generated filters in planner agent chat/.test(text)) {
+    return "AI で生成されたフィルターを Planner エージェント チャットに保存します";
+  }
+
+  if (/attach and reference an image.*agent mode/.test(text)) {
+    return "PowerPoint の Agent Mode で画像の添付・参照に対応";
+  }
 
   if (/data security triage agent summaries and categorizations for dlp alerts/.test(text)) {
     return "DLP アラートのデータ セキュリティ トリアージ エージェントの要約・分類を Defender XDR で提供";
