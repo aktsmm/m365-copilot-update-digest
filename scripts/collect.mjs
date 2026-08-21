@@ -518,6 +518,10 @@ function knownJapaneseRoadmapSummary(event) {
     return "Copilot のプラス (+) メニューから [作業内容の追加] を選び、[エージェントとスキル] タブで専用タスク向けのエージェントやスキルをプロンプトに追加できます。/ や @ の入力でも呼び出せます。";
   }
 
+  if (/writing blocks in m365 copilot/.test(text)) {
+    return "M365 Copilot で Writing Blocks を利用できるようになります。チャットを使いながら、下書き、メモ、メールなどをインラインで編集し、編集と反復を容易にします。";
+  }
+
   return "";
 }
 
@@ -696,6 +700,10 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/add agents and skills from the plus menu/.test(text)) {
     return "Copilot のプラス メニューからエージェントとスキルを追加可能に";
+  }
+
+  if (/writing blocks in m365 copilot/.test(text)) {
+    return "M365 Copilot で Writing Blocks を利用可能に";
   }
 
   if (
