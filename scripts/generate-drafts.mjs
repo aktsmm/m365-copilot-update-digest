@@ -145,7 +145,7 @@ function buildProductBreakdown(events) {
 
 function buildArticleDraft(log, runSummary, siteMeta) {
   const sorted = sortEvents(log.events || []);
-  const highlights = sorted.slice(0, Math.min(5, sorted.length));
+  const highlights = sorted.slice(0, Math.min(6, sorted.length));
   const topPoints = highlights.slice(0, Math.min(3, highlights.length));
   const pagesBaseUrl = derivePagesBaseUrl(siteMeta.repositoryUrl);
   const digestUrl = pagesBaseUrl ? `${pagesBaseUrl}/daily/${log.date}/` : "";

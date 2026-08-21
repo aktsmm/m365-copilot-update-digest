@@ -495,7 +495,7 @@ export function withinDays(value, days, now = new Date()) {
 
 export function buildDailyMarkdown(date, events) {
   const sorted = sortEvents(events);
-  const highlights = sorted.slice(0, Math.min(5, sorted.length));
+  const highlights = sorted.slice(0, Math.min(6, sorted.length));
   const lines = [
     "---",
     `date: ${date}`,
