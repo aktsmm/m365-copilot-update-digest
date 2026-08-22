@@ -230,8 +230,8 @@ function toArray(value) {
   return Array.isArray(value) ? value : [value];
 }
 
-function stripHtmlText(html) {
-  let decoded = String(html ?? "");
+function decodeHtmlEntities(text) {
+  let decoded = String(text ?? "");
   for (let index = 0; index < 3; index += 1) {
     const next = decoded
       .replace(/&lt;/gi, "<")
@@ -246,7 +246,12 @@ function stripHtmlText(html) {
 
     decoded = next;
   }
-  const $ = cheerio.load(decoded);
+
+  return decoded;
+}
+
+function stripHtmlText(html) {
+  const $ = cheerio.load(decodeHtmlEntities(html));
   return normalizeWhitespace($.text());
 }
 
@@ -354,7 +359,7 @@ function fixupJapaneseText(text) {
 
 function cleanupRoadmapTitle(title) {
   return normalizeWhitespace(
-    title
+    decodeHtmlEntities(title)
       .replace(/\s*\n+\s*/g, " ")
       .replace(/\):\s*\):/g, "):")
       // Roadmap feed occasionally emits "Microsoft 356 Copilot"; normalize it.
@@ -664,6 +669,22 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/attach and reference an image.*agent mode/.test(text)) {
     return "PowerPoint の Agent Mode で画像の添付・参照に対応";
+  }
+
+  if (
+    /reference an email with work iq when using edit with copilot in powerpoint/.test(
+      text,
+    )
+  ) {
+    return "PowerPoint の Copilot 編集で Work IQ からメールを参照可能に";
+  }
+
+  if (
+    /reference files saved in sharepoint libraries and onedrive folders when creating a presentation with agent mode in powerpoint/.test(
+      text,
+    )
+  ) {
+    return "PowerPoint の Agent Mode で SharePoint・OneDrive のファイルを参照可能に";
   }
 
   if (/data security triage agent summaries and categorizations for dlp alerts/.test(text)) {
