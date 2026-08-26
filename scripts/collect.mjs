@@ -467,6 +467,14 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/newly created declarative agents now understand referenced scanned pdfs/.test(text)) {
+    return "新規作成した宣言型エージェントが、SharePoint で参照するスキャン済み PDF や画像ベースのドキュメントを根拠として、信頼性の高い回答を生成できるようになります。これまでエージェント シナリオで扱いにくかった主要なエンタープライズ コンテンツを活用できます。";
+  }
+
+  if (/power bi reports as references in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで Power BI レポートを参照として追加できるようになります。レポート データをファイルと共に取り込み、組織データに基づくより関連性の高い要約、プレゼンテーション、ブリーフの生成に活用できます。";
+  }
+
   if (/planner: available in outlook/.test(text)) {
     return "Outlook の Planner で、受信トレイからタスクやプラン、新しい Planner エージェントを直接管理できます。";
   }
@@ -646,6 +654,14 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/newly created declarative agents now understand referenced scanned pdfs/.test(text)) {
+    return "新規作成した宣言型エージェントで、参照したスキャン済み PDF を理解可能に";
+  }
+
+  if (/power bi reports as references in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックで Power BI レポートを参照可能に";
+  }
 
   if (/planner: available in outlook/.test(text)) {
     return "プランナー: Outlook で利用可能";
