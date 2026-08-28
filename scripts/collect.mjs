@@ -1460,6 +1460,20 @@ function roadmapStatus(categories) {
   return "Update";
 }
 
+function roadmapTags(productArea, categories, releaseStage) {
+  const releaseStageCategoryPattern =
+    /^(?:cancelled|canceled|launched|rolling out|in development|general availability|preview|public preview|private preview)$/i;
+  return [
+    ...new Set([
+      productArea,
+      releaseStage,
+      ...categories.filter(
+        (category) => !releaseStageCategoryPattern.test(category),
+      ),
+    ]),
+  ];
+}
+
 function cleanupRoadmapSummary(rawSummary) {
   const summary = stripHtmlText(rawSummary)
     .replace(
@@ -1490,6 +1504,8 @@ function parseRoadmapRssFeed(source, xmlText) {
       const publishedAt = new Date(
         readXmlText(item["a10:updated"]) || item.pubDate || Date.now(),
       ).toISOString();
+      const productArea = roadmapProductArea(title, categories, source);
+      const releaseStage = roadmapStatus(categories);
 
       return {
         id: buildEventId(
@@ -1504,19 +1520,14 @@ function parseRoadmapRssFeed(source, xmlText) {
         summaryJa: cleanupRoadmapSummary(rawSummary),
         url: link,
         publishedAt,
-        productArea: roadmapProductArea(title, categories, source),
-        section: roadmapProductArea(title, categories, source),
+        productArea,
+        section: productArea,
         roadmapIds: extractRoadmapIds(rawSummary, [
           link,
           readXmlText(item.guid),
         ]),
-        releaseStage: roadmapStatus(categories),
-        tags: [
-          ...new Set([
-            roadmapProductArea(title, categories, source),
-            ...categories,
-          ]),
-        ],
+        releaseStage,
+        tags: roadmapTags(productArea, categories, releaseStage),
         categories,
       };
     })
