@@ -1460,15 +1460,16 @@ function roadmapStatus(categories) {
   return "Update";
 }
 
+const ROADMAP_RELEASE_STAGE_CATEGORY_PATTERN =
+  /^(?:cancelled|canceled|retirement|launched|rolling out|in development|general availability|preview|public preview|private preview)$/i;
+
 function roadmapTags(productArea, categories, releaseStage) {
-  const releaseStageCategoryPattern =
-    /^(?:cancelled|canceled|launched|rolling out|in development|general availability|preview|public preview|private preview)$/i;
   return [
     ...new Set([
       productArea,
       releaseStage,
       ...categories.filter(
-        (category) => !releaseStageCategoryPattern.test(category),
+        (category) => !ROADMAP_RELEASE_STAGE_CATEGORY_PATTERN.test(category),
       ),
     ]),
   ];
