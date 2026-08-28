@@ -467,6 +467,26 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/now smarter with visuals.*embedded images/.test(text)) {
+    return "Copilot Chat が Word、PowerPoint、PDF などのファイルに埋め込まれた画像を理解し、グラフ、図、スクリーンショットからも洞察を抽出できるようになります。画像を含む資料を根拠に、より豊富で正確な回答を生成できます。";
+  }
+
+  if (/agent sharing amongst makers/.test(text)) {
+    return "Copilot Studio の新しい GHCP ハーネスで、作成者間でエージェントを共有できるようになります。自動割り当てのセキュリティ ロールにより、他の作成者へ閲覧者または編集者としてアクセスを付与できます。";
+  }
+
+  if (/ai-powered notes for in-person meetings with facilitator in teams rooms on android/.test(text)) {
+    return "Teams Rooms on Android の対面会議で Facilitator をワンタップで招待し、会議のメモ、意思決定、アクション項目を AI で記録できます。生成したメモは会議室の前面ディスプレイに表示されます。";
+  }
+
+  if (/ai-powered notes for in-person meetings with facilitator in teams rooms on windows/.test(text)) {
+    return "Teams Rooms on Windows の対面会議で Facilitator をワンタップで招待し、会議のメモ、意思決定、アクション項目を AI で記録できます。生成したメモは会議室の前面ディスプレイに表示されます。";
+  }
+
+  if (/proactive push notifications for the microsoft 365 copilot mobile app/.test(text)) {
+    return "Microsoft 365 Copilot モバイル アプリが、「今日の概要」や「対応待ちの項目」などの一般的な生産性ワークフローについてプロアクティブにプッシュ通知を送信します。通知を開くと、対応する Copilot の回答を確認できます。";
+  }
+
   if (/newly created declarative agents now understand referenced scanned pdfs/.test(text)) {
     return "新規作成した宣言型エージェントが、SharePoint で参照するスキャン済み PDF や画像ベースのドキュメントを根拠として、信頼性の高い回答を生成できるようになります。これまでエージェント シナリオで扱いにくかった主要なエンタープライズ コンテンツを活用できます。";
   }
@@ -654,6 +674,26 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/now smarter with visuals.*embedded images/.test(text)) {
+    return "Copilot Chat で埋め込み画像を活用し、回答精度を向上";
+  }
+
+  if (/agent sharing amongst makers/.test(text)) {
+    return "Copilot Studio で作成者間のエージェント共有に対応";
+  }
+
+  if (/ai-powered notes for in-person meetings with facilitator in teams rooms on android/.test(text)) {
+    return "Teams Rooms on Android の対面会議で Facilitator の AI メモに対応";
+  }
+
+  if (/ai-powered notes for in-person meetings with facilitator in teams rooms on windows/.test(text)) {
+    return "Teams Rooms on Windows の対面会議で Facilitator の AI メモに対応";
+  }
+
+  if (/proactive push notifications for the microsoft 365 copilot mobile app/.test(text)) {
+    return "Microsoft 365 Copilot モバイル アプリでプロアクティブなプッシュ通知に対応";
+  }
 
   if (/newly created declarative agents now understand referenced scanned pdfs/.test(text)) {
     return "新規作成した宣言型エージェントで、参照したスキャン済み PDF を理解可能に";
@@ -1401,6 +1441,10 @@ function roadmapProductArea(title, categories, source) {
 
 function roadmapStatus(categories) {
   const normalized = categories.map((category) => category.toLowerCase());
+  if (normalized.includes("cancelled") || normalized.includes("canceled")) {
+    return "Retirement";
+  }
+
   if (normalized.includes("launched")) {
     return "Launched";
   }
