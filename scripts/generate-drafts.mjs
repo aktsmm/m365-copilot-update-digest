@@ -175,11 +175,11 @@ function buildArticleDraft(log, runSummary, siteMeta) {
               "",
               clipText(summaryForLocale(event, "ja"), 220) || "要約なし",
               "",
-            ].filter(Boolean);
+            ];
 
             return lines.join("\n");
           })
-          .join("\n")
+          .join("\n\n")
       : "### 重要更新はありません。\n";
 
   const lines = [
