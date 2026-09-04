@@ -567,7 +567,7 @@ function buildJapaneseFallbackSummary(event) {
         .replace(/\bLearn more\.?$/i, "")
         .replace(/\bUpdated [A-Za-z]+ \d{1,2}, \d{4}:.*$/i, "")
         .replace(
-          /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
+          /(?:GA|Preview|Public Preview|Private Preview)\s*date:\s*[^.\n]+/gi,
           "",
         )
         .trim(),
@@ -1477,7 +1477,7 @@ function roadmapTags(productArea, categories, releaseStage) {
 function cleanupRoadmapSummary(rawSummary) {
   const summary = stripHtmlText(rawSummary)
     .replace(
-      /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
+      /(?:GA|Preview|Public Preview|Private Preview)\s*date:\s*[^.\n]+/gi,
       "",
     )
     .replace(/\bmicrosfot\b/gi, "Microsoft")
