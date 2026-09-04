@@ -322,6 +322,8 @@ function isUsableJapanese(value) {
 
 function fixupJapaneseText(text) {
   return String(text ?? "")
+    .replace(/(?:GA|Preview)\s*(?:date|日付|日):\s*[^.\n]+/gi, "")
+    .replace(/プレビュー\s*日付?\s*[:：]\s*[^。\n]+/g, "")
     .replace(/Data Security Posture Agent/g, "データ セキュリティ体制エージェント")
     .replace(/Microsoft Dataverse/g, "Dataverse")
     .replace(/Agent Readiness/g, "エージェント準備状況")
