@@ -322,6 +322,8 @@ function isUsableJapanese(value) {
 
 function fixupJapaneseText(text) {
   return String(text ?? "")
+    .replace(/(?:GA|Preview)\s*(?:date|日付|日):\s*[^.\n]+/gi, "")
+    .replace(/プレビュー\s*日付?\s*[:：]\s*[^。\n]+/g, "")
     .replace(/Data Security Posture Agent/g, "データ セキュリティ体制エージェント")
     .replace(/Microsoft Dataverse/g, "Dataverse")
     .replace(/Agent Readiness/g, "エージェント準備状況")
@@ -567,7 +569,7 @@ function buildJapaneseFallbackSummary(event) {
         .replace(/\bLearn more\.?$/i, "")
         .replace(/\bUpdated [A-Za-z]+ \d{1,2}, \d{4}:.*$/i, "")
         .replace(
-          /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
+          /(?:GA|Preview|Public Preview|Private Preview)\s*date:\s*[^.\n]+/gi,
           "",
         )
         .trim(),
@@ -1477,7 +1479,7 @@ function roadmapTags(productArea, categories, releaseStage) {
 function cleanupRoadmapSummary(rawSummary) {
   const summary = stripHtmlText(rawSummary)
     .replace(
-      /\b(?:GA|Preview|Public Preview|Private Preview) date:\s*[^.\n]+/gi,
+      /(?:GA|Preview|Public Preview|Private Preview)\s*date:\s*[^.\n]+/gi,
       "",
     )
     .replace(/\bmicrosfot\b/gi, "Microsoft")
