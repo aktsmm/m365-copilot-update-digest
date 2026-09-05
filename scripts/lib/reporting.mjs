@@ -232,7 +232,7 @@ const SIGNAL_DEFINITIONS = [
     key: "security-governance",
     score: 18,
     pattern:
-      /admin|governance|security|policy|policies|compliance|purview|sharing|permissions|tenant|dlp|resilien|backup|archive/,
+      /admin|governance|security|policy|policies|compliance|purview|sharing|permissions|(?<!multi-)\btenant\b|dlp|resilien|backup|archive/,
     reasonJa: "管理やガバナンスへの影響が大きいため",
     reasonEn: "because it materially affects administration or governance",
   },
