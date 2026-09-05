@@ -469,6 +469,10 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/create videos in the clipchamp start page/.test(text)) {
+    return "Clipchamp スタート ページから Copilot でビデオを作成できます。プロンプトや既存のドキュメントを基に、スクリプト、ビジュアル、ナレーションを含むビデオを自動生成できます。";
+  }
+
   if (/now smarter with visuals.*embedded images/.test(text)) {
     return "Copilot Chat が Word、PowerPoint、PDF などのファイルに埋め込まれた画像を理解し、グラフ、図、スクリーンショットからも洞察を抽出できるようになります。画像を含む資料を根拠に、より豊富で正確な回答を生成できます。";
   }
@@ -676,6 +680,10 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/create videos in the clipchamp start page/.test(text)) {
+    return "Clipchamp スタート ページでビデオを作成する";
+  }
 
   if (/now smarter with visuals.*embedded images/.test(text)) {
     return "Copilot Chat で埋め込み画像を活用し、回答精度を向上";
@@ -1519,7 +1527,7 @@ function parseRoadmapRssFeed(source, xmlText) {
         title,
         summary: cleanupRoadmapSummary(rawSummary),
         summaryEn: cleanupRoadmapSummary(rawSummary),
-        summaryJa: cleanupRoadmapSummary(rawSummary),
+        summaryJa: "",
         url: link,
         publishedAt,
         productArea,
@@ -2415,7 +2423,7 @@ function parseRssFeed(source, xmlText) {
         title,
         summary: excerptText(stripHtmlText(rawSummary), 280),
         summaryEn: excerptText(stripHtmlText(rawSummary), 280),
-        summaryJa: excerptText(stripHtmlText(rawSummary), 280),
+        summaryJa: "",
         url: normalizeWhitespace(readXmlText(item.link)),
         publishedAt: new Date(
           item.pubDate || item.isoDate || Date.now(),
@@ -2466,7 +2474,7 @@ function extractSinglePageUpdate(source, html, nowIso) {
       title: source.updateTitle || `${title} updated`,
       summary,
       summaryEn: summary,
-      summaryJa: summary,
+      summaryJa: "",
       url: source.url,
       publishedAt,
       productArea: source.productArea,
@@ -2537,8 +2545,23 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
 
   normalized.importanceScore = importanceScore(normalized);
   normalized.importanceReason = importanceReason(normalized, "ja");
-  if (!normalized.summaryJa || normalized.summaryJa === normalized.summaryEn) {
+  if (
+    !normalized.summaryJa ||
+    normalized.summaryJa === normalized.summaryEn ||
+    shouldIgnoreCachedJapaneseSummary(normalized, normalized.summaryJa)
+  ) {
     normalized.summaryJa = buildJapaneseFallbackSummary(normalized);
+  }
+  if (
+    !normalized.titleJa ||
+    normalized.titleJa === normalized.titleEn ||
+    shouldIgnoreCachedJapaneseTitle(
+      normalized.titleJa,
+      normalized.titleEn,
+      normalized.productArea,
+    )
+  ) {
+    normalized.titleJa = buildJapaneseFallbackTitle(normalized);
   }
   return normalized;
 }
