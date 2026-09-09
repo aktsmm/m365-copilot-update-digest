@@ -2793,10 +2793,7 @@ async function main() {
         (shouldIgnoreCachedJapaneseSummary(
           { sourceFamily: evt.sourceFamily || "" },
           fixedSummaryJa,
-        ) ||
-          (latestLocalized &&
-            shouldPreferKnownFallbackSummary(latestLocalized) &&
-            latestSummaryJa !== fixedSummaryJa)) &&
+        ) || latestSummaryJa !== fixedSummaryJa) &&
         !shouldIgnoreCachedJapaneseSummary(
           { sourceFamily: evt.sourceFamily || "" },
           latestSummaryJa,
