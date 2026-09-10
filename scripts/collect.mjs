@@ -1394,10 +1394,6 @@ function buildJapaneseFallbackTitle(event) {
 
 function roadmapProductArea(title, categories, source) {
   const text = `${title}\n${categories.join("\n")}`.toLowerCase();
-  if (/security copilot|copilot for security/.test(text)) {
-    return "Security Copilot";
-  }
-
   if (/^microsoft purview:|^purview:/.test(text)) {
     return "Microsoft Purview";
   }
@@ -1436,6 +1432,10 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^microsoft 365:|^onedrive:/.test(text)) {
     return "Microsoft 365";
+  }
+
+  if (/security copilot|copilot for security/.test(text)) {
+    return "Security Copilot";
   }
 
   if (/copilot studio/.test(text)) {
