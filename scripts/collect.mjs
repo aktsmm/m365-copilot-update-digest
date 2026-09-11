@@ -47,6 +47,8 @@ const COPILOT_IPHONE_PREVIEW_CHAT_PATTERN =
   /preview and chat with microsoft word, excel, and powerpoint files/i;
 const COPILOT_CHAT_CENTERED_CREATE_PATTERN =
   /copilot chat-centered experience for creating\s+new documents/i;
+const COPILOT_CHAT_IMAGE_SEARCH_PATTERN =
+  /copilot chat can now better match search results[\s\S]*images embedded in word, excel, and powerpoint files?/i;
 const TOKYO_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Tokyo",
   year: "numeric",
@@ -1170,13 +1172,10 @@ function buildJapaneseFallbackTitle(event) {
     return `iPhone・iPad の Copilot アプリで新規ドキュメント作成のチャット中心体験に対応`;
   }
 
-  if (
-    /copilot chat can now better match search results from scanned pdfs?/.test(
-      titleText,
-    ) &&
-    /text inside images embedded in word, excel, and powerpoint/.test(titleText)
-  ) {
-    return `Copilot Chat で PDF・画像内テキストの検索精度を向上`;
+  if (COPILOT_CHAT_IMAGE_SEARCH_PATTERN.test(titleText)) {
+    return /scanned pdfs?/.test(titleText)
+      ? `Copilot Chat で PDF・画像内テキストの検索精度を向上`
+      : `Copilot Chat で画像内テキストの検索精度を向上`;
   }
 
   if (
@@ -1619,6 +1618,9 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
             ? "GCC"
             : ""
     : "";
+  const expectedImageSearchTitle = /scanned pdfs?/.test(normalizedTitleEn)
+    ? "Copilot Chat で PDF・画像内テキストの検索精度を向上"
+    : "Copilot Chat で画像内テキストの検索精度を向上";
   const knownTitle = knownJapaneseRoadmapTitle({ titleEn });
   return (
     !titleJa ||
@@ -1702,10 +1704,8 @@ function shouldIgnoreCachedJapaneseTitle(titleJa, titleEn, productArea = "") {
       normalizedTitleEn,
     ) &&
       titleJa !== `${productArea} でアプリ・エージェントのリンク展開を改善`) ||
-    (/copilot chat can now better match search results from scanned pdfs? and from text inside images embedded in word, excel, and powerpoint/.test(
-      normalizedTitleEn,
-    ) &&
-      titleJa !== "Copilot Chat で PDF・画像内テキストの検索精度を向上") ||
+    (COPILOT_CHAT_IMAGE_SEARCH_PATTERN.test(normalizedTitleEn) &&
+      titleJa !== expectedImageSearchTitle) ||
     (titleJa === "Anthropic モデルのユーザー・グループ別有効化に対応" &&
       !/anthropic models/.test(normalizedTitleEn)) ||
     (/data lifecycle management.*insights and policy recommendations/.test(
