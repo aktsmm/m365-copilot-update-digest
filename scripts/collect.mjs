@@ -709,6 +709,18 @@ function knownJapaneseRoadmapTitle(event) {
     return "プランナー: Outlook で利用可能";
   }
 
+  if (/planner: capabilities in microsoft cowork/.test(text)) {
+    return "Microsoft Cowork で Planner のプラン・タスク管理に対応";
+  }
+
+  if (
+    /new copilot notebooks design in the microsoft 365 copilot app \(ios\)/.test(
+      text,
+    )
+  ) {
+    return "Microsoft 365 Copilot アプリ (iOS) の Copilot ノートブックを刷新";
+  }
+
   if (/work iq apis - endpoints: declarative agent access/.test(text)) {
     return "Work IQ API - エンドポイント: 宣言型エージェント アクセス";
   }
