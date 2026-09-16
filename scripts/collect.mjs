@@ -40,7 +40,9 @@ const MAX_TITLE_TRANSLATION_BATCH_ITEMS = 28;
 const MAX_TRANSLATED_SUMMARIES_PER_RUN = 360;
 const MAX_TRANSLATED_TITLES_PER_RUN = 240;
 const JAPANESE_TITLE_PREFIX_PATTERN =
-  /^(?:Microsoft Copilot \(Microsoft 365\)|Microsoft Copilot Studio|Microsoft Copilot|Microsoft Viva|Microsoft Purview|Microsoft 365 Admin Center|Microsoft Teams|Microsoft Edge|Microsoft 365 app|Outlook|OneDrive|OneNote|SharePoint|PowerPoint|Planner)\s*[:：]\s*/i;
+  /^(?:Microsoft Copilot \(Microsoft 365\)|Microsoft Copilot Studio|Microsoft Copilot|Microsoft Viva|Microsoft Purview|Microsoft 365 Admin Center|Microsoft Teams|Microsoft Edge|Microsoft 365 app|Outlook|OneDrive|OneNote|SharePoint|PowerPoint|Word|Excel|Planner)\s*[:：]\s*/i;
+const RETIREMENT_SIGNAL_PATTERN =
+  /retire|retirement|deprecat|end of support|no longer (?:available|supported)|will be removed/i;
 const COPILOT_CHAT_OPEN_OFFICE_FILES_PATTERN =
   /open word, excel, and powerpoint files in copilot chat/i;
 const COPILOT_IPHONE_PREVIEW_CHAT_PATTERN =
@@ -1442,6 +1444,18 @@ function roadmapProductArea(title, categories, source) {
     return "OneNote";
   }
 
+  if (/^powerpoint:|^microsoft powerpoint:/.test(text)) {
+    return "PowerPoint";
+  }
+
+  if (/^word:|^microsoft word:/.test(text)) {
+    return "Word";
+  }
+
+  if (/^excel:|^microsoft excel:/.test(text)) {
+    return "Excel";
+  }
+
   if (/^outlook:/.test(text)) {
     return "Outlook";
   }
@@ -1778,6 +1792,27 @@ function refreshLocalizedFieldsFromCache(event, summaryCache) {
   }
 
   return event;
+}
+
+// Blog feeds ship the whole article body, which often mentions retirement of
+// unrelated features. Keep the Retirement stage only when the visible title or
+// summary actually announces one; roadmap items keep their feed category.
+function correctFalseRetirementStage(event) {
+  if (event.releaseStage !== "Retirement" || event.sourceFamily === "Roadmap") {
+    return event;
+  }
+
+  const visibleText = `${event.titleEn || event.title || ""}\n${
+    event.summaryEn || event.summary || ""
+  }`;
+  if (RETIREMENT_SIGNAL_PATTERN.test(visibleText)) {
+    return event;
+  }
+
+  const corrected = { ...event, releaseStage: detectReleaseStage(visibleText) };
+  corrected.importanceScore = importanceScore(corrected);
+  corrected.importanceReason = importanceReason(corrected, "ja");
+  return corrected;
 }
 
 async function localizeJapaneseTitles(
@@ -2418,6 +2453,7 @@ function parseRssFeed(source, xmlText) {
         item.description || item["content:encoded"] || "",
       );
       const title = normalizeWhitespace(readXmlText(item.title));
+      const summary = excerptText(stripHtmlText(rawSummary), 280);
       const categories = toArray(item.category)
         .map((category) => normalizeWhitespace(readXmlText(category)))
         .filter(Boolean);
@@ -2429,9 +2465,9 @@ function parseRssFeed(source, xmlText) {
           readXmlText(item.guid) || readXmlText(item.link),
         ),
         title,
-        summary: excerptText(stripHtmlText(rawSummary), 280),
-        summaryEn: excerptText(stripHtmlText(rawSummary), 280),
-        summaryJa: excerptText(stripHtmlText(rawSummary), 280),
+        summary,
+        summaryEn: summary,
+        summaryJa: summary,
         url: normalizeWhitespace(readXmlText(item.link)),
         publishedAt: new Date(
           item.pubDate || item.isoDate || Date.now(),
@@ -2440,7 +2476,7 @@ function parseRssFeed(source, xmlText) {
         section: source.productArea,
         roadmapIds: [],
         releaseStage: detectReleaseStage(
-          `${title}\n${rawSummary}\n${categories.join(" ")}`,
+          `${title}\n${summary}\n${categories.join(" ")}`,
         ),
         tags: [...new Set([source.productArea, ...categories])],
         categories,
@@ -2730,7 +2766,10 @@ async function main() {
   }
 
   const allEvents = dedupeLogicalEvents(dedupeEvents([...mergedById.values()])).map(
-    (event) => refreshLocalizedFieldsFromCache(event, summaryCache),
+    (event) =>
+      correctFalseRetirementStage(
+        refreshLocalizedFieldsFromCache(event, summaryCache),
+      ),
   );
   const newEventCount = allEvents.filter(
     (event) => !existingLogicalKeys.has(logicalEventKey(event)),
