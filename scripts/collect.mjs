@@ -708,7 +708,7 @@ function knownJapaneseRoadmapTitle(event) {
   }
 
   if (
-    /data lifecycle management.*insights and policy recommendations/.test(
+    /purview.*data lifecycle management.*insights and policy recommendations.*microsoft copilot and ai apps/.test(
       text,
     )
   ) {
