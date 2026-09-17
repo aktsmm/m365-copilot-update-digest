@@ -707,6 +707,14 @@ function knownJapaneseRoadmapTitle(event) {
     return "Copilot ノートブックで Power BI レポートを参照可能に";
   }
 
+  if (
+    /data lifecycle management.*insights and policy recommendations/.test(
+      text,
+    )
+  ) {
+    return "Purview データ ライフサイクル管理: Copilot と AI アプリの利用状況分析・ポリシー推奨";
+  }
+
   if (/planner: available in outlook/.test(text)) {
     return "プランナー: Outlook で利用可能";
   }
