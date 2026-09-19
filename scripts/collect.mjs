@@ -815,6 +815,42 @@ function knownJapaneseRoadmapTitle(event) {
     return "Copilot が文書構造を活用した長文ファイル ナビゲーションを強化";
   }
 
+  if (/content sources in copilot chat/.test(text)) {
+    return "Copilot チャットのコンテンツ ソース";
+  }
+
+  if (/copilot chat - session persistence enhancement/.test(text)) {
+    return "Copilot Chat - セッション永続性の強化";
+  }
+
+  if (/copilot in powerpoint for government clouds/.test(text)) {
+    return "政府クラウド向け PowerPoint の Copilot";
+  }
+
+  if (/realtime voice interactions in word and powerpoint/.test(text)) {
+    return "Word および PowerPoint でのリアルタイム音声対話";
+  }
+
+  if (
+    /data lifecycle management-legacy teams retention policies covering copilot will be treated as teams-only/.test(
+      text,
+    )
+  ) {
+    return "データ ライフサイクル管理 - Copilot をカバーする従来の Teams 保持ポリシーは Teams のみとして扱われます";
+  }
+
+  if (/copilot cowork for government clouds/.test(text)) {
+    return "政府クラウド向けの Copilot Cowork";
+  }
+
+  if (
+    /edit your document with copilot in powerpoint in government clouds/.test(
+      text,
+    )
+  ) {
+    return "政府機関クラウドの PowerPoint で Copilot 文書編集に対応";
+  }
+
   return "";
 }
 
