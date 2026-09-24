@@ -96,7 +96,17 @@ export function excerptText(value, maxLength = 260) {
     return normalized;
   }
 
-  return `${normalized.slice(0, maxLength - 1).trimEnd()}...`;
+  const sliced = normalized.slice(0, maxLength - 1).trimEnd();
+  const cutsInsideWord = /\S/.test(normalized.charAt(maxLength - 1));
+  const lastSpaceIndex = sliced.search(/\s\S*$/);
+  // Avoid cutting in the middle of a word so that downstream translation does not
+  // receive a broken fragment (e.g. "sch" from "scheduling").
+  const trimmed =
+    cutsInsideWord && lastSpaceIndex > maxLength * 0.6
+      ? sliced.slice(0, lastSpaceIndex).trimEnd()
+      : sliced;
+
+  return `${trimmed}...`;
 }
 
 export function buildEventId(sourceId, title, publishedAt, section = "") {
