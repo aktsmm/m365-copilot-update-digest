@@ -767,15 +767,23 @@ function knownJapaneseRoadmapTitle(event) {
     return "PowerPoint の Agent Mode で SharePoint・OneDrive のファイルを参照可能に";
   }
 
-  if (/forecast planned maintenance demand/.test(text)) {
+  if (
+    /^dynamics 365 field service: forecast planned maintenance demand(?:\n|$)/.test(
+      text,
+    )
+  ) {
     return "Dynamics 365 Field Service: 計画されたメンテナンス需要を予測する";
   }
 
-  if (/powerpoint: skills in brand kit/.test(text)) {
+  if (/^powerpoint: skills in brand kit(?:\n|$)/.test(text)) {
     return "ブランド キットのスキル";
   }
 
-  if (/local inferencing/.test(text)) {
+  if (
+    /^microsoft copilot \(microsoft 365\): local inferencing(?:\n|$)/.test(
+      text,
+    )
+  ) {
     return "ローカル推論";
   }
 
