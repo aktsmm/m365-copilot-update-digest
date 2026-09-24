@@ -767,6 +767,18 @@ function knownJapaneseRoadmapTitle(event) {
     return "PowerPoint の Agent Mode で SharePoint・OneDrive のファイルを参照可能に";
   }
 
+  if (/forecast planned maintenance demand/.test(text)) {
+    return "Dynamics 365 Field Service: 計画されたメンテナンス需要を予測する";
+  }
+
+  if (/powerpoint: skills in brand kit/.test(text)) {
+    return "ブランド キットのスキル";
+  }
+
+  if (/local inferencing/.test(text)) {
+    return "ローカル推論";
+  }
+
   if (/data security triage agent summaries and categorizations for dlp alerts/.test(text)) {
     return "DLP アラートのデータ セキュリティ トリアージ エージェントの要約・分類を Defender XDR で提供";
   }
