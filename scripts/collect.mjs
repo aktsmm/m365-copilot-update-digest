@@ -768,15 +768,15 @@ function knownJapaneseRoadmapTitle(event) {
   }
 
   if (/forecast planned maintenance demand/.test(text)) {
-    return "Dynamics 365 Field Service: 計画されたメンテナンス需要を予測する";
+    return "Dynamics 365 Field Service: 計画メンテナンスの需要予測に対応";
   }
 
   if (/powerpoint: skills in brand kit/.test(text)) {
-    return "ブランド キットのスキル";
+    return "PowerPoint: ブランド キットでスキル (.md ファイル) を利用可能に";
   }
 
   if (/local inferencing/.test(text)) {
-    return "ローカル推論";
+    return "Microsoft 365 Copilot: ローカル推論に対応";
   }
 
   if (/data security triage agent summaries and categorizations for dlp alerts/.test(text)) {
