@@ -491,6 +491,30 @@ function knownJapaneseRoadmapSummary(event) {
     return "Microsoft 365 Copilot モバイル アプリが、「今日の概要」や「対応待ちの項目」などの一般的な生産性ワークフローについてプロアクティブにプッシュ通知を送信します。通知を開くと、対応する Copilot の回答を確認できます。";
   }
 
+  if (/work with subcontractors without additional licenses/.test(text)) {
+    return "Dynamics 365 Field Service で、追加ライセンスなしに下請け業者など外部サービス提供者との作業を管理できます。外部作業者ごとのライセンス費用やアクセス管理負荷を抑えながら、作業指示や共同作業を進められます。";
+  }
+
+  if (/microsoft copilot in field service mobile app/.test(text)) {
+    return "Dynamics 365 Field Service モバイル アプリの Microsoft Copilot により、最前線の従業員がアプリ内で自然言語の質問を行い、Field Service データと組織の状況に基づく回答を受け取れます。";
+  }
+
+  if (/dspm-copilot readiness and data explorer/.test(text)) {
+    return "Microsoft Purview Data Security Posture Management (DSPM) に、Microsoft Copilot の準備状況とデータ エクスプローラー機能を追加します。データ セキュリティ チームが組織のデータ セキュリティ体制を把握し、リスク評価や調査を進めやすくなります。";
+  }
+
+  if (/intelliframe people labels in teams rooms on windows/.test(text)) {
+    return "Teams Rooms on Windows の IntelliFrame で、会議室内の参加者を識別する人物ラベルと連絡先カードを表示できます。インテリジェント カメラやクラウド上の音声・顔プロファイルを使い、リモート参加者が会話を追いやすくなります。";
+  }
+
+  if (/multimodal capture in copilot notebooks \(windows\)/.test(text)) {
+    return "Windows の Capture から、会議や日常業務の音声、画像、メモを Copilot ノートブックに取り込めます。Copilot が重要な洞察、意思決定、アクション アイテムを含む構造化ノートへ変換します。";
+  }
+
+  if (/copilot chat in outlook expands to reason over inbox, calendar, and enterprise data/.test(text)) {
+    return "Outlook の Copilot Chat が、受信トレイ、予定表、その他のエンタープライズ データを横断した推論に対応します。Microsoft 365 Copilot ライセンスがない Copilot Chat ユーザーも対象です。";
+  }
+
   if (/newly created declarative agents now understand referenced scanned pdfs/.test(text)) {
     return "新規作成した宣言型エージェントが、SharePoint で参照するスキャン済み PDF や画像ベースのドキュメントを根拠として、信頼性の高い回答を生成できるようになります。これまでエージェント シナリオで扱いにくかった主要なエンタープライズ コンテンツを活用できます。";
   }
@@ -697,6 +721,30 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/proactive push notifications for the microsoft 365 copilot mobile app/.test(text)) {
     return "Microsoft 365 Copilot モバイル アプリでプロアクティブなプッシュ通知に対応";
+  }
+
+  if (/work with subcontractors without additional licenses/.test(text)) {
+    return "Dynamics 365 Field Service: 追加のライセンスなしで下請け業者と連携";
+  }
+
+  if (/microsoft copilot in field service mobile app/.test(text)) {
+    return "Dynamics 365 Field Service: Field Service モバイル アプリの Microsoft Copilot";
+  }
+
+  if (/dspm-copilot readiness and data explorer/.test(text)) {
+    return "DSPM-Copilot の準備とデータ エクスプローラー";
+  }
+
+  if (/intelliframe people labels in teams rooms on windows/.test(text)) {
+    return "Windows 上の Teams Rooms の IntelliFrame 人物ラベル";
+  }
+
+  if (/multimodal capture in copilot notebooks \(windows\)/.test(text)) {
+    return "Copilot ノートブックでのマルチモーダル キャプチャ (Windows)";
+  }
+
+  if (/copilot chat in outlook expands to reason over inbox, calendar, and enterprise data/.test(text)) {
+    return "Outlook の Copilot Chat が受信トレイ、カレンダー、エンタープライズ データの推論に対応";
   }
 
   if (/newly created declarative agents now understand referenced scanned pdfs/.test(text)) {
@@ -1478,6 +1526,10 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^outlook:/.test(text)) {
     return "Outlook";
+  }
+
+  if (/^dynamics 365 field service:/.test(text)) {
+    return "Dynamics 365 Field Service";
   }
 
   if (/^microsoft 365:|^onedrive:/.test(text)) {
