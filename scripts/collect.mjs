@@ -511,6 +511,14 @@ function knownJapaneseRoadmapSummary(event) {
     return "Windows の Capture から、会議や日常業務の音声、画像、メモを Copilot ノートブックに取り込めます。Copilot が重要な洞察、意思決定、アクション アイテムを含む構造化ノートへ変換します。";
   }
 
+  if (/power platform governance and administration: maker guidelines/.test(text)) {
+    return "Maker ガイドライン機能により、組織は作業の流れの中で Copilot Studio の作成者にガイダンスを直接共有できます。管理者は環境で承認されているツール、モデル、コネクタ、チャネルを説明し、作成者を適切なポリシー、申請プロセス、サポート窓口へ案内できます。";
+  }
+
+  if (/ground microsoft 365 copilot chat in edge for business in your open onedrive and sharepoint documents/.test(text)) {
+    return "Edge for Business の Copilot Chat で、開いている OneDrive や SharePoint のクラウド ドキュメントに基づいた関連性の高い回答と分析情報を得られます。";
+  }
+
   if (/copilot chat in outlook expands to reason over inbox, calendar, and enterprise data/.test(text)) {
     return "Outlook の Copilot Chat が、受信トレイ、予定表、その他のエンタープライズ データを横断した推論に対応します。Microsoft 365 Copilot ライセンスがない Copilot Chat ユーザーも対象です。";
   }
@@ -741,6 +749,14 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/multimodal capture in copilot notebooks \(windows\)/.test(text)) {
     return "Copilot ノートブックでのマルチモーダル キャプチャ (Windows)";
+  }
+
+  if (/ground microsoft 365 copilot chat in edge for business in your open onedrive and sharepoint documents/.test(text)) {
+    return "Edge for Business の Copilot Chat が開いている OneDrive・SharePoint ドキュメントに基づく回答に対応";
+  }
+
+  if (/power platform governance and administration: maker guidelines/.test(text)) {
+    return "Power Platform のガバナンスと管理: 作成者向けガイドラインを提供";
   }
 
   if (/copilot chat in outlook expands to reason over inbox, calendar, and enterprise data/.test(text)) {
