@@ -715,6 +715,14 @@ function knownJapaneseRoadmapTitle(event) {
     return "Copilot Chat で埋め込み画像を活用し、回答精度を向上";
   }
 
+  if (
+    /copilot chat can now better match search results from text that appears inside images embedded in word and powerpoint files/.test(
+      text,
+    )
+  ) {
+    return "Copilot Chat で Word・PowerPoint 内の画像テキスト検索を改善";
+  }
+
   if (/agent sharing amongst makers/.test(text)) {
     return "Copilot Studio で作成者間のエージェント共有に対応";
   }
