@@ -491,6 +491,14 @@ function knownJapaneseRoadmapSummary(event) {
     return "Microsoft 365 Copilot モバイル アプリが、「今日の概要」や「対応待ちの項目」などの一般的な生産性ワークフローについてプロアクティブにプッシュ通知を送信します。通知を開くと、対応する Copilot の回答を確認できます。";
   }
 
+  if (/excel agent/.test(text)) {
+    return "Excel Agent は、組み込みの数式とロジックを使用して、データを明確なグラフ、概要、洞察に変換します。データの準備、数式、視覚化を効率化し、数字の背後にあるストーリーに集中できます。マルチターン チャットで出力を調整したり、Excel で開いて編集したりできます。";
+  }
+
+  if (/delegated prompt publishing for organization prompts/.test(text)) {
+    return "管理者は、Copilot アプリのホーム画面に組織のカスタム プロンプトをアップロードできます。さらに、組織プロンプトの公開をユーザー、AAD セキュリティ グループ、配布グループに委任できます。";
+  }
+
   if (/work with subcontractors without additional licenses/.test(text)) {
     return "Dynamics 365 Field Service で、追加ライセンスなしに下請け業者など外部サービス提供者との作業を管理できます。外部作業者ごとのライセンス費用やアクセス管理負荷を抑えながら、作業指示や共同作業を進められます。";
   }
@@ -805,6 +813,18 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/work iq apis - endpoints: declarative agent access/.test(text)) {
     return "Work IQ API - エンドポイント: 宣言型エージェント アクセス";
+  }
+
+  if (/delegated prompt publishing for organization prompts/.test(text)) {
+    return "組織プロンプトの公開を委任";
+  }
+
+  if (/work iq: custom agents \+ 3p calls/.test(text)) {
+    return "Work IQ: カスタム エージェントとサードパーティ通話に対応";
+  }
+
+  if (/work iq: expandedcontextiq/.test(text)) {
+    return "Work IQ: Expanded Context IQ";
   }
 
   if (/updated ui for copilot chat entry point in word, excel and powerpoint apps/.test(text)) {
