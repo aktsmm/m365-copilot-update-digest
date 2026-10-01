@@ -1556,6 +1556,10 @@ function roadmapProductArea(title, categories, source) {
     return "Dynamics 365 Field Service";
   }
 
+  if (/^dynamics 365 business central:/.test(text)) {
+    return "Dynamics 365 Business Central";
+  }
+
   if (/^microsoft 365:|^onedrive:/.test(text)) {
     return "Microsoft 365";
   }
@@ -1604,6 +1608,7 @@ function roadmapTags(productArea, categories, releaseStage) {
 
 function cleanupRoadmapSummary(rawSummary) {
   const summary = stripHtmlText(rawSummary)
+    .replace(/^(?:Business Value|Details)\s*:?\s*/i, "")
     .replace(
       /(?:GA|Preview|Public Preview|Private Preview)\s*date:\s*[^.\n]+/gi,
       "",
