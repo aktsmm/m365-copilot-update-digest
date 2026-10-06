@@ -591,6 +591,10 @@ function knownJapaneseRoadmapSummary(event) {
     return "M365 Copilot で Writing Blocks を利用できるようになります。チャットを使いながら、下書き、メモ、メールなどをインラインで編集し、編集と反復を容易にします。";
   }
 
+  if (/credential scanning in data security posture agent/.test(text)) {
+    return "データ セキュリティ ポスチャ エージェントを、新しい資格情報スキャン機能で強化します。対象範囲内の場所にある露出した資格情報やデータ セキュリティ上のリスクを検出できます。エージェントにスキャン タスクを割り当て、進行状況を追跡し、優先度の高い検出結果に対応できます。選択したデータの場所がスキャン対象です。";
+  }
+
   return "";
 }
 
@@ -2133,14 +2137,6 @@ async function localizeJapaneseSummaries(
       existingById,
       existingByLogicalKey,
     );
-    if (
-      existing?.summaryJa &&
-      shouldPreservePastLocalization(existing, nowIso)
-    ) {
-      event.summaryJa = fixupJapaneseText(normalizeWhitespace(existing.summaryJa));
-      continue;
-    }
-
     if (shouldPreferKnownFallbackSummary(event)) {
       event.summaryJa = buildJapaneseFallbackSummary(event);
       updateSummaryCacheEntry(
@@ -2152,6 +2148,14 @@ async function localizeJapaneseSummaries(
         },
         nowIso,
       );
+      continue;
+    }
+
+    if (
+      existing?.summaryJa &&
+      shouldPreservePastLocalization(existing, nowIso)
+    ) {
+      event.summaryJa = fixupJapaneseText(normalizeWhitespace(existing.summaryJa));
       continue;
     }
 
