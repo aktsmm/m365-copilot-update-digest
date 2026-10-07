@@ -799,6 +799,26 @@ function knownJapaneseRoadmapTitle(event) {
     return "Microsoft Cowork で Planner のプラン・タスク管理に対応";
   }
 
+  if (/auto-labeling scale increase for sharepoint and onedrive/.test(text)) {
+    return "情報保護 - SharePoint および OneDrive の自動ラベル付けスケールの拡大";
+  }
+
+  if (/pay-as-you-go storage for onedrive/.test(text)) {
+    return "Microsoft 365: OneDrive 用の従量課金制ストレージ";
+  }
+
+  if (/dataverse data connected to microsoft 365 copilot/.test(text)) {
+    return "Microsoft 365 Copilot に接続された Dataverse データ";
+  }
+
+  if (/ai-generated status reports in planner agent/.test(text)) {
+    return "Planner エージェントの AI 生成ステータス レポート";
+  }
+
+  if (/copilot analytics - agent value insights in agent 365 dashboard/.test(text)) {
+    return "Copilot Analytics - Agent 365 ダッシュボードのエージェント価値に関する洞察";
+  }
+
   if (
     /new copilot notebooks design in the microsoft 365 copilot app \(ios\)/.test(
       text,
