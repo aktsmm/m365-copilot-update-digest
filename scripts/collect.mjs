@@ -471,6 +471,10 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/are bigger agents better\? how to design agents that scale/.test(text)) {
+    return "エージェントを作成する人なら誰もが経験する瞬間があります。エージェントが動くと、ツールをもう 1 つ追加します。さらにナレッジ ソースを追加し、先週発生した例外への対応や、エージェントに任せたい新しいユースケースに関する指示も追加します。個々の追加はそれぞれ単独では有用ですが...";
+  }
+
   if (/now smarter with visuals.*embedded images/.test(text)) {
     return "Copilot Chat が Word、PowerPoint、PDF などのファイルに埋め込まれた画像を理解し、グラフ、図、スクリーンショットからも洞察を抽出できるようになります。画像を含む資料を根拠に、より豊富で正確な回答を生成できます。";
   }
@@ -714,6 +718,14 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/delete meeting generated content in recap/.test(text)) {
+    return "会議の要約から会議で生成されたコンテンツを削除";
+  }
+
+  if (/are bigger agents better\? how to design agents that scale/.test(text)) {
+    return "大規模なエージェントほど優れているのか？スケーラブルなエージェントの設計方法";
+  }
 
   if (/now smarter with visuals.*embedded images/.test(text)) {
     return "Copilot Chat で埋め込み画像を活用し、回答精度を向上";
@@ -1865,12 +1877,14 @@ function shouldPreferKnownFallbackSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
   return (
-    event.sourceFamily === "Roadmap" &&
-    (knownJapaneseRoadmapSummary(event) ||
-      (/(?:\.\.\.|…)\s*$/.test(event.summaryEn || event.summary || "") &&
-        /sql server support in microsoft copilot studio|use copilot chat after a call in queues app|intelligent call recaps in queues app/.test(
-          text,
-        )))
+    (event.sourceFamily === "Roadmap" &&
+      (knownJapaneseRoadmapSummary(event) ||
+        (/(?:\.\.\.|…)\s*$/.test(event.summaryEn || event.summary || "") &&
+          /sql server support in microsoft copilot studio|use copilot chat after a call in queues app|intelligent call recaps in queues app/.test(
+            text,
+          )))) ||
+    (event.sourceFamily === "Tech Community" &&
+      /are bigger agents better\? how to design agents that scale/.test(text))
   );
 }
 
