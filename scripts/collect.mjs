@@ -1576,6 +1576,14 @@ function roadmapProductArea(title, categories, source) {
     return "Dynamics 365 Business Central";
   }
 
+  if (/^dynamics 365 sales:/.test(text)) {
+    return "Dynamics 365 Sales";
+  }
+
+  if (/^dynamics 365 supply chain management:/.test(text)) {
+    return "Dynamics 365 Supply Chain Management";
+  }
+
   if (/^microsoft 365:|^onedrive:/.test(text)) {
     return "Microsoft 365";
   }
