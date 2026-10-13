@@ -471,6 +471,26 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/ai citations analytics for documents and pages/.test(text)) {
+    return "Copilot と AI エージェントによる SharePoint のドキュメント、ニュース、ページの利用状況を追跡できます。各ページやファイルが Copilot の応答で参照された頻度を確認でき、サイト コンテンツの引用状況も把握できます。";
+  }
+
+  if (/integrate the sales development agent with salesforce/.test(text)) {
+    return "Sales Development Agent が Salesforce と連携し、既存の Salesforce CRM で利用できます。リードや見込み顧客レコードの管理、営業活動の記録に加え、リードの評価・対象外判定・担当者変更などのアクションを CRM に記録できます。";
+  }
+
+  if (/copilot in forms - us government clouds/.test(text)) {
+    return "政府機関向けクラウドの Microsoft Forms で Copilot を利用でき、フォームの作成、編集、配布から結果分析まで支援します。Copilot による下書き作成や配布・モニタリングなどの機能が含まれます。";
+  }
+
+  if (
+    /copilot chat can now better match search results from text that appears inside images embedded in word and powerpoint files/.test(
+      text,
+    )
+  ) {
+    return "Copilot Chat は、Word・PowerPoint ファイル内に埋め込まれた画像のテキストも検索結果の照合に活用します。スキャンした契約書や表・画像内の文字など、これまで見つけにくかった情報を検索しやすくなります。";
+  }
+
   if (/are bigger agents better\? how to design agents that scale/.test(text)) {
     return "エージェントを作成する人なら誰もが経験する瞬間があります。エージェントが動くと、ツールをもう 1 つ追加します。さらにナレッジ ソースを追加し、先週発生した例外への対応や、エージェントに任せたい新しいユースケースに関する指示も追加します。個々の追加はそれぞれ単独では有用ですが...";
   }
@@ -718,6 +738,22 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (
+    /use copilot in your search tab in the microsoft 365 copilot mobile app/.test(
+      text,
+    )
+  ) {
+    return "Microsoft 365 Copilot モバイル アプリの検索タブで Copilot を使用する";
+  }
+
+  if (/work iq: updating documents in office/.test(text)) {
+    return "Work IQ: Office でのドキュメント更新";
+  }
+
+  if (/work iq: upload/.test(text)) {
+    return "Work IQ: アップロード";
+  }
 
   if (/delete meeting generated content in recap/.test(text)) {
     return "会議の要約から会議で生成されたコンテンツを削除";
