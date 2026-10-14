@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5f52cc88dc412c46",
+      "kind": "in-development",
+      "kindSource": "manual",
+      "label": "開発中",
+      "title": {
+        "ja": "OneNote の Copilot チャットでコンテンツの作成・編集・改善が可能に",
+        "subtitleJa": "編集モードで、ページ・セクション・ノートブックの作成や名前変更、削除まで行えます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat in OneNote can create, edit, and refine content"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "m365-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**OneNote でノートを作成・整理する人**（デスクトップ版）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot が新しい内容の生成や、ページ・セクション・ノートブックの直接編集まで担える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供開始の案内を待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot が編集モードで、ページ・セクション・ノートブックの**作成・名前変更・削除**や、ページ内容の追加・編集を直接行えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "編集モードで新しいコンテンツを生成し、直接編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ページ・セクション・ノートブックの作成、名前変更、削除に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "WorkIQ 全体のコンテンツを取り込み、他のワークフローの操作も実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供状況は「開発中」で、仕様や時期は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide (Standard Multi-Tenant) のデスクトップ版", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "OneNote の Copilot は、ライセンスの種類によって使える体験が異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "ライセンス別のエクスペリエンス", "retrievedAt": "2026-10-14T21:18:24Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在の OneNote の Copilot は、下書きの計画、アイデア、リストの作成に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "使用できるアプリ内機能", "retrievedAt": "2026-10-14T21:18:24Z" }] },
+            { "text": "ロードマップを確認し、提供開始時の運用ルールを検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Web データを使って安全に対話できる、Microsoft Copilot のチャット体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Copilot Chat (Basic) ライセンス", "retrievedAt": "2026-10-14T21:18:24Z" }] } },
+        { "termKey": "onenote", "term": "OneNote", "type": "product", "oneLine": { "text": "Microsoft 365 アプリのひとつで、Copilot により下書きの計画やアイデア、リストの作成ができる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "使用できるアプリ内機能", "retrievedAt": "2026-10-14T21:18:24Z" }] } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Copilot が組織の作業データを根拠にするために、Microsoft Graph と並んで使われる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Premium ライセンス", "retrievedAt": "2026-10-14T21:18:24Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、Microsoft が機能を開発している段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573446",
+        "learn": [
+          { "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
