@@ -1,11 +1,6 @@
 (() => {
   // 暗号化済み PDF（.pdf.enc）をブラウザ内でパスワード復号して開く／まとめて保存する。パスワードはサーバーへ送らない。
   // 最新の 1 件は暗号化なしの無料サンプルとして公開している。
-  const links = [...document.querySelectorAll("[data-slide-pdf]")];
-  if (links.length === 0) {
-    return;
-  }
-
   const scriptSrc = document.currentScript ? document.currentScript.src : location.href;
   const root = new URL("../", scriptSrc);
   const MAGIC = "M365PDF1";
@@ -94,9 +89,16 @@
     });
   }
 
+  async function appendPdf(merged, url) {
+    const response = await fetch(new URL(url, root));
+    if (response.ok) {
+      const doc = await window.PDFLib.PDFDocument.load(await response.arrayBuffer());
+      (await merged.copyPages(doc, doc.getPageIndices())).forEach((page) => merged.addPage(page));
+    }
+  }
+
   async function mergeVisible(button, status) {
-    const visible = links.filter((link) => !link.hidden && !link.closest("[data-card-item]").classList.contains("hidden"));
-    const keys = [...new Set(visible.map((link) => link.getAttribute("data-slide-pdf")))].slice(0, MERGE_LIMIT);
+    const keys = [...new Set(window.digestVisibleSlideKeys ? window.digestVisibleSlideKeys() : [])].slice(0, MERGE_LIMIT);
     if (keys.length === 0) {
       window.alert("表示中のスライドがありません");
       return;
@@ -105,11 +107,7 @@
     try {
       const PDFLib = await loadPdfLib();
       const merged = await PDFLib.PDFDocument.create();
-      const coverResponse = await fetch(new URL("pdf/cover.pdf", root));
-      if (coverResponse.ok) {
-        const cover = await PDFLib.PDFDocument.load(await coverResponse.arrayBuffer());
-        (await merged.copyPages(cover, cover.getPageIndices())).forEach((page) => merged.addPage(page));
-      }
+      await appendPdf(merged, "pdf/cover.pdf");
       for (let i = 0; i < keys.length; i += 1) {
         status.textContent = `${i + 1} / ${keys.length}`;
         const entry = index.slides.find((slide) => slide.key === keys[i]);
@@ -117,11 +115,7 @@
         const pages = await merged.copyPages(source, source.getPageIndices());
         pages.forEach((page) => merged.addPage(page));
       }
-      const endResponse = await fetch(new URL("pdf/end.pdf", root));
-      if (endResponse.ok) {
-        const end = await PDFLib.PDFDocument.load(await endResponse.arrayBuffer());
-        (await merged.copyPages(end, end.getPageIndices())).forEach((page) => merged.addPage(page));
-      }
+      await appendPdf(merged, "pdf/end.pdf");
       const blob = new Blob([await merged.save()], { type: "application/pdf" });
       const anchor = document.createElement("a");
       anchor.href = URL.createObjectURL(blob);
@@ -136,6 +130,21 @@
     }
   }
 
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest && event.target.closest("a[data-slide-pdf]");
+    if (!link || !index) {
+      return;
+    }
+    event.preventDefault();
+    const entry = index.slides.find((slide) => slide.key === link.getAttribute("data-slide-pdf"));
+    if (!entry) {
+      return;
+    }
+    fetchPdf(entry)
+      .then((pdf) => window.open(URL.createObjectURL(new Blob([pdf], { type: "application/pdf" })), "_blank", "noopener"))
+      .catch(report);
+  });
+
   fetch(new URL("data/slides.json", root))
     .then((response) => (response.ok ? response.json() : null))
     .then((data) => {
@@ -144,31 +153,9 @@
       }
       index = data;
       gate = data.pdfGate;
-      const published = new Map(data.slides.map((slide) => [slide.key, slide]));
-      links.forEach((link) => {
-        const entry = published.get(link.getAttribute("data-slide-pdf"));
-        if (!entry || (!gate && !entry.free)) {
-          return;
-        }
-        link.hidden = false;
-        if (entry.free) {
-          link.href = new URL(`pdf/${entry.key}.pdf`, root).href;
-          link.target = "_blank";
-          link.rel = "noopener";
-          return;
-        }
-        link.addEventListener("click", (event) => {
-          event.preventDefault();
-          fetchPdf(entry)
-            .then((pdf) => window.open(URL.createObjectURL(new Blob([pdf], { type: "application/pdf" })), "_blank", "noopener"))
-            .catch(report);
-        });
-      });
-
-      document.querySelectorAll("[data-download-toolbar]").forEach((toolbar) => {
-        const button = toolbar.querySelector("[data-download-merged]");
+      document.querySelectorAll("[data-download-merged]").forEach((button) => {
+        const status = button.parentElement.querySelector("[data-download-status]");
         button.hidden = false;
-        const status = toolbar.querySelector("[data-download-status]");
         button.addEventListener("click", () => mergeVisible(button, status));
       });
     })
