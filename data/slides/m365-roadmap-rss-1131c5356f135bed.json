@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1131c5356f135bed",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio で共有プラグインを見つけて使えるように",
+        "subtitleJa": "Microsoft 共有のプラグイン レジストリに接続し、エージェントの拡張が容易になります",
+        "en": "Microsoft Copilot Studio: Discover and use shared plugins in Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-10-10",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot Studio"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プラグインやコネクタなどの利用可能な機能を見つけやすくなり、エージェントを拡張しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Studio が Microsoft の共有プラグイン レジストリに接続し、**プラグインやコネクタなどを探して使える**ようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Studio が Microsoft の共有プラグイン レジストリに接続する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プラグイン、コネクタなど利用可能な機能を発見して使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft の AI エコシステム全体で、エージェントを拡張する一貫した方法を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Web、Worldwide (Standard Multi-Tenant) 環境", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "プラグインの基礎知識",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プラグインは、エージェントやスキル、コネクタ、リモート MCP サーバーの構成を含められるパッケージ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "プラグインには何を含めることができますか?", "retrievedAt": "2026-10-14T20:55:00Z" }] },
+            { "text": "公開・共有後も、承認やインストール、接続設定が必要になる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "プラグインのアイデアから使用に移す", "retrievedAt": "2026-10-14T20:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "エージェントを作成して拡張するための Microsoft のツール。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "plugin", "term": "プラグイン", "type": "feature", "oneLine": { "text": "特定のタスクの機能をまとめた、インストール可能なパッケージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
+        { "termKey": "connector", "term": "コネクタ", "type": "term", "oneLine": { "text": "外部の組織のコンテンツを利用できるようにする、プラグインの機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "プラグインには何を含めることができますか?", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "リモート MCP サーバーが提供するツールに、プラグインから接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "プラグインには何を含めることができますか?", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570669",
+        "learn": [
+          { "title": "Microsoft 365 Copilot プラグインとは何ですか?", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
