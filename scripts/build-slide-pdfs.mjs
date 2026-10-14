@@ -57,13 +57,13 @@ if (decks.length > 0 && !password) {
     fs.writeFileSync(
       path.join(pdfDir, "cover.pdf"),
       await render([
-        `<section class="page cover"><div class="cv-bar"></div><div class="cv-body"><div class="cv-eyebrow">Microsoft 365 Copilot</div><h1>M365 Copilot<br>Update Digest</h1><div class="cv-period">${generated} 時点（重要・注目の更新）</div></div><div class="cv-foot"><span>非公式ダイジェスト ／ Copyright (c) 2026 yamapan (@aktsmm) ／ CC BY-NC-SA 4.0</span><span>出典: Microsoft Learn ／ Tech Community ／ Microsoft 365 Roadmap</span></div></section>`,
+        `<section class="page cover"><div class="cv-bar"></div><div class="cv-body"><div class="cv-eyebrow">Microsoft 365 Copilot</div><h1>M365 Copilot<br>Update Digest</h1><div class="cv-period">${generated} 時点（重要・注目の更新）</div></div><div class="cv-foot"><span>非公式ダイジェスト ／ Copyright (c) 2026 <a href="https://github.com/aktsmm" style="color:#e6eef9">yamapan (@aktsmm)</a> ／ CC BY-NC-SA 4.0 ／ <a href="https://github.com/aktsmm/m365-copilot-update-digest" style="color:#e6eef9">github.com/aktsmm/m365-copilot-update-digest</a></span><span>出典: Microsoft Learn ／ Tech Community ／ Microsoft 365 Roadmap</span></div></section>`,
       ]),
     );
     fs.writeFileSync(
       path.join(pdfDir, "end.pdf"),
       await render([
-        `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">M365 Copilot Update Digest</div><div style="margin-top:36px;font-size:16px;color:#6b778a">https://github.com/aktsmm/m365-copilot-update-digest</div></div><div class="en-foot"><span>Created by yamapan（GitHub: aktsmm）</span><span>GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。改善要望は GitHub（Issue）で対応します。</span></div></section>`,
+        `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">M365 Copilot Update Digest</div><div style="margin-top:36px;font-size:18px"><a href="https://github.com/aktsmm/m365-copilot-update-digest" style="color:#0b5cad">https://github.com/aktsmm/m365-copilot-update-digest</a></div></div><div class="en-foot"><span>Created by yamapan（GitHub: <a href="https://github.com/aktsmm" style="color:#e6eef9">@aktsmm</a>）</span><span>GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。改善要望は GitHub（Issue）で対応します。</span></div></section>`,
       ]),
     );
 
