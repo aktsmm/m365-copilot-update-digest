@@ -57,13 +57,13 @@ if (decks.length > 0 && !password) {
     fs.writeFileSync(
       path.join(pdfDir, "cover.pdf"),
       await render([
-        `<section class="page cover"><div class="cv-bar"></div><div class="cv-body"><div class="cv-eyebrow">Microsoft 365 Copilot</div><h1>M365 Copilot<br>Update Digest</h1><div class="cv-period">${generated} 時点（重要・注目の更新）</div></div><div class="cv-foot"><span>非公式ダイジェスト ／ Copyright (c) 2026 <a href="https://github.com/aktsmm" style="color:#e6eef9">yamapan (@aktsmm)</a> ／ CC BY-NC-SA 4.0 ／ <a href="https://github.com/aktsmm/m365-copilot-update-digest" style="color:#e6eef9">github.com/aktsmm/m365-copilot-update-digest</a></span><span>出典: Microsoft Learn ／ Tech Community ／ Microsoft 365 Roadmap</span></div></section>`,
+        `<section class="page cover"><div class="cv-bar"></div><div class="cv-body"><div class="cv-eyebrow">Microsoft 365</div><h1>Microsoft Copilot<br>Update Digest</h1><div class="cv-period">${generated} 時点（重要・注目の更新）</div></div><div class="cv-foot"><span>非公式ダイジェスト ／ Copyright (c) 2026 <a href="https://github.com/aktsmm" style="color:#e6eef9">yamapan (@aktsmm)</a> ／ CC BY-NC-SA 4.0 ／ <a href="https://github.com/aktsmm/m365-copilot-update-digest" style="color:#e6eef9">github.com/aktsmm/m365-copilot-update-digest</a></span><span>出典: Microsoft Learn ／ Tech Community ／ Microsoft 365 Roadmap</span></div></section>`,
       ]),
     );
     fs.writeFileSync(
       path.join(pdfDir, "end.pdf"),
       await render([
-        `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">M365 Copilot Update Digest</div><div style="position:absolute;right:56px;bottom:84px;text-align:right;font-size:15px;line-height:1.7;color:#3d4a5c">GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。<br>改善要望は GitHub（Issue）で対応します。<br><a href="https://github.com/aktsmm/m365-copilot-update-digest" style="color:#0b5cad">https://github.com/aktsmm/m365-copilot-update-digest</a></div></div><div class="en-foot"><span style="white-space:nowrap">Created by yamapan（GitHub: <a href="https://github.com/aktsmm" style="color:#e6eef9">@aktsmm</a>）</span><span>Copyright (c) 2026 yamapan ／ CC BY-NC-SA 4.0</span></div></section>`,
+        `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">Microsoft Copilot Update Digest</div><div style="position:absolute;right:56px;bottom:84px;text-align:right;font-size:15px;line-height:1.7;color:#3d4a5c">GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。<br>改善要望は GitHub（Issue）で対応します。<br><a href="https://github.com/aktsmm/m365-copilot-update-digest" style="color:#0b5cad">https://github.com/aktsmm/m365-copilot-update-digest</a></div></div><div class="en-foot"><span style="white-space:nowrap">Created by yamapan（GitHub: <a href="https://github.com/aktsmm" style="color:#e6eef9">@aktsmm</a>）</span><span>Copyright (c) 2026 yamapan ／ CC BY-NC-SA 4.0</span></div></section>`,
       ]),
     );
 

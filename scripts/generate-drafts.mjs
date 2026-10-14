@@ -190,7 +190,7 @@ function buildArticleDraft(log, runSummary, siteMeta) {
     `type: daily-article-draft`,
     "---",
     "",
-    `# ${formatDate(log.date, "ja")} の M365 Copilot 更新まとめ`,
+    `# ${formatDate(log.date, "ja")} の Microsoft Copilot 更新まとめ`,
     "",
     lead,
     "",
@@ -234,7 +234,7 @@ function buildXDraft(log, runSummary, siteMeta) {
     (event) => `「${clipText(titleForLocale(event, "ja"), 34)}」`,
   );
   const mainPost = [
-    `M365 Copilot / Copilot Studio の更新を ${sorted.length} 件整理しました。`,
+    `Microsoft Copilot / Copilot Studio の更新を ${sorted.length} 件整理しました。`,
     highlightTitles.length > 0
       ? `特に ${highlightTitles.join("、")} が重要です。`
       : "本日は大きな更新は少なめです。",
@@ -281,7 +281,7 @@ async function main() {
     generatedAt: "",
   });
   const siteMeta = await readJson(siteMetaFile, {
-    siteName: "M365 Copilot Update Digest",
+    siteName: "Microsoft Copilot Update Digest",
     repositoryUrl: "",
   });
   const dailyLogs = await readDailyLogs();

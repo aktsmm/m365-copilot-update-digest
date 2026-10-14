@@ -43,9 +43,9 @@
   const addDays = (date, days) => new Date(Date.parse(`${date}T00:00:00Z`) + days * 86400000).toISOString().slice(0, 10);
   const rank = { high: 2, notable: 1, normal: 0 };
 
-  function checkboxes(container, items, set) {
+  function checkboxes(container, items, set, prefix) {
     container.innerHTML = items
-      .map((item) => `<label class="check-chip"><input type="checkbox" value="${esc(item.id)}" /> <span>${esc(label(item))}</span></label>`)
+      .map((item) => `<label class="check-chip chip-${prefix}-${esc(item.id)}"><input type="checkbox" value="${esc(item.id)}" /> <span>${esc(label(item))}</span></label>`)
       .join("");
     container.querySelectorAll("input").forEach((input) => {
       input.addEventListener("change", () => {
@@ -83,12 +83,12 @@
     const docs = (entry.relatedDocuments || []).filter((d) => safeUrl(d.url) && d.title).slice(0, 3);
     const original = safeUrl(entry.url);
     const hasPdf = entry.slideKey && slideIndex.has(entry.slideKey);
-    return `<article class="update-card">
+    return `<article class="update-card" data-kind="${esc(entry.kind)}">
       <div class="badge-row">
         ${kind ? `<span class="badge badge-kind-${esc(kind.id)}">${esc(label(kind))}</span>` : ""}
         ${entry.importance !== "normal" && level ? `<span class="badge badge-pinned">${esc(label(level))}</span>` : ""}
         <span class="badge badge-product">${esc(entry.productArea)}</span>
-        ${cats.map((c) => `<span class="badge badge-role">${esc(label(c))}</span>`).join("")}
+        ${cats.map((c) => `<span class="badge badge-cat badge-cat-${esc(c.id)}">${esc(label(c))}</span>`).join("")}
       </div>
       <h3><a href="${esc(href)}">${esc(title)}</a></h3>
       ${locale === "ja" && entry.titleEn && entry.titleEn !== title ? `<p class="card-original-title">${esc(entry.titleEn)}</p>` : ""}
@@ -154,8 +154,8 @@
       endInput.value = latest;
       startInput.value = addDays(latest, -29);
       importanceSelect.insertAdjacentHTML("beforeend", facets.importanceLevels.filter((l) => l.id !== "normal").map((l) => `<option value="${esc(l.id)}">${esc(label(l))}</option>`).join(""));
-      checkboxes($("[data-ex-kinds]"), facets.kinds, selected.kinds);
-      checkboxes($("[data-ex-categories]"), facets.categories, selected.categories);
+      checkboxes($("[data-ex-kinds]"), facets.kinds, selected.kinds, "kind");
+      checkboxes($("[data-ex-categories]"), facets.categories, selected.categories, "cat");
       [startInput, endInput, importanceSelect].forEach((el) => el.addEventListener("change", apply));
       textInput.addEventListener("input", apply);
       root.querySelectorAll("[data-ex-preset]").forEach((b) => b.addEventListener("click", () => preset(Number(b.dataset.exPreset))));

@@ -154,7 +154,7 @@ jobs:
               '### 関連ドキュメントの補完',
               '- 次の候補だけを対象に Microsoft Learn MCP の microsoft_docs_search と microsoft_docs_fetch で調べる（最大6項目、各最大3文書）',
               '- M365 / Copilot Studio の資料探索は Microsoft Learn MCP を第一候補とする。GitHub Copilot は調査を実行する役割であり、GitHub のドキュメントを主資料にするという意味ではない',
-              '- Microsoft 公式の対象製品・機能ドキュメントを主資料として先に採用する。GitHub Copilot の製品資料を M365 Copilot の資料と取り違えない。タイトルだけでなく本文と適用製品を確認する',
+              '- Microsoft 公式の対象製品・機能ドキュメントを主資料として先に採用する。GitHub Copilot の製品資料を Microsoft Copilot の資料と取り違えない。タイトルだけでなく本文と適用製品を確認する',
               '- 製品名だけでなく更新された機能と本文の対応を確認する。検索順位や似たタイトルだけで採用しない',
               '- 主資料は learn.microsoft.com の文書 URL を使う。GitHub 連携など更新との関係を説明できる場合だけ docs.github.com の資料を supplemental: true と evidence 付きで補足に追加できる。GitHub 資料だけで Microsoft 主資料の調査を完了扱いにしない',
               '- GitHub 補足だけが見つかった場合、確認済み資料は残して status: verified、mcpStatus: not-found とする。Microsoft 主資料がないのに mcpStatus: verified にしない',

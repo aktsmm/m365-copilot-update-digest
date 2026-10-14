@@ -75,7 +75,7 @@ safe-outputs:
     if-no-changes: ignore
 ---
 
-# M365 Copilot Update Digest — one-update slide JSON
+# Microsoft Copilot Update Digest — one-update slide JSON
 
 Create `data/slides/<id>.json` for exactly one update: a one-slide deck that satisfies `schema/slide.schema.json`. A deterministic step renders it to PDF afterwards; you only write the JSON.
 

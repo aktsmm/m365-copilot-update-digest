@@ -592,7 +592,7 @@ function knownJapaneseRoadmapSummary(event) {
   }
 
   if (/agents usage report/.test(text)) {
-    return "Microsoft 365 管理センターで、M365 Copilot と Copilot Chat のエージェント使用状況を確認できる新しいレポートを提供。ライセンス有無別のアクティブ ユーザー数、アクティブなエージェント数、ユーザーの内訳を確認できます。";
+    return "Microsoft 365 管理センターで、Microsoft Copilot と Copilot Chat のエージェント使用状況を確認できる新しいレポートを提供。ライセンス有無別のアクティブ ユーザー数、アクティブなエージェント数、ユーザーの内訳を確認できます。";
   }
 
   if (/teams meetings in copilot notebooks/.test(text)) {
@@ -624,7 +624,7 @@ function knownJapaneseRoadmapSummary(event) {
   }
 
   if (/writing blocks in m365 copilot/.test(text)) {
-    return "M365 Copilot で Writing Blocks を利用できるようになります。チャットを使いながら、下書き、メモ、メールなどをインラインで編集し、編集と反復を容易にします。";
+    return "Microsoft Copilot で Writing Blocks を利用できるようになります。チャットを使いながら、下書き、メモ、メールなどをインラインで編集し、編集と反復を容易にします。";
   }
 
   if (/credential scanning in data security posture agent/.test(text)) {
@@ -952,7 +952,7 @@ function knownJapaneseRoadmapTitle(event) {
   }
 
   if (/writing blocks in m365 copilot/.test(text)) {
-    return "M365 Copilot で Writing Blocks を利用可能に";
+    return "Microsoft Copilot で Writing Blocks を利用可能に";
   }
 
   if (
@@ -1026,7 +1026,7 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/enhanced m365 copilot memory|personalized with work data/.test(text)) {
-    return `M365 Copilot Memory の個人最適化を強化`;
+    return `Microsoft Copilot Memory の個人最適化を強化`;
   }
 
   if (/create word documents from copilot notebooks/.test(text)) {
@@ -1110,7 +1110,7 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/list email attachments/.test(text)) {
-    return `M365 Copilot でメール添付ファイル一覧に対応`;
+    return `Microsoft Copilot でメール添付ファイル一覧に対応`;
   }
 
   if (/export copilot metrics/.test(text)) {
@@ -1142,7 +1142,7 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/employee self-service agent in m365 copilot/.test(text)) {
-    return `M365 Copilot に従業員セルフサービス Agent を追加`;
+    return `Microsoft Copilot に従業員セルフサービス Agent を追加`;
   }
 
   if (/critique in researcher/.test(text)) {
@@ -1154,7 +1154,7 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/project manager agent/.test(text)) {
-    return `M365 Copilot に Project Manager Agent を追加`;
+    return `Microsoft Copilot に Project Manager Agent を追加`;
   }
 
   if (/audio overviews/.test(text)) {
@@ -1166,7 +1166,7 @@ function buildJapaneseFallbackTitle(event) {
   }
 
   if (/engage private content in m365 copilot/.test(text)) {
-    return `M365 Copilot でプライベート コンテンツ活用を強化`;
+    return `Microsoft Copilot でプライベート コンテンツ活用を強化`;
   }
 
   if (/create and edit images with the model of your choice/.test(text)) {
@@ -1371,7 +1371,7 @@ function buildJapaneseFallbackTitle(event) {
   if (
     /usage report for gcc high|copilot usage report.*gcc high/.test(titleText)
   ) {
-    return `管理センターに GCC High・DoD 向け M365 Copilot 使用状況レポートを追加`;
+    return `管理センターに GCC High・DoD 向け Microsoft Copilot 使用状況レポートを追加`;
   }
 
   if (

@@ -3,7 +3,7 @@ name: Auto-merge slides
 # slide エージェントが作った PR を、データだけの変更で、main 側の信頼できるコードで検証・描画確認できたときだけマージする。
 on:
   workflow_run:
-    workflows: ["M365 Copilot Update Digest — one-update slide JSON"]
+    workflows: ["Microsoft Copilot Update Digest — one-update slide JSON"]
     types: [completed]
   schedule:
     - cron: "23 */3 * * *"

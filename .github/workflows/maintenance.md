@@ -60,7 +60,7 @@ safe-outputs:
     max: 4
 ---
 
-# M365 Copilot Update Digest — pipeline doctor
+# Microsoft Copilot Update Digest — pipeline doctor
 
 You keep this repository's automation running without human help. Run a health check, recover what can be recovered, fix small breakages with one pull request, and report the rest in an issue. Be conservative: change as little as possible.
 

@@ -23,7 +23,7 @@ html,body{margin:0;padding:0;background:#fff;font-family:"Noto Sans CJK JP","Not
 .t{font-size:28px;font-weight:700;color:#0b2a4a;line-height:1.25}.t small{display:block;font-size:18px;font-weight:600;margin-top:2px}
 .en{font-size:12.5px;color:#8a95a6;margin-top:2px}.dt{font-size:13.5px;color:#3d4a5c;font-weight:600;margin-left:12px}
 .badge{color:#fff;font-weight:700;font-size:22px;padding:3px 22px;border-radius:999px;white-space:nowrap}
-.k-ga{background:#1b7f3b}.k-preview{background:#7a4fd0}.k-rolling-out{background:#0b6bcb}.k-in-development{background:#5b6777}.k-retirement{background:#c62828}.k-update{background:#5b6777}
+.k-ga{background:#1b7f3b}.k-preview{background:#7a4fd0}.k-rolling-out{background:#0b6bcb}.k-in-development{background:#d98b00}.k-retirement{background:#c62828}.k-update{background:#5b6777}
 .imp{display:flex;gap:8px}
 .imp .c{flex:1;border-radius:6px;padding:calc(var(--fs) * .25) 10px;font-size:var(--fs);line-height:1.35;border:1.5px solid #c9d4e6;background:#fff}
 .imp .c b.l{display:block;font-size:calc(var(--fs) * .8);color:#5b6777;font-weight:600}
