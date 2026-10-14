@@ -4,7 +4,8 @@ import { buildApi } from "../scripts/lib/api.mjs";
 import { loadCategoryConfig, annotateEvent } from "../scripts/lib/classify.mjs";
 import { coverageStatusKey, summarizeCoverage } from "../scripts/lib/coverage.mjs";
 import { createGate, decryptBuffer, deriveKey, encryptBuffer } from "../scripts/lib/pdf-crypto.mjs";
-import { buildSlide, retentionStart, selectSlideEvents, slideKind, validateSlide } from "../scripts/lib/slides.mjs";
+import fs from "node:fs";
+import { loadSlides, retentionStart, selectSlideEvents, slideKind, validateDeck } from "../scripts/lib/slides.mjs";
 
 const config = loadCategoryConfig();
 
@@ -32,26 +33,34 @@ function event(overrides = {}) {
   );
 }
 
-test("slide is built deterministically and validates", () => {
-  const first = buildSlide(event(), config);
-  assert.equal(first.kind, "ga");
-  assert.deepEqual(first, buildSlide(event(), config));
-  assert.deepEqual(validateSlide(first), []);
-  assert.notEqual(first.inputFingerprint, buildSlide(event({ summaryJa: "変更" }), config).inputFingerprint);
+test("sample slides satisfy the schema and semantic rules", () => {
+  const deck = JSON.parse(fs.readFileSync(new URL("../examples/slide.sample.json", import.meta.url), "utf8"));
+  assert.deepEqual(validateDeck(deck), []);
+  assert.equal(deck.slides.length, 2);
 });
 
-test("slide validation rejects bad input", () => {
-  const slide = buildSlide(event(), config);
-  assert.ok(validateSlide({ ...slide, kind: "bogus" }).length > 0);
-  assert.ok(validateSlide({ ...slide, references: { source: "http://insecure" } }).length > 0);
+test("validation rejects forbidden wording, bad hosts and unverified evidence", () => {
+  const deck = JSON.parse(fs.readFileSync(new URL("../examples/slide.sample.json", import.meta.url), "utf8"));
+  const bad = structuredClone(deck);
+  bad.slides[0].title.ja = "要確認の更新";
+  assert.ok(validateDeck(bad).some((p) => p.message.includes("forbidden phrase")));
+  const host = structuredClone(deck);
+  host.slides[0].references.announcement = "https://example.com/x";
+  assert.ok(validateDeck(host).some((p) => p.message.includes("host not allowed")));
+  const noEvidence = structuredClone(deck);
+  delete noEvidence.slides[0].action.summary.evidence;
+  assert.ok(validateDeck(noEvidence).length > 0);
 });
 
+test("published slide files are valid and named after their key", () => {
+  for (const entry of loadSlides(process.cwd())) assert.deepEqual(entry.problems, [], entry.key);
+});
 test("stage maps to kind and unknown stages fall back to update", () => {
   assert.equal(slideKind({ releaseStage: "Preview" }), "preview");
   assert.equal(slideKind({ releaseStage: "Update" }), "update");
 });
 
-test("selection keeps recent notable+ updates in kind order", () => {
+test("selection keeps recent notable+ updates, newest first", () => {
   const now = new Date("2026-10-14T00:00:00Z");
   assert.equal(retentionStart(now, 3), "2026-08-01");
   const selected = selectSlideEvents(
@@ -63,7 +72,7 @@ test("selection keeps recent notable+ updates in kind order", () => {
     ],
     { now },
   );
-  assert.deepEqual(selected.map((item) => item.id), ["pre", "ga"]);
+  assert.deepEqual(selected.map((item) => item.id), ["ga", "pre"]);
 });
 
 test("pdf encryption round-trips and rejects a wrong key", () => {

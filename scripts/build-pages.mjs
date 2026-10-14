@@ -5,7 +5,7 @@ import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
 import { applyAgentSummaries, loadAgentSummaries } from "./lib/agent-summaries.mjs";
 import { brokenSources } from "./lib/coverage.mjs";
 import { buildApi } from "./lib/api.mjs";
-import { KIND_IDS, KIND_LABEL, KIND_LABEL_EN, buildSlide, selectSlideEvents, slideKind, stableStringify, validateSlide } from "./lib/slides.mjs";
+import { KIND_IDS, KIND_LABEL, KIND_LABEL_EN, loadSlides, slideKind, stableStringify } from "./lib/slides.mjs";
 import { matchingRecord, withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
 import {
@@ -1289,23 +1289,20 @@ async function main() {
   await copyRawFiles();
   await writeText(path.join(siteDir, ".nojekyll"), "\n");
 
-  const slideNow = siteContext.lastCheckedAt ? new Date(siteContext.lastCheckedAt) : new Date();
+  // スライドは gh-aw が作った data/slides/{key}.json だけを公開する。不正な 1 件でサイト全体の公開は止めない。
+  const loadedSlides = loadSlides(workspaceRoot);
   const slides = [];
-  for (const event of selectSlideEvents(allEvents, { now: slideNow })) {
-    const slide = buildSlide(event, categoryConfig);
-    const problems = validateSlide(slide);
-    if (problems.length > 0) {
-      // 不正なスライド 1 件でサイト全体の公開を止めない
-      console.warn(`skipping slide ${event.id}: ${problems[0]}`);
+  for (const entry of loadedSlides) {
+    if (entry.problems.length > 0) {
+      console.warn(`skipping slide ${entry.key}: ${entry.problems[0].message}`);
       continue;
     }
-    slides.push(slide);
+    slides.push(entry);
   }
-  slideKeys = new Set(slides.map((slide) => slide.key));
-  for (const slide of slides) {
-    await writeText(path.join(siteDir, "slides", `${slide.key}.json`), `${stableStringify(slide)}\n`);
-  }
-  for (const file of buildApi(allEvents, {
+  slideKeys = new Set(slides.map((entry) => entry.key));
+  for (const entry of slides) {
+    await writeText(path.join(siteDir, "slides", `${entry.key}.json`), `${JSON.stringify({ schemaVersion: 1, slides: [entry.slide] })}\n`);
+  }  for (const file of buildApi(allEvents, {
     snapshotAt: siteContext.lastCheckedAt,
     categoryConfig,
     coverage: runSummary.coverage,
