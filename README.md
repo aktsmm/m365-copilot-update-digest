@@ -214,6 +214,10 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 
 workflow / validator 変更は **Validate automation workflows** が GitHub 上でも検証します。同一リポジトリ内の PR と main push で `npm run validate:workflows` を実行します。
 
+### 保守エージェント（pipeline doctor）
+
+`maintenance.md`（gh-aw）が約 2 週間ごと（15 日と 29 日の 03:30 JST）に、収集・要約・スライド・自動マージ・デプロイが回り続けているかを点検します。一時的な失敗は該当 workflow を再起動し、検証ルールの行き過ぎなど小さな不具合は `[maintenance]` PR で直し、トークン失効などは Issue で知らせます。問題がなければ `Pipeline healthy` の Issue を作り、本家（azure-update-digest）の新しい更新も一覧にします。モデルは指定せず、既定（Auto）を使います。
+
 ### 必要な設定
 
 - 日本語要約（gh-aw）: Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限）と、リポジトリ設定「Actions に PR の作成・承認を許可」。`summarize.md` を変更したら `gh aw compile summarize` で `summarize.lock.yml` を更新する。要約は原文の指紋（`sourceFingerprint`）が変わった項目だけ再生成し、`npm run validate:data` を通ったものだけが **Auto-merge summaries** でマージされる。未生成・失敗のときは従来の機械翻訳のまま表示する
