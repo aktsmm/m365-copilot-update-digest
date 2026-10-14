@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e9b141baeb5f8b3a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Researcher エージェントで HubSpot コネクタが利用可能に",
+        "subtitleJa": "HubSpot の情報を、Researcher の調査結果に取り込めます",
+        "en": "Microsoft Copilot (Microsoft 365): User can use Hubspot Connector in Researcher"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Researcher エージェントを使い、HubSpot（CRM）の情報を調査に活かしたい人**と、Copilot コネクタの管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "HubSpot の情報で、Researcher が生成する回答を補強できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者がコネクタを有効にすると、ユーザーが使える",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "How to connect and use federated Copilot connectors", "retrievedAt": "2026-10-14T20:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Researcher の**ソース**から HubSpot を選び、**HubSpot の情報を踏まえた調査結果**を得られます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "HubSpot は、CRM 分類で提供されるフェデレーション コネクタの 1 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Federated connectors in the Connectors Gallery", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "MCP でデータをリアルタイムに取得し、外部データは Microsoft 365 にインデックスしない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "ユーザー自身の ID と権限でデータにアクセスする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-14T20:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者がコネクタを有効にし、ユーザーに利用可能にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "User experience and controls", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "ユーザーは Researcher の［ソース］メニューでデータ ソースを見つけられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "How to connect and use federated Copilot connectors", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "求められたら、自分の資格情報でデータ ソースにサインインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "How to connect and use federated Copilot connectors", "retrievedAt": "2026-10-14T20:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Researcher エージェントは書き込み・更新・削除に非対応で、読み取り専用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Supported Copilot experiences", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "パートナー提供のコネクタは、管理者の承認後に有効化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Admin experience and controls", "retrievedAt": "2026-10-14T20:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "管理者の制御",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft 365 管理センターの［Copilot コネクタ］＞［Your connections］で管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Admin experience and controls", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "有効化は組織単位で切替でき、Entra ID グループ単位の段階展開も可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Admin experience and controls", "retrievedAt": "2026-10-14T20:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず特定のグループだけに有効化し、営業・顧客情報の調査で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "不要になったら、ユーザーは Researcher でソースをオフにできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "How to connect and use federated Copilot connectors", "retrievedAt": "2026-10-14T20:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "researcher", "term": "Researcher エージェント", "type": "feature", "oneLine": { "text": "Microsoft 365 Copilot で、複数のソースを使って調査を行うエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Supported Copilot experiences", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "federated-connector", "term": "フェデレーション コネクタ", "type": "feature", "oneLine": { "text": "外部データを取り込まず、MCP でリアルタイムに取得する Copilot コネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Model Context Protocol。コネクタが外部データを取得するために使う仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=501292",
+        "learn": [{ "title": "Federated connectors overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
