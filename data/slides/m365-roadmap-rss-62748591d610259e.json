@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-62748591d610259e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Commerce: POS の返品用 MCP ツールを提供予定",
+        "subtitleJa": "返品の操作を、エージェントから呼び出せる形で公開します",
+        "en": "Dynamics 365 Commerce: Enable MCP tools for POS returns"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Commerce でエージェントを作る開発者・パートナー**と、小売の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Store Commerce POS の返品を、会話型・エージェント型の体験として組み立てやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、今すぐの対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Commerce の返品機能が**再利用できる MCP ツール**として公開され、会話型の返品体験を作れます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供される内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Store Commerce POS の返品機能を、構造化された操作（MCP ツール）として公開", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "顧客・パートナー・エージェント開発者が、会話型の返品体験を構築できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Commerce MCP サーバーは、互換性のある AI エージェントが直接呼び出せるツール群を提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "冒頭", "retrievedAt": "2026-10-14T19:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、内容は変更される可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Commerce MCP サーバーはクラウドホストの CSU のみ対応（セルフホスト非対応）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "前提条件", "retrievedAt": "2026-10-14T19:50:00Z" }] },
+            { "text": "MCP は環境ごとに一度に 1 つの CSU でのみ有効にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "コマース スケール ユニットでのセルフサービス有効化", "retrievedAt": "2026-10-14T19:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "バージョン 10.0.48 以降の CSU と、LCS で CSU を管理する権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "前提条件", "retrievedAt": "2026-10-14T19:50:00Z" }] },
+            { "text": "エージェントを Microsoft Entra ID アプリとして登録し、許可クライアントで承認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "ビジネス シナリオ", "retrievedAt": "2026-10-14T19:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現行の Commerce MCP サーバー（プレビュー）の接続方法を先に確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "AI エージェントをデータ システムとビジネス ロジックに接続するオープン標準（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "冒頭", "retrievedAt": "2026-10-14T19:50:00Z" }] } },
+        { "termKey": "commerce-mcp", "term": "Commerce MCP サーバー", "type": "feature", "oneLine": { "text": "MCP の標準を Dynamics 365 Commerce のヘッドレス コマース エンジンにもたらすサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "冒頭", "retrievedAt": "2026-10-14T19:50:00Z" }] } },
+        { "termKey": "csu", "term": "Commerce Scale Unit（CSU）", "type": "term", "oneLine": { "text": "MCP サーバーが、他のチャネルと同じ価格・在庫・注文管理を動かす実行基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "Commerce MCP が重要な理由", "retrievedAt": "2026-10-14T19:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574124",
+        "learn": [
+          { "title": "Dynamics 365 Commerce モデル コンテキスト プロトコル (MCP) サーバー (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
