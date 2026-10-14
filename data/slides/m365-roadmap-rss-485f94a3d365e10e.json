@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-485f94a3d365e10e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Visio デスクトップ版の MCP サーバー（開発中）",
+        "subtitleJa": "対応する AI クライアントから、自然言語で Visio の図を作成・更新できるようになります",
+        "en": "Visio: Desktop Model Context Protocol (MCP) Server"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Visio デスクトップ版で図を作る人**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "AI クライアントから自然言語で Visio の図を作成・読み取り・更新できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、今すぐ必要な対応はない", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "対応する AI クライアントが Visio デスクトップに接続し、**自然言語**で図を作成・読み取り・更新できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Visio デスクトップ アプリと AI クライアントをつなぐ MCP サーバー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "図の作成・読み取り・更新を自然言語で実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）のデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Windows 上でローカルに動作する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ライセンスのある Visio デスクトップ アプリが必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用予定の端末が Windows と Visio デスクトップのライセンスを満たすか確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "visio-desktop-mcp", "term": "Visio Desktop MCP Server", "type": "feature", "oneLine": { "text": "対応する AI クライアントを Visio デスクトップに接続し、図の作成・読み取り・更新を可能にするサーバー。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントにWork IQ(プレビュー)を追加してください", "retrievedAt": "2026-10-14T19:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574125"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
