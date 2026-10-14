@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { matchingRecord, normalizeDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
 const workspaceRoot = process.cwd();
 const eventsDir = path.join(workspaceRoot, "data", "events");
@@ -19,6 +20,8 @@ function stableArticleKey(event) {
 }
 
 async function main() {
+  const cache = JSON.parse(await fs.readFile(path.join(workspaceRoot, "config", "related-documents.json"), "utf8"));
+  validateDocumentCache(cache);
   const entries = await fs.readdir(eventsDir, { withFileTypes: true });
   const occurrences = new Map();
 
@@ -32,6 +35,16 @@ async function main() {
     const log = JSON.parse(await fs.readFile(filePath, "utf8"));
 
     for (const event of log.events || []) {
+      const record = matchingRecord(event, cache);
+      if (record && normalizeDocuments(record.documents, event.url).length !== record.documents.length) {
+        throw new Error(`Related document cache repeats the original URL for ${event.id}`);
+      }
+      if (event.relatedDocuments !== undefined && (
+        !Array.isArray(event.relatedDocuments) ||
+        normalizeDocuments(event.relatedDocuments, event.url).length !== event.relatedDocuments.length
+      )) {
+        throw new Error(`Invalid related documents for ${event.id} in ${entry.name}`);
+      }
       const key = stableArticleKey(event);
       if (!key) {
         continue;

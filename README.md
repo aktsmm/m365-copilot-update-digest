@@ -16,6 +16,7 @@ Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデー�
 - 日次 Markdown を生成する
 - 日次イベントから記事 draft と X 投稿 draft を生成する
 - GitHub Pages 向けにトップ、日次、週次、検索、About を含む静的サイトを生成する
+- トップと検索ページの検索結果から、原文・関連ドキュメント・日次ページの該当箇所を直接開く
 - JSON と Markdown の raw データをサイトから参照できるようにする
 - pin / hide の最小 override を JSON 設定で持つ
 
@@ -59,6 +60,65 @@ npm run validate:workflows
 ```
 
 GitHub 上でも workflow / validator 変更時に **Validate automation workflows** が同じガードを実行します。
+
+リンク収集と検索導線の回帰テスト:
+
+```bash
+npm test
+```
+
+## 原文と関連ドキュメント
+
+検索結果には「原文を開く」「日次の該当箇所を見る」と、確認済みの関連ドキュメントを最大3件表示します。外部ページは別タブで開きます。日次ページでは対象の更新カードへ移動し、枠を強調します。日本語・英語、トップ内検索・検索ページで共通の動作です。
+関連資料は次の順で補完します。
+
+1. 更新項目・RSS 本文に明記された Microsoft Learn のリンク
+2. リンクがない場合、Microsoft 公式原文の本文内リンク（再帰クロールなし）
+3. まだ関連資料がない項目について、Copilot cloud agent が Learn MCP で検索・本文照合した文書
+
+M365 / Copilot Studio の主資料は **Microsoft Learn MCP で確認する対象製品の Microsoft 公式ドキュメント**です。GitHub Copilot は調査を実行するエージェントであって、GitHub の製品資料を M365 の主資料にするという意味ではありません。GitHub 連携など更新との関係が確認できる場合は、`docs.github.com` の公式資料も根拠付きの補足として採用できます。表示は Microsoft の主資料を先に並べます。GitHub 資料しかない項目は、Microsoft 主資料の MCP 調査候補として残します。
+
+一覧型の release notes / what's new / Roadmap ページ全体から、別の更新の資料を拾うことはしません。Tech Community の公開ページデータも記事 ID を照合し、該当記事の本文だけを使います。原文と同じ文書、重複、非公式ホスト、不正な URL は除外します。資料が見つからない場合は関連資料欄を省略し、原文・日次リンクは維持します。資料の存在は、その機能の GA やすべての環境での提供を保証するものではありません。
+
+**関連ドキュメントは日本語版を優先**します。`ja-jp` 版を実際に取得して文書の本文・見出しを確認し、英語へリダイレクトされただけの場合は日本語版ありと扱いません。日本語版が確認できないときは元の確認済み文書を残します。既存の英語資料も補完バッチの対象となり、日本語確認後は `localePreference: "ja-jp"` を記録して繰り返し照会を防ぎます。原文リンクそのものは元ソースの URL を維持します。
+
+`config/related-documents.json` はイベント ID をキーに、入力 fingerprint、確認日時、`verified` / `not-found` / `error`、文書一覧と出典を保持します。MCP 補完は `mcpStatus` と本文との対応根拠 `evidence` も保存します。MCP が使えず既知の公式ページを直接確認した資料は `provenance: "reference"` と根拠を保存し、MCP 利用済みとは扱いません。入力が同じ確認済み・未発見・エラー結果は自動で再検索せず、障害時も確認済み資料を維持します。通常収集は1回につき最大12項目・24ページ取得に制限します。リダイレクト先も公式ホストを検証し、取得にはタイムアウトと容量上限を設けます。失敗は警告とキャッシュのエラー欄、`data/run-summary.json` の関連資料集計に残ります。
+
+過去分の補完は、先に対象を確認してから保存します（イベント JSON や翻訳を直接書き換えません）。
+
+```bash
+node scripts/enrich-documents.mjs --limit 12
+node scripts/enrich-documents.mjs --write --limit 12
+```
+
+単一イベントは `--id <event-id>` で選択できます。一時障害を明示的に再試行する場合は `--write --retry-errors --id <event-id>` を使います。MCP の未調査候補は `--pending --limit 6` で取得します。未発見・MCP エラーを再調査する場合は、対象レコードだけをレビューして削除し、再度補完します。毎回全キャッシュを削除しないでください。
+
+ビルドはキャッシュをイベントに重ねて表示するため、補完キャッシュだけの変更でも公開できます。通常の `collect` では関連資料をイベント JSON にも反映します。canonical 検証では `DIGEST_DOCUMENT_ENRICHMENT=0` を指定し、新しいネットワーク補完バッチを始めず保存済み結果だけを反映します。
+
+### Copilot cloud agent の Learn MCP 設定
+
+ローカルの MCP 設定や Node.js の Actions ジョブとは別に、リポジトリの **Settings → Copilot → MCP servers** で、既存設定を残して次のサーバーを追加します。設定ファイルをリポジトリに置くだけでは、このクラウド設定を行ったことにはなりません。
+
+```json
+{
+  "mcpServers": {
+    "microsoft-learn": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp",
+      "tools": ["microsoft_docs_search", "microsoft_docs_fetch"]
+    }
+  }
+}
+```
+
+Learn MCP は公開文書用の認証不要サービスです。cloud agent の設定にはリポジトリ管理権限と GitHub サインインが必要です。ローカルでのツール成功はクラウドでの利用成功を意味しません。設定保存後、cloud agent の実行ログで Learn の検索・本文取得と、キャッシュに保存された根拠を確認します。MCP が利用できない場合はエラーを記録し、推測 URL を作らない運用にします。
+
+既存の **Author automation PR** が未調査項目を最大6件選んで補完を依頼します。結果は通常の生成 PR 検証を通します。キャッシュだけの更新も収集コミットと Pages デプロイの対象です。
+
+参照（2026-10-14 確認）:
+
+- [GitHub: リポジトリの MCP 設定](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers)
+- [Microsoft Learn MCP Server の概要](https://learn.microsoft.com/ja-jp/training/support/mcp)
 
 ## 出力先
 
@@ -137,8 +197,10 @@ Cloud Agent に許可している変更対象:
 - `scripts/collect.mjs`
 - `scripts/generate-drafts.mjs`
 - `scripts/lib/reporting.mjs`
+- `scripts/lib/related-documents.mjs`
 - `config/sources.json`
 - `config/summary-ja-cache.json`
+- `config/related-documents.json`
 - `npm run collect` で再生成される `data/**` と `summaries/daily/**`
 - `npm run generate:drafts` で再生成される `drafts/articles/daily/**` と `drafts/posts/x/**`
 

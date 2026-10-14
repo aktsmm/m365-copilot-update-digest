@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
 import {
   formatDate,
@@ -27,6 +28,7 @@ const summariesDir = path.join(workspaceRoot, "summaries", "daily");
 const overridesFile = path.join(workspaceRoot, "config", "overrides.json");
 const siteMetaFile = path.join(workspaceRoot, "config", "site.json");
 const runSummaryFile = path.join(workspaceRoot, "data", "run-summary.json");
+const relatedDocumentsFile = path.join(workspaceRoot, "config", "related-documents.json");
 
 const TEXT = {
   ja: {
@@ -96,6 +98,8 @@ const TEXT = {
     rawMarkdown: "Markdown を開く",
     openSource: "原文を開く",
     openDigest: "日次ページを見る",
+    relatedDocuments: "関連ドキュメント",
+    documentSupplemental: "補足",
     publishedLabel: "公開日",
     sourceLabel: "ソース",
     whyLabel: "なぜ重要か",
@@ -179,6 +183,8 @@ const TEXT = {
     rawMarkdown: "Open Markdown",
     openSource: "Open source",
     openDigest: "Open daily page",
+    relatedDocuments: "Related documentation",
+    documentSupplemental: "Supplementary",
     publishedLabel: "Published",
     sourceLabel: "Source",
     whyLabel: "Why it matters",
@@ -467,7 +473,7 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
     .join("");
 
   return `
-    <article class="update-card" data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}">
+    <article class="update-card"${options.anchor ? ` id="${escapeHtml(`update-${event.id}`)}"` : ""} data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}">
       <div class="badge-row">
         ${event.isPinned ? renderBadge("Pinned", "pinned") : ""}
         ${renderBadge(product, "product")}
@@ -489,6 +495,7 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
         <a href="${originalHref}" target="_blank" rel="noreferrer">${escapeHtml(text.openSource)}</a>
         ${detailHref ? `<a href="${escapeHtml(detailHref)}">${escapeHtml(text.openDigest)}</a>` : ""}
       </div>
+      ${event.relatedDocuments?.length ? `<div class="related-documents"><strong>${escapeHtml(text.relatedDocuments)}</strong><ul>${event.relatedDocuments.map((document) => `<li><a href="${escapeHtml(document.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.documentSupplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
     </article>
   `;
 }
@@ -679,7 +686,9 @@ function buildSearchIndex(events) {
     releaseStage: event.releaseStage,
     roleTags: event.roleTags || [],
     publishedAt: event.publishedAt,
-    detailPath: `daily/${toDateOnly(event.publishedAt)}/`,
+    url: event.url,
+    relatedDocuments: event.relatedDocuments || [],
+    detailPath: `daily/${toDateOnly(event.publishedAt)}/#${encodeURIComponent(`update-${event.id}`)}`,
   }));
 }
 
@@ -873,7 +882,7 @@ function renderDailyPage(locale, siteMeta, log) {
     </section>
     <section class="section-block">
       ${renderSectionHeading(text.fullListTitle)}
-      <div class="card-grid">${sortedEvents.map((event) => renderUpdateCard(event, locale, depth, text)).join("")}</div>
+      <div class="card-grid">${sortedEvents.map((event) => renderUpdateCard(event, locale, depth, text, { anchor: true })).join("")}</div>
     </section>
   `;
 
@@ -1066,8 +1075,10 @@ async function main() {
     newEventCount: 0,
   });
   const rawDailyLogs = await readDailyLogs();
+  const relatedDocuments = await readJson(relatedDocumentsFile, {});
+  validateDocumentCache(relatedDocuments);
   const allEvents = applyOverrides(
-    rawDailyLogs.flatMap((log) => log.events || []),
+    rawDailyLogs.flatMap((log) => log.events || []).map((event) => withRelatedDocuments(event, relatedDocuments)),
     overrides,
   );
   const dailyLogs = rawDailyLogs

@@ -23,6 +23,7 @@ jobs:
       PR_USER_LOGIN: ${{ github.event.pull_request.user.login }}
       PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
       PR_IS_DRAFT: ${{ github.event.pull_request.draft }}
+      DIGEST_DOCUMENT_ENRICHMENT: "0"
 
     steps:
       - name: Checkout
@@ -129,8 +130,10 @@ jobs:
             /^scripts\/collect\.mjs$/,
             /^scripts\/generate-drafts\.mjs$/,
             /^scripts\/lib\/reporting\.mjs$/,
+            /^scripts\/lib\/related-documents\.mjs$/,
             /^config\/sources\.json$/,
             /^config\/summary-ja-cache\.json$/,
+            /^config\/related-documents\.json$/,
             /^data\/events\/.*\.json$/,
             /^summaries\/daily\/.*\.md$/,
             /^drafts\/articles\/daily\/.*\.md$/,
@@ -222,14 +225,14 @@ jobs:
             exit 0
           fi
 
-          if git diff --quiet -- data summaries drafts config/summary-ja-cache.json; then
+          if git diff --quiet -- data summaries drafts config/summary-ja-cache.json config/related-documents.json; then
             echo "No canonical generated output drift detected."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data summaries drafts config/summary-ja-cache.json
+          git add data summaries drafts config/summary-ja-cache.json config/related-documents.json
 
           if git diff --cached --quiet; then
             echo "No staged canonical outputs detected."
@@ -248,9 +251,10 @@ jobs:
             data \
             summaries \
             drafts \
-            config/summary-ja-cache.json; then
+            config/summary-ja-cache.json \
+            config/related-documents.json; then
             echo 'Generated files drifted after running collect/build. Commit the regenerated artifacts before merging.' >&2
-            git diff -- data summaries drafts config/summary-ja-cache.json
+            git diff -- data summaries drafts config/summary-ja-cache.json config/related-documents.json
             exit 1
           fi
 

@@ -217,6 +217,28 @@ requireOccurrences(
 );
 
 requireText(
+  collectUpdates,
+  "git diff --quiet -- data summaries config/related-documents.json",
+  "Documentation-cache-only changes must deploy Pages",
+);
+requireText(
+  validateGeneratedPr,
+  'DIGEST_DOCUMENT_ENRICHMENT: "0"',
+  "Canonical validation must not start a new network enrichment batch",
+);
+for (const file of [files.validateGeneratedPr, files.autoMerge, files.reconcile]) {
+  const content = readWorkflow(file);
+  requireText(content, "/^config\\/related-documents\\.json$/", "Generated PRs must allow the documentation cache");
+  requireText(content, "/^scripts\\/lib\\/related-documents\\.mjs$/", "Generated PRs must allow the documentation helper");
+}
+requireOccurrences(
+  validateGeneratedPr,
+  "config/related-documents.json",
+  4,
+  "Canonical autofix and drift checks must preserve the documentation cache",
+);
+
+requireText(
   rerunBlocked,
   "isExpectedGeneratedPrAutofix",
   "Blocked workflow reruns must skip expected generated PR auto-fix failures",
