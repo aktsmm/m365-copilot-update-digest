@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-71476bc8cb59f114",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot ダッシュボードから対象者を絞った調査を送信できる予定",
+        "subtitleJa": "Copilot Pulse アンケートを、ダッシュボードから対象ユーザーへ直接送れます",
+        "en": "Microsoft Viva: Copilot Dashboard - Targeted Audience Surveys"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva"],
+        "categories": ["viva-others"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot ダッシュボードを使う変更推進リーダー**と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ライセンス付与済み・アクティブなユーザーへ、ダッシュボードから Copilot Pulse アンケートを送れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ダッシュボードの組織や職種などのフィルターを尊重しつつ、**Insights データで自動更新される対象者**へ Copilot Pulse を送れます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ライセンス付与済みまたはアクティブな全ユーザーが送信対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象者は Insights データで自動的に更新される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在もダッシュボードの [センチメント] タブから Pulse アンケートを開始できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "Copilot ダッシュボードからセンチメントをキャプチャする", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "組織・職種などの既存フィルターを尊重し、集団レベルでプライバシーを保護", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Pulse 結果の統合には Viva Suite、Viva Glint などのライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "冒頭のライセンス要件", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot インパクト テンプレートの主要 4 問は削除できず、他の質問は追加・削除できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "テンプレートのカスタマイズ", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+            { "text": "Pulse の既定の期間は 7 日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "テンプレートのカスタマイズ", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-dashboard", "term": "Microsoft Copilot ダッシュボード", "type": "product", "oneLine": { "text": "Copilot の展開準備、導入推進、影響測定に役立つ分析情報を提供するダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
+        { "termKey": "viva-pulse", "term": "Viva Pulse", "type": "product", "oneLine": { "text": "リーダーがチームのフィードバックを集めるアンケート機能で、Copilot ダッシュボードと統合される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
+        { "termKey": "copilot-impact-template", "term": "Copilot インパクト テンプレート", "type": "feature", "oneLine": { "text": "Copilot の有効性を測るための、調査に基づく Pulse のテンプレート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568072",
+        "learn": [
+          { "title": "Viva Pulse を使用して Microsoft Copilot の影響を測定する", "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
