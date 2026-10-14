@@ -14,7 +14,7 @@ const KIND_BY_STAGE = {
   Cancelled: "retirement",
 };
 
-const KIND_LABEL = {
+export const KIND_LABEL = {
   ga: "提供開始",
   preview: "プレビュー",
   "rolling-out": "展開中",
@@ -24,6 +24,7 @@ const KIND_LABEL = {
 };
 
 const KIND_ORDER = ["preview", "ga", "rolling-out", "in-development", "retirement", "update"];
+export const KIND_IDS = KIND_ORDER;
 
 const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 

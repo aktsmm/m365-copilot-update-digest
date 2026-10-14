@@ -10,6 +10,7 @@
     { attr: "data-source-filter", card: "data-source-type", multi: false },
     { attr: "data-category-filter", card: "data-categories", multi: true },
     { attr: "data-importance-filter", card: "data-importance", multi: false, atLeast: ["high", "notable"] },
+    { attr: "data-kind-filter", card: "data-kind", multi: false },
   ];
 
   roots.forEach((root) => {

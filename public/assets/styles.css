@@ -409,6 +409,64 @@ h3 {
   color: #9a5c00;
 }
 
+.badge-kind-ga {
+  background: rgba(27, 127, 59, 0.14);
+  color: #1b7f3b;
+  font-weight: 700;
+}
+
+.badge-kind-preview {
+  background: rgba(122, 79, 208, 0.14);
+  color: #7a4fd0;
+  font-weight: 700;
+}
+
+.badge-kind-rolling-out {
+  background: rgba(11, 107, 203, 0.14);
+  color: #0b6bcb;
+  font-weight: 700;
+}
+
+.badge-kind-in-development,
+.badge-kind-update {
+  background: rgba(91, 103, 119, 0.14);
+  color: #5b6777;
+  font-weight: 700;
+}
+
+.badge-kind-retirement {
+  background: rgba(198, 40, 40, 0.14);
+  color: #c62828;
+  font-weight: 700;
+}
+
+.download-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 12px;
+}
+
+.download-toolbar button {
+  border: 1px solid rgba(37, 105, 246, 0.35);
+  background: #fff;
+  color: var(--accent-strong);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.download-toolbar button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.download-toolbar .download-status {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .update-card p,
 .prose-card p,
 .search-result-card p {

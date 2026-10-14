@@ -1,9 +1,10 @@
 import fs from "node:fs/promises";
+import crypto from "node:crypto";
 import path from "node:path";
 import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
 import { brokenSources } from "./lib/coverage.mjs";
 import { buildApi } from "./lib/api.mjs";
-import { buildSlide, selectSlideEvents, stableStringify, validateSlide } from "./lib/slides.mjs";
+import { KIND_IDS, KIND_LABEL, buildSlide, selectSlideEvents, slideKind, stableStringify, validateSlide } from "./lib/slides.mjs";
 import { matchingRecord, withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
 import {
@@ -34,6 +35,26 @@ const siteMetaFile = path.join(workspaceRoot, "config", "site.json");
 const runSummaryFile = path.join(workspaceRoot, "data", "run-summary.json");
 const relatedDocumentsFile = path.join(workspaceRoot, "config", "related-documents.json");
 const categoryConfig = loadCategoryConfig();
+// 公開ディレクトリの内容から決める版。Pages の 10 分キャッシュを、内容が変わったときだけ回避する。
+let assetVersion = "";
+function withAssetVersion(href) {
+  return assetVersion ? `${href}?v=${assetVersion}` : href;
+}
+
+async function computeAssetVersion() {
+  const hash = crypto.createHash("sha256");
+  const walk = async (dir) => {
+    const entries = (await fs.readdir(dir, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name));
+    for (const entry of entries) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) await walk(full);
+      else hash.update(entry.name).update(await fs.readFile(full));
+    }
+  };
+  await walk(publicDir);
+  return hash.digest("hex").slice(0, 10);
+}
+
 // 公開するスライドの ID。main() で allEvents から決める（PDF 本体は build:slide-pdfs が出力する）。
 let slideKeys = new Set();
 
@@ -68,7 +89,10 @@ const TEXT = {
     importanceFilterLabel: "重要度",
     allCategories: "すべて",
     allImportance: "すべて",
+    kindFilterLabel: "段階",
+    allKinds: "すべて",
     slideLink: "スライド PDF",
+    downloadMerged: "表示中のスライドを 1 つの PDF にまとめて保存",
     allProducts: "すべて",
     allRoles: "すべて",
     allSourceTypes: "すべて",
@@ -161,7 +185,10 @@ const TEXT = {
     importanceFilterLabel: "Importance",
     allCategories: "All",
     allImportance: "All",
+    kindFilterLabel: "Stage",
+    allKinds: "All",
     slideLink: "Slide PDF",
+    downloadMerged: "Save the visible slides as one PDF",
     allProducts: "All",
     allRoles: "All",
     allSourceTypes: "All",
@@ -450,9 +477,18 @@ function renderFilterToolbar(events, text, locale = "ja") {
   const usedCategories = new Set(events.flatMap((event) => event.categories || []));
   const categories = categoryConfig.categories.filter((category) => usedCategories.has(category.id));
   const levels = categoryConfig.importanceLevels.filter((level) => level.id !== "normal");
+  const usedKinds = new Set(events.map((event) => slideKind(event)));
+  const kinds = KIND_IDS.filter((kind) => usedKinds.has(kind));
 
   return `
       <div class="filter-toolbar">
+        <div class="filter-group">
+          <span>${escapeHtml(text.kindFilterLabel)}</span>
+          <div class="chip-row">
+            <button class="chip is-active" type="button" data-kind-filter="all">${escapeHtml(text.allKinds)}</button>
+            ${kinds.map((kind) => `<button class="chip" type="button" data-kind-filter="${escapeHtml(kind)}">${escapeHtml(KIND_LABEL[kind])}</button>`).join("")}
+          </div>
+        </div>
         <div class="filter-group">
           <span>${escapeHtml(text.categoryFilterLabel)}</span>
           <div class="chip-row">
@@ -523,8 +559,9 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
     .join("");
 
   return `
-    <article class="update-card"${options.anchor ? ` id="${escapeHtml(`update-${event.id}`)}"` : ""} data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}" data-categories="${escapeHtml((event.categories || []).join(" "))}" data-importance="${escapeHtml(event.importanceLevel || "normal")}">
+    <article class="update-card"${options.anchor ? ` id="${escapeHtml(`update-${event.id}`)}"` : ""} data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}" data-categories="${escapeHtml((event.categories || []).join(" "))}" data-importance="${escapeHtml(event.importanceLevel || "normal")}" data-kind="${escapeHtml(slideKind(event))}">
       <div class="badge-row">
+        ${renderBadge(KIND_LABEL[slideKind(event)], `kind-${slideKind(event)}`)}
         ${event.isPinned ? renderBadge("Pinned", "pinned") : ""}
         ${renderBadge(product, "product")}
         ${renderBadge(sourceTypeLabel(event.sourceFamily, text), "source-type")}
@@ -672,9 +709,9 @@ function renderLayout({
   content,
 }) {
   const text = TEXT[locale];
-  const assetHref = relativeHref(depth, "assets/styles.css");
-  const defaultScript = relativeHref(depth, "assets/site.js");
-  const scripts = [defaultScript, relativeHref(depth, "assets/pdf-gate.js"), ...extraScripts]
+  const assetHref = withAssetVersion(relativeHref(depth, "assets/styles.css"));
+  const defaultScript = withAssetVersion(relativeHref(depth, "assets/site.js"));
+  const scripts = [defaultScript, withAssetVersion(relativeHref(depth, "assets/pdf-gate.js")), ...extraScripts]
     .map((href) => `<script defer src="${escapeHtml(href)}"></script>`)
     .join("\n");
 
@@ -864,6 +901,7 @@ function renderIndexPage(
     <section class="section-block" data-card-filters>
       ${renderSectionHeading(text.recentTitle)}
       ${recentEvents.length > 0 ? renderFilterToolbar(recentEvents, text, locale) : ""}
+      ${slideKeys.size > 0 ? `<div class="download-toolbar" data-download-toolbar hidden><button type="button" data-download-merged>${escapeHtml(text.downloadMerged)}</button><span class="download-status" data-download-status></span></div>` : ""}
       ${recentWindow.length === 0 ? `<p class="section-note">${escapeHtml(text.noRecent)}</p>` : ""}
       <div class="card-grid" data-filter-cards>${recentEvents.length > 0 ? recentEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
       <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
@@ -1167,7 +1205,13 @@ async function main() {
 
   await fs.rm(siteDir, { recursive: true, force: true });
   await fs.mkdir(siteDir, { recursive: true });
+  assetVersion = await computeAssetVersion();
   await copyDirectory(publicDir, siteDir);
+  await fs.mkdir(path.join(siteDir, "assets", "vendor"), { recursive: true });
+  await fs.copyFile(
+    path.join(workspaceRoot, "node_modules", "pdf-lib", "dist", "pdf-lib.min.js"),
+    path.join(siteDir, "assets", "vendor", "pdf-lib.min.js"),
+  );
   await copyRawFiles();
   await writeText(path.join(siteDir, ".nojekyll"), "\n");
 

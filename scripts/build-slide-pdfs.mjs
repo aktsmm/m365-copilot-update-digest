@@ -28,6 +28,10 @@ function findChrome() {
 }
 
 const files = fs.existsSync(slidesDir) ? fs.readdirSync(slidesDir).filter((name) => name.endsWith(".json")).sort() : [];
+// 最新の 1 件は、パスワードなしで試せる無料サンプルとして暗号化せずに公開する
+const newestKey = files
+  .map((file) => JSON.parse(fs.readFileSync(path.join(slidesDir, file), "utf8")))
+  .sort((a, b) => b.meta.publishedJst.localeCompare(a.meta.publishedJst) || a.key.localeCompare(b.key))[0]?.key;
 const entries = [];
 let gate = null;
 
@@ -59,6 +63,8 @@ if (files.length > 0 && !password) {
         const pdf = await page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true });
         const blob = encryptBuffer(created.key, pdf);
         fs.writeFileSync(path.join(pdfDir, `${slide.key}.pdf.enc`), blob);
+        const free = slide.key === newestKey;
+        if (free) fs.writeFileSync(path.join(pdfDir, `${slide.key}.pdf`), pdf);
         entries.push({
           key: slide.key,
           kind: slide.kind,
@@ -67,6 +73,7 @@ if (files.length > 0 && !password) {
           publishedJst: slide.meta.publishedJst,
           categories: slide.meta.categories,
           bytes: blob.length,
+          ...(free ? { free: true } : {}),
         });
       } catch (error) {
         // 1 件の失敗で公開全体を止めない
