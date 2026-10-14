@@ -60,6 +60,13 @@ if (files.length > 0 && !password) {
     );
     await page.evaluate(() => document.fonts.ready);
     fs.writeFileSync(path.join(pdfDir, "cover.pdf"), await page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true }));
+    await page.setContent(
+      documentHtml(`<section class="page" style="justify-content:center;padding:0 96px">
+  <div style="font-size:30px;font-weight:700;color:#243a5e;margin-bottom:20px">ご利用にあたって</div>
+  <div style="font-size:18px;line-height:1.9;color:#3d4a5c">この資料は M365 Copilot Update Digest（非公式）が公開情報から自動生成したものです。<br>日本語の題名・要約には機械翻訳や AI 生成が含まれ、誤りを含む場合があります。必ず原文をご確認ください。<br>Microsoft Learn・Tech Community・Microsoft 365 Roadmap の原文は Microsoft に帰属します。<br>Copyright (c) 2026 yamapan (@aktsmm) / CC BY-NC-SA 4.0<br>https://github.com/aktsmm/m365-copilot-update-digest</div>
+</section>`),
+    );
+    fs.writeFileSync(path.join(pdfDir, "end.pdf"), await page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true }));
     for (const file of files) {
       try {
         const slide = JSON.parse(fs.readFileSync(path.join(slidesDir, file), "utf8"));
