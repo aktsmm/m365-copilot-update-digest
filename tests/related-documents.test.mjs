@@ -68,6 +68,7 @@ test("links resolve relatives, deduplicate locales and fragments, and exclude th
     <a href="javascript:alert(1)">Not a URL</a>`, url);
   assert.equal(links.length, 2);
   assert.equal(normalizeDocuments(links, `${url}#overview`).length, 1);
+  assert.equal(normalizeDocuments([{ ...candidate, url: `${url}#date` }], `${url}?tabs=all&view=latest`).length, 0);
   assert.equal(normalizeDocuments([...links, ...links]).length, 2);
   assert.equal(normalizeDocuments([1, 2, 3, 4].map((id) => ({
     ...candidate, url: `${url}${id}`,
@@ -237,8 +238,20 @@ test("Japanese URLs that redirect to English or serve English content are not se
         : documentPage(value),
       now,
     });
+
     assert.equal(cache[event.id].documents[0].url, url);
   }
+});
+
+test("Japanese navigation alone does not establish a Japanese article translation", async () => {
+  const cache = {};
+  await enrichDocumentCache([event], cache, {
+    candidates: new Map([[event.id, [candidate]]]), now,
+    fetchPage: async (value) => value === japaneseUrl
+      ? { url: value, html: "<main><nav>日本語のナビゲーション</nav><div class='content'><h1>English guide</h1></div><div class='content'>English article body</div></main>" }
+      : documentPage(value),
+  });
+  assert.equal(cache[event.id].documents[0].url, url);
 });
 
 test("existing English documents are upgraded once, and transient failures never erase confirmed links", async () => {

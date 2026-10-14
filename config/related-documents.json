@@ -28,5 +28,83 @@
         "evidence": "公式日本語ページの本文で、Copilot Studio エージェントをモジュール化して拡張する方法、子エージェントと接続エージェントの使い分け、ツール数の増加と性能低下への対応を確認。元記事の大規模エージェントの設計・分割という主題に対応する。今回の確認は既知の公式 URL の本文取得で行い、MCP 利用とは区別する。"
       }
     ]
+  },
+  "m365-copilot-release-notes-4142c6e03eedf599": {
+    "inputFingerprint": "45c20b6ea0d80cd2a62f7d0e227fb1990ff7bb990cd9ac0a0813b4b06c031137",
+    "status": "verified",
+    "checkedAt": "2026-10-14T06:11:00.425Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Map non-Microsoft Entra ID identities",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id",
+        "provenance": "mcp",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+        "evidence": "Learn MCP の検索・本文取得で、Copilot コネクタの ID プロパティ、正規表現、マッピング式の設定を確認した。更新された ID マッピング規則の関連設定資料として採用。ja-jp ページも確認したが記事本文は英語のため、英語版を維持した。特定の Veeva コネクタや原文のリリースノートの重複は除外した。"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-bf4d2a67e28222e9": {
+    "inputFingerprint": "b0a99c378b94f34062c8b1ae0bdf9ea108d66c7bbd882bae850d78aac1f1b328",
+    "status": "verified",
+    "checkedAt": "2026-10-14T06:11:00.425Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Teams Rooms (Windows および Android) のホーム画面と管理コントロール",
+        "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh#calendar",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=548648",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ad-hoc, room, reservation, room"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-c6055444dd72457b": {
+    "inputFingerprint": "2d599cd4b457220fe3995b04c055031d33812546f91e670d2e9da817c60fbce7",
+    "status": "verified",
+    "checkedAt": "2026-10-14T06:11:00.425Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "データ セキュリティ調査での Data Security Posture エージェント (プレビュー) の概要",
+        "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent#create-a-credential-scanning-task",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: credential, scann, data, security, posture, agent"
+      },
+      {
+        "title": "Microsoft Purview のエージェントのSecurity Copilotの概要",
+        "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-agents-overview#data-security-posture-agent",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: credential, scann, data, security, posture, agent"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-d4c68540c4ece67f": {
+    "inputFingerprint": "563a098cb35b52c68833efdfa16a66a251651da9e9d76d9a7a53137fd513836e",
+    "status": "verified",
+    "checkedAt": "2026-10-14T06:11:00.425Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "組織の Microsoft 365 テーマをカスタマイズする",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
+        "evidence": "Learn MCP の検索・本文取得で、Microsoft 365 管理センターの組織テーマと組織ロゴの管理方法を確認した。Roadmap にある管理済み組織ロゴを利用するブランドフッターの関連管理資料であり、新しいフッター機能そのものの詳細手順とは区別する。"
+      },
+      {
+        "title": "Microsoft Copilot アプリの概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-app-overview",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
+        "evidence": "Learn MCP で取得したアプリ概要の本文が、管理センターでのアプリ設定と組織テーマのカスタマイズ資料を関連情報として案内していることを確認した。"
+      }
+    ],
+    "mcpStatus": "verified"
   }
 }
