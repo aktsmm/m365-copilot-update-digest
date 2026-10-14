@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d89c69ef86f3a58c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Viva Engage のコミュニティ エージェントが開発中",
+        "subtitleJa": "コミュニティの質問への回答を、エージェントが下書き・投稿します",
+        "en": "Microsoft Copilot (Microsoft 365): Viva Engage - Community Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-10",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Microsoft Viva"],
+        "categories": ["agents", "viva-others"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Viva Engage のコミュニティ管理者・専門家**と、ネットワーク管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "アクセス要件", "retrievedAt": "2026-10-14T21:10:00Z" }] },
+        "change": { "text": "繰り返し届く質問への対応を、エージェントに任せられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T21:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必須の対応はなし。パブリック プレビューでは管理者のオプトインが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "ネットワーク オプトイン", "retrievedAt": "2026-10-14T21:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "コミュニティ エージェントが**コミュニティの知識と接続したソースから回答を作成**します。管理者は、レビュー後に投稿するか自動投稿するかを選べます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "コミュニティの会話や接続した SharePoint などを検索して回答を下書き", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T21:10:00Z" }] },
+            { "text": "コミュニティごとに 1 つのエージェントを追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "コミュニティの設定", "retrievedAt": "2026-10-14T21:10:00Z" }] },
+            { "text": "校閲者は下書きを承認・編集・無視できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "下書きした回答を確認する", "retrievedAt": "2026-10-14T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn 上ではパブリック プレビュー段階で、GA 前に変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "重要", "retrievedAt": "2026-10-14T21:10:00Z" }] },
+            { "text": "SharePoint はチーム サイトとコミュニケーション サイトのみ対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "秘密度ラベル", "retrievedAt": "2026-10-14T21:10:00Z" }] },
+            { "text": "SharePoint サイトと公開 Web サイトは合計 10 サイトまで", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "ナレッジ ソースの選択", "retrievedAt": "2026-10-14T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントの追加・下書きの確認には Microsoft 365 Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "アクセス要件", "retrievedAt": "2026-10-14T21:10:00Z" }] },
+            { "text": "既定では回答を自動投稿。投稿前レビューの要求はオンにして設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "コミュニティの設定", "retrievedAt": "2026-10-14T21:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "community-agent", "term": "コミュニティ エージェント", "type": "feature", "oneLine": { "text": "Viva Engage のコミュニティで、同僚からの質問への対応を支援する AI エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T21:10:00Z" }] } },
+        { "termKey": "viva-engage", "term": "Viva Engage", "type": "product", "oneLine": { "text": "従業員のコミュニティや会話の場となる Microsoft Viva のアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T21:10:00Z" }] } },
+        { "termKey": "community-expert", "term": "コミュニティ専門家", "type": "term", "oneLine": { "text": "エージェントが下書きした回答を確認・承認・編集できるコミュニティの役割。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "アクセス要件", "retrievedAt": "2026-10-14T21:10:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供に向けて開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=499898",
+        "learn": [
+          { "title": "Viva Engage でコミュニティ エージェントを設定して管理する", "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
