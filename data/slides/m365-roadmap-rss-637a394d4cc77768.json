@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-637a394d4cc77768",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams：AI 生成の会議メモリで会議の知見を保持",
+        "subtitleJa": "文字起こしの保持期間を過ぎても、Copilot が過去の会議について答えられます",
+        "en": "Microsoft Teams: AI-generated meeting memory for knowledge retention"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["m365-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議で Copilot を使う人**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "文字起こしが残っていない会議でも、Copilot が重要な内容を踏まえて回答できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Learn の AI アーカイブでは、既定でオン。管理センターで制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ生成をオフにする", "retrievedAt": "2026-10-14T22:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Intelligent Recap をオンにした会議の **AI 生成メモリ**を Teams が保存し、文字起こしの保持期間後も Copilot が質問に答えられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Intelligent Recap をオンにした会議", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot とファシリテーターが、文字起こしを保存していない会議の要点も保持できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上は Web、Worldwide（標準マルチテナント）が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn の AI アーカイブはプレビューで、Teams TAP の組織のみが利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "注意", "retrievedAt": "2026-10-14T22:30:00Z" }] },
+            { "text": "暗号化・E2EE 会議や、コピー転送を制限する秘密度ラベルの会議は作成対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはいつ作成されますか?", "retrievedAt": "2026-10-14T22:30:00Z" }] },
+            { "text": "ユーザーはアーカイブ ファイルを直接開けず、Copilot などの AI 経由でのみ使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはどのように使用されますか?", "retrievedAt": "2026-10-14T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定の有効期限は 5 年（1,825 日）。管理者が変更でき、Purview 保持ポリシーが優先される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "既定の有効期限の設定", "retrievedAt": "2026-10-14T22:30:00Z" }] },
+            { "text": "オフにするには Teams 管理センターの設定を使う（一部ユーザーのみの有効化は不可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ生成をオフにする", "retrievedAt": "2026-10-14T22:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ai-archive", "term": "AI アーカイブ", "type": "feature", "oneLine": { "text": "会議の議論から重要な知識を凝縮した AI 生成の成果物で、.meeting ファイルとして格納される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-14T22:30:00Z" }] } },
+        { "termKey": "facilitator", "term": "ファシリテーター", "type": "feature", "oneLine": { "text": "Teams 会議などで Copilot と並んで AI アーカイブを使い、会議に関する質問に答える Microsoft の AI ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-14T22:30:00Z" }] } },
+        { "termKey": "sharepoint-embedded", "term": "SharePoint Embedded", "type": "term", "oneLine": { "text": "API 専用のファイルおよびドキュメント管理システム。AI アーカイブの格納先に使われる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ Storage", "retrievedAt": "2026-10-14T22:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558933",
+        "learn": [
+          { "title": "Microsoft Teams会議のための AI アーカイブ", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
