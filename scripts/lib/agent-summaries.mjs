@@ -63,6 +63,8 @@ export function loadAgentSummaries(root = process.cwd()) {
   return result;
 }
 
+const rename = (text) => String(text).split("M365 Copilot").join("Microsoft Copilot");
+
 /** 指紋が現在の原文と一致し、検証を通った要約だけを上書きする。古い要約は使わない。 */
 export function applyAgentSummaries(events, summaries) {
   return events.map((event) => {
@@ -70,10 +72,10 @@ export function applyAgentSummaries(events, summaries) {
     if (!entry || entry.problems.length > 0 || entry.summary.sourceFingerprint !== sourceFingerprint(event)) return event;
     return {
       ...event,
-      titleJa: entry.summary.titleJa,
-      summaryJa: entry.summary.summaryJa,
-      ...(entry.summary.audienceJa ? { audienceJa: entry.summary.audienceJa } : {}),
-      ...(entry.summary.actionJa ? { actionJa: entry.summary.actionJa } : {}),
+      titleJa: rename(entry.summary.titleJa),
+      summaryJa: rename(entry.summary.summaryJa),
+      ...(entry.summary.audienceJa ? { audienceJa: rename(entry.summary.audienceJa) } : {}),
+      ...(entry.summary.actionJa ? { actionJa: rename(entry.summary.actionJa) } : {}),
       summaryBy: "agent",
     };
   });

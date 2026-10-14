@@ -173,6 +173,14 @@ export function validateDeck(deck) {
   return problems;
 }
 
+/** 表示名の統一: 日本語の文言の「M365 Copilot」を「Microsoft Copilot」にする（英語の原題 en と URL は変えない）。 */
+export function normalizeNames(value, key = "") {
+  if (typeof value === "string") return key === "en" || key === "url" ? value : value.split("M365 Copilot").join("Microsoft Copilot");
+  if (Array.isArray(value)) return value.map((item) => normalizeNames(item, key));
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, normalizeNames(v, k)]));
+  return value;
+}
+
 /** data/slides/{key}.json を読み、検証結果を付けて返す。ファイルは 1 スライドだけを持つ。 */
 export function loadSlides(root = process.cwd()) {
   const dir = path.join(root, SLIDES_DIR);
@@ -193,6 +201,6 @@ export function loadSlides(root = process.cwd()) {
       const problems = validateDeck(deck);
       const keys = (deck.slides ?? []).map((slide) => slide.key);
       if (keys.length !== 1 || keys[0] !== expected) problems.push({ slide: "(file)", message: `file ${name} must hold exactly slide ${expected}, found [${keys.join(",")}]` });
-      return { key: expected, file, slide: deck.slides?.[0] ?? null, problems };
+      return { key: expected, file, slide: normalizeNames(deck.slides?.[0] ?? null), problems };
     });
 }
