@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e924ef7feb0e7591",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Outlook for Mac の Copilot Chat でエージェントが利用可能に",
+        "subtitleJa": "Mac 版 Outlook でも、Copilot Chat から宣言型エージェントを使えます",
+        "en": "Outlook: Agents for Microsoft 365 Copilot available in Copilot Chat in Outlook for Mac"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Outlook"],
+        "categories": ["copilot-chat", "agents", "m365-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Mac"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook for Mac を使う Copilot Chat ユーザー**と、エージェントを作成する人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Outlook の Copilot Chat から宣言型エージェントを使えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Copilot ライセンスを持つユーザーは、エージェントを使うための有効化の操作は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントを有効にする", "retrievedAt": "2026-10-14T21:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook の **Copilot Chat** で、指示や知識を組み込んだ**宣言型エージェント**を利用できます（本件は Mac 版の提供）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェント", "retrievedAt": "2026-10-14T21:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "宣言型エージェント: カスタム指示・知識・アクションで Copilot を特定の用途向けに構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェント", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "Copilot のオーケストレーターとモデルを使うため、追加のホスティングは不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェントの特性", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "Outlook の Copilot Chat でのエージェント対応のうち、Mac 版を扱うロードマップ項目", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 Copilot ライセンスにエージェントの利用が含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントを有効にする", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "管理者は Microsoft 365 管理センターでエージェントへのアクセスを制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントの管理", "retrievedAt": "2026-10-14T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "指示と公開 Web サイトに基づく宣言型エージェントは、追加料金なしで使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントを有効にする", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "共有テナント データにアクセスするエージェントは従量課金で、既定ではオフ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントを有効にする", "retrievedAt": "2026-10-14T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "宣言型エージェントは Teams、Word、Excel、Outlook などのアプリで実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェントの特性", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "独自のオーケストレーターやモデルを使うなら、カスタム エンジン エージェントを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-10-14T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント ビルダーなら、Copilot 内のチャット UX でエージェントを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントをビルドする", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "まず Mac 利用者の多い部門で、既存エージェントを Outlook から試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "カスタム指示・知識・アクションを追加し、Copilot を特定のシナリオ向けに構成するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェント", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
+        { "termKey": "agent-builder", "term": "エージェント ビルダー", "type": "feature", "oneLine": { "text": "Microsoft 365 Copilot 内で、チャット UX からエージェントを手軽に作成できるツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントをビルドする", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
+        { "termKey": "custom-engine-agent", "term": "カスタム エンジン エージェント", "type": "term", "oneLine": { "text": "独自のオーケストレーターとモデルを持ち込んで構築する、完全にカスタマイズされた AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=486696",
+        "learn": [
+          { "title": "Microsoft 365 Copilot Chat でのエージェントの使用", "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locale": "ja-jp" },
+          { "title": "宣言型エージェントとカスタム エンジン エージェントの比較", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
