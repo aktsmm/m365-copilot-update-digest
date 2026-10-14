@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-310c2e3008211374",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot コネクタのソースをコンテンツソースフィルターで探しやすく",
+        "subtitleJa": "Microsoft 365 Copilot で、コネクタのソースを絞り込んで見つけられます",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Improved discovery of Copilot connector sources in Microsoft 365 Copilot (optionally add chat) with Content Source filter(s)"
+      },
+      "meta": {
+        "publishedJst": "2026-10-08",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクタを使う Microsoft 365 Copilot ユーザー**と、コネクタを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コンテンツソースフィルターで、Copilot コネクタのソースを見つけやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は Launched。利用に特別な設定は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**コンテンツソースフィルター**で、Microsoft 365 Copilot 上の Copilot コネクタのソースを見つけやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot コネクタは外部データを Microsoft 365 で使えるようにし、Copilot と検索から利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "コネクタのコンテンツは Copilot の回答に使われ、出典が示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Microsoft Copilot and connectors", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "コンテンツソースフィルターで、対象のコネクタ ソースを絞り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "テナント構成のコネクタは、管理者が Microsoft 365 管理センターで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Synced connectors - Tenant configuration", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "セルフサービス型では、管理者が有効化し、ユーザーが認証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Synced connectors - Self-serve configuration", "retrievedAt": "2026-10-14T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザーは、ソース システムでアクセス権のあるコンテンツだけを閲覧できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "How Copilot connectors work", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Search では、管理者が作るバーティカルやソース別の絞り込みで結果を探せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Microsoft Search and connectors", "retrievedAt": "2026-10-14T21:40:00Z" }] },
+            { "text": "連携型コネクタは、インデックスせずリアルタイムにデータを取得する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Federated connectors", "retrievedAt": "2026-10-14T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "よく使うコネクタ ソースを、まずフィルターで絞って試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connector", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "外部データ ソースへの接続を定義し、Microsoft 365 で使えるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "How Copilot connectors work", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
+        { "termKey": "synced-connector", "term": "同期型コネクタ", "type": "term", "oneLine": { "text": "外部データを Microsoft Graph にインデックスし、Copilot と検索で使えるようにするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
+        { "termKey": "federated-connector", "term": "連携型コネクタ", "type": "term", "oneLine": { "text": "MCP を使い、インデックスせずにリアルタイムでデータを取得するコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502541",
+        "learn": [
+          { "title": "Copilot コネクタの概要", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
