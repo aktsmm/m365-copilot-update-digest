@@ -2,6 +2,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { enrichLearnDocuments } from "./lib/learn-mcp.mjs";
+import { summarizeCoverage, coverageStatusKey } from "./lib/coverage.mjs";
+import { MrcClient, getM365Roadmap, listM365Roadmaps } from "./lib/mrc.mjs";
 
 import * as cheerio from "cheerio";
 import { XMLParser } from "fast-xml-parser";
@@ -1743,6 +1745,105 @@ function parseRoadmapRssFeed(source, xmlText) {
     .slice(0, source.maxItems ?? items.length);
 }
 
+const MRC_ROADMAP_DETAIL_LIMIT = 60;
+
+/** MRC の Roadmap 項目を、RSS 版と同じ形のイベントに変換する。既存の ID は Roadmap ID で引き継ぐ。 */
+export function mrcRoadmapItemsToEvents(source, items, existingEvents = []) {
+  const existingIdByRoadmapId = new Map();
+  for (const event of existingEvents) {
+    if (event.sourceId !== source.id) continue;
+    for (const roadmapId of event.roadmapIds || []) {
+      const current = existingIdByRoadmapId.get(roadmapId);
+      if (!current || String(event.publishedAt) > String(current.publishedAt)) {
+        existingIdByRoadmapId.set(roadmapId, event);
+      }
+    }
+  }
+
+  return items
+    .map((item) => {
+      const roadmapId = String(item.id);
+      const titleBeforeCleanup = normalizeWhitespace(item.title);
+      const title = cleanupRoadmapTitle(titleBeforeCleanup);
+      const link = `https://www.microsoft.com/microsoft-365/roadmap?id=${roadmapId}`;
+      const publishedAt = new Date(item.modified || item.created || Date.now()).toISOString();
+      const categories = [
+        ...(item.products || []),
+        ...(item.status ? [item.status] : []),
+        ...(item.releaseRings || []),
+        ...(item.platforms || []),
+        ...(item.cloudInstances || []),
+      ];
+      const productArea = roadmapProductArea(title, categories, source);
+      const releaseStage = roadmapStatus(categories);
+      const summary = cleanupRoadmapSummary(item.description || "");
+
+      return {
+        id:
+          existingIdByRoadmapId.get(roadmapId)?.id ||
+          buildEventId(source.id, titleBeforeCleanup, publishedAt, link),
+        title,
+        summary,
+        summaryEn: summary,
+        summaryJa: summary,
+        url: link,
+        documentCandidates: extractDocumentLinks(
+          decodeHtmlEntities(String(item.description || "")),
+          link,
+        ).concat((item.moreInfoUrls || []).flatMap((url) => extractDocumentLinks(`<a href="${url}">${url}</a>`, link))),
+        publishedAt,
+        productArea,
+        section: productArea,
+        roadmapIds: [roadmapId],
+        releaseStage,
+        tags: roadmapTags(productArea, categories, releaseStage),
+        categories,
+      };
+    })
+    .filter((entry) => entry.title);
+}
+
+/** MRC から Roadmap を取得する。新規・更新された項目だけ全文（詳細）で補い、変化のない項目は既存の要約を保つ。MRC が使えないときは失敗として投げる（RSS には切り替えない）。 */
+async function collectMrcRoadmaps(source, existingEvents, client = new MrcClient()) {
+  const listing = await listM365Roadmaps(client, source.mrcFilter);
+  const existingByRoadmapId = new Map();
+  for (const event of existingEvents) {
+    if (event.sourceId !== source.id) continue;
+    for (const roadmapId of event.roadmapIds || []) {
+      const current = existingByRoadmapId.get(roadmapId);
+      if (!current || String(event.publishedAt) > String(current.publishedAt)) existingByRoadmapId.set(roadmapId, event);
+    }
+  }
+
+  const changed = listing.items
+    .filter((item) => {
+      const existing = existingByRoadmapId.get(String(item.id));
+      return !existing || tokyoDateOnly(existing.publishedAt) !== tokyoDateOnly(item.modified || item.created);
+    })
+    .sort((left, right) => String(right.modified).localeCompare(String(left.modified)))
+    .slice(0, MRC_ROADMAP_DETAIL_LIMIT);
+  const detailed = new Map();
+  for (const item of changed) {
+    try {
+      detailed.set(String(item.id), await getM365Roadmap(client, item.id));
+    } catch {
+      // 詳細が取れなくても一覧の要約で進める
+    }
+  }
+
+  const items = listing.items.map((item) => {
+    const id = String(item.id);
+    if (detailed.has(id)) return detailed.get(id);
+    const existing = existingByRoadmapId.get(id);
+    return existing?.summaryEn ? { ...item, description: existing.summaryEn } : item;
+  });
+  return {
+    events: mrcRoadmapItemsToEvents(source, items, existingEvents),
+    complete: listing.complete,
+    totalCount: listing.totalCount,
+  };
+}
+
 function buildTranslationBatches(events, pickText, maxChars, maxItems) {
   const batches = [];
   let currentBatch = [];
@@ -2898,16 +2999,31 @@ async function main() {
   );
   const mergedById = new Map(existingEvents.map((event) => [event.id, event]));
   const errors = [];
+  const sourceStatuses = [];
 
   for (const source of sources) {
     try {
-      const html = await fetchText(source.url);
-      const sourceEvents = parseSource(source, html, nowIso).map((event) => ({
+      let mrcResult = null;
+      let sourceEvents;
+      if (source.kind === "m365_roadmap_mrc") {
+        mrcResult = await collectMrcRoadmaps(source, existingEvents);
+        sourceEvents = mrcResult.events;
+      } else {
+        const html = await fetchText(source.url);
+        sourceEvents = parseSource(source, html, nowIso);
+      }
+      sourceEvents = sourceEvents.map((event) => ({
         ...event,
         sourceId: source.id,
         sourceName: source.name,
         sourceFamily: source.sourceFamily || "Other",
       }));
+      sourceStatuses.push({
+        sourceId: source.id,
+        status: mrcResult && !mrcResult.complete ? "partial" : sourceEvents.length > 0 ? "complete" : "empty",
+        parsedCount: sourceEvents.length,
+        ...(mrcResult ? { totalCount: mrcResult.totalCount } : {}),
+      });
       const localizedEvents = await localizeJapaneseTitles(
         sourceEvents,
         existingById,
@@ -2945,6 +3061,7 @@ async function main() {
         documentCandidates.set(normalized.id, parsedEvent.documentCandidates || []);
       }
     } catch (error) {
+      sourceStatuses.push({ sourceId: source.id, status: "failed", parsedCount: 0 });
       errors.push({
         sourceId: source.id,
         sourceName: source.name,
@@ -3079,6 +3196,7 @@ async function main() {
       .filter(([, record]) => record.error)
       .map(([id, record]) => ({ id, message: record.error })),
   };
+  const coverage = summarizeCoverage(sourceStatuses);
   const stateUnchanged =
     newEventCount === 0 &&
     errors.length === 0 &&
@@ -3093,6 +3211,7 @@ async function main() {
     existingRunSummary?.sourceCount === sources.length &&
     Number(existingRunSummary?.newEventCount ?? -1) === 0 &&
     Number(existingRunSummary?.errorCount ?? -1) === 0 &&
+    coverageStatusKey(existingRunSummary?.coverage) === coverageStatusKey(coverage) &&
     JSON.stringify(existingRunSummary?.relatedDocuments || {}) === JSON.stringify(documentSummary);
 
   const nextState = {
@@ -3122,6 +3241,7 @@ async function main() {
     newEventCount,
     errorCount: errors.length,
     errors,
+    coverage,
     relatedDocuments: documentSummary,
   };
 

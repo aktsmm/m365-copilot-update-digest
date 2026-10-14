@@ -1,6 +1,6 @@
 {
   "date": "2026-09-03",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:31:47.169Z",
   "events": [
     {
       "id": "m365-roadmap-rss-edea812999369145",
@@ -62,6 +62,16 @@
       "summaryJa": "Microsoft は、Microsoft 365 Copilot のフェデレーション Copilot コネクタの一般提供 (GA) を発表します。 Federated Copilot コネクタを使用すると、ユーザーは Copilot を一般的なサードパーティ ソースに安全に接続し、Model Context Protocol (MCP) を使用してリアルタイムでデータを取得できます。これらのコネクタは、データを保存したり、保存したりすることはできません。",
       "summaryEn": "Microsoft is announcing the General Availability (GA) of federated Copilot connectors for Microsoft 365 Copilot. Federated Copilot connectors enable users to securely connect Copilot to popular third‑party sources and retrieve data in real time using the Model Context Protocol (MCP). These connectors do not store or...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=501120",
+      "relatedDocuments": [
+        {
+          "title": "Federated connectors overview",
+          "sourceTitle": "Federated connectors overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=501120",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: federat, connector"
+        }
+      ],
       "publishedAt": "2026-09-03T12:00:00.000Z",
       "capturedAt": "2026-09-03T04:32:55.396Z",
       "sourceLastSeen": "2026-09-03T04:32:55.396Z",
@@ -75,23 +85,13 @@
       "tags": [
         "Microsoft 365 Copilot",
         "Launched",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Copilot (Microsoft 365)",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "作成者向け"
       ],
       "importanceScore": 138,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Federated connectors overview",
-          "sourceTitle": "Federated connectors overview",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=501120",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: federat, connector"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-0e9271ed41293ae7",
@@ -198,6 +198,16 @@
       "summaryJa": "Outlook モバイルでタイムリーなリマインダーを受け取り、Copilot との会議の準備をします。 Up Next カードに [準備] オプションが提供されるようになり、ワンタップで準備を整えることができます。",
       "summaryEn": "Get timely reminders in Outlook mobile to prepare for your meetings with Copilot. The Up Next card now offers a Prepare option so you can get ready with one tap.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=529850",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#november-25,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=529850",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: meet, prepare, next"
+        }
+      ],
       "publishedAt": "2026-09-03T12:00:00.000Z",
       "capturedAt": "2026-09-03T04:32:55.396Z",
       "sourceLastSeen": "2026-09-03T04:32:55.396Z",
@@ -212,29 +222,19 @@
       "tags": [
         "Microsoft 365 Copilot",
         "Launched",
-        "Worldwide (Standard Multi-Tenant)",
-        "GCC",
-        "GCC High",
-        "DoD",
         "Outlook",
         "Microsoft Copilot (Microsoft 365)",
         "Android",
         "iOS",
+        "Worldwide (Standard Multi-Tenant)",
+        "GCC",
+        "GCC High",
+        "DoD",
         "管理者向け",
         "作成者向け"
       ],
       "importanceScore": 122,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#november-25,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=529850",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: meet, prepare, next"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-f712a1bfc7655390",
@@ -246,10 +246,20 @@
       "title": "Microsoft Copilot Studio: Deliver rich interactive app experiences in Copilot Studio agents",
       "titleJa": "Copilot Studio エージェントでリッチなインタラクティブなアプリ エクスペリエンスを提供",
       "titleEn": "Microsoft Copilot Studio: Deliver rich interactive app experiences in Copilot Studio agents",
-      "summary": "Copilot Studio agents can now render rich, interactive UI inline using MCP Apps, an extension of the Model Context Protocol. When an agent calls a UI-enabled tool from a compatible MCP server, interactive experiences like sortable tables and drilldowns render directly in the conversation. Users can now explore and act...",
+      "summary": "Copilot Studio agents can now render rich, interactive UI inline using MCP Apps, an extension of the Model Context Protocol. When an agent calls a UI-enabled tool from a compatible MCP server, interactive experiences like sortable tables and drilldowns render directly in the conversation. Users can now explore and...",
       "summaryJa": "Copilot Studio エージェントは、モデル コンテキスト プロトコルの拡張機能である MCP アプリを使用して、リッチでインタラクティブな UI をインラインでレンダリングできるようになりました。エージェントが互換性のある MCP サーバーから UI 対応ツールを呼び出すと、並べ替え可能なテーブルやドリルダウンなどの対話型エクスペリエンスが会話内で直接レンダリングされます。ユーザーは探索して行動できるようになりました...",
-      "summaryEn": "Copilot Studio agents can now render rich, interactive UI inline using MCP Apps, an extension of the Model Context Protocol. When an agent calls a UI-enabled tool from a compatible MCP server, interactive experiences like sortable tables and drilldowns render directly in the conversation. Users can now explore and act...",
+      "summaryEn": "Copilot Studio agents can now render rich, interactive UI inline using MCP Apps, an extension of the Model Context Protocol. When an agent calls a UI-enabled tool from a compatible MCP server, interactive experiences like sortable tables and drilldowns render directly in the conversation. Users can now explore and...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=570433",
+      "relatedDocuments": [
+        {
+          "title": "Copilot Studioの新機能",
+          "sourceTitle": "What's new in Copilot Studio",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/whats-new#notable-changes",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=570433",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: deliver, rich, interactive, experience, studio, agent"
+        }
+      ],
       "publishedAt": "2026-09-03T12:00:00.000Z",
       "capturedAt": "2026-09-03T04:32:55.396Z",
       "sourceLastSeen": "2026-09-03T04:32:55.396Z",
@@ -263,23 +273,13 @@
       "tags": [
         "Copilot Studio",
         "In development",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Copilot Studio",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "作成者向け"
       ],
       "importanceScore": 120,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Copilot Studioの新機能",
-          "sourceTitle": "What's new in Copilot Studio",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/whats-new#notable-changes",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=570433",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: deliver, rich, interactive, experience, studio, agent"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-c26fe63deb183023",
@@ -308,9 +308,9 @@
       "tags": [
         "Copilot Studio",
         "In development",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Copilot Studio",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "作成者向け"
       ],
       "importanceScore": 120,
@@ -605,15 +605,15 @@
       "tags": [
         "Microsoft Teams",
         "In development",
-        "GCC",
-        "GCC High",
-        "DoD",
         "Microsoft Copilot (Microsoft 365)",
         "Android",
         "Desktop",
         "iOS",
         "Mac",
         "Web",
+        "GCC",
+        "GCC High",
+        "DoD",
         "管理者向け",
         "作成者向け"
       ],

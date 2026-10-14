@@ -8,9 +8,14 @@ Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデー�
 - What's new in Copilot Studio (Microsoft Learn)
 - Microsoft 365 Copilot Blog (Tech Community RSS)
 - Copilot Studio Blog (Tech Community RSS)
-- Microsoft 365 Roadmap (RSS)
+- Microsoft 365 Roadmap（Microsoft Release Communications MCP）
 
 ## できること
+
+- カテゴリ（Copilot Chat / エージェント・拡張 / Office・Teams アプリ / セキュリティ・コンプライアンス / 管理・ライセンス など）と重要度（重要 / 注目 / 通常）で絞り込む（`config/categories.json`）
+- 重要・注目の更新を、直近 3 か月分、1 更新 1 枚のスライド JSON にし、パスワード保護した PDF も公開する（[docs/slide-schema.md](docs/slide-schema.md)）
+- 静的 JSON API を公開する（[docs/api.md](docs/api.md)）
+- ソース別の取得状態（complete / empty / partial / failed）を記録し、欠けがあるときはサイトに明示する
 
 - 公開ソースからアップデートを取得して日次 JSON に保存する
 - 日次 Markdown を生成する
@@ -207,6 +212,9 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 workflow / validator 変更は **Validate automation workflows** が GitHub 上でも検証します。同一リポジトリ内の PR と main push で `npm run validate:workflows` を実行します。
 
 ### 必要な設定
+
+- Roadmap は MRC（`https://www.microsoft.com/releasecommunications/mcp`）から取得する。MRC が使えないときは RSS へ切り替えず、そのソースを `failed` として記録する（既存データは保持）
+- スライド PDF を公開するには、リポジトリ Secret `PDF_PASSWORD` を設定する（未設定なら PDF は公開されず、スライド JSON と API だけ公開される）。変更後は **Deploy GitHub Pages** を再実行する
 
 - repository で GitHub Copilot coding agent を有効にする
 - secret `COPILOT_ASSIGN_TOKEN` を設定する

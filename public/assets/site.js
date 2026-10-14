@@ -4,40 +4,41 @@
     return;
   }
 
+  const FILTERS = [
+    { attr: "data-product-filter", card: "data-product", multi: false },
+    { attr: "data-role-filter", card: "data-roles", multi: true },
+    { attr: "data-source-filter", card: "data-source-type", multi: false },
+    { attr: "data-category-filter", card: "data-categories", multi: true },
+    { attr: "data-importance-filter", card: "data-importance", multi: false, atLeast: ["high", "notable"] },
+    { attr: "data-kind-filter", card: "data-kind", multi: false },
+  ];
+
   roots.forEach((root) => {
-    const productButtons = [...root.querySelectorAll("[data-product-filter]")];
-    const roleButtons = [...root.querySelectorAll("[data-role-filter]")];
-    const sourceButtons = [...root.querySelectorAll("[data-source-filter]")];
     const cards = [...root.querySelectorAll("[data-card-item]")];
     const emptyState = root.querySelector("[data-filter-empty]");
+    const state = FILTERS.map((filter) => ({
+      ...filter,
+      buttons: [...root.querySelectorAll(`[${filter.attr}]`)],
+      active: "all",
+    }));
 
-    let activeProduct = "all";
-    let activeRole = "all";
-    let activeSource = "all";
-
-    function updateButtons(buttons, attribute, activeValue) {
-      buttons.forEach((button) => {
-        const value = button.getAttribute(attribute);
-        button.classList.toggle("is-active", value === activeValue);
-      });
+    function matches(card, filter) {
+      if (filter.active === "all") {
+        return true;
+      }
+      const value = card.getAttribute(filter.card) || "";
+      if (filter.atLeast) {
+        // 「注目」は重要も含む（上位レベルほど広く拾う）
+        const rank = filter.atLeast.indexOf(value);
+        return rank >= 0 && rank <= filter.atLeast.indexOf(filter.active);
+      }
+      return filter.multi ? value.split(/\s+/).filter(Boolean).includes(filter.active) : value === filter.active;
     }
 
     function applyFilters() {
       let visibleCount = 0;
-
       cards.forEach((card) => {
-        const product = card.getAttribute("data-product") || "";
-        const sourceType = card.getAttribute("data-source-type") || "";
-        const roles = (card.getAttribute("data-roles") || "")
-          .split(/\s+/)
-          .filter(Boolean);
-        const matchesProduct =
-          activeProduct === "all" || product === activeProduct;
-        const matchesRole =
-          activeRole === "all" || roles.includes(activeRole);
-        const matchesSource =
-          activeSource === "all" || sourceType === activeSource;
-        const isVisible = matchesProduct && matchesRole && matchesSource;
+        const isVisible = state.every((filter) => matches(card, filter));
         card.classList.toggle("hidden", !isVisible);
         if (isVisible) {
           visibleCount += 1;
@@ -48,29 +49,19 @@
         emptyState.classList.toggle("hidden", visibleCount !== 0);
       }
 
-      updateButtons(productButtons, "data-product-filter", activeProduct);
-      updateButtons(roleButtons, "data-role-filter", activeRole);
-      updateButtons(sourceButtons, "data-source-filter", activeSource);
+      state.forEach((filter) => {
+        filter.buttons.forEach((button) => {
+          button.classList.toggle("is-active", button.getAttribute(filter.attr) === filter.active);
+        });
+      });
     }
 
-    productButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        activeProduct = button.getAttribute("data-product-filter") || "all";
-        applyFilters();
-      });
-    });
-
-    roleButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        activeRole = button.getAttribute("data-role-filter") || "all";
-        applyFilters();
-      });
-    });
-
-    sourceButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        activeSource = button.getAttribute("data-source-filter") || "all";
-        applyFilters();
+    state.forEach((filter) => {
+      filter.buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filter.active = button.getAttribute(filter.attr) || "all";
+          applyFilters();
+        });
       });
     });
 
