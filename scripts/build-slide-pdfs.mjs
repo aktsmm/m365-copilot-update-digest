@@ -48,6 +48,18 @@ if (files.length > 0 && !password) {
   const browser = await chromium.launch({ executablePath, args: ["--no-sandbox"] });
   try {
     const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+    // まとめ PDF の表紙（暗号化なし）。データ時点は取得時刻の JST 日付。
+    const generated = new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10);
+    await page.setContent(
+      documentHtml(`<section class="page" style="justify-content:center;padding:0 96px;background:linear-gradient(120deg,#fff 0 55%,#eaf3fc 55%)">
+  <div style="font-size:22px;font-weight:600;color:#0078d4;letter-spacing:.06em;margin-bottom:12px">非公式ダイジェスト</div>
+  <div style="font-size:64px;font-weight:700;color:#243a5e;line-height:1.2;margin-bottom:28px">M365 Copilot<br>Update Digest</div>
+  <div style="font-size:26px;color:#0078d4;font-weight:600">${generated} 時点（重要・注目の更新）</div>
+  <div style="font-size:15px;color:#6b778a;margin-top:48px;line-height:1.7">Copyright (c) 2026 yamapan (@aktsmm) / CC BY-NC-SA 4.0<br>出典: Microsoft Learn・Tech Community・Microsoft 365 Roadmap。原文は Microsoft に帰属します。<br>日本語の題名・要約には機械翻訳や AI 生成が含まれます。必ず原文をご確認ください。</div>
+</section>`),
+    );
+    await page.evaluate(() => document.fonts.ready);
+    fs.writeFileSync(path.join(pdfDir, "cover.pdf"), await page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true }));
     for (const file of files) {
       try {
         const slide = JSON.parse(fs.readFileSync(path.join(slidesDir, file), "utf8"));

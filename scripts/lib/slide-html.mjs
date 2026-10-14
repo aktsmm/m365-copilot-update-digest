@@ -23,6 +23,10 @@ html,body{margin:0;padding:0;background:#fff;font-family:"Noto Sans CJK JP","Not
 .en{font-size:14px;color:#6b778a;margin-top:4px}
 .badge{color:#fff;font-weight:700;font-size:22px;padding:4px 24px;border-radius:999px;white-space:nowrap}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
+.imp{display:flex;gap:12px}
+.imp .c{flex:1;border:1.5px solid #c9d4e6;border-radius:8px;padding:6px 14px;font-size:17px;line-height:1.45}
+.imp .c b.l{display:block;font-size:12.5px;color:#5b6777;font-weight:600}
+.imp .c.who{border-color:#0b6bcb;background:#f3f8ff;font-weight:700;color:#0b2a4a}
 .chip{font-size:14px;border:1.5px solid #b8c7dc;border-radius:999px;padding:2px 12px;color:#3d4a5c;background:#f3f8ff}
 .chip.imp-high{border-color:#c62828;background:#fdecec;color:#c62828;font-weight:700}
 .chip.imp-notable{border-color:#d9a441;background:#fff8e8;color:#a8710f;font-weight:700}
@@ -65,6 +69,7 @@ export function slideHtml(slide, categoryConfig) {
     ${slide.meta.stage ? `<span class="chip">${esc(slide.meta.stage)}</span>` : ""}
     ${(slide.meta.roleTags ?? []).map((tag) => `<span class="chip">${esc(tag)}</span>`).join("")}
   </div>
+  ${slide.audienceJa || slide.actionJa ? `<div class="imp">${slide.audienceJa ? `<div class="c who"><b class="l">誰に関係するか</b>${esc(slide.audienceJa)}</div>` : ""}${slide.actionJa ? `<div class="c"><b class="l">対応・確認</b>${esc(slide.actionJa)}</div>` : ""}</div>` : ""}
   ${slide.summaryJa ? `<div class="card sum" style="--fs:${fs}px">${esc(slide.summaryJa)}</div>` : ""}
   ${slide.meta.importance.reasonJa ? `<div class="why">注目ポイント: ${esc(slide.meta.importance.reasonJa)}</div>` : ""}
   ${related.length ? `<div class="card"><h3>関連ドキュメント</h3><ul>${related.map((doc) => `<li>${esc(doc.title)}（${esc(doc.url)}）</li>`).join("")}</ul></div>` : ""}

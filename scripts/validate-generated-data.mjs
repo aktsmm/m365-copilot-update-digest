@@ -20,6 +20,12 @@ function stableArticleKey(event) {
 }
 
 async function main() {
+  const { loadAgentSummaries } = await import("./lib/agent-summaries.mjs");
+  const invalid = [...loadAgentSummaries(workspaceRoot).values()].filter((entry) => entry.problems.length > 0);
+  if (invalid.length > 0) {
+    for (const entry of invalid.slice(0, 20)) console.error(`${path.relative(workspaceRoot, entry.file)}: ${entry.problems.join("; ")}`);
+    throw new Error(`${invalid.length} invalid agent summary file(s)`);
+  }
   const cache = JSON.parse(await fs.readFile(path.join(workspaceRoot, "config", "related-documents.json"), "utf8"));
   validateDocumentCache(cache);
   const entries = await fs.readdir(eventsDir, { withFileTypes: true });

@@ -89,6 +89,8 @@ export function buildSlide(event, categoryConfig) {
       ...(event.titleEn || event.title ? { en: event.titleEn || event.title } : {}),
     },
     ...(summaryJa ? { summaryJa: summaryJa.length > 900 ? `${summaryJa.slice(0, 897)}...` : summaryJa } : {}),
+    ...(event.audienceJa ? { audienceJa: event.audienceJa } : {}),
+    ...(event.actionJa ? { actionJa: event.actionJa } : {}),
     meta: {
       publishedJst: jstDate(event.publishedAt),
       ...(event.releaseStage ? { stage: event.releaseStage } : {}),

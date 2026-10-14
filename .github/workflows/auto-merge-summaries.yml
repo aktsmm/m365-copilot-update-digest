@@ -1,0 +1,56 @@
+name: Auto-merge summaries
+
+# summarize エージェントが作った PR を、データだけの変更で、main 側の信頼できるコードで検証できたときだけマージする。
+on:
+  workflow_run:
+    workflows: ["M365 Copilot Update Digest — Japanese summaries"]
+    types: [completed]
+  schedule:
+    - cron: "47 */3 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate and merge eligible PRs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          merged=false
+          for n in $(gh pr list --state open --json number,title,labels \
+              -q '.[] | select((.title | startswith("[summaries] ")) and (.labels | map(.name) | index("data"))) | .number'); do
+            echo "== PR #$n"
+            bad=$(gh pr view "$n" --json files -q '.files[].path' | grep -Ev '^data/summaries/[A-Za-z0-9_-]+\.json$' || true)
+            if [ -n "$bad" ]; then echo "skip: touches non-summary paths:"; echo "$bad"; continue; fi
+            git fetch -q origin "pull/$n/head"
+            git checkout -q FETCH_HEAD -- data/summaries
+            if ! npm run -s validate:data; then echo "skip: validation failed"; git reset -q --hard origin/main; git clean -fdq data/summaries; continue; fi
+            git reset -q --hard origin/main
+            git clean -fdq data/summaries
+            gh pr merge "$n" --squash && merged=true
+          done
+          if [ "$merged" = "true" ]; then
+            gh workflow run deploy-pages.yml --ref "${{ github.event.repository.default_branch }}"
+          fi

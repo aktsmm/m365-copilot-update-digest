@@ -16,6 +16,7 @@ Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデー�
 - 重要・注目の更新を、直近 3 か月分、1 更新 1 枚のスライド JSON にし、パスワード保護した PDF も公開する（[docs/slide-schema.md](docs/slide-schema.md)）
 - 静的 JSON API を公開する（[docs/api.md](docs/api.md)）
 - ソース別の取得状態（complete / empty / partial / failed）を記録し、欠けがあるときはサイトに明示する
+- gh-aw（GitHub Agentic Workflow）で、重要・注目の更新に日本語の見出し・要約・対象読者・対応をつけ、PR 経由で自動マージする（`.github/workflows/summarize.md`、出力は `data/summaries/{key}.json`）
 
 - 公開ソースからアップデートを取得して日次 JSON に保存する
 - 日次 Markdown を生成する
@@ -212,6 +213,8 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 workflow / validator 変更は **Validate automation workflows** が GitHub 上でも検証します。同一リポジトリ内の PR と main push で `npm run validate:workflows` を実行します。
 
 ### 必要な設定
+
+- 日本語要約（gh-aw）: Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限）と、リポジトリ設定「Actions に PR の作成・承認を許可」。`summarize.md` を変更したら `gh aw compile summarize` で `summarize.lock.yml` を更新する。要約は原文の指紋（`sourceFingerprint`）が変わった項目だけ再生成し、`npm run validate:data` を通ったものだけが **Auto-merge summaries** でマージされる。未生成・失敗のときは従来の機械翻訳のまま表示する
 
 - Roadmap は MRC（`https://www.microsoft.com/releasecommunications/mcp`）から取得する。MRC が使えないときは RSS へ切り替えず、そのソースを `failed` として記録する（既存データは保持）
 - スライド PDF を公開するには、リポジトリ Secret `PDF_PASSWORD` を設定する（未設定なら PDF は公開されず、スライド JSON と API だけ公開される）。変更後は **Deploy GitHub Pages** を再実行する

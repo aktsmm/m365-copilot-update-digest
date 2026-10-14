@@ -20,6 +20,8 @@
       }
     },
     "summaryJa": { "type": "string", "maxLength": 900 },
+    "audienceJa": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "actionJa": { "type": "string", "minLength": 1, "maxLength": 120 },
     "meta": {
       "type": "object",
       "additionalProperties": false,
