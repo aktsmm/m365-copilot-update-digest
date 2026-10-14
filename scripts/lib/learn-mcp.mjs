@@ -13,37 +13,73 @@ import {
 const COMMON_WORDS = new Set([
   "microsoft", "copilot", "teams", "windows", "from", "with", "that",
   "this", "their", "users", "user", "console", "update", "directly",
+  "the", "and", "for", "new", "app", "web", "are", "can", "now", "use", "how",
 ]);
 
 export function featureTerms(event) {
   const feature = (event.titleEn || event.title).split(":").slice(-1)[0]
     .replace(/\[[^\]]*\]/g, "");
-  const words = [...new Set(feature.toLowerCase().match(/[a-z][a-z-]{3,}/g) || [])]
+  const words = [...new Set(feature.toLowerCase().match(/[a-z][a-z0-9-]{2,}/g) || [])]
     .filter((word) => !COMMON_WORDS.has(word))
     .map((word) => word.length >= 7 ? word.replace(/(?:ing|ed|s)$/, "") : word.replace(/s$/, ""));
+  if (/^work iq\s*:/i.test(event.titleEn || event.title)) words.push("work iq");
   return [...new Set(words)];
 }
 
+export function documentationProduct(event) {
+  const title = event.titleEn || event.title;
+  const prefix = title.includes(":") ? title.slice(0, title.indexOf(":")).trim() : "";
+  if (/^Microsoft Copilot \((?:Microsoft )?(?:M365|365)\)$/i.test(prefix)) return "Microsoft 365 Copilot";
+  return /^(Microsoft|Dynamics 365|Power Apps|Power Automate|Work IQ|Copilot Studio|Outlook|Word|Excel|PowerPoint|OneNote|SharePoint|Planner|Visio)\b/i.test(prefix)
+    ? prefix : event.productArea || "";
+}
+
+export function subjectEntities(event) {
+  const title = (event.titleEn || event.title).split(":").slice(-1)[0];
+  const matches = title.match(/\b(?:[A-Z][A-Za-z0-9-]*\s+){1,4}(?:[Cc]onnector|[Aa]gent|[Dd]ashboard|[Ss]canner|[Ww]eb [Pp]art)\b/g) || [];
+  return matches.map((entity) => entity.replace(/^(?:Add|Use|Create|Configure|New|Enable|Manage|Connect|Improve|Integrate)\s+/, ""));
+}
+
 export function matchesProduct(event, document) {
-  const product = event.productArea || "";
+  const product = documentationProduct(event);
   const path = new URL(document.url).pathname.replace(/^\/[a-z]{2}-[a-z]{2}(?=\/)/i, "");
   const allowed = /purview/i.test(product) ? /^\/purview\//
     : /copilot studio/i.test(product) ? /^\/microsoft-copilot-studio\//
-    : /microsoft 365 copilot/i.test(product) ? /^\/(?:microsoft-365|microsoftsearch)\//
+    : /microsoft 365 copilot/i.test(product) ? /^\/(?:microsoft-365(?:-[a-z]+)?|microsoftsearch|copilot)\//
     : /microsoft teams/i.test(product) ? /^\/microsoftteams\//
+    : /power apps/i.test(product) ? /^\/(?:power-apps|power-platform|microsoft-365(?:-copilot)?|microsoft-copilot-studio)\//
+    : /^visio$/i.test(product) ? /^\/(?:office|microsoft-365(?:-apps)?|visio)\//
     : null;
   if (allowed && !allowed.test(path)) return false;
   const title = event.titleEn || event.title;
   if (/teams rooms/i.test(title) && !/teams rooms/i.test(document.title || "")) return false;
-  if (/connectors/i.test(title) && /\/connectors\/[^/]+-deployment/i.test(path)) return false;
+  if (/teams rooms.*windows/i.test(title) &&
+    /android/i.test(document.title || "") && !/windows/i.test(document.title || "")) return false;
+  const context = `${document.title || ""}\n${document.content || ""}`.toLowerCase().replace(/[-\u2010-\u2015]/g, " ");
+  if (/^(Word|Excel|PowerPoint|Outlook|OneNote|SharePoint|Planner|Visio)$/i.test(product) &&
+    !new RegExp(`\\b${product}\\b`, "i").test(context)) return false;
+  if (/\bcopilot chat\b/i.test(title) && !/\bcopilot chat\b/i.test(context)) return false;
+  for (const entity of subjectEntities(event)) {
+    const phrase = entity.toLowerCase().replace(/[-\u2010-\u2015]/g, " ");
+    const pattern = phrase.split(/\s+/).map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+      .join("\\s+(?:[a-z0-9]+\\s+){0,2}");
+    if (!new RegExp(`\\b${pattern}\\b`, "i").test(context) &&
+      !(phrase === "rights management connector" && context.includes("rms connector"))) return false;
+  }
+  const vendor = path.match(/\/connectors\/([^/]+)-deployment/i)?.[1];
+  if (/connectors/i.test(title) && vendor) {
+    const sourceContext = `${title} ${event.summaryEn || event.summary || ""}`.toLowerCase();
+    if (!vendor.split("-").filter((word) => word !== "microsoft")
+      .every((word) => sourceContext.includes(word))) return false;
+  }
   return true;
 }
 
-export function matchesFeature(terms, text) {
+export function matchesFeature(terms, text, { rejectUnsupported = true } = {}) {
   const normalized = text.toLowerCase();
   return terms.length >= 2 &&
     terms.filter((term) => normalized.includes(term)).length >= Math.max(2, Math.ceil(terms.length * 0.7)) &&
-    !/(?:isn't|is not|not currently) supported|cannot edit|can't edit/i.test(normalized);
+    (!rejectUnsupported || !/(?:isn't|is not|not currently) supported|cannot edit|can't edit/i.test(normalized));
 }
 
 function resultText(result) {
@@ -74,12 +110,13 @@ export async function createLearnLookup() {
         throw new Error(`Learn MCP does not advertise ${name}`);
       }
     }
+    const articles = new Map();
     return {
       async findDocuments(event) {
         const terms = featureTerms(event);
         const search = await client.callTool({
           name: "microsoft_docs_search",
-          arguments: { query: `${event.productArea || ""} ${event.titleEn || event.title}` },
+          arguments: { query: `${documentationProduct(event)} ${event.titleEn || event.title}\n${(event.summaryEn || event.summary || "").slice(0, 320)}` },
         });
         const payload = JSON.parse(resultText(search));
         if (!Array.isArray(payload.results)) {
@@ -90,29 +127,39 @@ export async function createLearnLookup() {
         for (const result of payload.results) {
           const url = documentUrl(result.contentUrl);
           if (!url || new URL(url).hostname !== "learn.microsoft.com" ||
+            isSupplementaryDocument({ ...result, url }) ||
             seen.has(urlKey(url)) || !matchesProduct(event, { ...result, url }) ||
             !matchesFeature(terms, result.content || "")) {
             continue;
           }
           seen.add(urlKey(url));
           candidates.push({ ...result, url });
-          if (candidates.length === 3) {
-            break;
-          }
         }
+        const titleScore = (candidate) => terms.filter((term) =>
+          `${candidate.title} ${candidate.url.split("#")[1] || ""}`.toLowerCase().replace(/-/g, " ").includes(term)).length;
+        candidates.sort((left, right) => titleScore(right) - titleScore(left));
         const documents = [];
-        for (const candidate of candidates) {
-          const body = resultText(await client.callTool({
-            name: "microsoft_docs_fetch", arguments: { url: candidate.url },
-          }));
-          if (matchesFeature(terms, body)) {
+        for (const candidate of candidates.slice(0, 3)) {
+          const key = urlKey(candidate.url);
+          if (!articles.has(key)) {
+            articles.set(key, resultText(await client.callTool({
+              name: "microsoft_docs_fetch", arguments: { url: candidate.url },
+            })));
+            if (articles.size > 100) articles.delete(articles.keys().next().value);
+          }
+          const body = articles.get(key);
+          // Search chunks are feature-scoped; unrelated limitations elsewhere in
+          // the complete article must not veto an otherwise relevant reference.
+          if (matchesFeature(terms, body, { rejectUnsupported: false })) {
             documents.push({
               title: candidate.title,
+              sourceTitle: candidate.title,
               url: candidate.url,
               provenance: "mcp",
-              evidenceUrl: event.url,
+              evidenceUrl: event.publicationUrl || event.url,
               evidence: `Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ${terms.join(", ")}`,
             });
+            break;
           }
         }
         return documents;
@@ -169,7 +216,7 @@ export async function enrichLearnDocuments(events, cache, {
         ], event.url);
         const primary = documents.some((document) =>
           document.provenance === "mcp" && !isSupplementaryDocument(document));
-        const error = verified[event.id]?.error;
+        const error = verified[event.id]?.error || (!documents.length ? previous?.error : undefined);
         cache[event.id] = {
           inputFingerprint: documentFingerprint(event),
           status: documents.length ? "verified" : error ? "error" : "not-found",

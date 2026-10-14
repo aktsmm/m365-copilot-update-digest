@@ -21,6 +21,9 @@
       original: "原文を開く",
       related: "関連ドキュメント",
       supplemental: "補足",
+      documentPending: "関連ドキュメントは未調査です。",
+      documentNotFound: "原文以外の対応する関連資料は、まだ確認できていません。",
+      documentError: "関連資料の取得に失敗したため、再確認します。",
       source: "ソース",
       published: "公開日",
     },
@@ -32,6 +35,9 @@
       original: "Open source",
       related: "Related documentation",
       supplemental: "Supplementary",
+      documentPending: "Related documentation has not been checked yet.",
+      documentNotFound: "No matching additional documentation has been verified yet.",
+      documentError: "Documentation retrieval failed and will be checked again.",
       source: "Source",
       published: "Published",
     },
@@ -85,6 +91,8 @@
         const documents = (entry.relatedDocuments || [])
           .filter((document) => externalUrl(document.url) && document.title)
           .slice(0, 3);
+        const documentStatus = entry.relatedDocumentStatus === "not-found" ? text.documentNotFound
+          : entry.relatedDocumentStatus === "error" ? text.documentError : text.documentPending;
         return `
           <article class="search-result-card">
             <h2><a href="${escapeHtml(href)}">${escapeHtml(title)}</a></h2>
@@ -97,7 +105,7 @@
               ${original ? `<a class="primary-link" href="${escapeHtml(original)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text.original)}</a>` : ""}
               <a href="${escapeHtml(href)}">${escapeHtml(text.open)}</a>
             </div>
-            ${documents.length ? `<div class="related-documents"><strong>${escapeHtml(text.related)}</strong><ul>${documents.map((document) => `<li><a href="${escapeHtml(externalUrl(document.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.supplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
+            ${documents.length ? `<div class="related-documents"><strong>${escapeHtml(text.related)}</strong><ul>${documents.map((document) => `<li><a href="${escapeHtml(externalUrl(document.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.supplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : `<p class="document-status">${escapeHtml(documentStatus)}</p>`}
           </article>
         `;
       })

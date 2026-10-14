@@ -11,6 +11,7 @@ import {
   extractDocumentLinks,
   validateDocumentCache,
   withRelatedDocuments,
+  withPublicationSource,
 } from "./lib/related-documents.mjs";
 
 import {
@@ -2962,7 +2963,7 @@ async function main() {
     await enrichDocumentCache(collectedEvents, relatedDocuments, {
       candidates: documentCandidates,
     });
-    await enrichLearnDocuments(collectedEvents, relatedDocuments);
+    await enrichLearnDocuments(collectedEvents.map((event) => withPublicationSource(event, sources)), relatedDocuments);
   }
   validateDocumentCache(relatedDocuments);
   const allEvents = collectedEvents.map((event) => withRelatedDocuments(event, relatedDocuments));

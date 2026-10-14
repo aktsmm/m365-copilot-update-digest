@@ -87,10 +87,34 @@ test("supplementary documents are explicitly labeled in search results", async (
   assert.equal($(".document-supplemental").text(), "補足");
 });
 
+test("missing documentation distinguishes pending research, no verified match and retrieval errors", async () => {
+  const states = [
+    ["pending", "未調査"],
+    ["not-found", "まだ確認できていません"],
+    ["error", "取得に失敗"],
+  ];
+  for (const [relatedDocumentStatus, expected] of states) {
+    const $ = await searchResult("ja", "", {
+      ...entry, relatedDocuments: [], relatedDocumentStatus,
+    });
+    assert.ok($(".document-status").text().includes(expected));
+    assert.equal($(".related-documents a").length, 0);
+  }
+});
+
 test("generated search data resolves to exactly one card on each locale's daily page", async () => {
   execFileSync(process.execPath, ["scripts/build-pages.mjs"], { stdio: "pipe" });
   const payload = JSON.parse(await fs.readFile(new URL("../site/search-index.json", import.meta.url), "utf8"));
+  for (const searchPage of ["index.html", "search/index.html", "en/index.html", "en/search/index.html"]) {
+    const page = cheerio.load(await fs.readFile(new URL(`../site/${searchPage}`, import.meta.url), "utf8"));
+    const indexUrl = new URL(page("body").attr("data-search-index"), `https://example.com/${searchPage}`);
+    assert.equal(indexUrl.searchParams.get("v"), payload.generatedAt);
+  }
   assert.ok(payload.entries.length > 0);
+  for (const item of payload.entries) {
+    assert.ok(["verified", "pending", "not-found", "error"].includes(item.relatedDocumentStatus));
+    assert.equal(item.relatedDocumentStatus === "verified", item.relatedDocuments.length > 0);
+  }
   assert.equal(new Set(payload.entries.map((item) => item.detailPath)).size, payload.entries.length);
   const sample = payload.entries[0];
   const reportedIds = [

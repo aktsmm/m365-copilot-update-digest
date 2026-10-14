@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { enrichLearnDocuments, featureTerms, matchesFeature, matchesProduct } from "../scripts/lib/learn-mcp.mjs";
+import { documentationProduct, enrichLearnDocuments, featureTerms, matchesFeature, matchesProduct } from "../scripts/lib/learn-mcp.mjs";
 import { documentFingerprint, pendingDocumentEvents, validateDocumentCache } from "../scripts/lib/related-documents.mjs";
 
 const event = {
@@ -38,6 +38,33 @@ test("lookup cannot substitute Teams panels, a different product, or vendor-spec
   }, {
     title: "Deploy Veeva", url: "https://learn.microsoft.com/microsoft-365/copilot/connectors/veeva-deployment",
   }), false);
+});
+
+test("source product names override coarse feed labels and component names remain scoped", () => {
+  const retention = {
+    title: "Microsoft Purview compliance portal: Data Lifecycle Management - Retention based on Last Accessed",
+    productArea: "Microsoft 365 Copilot",
+  };
+  assert.match(documentationProduct(retention), /Purview/);
+  assert.equal(matchesProduct(retention, {
+    title: "Copilot retention", url: "https://learn.microsoft.com/microsoft-365/loop/retention",
+  }), false);
+  const connector = {
+    title: "Microsoft Purview: Rights Management connector - Certificate-based authentication",
+    productArea: "Microsoft Purview",
+  };
+  assert.equal(matchesProduct(connector, {
+    title: "Configure the Information Protection scanner",
+    content: "Certificate-based authentication for the Rights Management service.",
+    url: "https://learn.microsoft.com/purview/deploy-scanner",
+  }), false);
+  assert.ok(matchesProduct(connector, {
+    title: "RMS connector requirements", url: "https://learn.microsoft.com/purview/deploy-rms-connector",
+  }));
+  assert.equal(documentationProduct({
+    title: "Microsoft Copilot (Microsoft 365): New feature",
+  }), "Microsoft 365 Copilot");
+  assert.ok(featureTerms({ title: "Work IQ: Retrieve" }).includes("work iq"));
 });
 
 test("a source without explicit links gets a verified Japanese MCP document and subsequent runs reuse it", async () => {

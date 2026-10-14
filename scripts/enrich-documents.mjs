@@ -6,6 +6,7 @@ import {
   pendingDocumentEvents,
   requiresDocumentEnrichment,
   validateDocumentCache,
+  withPublicationSource,
 } from "./lib/related-documents.mjs";
 
 const args = process.argv.slice(2);
@@ -30,6 +31,7 @@ if (!Number.isInteger(limit) || limit < 1 || limit > 50) {
   throw new Error("--limit must be an integer between 1 and 50");
 }
 const root = process.cwd();
+const sources = JSON.parse(await fs.readFile(path.join(root, "config", "sources.json"), "utf8"));
 const cachePath = path.join(root, "config", "related-documents.json");
 const cache = JSON.parse(await fs.readFile(cachePath, "utf8"));
 validateDocumentCache(cache);
@@ -37,7 +39,7 @@ const entries = await fs.readdir(path.join(root, "data", "events"));
 const events = [];
 for (const file of entries.filter((entry) => entry.endsWith(".json")).sort()) {
   const log = JSON.parse(await fs.readFile(path.join(root, "data", "events", file), "utf8"));
-  events.push(...(log.events || []));
+  events.push(...(log.events || []).map((event) => withPublicationSource(event, sources)));
 }
 const selected = id ? events.filter((event) => event.id === id)
   : date ? events.filter((event) => event.publishedAt.slice(0, 10) === date)

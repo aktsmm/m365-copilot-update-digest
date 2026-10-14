@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --test",
     "enrich:documents": "node scripts/enrich-documents.mjs",
+    "backfill:documents": "node scripts/backfill-documents.mjs",
     "collect": "node scripts/collect.mjs",
     "validate:data": "node scripts/validate-generated-data.mjs",
     "validate:workflows": "node scripts/validate-workflows.mjs",
