@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-cfdd408ea78ca5ff",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "入力ボックスの追加コンテンツをピル表示に簡素化",
+        "subtitleJa": "「作業コンテンツを追加」で挿入した内容は、プロンプト本文に重複表示されません",
+        "en": "Microsoft Copilot (Microsoft 365): Simplifying Content in the Input Box"
+      },
+      "meta": {
+        "publishedJst": "2026-10-10",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "プロンプトに作業コンテンツを追加して使う **Microsoft 365 Copilot の利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "入力ボックスがすっきりし、プロンプトの作成に集中できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "表示が変わるのみで、特別な操作は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "「作業コンテンツを追加」で挿入した内容は**ピルとして入力ボックスに表示**され、プロンプト本文には繰り返されません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プラス メニューの「作業コンテンツを追加」からコンテンツを挿入する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "挿入した内容は入力ボックスにピルとして表示される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ピルの内容はプロンプト本文には繰り返されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot の入力ボックスでプラス メニューを開き、「作業コンテンツを追加」を選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Desktop と Web、提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "入力ボックスはプロンプトの作成に専念できる場所になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "input-box", "term": "入力ボックス", "type": "term", "oneLine": { "text": "Copilot にプロンプトを入力する画面上の欄。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "pill", "term": "ピル", "type": "term", "oneLine": { "text": "挿入したコンテンツを入力ボックス内に小さなラベルで示す表示。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "add-work-content", "term": "作業コンテンツを追加", "type": "feature", "oneLine": { "text": "プラス メニューから、プロンプトに作業コンテンツを挿入する操作。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=552592",
+        "learn": [
+          { "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
