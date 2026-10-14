@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6d32736ed931da6f",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft 365 Copilot モバイルアプリで音声メモの記録が可能に",
+        "subtitleJa": "対面の会話を、検索できる構造化コンテンツに変えられます",
+        "en": "Microsoft Copilot (Microsoft 365): Capture voice notes in the Microsoft 365 Copilot mobile app"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Microsoft 365 Copilot ライセンスを持つモバイル利用者**",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "オフラインでの議論を、構造化された検索可能な内容にできる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用者は Copilot モバイルアプリで音声メモを試せる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Copilot の音声メモで、**オフラインの議論を構造化・検索可能な内容**に変換できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Copilot のモバイルアプリで、音声メモとして会話を記録する",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "記録した内容は、構造化され、実行しやすく、検索できる形になる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Microsoft 365 Copilot ライセンスが必要",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "Android または iOS の Microsoft 365 Copilot モバイルアプリで利用する",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "対象クラウドは Worldwide (Standard Multi-Tenant)",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "iPhone の OneNote では、Copilot ノートブックで音声の文字起こし・撮影・メモ入力を 1 セッションにまとめて記録できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "Copilot ノートブックでのマルチモーダル キャプチャ (iPhone)",
+                  "retrievedAt": "2026-10-14T20:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "会議室外の打ち合わせや移動中の会話を、まず音声メモで試す",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "voice-notes",
+          "term": "音声メモ",
+          "type": "feature",
+          "oneLine": {
+            "text": "オフラインの議論を、構造化され検索できる内容に変える Copilot の機能。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "m365-copilot",
+          "term": "Microsoft 365 Copilot",
+          "type": "product",
+          "oneLine": {
+            "text": "Microsoft 365 のアプリや業務データと連携する、Microsoft の AI アシスタント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview",
+                "locator": "概要",
+                "retrievedAt": "2026-10-14T20:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "提供開始（GA）",
+          "type": "label",
+          "oneLine": {
+            "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=498640",
+        "learn": [
+          {
+            "title": "Microsoft 365 Copilot のリリース ノート",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Microsoft Copilot の概要",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
