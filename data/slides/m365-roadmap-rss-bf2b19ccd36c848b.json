@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-bf2b19ccd36c848b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Edge の Copilot アイコンに、操作を促すヒントを表示予定",
+        "subtitleJa": "開いているページに対する次の操作を、すばやく実行できるようになります",
+        "en": "Microsoft Edge: Adding contextual nudges to the Microsoft 365 Copilot Chat icon"
+      },
+      "meta": {
+        "publishedJst": "2026-10-08",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "viva-others"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Edge for Business で Copilot Chat を使うユーザー**と、Edge の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "開いているページに対する操作を、ツール バーの Copilot アイコンから素早く実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必須の対応はない。アイコンの表示は Edge ポリシーで制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/microsoft365copilotchaticonenabled", "locator": "説明", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Edge for Business で、ツール バーの Copilot アイコンに付く**コンテキスト ヒント（ナッジ）**から、開いているページへの操作をすぐ実行できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供予定の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Edge for Business のツール バーにある Copilot アイコンにヒントを表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "開いているページに対する操作を素早く行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の状態は開発中で、内容や時期は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "アイコン表示は Microsoft365CopilotChatIconEnabled ポリシーで制御（サイド ペイン利用時のみ適用）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/microsoft365copilotchaticonenabled", "locator": "説明", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+            { "text": "ポリシーが無効だと、Copilot はツール バーに表示されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/microsoft365copilotchaticonenabled", "locator": "説明", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認したいこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Entra アカウントで Edge にサインインすると、サイドバーから Copilot Chat を使え、エンタープライズ データ保護が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+            { "text": "同ポリシーは Windows / macOS の Edge 139 以降が対象（Android・iOS は非対応）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/microsoft365copilotchaticonenabled", "locator": "サポートされているバージョン", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edge-for-business", "term": "Edge for Business", "type": "product", "oneLine": { "text": "組織向けに DLP などのポリシー適用機能を備えた Microsoft Edge。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "データ損失防止", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Edge のサイドバーから使える、エンタープライズ データ保護付きのチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
+        { "termKey": "edp", "term": "エンタープライズ データ保護", "type": "term", "oneLine": { "text": "Entra アカウントでサインインしたときに、プロンプトと応答に適用される保護。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=537284",
+        "learn": [
+          { "title": "Copilot Edge でのチャット", "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locale": "ja-jp" },
+          { "title": "Microsoft365CopilotChatIconEnabled ポリシー", "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/microsoft365copilotchaticonenabled", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
