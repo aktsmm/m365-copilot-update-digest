@@ -98,7 +98,9 @@ jobs:
             titlePattern.test(title);
 
           let deferReason = '';
-          if (isPendingNormalization) {
+          if (title.startsWith('[summaries] ')) {
+            deferReason = 'Summary PRs are validated by the Auto-merge summaries workflow.';
+          } else if (isPendingNormalization) {
             deferReason = 'Generated PR metadata is still pending normalization.';
           } else if (isDraft && changed.length === 0) {
             deferReason = 'Draft generated PR has no file changes yet.';

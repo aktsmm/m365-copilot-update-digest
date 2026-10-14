@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import crypto from "node:crypto";
 import path from "node:path";
 import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
+import { applyAgentSummaries, loadAgentSummaries } from "./lib/agent-summaries.mjs";
 import { brokenSources } from "./lib/coverage.mjs";
 import { buildApi } from "./lib/api.mjs";
 import { KIND_IDS, KIND_LABEL, buildSlide, selectSlideEvents, slideKind, stableStringify, validateSlide } from "./lib/slides.mjs";
@@ -1168,7 +1169,7 @@ async function main() {
   const rawDailyLogs = await readDailyLogs();
   const relatedDocuments = await readJson(relatedDocumentsFile, {});
   validateDocumentCache(relatedDocuments);
-  const allEvents = applyOverrides(
+  const baseEvents = applyOverrides(
     rawDailyLogs.flatMap((log) => log.events || []).map((event) => {
       const enriched = withRelatedDocuments(event, relatedDocuments);
       const record = matchingRecord(event, relatedDocuments);
@@ -1181,6 +1182,7 @@ async function main() {
     }),
     overrides,
   );
+  const allEvents = applyAgentSummaries(baseEvents, loadAgentSummaries());
   const dailyLogs = rawDailyLogs
     .map((log) => ({
       ...log,

@@ -105,6 +105,11 @@
     try {
       const PDFLib = await loadPdfLib();
       const merged = await PDFLib.PDFDocument.create();
+      const coverResponse = await fetch(new URL("pdf/cover.pdf", root));
+      if (coverResponse.ok) {
+        const cover = await PDFLib.PDFDocument.load(await coverResponse.arrayBuffer());
+        (await merged.copyPages(cover, cover.getPageIndices())).forEach((page) => merged.addPage(page));
+      }
       for (let i = 0; i < keys.length; i += 1) {
         status.textContent = `${i + 1} / ${keys.length}`;
         const entry = index.slides.find((slide) => slide.key === keys[i]);
