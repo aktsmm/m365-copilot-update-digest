@@ -44,6 +44,12 @@ test("validation rejects forbidden wording, bad hosts and unverified evidence", 
   const bad = structuredClone(deck);
   bad.slides[0].title.ja = "要確認の更新";
   assert.ok(validateDeck(bad).some((p) => p.message.includes("forbidden phrase")));
+  const feature = structuredClone(deck);
+  feature.slides[0].title.ja = "AI 生成のメモリで未確認の発注書を扱う機能";
+  assert.equal(validateDeck(feature).length, 0);
+  const memo = structuredClone(deck);
+  memo.slides[0].title.ja = "新機能（未確認）";
+  assert.ok(validateDeck(memo).some((p) => p.message.includes("memo wording")));
   const host = structuredClone(deck);
   host.slides[0].references.announcement = "https://example.com/x";
   assert.ok(validateDeck(host).some((p) => p.message.includes("host not allowed")));

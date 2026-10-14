@@ -98,7 +98,7 @@ Create `data/slides/<id>.json` for exactly one update: a one-slide deck that sat
 
 ## Content rules (the validator rejects violations)
 
-- **Write only what is verified.** If a fact cannot be confirmed from the source or Microsoft Learn, omit it. Never write placeholders or internal memo wording. Forbidden anywhere in rendered text: 未確認, 記載なし, 要確認, 推定, 未発表, 判定保留, AI 生成, データ時点, （原文）, （Learn）, 初心者向け.
+- **Write only what is verified.** If a fact cannot be confirmed from the source or Microsoft Learn, omit it. Never write placeholders or internal memo wording. Forbidden anywhere in rendered text: 記載なし, 要確認, 推定, 未発表, 判定保留, データ時点, （原文）, （Learn）, 初心者向け, and memo-style stand-alone markers such as 「（未確認）」 or 「（AI 生成）」. Describing a product feature that is itself "AI 生成" (for example AI-generated meeting memory) or "未確認の発注書" is fine.
 - Every claim has `origin`, `assertion`, `verification`, and `evidence`. `verified` requires evidence URLs on learn.microsoft.com / www.microsoft.com / techcommunity.microsoft.com that you actually fetched. Recommendations are never `verified`.
 - Dates: use `source.publishedJst` as `meta.publishedJst`. Month-granularity timing stays a month (`availability`); never invent a day. If the source gives no availability months, use `"availability": []`.
 - **meta**: copy `products`/`categories`/`importance`/`status` from the input; set `cloudInstances` and `platforms` from the input (they render as the 提供範囲 stamp); set `productArea` and `sourceName`.

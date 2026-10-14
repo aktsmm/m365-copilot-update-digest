@@ -5,7 +5,10 @@ import { Ajv2020 } from "ajv/dist/2020.js";
 export const SLIDES_DIR = "data/slides";
 
 /** 利用者に見せる文言に混ぜない、社内メモ的な表現。 */
-export const FORBIDDEN_PHRASES = ["未確認", "記載なし", "要確認", "推定", "未発表", "判定保留", "AI 生成", "AI生成", "データ時点", "（原文）", "（Learn）", "初心者向け"];
+export const FORBIDDEN_PHRASES = ["記載なし", "要確認", "推定", "未発表", "判定保留", "データ時点", "（原文）", "（Learn）", "初心者向け"];
+
+/** 単独のメモ書きとしてだけ禁止する語（製品機能の説明に出る「AI 生成」「未確認の発注書」などは許可する）。 */
+export const FORBIDDEN_PATTERNS = [/^\s*未確認\s*$/, /[（(]\s*未確認\s*[）)]/, /^\s*AI\s*生成\s*$/, /[（(]\s*AI\s*生成\s*[）)]/];
 
 /** 根拠・参照 URL に許可するホスト。 */
 export const ALLOWED_HOSTS = new Set(["learn.microsoft.com", "www.microsoft.com", "techcommunity.microsoft.com", "azure.microsoft.com", "support.microsoft.com", "devblogs.microsoft.com"]);
@@ -142,6 +145,7 @@ export function validateDeck(deck) {
     const key = String(slide.key ?? "?");
     for (const text of renderedTexts(slide)) {
       for (const word of FORBIDDEN_PHRASES) if (text.includes(word)) problems.push({ slide: key, message: `forbidden phrase "${word}" in: ${text.slice(0, 60)}` });
+      for (const pattern of FORBIDDEN_PATTERNS) if (pattern.test(text)) problems.push({ slide: key, message: `forbidden memo wording ${pattern} in: ${text.slice(0, 60)}` });
     }
     const urls = [slide.references?.announcement, ...(slide.references?.learn ?? []).map((link) => link.url)];
     for (const claim of claimsOf(slide)) for (const evidence of claim.evidence ?? []) urls.push(evidence.url);
