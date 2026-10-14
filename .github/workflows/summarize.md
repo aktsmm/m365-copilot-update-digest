@@ -7,7 +7,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-engine: copilot
+engine:
+  id: copilot
+  model: claude-sonnet-5.5
 timeout-minutes: 45
 network:
   allowed:
@@ -29,7 +31,7 @@ steps:
     run: |
       npm ci
       mkdir -p data/summaries
-      npm run pending -- --limit 30
+      npm run pending -- --limit 50
 safe-outputs:
   create-pull-request:
     title-prefix: "[summaries] "

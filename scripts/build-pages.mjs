@@ -94,6 +94,7 @@ const TEXT = {
     allKinds: "すべて",
     slideLink: "スライド PDF",
     downloadMerged: "表示中のスライドを 1 つの PDF にまとめて保存",
+    downloadPptx: "表示中のスライドを PowerPoint で保存",
     allProducts: "すべて",
     allRoles: "すべて",
     allSourceTypes: "すべて",
@@ -190,6 +191,7 @@ const TEXT = {
     allKinds: "All",
     slideLink: "Slide PDF",
     downloadMerged: "Save the visible slides as one PDF",
+    downloadPptx: "Save the visible slides as PowerPoint",
     allProducts: "All",
     allRoles: "All",
     allSourceTypes: "All",
@@ -560,7 +562,7 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
     .join("");
 
   return `
-    <article class="update-card"${options.anchor ? ` id="${escapeHtml(`update-${event.id}`)}"` : ""} data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}" data-categories="${escapeHtml((event.categories || []).join(" "))}" data-importance="${escapeHtml(event.importanceLevel || "normal")}" data-kind="${escapeHtml(slideKind(event))}">
+    <article class="update-card"${options.anchor ? ` id="${escapeHtml(`update-${event.id}`)}"` : ""} data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}" data-categories="${escapeHtml((event.categories || []).join(" "))}" data-importance="${escapeHtml(event.importanceLevel || "normal")}" data-kind="${escapeHtml(slideKind(event))}"${slideKeys.has(event.id) ? ` data-slide-key="${escapeHtml(event.id)}"` : ""}>
       <div class="badge-row">
         ${renderBadge(KIND_LABEL[slideKind(event)], `kind-${slideKind(event)}`)}
         ${event.isPinned ? renderBadge("Pinned", "pinned") : ""}
@@ -712,7 +714,7 @@ function renderLayout({
   const text = TEXT[locale];
   const assetHref = withAssetVersion(relativeHref(depth, "assets/styles.css"));
   const defaultScript = withAssetVersion(relativeHref(depth, "assets/site.js"));
-  const scripts = [defaultScript, withAssetVersion(relativeHref(depth, "assets/pdf-gate.js")), ...extraScripts]
+  const scripts = [defaultScript, withAssetVersion(relativeHref(depth, "assets/pdf-gate.js")), withAssetVersion(relativeHref(depth, "assets/pptx-export.js")), ...extraScripts]
     .map((href) => `<script defer src="${escapeHtml(href)}"></script>`)
     .join("\n");
 
@@ -902,7 +904,7 @@ function renderIndexPage(
     <section class="section-block" data-card-filters>
       ${renderSectionHeading(text.recentTitle)}
       ${recentEvents.length > 0 ? renderFilterToolbar(recentEvents, text, locale) : ""}
-      ${slideKeys.size > 0 ? `<div class="download-toolbar" data-download-toolbar hidden><button type="button" data-download-merged>${escapeHtml(text.downloadMerged)}</button><span class="download-status" data-download-status></span></div>` : ""}
+      ${slideKeys.size > 0 ? `<div class="download-toolbar" data-download-toolbar><button type="button" data-download-merged hidden>${escapeHtml(text.downloadMerged)}</button><button type="button" data-download-pptx hidden>${escapeHtml(text.downloadPptx)}</button><span class="download-status" data-download-status></span></div>` : ""}
       ${recentWindow.length === 0 ? `<p class="section-note">${escapeHtml(text.noRecent)}</p>` : ""}
       <div class="card-grid" data-filter-cards>${recentEvents.length > 0 ? recentEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
       <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
@@ -1213,6 +1215,10 @@ async function main() {
   await fs.copyFile(
     path.join(workspaceRoot, "node_modules", "pdf-lib", "dist", "pdf-lib.min.js"),
     path.join(siteDir, "assets", "vendor", "pdf-lib.min.js"),
+  );
+  await fs.copyFile(
+    path.join(workspaceRoot, "node_modules", "pptxgenjs", "dist", "pptxgen.bundle.js"),
+    path.join(siteDir, "assets", "vendor", "pptxgen.bundle.js"),
   );
   await copyRawFiles();
   await writeText(path.join(siteDir, ".nojekyll"), "\n");
