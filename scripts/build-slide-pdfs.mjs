@@ -63,7 +63,7 @@ if (decks.length > 0 && !password) {
     fs.writeFileSync(
       path.join(pdfDir, "end.pdf"),
       await render([
-        `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">M365 Copilot Update Digest</div></div><div class="en-foot"><span>Created by yamapan（GitHub: aktsmm）</span><span>日本語の題名・要約には機械翻訳や AI 生成が含まれます。必ず原文をご確認ください。</span></div></section>`,
+        `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">M365 Copilot Update Digest</div><div style="margin-top:36px;font-size:16px;color:#6b778a">https://github.com/aktsmm/m365-copilot-update-digest</div></div><div class="en-foot"><span>Created by yamapan（GitHub: aktsmm）</span><span>GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。改善要望は GitHub（Issue）で対応します。</span></div></section>`,
       ]),
     );
 
