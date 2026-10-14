@@ -1,6 +1,6 @@
 {
   "date": "2026-05-19",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:09:17.042Z",
   "events": [
     {
       "id": "m365-roadmap-rss-06603d1e23426446",
@@ -404,20 +404,6 @@
       "summaryJa": "カスタム コネクタのグラフ API は、関連性とユーザー エクスペリエンスを向上させるために、アイコン、表示コントロール、メタデータ、プロパティの説明、セマンティック ラベルなど、より豊富な構成オプションをサポートするようになりました。",
       "summaryEn": "Graph API for custom connectors now supports richer configuration options—including icons, visibility controls, metadata, property descriptions, and semantic labels—to improve relevance and user experience.",
       "url": "https://learn.microsoft.com/en-us/graph/custom-connector-sdk-overview",
-      "publishedAt": "2026-05-19T12:00:00.000Z",
-      "capturedAt": "2026-05-20T04:36:02.842Z",
-      "sourceLastSeen": "2026-05-25T22:56:46.033Z",
-      "roadmapIds": [],
-      "releaseStage": "Update",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 102,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため",
       "relatedDocuments": [
         {
           "title": "Prerequisites for deploying connectors",
@@ -431,7 +417,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/graph/custom-connector-sdk-overview"
         }
-      ]
+      ],
+      "publishedAt": "2026-05-19T12:00:00.000Z",
+      "capturedAt": "2026-05-20T04:36:02.842Z",
+      "sourceLastSeen": "2026-05-25T22:56:46.033Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 102,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-c6bfb479626d0ba2",
@@ -447,6 +447,20 @@
       "summaryJa": "IT 管理者は特定のユーザーおよびグループに対して人間モデルを有効にすることができます [Web]\nロードマップID: 557371\n管理者は、特定のユーザーおよびグループの Anthropic モデルおよび xAI モデルへのアクセスを管理できるようになりました。\n詳細:\n変更点: 新しい管理コントロールにより、組織は Anthropic をモデル プロバイダーとして有効にすることができます。",
       "summaryEn": "IT admins can enable Anthropic models for specific users and groups [Web]\nRoadmap ID: 557371\nAdmins can now manage access to Anthropic and xAI models for specific users and groups.\nDetails:\nWhat changed: New admin controls allow organizations to enable Anthropic as a model...",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-ai-provider-user-sec-group-access",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Online Services の Anthropic モデル",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-ai-provider-user-sec-group-access"
+        },
+        {
+          "title": "SpaceXAI モデルに接続する (独立したプロセッサとして)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-models",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-ai-provider-user-sec-group-access"
+        }
+      ],
       "publishedAt": "2026-05-19T12:00:00.000Z",
       "capturedAt": "2026-05-20T04:36:02.842Z",
       "sourceLastSeen": "2026-05-25T22:56:46.033Z",
@@ -464,21 +478,7 @@
         "作成者向け"
       ],
       "importanceScore": 98,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft Online Services の Anthropic モデル",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-ai-provider-user-sec-group-access"
-        },
-        {
-          "title": "SpaceXAI モデルに接続する (独立したプロセッサとして)",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-models",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-ai-provider-user-sec-group-access"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-258a40fbecbda32c",
@@ -494,6 +494,16 @@
       "summaryJa": "Microsoft 365 Copilot Chat 内で PDF を直接開くことができるようになり、表示と分析のエクスペリエンスが向上しました。",
       "summaryEn": "You can now open PDFs directly inside Microsoft 365 Copilot Chat to improve your viewing and analysis experience.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-19,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: open, pdf, within, chat"
+        }
+      ],
       "publishedAt": "2026-05-19T12:00:00.000Z",
       "capturedAt": "2026-05-20T04:36:02.842Z",
       "sourceLastSeen": "2026-05-25T22:56:46.033Z",
@@ -509,17 +519,7 @@
         "作成者向け"
       ],
       "importanceScore": 98,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-19,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: open, pdf, within, chat"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-64dd6b201c4f617c",
@@ -535,6 +535,16 @@
       "summaryJa": "ユーザーは、OneDrive でファイルをプレビューするときに、すぐに使用できる Copilot アクションを直接確認できるようになりました。",
       "summaryEn": "Users can now see ready‑to‑use Copilot actions directly when previewing files in OneDrive.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-19,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: discover, action, onedrive, file, preview"
+        }
+      ],
       "publishedAt": "2026-05-19T12:00:00.000Z",
       "capturedAt": "2026-05-20T04:36:02.842Z",
       "sourceLastSeen": "2026-05-25T22:56:46.033Z",
@@ -550,17 +560,7 @@
         "作成者向け"
       ],
       "importanceScore": 96,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-19,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: discover, action, onedrive, file, preview"
-        }
-      ]
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-copilot-release-notes-2ed2e7305813131e",
@@ -576,6 +576,16 @@
       "summaryJa": "SharePoint 管理エージェントは、自然言語によるガイダンスと実用的な洞察により、管理者がテナントを管理するのに役立ちます。",
       "summaryEn": "SharePoint Admin Agent helps admins manage their tenant with natural language guidance and actionable insights.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+      "relatedDocuments": [
+        {
+          "title": "SharePoint 高度な管理を使用して Microsoft Copilot とエージェントに備える",
+          "sourceTitle": "Get ready for Microsoft 365 Copilot and agents with SharePoint Advanced Management",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/get-ready-copilot-sharepoint-advanced-management#step-4-use-the-sharepoint-admin-agent",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: manag, your, tenant, sharepoint, admin, agent"
+        }
+      ],
       "publishedAt": "2026-05-19T12:00:00.000Z",
       "capturedAt": "2026-05-20T04:36:02.842Z",
       "sourceLastSeen": "2026-05-25T22:56:46.033Z",
@@ -591,17 +601,7 @@
         "作成者向け"
       ],
       "importanceScore": 92,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "SharePoint 高度な管理を使用して Microsoft Copilot とエージェントに備える",
-          "sourceTitle": "Get ready for Microsoft 365 Copilot and agents with SharePoint Advanced Management",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/get-ready-copilot-sharepoint-advanced-management#step-4-use-the-sharepoint-admin-agent",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: manag, your, tenant, sharepoint, admin, agent"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-170072de38b2cad6",
@@ -617,6 +617,16 @@
       "summaryJa": "GPT 5.5 Thinking は、より深い推論とより複雑な問題解決を可能にすることで、Copilot Chat でできることを拡張します。",
       "summaryEn": "GPT 5.5 Thinking expands what Copilot Chat can do by enabling deeper reasoning and more complex problem solving.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: openai, gpt, think, available, chat"
+        }
+      ],
       "publishedAt": "2026-05-19T12:00:00.000Z",
       "capturedAt": "2026-07-03T04:07:28.991Z",
       "sourceLastSeen": "2026-07-03T04:07:28.991Z",
@@ -632,17 +642,7 @@
         "作成者向け"
       ],
       "importanceScore": 92,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: openai, gpt, think, available, chat"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-b0fff1bd8d28bdd5",
@@ -761,6 +761,16 @@
       "summaryJa": "ユーザーは、Outlook での簡単な操作を通じて、電子メール スレッドから電子メールやテキストを Microsoft 365 Copilot Chat のプロンプト コンテキストに直接追加できるようになります。",
       "summaryEn": "Users will be able to add emails and text from email threads directly into their prompt context in Microsoft 365 Copilot Chat through simple interactions in Outlook.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Copilot Chatの概要",
+          "sourceTitle": "Overview of Microsoft Copilot Chat",
+          "url": "https://learn.microsoft.com/ja-jp/copilot/overview#how-grounding-works-in-copilot-chat",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: implicit, ground, outlook, chat"
+        }
+      ],
       "publishedAt": "2026-05-19T12:00:00.000Z",
       "capturedAt": "2026-05-20T04:36:02.842Z",
       "sourceLastSeen": "2026-05-25T22:56:46.033Z",
@@ -774,17 +784,7 @@
         "作成者向け"
       ],
       "importanceScore": 86,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft Copilot Chatの概要",
-          "sourceTitle": "Overview of Microsoft Copilot Chat",
-          "url": "https://learn.microsoft.com/ja-jp/copilot/overview#how-grounding-works-in-copilot-chat",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-05-19",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: implicit, ground, outlook, chat"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため"
     },
     {
       "id": "m365-copilot-release-notes-e77aae97a19a479b",
@@ -800,6 +800,20 @@
       "summaryJa": "Viva Glint の Copilot は Microsoft 365 Copilot のアクセス制御を使用し、組織が従業員のフィードバックから AI を活用した洞察を管理する方法を簡素化しました。",
       "summaryEn": "Copilot in Viva Glint now uses Microsoft 365 Copilot access controls, simplifying how organizations manage AI-powered insights from employee feedback.",
       "url": "https://learn.microsoft.com/en-us/viva/glint/copilot/mac-copilot-access",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 の機能へのアクセスを制御する",
+          "url": "https://learn.microsoft.com/ja-jp/viva/feature-access-management",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/glint/copilot/mac-copilot-access"
+        },
+        {
+          "title": "Microsoft Entra ビルトイン ロール",
+          "url": "https://learn.microsoft.com/ja-jp/entra/identity/role-based-access-control/permissions-reference#global-administrator",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/glint/copilot/mac-copilot-access"
+        }
+      ],
       "publishedAt": "2026-05-19T12:00:00.000Z",
       "capturedAt": "2026-05-20T04:36:02.842Z",
       "sourceLastSeen": "2026-05-25T22:56:46.033Z",
@@ -817,21 +831,7 @@
         "作成者向け"
       ],
       "importanceScore": 64,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理者の運用判断に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 の機能へのアクセスを制御する",
-          "url": "https://learn.microsoft.com/ja-jp/viva/feature-access-management",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/glint/copilot/mac-copilot-access"
-        },
-        {
-          "title": "Microsoft Entra ビルトイン ロール",
-          "url": "https://learn.microsoft.com/ja-jp/entra/identity/role-based-access-control/permissions-reference#global-administrator",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/glint/copilot/mac-copilot-access"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理者の運用判断に関わるため"
     }
   ]
 }

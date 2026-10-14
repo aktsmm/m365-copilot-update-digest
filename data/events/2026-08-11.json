@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:09:17.042Z",
   "events": [
     {
       "id": "m365-roadmap-rss-2595ac9245147b44",
@@ -304,6 +304,16 @@
       "summaryJa": "ServiceNow ナレッジ コネクタとカタログ コネクタは、管理者、ナレッジ マネージャー、ナレッジ管理者などのユーザー ロールに基づいてアクセス許可を強制するようになりました。",
       "summaryEn": "ServiceNow Knowledge and Catalog connectors now enforce access permissions based on user roles such as admin, knowledge manager, and knowledge admin.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "Deploy the ServiceNow Knowledge Copilot connector",
+          "sourceTitle": "Deploy the ServiceNow Knowledge Copilot connector",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#deploy-the-connector",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: servicenow, connector, support, role-bas, permission"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -319,17 +329,7 @@
         "作成者向け"
       ],
       "importanceScore": 108,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Deploy the ServiceNow Knowledge Copilot connector",
-          "sourceTitle": "Deploy the ServiceNow Knowledge Copilot connector",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#deploy-the-connector",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: servicenow, connector, support, role-bas, permission"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-a078ebac7b2506d2",
@@ -564,6 +564,16 @@
       "summaryJa": "Copilot を使用して Word 文書を編集するときに、OpenAI モデルに加えて Anthropic モデルを選択することもできます。",
       "summaryEn": "You can choose to select Anthropic models, in addition to OpenAI models, when editing a Word document using Copilot.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Copilot 構成設定を最適化する",
+          "sourceTitle": "Optimize Microsoft Copilot configuration settings",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/optimize-microsoft-365-configuration-settings#recommended-copilot-tenant-settings",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: choose, anthropic, model, when, edit, word"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -579,17 +589,7 @@
         "作成者向け"
       ],
       "importanceScore": 90,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft Copilot 構成設定を最適化する",
-          "sourceTitle": "Optimize Microsoft Copilot configuration settings",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/optimize-microsoft-365-configuration-settings#recommended-copilot-tenant-settings",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: choose, anthropic, model, when, edit, word"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-6a026a4cb1801c82",
@@ -605,20 +605,6 @@
       "summaryJa": "ID と権限の変更をより迅速に反映\nこれを試してください:\n\n接続されたデータ ソースのコンテンツを追加または更新します。\nCopilot の結果にコンテンツが以前より早く表示されることを確認します。\n権限と ID 情報が正確であることを確認してください。\n\nこれが重要な理由: 高速な接続",
       "summaryEn": "Quicker reflection of identity and permission changes\nTry this:\n\nAdd or update content in your connected data source.\nObserve that content appears in Copilot results sooner than before.\nCheck that permissions and identity information remain accurate.\n\nWhy this matters: Faster...",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#customize-sync-intervals",
-      "publishedAt": "2026-08-11T12:00:00.000Z",
-      "capturedAt": "2026-08-12T07:51:11.587Z",
-      "sourceLastSeen": "2026-08-12T07:51:11.587Z",
-      "roadmapIds": [],
-      "releaseStage": "Update",
-      "roleTags": [
-        "管理者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "管理者向け"
-      ],
-      "importanceScore": 90,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
       "relatedDocuments": [
         {
           "title": "Set up the ServiceNow service for ServiceNow Knowledge connector ingestion",
@@ -632,7 +618,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment"
         }
-      ]
+      ],
+      "publishedAt": "2026-08-11T12:00:00.000Z",
+      "capturedAt": "2026-08-12T07:51:11.587Z",
+      "sourceLastSeen": "2026-08-12T07:51:11.587Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "管理者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "管理者向け"
+      ],
+      "importanceScore": 90,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-4fcbe55116767fc1",
@@ -648,6 +648,16 @@
       "summaryJa": "Adobe Experience Manager でホストされているアセット ライブラリを Microsoft 365 および Copilot に接続すると、Copilot は組織の画像を使用してプレゼンテーションを作成します。",
       "summaryEn": "Once you connect your asset library hosted on Adobe Experience Manager to Microsoft 365 and Copilot, Copilot will create presentations using your organization's images.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-5,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: use, enterprise, asset, hosted, adobe, experience, manager, when, creat, presentation"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -665,17 +675,7 @@
         "作成者向け"
       ],
       "importanceScore": 86,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-5,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: use, enterprise, asset, hosted, adobe, experience, manager, when, creat, presentation"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-bd6a24cad01ca4eb",
@@ -691,6 +691,20 @@
       "summaryJa": "Adobe Experience Manager でホストされているアセット ライブラリを Microsoft 365 および Copilot に接続すると、Copilot は組織の画像を使用してプレゼンテーションを作成します。",
       "summaryEn": "Once you connect your asset library hosted on Adobe Experience Manager to Microsoft 365 and Copilot, Copilot will create presentations using your organization's images.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment",
+      "relatedDocuments": [
+        {
+          "title": "Enhance Copilot discovery of connectors content",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/enhance-copilot-discovery",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment"
+        },
+        {
+          "title": "Staged rollout for connectors",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/staged-rollout",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -708,21 +722,7 @@
         "作成者向け"
       ],
       "importanceScore": 86,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Enhance Copilot discovery of connectors content",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/enhance-copilot-discovery",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment"
-        },
-        {
-          "title": "Staged rollout for connectors",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/staged-rollout",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-fa216947c69032e2",
@@ -738,6 +738,16 @@
       "summaryJa": "立て続けに会議に参加する人が非常に多いため、事前に読んだ内容、実行事項、さらには各会議の内容を把握し続けるのは非常に困難です。 Copilot は、リアルタイムの洞察を提供し、関連するコンテキスト、タスクなどを要約することで、数分以内に会議の準備を迅速に行うことができます。",
       "summaryEn": "With so many of us in back-to-back meetings, it can be a real struggle to stay on top of pre-reads, action items, and even what each meeting is about. Copilot quickly prepares you for meetings within minutes by bringing real-time insights and summarizing relevant context, tasks,...",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#october-28,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: prepare, meeting, classic, outlook"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -755,17 +765,7 @@
         "作成者向け"
       ],
       "importanceScore": 86,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#october-28,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: prepare, meeting, classic, outlook"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため"
     },
     {
       "id": "m365-copilot-release-notes-7a13b12c942ebd0a",
@@ -814,6 +814,14 @@
       "summaryJa": "権威サイト機能を使用すると、管理者は特定の SharePoint サイトを公式で信頼できる情報源として指定できます。これらのサイトを権威あるサイトとして分類することで、企業ニュース、ポリシー、更新情報などの高品質で信頼性の高いコンテンツが優先的に表示されます。",
       "summaryEn": "Authoritative Sites feature empowers administrators to designate specific SharePoint sites as official, trusted sources of information. By classifying these sites as authoritative, high quality and credible content such as company news, policies, and updates are prioritized...",
       "url": "https://learn.microsoft.com/en-us/sharepoint/sharepoint-authoritative-sites",
+      "relatedDocuments": [
+        {
+          "title": "SharePoint の前提条件 高度な管理",
+          "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-advanced-management-prerequisites",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/sharepoint/sharepoint-authoritative-sites"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -829,15 +837,7 @@
         "管理者向け"
       ],
       "importanceScore": 80,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "SharePoint の前提条件 高度な管理",
-          "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-advanced-management-prerequisites",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/sharepoint/sharepoint-authoritative-sites"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-5a81441ba9b8de84",
@@ -853,6 +853,16 @@
       "summaryJa": "PowerPoint Web アプリを開いたときと同じように、PowerPoint で Copilot を使用してプレゼンテーションを作成できるようになりました。",
       "summaryEn": "You can now create a presentation with Copilot in PowerPoint just as you open the PowerPoint web app.",
       "url": "https://support.microsoft.com/en-US/Microsoft-365-Copilot/what-copilot-license-do-i-have",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://support.microsoft.com/en-US/Microsoft-365-Copilot/what-copilot-license-do-i-have",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: create, presentation, powerpoint"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -870,17 +880,7 @@
         "作成者向け"
       ],
       "importanceScore": 76,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot のリリース ノート",
-          "sourceTitle": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
-          "provenance": "mcp",
-          "evidenceUrl": "https://support.microsoft.com/en-US/Microsoft-365-Copilot/what-copilot-license-do-i-have",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: create, presentation, powerpoint"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-46a35f1af49d16a8",
@@ -958,6 +958,16 @@
       "summaryJa": "PowerPoint の Copilot に、プレゼンテーションの作成中に関連するオンライン ソースを参照するよう依頼できるようになりました。",
       "summaryEn": "You can now ask Copilot in PowerPoint to reference relevant online sources while creating a presentation.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#june-24,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -975,17 +985,7 @@
         "作成者向け"
       ],
       "importanceScore": 76,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#june-24,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-3828422b9f21ab24",
@@ -1001,6 +1001,16 @@
       "summaryJa": "PowerPoint の Copilot に、プレゼンテーションの作成中に関連するオンライン ソースを参照するよう依頼できるようになりました。",
       "summaryEn": "You can now ask Copilot in PowerPoint to reference relevant online sources while creating a presentation.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-29,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -1018,17 +1028,7 @@
         "作成者向け"
       ],
       "importanceScore": 76,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-29,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-1538e68169ed0b3c",
@@ -1044,6 +1044,16 @@
       "summaryJa": "PowerPoint の Copilot に、プレゼンテーションの作成中に関連するオンライン ソースを参照するよう依頼できるようになりました。",
       "summaryEn": "You can now ask Copilot in PowerPoint to reference relevant online sources while creating a presentation.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-29,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -1061,17 +1071,7 @@
         "作成者向け"
       ],
       "importanceScore": 76,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-29,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-4de35c8b369428de",
@@ -1087,6 +1087,16 @@
       "summaryJa": "PowerPoint の Copilot に、プレゼンテーションの作成中に関連するオンライン ソースを参照するよう依頼できるようになりました。",
       "summaryEn": "You can now ask Copilot in PowerPoint to reference relevant online sources while creating a presentation.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-29,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -1104,17 +1114,7 @@
         "作成者向け"
       ],
       "importanceScore": 76,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-29,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: reference, source, when, creat, presentation, powerpoint"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-0ecc9ed97536cfdc",
@@ -1161,6 +1161,16 @@
       "summaryJa": "より正確な権限管理",
       "summaryEn": "More precise permission management",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 管理センターでのエージェント管理",
+          "sourceTitle": "Agent management in Microsoft 365 admin center",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-365-overview#types-of-agents",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: more, precise, permission, management"
+        }
+      ],
       "publishedAt": "2026-08-11T12:00:00.000Z",
       "capturedAt": "2026-08-12T07:51:11.587Z",
       "sourceLastSeen": "2026-08-12T07:51:11.587Z",
@@ -1176,17 +1186,7 @@
         "作成者向け"
       ],
       "importanceScore": 64,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理者の運用判断に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 管理センターでのエージェント管理",
-          "sourceTitle": "Agent management in Microsoft 365 admin center",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-365-overview#types-of-agents",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: more, precise, permission, management"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理者の運用判断に関わるため"
     }
   ]
 }

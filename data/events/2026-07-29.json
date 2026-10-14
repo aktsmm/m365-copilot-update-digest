@@ -1,6 +1,6 @@
 {
   "date": "2026-07-29",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:09:17.042Z",
   "events": [
     {
       "id": "m365-roadmap-rss-2f1f4f3a45fb9e75",
@@ -665,6 +665,16 @@
       "summaryJa": "ユーザー マッピングの接続編集、ServiceNow のクエリ フィルターをサポート",
       "summaryEn": "Support connection edit of user mapping, query filter for ServiceNow",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
+      "relatedDocuments": [
+        {
+          "title": "Deploy the ServiceNow Catalog connector",
+          "sourceTitle": "Deploy the ServiceNow Catalog Microsoft 365 Copilot connector",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment#customize-settings-optional",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: admin, edit, mapping, query, filter, servicenow, connector"
+        }
+      ],
       "publishedAt": "2026-07-29T12:00:00.000Z",
       "capturedAt": "2026-07-31T03:48:37.422Z",
       "sourceLastSeen": "2026-07-31T03:48:37.422Z",
@@ -682,17 +692,7 @@
         "作成者向け"
       ],
       "importanceScore": 108,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Deploy the ServiceNow Catalog connector",
-          "sourceTitle": "Deploy the ServiceNow Catalog Microsoft 365 Copilot connector",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment#customize-settings-optional",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: admin, edit, mapping, query, filter, servicenow, connector"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-0f4d293b0646d63c",
@@ -874,6 +874,20 @@
       "summaryJa": "Agent Builder は、Microsoft 365 Copilot のエージェントのナレッジ ソースとして SharePoint リストの使用をサポートするようになりました。メーカーは構造化リスト データにエージェントを配置できるため、ユーザーは質問し、選択した SharePoint リストに保存されている情報に基づいて回答を得ることができます。今回のリリースでは...",
       "summaryEn": "Agent Builder now supports using a SharePoint list as a knowledge source for agents in Microsoft 365 Copilot. Makers can ground an agent in structured list data so users can ask questions and get responses based on information stored in a selected SharePoint list. For this...",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge#sharepoint-and-onedrive-content",
+      "relatedDocuments": [
+        {
+          "title": "エージェント ビルダーでエージェントを構築する",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-build-agents",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge"
+        },
+        {
+          "title": "宣言型エージェントにナレッジ ソースを追加する",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/knowledge-sources",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge"
+        }
+      ],
       "publishedAt": "2026-07-29T12:00:00.000Z",
       "capturedAt": "2026-07-31T03:48:37.422Z",
       "sourceLastSeen": "2026-07-31T03:48:37.422Z",
@@ -889,21 +903,7 @@
         "作成者向け"
       ],
       "importanceScore": 100,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "エージェント ビルダーでエージェントを構築する",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder-build-agents",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge"
-        },
-        {
-          "title": "宣言型エージェントにナレッジ ソースを追加する",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/knowledge-sources",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-f580b36583445092",
@@ -1017,6 +1017,16 @@
       "summaryJa": "ユーザーは、Context IQ メニューから SharePoint リストを検索して選択できるようになり、Copilot Chat を使用する際のプロンプトをしっかりと立てることができます。",
       "summaryEn": "Users will be able to search for and select SharePoint Lists through the Context IQ menu to help ground their prompts when using Copilot Chat.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#september-3,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: list, context"
+        }
+      ],
       "publishedAt": "2026-07-29T12:00:00.000Z",
       "capturedAt": "2026-07-31T03:48:37.422Z",
       "sourceLastSeen": "2026-07-31T03:48:37.422Z",
@@ -1032,17 +1042,7 @@
         "作成者向け"
       ],
       "importanceScore": 86,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#september-3,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: list, context"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため"
     },
     {
       "id": "m365-copilot-release-notes-5862d36fff6223ed",
@@ -1189,6 +1189,16 @@
       "summaryJa": "アダプティブ カードの更新がカスタム エンジン エージェントで機能するようになり、動的なコンテンツの更新が改善されました。",
       "summaryEn": "Adaptive card refresh now works in custom engine agents, improving dynamic content updates.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
+      "relatedDocuments": [
+        {
+          "title": "既知の問題",
+          "sourceTitle": "Known issues",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/known-issues#custom-engine-agents",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: enable, adaptive, card, refresh, custom, engine, agent"
+        }
+      ],
       "publishedAt": "2026-07-29T12:00:00.000Z",
       "capturedAt": "2026-07-31T03:48:37.422Z",
       "sourceLastSeen": "2026-07-31T03:48:37.422Z",
@@ -1202,17 +1212,7 @@
         "作成者向け"
       ],
       "importanceScore": 62,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 作成者の構築判断に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "既知の問題",
-          "sourceTitle": "Known issues",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/known-issues#custom-engine-agents",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-07-29",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: enable, adaptive, card, refresh, custom, engine, agent"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 作成者の構築判断に関わるため"
     }
   ]
 }

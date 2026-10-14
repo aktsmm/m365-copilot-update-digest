@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:09:17.042Z",
   "events": [
     {
       "id": "m365-roadmap-rss-bf4d2a67e28222e9",
@@ -16,6 +16,15 @@
       "summaryJa": "Windows コンソール上の Teams Rooms を使用すると、すぐに使用できる会議室をすぐに予約できるため、スケジュールの競合を回避し、中断のない自発的な会議を確保できます。 Teams Rooms Pro ライセンスが付与されたルームで利用できます。",
       "summaryEn": "With Teams Rooms on Windows consoles, you can quickly book a meeting room for immediate use, helping to avoid scheduling conflicts and ensure uninterrupted spontaneous meetings. Available in Teams Rooms Pro-licensed rooms.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=548648",
+      "relatedDocuments": [
+        {
+          "title": "Teams Rooms (Windows および Android) のホーム画面と管理コントロール",
+          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh#calendar",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=548648",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ad-hoc, room, reservation, room"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-06T06:19:35.454Z",
       "sourceLastSeen": "2026-10-06T06:19:35.454Z",
@@ -39,16 +48,7 @@
         "管理者向け"
       ],
       "importanceScore": 138,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / ライセンス設計や展開判断に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Teams Rooms (Windows および Android) のホーム画面と管理コントロール",
-          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh#calendar",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=548648",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ad-hoc, room, reservation, room"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / ライセンス設計や展開判断に直結するため"
     },
     {
       "id": "m365-roadmap-rss-d4c68540c4ece67f",
@@ -64,6 +64,22 @@
       "summaryJa": "この更新プログラムでは、Microsoft 365 Copilot アプリに共同ブランド エクスペリエンスが導入され、組織が管理者によって承認された視覚的な識別子をチャット画面内に直接表示できるようになります。具体的には、このエクスペリエンスにより、管理者は Microsoft Admin で既に管理されている組織でサポートされているロゴを活用できるようになります。",
       "summaryEn": "This update introduces a co-branding experience in the Microsoft 365 Copilot app that helps organizations present an admin approved visual identifier directly within the Chat screen. Specifically, the experience enables administrators to leverage the organization-supported logo already managed in the Microsoft Admin...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
+      "relatedDocuments": [
+        {
+          "title": "組織の Microsoft 365 テーマをカスタマイズする",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
+          "evidence": "Learn MCP の検索・本文取得で、Microsoft 365 管理センターの組織テーマと組織ロゴの管理方法を確認した。Roadmap にある管理済み組織ロゴを利用するブランドフッターの関連管理資料であり、新しいフッター機能そのものの詳細手順とは区別する。"
+        },
+        {
+          "title": "Microsoft Copilot アプリの概要",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-app-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
+          "evidence": "Learn MCP で取得したアプリ概要の本文が、管理センターでのアプリ設定と組織テーマのカスタマイズ資料を関連情報として案内していることを確認した。"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-06T06:19:35.454Z",
       "sourceLastSeen": "2026-10-06T06:19:35.454Z",
@@ -90,23 +106,7 @@
         "管理者向け"
       ],
       "importanceScore": 130,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "組織の Microsoft 365 テーマをカスタマイズする",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
-          "evidence": "Learn MCP の検索・本文取得で、Microsoft 365 管理センターの組織テーマと組織ロゴの管理方法を確認した。Roadmap にある管理済み組織ロゴを利用するブランドフッターの関連管理資料であり、新しいフッター機能そのものの詳細手順とは区別する。"
-        },
-        {
-          "title": "Microsoft Copilot アプリの概要",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-app-overview",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
-          "evidence": "Learn MCP で取得したアプリ概要の本文が、管理センターでのアプリ設定と組織テーマのカスタマイズ資料を関連情報として案内していることを確認した。"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-c6055444dd72457b",
@@ -122,6 +122,22 @@
       "summaryJa": "データ セキュリティ ポスチャ エージェントを、新しい資格情報スキャン機能で強化します。対象範囲内の場所にある露出した資格情報やデータ セキュリティ上のリスクを検出できます。エージェントにスキャン タスクを割り当て、進行状況を追跡し、優先度の高い検出結果に対応できます。選択したデータの場所がスキャン対象です。",
       "summaryEn": "We're expanding the Data Security Posture Agent with a new credential scanning capability. Discover exposed credentials and data security risks across scoped locations. Assign scanning tasks to the agent, track progress across stages, and take action on prioritized findings. The agent scans selected data locations,...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
+      "relatedDocuments": [
+        {
+          "title": "データ セキュリティ調査での Data Security Posture エージェント (プレビュー) の概要",
+          "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent#create-a-credential-scanning-task",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: credential, scann, data, security, posture, agent"
+        },
+        {
+          "title": "Microsoft Purview のエージェントのSecurity Copilotの概要",
+          "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-agents-overview#data-security-posture-agent",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: credential, scann, data, security, posture, agent"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-06T06:19:35.454Z",
       "sourceLastSeen": "2026-10-06T06:19:35.454Z",
@@ -142,23 +158,7 @@
         "作成者向け"
       ],
       "importanceScore": 117,
-      "importanceReason": "廃止や移行判断に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "データ セキュリティ調査での Data Security Posture エージェント (プレビュー) の概要",
-          "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent#create-a-credential-scanning-task",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: credential, scann, data, security, posture, agent"
-        },
-        {
-          "title": "Microsoft Purview のエージェントのSecurity Copilotの概要",
-          "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-agents-overview#data-security-posture-agent",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: credential, scann, data, security, posture, agent"
-        }
-      ]
+      "importanceReason": "廃止や移行判断に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-4142c6e03eedf599",
@@ -174,6 +174,15 @@
       "summaryJa": "管理者は、サポート チケットを開かずに、コネクタ設定でクエリ文字列とユーザー ID マッピング ルールを直接編集できるようになりました。",
       "summaryEn": "Admins can now edit query string and user identity mapping rules directly in connector settings without opening a support ticket.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+      "relatedDocuments": [
+        {
+          "title": "Map non-Microsoft Entra ID identities",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+          "evidence": "Learn MCP の検索・本文取得で、Copilot コネクタの ID プロパティ、正規表現、マッピング式の設定を確認した。更新された ID マッピング規則の関連設定資料として採用。ja-jp ページも確認したが記事本文は英語のため、英語版を維持した。特定の Veeva コネクタや原文のリリースノートの重複は除外した。"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -189,16 +198,7 @@
         "作成者向け"
       ],
       "importanceScore": 108,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Map non-Microsoft Entra ID identities",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
-          "evidence": "Learn MCP の検索・本文取得で、Copilot コネクタの ID プロパティ、正規表現、マッピング式の設定を確認した。更新された ID マッピング規則の関連設定資料として採用。ja-jp ページも確認したが記事本文は英語のため、英語版を維持した。特定の Veeva コネクタや原文のリリースノートの重複は除外した。"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-ce66c1a86bdf4897",
@@ -214,6 +214,16 @@
       "summaryJa": "Viva Insights は、リーダー、代表者、アナリストが組織がエージェントをどのように採用しているかを理解するための中心となる場所となるように設計されたエージェント ダッシュボードを作成しています。 #copilotcontrolsystem",
       "summaryEn": "Viva Insights is creating an Agent Dashboard, designed to be a central place for leaders, delegates and analysts to understand how your organization is adopting agents. #copilotcontrolsystem",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=506749",
+      "relatedDocuments": [
+        {
+          "title": "Copilot 分析 の概要",
+          "sourceTitle": "Copilot Analytics introduction",
+          "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction#which-tool-should-i-use-when",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=506749",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: analytic, agent, dashboard"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-06T06:19:35.454Z",
       "sourceLastSeen": "2026-10-06T06:19:35.454Z",
@@ -235,17 +245,7 @@
         "作成者向け"
       ],
       "importanceScore": 108,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Copilot 分析 の概要",
-          "sourceTitle": "Copilot Analytics introduction",
-          "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction#which-tool-should-i-use-when",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=506749",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: analytic, agent, dashboard"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-6565bc0c2d0454cd",
@@ -261,6 +261,16 @@
       "summaryJa": "Teams からの着信は、1 日の休憩を待つ必要はありません。インテリジェントな通話委任は AI を活用した通話支援を提供するため、最も重要な会話に集中できます。電話に応答してコンテキストを収集し、発信者に出て対応するかどうかを決定するのに役立ちます。フォローアップのスケジュールを設定することもできます...",
       "summaryEn": "Incoming Teams calls don't wait for a break in your day. Intelligent call delegation provides AI-powered calling assistance so you can focus on the conversations that matter most. It answers calls and gathers context, helping you decide whether to pick up and engage the caller. It can also schedule follow-up...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
+      "relatedDocuments": [
+        {
+          "title": "Teams Calling の機能",
+          "sourceTitle": "Teams Calling features",
+          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system#additional-teams-phone-functionality",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: intelligent, call, delegation"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-06T06:19:35.454Z",
       "sourceLastSeen": "2026-10-06T06:19:35.454Z",
@@ -284,17 +294,7 @@
         "作成者向け"
       ],
       "importanceScore": 106,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Teams Calling の機能",
-          "sourceTitle": "Teams Calling features",
-          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system#additional-teams-phone-functionality",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: intelligent, call, delegation"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-758b8b78bd780a80",
@@ -310,6 +310,16 @@
       "summaryJa": "Microsoft 365 Chat は、会話型 AI のパワーを Microsoft 365 Copilot Search に直接導入し、ユーザーが情報の検索から情報に基づいた行動に簡単に移行できるようにします。検索結果は状況に応じたチャットの基盤となり、フォローアップの質問をすることができます。",
       "summaryEn": "Microsoft 365 Chat brings the power of conversational AI directly into Microsoft 365 Copilot Search, enabling users to move effortlessly from finding information to acting on it. Search results become the foundation for contextual chat, allowing you to ask follow-up questions,...",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Copilot 検索",
+          "sourceTitle": "Microsoft Copilot Search",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: seamles, search, chat, integration"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -327,17 +337,7 @@
         "作成者向け"
       ],
       "importanceScore": 102,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft Copilot 検索",
-          "sourceTitle": "Microsoft Copilot Search",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: seamles, search, chat, integration"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため"
     },
     {
       "id": "m365-copilot-release-notes-8ecc11e6ac94f919",
@@ -353,6 +353,20 @@
       "summaryJa": "Cowork の導入と影響に関するより深い洞察には、Microsoft 365 サービス タブの Copilot ダッシュボードと消費ダッシュボードからアクセスできます。エクスポート機能が含まれています。アナリストは、新しい消費クエリ (クレジット使用状況データ) を使用して、すべての指標をクエリできます。",
       "summaryEn": "Deeper insights into Cowork adoption and impact, accessible from Copilot dashboard and Consumption dashboard in the Microsoft 365 services tab. Includes export capability. All metrics can be queried by analysts with the new Consumption query (credit usage data) and through the...",
       "url": "https://learn.microsoft.com/en-us/viva/insights/org-team-insights/ai-cost-dashboard#cowork-page",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 の顧客向けの Microsoft Copilot ダッシュボードに接続する",
+          "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard#how-automatic-access-to-the-copilot-dashboard-is-determined",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/org-team-insights/ai-cost-dashboard"
+        },
+        {
+          "title": "Viva Insightsのパーティション",
+          "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/partitions",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/org-team-insights/ai-cost-dashboard"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -368,21 +382,7 @@
         "管理者向け"
       ],
       "importanceScore": 88,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 導入状況の可視化や分析に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 の顧客向けの Microsoft Copilot ダッシュボードに接続する",
-          "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard#how-automatic-access-to-the-copilot-dashboard-is-determined",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/org-team-insights/ai-cost-dashboard"
-        },
-        {
-          "title": "Viva Insightsのパーティション",
-          "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/partitions",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/org-team-insights/ai-cost-dashboard"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 導入状況の可視化や分析に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-cd6b3f46313a76e5",
@@ -516,6 +516,16 @@
       "summaryJa": "新しいレポートは、SharePoint Advanced Management 管理者に、特別な SharePoint グループ (全員と外部ユーザーを除く全員) に付与されたアクセス許可の完全な項目レベルの詳細を提供します。",
       "summaryEn": "The new report provides SharePoint Advanced Management admins complete item-level details of permissions granted to special SharePoint groups: Everyone and Everyone except external users.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+      "relatedDocuments": [
+        {
+          "title": "SharePoint 高度な管理を使用して Microsoft Copilot とエージェントに備える",
+          "sourceTitle": "Get ready for Microsoft Copilot and agents with SharePoint Advanced Management",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/get-ready-copilot-sharepoint-advanced-management#step-3-prevent-accidental-oversharing",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: admin, center, detail, report, everyone, except, external, permission"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -531,17 +541,7 @@
         "管理者向け"
       ],
       "importanceScore": 80,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "SharePoint 高度な管理を使用して Microsoft Copilot とエージェントに備える",
-          "sourceTitle": "Get ready for Microsoft Copilot and agents with SharePoint Advanced Management",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/get-ready-copilot-sharepoint-advanced-management#step-3-prevent-accidental-oversharing",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: admin, center, detail, report, everyone, except, external, permission"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-f3bf99d3807e637a",
@@ -557,6 +557,16 @@
       "summaryJa": "権限を詳細なレベルで監査する",
       "summaryEn": "Audit permissions at a granular level",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+      "relatedDocuments": [
+        {
+          "title": "管理者向けの Microsoft Copilot レポート オプション",
+          "sourceTitle": "Microsoft Copilot reporting options for admins",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins#microsoft-purview-audit-logs",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: audit, permission, granular, level"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -570,17 +580,7 @@
         "管理者向け"
       ],
       "importanceScore": 80,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "管理者向けの Microsoft Copilot レポート オプション",
-          "sourceTitle": "Microsoft Copilot reporting options for admins",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins#microsoft-purview-audit-logs",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: audit, permission, granular, level"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-70fb07d47fb70019",
@@ -596,20 +596,6 @@
       "summaryJa": "セキュリティコンプライアンスの強化\nこれを試してください:\n\nSharePoint 管理センターを開き、[詳細管理] > [すべての機能] > [データ アクセス ガバナンス レポート] に移動します。\n新しいレポート「特別な SharePoint グループを介して共有されたサイトとファイル」を選択し、関連するレポートをトリガーします。...",
       "summaryEn": "Enhance security compliance\nTry this:\n\nOpen the SharePoint Admin Center and navigate to Advanced Management > All features > Data access governance reports.\nSelect the new report 'Sites and files shared via special SharePoint group' and trigger the relevant report.\nExport the...",
       "url": "https://learn.microsoft.com/en-us/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report",
-      "publishedAt": "2026-10-06T12:00:00.000Z",
-      "capturedAt": "2026-10-07T05:58:26.591Z",
-      "sourceLastSeen": "2026-10-07T05:58:26.591Z",
-      "roadmapIds": [],
-      "releaseStage": "Update",
-      "roleTags": [
-        "管理者向け"
-      ],
-      "tags": [
-        "Microsoft 365 SharePoint",
-        "管理者向け"
-      ],
-      "importanceScore": 80,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
       "relatedDocuments": [
         {
           "title": "SharePoint サイトと OneDrive サイトのデータ アクセス ガバナンス レポート",
@@ -623,7 +609,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report"
         }
-      ]
+      ],
+      "publishedAt": "2026-10-06T12:00:00.000Z",
+      "capturedAt": "2026-10-07T05:58:26.591Z",
+      "sourceLastSeen": "2026-10-07T05:58:26.591Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "管理者向け"
+      ],
+      "tags": [
+        "Microsoft 365 SharePoint",
+        "管理者向け"
+      ],
+      "importanceScore": 80,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-ea7d8af7c937301d",
@@ -639,6 +639,16 @@
       "summaryJa": "反復的なタスクや特殊なタスクを自動化します。",
       "summaryEn": "Automate repetitive or specialized tasks.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#june-24,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: automate, repetitive, specializ, task"
+        }
+      ],
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -654,17 +664,7 @@
         "作成者向け"
       ],
       "importanceScore": 76,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#june-24,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: automate, repetitive, specializ, task"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-9f10a2cdc230b520",

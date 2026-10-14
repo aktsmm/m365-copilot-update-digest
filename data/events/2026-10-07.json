@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:09:17.042Z",
   "events": [
     {
       "id": "m365-roadmap-rss-c574c04a860d743a",
@@ -16,6 +16,16 @@
       "summaryJa": "SharePoint および OneDrive の自動ラベル付けの最大容量を、テナントあたり 1 日あたり 100,000 ファイルから最大 500,000 ファイルに増加します。これにより、組織はより多くの保存データをより迅速にラベル付けして保護し、既存のコンテンツ間のラベル付けのギャップを埋めることができます。機密ラベルと保護設定を適用すると...",
       "summaryEn": "We are increasing the maximum auto-labeling capacity for SharePoint and OneDrive from 100,000 up to 500,000 files per tenant per day. This helps organizations label and protect more of their data at rest, faster, closing labeling gaps across existing content. With sensitivity labels and protection settings applied...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=567890",
+      "relatedDocuments": [
+        {
+          "title": "SharePoint および OneDrive でファイルの秘密度ラベルを有効にする",
+          "sourceTitle": "Enable sensitivity labels for files in SharePoint and OneDrive",
+          "url": "https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-sharepoint-onedrive-files#supported-file-types",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=567890",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: information, protection, auto-label, scale, increase, sharepoint, onedrive"
+        }
+      ],
       "publishedAt": "2026-10-07T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -34,17 +44,7 @@
         "管理者向け"
       ],
       "importanceScore": 140,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / コスト配分や予算管理の見直しに直結するため",
-      "relatedDocuments": [
-        {
-          "title": "SharePoint および OneDrive でファイルの秘密度ラベルを有効にする",
-          "sourceTitle": "Enable sensitivity labels for files in SharePoint and OneDrive",
-          "url": "https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-sharepoint-onedrive-files#supported-file-types",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=567890",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: information, protection, auto-label, scale, increase, sharepoint, onedrive"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / コスト配分や予算管理の見直しに直結するため"
     },
     {
       "id": "m365-roadmap-rss-9bdc63bf00bc1b3a",
@@ -60,6 +60,16 @@
       "summaryJa": "Microsoft 365 Copilot アプリ (iOS) の Copilot ノートブックを使用すると、ユーザーは関連するチャット、出力作成、参照を永続的な AI ワークスペースに整理できるようになりました。 Copilot はノートブックに蓄積されたコンテキストを使用して応答をグラウンディングするため、作業は毎回最初からやり直すのではなく、セッションをまたいで継続されます。",
       "summaryEn": "Copilot Notebooks in the Microsoft 365 Copilot app (iOS) now lets users organize related chats, output creations, and references into a persistent AI workspace. Copilot uses the Notebook's accumulated context to ground responses, so work continues across sessions instead of starting over each time.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=566318",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#september-23,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=566318",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: notebook, design, io"
+        }
+      ],
       "publishedAt": "2026-10-07T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -81,17 +91,7 @@
         "作成者向け"
       ],
       "importanceScore": 134,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot のリリース ノート",
-          "sourceTitle": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#september-23,-2026",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=566318",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: notebook, design, io"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-7a5fdd212ced582c",
@@ -107,6 +107,16 @@
       "summaryJa": "追加の OneDrive ストレージ用の新しい従量課金制の消費量ベースのメーター。どの OneDrive アカウントがライセンスされたストレージ制限を超えて拡張できるかを制御し、選択したユーザーに必要に応じて追加のスペースを提供します。",
       "summaryEn": "New pay-as-you-go, consumption-based meter for additional OneDrive storage. Control which OneDrive accounts can grow beyond their licensed storage limits and give selected users more space as needed.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=562352",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 サブスクリプションに OneDrive と SharePoint のストレージを追加する",
+          "sourceTitle": "Add more OneDrive and SharePoint storage to your Microsoft 365 subscription",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space#add-microsoft-365-onedrive-storage",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=562352",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: pay-as-you-go, storage, onedrive"
+        }
+      ],
       "publishedAt": "2026-10-07T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -126,17 +136,7 @@
         "管理者向け"
       ],
       "importanceScore": 130,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / コスト配分や予算管理の見直しに直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 サブスクリプションに OneDrive と SharePoint のストレージを追加する",
-          "sourceTitle": "Add more OneDrive and SharePoint storage to your Microsoft 365 subscription",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space#add-microsoft-365-onedrive-storage",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=562352",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: pay-as-you-go, storage, onedrive"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / コスト配分や予算管理の見直しに直結するため"
     },
     {
       "id": "m365-roadmap-rss-abf2b52af357bba7",
@@ -190,6 +190,16 @@
       "summaryJa": "Planner Agent の AI を活用したステータス レポートは、計画データを数分で洗練された関係者向けの更新に変換します。 Planner Agent にステータス レポートを依頼するだけで、タスク データが取得され、全体的なステータス、進捗状況、リスク、および次のことをカバーする明確な説明に変換されます。簡単にカスタマイズできます...",
       "summaryEn": "AI-powered Status Report in Planner Agent turns your plan data into a polished, stakeholder-ready update in minutes. Just ask Planner Agent for a status report and it pulls your task data and transforms it into a clear narrative covering overall status, progress, risks, and what's next. You can easily customize the...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=567886",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=567886",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ai-generat, statu, report, planner, agent"
+        }
+      ],
       "publishedAt": "2026-10-07T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -210,17 +220,7 @@
         "作成者向け"
       ],
       "importanceScore": 110,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / ライセンス設計や展開判断に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot のリリース ノート",
-          "sourceTitle": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=567886",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ai-generat, statu, report, planner, agent"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / ライセンス設計や展開判断に直結するため"
     },
     {
       "id": "m365-roadmap-rss-d3b79a5d2590026f",
@@ -282,6 +282,16 @@
       "summaryJa": "フォームを使用した構造化ドキュメントの生成により、組織は、SharePoint に組み込まれたガバナンスとコンプライアンスを使用して、大規模な標準化されたドキュメントを作成、管理、生成できます。ビジネス プロセスの所有者は、契約書、同意書、提案書、人事などのフォームベースのテンプレートを一元的に構築および維持できます。",
       "summaryEn": "Structured Document Generation with Forms enables organizations to create, manage, and generate standardized documents at scale with built-in governance and compliance in SharePoint. Business process owners can centrally build and maintain form-driven templates -- such as contracts, agreements, proposals, and HR...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=545896",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Copilot チューニングの概要 (早期アクセス プレビュー)",
+          "sourceTitle": "Microsoft Copilot Tuning overview (early access preview)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-tuning-overview#supported-scenarios",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=545896",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: structur, document, generation, form"
+        }
+      ],
       "publishedAt": "2026-10-07T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -303,17 +313,7 @@
         "管理者向け"
       ],
       "importanceScore": 107,
-      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft Copilot チューニングの概要 (早期アクセス プレビュー)",
-          "sourceTitle": "Microsoft Copilot Tuning overview (early access preview)",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-tuning-overview#supported-scenarios",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=545896",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: structur, document, generation, form"
-        }
-      ]
+      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため"
     },
     {
       "id": "m365-roadmap-rss-2bef57ffd303c634",
@@ -329,6 +329,16 @@
       "summaryJa": "ユーザーは手動でテキストを選択し、Copilot に関連情報の提供を依頼できます。",
       "summaryEn": "Users can manually select text and ask Copilot to help provide relevant information.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=508524",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=508524",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: user-initiat, insight, classic, outlook"
+        }
+      ],
       "publishedAt": "2026-10-07T12:00:00.000Z",
       "capturedAt": "2026-10-07T05:58:26.591Z",
       "sourceLastSeen": "2026-10-07T05:58:26.591Z",
@@ -350,17 +360,7 @@
         "作成者向け"
       ],
       "importanceScore": 99,
-      "importanceReason": "管理やガバナンスへの影響が大きいため / 会議やコミュニケーションの業務導線に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot のリリース ノート",
-          "sourceTitle": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=508524",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: user-initiat, insight, classic, outlook"
-        }
-      ]
+      "importanceReason": "管理やガバナンスへの影響が大きいため / 会議やコミュニケーションの業務導線に直結するため"
     }
   ]
 }
