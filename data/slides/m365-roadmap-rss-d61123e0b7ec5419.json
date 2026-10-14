@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d61123e0b7ec5419",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Teams の会議の要約ページで、会議の生成コンテンツを削除可能に",
+        "subtitleJa": "録画・文字起こし・AI 要約・ノートを、要約ページの削除ボタンから消せます",
+        "en": "Microsoft Teams: Delete meeting generated content in recap"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["m365-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議の開催者**と、会議データを管理する管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+        "change": { "text": "要約ページの削除ボタンで、録画・文字起こし・AI 要約・ノートをまとめて削除できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "開催者が必要に応じて削除する。管理者は PowerShell でも AI アーカイブを削除できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議の開催者が、**要約ページの削除ボタン**から会議の生成コンテンツ（録画・文字起こし・AI 要約・ノート）を削除できます。会議で共有されたファイルは削除されません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "要約ページの削除ボタンで、録画・文字起こし・AI 要約・ノートを削除", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "会議で共有されたファイルは削除されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "開催者が要約の「…」メニューから「Recap content の削除」を選ぶと、AI アーカイブも削除される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議の開催者が、Teams デスクトップの会議の要約ページで削除する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "要約ページを開き、「…」メニューから「Recap content の削除」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "トランスクリプトや記録が削除・期限切れになっても、AI アーカイブは自動では削除されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "AI アーカイブはプレビュー段階で、Teams TAP プログラムの組織のみが利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭の注意", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は Remove-AIGeneratedKnowledge（ThreadId 必須）で AI アーカイブを削除できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "会議の記録・文字起こしは、会議記録保持ポリシーに従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/privacy/intelligent-recap", "locator": "インテリジェントな要約を提供するために使用されるコンテンツと保存場所", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "機密性の高い会議の後に、不要な生成コンテンツをすぐ消したいとき", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "AI 生成ノートは参加者のメールボックスの Exchange フォルダーに格納される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/privacy/intelligent-recap", "locator": "インテリジェントな要約を提供するために使用されるコンテンツと保存場所", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "recap", "term": "会議の要約", "type": "feature", "oneLine": { "text": "Teams 予定表・会議チャット・要約アプリに表示される、AI を活用した会議の概要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/privacy/intelligent-recap", "locator": "冒頭", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "ai-archive", "term": "AI アーカイブ", "type": "feature", "oneLine": { "text": "会議の議論とメタデータから重要な知識を凝縮した、AI 生成の成果物。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "transcript", "term": "文字起こし", "type": "term", "oneLine": { "text": "会議の発言を記録したもので、開催者の Exchange Online アカウントなどに格納される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/privacy/intelligent-recap", "locator": "インテリジェントな要約を提供するために使用されるコンテンツと保存場所", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=557170",
+        "learn": [
+          { "title": "Microsoft Teams会議のための AI アーカイブ", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locale": "ja-jp" },
+          { "title": "Teams Premiumのインテリジェントな要約のためのデータ、プライバシー、およびセキュリティ", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/privacy/intelligent-recap", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
