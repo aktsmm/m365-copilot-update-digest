@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ffe75b13e77bca5b",
+      "kind": "retirement",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "モバイルアプリの検索タブでの Copilot 利用、ロードマップから削除",
+        "subtitleJa": "計画の内容が実情に合わなくなったための削除",
+        "en": "Microsoft 365: Use Copilot in your search tab in the Microsoft 365 Copilot mobile app"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft 365"],
+        "categories": ["other"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft 365 Copilot モバイルアプリ（Android / iOS）の利用者**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索タブでの Copilot 利用の計画がロードマップから外れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "既存機能の廃止ではなく計画項目の削除のため、対応は不要", "origin": "mrc", "assertion": "inference", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ロードマップ項目は「内容が実情に合わなくなった」として削除されます。ファイル検索と Copilot による理解支援を想定した項目でした", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象はモバイルアプリの検索タブで Copilot を使う計画の項目", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上で「内容が実情に合わなくなった」ため削除", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "想定していた内容はファイル検索と Copilot による理解支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "代替・移行先",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot 検索は Copilot アプリの検索タブとして、デスクトップ・Web・モバイルから利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-14T20:50:00Z" }] },
+            { "text": "対象の Copilot ライセンスがあれば追加料金なし。管理者の設定は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-14T20:50:00Z" }] },
+            { "text": "検索結果の上部に Copilot の回答が表示され、チャットへ続けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "回答の種類", "retrievedAt": "2026-10-14T20:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "このロードマップ項目を前提にした展開・案内があれば見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "利用者には、現在の検索タブの提供内容を前提に案内する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "product", "oneLine": { "text": "Microsoft 365 の開発中・提供中の機能を公開しているページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-search", "term": "Microsoft Copilot 検索", "type": "feature", "oneLine": { "text": "organization 向けに最適化された AI 搭載のユニバーサル検索エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "冒頭", "retrievedAt": "2026-10-14T20:50:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "タスクの実行やより深い対話のためのワークスペースとなる、Copilot のチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Copilot 検索と Microsoft Copilot のしくみ", "retrievedAt": "2026-10-14T20:50:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "提供や計画が終了することを示すステージ表示。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=485731",
+        "learn": [
+          { "title": "Microsoft Copilot 検索", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search#access-and-eligibility", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot 検索 に関してよく寄せられる質問", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
