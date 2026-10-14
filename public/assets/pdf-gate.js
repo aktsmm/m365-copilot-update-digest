@@ -117,6 +117,11 @@
         const pages = await merged.copyPages(source, source.getPageIndices());
         pages.forEach((page) => merged.addPage(page));
       }
+      const endResponse = await fetch(new URL("pdf/end.pdf", root));
+      if (endResponse.ok) {
+        const end = await PDFLib.PDFDocument.load(await endResponse.arrayBuffer());
+        (await merged.copyPages(end, end.getPageIndices())).forEach((page) => merged.addPage(page));
+      }
       const blob = new Blob([await merged.save()], { type: "application/pdf" });
       const anchor = document.createElement("a");
       anchor.href = URL.createObjectURL(blob);
