@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2c2b125dc847a06b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Chat が Word・PowerPoint 内の画像テキストも検索対象に",
+        "subtitleJa": "埋め込み画像の中の文字からも、作業中のファイルを見つけやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat can now better match search results from text that appears inside images embedded in Word and PowerPoint files"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Chat で Word・PowerPoint のファイルを探すユーザー**と、管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "画像内の文字（スキャンした契約書、表、画像内テキスト）も検索で一致しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上の開発中の項目で、現時点で必要な対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word・PowerPoint に埋め込まれた**画像内のテキストも検索結果の照合に使われ**、探しにくかった内容を見つけやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Copilot Chat での、Word と PowerPoint のファイル検索", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Web、クラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スキャンした契約書、表、画像内のテキストが一致の対象になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は開発中で、内容は今後変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot 検索は検索ボックス型、Copilot Chat は会話型で、役割が異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "Microsoft Copilot 検索 と Microsoft Copilot Chat の違い", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot 検索は対象ライセンスがあれば追加料金なしで使え、管理者の設定は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "自然言語での検索にも対応しており、内容を文章で指定して探せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "自然言語検索", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "会話形式で、より深い回答の生成やコンテンツ作成、タスク完了を行う機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "Microsoft Copilot 検索 と Microsoft Copilot Chat の違い", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "copilot-search", "term": "Copilot 検索", "type": "feature", "oneLine": { "text": "組織向けに最適化された、AI 搭載のユニバーサル検索エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "冒頭", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "natural-language", "term": "自然言語検索", "type": "term", "oneLine": { "text": "日常の言葉で質問や要求を入力し、意図に沿った結果を得る検索方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "自然言語検索", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570469",
+        "learn": [
+          { "title": "Microsoft Copilot 検索", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
