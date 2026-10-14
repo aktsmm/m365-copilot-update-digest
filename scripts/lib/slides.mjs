@@ -1,8 +1,14 @@
-import crypto from "node:crypto";
 import fs from "node:fs";
+import path from "node:path";
 import { Ajv2020 } from "ajv/dist/2020.js";
 
-export const SLIDE_SCHEMA_VERSION = 1;
+export const SLIDES_DIR = "data/slides";
+
+/** 利用者に見せる文言に混ぜない、社内メモ的な表現。 */
+export const FORBIDDEN_PHRASES = ["未確認", "記載なし", "要確認", "推定", "未発表", "判定保留", "AI 生成", "AI生成", "データ時点", "（原文）", "（Learn）", "初心者向け"];
+
+/** 根拠・参照 URL に許可するホスト。 */
+export const ALLOWED_HOSTS = new Set(["learn.microsoft.com", "www.microsoft.com", "techcommunity.microsoft.com", "azure.microsoft.com", "support.microsoft.com", "devblogs.microsoft.com"]);
 
 const KIND_BY_STAGE = {
   GA: "ga",
@@ -32,8 +38,18 @@ export const KIND_LABEL_EN = {
   update: "Update",
 };
 
-const KIND_ORDER = ["preview", "ga", "rolling-out", "in-development", "retirement", "update"];
+export const KIND_ORDER = ["preview", "ga", "rolling-out", "in-development", "retirement", "update"];
 export const KIND_IDS = KIND_ORDER;
+
+/** 種類ごとの標準パネル（表示順）。 */
+export const PANEL_TEMPLATE = {
+  ga: { core: ["how-it-works", "how-to-start"], detail: ["prerequisites-limits", "related-features", "use-case"] },
+  "rolling-out": { core: ["how-it-works", "how-to-start"], detail: ["prerequisites-limits", "rollout-scope", "use-case"] },
+  preview: { core: ["scope", "constraints"], detail: ["evaluate"] },
+  "in-development": { core: ["scope", "constraints"], detail: ["prepare"] },
+  retirement: { core: ["impact", "migration"], detail: ["action-plan"] },
+  update: { core: ["scope"], detail: ["impact-check"] },
+};
 
 const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 
@@ -64,74 +80,25 @@ export function stableStringify(value) {
   return JSON.stringify(sort(value));
 }
 
-/** 公開対象: 直近 months か月で、指定した重要度以上の更新。 */
+/** 種類、新しい順、キーの順。 */
+export function orderSlides(items, get = (item) => item) {
+  return [...items].sort((a, b) => {
+    const x = get(a);
+    const y = get(b);
+    return (
+      KIND_ORDER.indexOf(x.kind) - KIND_ORDER.indexOf(y.kind) ||
+      y.publishedJst.localeCompare(x.publishedJst) ||
+      x.key.localeCompare(y.key)
+    );
+  });
+}
+
+/** スライドを作る対象: 直近 months か月で、指定した重要度以上の更新（新しい順）。 */
 export function selectSlideEvents(events, { now = new Date(), months = 3, levels = ["high", "notable"] } = {}) {
   const since = retentionStart(now, months);
   return events
     .filter((event) => levels.includes(event.importanceLevel) && (jstDate(event.publishedAt) ?? "") >= since)
-    .sort(compareSlideEvents);
-}
-
-function compareSlideEvents(left, right) {
-  const kind = KIND_ORDER.indexOf(slideKind(left)) - KIND_ORDER.indexOf(slideKind(right));
-  if (kind !== 0) return kind;
-  const date = (jstDate(right.publishedAt) ?? "").localeCompare(jstDate(left.publishedAt) ?? "");
-  return date !== 0 ? date : left.id.localeCompare(right.id);
-}
-
-export function buildSlide(event, categoryConfig) {
-  const kind = slideKind(event);
-  const labelOf = new Map(categoryConfig.categories.map((category) => [category.id, category.label]));
-  const related = (event.relatedDocuments || [])
-    .filter((document) => typeof document.url === "string" && document.url.startsWith("https://"))
-    .slice(0, 3)
-    .map((document) => ({ title: document.title, url: document.url }));
-  const summaryJa = event.summaryJa || event.summary || "";
-
-  const slide = {
-    schemaVersion: SLIDE_SCHEMA_VERSION,
-    key: event.id,
-    kind,
-    label: KIND_LABEL[kind],
-    title: {
-      ja: event.titleJa || event.title,
-      ...(event.titleEn || event.title ? { en: event.titleEn || event.title } : {}),
-    },
-    ...(summaryJa ? { summaryJa: summaryJa.length > 900 ? `${summaryJa.slice(0, 897)}...` : summaryJa } : {}),
-    ...(event.audienceJa ? { audienceJa: event.audienceJa } : {}),
-    ...(event.actionJa ? { actionJa: event.actionJa } : {}),
-    meta: {
-      publishedJst: jstDate(event.publishedAt),
-      ...(event.releaseStage ? { stage: event.releaseStage } : {}),
-      productArea: event.productArea,
-      sourceName: event.sourceName,
-      categories: event.categories,
-      ...(event.roleTags?.length ? { roleTags: event.roleTags } : {}),
-      ...(event.roadmapIds?.length ? { roadmapIds: event.roadmapIds } : {}),
-      importance: {
-        level: event.importanceLevel,
-        score: event.importanceScore,
-        ...(event.importanceReason ? { reasonJa: event.importanceReason } : {}),
-      },
-    },
-    references: { source: event.url, ...(related.length ? { related } : {}) },
-  };
-  slide.inputFingerprint = crypto
-    .createHash("sha256")
-    .update(stableStringify({ slide, categoryLabels: [...labelOf.entries()] }))
-    .digest("hex");
-  return slide;
-}
-
-export function renderedTexts(slide) {
-  return [
-    slide.label,
-    slide.title.ja,
-    slide.title.en ?? "",
-    slide.summaryJa ?? "",
-    slide.meta.importance.reasonJa ?? "",
-    ...(slide.references.related ?? []).map((document) => document.title),
-  ];
+    .sort((a, b) => (jstDate(b.publishedAt) ?? "").localeCompare(jstDate(a.publishedAt) ?? "") || a.id.localeCompare(b.id));
 }
 
 let compiled = null;
@@ -143,12 +110,85 @@ function validator() {
   return compiled;
 }
 
-/** スキーマを検査し、問題の一覧を返す（空なら有効）。本文は公開ソースの翻訳なので語句では弾かない。 */
-export function validateSlide(slide) {
-  const check = validator();
-  const problems = [];
-  if (!check(slide)) {
-    for (const error of check.errors ?? []) problems.push(`${error.instancePath || "/"} ${error.message}`);
+/** スライドに出る文（すべて）。 */
+export function renderedTexts(slide) {
+  const out = [slide.title?.ja ?? "", slide.title?.subtitleJa ?? "", slide.audience?.who?.text ?? "", slide.audience?.change?.text ?? "", slide.action?.summary?.text ?? ""];
+  if (slide.beforeAfter?.before) out.push(slide.beforeAfter.before.text);
+  if (slide.beforeAfter?.after) out.push(slide.beforeAfter.after.text);
+  for (const panel of slide.panels ?? []) {
+    out.push(panel.heading ?? "");
+    if (panel.availability === "present") for (const item of panel.items ?? []) out.push(item.text);
   }
+  for (const entry of slide.glossary ?? []) out.push(entry.term ?? "", entry.oneLine?.text ?? "");
+  for (const entry of slide.timeline ?? []) out.push(entry.label ?? "");
+  return out;
+}
+
+function claimsOf(slide) {
+  const claims = [slide.audience?.who, slide.audience?.change, slide.action?.summary, slide.beforeAfter?.before, slide.beforeAfter?.after].filter(Boolean);
+  for (const panel of slide.panels ?? []) for (const item of panel.items ?? []) claims.push(item);
+  for (const entry of slide.glossary ?? []) if (entry.oneLine) claims.push(entry.oneLine);
+  return claims;
+}
+
+/** スキーマでは表せない検査もまとめて行い、問題の一覧（{slide, message}）を返す。空なら有効。 */
+export function validateDeck(deck) {
+  const problems = [];
+  const check = validator();
+  if (!check(deck)) {
+    for (const error of check.errors ?? []) problems.push({ slide: "(deck)", message: `${error.instancePath || "/"} ${error.message ?? ""} ${JSON.stringify(error.params)}`.trim() });
+  }
+  for (const slide of deck?.slides ?? []) {
+    const key = String(slide.key ?? "?");
+    for (const text of renderedTexts(slide)) {
+      for (const word of FORBIDDEN_PHRASES) if (text.includes(word)) problems.push({ slide: key, message: `forbidden phrase "${word}" in: ${text.slice(0, 60)}` });
+    }
+    const urls = [slide.references?.announcement, ...(slide.references?.learn ?? []).map((link) => link.url)];
+    for (const claim of claimsOf(slide)) for (const evidence of claim.evidence ?? []) urls.push(evidence.url);
+    for (const url of urls.filter(Boolean)) {
+      try {
+        const host = new URL(url).hostname;
+        if (!ALLOWED_HOSTS.has(host)) problems.push({ slide: key, message: `evidence/reference host not allowed: ${host}` });
+      } catch {
+        problems.push({ slide: key, message: `invalid url: ${url}` });
+      }
+    }
+    for (const claim of claimsOf(slide)) {
+      if (claim.assertion === "recommendation" && claim.verification === "verified") problems.push({ slide: key, message: `a recommendation cannot be "verified": ${claim.text.slice(0, 40)}` });
+    }
+    if (slide.panels && !slide.panels.some((panel) => panel.priority === "core" && panel.availability === "present")) problems.push({ slide: key, message: "no core panel is present" });
+    const seen = new Set();
+    for (const link of slide.references?.learn ?? []) {
+      if (seen.has(link.url)) problems.push({ slide: key, message: `duplicate learn link: ${link.url}` });
+      seen.add(link.url);
+      if ((link.locale === "ja-jp") !== link.url.includes("/ja-jp/")) problems.push({ slide: key, message: `learn link locale does not match URL: ${link.url}` });
+    }
+  }
+  const keys = (deck?.slides ?? []).map((slide) => slide.key);
+  if (new Set(keys).size !== keys.length) problems.push({ slide: "(deck)", message: "duplicate slide keys" });
   return problems;
+}
+
+/** data/slides/{key}.json を読み、検証結果を付けて返す。ファイルは 1 スライドだけを持つ。 */
+export function loadSlides(root = process.cwd()) {
+  const dir = path.join(root, SLIDES_DIR);
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((name) => name.endsWith(".json"))
+    .sort()
+    .map((name) => {
+      const file = path.join(dir, name);
+      const expected = name.slice(0, -5);
+      let deck;
+      try {
+        deck = JSON.parse(fs.readFileSync(file, "utf8"));
+      } catch (error) {
+        return { key: expected, file, slide: null, problems: [{ slide: "(file)", message: `invalid JSON: ${error.message}` }] };
+      }
+      const problems = validateDeck(deck);
+      const keys = (deck.slides ?? []).map((slide) => slide.key);
+      if (keys.length !== 1 || keys[0] !== expected) problems.push({ slide: "(file)", message: `file ${name} must hold exactly slide ${expected}, found [${keys.join(",")}]` });
+      return { key: expected, file, slide: deck.slides?.[0] ?? null, problems };
+    });
 }

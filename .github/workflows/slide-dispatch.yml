@@ -1,0 +1,61 @@
+name: Dispatch slide generation
+
+# 月・木 03:00 JST（= 日・水 18:00 UTC）: 直近 3 か月の重要・注目の更新のうち、まだスライドがないものを
+# 新しい順に最大 30 件、slide ワークフロー（gh-aw）へ 1 件ずつ起動する。作成済みはスキップされるので、実行のたびに過去へ進む。
+on:
+  schedule:
+    - cron: "0 18 * * 0,3"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum number of updates"
+        required: false
+        default: "30"
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+  pull-requests: read
+
+concurrency:
+  group: slide-dispatch
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Dispatch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LIMIT: ${{ inputs.limit || '30' }}
+        run: |
+          case "$LIMIT" in ''|*[!0-9]*) echo "invalid limit"; exit 1;; esac
+          [ "$LIMIT" -gt 30 ] && LIMIT=30
+          open=$(gh pr list --state open --limit 200 --json title -q '.[].title' | grep '^\[slides\]' || true)
+          started=0
+          for id in $(npm run -s pending-slides -- --limit 100 2>/dev/null); do
+            [ "$started" -ge "$LIMIT" ] && break
+            if echo "$open" | grep -q "$id"; then echo "skip $id: open PR"; continue; fi
+            echo "dispatch $id"
+            gh workflow run slide.lock.yml -f id="$id"
+            started=$((started + 1))
+            sleep 60
+          done
+          echo "started $started"
+      - name: Trigger auto-merge after the last agent run has had time to finish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 900
+          gh workflow run auto-merge-slides.yml

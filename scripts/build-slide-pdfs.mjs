@@ -1,12 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright-core";
-import { loadCategoryConfig } from "./lib/classify.mjs";
 import { createGate, encryptBuffer } from "./lib/pdf-crypto.mjs";
-import { documentHtml, slideHtml } from "./lib/slide-html.mjs";
-import { stableStringify, validateSlide } from "./lib/slides.mjs";
+import { documentHtml, fitSlide } from "./lib/slide-html.mjs";
+import { orderSlides, stableStringify, validateDeck } from "./lib/slides.mjs";
 
-// site/slides/<key>.json を 1 更新 1 ページの PDF にし、PDF_PASSWORD で暗号化して site/pdf/<key>.pdf.enc に出力する。
+// site/slides/<key>.json を 1 更新 1〜2 ページの PDF にし、PDF_PASSWORD で暗号化して site/pdf/<key>.pdf.enc に出力する。
 // PDF_PASSWORD が無いときは PDF を公開しない（スライド JSON と API はそのまま公開される）。
 const siteDir = path.resolve(process.env.SITE_DIR ?? "site");
 const slidesDir = path.join(siteDir, "slides");
@@ -28,19 +27,19 @@ function findChrome() {
 }
 
 const files = fs.existsSync(slidesDir) ? fs.readdirSync(slidesDir).filter((name) => name.endsWith(".json")).sort() : [];
+const decks = files.map((file) => ({ file, deck: JSON.parse(fs.readFileSync(path.join(slidesDir, file), "utf8")) }));
 // 最新の 1 件は、パスワードなしで試せる無料サンプルとして暗号化せずに公開する
-const newestKey = files
-  .map((file) => JSON.parse(fs.readFileSync(path.join(slidesDir, file), "utf8")))
+const newestKey = decks
+  .map(({ deck }) => deck.slides[0])
   .sort((a, b) => b.meta.publishedJst.localeCompare(a.meta.publishedJst) || a.key.localeCompare(b.key))[0]?.key;
 const entries = [];
 let gate = null;
 
-if (files.length > 0 && !password) {
+if (decks.length > 0 && !password) {
   console.warn("::warning::PDF_PASSWORD is not set; slide PDFs are not published");
-} else if (files.length > 0) {
+} else if (decks.length > 0) {
   const executablePath = findChrome();
   if (!executablePath) throw new Error("no Chrome/Chromium found; set CHROME_PATH");
-  const categoryConfig = loadCategoryConfig();
   const created = createGate(password);
   gate = created.gate;
   fs.mkdirSync(pdfDir, { recursive: true });
@@ -48,38 +47,34 @@ if (files.length > 0 && !password) {
   const browser = await chromium.launch({ executablePath, args: ["--no-sandbox"] });
   try {
     const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
-    // まとめ PDF の表紙（暗号化なし）。データ時点は取得時刻の JST 日付。
+    const render = async (html) => {
+      await page.setContent(documentHtml(html));
+      await page.evaluate(() => document.fonts.ready);
+      return page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true });
+    };
+    // まとめ PDF の表紙と終了ページ（暗号化なし）
     const generated = new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10);
-    await page.setContent(
-      documentHtml(`<section class="page" style="justify-content:center;padding:0 96px;background:linear-gradient(120deg,#fff 0 55%,#eaf3fc 55%)">
-  <div style="font-size:22px;font-weight:600;color:#0078d4;letter-spacing:.06em;margin-bottom:12px">非公式ダイジェスト</div>
-  <div style="font-size:64px;font-weight:700;color:#243a5e;line-height:1.2;margin-bottom:28px">M365 Copilot<br>Update Digest</div>
-  <div style="font-size:26px;color:#0078d4;font-weight:600">${generated} 時点（重要・注目の更新）</div>
-  <div style="font-size:15px;color:#6b778a;margin-top:48px;line-height:1.7">Copyright (c) 2026 yamapan (@aktsmm) / CC BY-NC-SA 4.0<br>出典: Microsoft Learn・Tech Community・Microsoft 365 Roadmap。原文は Microsoft に帰属します。<br>日本語の題名・要約には機械翻訳や AI 生成が含まれます。必ず原文をご確認ください。</div>
-</section>`),
+    fs.writeFileSync(
+      path.join(pdfDir, "cover.pdf"),
+      await render([
+        `<section class="page cover"><div class="cv-bar"></div><div class="cv-body"><div class="cv-eyebrow">Microsoft 365 Copilot</div><h1>M365 Copilot<br>Update Digest</h1><div class="cv-period">${generated} 時点（重要・注目の更新）</div></div><div class="cv-foot"><span>非公式ダイジェスト ／ Copyright (c) 2026 yamapan (@aktsmm) ／ CC BY-NC-SA 4.0</span><span>出典: Microsoft Learn ／ Tech Community ／ Microsoft 365 Roadmap</span></div></section>`,
+      ]),
     );
-    await page.evaluate(() => document.fonts.ready);
-    fs.writeFileSync(path.join(pdfDir, "cover.pdf"), await page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true }));
-    await page.setContent(
-      documentHtml(`<section class="page" style="justify-content:center;padding:0 96px">
-  <div style="font-size:30px;font-weight:700;color:#243a5e;margin-bottom:20px">ご利用にあたって</div>
-  <div style="font-size:18px;line-height:1.9;color:#3d4a5c">この資料は M365 Copilot Update Digest（非公式）が公開情報から自動生成したものです。<br>日本語の題名・要約には機械翻訳や AI 生成が含まれ、誤りを含む場合があります。必ず原文をご確認ください。<br>Microsoft Learn・Tech Community・Microsoft 365 Roadmap の原文は Microsoft に帰属します。<br>Copyright (c) 2026 yamapan (@aktsmm) / CC BY-NC-SA 4.0<br>https://github.com/aktsmm/m365-copilot-update-digest</div>
-</section>`),
+    fs.writeFileSync(
+      path.join(pdfDir, "end.pdf"),
+      await render([
+        `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">M365 Copilot Update Digest</div></div><div class="en-foot"><span>Created by yamapan（GitHub: aktsmm）</span><span>日本語の題名・要約には機械翻訳や AI 生成が含まれます。必ず原文をご確認ください。</span></div></section>`,
+      ]),
     );
-    fs.writeFileSync(path.join(pdfDir, "end.pdf"), await page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true }));
-    for (const file of files) {
+
+    for (const { file, deck } of decks) {
       try {
-        const slide = JSON.parse(fs.readFileSync(path.join(slidesDir, file), "utf8"));
-        const problems = validateSlide(slide);
-        if (problems.length > 0) throw new Error(problems[0]);
-        await page.setContent(documentHtml(slideHtml(slide, categoryConfig)));
-        await page.evaluate(() => document.fonts.ready);
-        const overflow = await page.evaluate(() => {
-          const section = document.querySelector(".page");
-          return section.scrollHeight - section.clientHeight;
-        });
-        if (overflow > 0) throw new Error(`content overflows by ${overflow}px`);
-        const pdf = await page.pdf({ width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true });
+        const problems = validateDeck(deck);
+        if (problems.length > 0) throw new Error(problems[0].message);
+        const slide = deck.slides[0];
+        const fit = await fitSlide(page, slide);
+        if (fit.report.overflow > 0) throw new Error("content still overflows at the minimum font size");
+        const pdf = await render(fit.pages);
         const blob = encryptBuffer(created.key, pdf);
         fs.writeFileSync(path.join(pdfDir, `${slide.key}.pdf.enc`), blob);
         const free = slide.key === newestKey;
@@ -91,6 +86,7 @@ if (files.length > 0 && !password) {
           title: slide.title.ja,
           publishedJst: slide.meta.publishedJst,
           categories: slide.meta.categories,
+          pages: fit.pages.length,
           bytes: blob.length,
           ...(free ? { free: true } : {}),
         });
@@ -107,7 +103,7 @@ if (files.length > 0 && !password) {
 fs.mkdirSync(path.join(siteDir, "data"), { recursive: true });
 fs.writeFileSync(
   path.join(siteDir, "data", "slides.json"),
-  `${stableStringify({ schema: 1, pdfGate: gate, slides: entries })}\n`,
+  `${stableStringify({ schema: 1, pdfGate: gate, slides: orderSlides(entries) })}\n`,
   "utf8",
 );
 console.log(`slide pdfs: ${entries.length}${gate ? "" : " (no password, none published)"}`);

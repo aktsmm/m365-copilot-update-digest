@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-10d0c082d083a546",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Planner エージェントが Microsoft 365 Copilot で提供開始",
+        "subtitleJa": "プランの作成とタスクの実行を、エージェントに任せられます",
+        "en": "Microsoft Copilot (Microsoft 365): Project Manager Agent in M365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-03-31",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "June" }],
+        "status": "Launched",
+        "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["m365-apps", "agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Planner と Microsoft 365 Copilot を使うチーム**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "計画づくりとタスクの実行を、エージェントに任せて効率化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は、利用範囲を PowerShell で制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "Planner エージェントおよび Planner エージェント チャットへのアクセスを管理する", "retrievedAt": "2026-10-14T18:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Planner エージェントが**チームの計画の作成とタスクの実行を自動化**します。まずタスクと計画の管理から始まり、高度な機能は順次追加されます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-14T18:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Planner エージェント: 計画の作成とタスクの実行を自動化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "Planner エージェント チャット（Premium プラン）: 自然言語でプランの更新や要約を依頼", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザーに Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "管理者は Set-PlannerConfiguration の -AllowPlannerCopilot で有効・無効を切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "設定の反映に最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "無効なセキュリティ グループ ID を指定すると、全ユーザーでオフになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "動作マトリックス", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能への影響",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner エージェントをオフにすると、Facilitator の文書作成スキルも無効になる（他のスキルは影響なし）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "動作マトリックスの注", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず特定のセキュリティ グループだけに有効化して試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "監査は Premium プランと同じ機能を提供する予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "セキュリティとプライバシー", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
+        { "termKey": "planner-agent-chat", "term": "Planner エージェント チャット", "type": "feature", "oneLine": { "text": "Premium プランで使える、アプリ内の自然言語チャット（以前の「Copilot in Planner」）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
+        { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=516576",
+        "learn": [{ "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    },
+    {
+      "key": "copilot-studio-whats-new-402f7ca5034c6254",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Copilot Studio のエージェントに Work IQ を追加（プレビュー）",
+        "subtitleJa": "組織の仕事データを、リアルタイムの共有コンテキストとして使えます",
+        "en": "(Preview) Add Work IQ to your agents to ground them in real-time, shared context across your organization, connecting..."
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Microsoft 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Work IQ(プレビュー)の主な機能", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+        "change": { "text": "ファイル・メール・会議・チャットの信号に根ざした回答をエージェントに持たせられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、テナントの有効化と支出ポリシーの作成が先に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントの**ツール**に Work IQ（MCP）を追加するだけで、Microsoft 365 全体のコンテキストを使った回答や操作ができます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントにWork IQ(プレビュー)を追加してください", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "データ・メモリ・推論の 3 層で、仕事の文脈をエージェントに提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "管理者は Microsoft 365 管理センターで Work IQ MCP を一元管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "主な機能", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "既定は読み取り専用。書き込みは管理者が明示的にオンにした場合のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレビューは本番用途向けではなく、機能が制限されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Important", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "GitHub Copilot ハーネスと Copilot クレジット（使用量ベースの課金）を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "メール・Teams などの従来のワークロード別ツールは、新しい構成では選ばない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Important", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テスト用テナントで、メールの文脈が必要なプロンプトを実行して確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "手順 8", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "Work IQ 用の支出ポリシーを別に作成する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "add-steps",
+          "heading": "追加の手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント → ツール → ツールを追加 → MCP → Work IQ → 接続を作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントにWork IQ(プレビュー)を追加してください", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず管理者がテナントで Work IQ を有効化し、小規模に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Copilot とエージェントを、組織全体のリアルタイムで共有されたコンテキストに根ざさせるインテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントにWork IQ(プレビュー)を追加してください", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "本番用途向けではなく、機能が制限されることがある先行提供の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Important", "retrievedAt": "2026-10-14T18:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/add-work-iq",
+        "learn": [
+          { "title": "Copilot Studio での Work IQ（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locale": "ja-jp" },
+          { "title": "Work IQ のテナントを有効にする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}

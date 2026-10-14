@@ -98,8 +98,8 @@ jobs:
             titlePattern.test(title);
 
           let deferReason = '';
-          if (title.startsWith('[summaries] ')) {
-            deferReason = 'Summary PRs are validated by the Auto-merge summaries workflow.';
+          if (title.startsWith('[summaries] ') || title.startsWith('[slides] ')) {
+            deferReason = 'Summary and slide PRs are validated by their own auto-merge workflows.';
           } else if (isPendingNormalization) {
             deferReason = 'Generated PR metadata is still pending normalization.';
           } else if (isDraft && changed.length === 0) {
