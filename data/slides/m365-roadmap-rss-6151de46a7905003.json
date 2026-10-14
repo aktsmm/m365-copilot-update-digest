@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6151de46a7905003",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Power Apps：モデル駆動型アプリの AI 機能を統合された設定で管理できる予定",
+        "subtitleJa": "フォーム デザイナーの設定に「Copilot と AI」タブが加わります",
+        "en": "Power Apps: Manage model-driven app AI features from consolidated settings"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Power Apps"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "モデル駆動型アプリの**作成者（メーカー）**と、Power Platform の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "AI 機能の設定を 1 か所で確認・調整しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必須の対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Maker Studio のフォーム デザイナーの設定に新しい最上位の **[Copilot と AI] タブ**が加わり、利用できる AI オプションを確認・調整できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "モデル駆動型アプリの AI 機能の設定を、メーカーと管理者が見つけやすくする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Maker Studio の設定ダイアログに、最上位の [Copilot と AI] タブを追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供対象は Worldwide、GCC、GCC High（Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在の環境レベルの設定は、管理センターの [製品] > [機能] にある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/settings-features", "locator": "冒頭", "retrievedAt": "2026-10-14T19:45:00Z" }] },
+            { "text": "設定の更新にはシステム管理者のセキュリティ ロールなどが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/settings-features", "locator": "冒頭", "retrievedAt": "2026-10-14T19:45:00Z" }] },
+            { "text": "利用できる設定は、リージョンのリリース計画によって異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/settings-features", "locator": "Note", "retrievedAt": "2026-10-14T19:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "モデル駆動型アプリの Copilot チャットは、環境設定で [既定] [オン] [オフ] を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locator": "環境内のモデル駆動型アプリのCopilotを有効にする", "retrievedAt": "2026-10-14T19:45:00Z" }] },
+            { "text": "アプリごとの Copilot コントロールは、アプリ デザイナーの設定で変更できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locator": "モデル駆動型アプリCopilotチャットを無効にする", "retrievedAt": "2026-10-14T19:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "model-driven-app", "term": "モデル駆動型アプリ", "type": "product", "oneLine": { "text": "Microsoft Dataverse のデータを扱う Power Apps のアプリの種類。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locator": "冒頭", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
+        { "termKey": "copilot-chat-mda", "term": "Copilot チャット", "type": "feature", "oneLine": { "text": "自然言語の会話で、アプリ内のデータの分析情報を得られる AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locator": "冒頭", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
+        { "termKey": "feature-settings", "term": "機能設定", "type": "feature", "oneLine": { "text": "Power Apps での機能の表示方法と動作を、環境ごとに調整する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/settings-features", "locator": "冒頭", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574104",
+        "learn": [
+          { "title": "機能設定の管理", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/settings-features", "locale": "ja-jp" },
+          { "title": "モデル駆動型アプリでユーザー向けに Copilot 機能を追加する", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
