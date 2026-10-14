@@ -106,6 +106,24 @@
     s.addText(`${clouds ? `提供範囲: ${clouds}　` : ""}ID ${slide.key}`, { x: 9.0, y: 7.1, w: 3.95, h: 0.25, fontFace: FONT, fontSize: 8, color: "6B778A", align: "right", fit: "shrink" });
   }
 
+  // 先頭の概要表（15 件ごとに分割）。ページ番号は概要スライドの枚数を含めて数える。
+  function addSummary(pptx, slides) {
+    const PER = 15;
+    const pages = Math.max(1, Math.ceil(slides.length / PER));
+    const head = (text, align) => ({ text, options: { bold: true, color: "FFFFFF", fill: { color: "0B2A4A" }, align: align || "left", fontFace: FONT, fontSize: 11 } });
+    for (let p = 0; p < pages; p += 1) {
+      const s = pptx.addSlide();
+      s.addText(pages > 1 ? `目次・概要（${p + 1}/${pages}）` : "目次・概要", { x: 0.4, y: 0.25, w: 9, h: 0.6, fontFace: FONT, fontSize: 24, bold: true, color: "0B2A4A" });
+      s.addText(`${slides.length} 件（表示中の更新）`, { x: 0.4, y: 0.85, w: 9, h: 0.3, fontFace: FONT, fontSize: 11, color: "3D4A5C" });
+      const rows = [[head("#", "right"), head("種類"), head("タイトル"), head("掲載日"), head("ページ", "right")]];
+      slides.slice(p * PER, (p + 1) * PER).forEach((slide, i) => {
+        const n = p * PER + i;
+        const cell = (text, align) => ({ text, options: { fontFace: FONT, fontSize: 10.5, color: "1B2430", align: align || "left" } });
+        rows.push([cell(String(n + 1), "right"), cell(slide.label), cell(slide.title.ja), cell(slide.meta.publishedJst), cell(String(pages + 1 + n), "right")]);
+      });
+      s.addTable(rows, { x: 0.4, y: 1.3, w: 12.5, colW: [0.5, 1.4, 8.2, 1.4, 1.0], border: { type: "solid", color: "C9D4E6", pt: 0.75 }, valign: "middle", rowH: 0.36 });
+    }
+  }
   async function run(button, status) {
     const keys = window.digestVisibleSlideJsonKeys ? window.digestVisibleSlideJsonKeys() : [];
     const unique = [...new Set(keys)].slice(0, LIMIT);
@@ -119,16 +137,17 @@
       const pptx = new PptxGenJS();
       pptx.layout = "LAYOUT_WIDE";
       pptx.title = "M365 Copilot Update Digest";
+      const slides = [];
       for (let i = 0; i < unique.length; i += 1) {
         status.textContent = `${i + 1} / ${unique.length}`;
         const response = await fetch(new URL(`slides/${unique[i]}.json`, root));
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
         }
-        const deck = await response.json();
-        addSlide(pptx, deck.slides[0]);
+        slides.push((await response.json()).slides[0]);
       }
-      await pptx.writeFile({ fileName: "m365-copilot-update-digest.pptx" });
+      addSummary(pptx, slides);
+      slides.forEach((slide) => addSlide(pptx, slide));      await pptx.writeFile({ fileName: "m365-copilot-update-digest.pptx" });
       status.textContent = `${unique.length} 件を保存しました`;
     } catch (error) {
       status.textContent = "";
