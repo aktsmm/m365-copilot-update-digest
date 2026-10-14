@@ -7,12 +7,26 @@ on:
     paths:
       - .github/workflows/**
       - scripts/validate-workflows.mjs
+      - scripts/lib/related-documents.mjs
+      - scripts/enrich-documents.mjs
+      - public/assets/search.js
+      - scripts/build-pages.mjs
+      - scripts/collect.mjs
+      - scripts/validate-generated-data.mjs
+      - tests/**
       - package.json
       - package-lock.json
   pull_request:
     paths:
       - .github/workflows/**
       - scripts/validate-workflows.mjs
+      - scripts/lib/related-documents.mjs
+      - scripts/enrich-documents.mjs
+      - public/assets/search.js
+      - scripts/build-pages.mjs
+      - scripts/collect.mjs
+      - scripts/validate-generated-data.mjs
+      - tests/**
       - package.json
       - package-lock.json
   workflow_dispatch:
@@ -40,3 +54,6 @@ jobs:
 
       - name: Validate workflow automation invariants
         run: npm run validate:workflows
+
+      - name: Test document links and search navigation
+        run: npm test

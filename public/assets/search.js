@@ -17,7 +17,10 @@
       ready: "キーワードを入力すると結果を表示します。",
       empty: "一致する更新は見つかりませんでした。",
       matches: "件ヒット",
-      open: "日次ページを見る",
+      open: "日次の該当箇所を見る",
+      original: "原文を開く",
+      related: "関連ドキュメント",
+      supplemental: "補足",
       source: "ソース",
       published: "公開日",
     },
@@ -25,7 +28,10 @@
       ready: "Type a keyword to start searching.",
       empty: "No matching updates were found.",
       matches: "matches",
-      open: "Open daily page",
+      open: "View update in daily digest",
+      original: "Open source",
+      related: "Related documentation",
+      supplemental: "Supplementary",
       source: "Source",
       published: "Published",
     },
@@ -53,6 +59,15 @@
       .filter(Boolean);
   }
 
+  function externalUrl(value) {
+    try {
+      const url = new URL(value);
+      return url.protocol === "https:" && !url.username && !url.password ? url.href : "";
+    } catch {
+      return "";
+    }
+  }
+
   function renderResults(entries) {
     if (entries.length === 0) {
       results.innerHTML = "";
@@ -63,9 +78,13 @@
     status.textContent = `${entries.length} ${text.matches}`;
     results.innerHTML = entries
       .map((entry) => {
-        const href = `${basePath}${entry.detailPath}`;
+        const href = `${basePath}${locale === "en" ? "en/" : ""}${entry.detailPath}`;
         const summary = locale === "en" ? entry.summaryEn : entry.summaryJa;
         const title = locale === "en" ? entry.titleEn : entry.titleJa;
+        const original = externalUrl(entry.url);
+        const documents = (entry.relatedDocuments || [])
+          .filter((document) => externalUrl(document.url) && document.title)
+          .slice(0, 3);
         return `
           <article class="search-result-card">
             <h2><a href="${escapeHtml(href)}">${escapeHtml(title)}</a></h2>
@@ -74,7 +93,11 @@
               <div><dt>${escapeHtml(text.published)}</dt><dd>${escapeHtml(entry.publishedAt.slice(0, 10))}</dd></div>
               <div><dt>${escapeHtml(text.source)}</dt><dd>${escapeHtml(entry.sourceName)}</dd></div>
             </dl>
-            <a class="primary-link" href="${escapeHtml(href)}">${escapeHtml(text.open)}</a>
+            <div class="card-links">
+              ${original ? `<a class="primary-link" href="${escapeHtml(original)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text.original)}</a>` : ""}
+              <a href="${escapeHtml(href)}">${escapeHtml(text.open)}</a>
+            </div>
+            ${documents.length ? `<div class="related-documents"><strong>${escapeHtml(text.related)}</strong><ul>${documents.map((document) => `<li><a href="${escapeHtml(externalUrl(document.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.supplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
           </article>
         `;
       })

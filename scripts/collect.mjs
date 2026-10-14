@@ -1,9 +1,16 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 import * as cheerio from "cheerio";
 import { XMLParser } from "fast-xml-parser";
 import { translate } from "@vitalets/google-translate-api";
+import {
+  enrichDocumentCache,
+  extractDocumentLinks,
+  validateDocumentCache,
+  withRelatedDocuments,
+} from "./lib/related-documents.mjs";
 
 import {
   buildDailyMarkdown,
@@ -31,6 +38,7 @@ const eventsDir = path.join(workspaceRoot, "data", "events");
 const summariesDir = path.join(workspaceRoot, "summaries", "daily");
 const stateFile = path.join(workspaceRoot, "data", "state.json");
 const runSummaryFile = path.join(workspaceRoot, "data", "run-summary.json");
+const relatedDocumentsFile = path.join(workspaceRoot, "config", "related-documents.json");
 const TRANSLATION_MARKER_PREFIX = "[[[M365_DIGEST_ITEM_";
 const TITLE_TRANSLATION_MARKER_PREFIX = "[[[M365_DIGEST_TITLE_";
 const MAX_TRANSLATION_BATCH_CHARS = 3600;
@@ -1712,6 +1720,10 @@ function parseRoadmapRssFeed(source, xmlText) {
         summaryEn: cleanupRoadmapSummary(rawSummary),
         summaryJa: cleanupRoadmapSummary(rawSummary),
         url: link,
+        documentCandidates: extractDocumentLinks(
+          decodeHtmlEntities(`${readXmlText(item.description || "")}\n${readXmlText(item["content:encoded"] || "")}`),
+          link || source.url,
+        ),
         publishedAt,
         productArea,
         section: productArea,
@@ -2506,6 +2518,7 @@ function extractM365ReleaseNotes(source, html) {
       summaryEn: splitLeadText(rawText, title),
       summaryJa: splitLeadText(rawText, title),
       url: firstUsefulLink(source.url, links, anchorUrl),
+      documentCandidates: extractDocumentLinks($.html(element), source.url),
       publishedAt: currentDate,
       productArea: source.productArea,
       section: currentSection,
@@ -2570,6 +2583,7 @@ function extractCopilotStudioWhatsNew(source, html) {
       summaryEn: splitLeadText(rawText, title),
       summaryJa: splitLeadText(rawText, title),
       url: firstUsefulLink(source.url, links, `${source.url}#${slugify(text)}`),
+      documentCandidates: extractDocumentLinks($.html(element), source.url),
       publishedAt: currentMonth,
       productArea: source.productArea,
       section: source.productArea,
@@ -2632,6 +2646,10 @@ function parseRssFeed(source, xmlText) {
         summaryEn: summary,
         summaryJa: summary,
         url: normalizeWhitespace(readXmlText(item.link)),
+        documentCandidates: extractDocumentLinks(
+          decodeHtmlEntities(`${readXmlText(item.description || "")}\n${readXmlText(item["content:encoded"] || "")}`),
+          normalizeWhitespace(readXmlText(item.link)) || source.url,
+        ),
         publishedAt: new Date(
           item.pubDate || item.isoDate || Date.now(),
         ).toISOString(),
@@ -2693,7 +2711,7 @@ function extractSinglePageUpdate(source, html, nowIso) {
   ];
 }
 
-function parseSource(source, html, nowIso) {
+export function parseSource(source, html, nowIso) {
   switch (source.kind) {
     case "m365_release_notes":
       return extractM365ReleaseNotes(source, html);
@@ -2736,6 +2754,7 @@ function normalizeEvent(source, event, existingEvent, nowIso) {
     summaryJa: fixupJapaneseText(event.summaryJa || event.summary),
     summaryEn: event.summaryEn || event.summary,
     url: event.url || source.url,
+    ...(existingEvent?.relatedDocuments ? { relatedDocuments: existingEvent.relatedDocuments } : {}),
     publishedAt: stablePublishedAt(
       event.publishedAt || existingEvent?.publishedAt,
       nowIso,
@@ -2860,6 +2879,9 @@ async function main() {
   const nowIso = new Date().toISOString();
   const sources = await readJson(sourcesFile, []);
   const summaryCache = await readJson(summaryCacheFile, {});
+  const relatedDocuments = await readJson(relatedDocumentsFile, {});
+  validateDocumentCache(relatedDocuments);
+  const documentCandidates = new Map();
   const existingState = await readJson(stateFile, null);
   const existingRunSummary = await readJson(runSummaryFile, null);
   const existingEvents = (await readExistingEvents()).filter(
@@ -2918,6 +2940,7 @@ async function main() {
         }
 
         mergedById.set(normalized.id, normalized);
+        documentCandidates.set(normalized.id, parsedEvent.documentCandidates || []);
       }
     } catch (error) {
       errors.push({
@@ -2928,12 +2951,19 @@ async function main() {
     }
   }
 
-  const allEvents = dedupeLogicalEvents(dedupeEvents([...mergedById.values()])).map(
+  const collectedEvents = dedupeLogicalEvents(dedupeEvents([...mergedById.values()])).map(
     (event) =>
       correctFalseRetirementStage(
         refreshLocalizedFieldsFromCache(event, summaryCache),
       ),
   );
+  if (process.env.DIGEST_DOCUMENT_ENRICHMENT !== "0") {
+    await enrichDocumentCache(collectedEvents, relatedDocuments, {
+      candidates: documentCandidates,
+    });
+  }
+  validateDocumentCache(relatedDocuments);
+  const allEvents = collectedEvents.map((event) => withRelatedDocuments(event, relatedDocuments));
   const newEventCount = allEvents.filter(
     (event) => !existingLogicalKeys.has(logicalEventKey(event)),
   ).length;
@@ -3038,6 +3068,14 @@ async function main() {
     await writeTextFile(path.join(summariesDir, `${date}.md`), markdown);
   }
 
+  const documentSummary = {
+    verifiedCount: Object.values(relatedDocuments).filter((record) => record.status === "verified").length,
+    notFoundCount: Object.values(relatedDocuments).filter((record) => record.status === "not-found").length,
+    errorCount: Object.values(relatedDocuments).filter((record) => record.error).length,
+    warnings: Object.entries(relatedDocuments)
+      .filter(([, record]) => record.error)
+      .map(([id, record]) => ({ id, message: record.error })),
+  };
   const stateUnchanged =
     newEventCount === 0 &&
     errors.length === 0 &&
@@ -3051,7 +3089,8 @@ async function main() {
     existingRunSummary?.totalEvents === allEvents.length &&
     existingRunSummary?.sourceCount === sources.length &&
     Number(existingRunSummary?.newEventCount ?? -1) === 0 &&
-    Number(existingRunSummary?.errorCount ?? -1) === 0;
+    Number(existingRunSummary?.errorCount ?? -1) === 0 &&
+    JSON.stringify(existingRunSummary?.relatedDocuments || {}) === JSON.stringify(documentSummary);
 
   const nextState = {
     lastRunAt: stateUnchanged ? existingState?.lastRunAt || nowIso : nowIso,
@@ -3080,12 +3119,14 @@ async function main() {
     newEventCount,
     errorCount: errors.length,
     errors,
+    relatedDocuments: documentSummary,
   };
 
   await writeJson(stateFile, nextState);
   await writeJson(runSummaryFile, nextRunSummary);
 
   await writeJson(summaryCacheFile, summaryCache);
+  await writeJson(relatedDocumentsFile, relatedDocuments);
 
   console.log(
     JSON.stringify(
@@ -3102,7 +3143,9 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
