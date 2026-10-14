@@ -215,6 +215,10 @@ const DEMO_NAV_ITEMS = [
     href: "https://aktsmm.github.io/azure-ops-pulse-demo/#/overview",
   },
   {
+    label: "Azure Update Digest",
+    href: "https://aktsmm.github.io/azure-update-digest/",
+  },
+  {
     label: "M365 Message Center Dashboard",
     href: "https://aktsmm.github.io/m365-message-center-dashboard/",
   },
