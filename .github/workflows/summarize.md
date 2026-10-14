@@ -28,6 +28,7 @@ steps:
   - name: Install and list pending items
     run: |
       npm ci
+      mkdir -p data/summaries
       npm run pending -- --limit 30
 safe-outputs:
   create-pull-request:
