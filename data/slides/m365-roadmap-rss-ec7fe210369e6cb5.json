@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ec7fe210369e6cb5",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Power Apps のモデル駆動型アプリを Work IQ のビジネス アプリケーションとして使える予定",
+        "subtitleJa": "アプリを開かず、自然言語でレコードの検索や更新ができます",
+        "en": "Power Apps: Model-driven applications in Business Apps in Work IQ"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Power Apps"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Power Apps のモデル駆動型アプリを作る人・管理する人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+        "change": { "text": "モデル駆動型アプリを開かずに、自然言語でビジネス データを検索・操作できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には Work IQ の有効化とアプリ側の Copilot 設定が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "プロンプトで環境とアプリを選ぶだけで、レコードの一覧・参照・作成・更新ができます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "ビジネス アプリケーションの操作", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供される内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントまたは Work IQ MCP を使ったチャットから利用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+            { "text": "ビューの一覧表示とレコードの読み取り・作成・更新・削除に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "サポートされているアプリのコンポーネントと機能", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+            { "text": "既存の Power Platform のアクセス許可の範囲内でのみ操作可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn 上ではプレビュー扱いで、運用環境での使用は想定されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "Important", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+            { "text": "JavaScript の OnLoad/OnChange/OnSave があるフォームは作成・更新不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "既知の制限", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+            { "text": "カスタム コントロールとサブグリッドは未対応。Copilot クレジットが適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "既知の制限 / Note", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センターで環境の Work IQ を有効化し、アプリの M365 Copilot 設定を既定かオンに", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-14T20:40:00Z" }] },
+            { "text": "データを変更する操作は、提案値を確認してから明示的に確定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "ビジネス アプリケーションの操作", "retrievedAt": "2026-10-14T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象アプリのフォームに JavaScript イベント ハンドラーがないか確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "すでにアクセス許可があるデータやアプリ コンポーネントに Copilot の推論を適用する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
+        { "termKey": "model-driven", "term": "モデル駆動型アプリ", "type": "feature", "oneLine": { "text": "Power Apps で作る、ビュー・フォーム・テーブルを使う業務アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Model Context Protocol。Work IQ のチャット体験で使われる接続の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供開始前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571888",
+        "learn": [
+          { "title": "Work IQ でビジネス アプリケーションを使用する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
