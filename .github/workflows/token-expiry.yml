@@ -1,0 +1,40 @@
+name: Check token expiry
+
+# COPILOT_GITHUB_TOKEN（細粒度 PAT）の期限を毎週確認し、14 日以内なら Issue で知らせる。期限切れになると要約とスライドの自動生成が止まる。
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check expiration
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAT: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+          WARN_DAYS: "14"
+        run: |
+          if [ -z "$PAT" ]; then echo "COPILOT_GITHUB_TOKEN is not set"; exit 1; fi
+          exp=$(curl -sS -D - -o /dev/null -H "Authorization: Bearer $PAT" https://api.github.com/user | tr -d '\r' | awk -F': ' 'tolower($1)=="github-authentication-token-expiration"{print $2}')
+          status=$(curl -sS -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $PAT" https://api.github.com/user)
+          echo "status=$status expiration=${exp:-none}"
+          title="[maintenance] COPILOT_GITHUB_TOKEN の期限が近づいています"
+          if [ "$status" != "200" ]; then
+            body="COPILOT_GITHUB_TOKEN で GitHub API が HTTP $status を返しました。失効または権限不足の可能性があります。細粒度 PAT（Copilot Requests 権限）を作り直し、\`gh secret set COPILOT_GITHUB_TOKEN\` で更新してください。"
+          elif [ -n "$exp" ]; then
+            left=$(( ( $(date -d "$exp" +%s) - $(date +%s) ) / 86400 ))
+            echo "days left: $left"
+            if [ "$left" -gt "$WARN_DAYS" ]; then exit 0; fi
+            body="COPILOT_GITHUB_TOKEN は $exp（残り ${left} 日）に期限切れになります。期限が切れると日本語要約とスライドの自動生成が止まります。細粒度 PAT（Copilot Requests 権限）を作り直し、\`gh secret set COPILOT_GITHUB_TOKEN\` で更新してください。"
+          else
+            exit 0
+          fi
+          existing=$(gh issue list --state open --search "in:title COPILOT_GITHUB_TOKEN" --json number -q '.[0].number')
+          if [ -n "$existing" ]; then gh issue comment "$existing" --body "$body"; else gh issue create --title "$title" --body "$body" --label maintenance; fi
