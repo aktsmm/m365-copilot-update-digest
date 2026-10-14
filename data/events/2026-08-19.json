@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:31:47.169Z",
   "events": [
     {
       "id": "m365-roadmap-rss-3779013a60d18a16",
@@ -58,10 +58,20 @@
       "title": "Microsoft Copilot (Microsoft 365): Federated Copilot Connectors in Microsoft 365 Copilot",
       "titleJa": "Microsoft 365 Copilot のフェデレーション Copilot コネクタ",
       "titleEn": "Microsoft Copilot (Microsoft 365): Federated Copilot Connectors in Microsoft 365 Copilot",
-      "summary": "Federated Copilot connectors enable users to securely connect Microsoft Copilot to their favorite third party sources, retrieving data in real-time using the Model Context Protocol (MCP). Federated Copilot connectors do not store or index customer data in Microsoft - access happens in real time using the user’s own id...",
+      "summary": "Federated Copilot connectors enable users to securely connect Microsoft Copilot to their favorite third party sources, retrieving data in real-time using the Model Context Protocol (MCP). Federated Copilot connectors do not store or index customer data in Microsoft - access happens in real time using the user’s own...",
       "summaryJa": "Federated Copilot コネクタを使用すると、ユーザーは Microsoft Copilot をお気に入りのサードパーティ ソースに安全に接続し、Model Context Protocol (MCP) を使用してリアルタイムでデータを取得できます。 Federated Copilot コネクタは、Microsoft に顧客データを保存したりインデックスを作成したりしません。アクセスはユーザー自身の ID を使用してリアルタイムで行われます。",
-      "summaryEn": "Federated Copilot connectors enable users to securely connect Microsoft Copilot to their favorite third party sources, retrieving data in real-time using the Model Context Protocol (MCP). Federated Copilot connectors do not store or index customer data in Microsoft - access happens in real time using the user’s own id...",
+      "summaryEn": "Federated Copilot connectors enable users to securely connect Microsoft Copilot to their favorite third party sources, retrieving data in real-time using the Model Context Protocol (MCP). Federated Copilot connectors do not store or index customer data in Microsoft - access happens in real time using the user’s own...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569212",
+      "relatedDocuments": [
+        {
+          "title": "Federated connectors overview",
+          "sourceTitle": "Federated connectors overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=569212",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: federat, connector"
+        }
+      ],
       "publishedAt": "2026-08-19T12:00:00.000Z",
       "capturedAt": "2026-08-19T01:52:27.865Z",
       "sourceLastSeen": "2026-08-19T01:52:27.865Z",
@@ -75,27 +85,17 @@
       "tags": [
         "Microsoft 365 Copilot",
         "In development",
-        "GCC",
-        "GCC High",
-        "DoD",
         "Microsoft Copilot (Microsoft 365)",
         "Desktop",
         "Mac",
         "Web",
+        "GCC",
+        "GCC High",
+        "DoD",
         "作成者向け"
       ],
       "importanceScore": 116,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / エージェント構築や品質管理に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "Federated connectors overview",
-          "sourceTitle": "Federated connectors overview",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=569212",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: federat, connector"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / エージェント構築や品質管理に関わるため"
     },
     {
       "id": "m365-roadmap-rss-bb1888d555ed2cf2",
@@ -125,14 +125,14 @@
       "tags": [
         "Microsoft Teams",
         "In development",
-        "Targeted Release",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Copilot (Microsoft 365)",
+        "Targeted Release",
         "Android",
         "Desktop",
         "iOS",
         "Mac",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "管理者向け",
         "作成者向け"
       ],
@@ -241,10 +241,20 @@
       "title": "Microsoft Copilot (Microsoft 365): Support for MCP Agents with Interactive UI Widgets in Government Clouds",
       "titleJa": "政府機関クラウドでのインタラクティブ UI ウィジェットを備えた MCP エージェントのサポート",
       "titleEn": "Microsoft Copilot (Microsoft 365): Support for MCP Agents with Interactive UI Widgets in Government Clouds",
-      "summary": "Feature description: Model Context Protocol (MCP) based agents in Microsoft 365 Copilot Chat will now be able to surface rich, interactive UI widgets directly within chat. This enhancement enables developers to deliver more engaging and structured agent interactions. Users will experience these widgets when interactin...",
+      "summary": "Feature description: Model Context Protocol (MCP) based agents in Microsoft 365 Copilot Chat will now be able to surface rich, interactive UI widgets directly within chat. This enhancement enables developers to deliver more engaging and structured agent interactions. Users will experience these widgets when...",
       "summaryJa": "機能の説明: Microsoft 365 Copilot Chat のモデル コンテキスト プロトコル (MCP) ベースのエージェントは、リッチでインタラクティブな UI ウィジェットをチャット内で直接表示できるようになります。この機能強化により、開発者はより魅力的で構造化されたエージェント インタラクションを実現できるようになります。ユーザーは対話時にこれらのウィジェットを体験します...",
-      "summaryEn": "Feature description: Model Context Protocol (MCP) based agents in Microsoft 365 Copilot Chat will now be able to surface rich, interactive UI widgets directly within chat. This enhancement enables developers to deliver more engaging and structured agent interactions. Users will experience these widgets when interactin...",
+      "summaryEn": "Feature description: Model Context Protocol (MCP) based agents in Microsoft 365 Copilot Chat will now be able to surface rich, interactive UI widgets directly within chat. This enhancement enables developers to deliver more engaging and structured agent interactions. Users will experience these widgets when...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=564608",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot の宣言型エージェントに MCP アプリを追加する",
+          "sourceTitle": "Add MCP apps to declarative agents in Microsoft 365 Copilot",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=564608",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: support, mcp, agent, interactive, widget, government, cloud"
+        }
+      ],
       "publishedAt": "2026-08-19T12:00:00.000Z",
       "capturedAt": "2026-08-19T01:52:27.865Z",
       "sourceLastSeen": "2026-08-19T01:52:27.865Z",
@@ -258,26 +268,16 @@
       "tags": [
         "Microsoft 365 Copilot",
         "Rolling out",
-        "GCC",
-        "GCC High",
-        "DoD",
         "Microsoft Copilot (Microsoft 365)",
         "Desktop",
         "Web",
+        "GCC",
+        "GCC High",
+        "DoD",
         "作成者向け"
       ],
       "importanceScore": 105,
-      "importanceReason": "エージェント構築や品質管理に関わるため / 会議やコミュニケーションの業務導線に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot の宣言型エージェントに MCP アプリを追加する",
-          "sourceTitle": "Add MCP apps to declarative agents in Microsoft 365 Copilot",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=564608",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: support, mcp, agent, interactive, widget, government, cloud"
-        }
-      ]
+      "importanceReason": "エージェント構築や品質管理に関わるため / 会議やコミュニケーションの業務導線に直結するため"
     },
     {
       "id": "m365-roadmap-rss-20da9ffdc4b31a63",

@@ -1,6 +1,6 @@
 {
   "date": "2026-04-07",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:31:47.169Z",
   "events": [
     {
       "id": "m365-copilot-release-notes-86c4565ccf70a339",
@@ -16,6 +16,20 @@
       "summaryJa": "最新の Copilot 導入 Power BI レポートでは、よりクリーンなエクスペリエンスと、パワー ユーザーが Copilot にどのように関与しているかを組織が理解するのに役立つ新しい洞察が導入されています。",
       "summaryEn": "The updated Copilot adoption Power BI report introduces a cleaner experience and new insights that help organizations understand how power users engage with Copilot.",
       "url": "https://learn.microsoft.com/en-us/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption",
+      "relatedDocuments": [
+        {
+          "title": "高度な分析メトリック ルール",
+          "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/metric-rules",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption"
+        },
+        {
+          "title": "高度な分析メトリック",
+          "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics#microsoft-copilot-metrics",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption"
+        }
+      ],
       "publishedAt": "2026-04-07T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -33,21 +47,7 @@
         "作成者向け"
       ],
       "importanceScore": 106,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / ライセンス評価や定着施策の精度が上がるため",
-      "relatedDocuments": [
-        {
-          "title": "高度な分析メトリック ルール",
-          "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/metric-rules",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption"
-        },
-        {
-          "title": "高度な分析メトリック",
-          "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics#microsoft-copilot-metrics",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / ライセンス評価や定着施策の精度が上がるため"
     },
     {
       "id": "m365-roadmap-rss-237b9e9d9845e8c0",
@@ -195,6 +195,16 @@
       "summaryJa": "Copilot を使用してファイルの概要を生成し、Windows で OneDrive ファイルを共有するときにそれを直接含めることができるようになりました。",
       "summaryEn": "You can now generate a file summary with Copilot and include it directly when sharing OneDrive files in Windows.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-04-07",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-19,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-04-07",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: share, onedrive, file, copilot-generat, summary"
+        }
+      ],
       "publishedAt": "2026-04-07T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -210,31 +220,21 @@
         "管理者向け"
       ],
       "importanceScore": 104,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#august-19,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-04-07",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: share, onedrive, file, copilot-generat, summary"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-f9dbcbd6686f99f0",
       "sourceId": "m365-roadmap-rss",
       "sourceName": "Microsoft 365 Roadmap",
       "sourceFamily": "Roadmap",
-      "productArea": "Microsoft 365 Copilot",
-      "section": "Microsoft 365 Copilot",
+      "productArea": "Microsoft Teams",
+      "section": "Microsoft Teams",
       "title": "Microsoft Teams: Spoken language detection is now automatic",
       "titleJa": "Microsoft 365 Copilot の会議・チャット機能を更新",
       "titleEn": "Microsoft Teams: Spoken language detection is now automatic",
-      "summary": "Spoken language detection is now fully automatic. Teams will automatically detect each speaker’s spoken language and update it in real time as the conversation evolves. Manual spoken language selection will no longer be available. This applies to both live captions and transcripts when Interpreter is enabled or when m...",
+      "summary": "Spoken language detection is now fully automatic. Teams will automatically detect each speaker’s spoken language and update it in real time as the conversation evolves. Manual spoken language selection will no longer be available. This applies to both live captions and transcripts when Interpreter is enabled or when...",
       "summaryJa": "音声言語の検出は完全に自動化されました。チームは各話者の話し言葉を自動的に検出し、会話の進行に応じてリアルタイムで更新します。音声言語の手動選択は利用できなくなります。これは、通訳が有効になっている場合、または通訳が有効になっている場合、ライブ キャプションとトランスクリプトの両方に適用されます。",
-      "summaryEn": "Spoken language detection is now fully automatic. Teams will automatically detect each speaker’s spoken language and update it in real time as the conversation evolves. Manual spoken language selection will no longer be available. This applies to both live captions and transcripts when Interpreter is enabled or when m...",
+      "summaryEn": "Spoken language detection is now fully automatic. Teams will automatically detect each speaker’s spoken language and update it in real time as the conversation evolves. Manual spoken language selection will no longer be available. This applies to both live captions and transcripts when Interpreter is enabled or when...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=558543",
       "publishedAt": "2026-04-07T12:00:00.000Z",
       "capturedAt": "2026-04-10T12:02:41.448Z",
@@ -248,18 +248,16 @@
         "作成者向け"
       ],
       "tags": [
-        "Microsoft 365 Copilot",
-        "Rolling out",
-        "General Availability",
-        "Targeted Release",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Teams",
+        "Rolling out",
         "Microsoft Copilot (Microsoft 365)",
+        "Targeted Release",
         "Android",
         "Desktop",
         "iOS",
         "Mac",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "管理者向け",
         "作成者向け"
       ],
@@ -280,6 +278,16 @@
       "summaryJa": "Microsoft 365 Copilot Chat の統合は、Teams のチャット、チャネル、会議に拡張されており、モバイル サポートも近々提供される予定です。",
       "summaryEn": "Microsoft 365 Copilot Chat integration is expanding to Teams chats, channels, and meetings, with mobile support coming soon.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-04-07",
+      "relatedDocuments": [
+        {
+          "title": "アーカイブされたMicrosoft 365 Copilotリリース ノート",
+          "sourceTitle": "Archived Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive#december,-2023",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-04-07",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: chat, available, channel, meeting"
+        }
+      ],
       "publishedAt": "2026-04-07T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -297,17 +305,7 @@
         "作成者向け"
       ],
       "importanceScore": 90,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため",
-      "relatedDocuments": [
-        {
-          "title": "アーカイブされたMicrosoft 365 Copilotリリース ノート",
-          "sourceTitle": "Archived Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive#december,-2023",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-04-07",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: chat, available, channel, meeting"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため"
     },
     {
       "id": "m365-copilot-release-notes-2f909f417ae840ce",
@@ -354,6 +352,20 @@
       "summaryJa": "ユーザーは、Copilot プロンプトのスケジュールを編集できるようになり、より柔軟に制御できるようになりました。",
       "summaryEn": "Users can now edit the schedule of their Copilot prompts, giving them more flexibility and control.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/scheduled-prompts",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 向けクラウド ポリシー サービスの概要",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/overview-cloud-policy",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/scheduled-prompts"
+        },
+        {
+          "title": "Officeでの接続環境",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/privacy/connected-experiences",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/scheduled-prompts"
+        }
+      ],
       "publishedAt": "2026-04-07T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -369,21 +381,7 @@
         "作成者向け"
       ],
       "importanceScore": 74,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 向けクラウド ポリシー サービスの概要",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/overview-cloud-policy",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/scheduled-prompts"
-        },
-        {
-          "title": "Officeでの接続環境",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/privacy/connected-experiences",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/scheduled-prompts"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため"
     },
     {
       "id": "m365-copilot-release-notes-20da2cba1e991b0c",
@@ -399,20 +397,6 @@
       "summaryJa": "アクションの確認が合理化されたため、ユーザーは安全制御を維持しながら中断が少なくなります。",
       "summaryEn": "Action confirmations have been streamlined, so users experience fewer interruptions while still maintaining safety controls.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/api-plugin-confirmation-prompts",
-      "publishedAt": "2026-04-07T12:00:00.000Z",
-      "capturedAt": "2026-04-10T08:20:34.908Z",
-      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
-      "roadmapIds": [],
-      "releaseStage": "Update",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 72,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 日常利用時の体験変化が大きいため",
       "relatedDocuments": [
         {
           "title": "Microsoft 365 Copilot 用の MCP および API プラグインの確認プロンプト",
@@ -432,7 +416,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/plugin-confirmation-prompts"
         }
-      ]
+      ],
+      "publishedAt": "2026-04-07T12:00:00.000Z",
+      "capturedAt": "2026-04-10T08:20:34.908Z",
+      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 72,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 日常利用時の体験変化が大きいため"
     }
   ]
 }

@@ -1,7 +1,42 @@
 {
   "date": "2026-02-10",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:31:47.169Z",
   "events": [
+    {
+      "id": "m365-roadmap-rss-d2e4569dd481cf68",
+      "sourceId": "m365-roadmap-rss",
+      "sourceName": "Microsoft 365 Roadmap",
+      "sourceFamily": "Roadmap",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Microsoft 365 Copilot",
+      "title": "Microsoft Copilot (Microsoft 365): Ticket Status updates more frequently in ServiceNow Tickets Copilot Connector",
+      "titleJa": "ServiceNow Tickets Copilot Connector でチケット ステータスがより頻繁に更新されます",
+      "titleEn": "Microsoft Copilot (Microsoft 365): Ticket Status updates more frequently in ServiceNow Tickets Copilot Connector",
+      "summary": "ServiceNow Tickets Copilot connector did not use to correctly update the ticket status because of not ingesting inactive tickets. But now, the connector updates the change in ticket status more freque...",
+      "summaryJa": "ServiceNow チケット Copilot コネクタは、非アクティブなチケットを取り込んでいないため、チケット ステータスを正しく更新するために使用されませんでした。しかし現在、コネクタはチケットステータスの変更をより頻繁に更新します...",
+      "summaryEn": "ServiceNow Tickets Copilot connector did not use to correctly update the ticket status because of not ingesting inactive tickets. But now, the connector updates the change in ticket status more freque...",
+      "url": "https://www.microsoft.com/microsoft-365/roadmap?id=505437",
+      "publishedAt": "2026-02-10T12:00:00.000Z",
+      "capturedAt": "2026-10-14T17:31:47.169Z",
+      "sourceLastSeen": "2026-10-14T17:31:47.169Z",
+      "roadmapIds": [
+        "505437"
+      ],
+      "releaseStage": "Launched",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot",
+        "Launched",
+        "Microsoft Copilot (Microsoft 365)",
+        "Web",
+        "Worldwide (Standard Multi-Tenant)",
+        "作成者向け"
+      ],
+      "importanceScore": 122,
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
+    },
     {
       "id": "m365-copilot-release-notes-1e78c2b30a90c012",
       "sourceId": "m365-copilot-release-notes",
@@ -16,6 +51,26 @@
       "summaryJa": "管理者は、簡素化されたガイド付き OAuth エクスペリエンスを通じて、コネクタ認証をより迅速に設定できるようになりました。",
       "summaryEn": "Admins can now set up connector authentication faster through a simplified and guided OAuth experience.",
       "url": "https://learn.microsoft.com/en-us/microsoftsearch/configure-connector",
+      "relatedDocuments": [
+        {
+          "title": "Deploy connectors in the Microsoft 365 admin center",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview"
+        },
+        {
+          "title": "Enhance Copilot discovery of connectors content",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/enhance-copilot-discovery",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview"
+        },
+        {
+          "title": "結果のクラスターを管理する",
+          "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/result-cluster",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview"
+        }
+      ],
       "publishedAt": "2026-02-10T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -31,27 +86,7 @@
         "作成者向け"
       ],
       "importanceScore": 106,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Deploy connectors in the Microsoft 365 admin center",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview"
-        },
-        {
-          "title": "Enhance Copilot discovery of connectors content",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/enhance-copilot-discovery",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview"
-        },
-        {
-          "title": "結果のクラスターを管理する",
-          "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/result-cluster",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-5d49e0d03f97a4ff",
@@ -67,20 +102,6 @@
       "summaryJa": "現場チームは、チャンピオン コネクタのスタート ガイドを使用して、明確で一貫したリソースで顧客を Copilot 導入までガイドできます。",
       "summaryEn": "Field teams can use getting started guides of champion connectors to guide customers through Copilot adoption with clear, consistent resources.",
       "url": "https://learn.microsoft.com/en-us/microsoftsearch/configure-connector",
-      "publishedAt": "2026-02-10T12:00:00.000Z",
-      "capturedAt": "2026-04-10T08:20:34.908Z",
-      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
-      "roadmapIds": [],
-      "releaseStage": "Update",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 98,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため",
       "relatedDocuments": [
         {
           "title": "Deploy connectors in the Microsoft 365 admin center",
@@ -100,7 +121,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview"
         }
-      ]
+      ],
+      "publishedAt": "2026-02-10T12:00:00.000Z",
+      "capturedAt": "2026-04-10T08:20:34.908Z",
+      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 98,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため"
     },
     {
       "id": "m365-copilot-release-notes-3545c5c77833baac",
@@ -116,6 +151,20 @@
       "summaryJa": "開発者ポータルは、エージェント ブループリントの管理と構成をサポートするようになりました。これにより、開発者は、エンタープライズ グレードの ID、可観測性、通知、セキュリティ、Microsoft 365 データへの管理されたアクセスなど、Agent 365 の機能をエージェントに拡張できます。",
       "summaryEn": "Developer Portal now supports management and configuration of Agent Blueprints allowing developers to extend Agent 365 capabilities to their agents including enterprise-grade identity, observability, notifications, security, and governed access to Microsoft 365 data.",
       "url": "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/manage-your-apps-in-developer-portal#agent-identity-blueprint",
+      "relatedDocuments": [
+        {
+          "title": "開発者ポータルでアプリとエージェントの使用状況を分析する",
+          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/manage-your-apps-in-developer-portal"
+        },
+        {
+          "title": "アプリの SSO を有効にする",
+          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/manage-your-apps-in-developer-portal"
+        }
+      ],
       "publishedAt": "2026-02-10T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -131,21 +180,7 @@
         "作成者向け"
       ],
       "importanceScore": 94,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "開発者ポータルでアプリとエージェントの使用状況を分析する",
-          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/manage-your-apps-in-developer-portal"
-        },
-        {
-          "title": "アプリの SSO を有効にする",
-          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/manage-your-apps-in-developer-portal"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-edbe35f8b10e130f",
@@ -161,20 +196,6 @@
       "summaryJa": "宣言型エージェントにより、ユーザーはワークフローに留まることができます [Web] に関する更新。",
       "summaryEn": "URL-based dialogs in Declarative Agents allow users to open linked experiences without leaving Copilot, helping them stay focused.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/adaptive-card-edits",
-      "publishedAt": "2026-02-10T12:00:00.000Z",
-      "capturedAt": "2026-04-10T08:20:34.908Z",
-      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
-      "roadmapIds": [],
-      "releaseStage": "Preview",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 92,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
       "relatedDocuments": [
         {
           "title": "アダプティブ カード応答のインライン編集を許可する (プレビュー)",
@@ -194,7 +215,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/adaptive-card-edits"
         }
-      ]
+      ],
+      "publishedAt": "2026-02-10T12:00:00.000Z",
+      "capturedAt": "2026-04-10T08:20:34.908Z",
+      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
+      "roadmapIds": [],
+      "releaseStage": "Preview",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 92,
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-copilot-release-notes-efda0d516a27c3b6",
@@ -259,20 +294,6 @@
       "summaryJa": "ユーザーはエージェントのアダプティブ カードを更新して、ワークフローに常に最新の情報が表示されるようにすることができます。",
       "summaryEn": "Users can refresh Adaptive Cards in agents to ensure they always see the most current information in their workflows.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/adaptive-card-edits",
-      "publishedAt": "2026-02-10T12:00:00.000Z",
-      "capturedAt": "2026-04-10T08:20:34.908Z",
-      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
-      "roadmapIds": [],
-      "releaseStage": "Preview",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 92,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
       "relatedDocuments": [
         {
           "title": "アダプティブ カード応答のインライン編集を許可する (プレビュー)",
@@ -292,7 +313,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/adaptive-card-edits"
         }
-      ]
+      ],
+      "publishedAt": "2026-02-10T12:00:00.000Z",
+      "capturedAt": "2026-04-10T08:20:34.908Z",
+      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
+      "roadmapIds": [],
+      "releaseStage": "Preview",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 92,
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-copilot-release-notes-93ec2c66982da31c",
@@ -308,6 +343,16 @@
       "summaryJa": "Copilot を GitHub サーバーに接続して、問題、プル リクエスト、ナレッジ ベース コンテンツを取得して共同作業します。",
       "summaryEn": "Connect Copilot to your GitHub Server to retrieve and collaborate on issues, pull requests, and knowledge base content.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-02-10",
+      "relatedDocuments": [
+        {
+          "title": "GitHub Server Pull Requests connector overview",
+          "sourceTitle": "GitHub Server Pull Requests Microsoft 365 Copilot connector overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/github-server-pull-requests-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: connect, github, server, connector"
+        }
+      ],
       "publishedAt": "2026-02-10T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -321,17 +366,7 @@
         "作成者向け"
       ],
       "importanceScore": 88,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため",
-      "relatedDocuments": [
-        {
-          "title": "GitHub Server Pull Requests connector overview",
-          "sourceTitle": "GitHub Server Pull Requests Microsoft 365 Copilot connector overview",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/github-server-pull-requests-overview",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: connect, github, server, connector"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため"
     },
     {
       "id": "m365-copilot-release-notes-713b9ecb8c1a0804",
@@ -347,22 +382,6 @@
       "summaryJa": "Copilot コネクタを使用して Microsoft 365 Copilot を Miro に接続すると、Copilot でビジュアル ボードや図をクエリできるようになります。",
       "summaryEn": "Connect Microsoft 365 Copilot to Miro with Copilot connectors so you can query visual boards and diagrams in Copilot.",
       "url": "https://learn.microsoft.com/en-us/MicrosoftSearch/miro-deployment",
-      "publishedAt": "2026-02-10T12:00:00.000Z",
-      "capturedAt": "2026-04-10T08:20:34.908Z",
-      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
-      "roadmapIds": [
-        "515166"
-      ],
-      "releaseStage": "Update",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 88,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため",
       "relatedDocuments": [
         {
           "title": "Deploy the Miro connector",
@@ -382,7 +401,23 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/miro-deployment"
         }
-      ]
+      ],
+      "publishedAt": "2026-02-10T12:00:00.000Z",
+      "capturedAt": "2026-04-10T08:20:34.908Z",
+      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
+      "roadmapIds": [
+        "515166"
+      ],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 88,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため"
     },
     {
       "id": "m365-copilot-release-notes-9824c092481680b2",
@@ -398,22 +433,6 @@
       "summaryJa": "ServiceNow Tickets Copilot コネクタは、アクティブなチケットと非アクティブなチケットの両方を取り込むことで、チケットのステータスをより頻繁に更新します。",
       "summaryEn": "The ServiceNow Tickets Copilot connector updates ticket status more frequently by ingesting both active and inactive tickets.",
       "url": "https://learn.microsoft.com/en-us/microsoftsearch/servicenow-tickets-deployment#query-string",
-      "publishedAt": "2026-02-10T12:00:00.000Z",
-      "capturedAt": "2026-04-10T08:20:34.908Z",
-      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
-      "roadmapIds": [
-        "505437"
-      ],
-      "releaseStage": "Update",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 76,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため",
       "relatedDocuments": [
         {
           "title": "Deploy the ServiceNow Tickets Copilot connector",
@@ -433,7 +452,23 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-tickets-deployment"
         }
-      ]
+      ],
+      "publishedAt": "2026-02-10T12:00:00.000Z",
+      "capturedAt": "2026-04-10T08:20:34.908Z",
+      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
+      "roadmapIds": [
+        "505437"
+      ],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 76,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 外部サービス連携や拡張性に影響するため"
     }
   ]
 }

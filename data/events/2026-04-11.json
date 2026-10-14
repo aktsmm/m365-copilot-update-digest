@@ -1,6 +1,6 @@
 {
   "date": "2026-04-11",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:31:47.169Z",
   "events": [
     {
       "id": "m365-roadmap-rss-c692728a00ef56b0",
@@ -12,10 +12,20 @@
       "title": "Microsoft Copilot (Microsoft 365): Share agents to Teams",
       "titleJa": "Teams にエージェントを共有可能に",
       "titleEn": "Microsoft Copilot (Microsoft 365): Share agents to Teams",
-      "summary": "With this feature, users will be able to share their agent with a Microsoft Teams team. Users can search for and find teams in the agent sharing dialog box. Users can also send a notification to the main channel of that team to make members aware of an agent being shared with them, and as an easy way to install and st...",
+      "summary": "With this feature, users will be able to share their agent with a Microsoft Teams team. Users can search for and find teams in the agent sharing dialog box. Users can also send a notification to the main channel of that team to make members aware of an agent being shared with them, and as an easy way to install and...",
       "summaryJa": "ユーザーが作成したエージェントを Microsoft Teams チームに共有できます。エージェント共有ダイアログからチームを検索・選択でき、メインチャンネルへの通知送信も可能です。",
-      "summaryEn": "With this feature, users will be able to share their agent with a Microsoft Teams team. Users can search for and find teams in the agent sharing dialog box. Users can also send a notification to the main channel of that team to make members aware of an agent being shared with them, and as an easy way to install and st...",
+      "summaryEn": "With this feature, users will be able to share their agent with a Microsoft Teams team. Users can search for and find teams in the agent sharing dialog box. Users can also send a notification to the main channel of that team to make members aware of an agent being shared with them, and as an easy way to install and...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=557947",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 のエージェント管理ガイド",
+          "sourceTitle": "Agents admin guide for Microsoft 365",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide#set-agent-policies",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=557947",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: share, agent"
+        }
+      ],
       "publishedAt": "2026-04-11T12:00:00.000Z",
       "capturedAt": "2026-04-10T22:38:15.078Z",
       "sourceLastSeen": "2026-04-10T22:38:15.078Z",
@@ -30,25 +40,14 @@
       "tags": [
         "Microsoft 365 Copilot",
         "Launched",
-        "General Availability",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Copilot (Microsoft 365)",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "管理者向け",
         "作成者向け"
       ],
       "importanceScore": 134,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 のエージェント管理ガイド",
-          "sourceTitle": "Agents admin guide for Microsoft 365",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/agent-essentials/m365-agents-admin-guide#set-agent-policies",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=557947",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: share, agent"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-235c5034f8fbd4a0",
@@ -145,8 +144,8 @@
       "sourceId": "m365-roadmap-rss",
       "sourceName": "Microsoft 365 Roadmap",
       "sourceFamily": "Roadmap",
-      "productArea": "Microsoft 365 Copilot",
-      "section": "Microsoft 365 Copilot",
+      "productArea": "PowerPoint",
+      "section": "PowerPoint",
       "title": "PowerPoint: Create and Edit images with the model of your choice",
       "titleJa": "PowerPoint で画像生成・編集モデルを選択可能に",
       "titleEn": "PowerPoint: Create and Edit images with the model of your choice",
@@ -154,6 +153,16 @@
       "summaryJa": "PowerPoint の Copilot で画像を作成・編集する際に、OpenAI の GPT Image・Flux・Auto (スマート動的選択) から好みのモデルを選択できます。新規プレゼンテーションやページの生成時にも対応しています。",
       "summaryEn": "You can now choose your preferred image model including OpenAI’s GPT Image, Flux, or Auto for smart, dynamic selection when creating or editing images with Copilot in PowerPoint, or when generating a new presentation or page.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559479",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#july-01,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=559479",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: create, edit, image, model, your, choice"
+        }
+      ],
       "publishedAt": "2026-04-11T12:00:00.000Z",
       "capturedAt": "2026-04-10T22:38:15.078Z",
       "sourceLastSeen": "2026-04-10T22:38:15.078Z",
@@ -165,27 +174,15 @@
         "作成者向け"
       ],
       "tags": [
-        "Microsoft 365 Copilot",
-        "In development",
-        "General Availability",
-        "Worldwide (Standard Multi-Tenant)",
         "PowerPoint",
+        "In development",
         "Microsoft Copilot (Microsoft 365)",
         "Mac",
+        "Worldwide (Standard Multi-Tenant)",
         "作成者向け"
       ],
       "importanceScore": 120,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot のリリース ノート",
-          "sourceTitle": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#july-01,-2026",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=559479",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: create, edit, image, model, your, choice"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-f45afb1e1bca47cd",

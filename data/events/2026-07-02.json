@@ -1,6 +1,6 @@
 {
   "date": "2026-07-02",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:31:47.169Z",
   "events": [
     {
       "id": "m365-roadmap-rss-1641ece021812fa8",
@@ -16,6 +16,16 @@
       "summaryJa": "エージェント ノードを使用すると、推論をワークフローに直接埋め込むことができます。これは、手動の引き継ぎが減り、処理時間が短縮され、追加の開発作業を行わずに微妙な決定を処理できるワークフローを意味し、チームがエンドツーエンドのプロセスをより多く自動化し、運用オーバーヘッドを削減できるようにします。",
       "summaryEn": "The agent node lets you embed reasoning directly into your workflow. This means fewer manual handoffs, faster processing times, and workflows that can handle nuanced decisions without additional development effort, helping teams automate more of their end-to-end processes and reduce operational overhead.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=566998",
+      "relatedDocuments": [
+        {
+          "title": "エージェント フローにエージェント ノードを追加する",
+          "sourceTitle": "Add an agent node to an agent flow",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow#automation-scenarios",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=566998",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: invoke, agent, workflow, step, node"
+        }
+      ],
       "publishedAt": "2026-07-02T12:00:00.000Z",
       "capturedAt": "2026-07-02T04:20:48.615Z",
       "sourceLastSeen": "2026-07-02T04:20:48.615Z",
@@ -29,26 +39,14 @@
       "tags": [
         "Copilot Studio",
         "In development",
-        "General Availability",
-        "Preview",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Copilot (Microsoft 365)",
         "Microsoft Copilot Studio",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "作成者向け"
       ],
       "importanceScore": 120,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "エージェント フローにエージェント ノードを追加する",
-          "sourceTitle": "Add an agent node to an agent flow",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow#automation-scenarios",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=566998",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: invoke, agent, workflow, step, node"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-19d8580887ea6ea0",
@@ -110,9 +108,9 @@
       "title": "Microsoft Copilot Studio: Enforce safe sharing by detecting credential oversharing",
       "titleJa": "資格情報の過剰共有を検出して安全な共有を強制する",
       "titleEn": "Microsoft Copilot Studio: Enforce safe sharing by detecting credential oversharing",
-      "summary": "This feature helps organizations reduce security risk by preventing agents and flows from being shared when they rely on unsafe identities, such as maker credentials. By detecting identity oversharing early and enforcing safe‑sharing policies at publish and share time, customers can avoid identity leakage, privilege e...",
+      "summary": "This feature helps organizations reduce security risk by preventing agents and flows from being shared when they rely on unsafe identities, such as maker credentials. By detecting identity oversharing early and enforcing safe‑sharing policies at publish and share time, customers can avoid identity leakage, privilege...",
       "summaryJa": "この機能は、組織がメーカーの資格情報などの安全でない ID に依存している場合にエージェントとフローが共有されるのを防ぎ、セキュリティ リスクを軽減するのに役立ちます。 ID の過剰共有を早期に検出し、公開および共有時に安全な共有ポリシーを適用することで、お客様は ID の漏洩や権限の漏洩を回避できます。",
-      "summaryEn": "This feature helps organizations reduce security risk by preventing agents and flows from being shared when they rely on unsafe identities, such as maker credentials. By detecting identity oversharing early and enforcing safe‑sharing policies at publish and share time, customers can avoid identity leakage, privilege e...",
+      "summaryEn": "This feature helps organizations reduce security risk by preventing agents and flows from being shared when they rely on unsafe identities, such as maker credentials. By detecting identity oversharing early and enforcing safe‑sharing policies at publish and share time, customers can avoid identity leakage, privilege...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=566873",
       "publishedAt": "2026-07-02T12:00:00.000Z",
       "capturedAt": "2026-07-02T04:20:48.615Z",
@@ -128,12 +126,10 @@
       "tags": [
         "Copilot Studio",
         "In development",
-        "General Availability",
-        "Preview",
-        "Worldwide (Standard Multi-Tenant)",
         "Microsoft Copilot (Microsoft 365)",
         "Microsoft Copilot Studio",
         "Web",
+        "Worldwide (Standard Multi-Tenant)",
         "管理者向け",
         "作成者向け"
       ],
@@ -397,6 +393,16 @@
       "summaryJa": "Copilot コネクタは、Webhook イベント通知を使用して更新をより頻繁に同期することで、コンテンツの鮮度を向上させます。 Azure DevOps、Jira クラウド、Confluence クラウド、Trello、Asana、Bitbucket、GitHub、Gitlab のコネクタが対象になります。",
       "summaryEn": "Copilot connectors will offer improved content freshness with more frequent sync of updates using webhook event notifications. The following connectors are in scope - Azure DevOps, Jira cloud, Confluence cloud, Trello, Asana, Bitbucket, GitHub and Gitlab.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=505442",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=505442",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: improv, content, freshnes, using, connector, webhooks-l, notification"
+        }
+      ],
       "publishedAt": "2026-07-02T12:00:00.000Z",
       "capturedAt": "2026-07-02T04:20:48.615Z",
       "sourceLastSeen": "2026-07-02T04:20:48.615Z",
@@ -410,26 +416,14 @@
       "tags": [
         "Microsoft 365 Copilot",
         "In development",
-        "General Availability",
-        "Preview",
-        "GCC",
-        "GCC High",
         "Microsoft Copilot (Microsoft 365)",
         "Web",
+        "GCC",
+        "GCC High",
         "作成者向け"
       ],
       "importanceScore": 88,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 外部サービス連携や拡張性に影響するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot のリリース ノート",
-          "sourceTitle": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-11,-2026",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=505442",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: improv, content, freshnes, using, connector, webhooks-l, notification"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 外部サービス連携や拡張性に影響するため"
     }
   ]
 }

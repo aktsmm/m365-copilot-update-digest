@@ -1,7 +1,46 @@
 {
   "date": "2025-12-23",
-  "generatedAt": "2026-10-14T11:50:47.991Z",
+  "generatedAt": "2026-10-14T17:31:47.169Z",
   "events": [
+    {
+      "id": "m365-roadmap-rss-30fb05b276164a4e",
+      "sourceId": "m365-roadmap-rss",
+      "sourceName": "Microsoft 365 Roadmap",
+      "sourceFamily": "Roadmap",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Microsoft 365 Copilot",
+      "title": "Microsoft Copilot (Microsoft 365): Calendar Search in M365 Copilot Search",
+      "titleJa": "M365 Copilot Search でのカレンダー検索",
+      "titleEn": "Microsoft Copilot (Microsoft 365): Calendar Search in M365 Copilot Search",
+      "summary": "Find meetings—and everything connected to them, in seconds. Copilot Search makes it effortless to locate any meeting, even if you only remember a few details. Just type what comes to mind—like “last w...",
+      "summaryJa": "会議とそれに関連するすべてのものを数秒で見つけます。 Copilot Search を使用すると、詳細を少ししか覚えていない場合でも、会議を簡単に見つけることができます。 「最近...」のように、思いついたことを入力するだけです。",
+      "summaryEn": "Find meetings—and everything connected to them, in seconds. Copilot Search makes it effortless to locate any meeting, even if you only remember a few details. Just type what comes to mind—like “last w...",
+      "url": "https://www.microsoft.com/microsoft-365/roadmap?id=501454",
+      "publishedAt": "2025-12-23T12:00:00.000Z",
+      "capturedAt": "2026-10-14T17:31:47.169Z",
+      "sourceLastSeen": "2026-10-14T17:31:47.169Z",
+      "roadmapIds": [
+        "501454"
+      ],
+      "releaseStage": "Launched",
+      "roleTags": [
+        "管理者向け",
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot",
+        "Launched",
+        "Microsoft Copilot (Microsoft 365)",
+        "Targeted Release",
+        "Desktop",
+        "Web",
+        "Worldwide (Standard Multi-Tenant)",
+        "管理者向け",
+        "作成者向け"
+      ],
+      "importanceScore": 134,
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
+    },
     {
       "id": "m365-copilot-release-notes-9199e17ffdba2a11",
       "sourceId": "m365-copilot-release-notes",
@@ -210,6 +249,16 @@
       "summaryJa": "Copilot Chat は、GPT-5 をデフォルト モデルとして使用し、より高速でスマートな結果を提供します。",
       "summaryEn": "Copilot Chat delivers faster, smarter results using GPT-5 as the default model.",
       "url": "https://www.microsoft.com/microsoft-365/blog/2025/08/07/available-today-gpt-5-in-microsoft-365-copilot/?msockid=281b58ceea286c6226164ec5eb056dd6",
+      "relatedDocuments": [
+        {
+          "title": "2025 Microsoft 365 Copilot リリース ノート",
+          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#december-23,-2025",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: gpt-5, power, chat, default"
+        }
+      ],
       "publishedAt": "2025-12-23T12:00:00.000Z",
       "capturedAt": "2026-04-10T08:20:34.908Z",
       "sourceLastSeen": "2026-05-06T04:05:02.526Z",
@@ -223,17 +272,7 @@
         "作成者向け"
       ],
       "importanceScore": 90,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "2025 Microsoft 365 Copilot リリース ノート",
-          "sourceTitle": "2025 Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#december-23,-2025",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: gpt-5, power, chat, default"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-291199c28fab4ea0",
@@ -462,22 +501,6 @@
       "summaryJa": "Agent Builder は、エージェントの作成時に最大 512 MB のファイル アップロードをサポートするようになりました。これは、より大きなファイルに最適です。",
       "summaryEn": "Agent Builder now supports file uploads up to 512 MB when creating agents, ideal for larger files.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-add-knowledge#embedded-file-content",
-      "publishedAt": "2025-12-23T12:00:00.000Z",
-      "capturedAt": "2026-04-10T08:20:34.908Z",
-      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
-      "roadmapIds": [
-        "500375"
-      ],
-      "releaseStage": "Update",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Microsoft 365 Copilot extensibility",
-        "作成者向け"
-      ],
-      "importanceScore": 88,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため",
       "relatedDocuments": [
         {
           "title": "エージェント ビルダーでエージェントにナレッジ ソースを追加する",
@@ -497,7 +520,23 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge"
         }
-      ]
+      ],
+      "publishedAt": "2025-12-23T12:00:00.000Z",
+      "capturedAt": "2026-04-10T08:20:34.908Z",
+      "sourceLastSeen": "2026-05-06T04:05:02.526Z",
+      "roadmapIds": [
+        "500375"
+      ],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 88,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-e7a8484aa681b025",
