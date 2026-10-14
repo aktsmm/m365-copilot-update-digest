@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-009336dd54a760c0",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Planner エージェントで AI によるステータス レポートを作成（開発中）",
+        "subtitleJa": "プランのデータから、関係者向けの報告を数分で作れるようになります",
+        "en": "Planner: AI-generated Status Reports in Planner Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [],
+        "status": "In development",
+        "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "m365-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Planner",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Planner でプランを管理するプロジェクト リーダー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プランのデータから、状況・進捗・リスク・次の予定をまとめた報告を作れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は PowerShell で Planner エージェントの利用範囲を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T22:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Planner エージェントに依頼するだけで、**タスク データから関係者向けのステータス レポート**が生成されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Planner エージェントにレポートを依頼すると、プランのタスク データを取得", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "全体の状況・進捗・リスク・次の予定を、読みやすい文章にまとめる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供範囲は Worldwide（標準マルチテナント）の Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Planner エージェントの利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-14T22:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "有効・無効は Set-PlannerConfiguration の -AllowPlannerCopilot で切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T22:10:00Z" }] },
+            { "text": "設定の反映に最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T22:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-14T22:10:00Z" }] } },
+        { "termKey": "status-report", "term": "ステータス レポート", "type": "term", "oneLine": { "text": "プランの状況・進捗・リスク・次の予定をまとめた報告。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T22:10:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567886",
+        "learn": [{ "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
