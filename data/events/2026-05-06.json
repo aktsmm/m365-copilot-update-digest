@@ -1,6 +1,6 @@
 {
   "date": "2026-05-06",
-  "generatedAt": "2026-06-16T21:19:06.902Z",
+  "generatedAt": "2026-10-14T11:50:47.991Z",
   "events": [
     {
       "id": "m365-roadmap-rss-f597e984b46b6241",
@@ -42,7 +42,17 @@
         "管理者向け"
       ],
       "importanceScore": 138,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / ライセンス設計や展開判断に直結するため"
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / ライセンス設計や展開判断に直結するため",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Copilot Chatの概要",
+          "sourceTitle": "Overview of Microsoft Copilot Chat",
+          "url": "https://learn.microsoft.com/ja-jp/copilot/overview#where-to-access-copilot-chat",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=494830",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: acces, chat, your, app"
+        }
+      ]
     },
     {
       "id": "m365-copilot-techcommunity-blog-2ec028f142b0ed83",
@@ -73,7 +83,27 @@
         "作成者向け"
       ],
       "importanceScore": 137,
-      "importanceReason": "GA になり実運用へ直結するため / 管理やガバナンスへの影響が大きいため"
+      "importanceReason": "GA になり実運用へ直結するため / 管理やガバナンスへの影響が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Federated connectors overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/federated-copilot-connectors---bringing-real-time-enterprise-data-within-microso/4515993"
+        },
+        {
+          "title": "Set up custom federated connectors",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors",
+          "provenance": "article",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/federated-copilot-connectors---bringing-real-time-enterprise-data-within-microso/4515993"
+        },
+        {
+          "title": "Manage federated connector availability",
+          "url": "https://learn.microsoft.com/en-gb/microsoft-365/copilot/connectors/manage-federated-connectors",
+          "provenance": "article",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/federated-copilot-connectors---bringing-real-time-enterprise-data-within-microso/4515993"
+        }
+      ]
     },
     {
       "id": "copilot-studio-techcommunity-blog-81ebfe77a18d2262",
@@ -102,7 +132,21 @@
         "作成者向け"
       ],
       "importanceScore": 133,
-      "importanceReason": "GA になり実運用へ直結するため / 導入状況の可視化や分析に関わるため"
+      "importanceReason": "GA になり実運用へ直結するため / 導入状況の可視化や分析に関わるため",
+      "relatedDocuments": [
+        {
+          "title": "他のユーザーとエージェントを共有する",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots#share-an-agents-analytics",
+          "provenance": "article",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/read-only-analytics-access-and-custom-metrics-now-available-in-microsoft-copilot/4516824"
+        },
+        {
+          "title": "カスタムメトリクスでエージェントを監視する(プレビュー)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-custom-metrics",
+          "provenance": "article",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/read-only-analytics-access-and-custom-metrics-now-available-in-microsoft-copilot/4516824"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-da949984034495ee",
@@ -138,7 +182,17 @@
         "管理者向け"
       ],
       "importanceScore": 124,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / コスト配分や予算管理の見直しに直結するため"
+      "importanceReason": "今後の展開計画や事前準備に影響するため / コスト配分や予算管理の見直しに直結するため",
+      "relatedDocuments": [
+        {
+          "title": "Copilot 用のファイルをクリーンし、ストレージを解放するための保留をオーバーライドする",
+          "sourceTitle": "Override holds to clean up files for Copilot and reclaim storage",
+          "url": "https://learn.microsoft.com/ja-jp/purview/priority-cleanup-onedrive-sharepoint",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=561208",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: data, lifecycle, management, archive, onedrive, sharepoint, file, under, retention"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-e5547da3ef505008",
@@ -214,7 +268,17 @@
         "作成者向け"
       ],
       "importanceScore": 120,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Work IQ の概要",
+          "sourceTitle": "Work IQ overview",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=559021",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: work, api, unifi, rest, endpoint, agent, workflow"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-34551086143d61ca",
@@ -259,7 +323,17 @@
         "作成者向け"
       ],
       "importanceScore": 116,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-25,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=559310",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: updat, chat-first, design, mobile"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-f6c0b824de6201f0",
@@ -295,7 +369,17 @@
         "作成者向け"
       ],
       "importanceScore": 108,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Work IQ API の概要",
+          "sourceTitle": "Work IQ API overview",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview#api-examples",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=559020",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: work, api, remote, mcp, server, support"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-3402a18c98fd06ff",
@@ -335,7 +419,17 @@
         "作成者向け"
       ],
       "importanceScore": 96,
-      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため"
+      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#july-01,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=422321",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: boost, productivity, using, voice, onenote, mobile, android"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-6603810ed1b088e9",
@@ -375,7 +469,17 @@
         "作成者向け"
       ],
       "importanceScore": 96,
-      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため"
+      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#july-01,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=422320",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: boost, productivity, using, voice, onenote, mobile, iphone"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-ab04b5480519c118",
@@ -412,7 +516,17 @@
         "管理者向け"
       ],
       "importanceScore": 92,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Purview を使用して、Entra登録済みの AI アプリのデータ セキュリティ & コンプライアンスを管理する",
+          "sourceTitle": "Use Microsoft Purview to manage data security & compliance for Entra-registered AI apps",
+          "url": "https://learn.microsoft.com/ja-jp/purview/ai-entra-registered#capabilities-supported",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=561209",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: data, lifecycle, management, insight, policy, recommendation, app, interaction, better, security, compliance, posture"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-d6787e630d5c2701",
@@ -452,7 +566,17 @@
         "作成者向け"
       ],
       "importanceScore": 84,
-      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため"
+      "importanceReason": "管理やガバナンスへの影響が大きいため / 文書や資料作成の体験変化が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-25,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=422322",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: onenote, bring, note, video, image, android"
+        }
+      ]
     },
     {
       "id": "m365-roadmap-rss-b0e739e2438d49bc",
@@ -533,7 +657,17 @@
         "作成者向け"
       ],
       "importanceScore": 76,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理者の運用判断に関わるため"
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理者の運用判断に関わるため",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 および Microsoft Copilot のための Microsoft 米国政府クラウド環境について理解する",
+          "sourceTitle": "Understand Microsoft U.S. government cloud environments for Microsoft 365 and Microsoft Copilot",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview#microsoft-copilot-in-us-government-cloud-environments",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: form, government, cloud"
+        }
+      ]
     }
   ]
 }
