@@ -758,3 +758,29 @@ h3 {
 .hero { padding-top: 22px; padding-bottom: 22px; }
 .hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
 .metric-card { padding: 14px 18px; }
+
+/* 種類（段階）の色分け: カードの左端の帯・バッジ・絞り込みチップで同じ色を使う */
+.update-card[data-kind] { border-left: 6px solid var(--kind-color, #5b6777); }
+[data-kind="ga"], .chip-kind-ga { --kind-color: #1b7f3b; }
+[data-kind="preview"], .chip-kind-preview { --kind-color: #7a4fd0; }
+[data-kind="rolling-out"], .chip-kind-rolling-out { --kind-color: #0b6bcb; }
+[data-kind="in-development"], .chip-kind-in-development { --kind-color: #d98b00; }
+[data-kind="retirement"], .chip-kind-retirement { --kind-color: #c62828; }
+[data-kind="update"], .chip-kind-update { --kind-color: #5b6777; }
+.badge-kind-in-development { background: rgba(217, 139, 0, 0.16); color: #a96a00; }
+.check-chip[class*="chip-kind-"] { border-color: var(--kind-color); color: var(--kind-color); font-weight: 700; }
+.check-chip[class*="chip-kind-"]:has(input:checked) { background: var(--kind-color); color: #fff; }
+.check-chip[class*="chip-kind-"] input { accent-color: var(--kind-color); }
+
+/* カテゴリは塗りつぶさず、色の枠で種類と区別する */
+.badge-cat { background: #fff; border: 1.5px solid var(--cat-color, #6b778a); color: var(--cat-color, #6b778a); font-weight: 600; }
+.badge-cat-copilot-chat, .chip-cat-copilot-chat { --cat-color: #0e7c86; }
+.badge-cat-agents, .chip-cat-agents { --cat-color: #a23b8e; }
+.badge-cat-m365-apps, .chip-cat-m365-apps { --cat-color: #3a5ba0; }
+.badge-cat-security-compliance, .chip-cat-security-compliance { --cat-color: #b4531a; }
+.badge-cat-admin, .chip-cat-admin { --cat-color: #7a6a1a; }
+.badge-cat-viva-others, .chip-cat-viva-others { --cat-color: #4a7a2a; }
+.badge-cat-other, .chip-cat-other { --cat-color: #6b778a; }
+.check-chip[class*="chip-cat-"] { border-color: var(--cat-color); color: var(--cat-color); }
+.check-chip[class*="chip-cat-"]:has(input:checked) { background: var(--cat-color); color: #fff; }
+.check-chip[class*="chip-cat-"] input { accent-color: var(--cat-color); }

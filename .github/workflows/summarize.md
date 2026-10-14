@@ -41,9 +41,9 @@ safe-outputs:
     if-no-changes: ignore
 ---
 
-# M365 Copilot Update Digest — Japanese summaries
+# Microsoft Copilot Update Digest — Japanese summaries
 
-You maintain the Japanese headlines and summaries shown on the M365 Copilot Update Digest site and slides.
+You maintain the Japanese headlines and summaries shown on the Microsoft Copilot Update Digest site and slides.
 
 ## Inputs
 

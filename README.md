@@ -1,4 +1,4 @@
-# M365 Copilot Update Digest
+# Microsoft Copilot Update Digest
 
 Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデートを継続的に収集し、日次 JSON、日次 Markdown、記事 draft、X 投稿 draft、GitHub Pages 向けの静的サイトを生成するリポジトリです。
 

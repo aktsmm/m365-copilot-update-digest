@@ -71,7 +71,7 @@ const TEXT = {
     demoNavLabel: "デモ一覧",
     unofficialBadge: "Unofficial update digest",
     headerLead: "非公式アップデートダイジェスト",
-    heroTitle: "M365 Copilot の更新を、埋もれさせない。",
+    heroTitle: "Microsoft Copilot の更新を、埋もれさせない。",
     heroCopy:
       "Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデートを継続収集し、重要更新と新着を分けて追えるように整理します。まずは今日 / 今週の重要更新を見て、必要に応じて直近の新着、製品別一覧、週間まとめへ進めます。",
     statsUpdates: "追跡中の更新",
@@ -115,7 +115,7 @@ const TEXT = {
     searchLink: "検索ページを開く",
     aboutTitle: "About",
     aboutIntro:
-      "M365 Copilot Update Digest は、Microsoft 365 Copilot、Copilot Studio、Agent Builder に関する公開アップデートを継続的に整理する非公式サイトです。",
+      "Microsoft Copilot Update Digest は、Microsoft 365 Copilot、Copilot Studio、Agent Builder に関する公開アップデートを継続的に整理する非公式サイトです。",
     aboutBody1:
       "公式ブログ、Microsoft Learn、release notes、release plan などの公開ソースをもとに、重要更新と新着を分けて見やすく整理します。",
     aboutBody2:
@@ -148,7 +148,7 @@ const TEXT = {
     lastUpdatedLabel: "最終更新",
     lastCheckedLabel: "最終確認",
     footerLead:
-      "Public-source based, unofficial curation for M365 Copilot updates.",
+      "Public-source based, unofficial curation for Microsoft Copilot updates.",
     searchInputPlaceholder: "更新、製品、タグ、日付で検索",
     searchStatusReady: "キーワードを入力すると結果を表示します。",
     searchStatusLoading: "検索インデックスを読み込み中...",
@@ -168,7 +168,7 @@ const TEXT = {
     demoNavLabel: "Demo sites",
     unofficialBadge: "Unofficial update digest",
     headerLead: "Unofficial update digest",
-    heroTitle: "Keep M365 Copilot updates from getting buried.",
+    heroTitle: "Keep Microsoft Copilot updates from getting buried.",
     heroCopy:
       "This site continuously collects public Microsoft 365 Copilot, Copilot Studio, and Agent Builder updates, separating high-impact changes from recent arrivals. Start with the most important changes, then move into recent items, product views, and weekly summaries.",
     statsUpdates: "Tracked updates",
@@ -212,7 +212,7 @@ const TEXT = {
     searchLink: "Open search",
     aboutTitle: "About",
     aboutIntro:
-      "M365 Copilot Update Digest is an unofficial site that continuously organizes public updates about Microsoft 365 Copilot, Copilot Studio, and Agent Builder.",
+      "Microsoft Copilot Update Digest is an unofficial site that continuously organizes public updates about Microsoft 365 Copilot, Copilot Studio, and Agent Builder.",
     aboutBody1:
       "It uses public sources such as official blogs, Microsoft Learn, release notes, and release plans, while separating high-impact changes from recent arrivals.",
     aboutBody2:
@@ -245,7 +245,7 @@ const TEXT = {
     lastUpdatedLabel: "Last updated",
     lastCheckedLabel: "Last checked",
     footerLead:
-      "Public-source based, unofficial curation for M365 Copilot updates.",
+      "Public-source based, unofficial curation for Microsoft Copilot updates.",
     searchInputPlaceholder: "Search by update, product, tag, or date",
     searchStatusReady: "Type a keyword to start searching.",
     searchStatusLoading: "Loading search index...",
@@ -270,7 +270,7 @@ const DEMO_NAV_ITEMS = [
     href: "https://aktsmm.github.io/m365-message-center-dashboard/",
   },
   {
-    label: "M365 Copilot Update Digest",
+    label: "Microsoft Copilot Update Digest",
     href: "https://aktsmm.github.io/m365-copilot-update-digest/",
     current: true,
   },
@@ -1224,7 +1224,7 @@ function renderSearchPage(locale, siteMeta) {
 
 async function main() {
   const siteMeta = await readJson(siteMetaFile, {
-    siteName: "M365 Copilot Update Digest",
+    siteName: "Microsoft Copilot Update Digest",
     taglineJa: "",
     taglineEn: "",
     repositoryUrl: "",

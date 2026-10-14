@@ -3,7 +3,7 @@ name: Auto-merge summaries
 # summarize エージェントが作った PR を、データだけの変更で、main 側の信頼できるコードで検証できたときだけマージする。
 on:
   workflow_run:
-    workflows: ["M365 Copilot Update Digest — Japanese summaries"]
+    workflows: ["Microsoft Copilot Update Digest — Japanese summaries"]
     types: [completed]
   schedule:
     - cron: "47 */3 * * *"

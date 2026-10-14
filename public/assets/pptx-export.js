@@ -9,7 +9,7 @@
   const root = new URL("../", scriptSrc);
   const LIMIT = 80;
   const FONT = "Yu Gothic";
-  const KIND_COLOR = { ga: "1B7F3B", preview: "7A4FD0", "rolling-out": "0B6BCB", "in-development": "5B6777", retirement: "C62828", update: "5B6777" };
+  const KIND_COLOR = { ga: "1B7F3B", preview: "7A4FD0", "rolling-out": "0B6BCB", "in-development": "D98B00", retirement: "C62828", update: "5B6777" };
   const ACT = { yes: "要対応", optional: "任意", no: "対応不要", unknown: "情報" };
   const ACT_LINE = { yes: "C62828", optional: "1B7F3B", no: "0B6BCB", unknown: "0B6BCB" };
   const plain = (text) => String(text).replace(/\*\*/g, "");
@@ -136,7 +136,7 @@
       const PptxGenJS = await loadPptx();
       const pptx = new PptxGenJS();
       pptx.layout = "LAYOUT_WIDE";
-      pptx.title = "M365 Copilot Update Digest";
+      pptx.title = "Microsoft Copilot Update Digest";
       const slides = [];
       for (let i = 0; i < unique.length; i += 1) {
         status.textContent = `${i + 1} / ${unique.length}`;
