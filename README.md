@@ -12,6 +12,8 @@ Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデー�
 
 ## できること
 
+- トップに、期間（開始・終了・過去30日/7日）、重要度、全文検索、種類、カテゴリを 1 つのコンパクトなパネルにまとめ、結果をその場で絞り込む。表示中の更新を JSON / PDF（まとめ）/ PPTX で保存できる（`public/assets/explorer.js`）
+- 「新規」は発行日基準の過去1日 / 過去7日の件数（以前は最後の収集 run だけの件数で、多くの場合 0 になっていた）
 - カテゴリ（Copilot Chat / エージェント・拡張 / Office・Teams アプリ / セキュリティ・コンプライアンス / 管理・ライセンス など）と重要度（重要 / 注目 / 通常）で絞り込む（`config/categories.json`）
 - 重要・注目の更新を、直近 3 か月分、1 更新 1 枚のスライド JSON にし、パスワード保護した PDF も公開する（[docs/slide-schema.md](docs/slide-schema.md)）
 - 静的 JSON API を公開する（[docs/api.md](docs/api.md)）

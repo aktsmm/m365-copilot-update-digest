@@ -63,8 +63,7 @@
   }
 
   async function run(button, status) {
-    const root_ = button.closest("[data-card-filters]") || document;
-    const keys = [...root_.querySelectorAll("[data-card-item][data-slide-key]:not(.hidden)")].map((card) => card.getAttribute("data-slide-key"));
+    const keys = window.digestVisibleSlideJsonKeys ? window.digestVisibleSlideJsonKeys() : [];
     const unique = [...new Set(keys)].slice(0, LIMIT);
     if (unique.length === 0) {
       window.alert("表示中のスライドがありません");

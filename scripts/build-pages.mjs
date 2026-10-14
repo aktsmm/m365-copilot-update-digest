@@ -5,7 +5,7 @@ import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
 import { applyAgentSummaries, loadAgentSummaries } from "./lib/agent-summaries.mjs";
 import { brokenSources } from "./lib/coverage.mjs";
 import { buildApi } from "./lib/api.mjs";
-import { KIND_IDS, KIND_LABEL, buildSlide, selectSlideEvents, slideKind, stableStringify, validateSlide } from "./lib/slides.mjs";
+import { KIND_IDS, KIND_LABEL, KIND_LABEL_EN, buildSlide, selectSlideEvents, slideKind, stableStringify, validateSlide } from "./lib/slides.mjs";
 import { matchingRecord, withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
 import {
@@ -78,8 +78,8 @@ const TEXT = {
     statsUpdatesDetail: "重複除去後の累計件数",
     statsSources: "監視ソース",
     statsSourcesDetail: "現在有効な公開ソース数",
-    statsRun: "直近 run の新規",
-    statsRunDetail: "最後の collect で検知した件数",
+    statsRun: "新規（発行日基準）",
+    statsRunDetail: "過去1日 / 過去7日",
     importantTitle: "今日 / 今週の重要更新",
     recentTitle: "直近72時間の新着",
     filterTitle: "製品別アップデート",
@@ -175,8 +175,8 @@ const TEXT = {
     statsUpdatesDetail: "Deduplicated cumulative count",
     statsSources: "Sources",
     statsSourcesDetail: "Active public sources",
-    statsRun: "Latest run new items",
-    statsRunDetail: "Detected in the most recent collect run",
+    statsRun: "New (by publish date)",
+    statsRunDetail: "Last 1 day / last 7 days",
     importantTitle: "Important updates for today / this week",
     recentTitle: "New in the last 72 hours",
     filterTitle: "Updates by product",
@@ -765,6 +765,16 @@ function renderSearchShell(locale, depth, text, options = {}) {
   `;
 }
 
+function buildFacets(events) {
+  const usedCategories = new Set(events.flatMap((event) => event.categories || []));
+  const usedKinds = new Set(events.map((event) => slideKind(event)));
+  return {
+    kinds: KIND_IDS.filter((id) => usedKinds.has(id)).map((id) => ({ id, label: KIND_LABEL[id], labelEn: KIND_LABEL_EN[id] })),
+    categories: categoryConfig.categories.filter((category) => usedCategories.has(category.id)).map(({ id, label, labelEn }) => ({ id, label, labelEn })),
+    importanceLevels: categoryConfig.importanceLevels.map(({ id, label, labelEn }) => ({ id, label, labelEn })),
+  };
+}
+
 function buildSearchIndex(events) {
   return events.map((event) => ({
     id: event.id,
@@ -780,6 +790,11 @@ function buildSearchIndex(events) {
     url: event.url,
     relatedDocuments: event.relatedDocuments || [],
     relatedDocumentStatus: event.relatedDocumentStatus,
+    categories: event.categories || [],
+    importance: event.importanceLevel || "normal",
+    importanceScore: event.importanceScore ?? 0,
+    kind: slideKind(event),
+    slideKey: slideKeys.has(event.id) ? event.id : null,
     detailPath: `daily/${toDateOnly(event.publishedAt)}/#${encodeURIComponent(`update-${event.id}`)}`,
   }));
 }
@@ -838,6 +853,13 @@ function renderIndexPage(
   const recentEvents = sortEventsByRecency(
     recentWindow.length > 0 ? recentWindow : sorted,
   ).slice(0, 24);
+  const todayJst = new Date(now.getTime() + 9 * 3600_000).toISOString().slice(0, 10);
+  const daysAgo = (days) => new Date(Date.parse(`${todayJst}T00:00:00Z`) - days * 86400000).toISOString().slice(0, 10);
+  const publishedJst = (event) => new Date(Date.parse(event.publishedAt) + 9 * 3600_000).toISOString().slice(0, 10);
+  const newCounts = {
+    day: sorted.filter((event) => publishedJst(event) >= daysAgo(1)).length,
+    week: sorted.filter((event) => publishedJst(event) >= daysAgo(6)).length,
+  };
   const recentDaily = dailyLogs.slice(0, 12);
   const recentWeekly = weeklyGroups.slice(0, 6);
   const sourceTypeCounts = ["learn", "blog", "roadmap"]
@@ -879,36 +901,13 @@ function renderIndexPage(
       </div>
       <div class="metric-grid">
         <article class="metric-card"><span>${escapeHtml(text.statsUpdates)}</span><strong>${escapeHtml(String(sorted.length))}</strong><small>${escapeHtml(text.statsUpdatesDetail)}</small></article>
-        <article class="metric-card"><span>${escapeHtml(text.statsRun)}</span><strong>${escapeHtml(String(runSummary.newEventCount ?? 0))}</strong><small>${escapeHtml(text.statsRunDetail)}</small></article>
+        <article class="metric-card"><span>${escapeHtml(text.statsRun)}</span><strong>${escapeHtml(`${newCounts.day} / ${newCounts.week}`)}</strong><small>${escapeHtml(text.statsRunDetail)}</small></article>
       </div>
     </section>
 
-    ${renderSearchShell(locale, locale === "en" ? 1 : 0, text, {
-      sectionClass: "section-block search-shell home-search-shell",
-      limit: 6,
-      heading: text.homeSearchTitle,
-      body: text.homeSearchBody,
-      showLink: true,
-      linkHref: relativeHref(
-        locale === "en" ? 1 : 0,
-        localePath(locale, "search/"),
-      ),
-    })}
-
-    <section class="section-block">
-      ${renderSectionHeading(text.importantTitle)}
-      <div class="card-grid">${importantEvents.length > 0 ? importantEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
-    </section>
+    ${renderExplorerShell(locale)}
 
     ${runSummary.coverage && runSummary.coverage.status !== "complete" ? `<p class="section-note">${escapeHtml(locale === "en" ? `Some sources were not fully collected (${brokenSources(runSummary.coverage).map((source) => source.sourceId).join(", ")}). A short list does not mean zero updates.` : `一部のソースを取得できていません（${brokenSources(runSummary.coverage).map((source) => source.sourceId).join("、")}）。件数が少なくても 0 件とは限りません。`)}</p>` : ""}
-    <section class="section-block" data-card-filters>
-      ${renderSectionHeading(text.recentTitle)}
-      ${recentEvents.length > 0 ? renderFilterToolbar(recentEvents, text, locale) : ""}
-      ${slideKeys.size > 0 ? `<div class="download-toolbar" data-download-toolbar><button type="button" data-download-merged hidden>${escapeHtml(text.downloadMerged)}</button><button type="button" data-download-pptx hidden>${escapeHtml(text.downloadPptx)}</button><span class="download-status" data-download-status></span></div>` : ""}
-      ${recentWindow.length === 0 ? `<p class="section-note">${escapeHtml(text.noRecent)}</p>` : ""}
-      <div class="card-grid" data-filter-cards>${recentEvents.length > 0 ? recentEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
-      <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
-    </section>
 
     <section class="section-block two-column">
       <div class="column-card">
@@ -947,11 +946,78 @@ function renderIndexPage(
     alternatePath: locale === "en" ? "" : "en/",
     siteMeta,
     bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(searchIndexHref(locale === "en" ? 1 : 0, siteMeta))}" data-search-base="${escapeHtml(relativeHref(locale === "en" ? 1 : 0, ""))}"`,
-    extraScripts: [relativeHref(locale === "en" ? 1 : 0, "assets/search.js")],
+    extraScripts: [withAssetVersion(relativeHref(locale === "en" ? 1 : 0, "assets/explorer.js"))],
     content,
   });
 }
 
+const EXPLORER_TEXT = {
+  ja: {
+    title: "最新の更新",
+    start: "開始",
+    end: "終了",
+    last30: "過去30日",
+    last7: "過去7日",
+    importance: "重要度",
+    all: "すべて",
+    search: "タイトル・要約・製品で検索",
+    kinds: "種類",
+    categories: "カテゴリ",
+    more: "もっと見る",
+    empty: "条件に合う更新がありません。",
+    pdf: "PDF",
+    pptx: "PPTX",
+    json: "JSON",
+  },
+  en: {
+    title: "Latest updates",
+    start: "From",
+    end: "To",
+    last30: "Last 30 days",
+    last7: "Last 7 days",
+    importance: "Importance",
+    all: "All",
+    search: "Search title, summary or product",
+    kinds: "Type",
+    categories: "Category",
+    more: "Show more",
+    empty: "No updates match the filters.",
+    pdf: "PDF",
+    pptx: "PPTX",
+    json: "JSON",
+  },
+};
+
+function renderExplorerShell(locale) {
+  const t = EXPLORER_TEXT[locale];
+  return `
+    <section class="section-block explorer" data-explorer data-locale="${escapeHtml(locale)}">
+      <h2 class="explorer-title">${escapeHtml(t.title)}</h2>
+      <p class="explorer-period" data-explorer-period></p>
+      <div class="filter-panel">
+        <div class="filter-row">
+          <label>${escapeHtml(t.start)} <input type="date" data-ex-start /></label>
+          <label>${escapeHtml(t.end)} <input type="date" data-ex-end /></label>
+          <button type="button" class="btn-outline" data-ex-preset="30">${escapeHtml(t.last30)}</button>
+          <button type="button" class="btn-outline" data-ex-preset="7">${escapeHtml(t.last7)}</button>
+          <label>${escapeHtml(t.importance)} <select data-ex-importance><option value="all">${escapeHtml(t.all)}</option></select></label>
+          <input class="search-input" type="search" data-ex-text placeholder="${escapeHtml(t.search)}" />
+        </div>
+        <div class="filter-row filter-actions">
+          <span class="download-status" data-download-status></span>
+          <button type="button" class="btn-outline" data-ex-json>${escapeHtml(t.json)}</button>
+          <button type="button" class="btn-outline" data-download-merged hidden>${escapeHtml(t.pdf)}</button>
+          <button type="button" class="btn-outline" data-download-pptx hidden>${escapeHtml(t.pptx)}</button>
+        </div>
+        <div class="filter-row check-row"><span class="check-label">${escapeHtml(t.kinds)}</span><span data-ex-kinds></span></div>
+        <div class="filter-row check-row"><span class="check-label">${escapeHtml(t.categories)}</span><span data-ex-categories></span></div>
+      </div>
+      <div class="card-grid" data-ex-results></div>
+      <p class="empty-state hidden" data-ex-empty>${escapeHtml(t.empty)}</p>
+      <p class="explorer-more"><button type="button" class="btn-outline" data-ex-more hidden>${escapeHtml(t.more)}</button></p>
+    </section>
+  `;
+}
 function renderDailyPage(locale, siteMeta, log) {
   const text = TEXT[locale];
   const depth = locale === "en" ? 3 : 2;
@@ -1249,7 +1315,7 @@ async function main() {
   }
   await writeText(
     path.join(siteDir, "search-index.json"),
-    `${JSON.stringify({ generatedAt: siteContext.lastUpdatedAt || new Date().toISOString(), entries: buildSearchIndex(allEvents) }, null, 2)}\n`,
+    `${JSON.stringify({ generatedAt: siteContext.lastUpdatedAt || new Date().toISOString(), facets: buildFacets(allEvents), entries: buildSearchIndex(allEvents) }, null, 2)}\n`,
   );
 
   for (const locale of ["ja", "en"]) {

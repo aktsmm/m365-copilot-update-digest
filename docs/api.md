@@ -16,7 +16,7 @@ GitHub Pages から配信する読み取り専用の静的 JSON です。認証�
 | `slides/{key}.json` | スライド JSON（[スキーマ](../schema/slide.schema.json)）。直近 3 か月の「重要」「注目」のみ |
 | `data/slides.json` | 公開している暗号化 PDF の一覧と、復号用の検証値（`pdfGate`） |
 
-検索 API はありません。月別ファイルを取得して、クライアント側で絞り込んでください。
+`search-index.json`（トップの絞り込みが使う）には、`categories` / `importance` / `kind` / `slideKey` と、種類・カテゴリ・重要度の定義 `facets` が含まれます。検索 API はありません。月別ファイルを取得して、クライアント側で絞り込んでください。
 
 ## 更新（item）のフィールド
 
