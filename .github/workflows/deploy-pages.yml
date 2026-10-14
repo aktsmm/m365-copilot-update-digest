@@ -10,6 +10,7 @@ on:
       - scripts/**
       - public/**
       - config/**
+      - schema/**
       - package.json
       - package-lock.json
       - README.md
@@ -47,6 +48,15 @@ jobs:
 
       - name: Build Pages site
         run: npm run build:pages
+
+      - name: Render encrypted slide PDFs
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+          PDF_PASSWORD: ${{ secrets.PDF_PASSWORD }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          npm run build:slide-pdfs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

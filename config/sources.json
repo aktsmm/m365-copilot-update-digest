@@ -58,23 +58,10 @@
   {
     "id": "m365-roadmap-rss",
     "name": "Microsoft 365 Roadmap",
-    "kind": "m365_roadmap_rss",
-    "url": "https://www.microsoft.com/en-us/microsoft-365/RoadmapFeatureRSS",
+    "kind": "m365_roadmap_mrc",
+    "url": "https://www.microsoft.com/releasecommunications/mcp",
+    "mrcFilter": "products/any(p: p eq 'Microsoft Copilot (Microsoft 365)') or products/any(p: p eq 'Microsoft Copilot Studio')",
     "productArea": "Microsoft 365 Copilot",
-    "sourceFamily": "Roadmap",
-    "maxItems": 120,
-    "includeKeywords": [
-      "copilot",
-      "copilot studio",
-      "agent",
-      "agents",
-      "mcp",
-      "connector",
-      "capacity",
-      "license",
-      "billing",
-      "adoption",
-      "notebook"
-    ]
+    "sourceFamily": "Roadmap"
   }
 ]

@@ -1,5 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
+import { brokenSources } from "./lib/coverage.mjs";
+import { buildApi } from "./lib/api.mjs";
+import { buildSlide, selectSlideEvents, stableStringify, validateSlide } from "./lib/slides.mjs";
 import { matchingRecord, withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
 import {
@@ -29,6 +33,9 @@ const overridesFile = path.join(workspaceRoot, "config", "overrides.json");
 const siteMetaFile = path.join(workspaceRoot, "config", "site.json");
 const runSummaryFile = path.join(workspaceRoot, "data", "run-summary.json");
 const relatedDocumentsFile = path.join(workspaceRoot, "config", "related-documents.json");
+const categoryConfig = loadCategoryConfig();
+// 公開するスライドの ID。main() で allEvents から決める（PDF 本体は build:slide-pdfs が出力する）。
+let slideKeys = new Set();
 
 const TEXT = {
   ja: {
@@ -57,6 +64,11 @@ const TEXT = {
     productFilterLabel: "製品",
     roleFilterLabel: "役割タグ",
     sourceTypeFilterLabel: "ソース種別",
+    categoryFilterLabel: "カテゴリ",
+    importanceFilterLabel: "重要度",
+    allCategories: "すべて",
+    allImportance: "すべて",
+    slideLink: "スライド PDF",
     allProducts: "すべて",
     allRoles: "すべて",
     allSourceTypes: "すべて",
@@ -145,6 +157,11 @@ const TEXT = {
     productFilterLabel: "Product",
     roleFilterLabel: "Role",
     sourceTypeFilterLabel: "Source type",
+    categoryFilterLabel: "Category",
+    importanceFilterLabel: "Importance",
+    allCategories: "All",
+    allImportance: "All",
+    slideLink: "Slide PDF",
     allProducts: "All",
     allRoles: "All",
     allSourceTypes: "All",
@@ -393,7 +410,7 @@ function applyOverrides(events, overrides) {
       };
       next.importanceScore = importanceScore(next);
       next.importanceReason = importanceReason(next, "ja");
-      return next;
+      return annotateEvent(next, categoryConfig);
     })
     .filter((event) => !hidden.has(event.id));
 }
@@ -427,12 +444,30 @@ function renderSectionHeading(title, actionHtml = "") {
   return `<div class="section-heading"><h2>${escapeHtml(title)}</h2>${actionHtml}</div>`;
 }
 
-function renderFilterToolbar(events, text) {
+function renderFilterToolbar(events, text, locale = "ja") {
   const products = [...new Set(events.map((event) => event.productArea))];
   const sourceTypes = ["learn", "blog", "roadmap"];
+  const usedCategories = new Set(events.flatMap((event) => event.categories || []));
+  const categories = categoryConfig.categories.filter((category) => usedCategories.has(category.id));
+  const levels = categoryConfig.importanceLevels.filter((level) => level.id !== "normal");
 
   return `
       <div class="filter-toolbar">
+        <div class="filter-group">
+          <span>${escapeHtml(text.categoryFilterLabel)}</span>
+          <div class="chip-row">
+            <button class="chip is-active" type="button" data-category-filter="all">${escapeHtml(text.allCategories)}</button>
+            ${categories.map((category) => `<button class="chip" type="button" data-category-filter="${escapeHtml(category.id)}">${escapeHtml(locale === "en" ? category.labelEn : category.label)}</button>`).join("")}
+          </div>
+        </div>
+        <div class="filter-group">
+          <span>${escapeHtml(text.importanceFilterLabel)}</span>
+          <div class="chip-row">
+            <button class="chip is-active" type="button" data-importance-filter="all">${escapeHtml(text.allImportance)}</button>
+            ${levels.map((level) => `<button class="chip" type="button" data-importance-filter="${escapeHtml(level.id)}">${escapeHtml(locale === "en" ? level.labelEn : level.label)}</button>`).join("")}
+          </div>
+        </div>
+
         <div class="filter-group">
           <span>${escapeHtml(text.productFilterLabel)}</span>
           <div class="chip-row">
@@ -488,7 +523,7 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
     .join("");
 
   return `
-    <article class="update-card"${options.anchor ? ` id="${escapeHtml(`update-${event.id}`)}"` : ""} data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}">
+    <article class="update-card"${options.anchor ? ` id="${escapeHtml(`update-${event.id}`)}"` : ""} data-card-item data-product="${escapeHtml(productValue)}" data-roles="${escapeHtml(cardRoles)}" data-source-type="${escapeHtml(sourceType)}" data-categories="${escapeHtml((event.categories || []).join(" "))}" data-importance="${escapeHtml(event.importanceLevel || "normal")}">
       <div class="badge-row">
         ${event.isPinned ? renderBadge("Pinned", "pinned") : ""}
         ${renderBadge(product, "product")}
@@ -509,6 +544,7 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
       <div class="card-links">
         <a href="${originalHref}" target="_blank" rel="noreferrer">${escapeHtml(text.openSource)}</a>
         ${detailHref ? `<a href="${escapeHtml(detailHref)}">${escapeHtml(text.openDigest)}</a>` : ""}
+        ${slideKeys.has(event.id) ? `<a href="${escapeHtml(relativeHref(depth, `pdf/${event.id}.pdf.enc`))}" data-slide-pdf="${escapeHtml(event.id)}" hidden>${escapeHtml(text.slideLink)}</a>` : ""}
       </div>
       ${event.relatedDocuments?.length ? `<div class="related-documents"><strong>${escapeHtml(text.relatedDocuments)}</strong><ul>${event.relatedDocuments.map((document) => `<li><a href="${escapeHtml(document.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.documentSupplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : `<p class="document-status">${escapeHtml(event.relatedDocumentStatus === "not-found" ? text.documentNotFound : event.relatedDocumentStatus === "error" ? text.documentError : text.documentPending)}</p>`}
     </article>
@@ -638,7 +674,7 @@ function renderLayout({
   const text = TEXT[locale];
   const assetHref = relativeHref(depth, "assets/styles.css");
   const defaultScript = relativeHref(depth, "assets/site.js");
-  const scripts = [defaultScript, ...extraScripts]
+  const scripts = [defaultScript, relativeHref(depth, "assets/pdf-gate.js"), ...extraScripts]
     .map((href) => `<script defer src="${escapeHtml(href)}"></script>`)
     .join("\n");
 
@@ -824,9 +860,10 @@ function renderIndexPage(
       <div class="card-grid">${importantEvents.length > 0 ? importantEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
     </section>
 
+    ${runSummary.coverage && runSummary.coverage.status !== "complete" ? `<p class="section-note">${escapeHtml(locale === "en" ? `Some sources were not fully collected (${brokenSources(runSummary.coverage).map((source) => source.sourceId).join(", ")}). A short list does not mean zero updates.` : `一部のソースを取得できていません（${brokenSources(runSummary.coverage).map((source) => source.sourceId).join("、")}）。件数が少なくても 0 件とは限りません。`)}</p>` : ""}
     <section class="section-block" data-card-filters>
       ${renderSectionHeading(text.recentTitle)}
-      ${recentEvents.length > 0 ? renderFilterToolbar(recentEvents, text) : ""}
+      ${recentEvents.length > 0 ? renderFilterToolbar(recentEvents, text, locale) : ""}
       ${recentWindow.length === 0 ? `<p class="section-note">${escapeHtml(text.noRecent)}</p>` : ""}
       <div class="card-grid" data-filter-cards>${recentEvents.length > 0 ? recentEvents.map((event) => renderUpdateCard(event, locale, locale === "en" ? 1 : 0, text, { detailHref: relativeHref(locale === "en" ? 1 : 0, localePath(locale, `daily/${toDateOnly(event.publishedAt)}/`)) })).join("") : renderEmptyState(text.noItems)}</div>
       <p class="empty-state hidden" data-filter-empty>${escapeHtml(text.noFiltered)}</p>
@@ -1133,6 +1170,31 @@ async function main() {
   await copyDirectory(publicDir, siteDir);
   await copyRawFiles();
   await writeText(path.join(siteDir, ".nojekyll"), "\n");
+
+  const slideNow = siteContext.lastCheckedAt ? new Date(siteContext.lastCheckedAt) : new Date();
+  const slides = [];
+  for (const event of selectSlideEvents(allEvents, { now: slideNow })) {
+    const slide = buildSlide(event, categoryConfig);
+    const problems = validateSlide(slide);
+    if (problems.length > 0) {
+      // 不正なスライド 1 件でサイト全体の公開を止めない
+      console.warn(`skipping slide ${event.id}: ${problems[0]}`);
+      continue;
+    }
+    slides.push(slide);
+  }
+  slideKeys = new Set(slides.map((slide) => slide.key));
+  for (const slide of slides) {
+    await writeText(path.join(siteDir, "slides", `${slide.key}.json`), `${stableStringify(slide)}\n`);
+  }
+  for (const file of buildApi(allEvents, {
+    snapshotAt: siteContext.lastCheckedAt,
+    categoryConfig,
+    coverage: runSummary.coverage,
+    slideKeys,
+  })) {
+    await writeText(path.join(siteDir, file.path), `${stableStringify(file.body)}\n`);
+  }
   await writeText(
     path.join(siteDir, "search-index.json"),
     `${JSON.stringify({ generatedAt: siteContext.lastUpdatedAt || new Date().toISOString(), entries: buildSearchIndex(allEvents) }, null, 2)}\n`,

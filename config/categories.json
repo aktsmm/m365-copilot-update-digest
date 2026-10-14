@@ -1,0 +1,67 @@
+{
+  "$comment": "表示カテゴリ。1 件が複数に属してよい。どれにも当たらない更新は fallbackId に入る。products / tags は大文字小文字を無視した完全一致、titleRegex は大文字小文字を無視した正規表現（原題に対して判定）。",
+  "fallbackId": "other",
+  "importanceLevels": [
+    { "id": "high", "label": "重要", "labelEn": "High", "minScore": 130 },
+    { "id": "notable", "label": "注目", "labelEn": "Notable", "minScore": 110 },
+    { "id": "normal", "label": "通常", "labelEn": "Normal", "minScore": 0 }
+  ],
+  "categories": [
+    {
+      "id": "copilot-chat",
+      "label": "Copilot Chat",
+      "labelEn": "Copilot Chat",
+      "products": [],
+      "tags": ["Microsoft 365 Copilot Chat", "Microsoft 365 Copilot app"],
+      "titleRegex": ["Copilot Chat", "\\bCopilot app\\b", "\\bnotebook\\b", "\\bpages?\\b.*Copilot"]
+    },
+    {
+      "id": "agents",
+      "label": "エージェント・拡張",
+      "labelEn": "Agents & extensibility",
+      "products": ["Copilot Studio"],
+      "tags": ["Copilot Studio", "Microsoft Copilot Studio", "Microsoft 365 Copilot extensibility", "Copilot extensibility"],
+      "titleRegex": ["\\bagents?\\b", "Agent Builder", "\\bMCP\\b", "\\bconnectors?\\b", "\\bplugins?\\b"]
+    },
+    {
+      "id": "m365-apps",
+      "label": "Office・Teams アプリ",
+      "labelEn": "Office & Teams apps",
+      "products": ["Word", "Excel", "PowerPoint", "Outlook", "OneNote", "Planner", "Microsoft Teams", "SharePoint", "OneDrive"],
+      "tags": ["Word", "Excel", "PowerPoint", "Outlook", "OneNote", "Planner", "Microsoft Teams", "SharePoint", "OneDrive"],
+      "titleRegex": []
+    },
+    {
+      "id": "security-compliance",
+      "label": "セキュリティ・コンプライアンス",
+      "labelEn": "Security & compliance",
+      "products": ["Microsoft Purview", "Security Copilot"],
+      "tags": ["Microsoft Purview", "Security Copilot"],
+      "titleRegex": ["\\bsecurity\\b", "\\bcompliance\\b", "\\bDLP\\b", "sensitivity label", "\\bgovernance\\b", "\\baudit\\b"]
+    },
+    {
+      "id": "admin",
+      "label": "管理・ライセンス",
+      "labelEn": "Admin & licensing",
+      "products": [],
+      "tags": ["Microsoft 365 admin center"],
+      "titleRegex": ["admin center", "\\blicens", "\\bpricing\\b", "\\bpay-as-you-go\\b", "\\busage report"]
+    },
+    {
+      "id": "viva-others",
+      "label": "Viva・その他の製品",
+      "labelEn": "Viva & other products",
+      "products": ["Microsoft Viva", "Viva Insights", "Microsoft Edge", "Dynamics 365 Business Central", "Dynamics 365 Field Service", "Dynamics 365 Sales", "Dynamics 365 Supply Chain Management"],
+      "tags": ["Microsoft Viva", "Viva Insights", "Microsoft Edge"],
+      "titleRegex": []
+    },
+    {
+      "id": "other",
+      "label": "その他",
+      "labelEn": "Other",
+      "products": [],
+      "tags": [],
+      "titleRegex": []
+    }
+  ]
+}
