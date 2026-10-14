@@ -23,6 +23,15 @@ export const KIND_LABEL = {
   update: "アップデート",
 };
 
+export const KIND_LABEL_EN = {
+  ga: "GA",
+  preview: "Preview",
+  "rolling-out": "Rolling out",
+  "in-development": "In development",
+  retirement: "Retired",
+  update: "Update",
+};
+
 const KIND_ORDER = ["preview", "ga", "rolling-out", "in-development", "retirement", "update"];
 export const KIND_IDS = KIND_ORDER;
 
