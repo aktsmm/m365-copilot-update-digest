@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6a5bfcb0817dbffb",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "調達エージェントの仕入先メールに、独自のシナリオを定義可能に",
+        "subtitleJa": "フォローアップのシナリオを、ユーザー自身で作成・管理できます",
+        "en": "Dynamics 365 Supply Chain Management: Procurement Agent - Define custom scenarios for agent-generated supplier emails"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Supply Chain Management"],
+        "categories": ["agents", "viva-others"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Supply Chain Management",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**調達エージェントを使う購買担当者**と、Supply Chain Management の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "組み込みシナリオと同じ場所で使える、独自のフォローアップシナリオを持てる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要。現行機能の設定状況を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "専用の設定ページでシナリオを作成・編集・管理し、組み込みシナリオを使う場面で利用できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供される内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "専用ページで、独自のフォローアップシナリオを作成・編集・管理", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "シナリオごとに名前と指示を持たせられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "組み込みシナリオを使う場面で、独自シナリオも利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現行の仕入先通信機能は、運用環境対応プレビューとして提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-setup-wizard", "locator": "タイトル", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "Supply Chain Management 10.0.44 以降が前提で、機能管理で関連機能をオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-setup-wizard", "locator": "Prerequisites", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "メールを自動送信する設定では、メールのフッターが必須", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "タスク基準とメール設定", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現行では、未確認・遅延の発注書を対象に 2 つの既定タスクが提供される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "冒頭", "retrievedAt": "2026-10-14T18:00:00Z" }] },
+            { "text": "タスクごとに署名やメールのトーンを設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "タスク基準とメール設定", "retrievedAt": "2026-10-14T18:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "procurement-agent", "term": "調達エージェント", "type": "feature", "oneLine": { "text": "未確認や遅延の発注書を特定し、仕入先宛の下書きメールを生成するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "冒頭", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
+        { "termKey": "agent-task", "term": "エージェント タスク", "type": "term", "oneLine": { "text": "フォローアップが必要な発注書の検索条件と、メールの生成方法を定める設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "タスク基準とメール設定", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
+        { "termKey": "followup-scenario", "term": "フォローアップシナリオ", "type": "feature", "oneLine": { "text": "仕入先への送信メールの目的や指示を定める、組み込みまたは独自の設定。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573705",
+        "learn": [
+          { "title": "調達エージェントを使用した発注書のフォローアップ (運用環境対応プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locale": "ja-jp" },
+          { "title": "調達エージェントのサプライヤーコミュニケーション機能を設定する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-setup-wizard", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
