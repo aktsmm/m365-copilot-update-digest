@@ -28,3 +28,7 @@
 ## PDF の暗号化
 
 `PDF_PASSWORD`（リポジトリ Secret）が設定されているときだけ PDF を公開します。形式は `M365PDF1 | iv(12) | ciphertext | tag(16)`（AES-256-GCM）で、鍵は `data/slides.json` の `pdfGate.salt` から PBKDF2-SHA256（210000 回）で導出します。`pdfGate.verifier` でパスワードの正否を先に確認します。パスワードを変えたら `deploy-pages.yml` を再実行してください。
+
+## PowerPoint 書き出し
+
+サイトのボタンで、表示中のスライドをブラウザ内で編集可能な .pptx にできます（public/assets/pptx-export.js、pptxgenjs。パスワード不要で、slides/{key}.json を入力にします）。

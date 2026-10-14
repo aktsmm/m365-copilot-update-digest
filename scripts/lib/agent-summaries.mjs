@@ -27,7 +27,7 @@ export function validateAgentSummary(summary, fileKey) {
   if (!/^[0-9a-f]{16}$/.test(summary.sourceFingerprint ?? "")) bad("sourceFingerprint must be 16 hex chars");
 
   const title = summary.titleJa;
-  if (typeof title !== "string" || title.length < 8 || title.length > 70) bad("titleJa must be 8-70 characters");
+  if (typeof title !== "string" || title.length < 8 || title.length > 80) bad("titleJa must be 8-80 characters");
   else {
     if (!JAPANESE_PATTERN.test(title)) bad("titleJa must contain Japanese");
     if (TITLE_BAD_ENDINGS.test(title.trim())) bad("titleJa must be noun-ending");

@@ -166,8 +166,8 @@
       });
 
       document.querySelectorAll("[data-download-toolbar]").forEach((toolbar) => {
-        toolbar.hidden = false;
         const button = toolbar.querySelector("[data-download-merged]");
+        button.hidden = false;
         const status = toolbar.querySelector("[data-download-status]");
         button.addEventListener("click", () => mergeVisible(button, status));
       });
