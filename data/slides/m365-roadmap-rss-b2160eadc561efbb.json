@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b2160eadc561efbb",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Workforce Insights エージェントが Microsoft 365 Copilot に登場予定",
+        "subtitleJa": "組織の構成や人員データを、チャットで把握できます",
+        "en": "Microsoft Copilot (Microsoft 365): Workforce Insights Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-08",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**組織のリーダー、マネージャー、その代理人**と、組織データを管理する管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+        "change": { "text": "組織の構成把握や、スキルに基づく要員計画の支援をエージェントに任せられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には有料の Microsoft Copilot ライセンスと組織データの準備が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "ライセンスとテナントの要件", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "リーダーが**組織の構成を把握し、チーム メンバーを属性で検索**できます。スキルに基づく要員計画の支援や組織構造の改善提案も受けられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は組織のリーダーと、その指定された代理人", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+            { "text": "レベル・場所・役職などの属性で、組織内のチーム メンバーを検索", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+            { "text": "組織データ、カスタム属性、People Skills データの情報を使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Frontier プログラムの対象で、内容は変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "重要", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+            { "text": "回答はロールと、管理者・組織が設定したポリシーに基づく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "重要", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+            { "text": "有料の Microsoft Copilot ライセンスが必要。代理人にも必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "ライセンスとテナントの要件", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "People Skills データを使うには、適切なライセンスとテナントでの設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "ライセンスとテナントの要件", "retrievedAt": "2026-10-14T22:00:00Z" }] },
+            { "text": "SupervisorIndicator 列で、マネージャーの判定ルールを上書きできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "マネージャーの識別方法をカスタマイズする", "retrievedAt": "2026-10-14T22:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "wfi-agent", "term": "Workforce Insights エージェント", "type": "feature", "oneLine": { "text": "組織のリーダーとその代理人が、組織の構成や人員を把握するのを支援するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
+        { "termKey": "frontier", "term": "Microsoft Frontier プログラム", "type": "term", "oneLine": { "text": "開発中の機能を先行して利用できるプログラム。内容は変更される可能性がある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "重要", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
+        { "termKey": "org-data", "term": "組織データ", "type": "term", "oneLine": { "text": "組織内のユーザーを表すデータで、エージェントの情報源の 1 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
+        { "termKey": "people-skills", "term": "People Skills", "type": "feature", "oneLine": { "text": "組織のスキル データ。使用前にテナントでの設定が必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "データの種類", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=515145",
+        "learn": [{ "title": "Workforce Insights エージェント", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
