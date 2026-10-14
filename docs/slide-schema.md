@@ -10,7 +10,7 @@
 
 ## 運用の流れ
 
-1. **Dispatch slide generation**（月・木 03:00 JST）: スライドがない更新（重要・注目、直近 3 か月、新しい順）を最大 30 件、`slide.lock.yml` へ 1 件ずつ起動
+1. **Dispatch slide generation**（毎日 03:00 JST）: スライドがない更新（重要・注目、直近 3 か月、新しい順）を最大 30 件、`slide.lock.yml` へ 1 件ずつ起動
 2. **slide（gh-aw）**: `.work/slide-input.json`（原文・段階・提供範囲・検証済み Learn 候補）を入力に、Learn の実ページを取得してスライド JSON を書き、検証と PDF 描画を行い PR を作成（タイトル `[slides] …`）
 3. **Auto-merge slides**: PR が `data/slides/{key}.json` 1 件だけで、スキーマ・意味検証・描画確認を main 側のコードで通ったものだけをマージし、Pages を再デプロイ
 

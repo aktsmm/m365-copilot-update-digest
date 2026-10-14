@@ -68,7 +68,7 @@ You keep this repository's automation running without human help. Run a health c
 
 1. **Collection** (`Collect updates`, every 6 hours): the last successful run is less than 24 hours old, and `data/run-summary.json` has `errorCount: 0` and `coverage.status` `complete` (an `empty` source is allowed).
 2. **Summaries** (`summarize`, every 6 hours): recent runs succeed; open `[summaries]` pull requests are merged by `Auto-merge summaries` within a day.
-3. **Slides** (`slide-dispatch`, Monday and Thursday): recent dispatches succeed; open `[slides]` pull requests are merged within a day; `slide` runs that failed are caused by a validation rule, not by an outage.
+3. **Slides** (`slide-dispatch`, daily): recent dispatches succeed; open `[slides]` pull requests are merged within a day; `slide` runs that failed are caused by a validation rule, not by an outage.
 4. **Deploy** (`Deploy GitHub Pages`): the last run on `main` succeeded and the site shows the latest data (`data/run-summary.json` time is close to the site's last update).
 5. **Secrets and tokens**: failures that mention `COPILOT_GITHUB_TOKEN`, `PDF_PASSWORD` or authentication mean a secret expired or is missing. You cannot fix that; report it clearly in an issue.
 6. **Stuck pull requests**: open `[summaries]` / `[slides]` / `chore: improve digest automation` pull requests older than 3 days.
