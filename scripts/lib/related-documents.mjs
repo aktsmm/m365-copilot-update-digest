@@ -48,7 +48,8 @@ export function documentUrl(value, base) {
     return null;
   }
   for (const key of [...url.searchParams.keys()]) {
-    if (/^(?:utm_|wt\.|ocid$|ref_)/i.test(key)) {
+    if (/^(?:utm_|wt\.|ocid$|ref_)/i.test(key) ||
+      (url.hostname === "learn.microsoft.com" && /^(?:tabs|view|preserve-view)$/i.test(key))) {
       url.searchParams.delete(key);
     }
   }
@@ -77,13 +78,27 @@ function isJapaneseUrl(value) {
   return /^\/(?:ja-jp|ja)\//i.test(new URL(value).pathname);
 }
 
+export function hasJapaneseArticle(html) {
+  const $ = cheerio.load(html);
+  const content = $("main .content, main article, article");
+  if (content.length) {
+    const body = content.toArray().sort((left, right) => $(right).text().length - $(left).text().length)[0];
+    const article = $(body).clone();
+    article.find("h1, nav, header, footer, aside, button").remove();
+    return /[\u3040-\u30ff\u3400-\u9fff]/.test(article.text());
+  }
+  $("h1, nav, header, footer, aside, script, style, button").remove();
+  return /[\u3040-\u30ff\u3400-\u9fff]/.test($("main").text());
+}
+
 export function urlKey(value) {
   const url = officialUrl(value);
   if (!url) {
     return String(value || "");
   }
   for (const key of [...url.searchParams.keys()]) {
-    if (/^(?:utm_|wt\.|ocid$|ref_)/i.test(key)) {
+    if (/^(?:utm_|wt\.|ocid$|ref_)/i.test(key) ||
+      (url.hostname === "learn.microsoft.com" && /^(?:tabs|view|preserve-view)$/i.test(key))) {
       url.searchParams.delete(key);
     }
   }
@@ -192,13 +207,16 @@ export function withRelatedDocuments(event, cache) {
   };
 }
 
-export function pendingDocumentEvents(events, cache, limit = 6) {
+export function pendingDocumentEvents(events, cache, limit = 6, now = new Date().toISOString()) {
   return [...events]
-    .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)) || a.id.localeCompare(b.id))
+    .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)) ||
+      (b.importanceScore || 0) - (a.importanceScore || 0) || a.id.localeCompare(b.id))
     .filter((event) => {
       const record = matchingRecord(event, cache);
       const documents = withRelatedDocuments(event, cache).relatedDocuments || [];
-      return !documents.some((document) => !isSupplementaryDocument(document)) && !record?.mcpStatus;
+      const retryDue = record?.mcpRetryAfter && Date.parse(record.mcpRetryAfter) <= Date.parse(now);
+      return !documents.some((document) => !isSupplementaryDocument(document)) &&
+        (!record?.mcpStatus || retryDue);
     })
     .slice(0, limit)
     .map((event) => ({
@@ -222,6 +240,7 @@ export function validateDocumentCache(cache) {
       !Number.isFinite(Date.parse(record.checkedAt)) ||
       !Array.isArray(record.documents) ||
       record.documents.length > MAX_DOCUMENTS ||
+      (record.mcpRetryAfter !== undefined && !Number.isFinite(Date.parse(record.mcpRetryAfter))) ||
       (record.mcpStatus !== undefined && !["verified", "not-found", "error"].includes(record.mcpStatus))
     ) {
       throw new Error(`Invalid related document record: ${id}`);
@@ -370,7 +389,7 @@ export async function enrichDocumentCache(events, cache, {
             if (isJapaneseUrl(japanese.url) &&
               (!contentLocale || /^ja\b/i.test(contentLocale)) &&
               $("main h1, article h1, h1").first().text().trim() &&
-              /[\u3040-\u30ff\u3400-\u9fff]/.test($("main, article").text())) {
+              hasJapaneseArticle(japanese.html)) {
               response = japanese;
             }
           } catch (error) {

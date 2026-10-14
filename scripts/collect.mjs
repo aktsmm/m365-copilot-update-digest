@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { enrichLearnDocuments } from "./lib/learn-mcp.mjs";
 
 import * as cheerio from "cheerio";
 import { XMLParser } from "fast-xml-parser";
@@ -2961,6 +2962,7 @@ async function main() {
     await enrichDocumentCache(collectedEvents, relatedDocuments, {
       candidates: documentCandidates,
     });
+    await enrichLearnDocuments(collectedEvents, relatedDocuments);
   }
   validateDocumentCache(relatedDocuments);
   const allEvents = collectedEvents.map((event) => withRelatedDocuments(event, relatedDocuments));

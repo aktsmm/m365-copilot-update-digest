@@ -230,7 +230,10 @@ for (const file of [files.validateGeneratedPr, files.autoMerge, files.reconcile]
   const content = readWorkflow(file);
   requireText(content, "/^config\\/related-documents\\.json$/", "Generated PRs must allow the documentation cache");
   requireText(content, "/^scripts\\/lib\\/related-documents\\.mjs$/", "Generated PRs must allow the documentation helper");
+  requireText(content, "/^scripts\\/lib\\/learn-mcp\\.mjs$/", "Generated PRs must allow the public Learn MCP client");
 }
+requireText(collectUpdates, "Verify public Microsoft Learn MCP", "Documentation-only runs must verify the public MCP path");
+requireText(collectUpdates, "inputs.document_date == ''", "Documentation-only runs must skip collection and translation");
 requireOccurrences(
   validateGeneratedPr,
   "config/related-documents.json",

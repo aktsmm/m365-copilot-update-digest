@@ -1092,7 +1092,10 @@ async function main() {
   const weeklyGroups = buildWeeklyGroups(allEvents);
   const siteContext = {
     ...siteMeta,
-    lastUpdatedAt: runSummary.generatedAt || dailyLogs[0]?.generatedAt || null,
+    lastUpdatedAt: [
+      runSummary.generatedAt || dailyLogs[0]?.generatedAt,
+      ...Object.values(relatedDocuments).map((record) => record.checkedAt),
+    ].filter(Boolean).sort((left, right) => safeDate(right) - safeDate(left))[0] || null,
     lastCheckedAt:
       runSummary.lastCheckedAt ||
       runSummary.generatedAt ||

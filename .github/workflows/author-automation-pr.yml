@@ -24,7 +24,7 @@ permissions:
 
 jobs:
   author-request:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && !startsWith(github.event.workflow_run.display_title, 'Documentation enrichment '))
     runs-on: ubuntu-latest
 
     steps:
@@ -130,6 +130,7 @@ jobs:
               '- `scripts/generate-drafts.mjs`',
               '- `scripts/lib/reporting.mjs`',
               '- `scripts/lib/related-documents.mjs`',
+              '- `scripts/lib/learn-mcp.mjs`',
               '- `config/sources.json`',
               '- `config/summary-ja-cache.json`',
               '- `config/related-documents.json`',

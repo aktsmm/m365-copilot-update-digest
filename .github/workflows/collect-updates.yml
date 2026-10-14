@@ -1,7 +1,21 @@
 name: Collect updates
+run-name: ${{ inputs.document_date && format('Documentation enrichment {0}', inputs.document_date) || 'Collect updates' }}
 
 on:
   workflow_dispatch:
+    inputs:
+      document_date:
+        description: Optional YYYY-MM-DD for documentation-only enrichment (no collection or translation).
+        required: false
+        type: string
+      document_limit:
+        description: Maximum important updates to enrich for the selected date.
+        required: false
+        default: "4"
+        type: choice
+        options:
+          - "4"
+          - "12"
   schedule:
     - cron: "15 */6 * * *"
 
@@ -27,12 +41,43 @@ jobs:
         run: npm ci
 
       - name: Collect updates
+        if: inputs.document_date == ''
         run: npm run collect
+
+      - name: Verify public Microsoft Learn MCP
+        if: inputs.document_date != ''
+        env:
+          DOCUMENT_DATE: ${{ inputs.document_date }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { createLearnLookup } from './scripts/lib/learn-mcp.mjs';
+          const date = process.env.DOCUMENT_DATE;
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('Invalid documentation date');
+          const event = JSON.parse(fs.readFileSync(`data/events/${date}.json`, 'utf8')).events
+            .sort((a, b) => (b.importanceScore || 0) - (a.importanceScore || 0))[0];
+          if (!event) throw new Error('Selected daily log contains no events');
+          const lookup = await createLearnLookup();
+          try {
+            const documents = await lookup.findDocuments(event);
+            console.log(`Public Learn MCP lookup completed: ${documents.length} verified document(s)`);
+          } finally {
+            await lookup.close();
+          }
+          NODE
+
+      - name: Enrich selected daily documents
+        if: inputs.document_date != ''
+        env:
+          DOCUMENT_DATE: ${{ inputs.document_date }}
+          DOCUMENT_LIMIT: ${{ inputs.document_limit }}
+        run: node scripts/enrich-documents.mjs --date "$DOCUMENT_DATE" --limit "$DOCUMENT_LIMIT" --write
 
       - name: Validate generated data invariants
         run: npm run validate:data
 
       - name: Generate article and post drafts
+        if: inputs.document_date == ''
         run: npm run generate:drafts
 
       - name: Commit generated updates

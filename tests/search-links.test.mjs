@@ -93,6 +93,18 @@ test("generated search data resolves to exactly one card on each locale's daily 
   assert.ok(payload.entries.length > 0);
   assert.equal(new Set(payload.entries.map((item) => item.detailPath)).size, payload.entries.length);
   const sample = payload.entries[0];
+  const reportedIds = [
+    "m365-roadmap-rss-bf4d2a67e28222e9",
+    "m365-roadmap-rss-d4c68540c4ece67f",
+    "m365-roadmap-rss-c6055444dd72457b",
+    "m365-copilot-release-notes-4142c6e03eedf599",
+  ];
+  const reportedPage = cheerio.load(await fs.readFile(new URL("../site/daily/2026-10-06/index.html", import.meta.url), "utf8"));
+  for (const id of reportedIds) {
+    const card = reportedPage(`[id="update-${id}"]`);
+    assert.ok(card.find(".related-documents a").length >= 1, `Missing reported documentation: ${id}`);
+    assert.ok(payload.entries.find((item) => item.id === id).relatedDocuments.length >= 1);
+  }
   assert.ok(sample.url.startsWith("https://"));
   assert.match(sample.detailPath, /\/#update-/);
   for (const locale of ["", "en/"]) {
