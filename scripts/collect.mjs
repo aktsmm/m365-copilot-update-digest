@@ -739,6 +739,38 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/user can use hubspot connector in researcher/.test(text)) {
+    return "Researcher で HubSpot コネクタを使用可能に";
+  }
+
+  if (/visio: desktop model context protocol \(mcp\) server/.test(text)) {
+    return "Visio: デスクトップ向けモデル コンテキスト プロトコル (MCP) サーバー";
+  }
+
+  if (/dynamics 365 commerce: enable mcp tools for pos returns/.test(text)) {
+    return "Dynamics 365 Commerce: POS 返品用 MCP ツールを有効化";
+  }
+
+  if (/word: legal plugins in copilot/.test(text)) {
+    return "Copilot の法務プラグイン";
+  }
+
+  if (/work iq: a2a and mcp long running tasks/.test(text)) {
+    return "Work IQ: A2A および MCP の長時間実行タスク";
+  }
+
+  if (/work iq: a2a and mcp elicitation/.test(text)) {
+    return "Work IQ: A2A と MCP タスクで不足情報や承認を確認";
+  }
+
+  if (/work iq: microsoft iq/.test(text)) {
+    return "Work IQ: Microsoft IQ";
+  }
+
+  if (/work iq: retrieve/.test(text)) {
+    return "Work IQ: 関連情報の取得";
+  }
+
   if (
     /use copilot in your search tab in the microsoft 365 copilot mobile app/.test(
       text,
@@ -1556,6 +1588,10 @@ function roadmapProductArea(title, categories, source) {
     return "Security Copilot";
   }
 
+  if (/^microsoft purview compliance portal:/.test(text)) {
+    return "Microsoft Purview";
+  }
+
   if (/^microsoft purview:|^purview:/.test(text)) {
     return "Microsoft Purview";
   }
@@ -1578,6 +1614,14 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^microsoft teams:|^teams:/.test(text)) {
     return "Microsoft Teams";
+  }
+
+  if (/^visio:|^microsoft visio:/.test(text)) {
+    return "Visio";
+  }
+
+  if (/^power apps:|^microsoft power apps:/.test(text)) {
+    return "Power Apps";
   }
 
   if (/^microsoft edge:|^edge:/.test(text)) {
@@ -1614,6 +1658,10 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^dynamics 365 sales:/.test(text)) {
     return "Dynamics 365 Sales";
+  }
+
+  if (/^dynamics 365 commerce:/.test(text)) {
+    return "Dynamics 365 Commerce";
   }
 
   if (/^dynamics 365 supply chain management:/.test(text)) {
