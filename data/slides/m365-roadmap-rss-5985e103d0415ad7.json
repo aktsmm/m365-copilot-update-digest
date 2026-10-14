@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5985e103d0415ad7",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot in Excel に Plan Mode が登場",
+        "subtitleJa": "ブックを更新する前に、Copilot の作業手順を確認・調整できます",
+        "en": "Excel: Plan Mode for Copilot in Excel"
+      },
+      "meta": {
+        "publishedJst": "2026-10-08",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Excel"],
+        "categories": ["m365-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Excel",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Excel で Copilot を使って複雑な変更を行う作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "更新前に手順を確認でき、安心して複雑な編集を任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "提供開始済み。利用者側で必要な新しい設定作業は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot が**ブックを更新する前に、手順を示します**。利用者は内容を確認し、必要なら計画を調整してから進められます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ブックを更新する前に、段階的な進め方（プラン）を提示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot が使うデータや機能を、利用者が確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "計画を調整してから、編集を進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Desktop・Mac・Web 版の Excel", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上のステータスは Launched（提供開始）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Excel の Copilot は、表・グラフ・ピボットテーブル・数式でブックを作成・変更できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "March 10, 2026 / Excel", "retrievedAt": "2026-10-14T21:50:00Z" }] },
+            { "text": "Edit with Copilot は、以前は Agent Mode と呼ばれていた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "March 10, 2026 / Excel", "retrievedAt": "2026-10-14T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "集計や整形など複数手順の変更では、先に手順を確認してから進める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-excel", "term": "Copilot in Excel", "type": "product", "oneLine": { "text": "チャットで、ブックの作成や変更を支援する Excel の Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "March 10, 2026 / Excel", "retrievedAt": "2026-10-14T21:50:00Z" }] } },
+        { "termKey": "plan-mode", "term": "Plan Mode", "type": "feature", "oneLine": { "text": "ブックを更新する前に、Copilot の作業手順を示して確認・調整できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "edit-with-copilot", "term": "Edit with Copilot", "type": "feature", "oneLine": { "text": "Excel でブックの作成・変更を行う機能（以前の Agent Mode）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "March 10, 2026 / Excel", "retrievedAt": "2026-10-14T21:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560338",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
