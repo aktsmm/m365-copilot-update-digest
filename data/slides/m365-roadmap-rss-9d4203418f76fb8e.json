@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9d4203418f76fb8e",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Teams Interpreter のテナントレベルダッシュボード、見送りに",
+        "subtitleJa": "組織全体の利用状況を一覧する管理画面は、今回は提供されません",
+        "en": "Microsoft Teams: Tenant-level dashboard for Interpreter"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Teams"],
+        "categories": ["m365-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams の管理者**（Interpreter の利用状況を把握したい人）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Teams 管理センターに利用状況の専用ダッシュボードが追加される予定だったが、見送りとなった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "提供予定だった機能が見送りになっただけで、既存の設定は変わらない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Interpreter の利用傾向を一か所で確認するダッシュボードは、**今回は提供されません**", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は Retirement として扱われ、変更は「今回は進めない」と決定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "見送られたのは、組織全体の Interpreter 利用状況と普及傾向を見るダッシュボード", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "現在の管理方法",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Interpreter の組織全体の有効・無効は PowerShell の -AIInterpreter で管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "PowerShell を使用してインタープリターを管理する", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "会議は Set-CsTeamsMeetingPolicy、1:1 VoIP 通話は Set-CsTeamsCallingPolicy で設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "PowerShell を使用してインタープリターを管理する", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応の目安",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "-AIInterpreter は既定で有効のため、現状の設定を変える必要はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "会議でのインタープリターの管理", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "利用状況の把握が必要な場合は、ロードマップの続報を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "licensing",
+          "heading": "ライセンスと提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot ライセンスで、ユーザーごとに月 20 時間の通訳が含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "会議・1:1 VoIP 通話・Teams Rooms などで利用可能。Teams イベントは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "サポートされているプラットフォームとクライアント", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "interpreter", "term": "Interpreter（通訳エージェント）", "type": "feature", "oneLine": { "text": "Teams 会議で話された言語をリアルタイムに翻訳し、選んだ言語で聞けるようにする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "冒頭", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "aiinterpreter", "term": "-AIInterpreter", "type": "term", "oneLine": { "text": "会議や通話で Interpreter を使えるかを制御する PowerShell パラメーター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "インタープリターのオンとオフを切り替える", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "voicesim", "term": "音声シミュレーション", "type": "term", "oneLine": { "text": "翻訳音声を話者本人の声に似せて生成する機能。音声サンプルは保存されない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "インタープリターがユーザーの声を使用する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、計画された変更を進めない、または終了することを示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565217",
+        "learn": [{ "title": "組織の通訳エージェントを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
