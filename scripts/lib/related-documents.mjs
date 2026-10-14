@@ -8,6 +8,7 @@ export const OFFICIAL_HOSTS = new Set([
   "devblogs.microsoft.com",
   "www.microsoft.com",
   "docs.github.com",
+  "support.microsoft.com",
 ]);
 
 export class OfficialPageError extends Error {
@@ -36,13 +37,26 @@ export function officialUrl(value, base) {
   }
 }
 
+export function withPublicationSource(event, sources) {
+  const source = sources.find((entry) => entry.id === event.sourceId);
+  const publicationUrl = source?.sourceFamily === "Microsoft Learn" ? source.url
+    : officialUrl(event.publicationUrl) ? event.publicationUrl
+    : officialUrl(event.url) ? event.url : source?.url;
+  if (!officialUrl(publicationUrl)) {
+    throw new Error(`No official publication source for ${event.id}`);
+  }
+  return { ...event, publicationUrl };
+}
+
 export function documentUrl(value, base) {
   const url = officialUrl(value, base);
   if (
     !url ||
-    !["learn.microsoft.com", "docs.github.com"].includes(url.hostname) ||
+    !["learn.microsoft.com", "docs.github.com", "support.microsoft.com"].includes(url.hostname) ||
     !/^\/(?:[a-z]{2}-[a-z]{2}\/)?[^/]+\/[^/]+/i.test(url.pathname) ||
     (url.hostname === "docs.github.com" && !/^\/(?:en|ja)\/[^/]+\/[^/]+/i.test(url.pathname)) ||
+    (url.hostname === "support.microsoft.com" && !/^\/(?:[a-z]{2}-[a-z]{2}\/)?(?:office|topic)\//i.test(url.pathname)) ||
+    (url.hostname === "support.microsoft.com" && !/[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}$/i.test(url.pathname)) ||
     /^\/(?:[a-z]{2}-[a-z]{2}\/)?(?:api|search|answers|users|legal|training)\b/i.test(url.pathname)
   ) {
     return null;
@@ -103,6 +117,10 @@ export function urlKey(value) {
     }
   }
   url.searchParams.sort();
+  if (url.hostname === "support.microsoft.com") {
+    const articleId = url.pathname.match(/[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}/i)?.[0];
+    if (articleId) return `${url.hostname}/${articleId.toLowerCase()}`;
+  }
   const pathname = url.hostname === "docs.github.com"
     ? url.pathname.replace(/^\/(?:en|ja)(?=\/)/i, "")
     : url.pathname.replace(/^\/[a-z]{2}-[a-z]{2}(?=\/)/i, "");
@@ -224,6 +242,7 @@ export function pendingDocumentEvents(events, cache, limit = 6, now = new Date()
       title: event.titleEn || event.title,
       summary: event.summaryEn || event.summary,
       url: event.url,
+      publicationUrl: event.publicationUrl || event.url,
       inputFingerprint: documentFingerprint(event),
     }));
 }
@@ -365,7 +384,9 @@ export async function enrichDocumentCache(events, cache, {
     try {
       // A Learn release-notes page covers many updates: only use its item links.
       const original = officialUrl(event.url);
-      if (!links.length && original && !/\/(?:release-notes|whats-new|roadmap)\/?$/i.test(original.pathname)) {
+      if (!links.length && original &&
+        !(original.hostname === "support.microsoft.com" && !documentUrl(original.toString())) &&
+        !/\/(?:release-notes|whats-new|roadmap)\/?$/i.test(original.pathname)) {
         const article = await page(event.url);
         links = extractDocumentLinks(articleContent(article.html, article.url), article.url, "article");
       }

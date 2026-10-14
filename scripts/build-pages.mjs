@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
+import { matchingRecord, withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
 import {
   formatDate,
@@ -100,6 +100,9 @@ const TEXT = {
     openDigest: "日次ページを見る",
     relatedDocuments: "関連ドキュメント",
     documentSupplemental: "補足",
+    documentPending: "関連ドキュメントは未調査です。",
+    documentNotFound: "原文以外の対応する関連資料は、まだ確認できていません。",
+    documentError: "関連資料の取得に失敗したため、再確認します。",
     publishedLabel: "公開日",
     sourceLabel: "ソース",
     whyLabel: "なぜ重要か",
@@ -185,6 +188,9 @@ const TEXT = {
     openDigest: "Open daily page",
     relatedDocuments: "Related documentation",
     documentSupplemental: "Supplementary",
+    documentPending: "Related documentation has not been checked yet.",
+    documentNotFound: "No matching additional documentation has been verified yet.",
+    documentError: "Documentation retrieval failed and will be checked again.",
     publishedLabel: "Published",
     sourceLabel: "Source",
     whyLabel: "Why it matters",
@@ -315,6 +321,11 @@ function localePath(locale, subpath = "") {
 
 function relativeHref(depth, targetPath) {
   return `${depth === 0 ? "" : "../".repeat(depth)}${targetPath}`;
+}
+
+function searchIndexHref(depth, siteMeta) {
+  const version = siteMeta.lastUpdatedAt ? `?v=${encodeURIComponent(siteMeta.lastUpdatedAt)}` : "";
+  return relativeHref(depth, `search-index.json${version}`);
 }
 
 function productSlug(value) {
@@ -495,7 +506,7 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
         <a href="${originalHref}" target="_blank" rel="noreferrer">${escapeHtml(text.openSource)}</a>
         ${detailHref ? `<a href="${escapeHtml(detailHref)}">${escapeHtml(text.openDigest)}</a>` : ""}
       </div>
-      ${event.relatedDocuments?.length ? `<div class="related-documents"><strong>${escapeHtml(text.relatedDocuments)}</strong><ul>${event.relatedDocuments.map((document) => `<li><a href="${escapeHtml(document.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.documentSupplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : ""}
+      ${event.relatedDocuments?.length ? `<div class="related-documents"><strong>${escapeHtml(text.relatedDocuments)}</strong><ul>${event.relatedDocuments.map((document) => `<li><a href="${escapeHtml(document.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.documentSupplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : `<p class="document-status">${escapeHtml(event.relatedDocumentStatus === "not-found" ? text.documentNotFound : event.relatedDocumentStatus === "error" ? text.documentError : text.documentPending)}</p>`}
     </article>
   `;
 }
@@ -688,6 +699,7 @@ function buildSearchIndex(events) {
     publishedAt: event.publishedAt,
     url: event.url,
     relatedDocuments: event.relatedDocuments || [],
+    relatedDocumentStatus: event.relatedDocumentStatus,
     detailPath: `daily/${toDateOnly(event.publishedAt)}/#${encodeURIComponent(`update-${event.id}`)}`,
   }));
 }
@@ -852,7 +864,7 @@ function renderIndexPage(
     activeNav: "home",
     alternatePath: locale === "en" ? "" : "en/",
     siteMeta,
-    bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(relativeHref(locale === "en" ? 1 : 0, "search-index.json"))}" data-search-base="${escapeHtml(relativeHref(locale === "en" ? 1 : 0, ""))}"`,
+    bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(searchIndexHref(locale === "en" ? 1 : 0, siteMeta))}" data-search-base="${escapeHtml(relativeHref(locale === "en" ? 1 : 0, ""))}"`,
     extraScripts: [relativeHref(locale === "en" ? 1 : 0, "assets/search.js")],
     content,
   });
@@ -1056,7 +1068,7 @@ function renderSearchPage(locale, siteMeta) {
     activeNav: "search",
     alternatePath: locale === "en" ? "search/" : "en/search/",
     siteMeta,
-    bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(relativeHref(depth, "search-index.json"))}" data-search-base="${escapeHtml(relativeHref(depth, ""))}"`,
+    bodyAttributes: `data-locale="${escapeHtml(locale)}" data-search-index="${escapeHtml(searchIndexHref(depth, siteMeta))}" data-search-base="${escapeHtml(relativeHref(depth, ""))}"`,
     extraScripts: [searchScript],
     content,
   });
@@ -1078,7 +1090,16 @@ async function main() {
   const relatedDocuments = await readJson(relatedDocumentsFile, {});
   validateDocumentCache(relatedDocuments);
   const allEvents = applyOverrides(
-    rawDailyLogs.flatMap((log) => log.events || []).map((event) => withRelatedDocuments(event, relatedDocuments)),
+    rawDailyLogs.flatMap((log) => log.events || []).map((event) => {
+      const enriched = withRelatedDocuments(event, relatedDocuments);
+      const record = matchingRecord(event, relatedDocuments);
+      return {
+        ...enriched,
+        relatedDocumentStatus: enriched.relatedDocuments?.length ? "verified"
+          : record?.mcpStatus === "error" || record?.status === "error" ? "error"
+          : record?.mcpStatus === "not-found" ? "not-found" : "pending",
+      };
+    }),
     overrides,
   );
   const dailyLogs = rawDailyLogs
