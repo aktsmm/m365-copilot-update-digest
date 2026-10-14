@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-747ff5d569d25ab1",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ：A2A と MCP の長時間実行タスクに対応",
+        "subtitleJa": "進捗の追跡・結果の後取得・キャンセルができる耐久タスクを実現します",
+        "en": "Work IQ: A2A and MCP long running tasks"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Work IQ の API でエージェントやアプリを**開発・作成する人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "時間のかかる処理を、進捗を追いながら実行し、結果を後から取得・中止できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため今すぐの対応は不要。提供開始時に開発側で活用を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**A2A** と **MCP** の長時間実行タスクを、進捗の追跡・結果の後からの取得・キャンセル付きで扱えるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Work IQ の A2A と MCP の長時間実行タスク", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "進捗の追跡、後からの結果取得、キャンセルに対応する予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Work IQ の API には A2A、リモート MCP サーバー、REST API がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "概要", "retrievedAt": "2026-10-14T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現行の A2A サンプルは同期の SendMessage とマルチターンの会話に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "エージェント間 (A2A) プロトコル", "retrievedAt": "2026-10-14T20:00:00Z" }] },
+            { "text": "Work IQ API の利用は Microsoft 365 Copilot ライセンスとは無関係で、使用量ベースの課金", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-14T20:00:00Z" }] },
+            { "text": "対象のクラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コストは Microsoft 365 管理センターで管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-14T20:00:00Z" }] },
+            { "text": "長時間実行のワークフロー向けに、テナント境界内の作業ストレージ（ワークスペース）が用意されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "ワークスペース", "retrievedAt": "2026-10-14T20:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "product", "oneLine": { "text": "エージェントが組織のデータ、コンテキスト、ツールにアクセスして推論できるようにするワークプレイス インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "概要", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
+        { "termKey": "a2a", "term": "A2A", "type": "term", "oneLine": { "text": "エージェント間のコラボレーションに使われるプロトコル。Work IQ のチャットで対応している。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "チャット", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントがツールやデータにつながるための標準プロトコル。Work IQ MCP は Microsoft 365 データへの汎用ツールを提供する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "ツール", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能を開発している段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570851",
+        "learn": [
+          { "title": "Work IQ の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locale": "ja-jp" },
+          { "title": "Work IQ API の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
