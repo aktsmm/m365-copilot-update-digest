@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6ba6d5323707d712",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "SharePoint のドキュメントとページ向け AI 引用分析を提供開始",
+        "subtitleJa": "Copilot やエージェントに参照された頻度を確認できます",
+        "en": "SharePoint: AI citations analytics for documents and pages"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "Launched",
+        "products": ["SharePoint"],
+        "categories": ["m365-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint のコンテンツ作成者**と、サイトの管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "自分のドキュメントやページが Copilot の回答でどれだけ参照されたかを把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "確認のための機能のため、必須の対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "SharePoint のドキュメント、ニュース、ページが **Copilot や AI エージェントにどれだけ利用されたか**を追跡できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ページやファイルが Copilot の回答で参照された頻度を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "SharePoint サイトのコンテンツが参照された状況を、集計した形でも把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント インサイト レポート: 作成されたエージェントが多いサイトを管理者が確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/insights-on-sharepoint-agents", "locator": "概要", "retrievedAt": "2026-10-14T20:25:00Z" }] },
+            { "text": "Copilot in SharePoint は 2026 年 9 月 30 日に一般提供のロールアウトを開始する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-14T20:25:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "参照の多いページを見て、内容の更新や整理の優先順位を決める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ai-citation", "term": "AI 引用", "type": "term", "oneLine": { "text": "Copilot や AI エージェントが回答でページやファイルを参照すること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-in-sharepoint", "term": "Copilot in SharePoint", "type": "feature", "oneLine": { "text": "自然言語で SharePoint コンテンツへの質問やページ・ファイルの作成ができる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-14T20:25:00Z" }] } },
+        { "termKey": "agent-insights", "term": "エージェント インサイト レポート", "type": "feature", "oneLine": { "text": "組織内で最近作成されたエージェントの情報を管理者に示すレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/insights-on-sharepoint-agents", "locator": "概要", "retrievedAt": "2026-10-14T20:25:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=480725",
+        "learn": [
+          { "title": "Copilot in SharePoint の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locale": "ja-jp" },
+          { "title": "SharePoint のエージェントに関するインサイト レポート", "url": "https://learn.microsoft.com/ja-jp/sharepoint/insights-on-sharepoint-agents", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
