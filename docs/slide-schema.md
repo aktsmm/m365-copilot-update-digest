@@ -42,6 +42,10 @@
 
 `PDF_PASSWORD`（リポジトリ Secret）が設定されているときだけ PDF を公開します。最新の 1 件は暗号化なしの無料サンプルです。形式は `M365PDF1 | iv(12) | ciphertext | tag(16)`（AES-256-GCM）で、鍵は `data/slides.json` の `pdfGate.salt` から PBKDF2-SHA256（210000 回）で導出します。`pdfGate.verifier` でパスワードの正否を先に確認します。パスワードを変えたら `deploy-pages.yml` を再実行してください。
 
+## まとめ PDF（表紙・目次・終了ページ）
+
+「PDF」ボタンは、表示中の更新を 1 つの PDF にまとめます。表紙、目次・概要（種類順、ページ番号付き。ブラウザの canvas で描画して挿入）、各スライド、終了ページの順です。
+
 ## PowerPoint 書き出し
 
 サイトのボタンで、表示中のスライドをブラウザ内で編集可能な .pptx にできます（`public/assets/pptx-export.js`、pptxgenjs）。パスワードは不要で、`slides/{key}.json` を入力にします。

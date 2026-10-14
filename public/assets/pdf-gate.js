@@ -97,6 +97,57 @@
     }
   }
 
+  const TOC_PER_PAGE = 15;
+
+  // 目次ページはブラウザの canvas で描いて PNG にする（日本語フォントを PDF に埋め込まずに済む）
+  async function tocPages(entries) {
+    const totalToc = Math.max(1, Math.ceil(entries.length / TOC_PER_PAGE));
+    let pageNo = 2 + totalToc;
+    const starts = entries.map((entry) => {
+      const start = pageNo;
+      pageNo += entry.pages || 1;
+      return start;
+    });
+    const pages = [];
+    for (let p = 0; p < totalToc; p += 1) {
+      const canvas = document.createElement("canvas");
+      canvas.width = 2560;
+      canvas.height = 1440;
+      const ctx = canvas.getContext("2d");
+      ctx.scale(2, 2);
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, 1280, 720);
+      const font = (size, weight) => `${weight} ${size}px "Noto Sans JP","Yu Gothic UI","Meiryo","Hiragino Sans",sans-serif`;
+      ctx.fillStyle = "#0b2a4a";
+      ctx.font = font(32, 700);
+      ctx.fillText(totalToc > 1 ? `目次・概要（${p + 1}/${totalToc}）` : "目次・概要", 70, 80);
+      ctx.fillStyle = "#3d4a5c";
+      ctx.font = font(16, 400);
+      ctx.fillText(`${entries.length} 件（種類順、同じ種類は新しい順）`, 70, 112);
+      entries.slice(p * TOC_PER_PAGE, (p + 1) * TOC_PER_PAGE).forEach((entry, i) => {
+        const y = 160 + i * 36;
+        const n = p * TOC_PER_PAGE + i;
+        ctx.fillStyle = "#0b6bcb";
+        ctx.font = font(18, 700);
+        ctx.fillText(`${n + 1}.`, 70, y);
+        ctx.fillStyle = "#1b2430";
+        ctx.font = font(18, 400);
+        let text = `【${entry.label}】${entry.title}`;
+        while (ctx.measureText(text).width > 1000 && text.length > 4) {
+          text = `${text.slice(0, -2)}…`;
+        }
+        ctx.fillText(text, 120, y);
+        ctx.fillStyle = "#6b778a";
+        ctx.textAlign = "right";
+        ctx.fillText(`p.${starts[n]}`, 1210, y);
+        ctx.textAlign = "left";
+      });
+      const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+      pages.push(new Uint8Array(await blob.arrayBuffer()));
+    }
+    return pages;
+  }
+
   async function mergeVisible(button, status) {
     const keys = [...new Set(window.digestVisibleSlideKeys ? window.digestVisibleSlideKeys() : [])].slice(0, MERGE_LIMIT);
     if (keys.length === 0) {
@@ -108,9 +159,16 @@
       const PDFLib = await loadPdfLib();
       const merged = await PDFLib.PDFDocument.create();
       await appendPdf(merged, "pdf/cover.pdf");
-      for (let i = 0; i < keys.length; i += 1) {
-        status.textContent = `${i + 1} / ${keys.length}`;
-        const entry = index.slides.find((slide) => slide.key === keys[i]);
+      const keySet = new Set(keys);
+      const entries = index.slides.filter((slide) => keySet.has(slide.key));
+      for (const png of await tocPages(entries)) {
+        const image = await merged.embedPng(png);
+        const page = merged.addPage([960, 540]);
+        page.drawImage(image, { x: 0, y: 0, width: 960, height: 540 });
+      }
+      for (let i = 0; i < entries.length; i += 1) {
+        status.textContent = `${i + 1} / ${entries.length}`;
+        const entry = entries[i];
         const source = await PDFLib.PDFDocument.load(await fetchPdf(entry));
         const pages = await merged.copyPages(source, source.getPageIndices());
         pages.forEach((page) => merged.addPage(page));
@@ -121,7 +179,7 @@
       anchor.href = URL.createObjectURL(blob);
       anchor.download = "m365-copilot-update-digest.pdf";
       anchor.click();
-      status.textContent = `${keys.length} 件を保存しました`;
+      status.textContent = `${entries.length} 件を保存しました`;
     } catch (error) {
       status.textContent = "";
       report(error);
