@@ -18,8 +18,8 @@
   const more = $("[data-ex-more]");
   const periodLabel = $("[data-explorer-period]");
   const L = {
-    ja: { items: "件", basis: "JST・発行日基準", detail: "日次の該当箇所", source: "原文を開く", related: "関連ドキュメント", slide: "スライド PDF", published: "発行", noRelated: "" },
-    en: { items: "items", basis: "JST, by publish date", detail: "View in daily digest", source: "Open source", related: "Related documentation", slide: "Slide PDF", published: "Published", noRelated: "" },
+    ja: { items: "件", basis: "JST・発行日基準", detail: "日次の該当箇所", source: "原文を開く", related: "関連ドキュメント", include: "出力に含める", published: "発行", noRelated: "" },
+    en: { items: "items", basis: "JST, by publish date", detail: "View in daily digest", source: "Open source", related: "Related documentation", include: "Include in export", published: "Published", noRelated: "" },
   }[locale];
 
   let entries = [];
@@ -27,6 +27,9 @@
   let slideIndex = new Map();
   let filtered = [];
   let shown = 0;
+  let lastSig = "";
+  const excluded = new Set();
+  const chosen = () => filtered.filter((entry) => !excluded.has(entry.id));
   const selected = { kinds: new Set(), categories: new Set() };
   const label = (item) => (locale === "en" ? item.labelEn || item.label : item.label);
 
@@ -84,6 +87,7 @@
     const original = safeUrl(entry.url);
     const hasPdf = entry.slideKey && slideIndex.has(entry.slideKey);
     return `<article class="update-card" data-kind="${esc(entry.kind)}">
+      <label class="card-select"><input type="checkbox" class="selbox" data-id="${esc(entry.id)}"${excluded.has(entry.id) ? "" : " checked"} /> ${esc(L.include)}</label>
       <div class="badge-row">
         ${kind ? `<span class="badge badge-kind-${esc(kind.id)}">${esc(label(kind))}</span>` : ""}
         ${entry.importance !== "normal" && level ? `<span class="badge badge-pinned">${esc(label(level))}</span>` : ""}
@@ -112,15 +116,29 @@
   function apply() {
     const tokens = textInput.value.toLowerCase().split(/\s+/).filter(Boolean);
     filtered = entries.filter((entry) => matches(entry, tokens));
+    const sig = filtered.map((entry) => entry.id).join("|");
+    if (sig !== lastSig) {
+      excluded.clear();
+      lastSig = sig;
+    }
     results.innerHTML = "";
     shown = 0;
     empty.classList.toggle("hidden", filtered.length > 0);
     renderMore();
     periodLabel.textContent = `${startInput.value || "…"} ～ ${endInput.value || "…"}（${L.basis}）: ${filtered.length} ${L.items}`;
+    syncExport();
+  }
+
+  function syncExport() {
+    const picked = chosen();
+    $("[data-ex-selcount]").textContent = `${picked.length} / ${filtered.length}`;
+    results.querySelectorAll(".selbox").forEach((box) => {
+      box.checked = !excluded.has(box.dataset.id);
+    });
     const jsonButton = $("[data-ex-json]");
-    jsonButton.textContent = `JSON（${filtered.length}）`;
-    const slideCount = filtered.filter((entry) => entry.slideKey && slideIndex.has(entry.slideKey)).length;
-    const jsonCount = filtered.filter((entry) => entry.slideKey).length;
+    jsonButton.textContent = `JSON（${picked.length}）`;
+    const slideCount = picked.filter((entry) => entry.slideKey && slideIndex.has(entry.slideKey)).length;
+    const jsonCount = picked.filter((entry) => entry.slideKey).length;
     const counts = { "data-download-merged": slideCount, "data-download-pptx": jsonCount };
     Object.entries(counts).forEach(([attr, n]) => {
       root.querySelectorAll(`[${attr}]`).forEach((b) => {
@@ -137,8 +155,8 @@
     apply();
   }
 
-  window.digestVisibleSlideKeys = () => filtered.map((entry) => entry.slideKey).filter((key) => key && slideIndex.has(key));
-  window.digestVisibleSlideJsonKeys = () => filtered.map((entry) => entry.slideKey).filter(Boolean);
+  window.digestVisibleSlideKeys = () => chosen().map((entry) => entry.slideKey).filter((key) => key && slideIndex.has(key));
+  window.digestVisibleSlideJsonKeys = () => chosen().map((entry) => entry.slideKey).filter(Boolean);
 
   Promise.all([
     fetch(indexUrl).then((r) => r.json()),
@@ -159,8 +177,22 @@
       textInput.addEventListener("input", apply);
       root.querySelectorAll("[data-ex-preset]").forEach((b) => b.addEventListener("click", () => preset(Number(b.dataset.exPreset))));
       more.addEventListener("click", renderMore);
+      results.addEventListener("change", (event) => {
+        const box = event.target.closest(".selbox");
+        if (!box) return;
+        box.checked ? excluded.delete(box.dataset.id) : excluded.add(box.dataset.id);
+        syncExport();
+      });
+      $("[data-ex-selall]").addEventListener("click", () => {
+        excluded.clear();
+        syncExport();
+      });
+      $("[data-ex-selnone]").addEventListener("click", () => {
+        filtered.forEach((entry) => excluded.add(entry.id));
+        syncExport();
+      });
       $("[data-ex-json]").addEventListener("click", () => {
-        const blob = new Blob([JSON.stringify(filtered, null, 2)], { type: "application/json" });
+        const blob = new Blob([JSON.stringify(chosen(), null, 2)], { type: "application/json" });
         const a = document.createElement("a");
         a.href = URL.createObjectURL(blob);
         a.download = "m365-copilot-updates.json";

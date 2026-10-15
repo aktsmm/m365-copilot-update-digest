@@ -967,6 +967,9 @@ const EXPLORER_TEXT = {
     pdf: "PDF",
     pptx: "PPTX",
     json: "JSON",
+    exportLabel: "出力対象",
+    selectAll: "全選択",
+    selectNone: "全解除",
   },
   en: {
     title: "Latest updates",
@@ -984,6 +987,9 @@ const EXPLORER_TEXT = {
     pdf: "PDF",
     pptx: "PPTX",
     json: "JSON",
+    exportLabel: "Export selection",
+    selectAll: "Select all",
+    selectNone: "Select none",
   },
 };
 
@@ -1003,6 +1009,9 @@ function renderExplorerShell(locale) {
           <input class="search-input" type="search" data-ex-text placeholder="${escapeHtml(t.search)}" />
         </div>
         <div class="filter-row filter-actions">
+          <span class="export-selection">${escapeHtml(t.exportLabel)}: <strong data-ex-selcount>0</strong>
+            <button type="button" class="btn-outline" data-ex-selall>${escapeHtml(t.selectAll)}</button>
+            <button type="button" class="btn-outline" data-ex-selnone>${escapeHtml(t.selectNone)}</button></span>
           <span class="download-status" data-download-status></span>
           <button type="button" class="btn-outline" data-ex-json>${escapeHtml(t.json)}</button>
           <button type="button" class="btn-outline" data-download-merged hidden>${escapeHtml(t.pdf)}</button>
