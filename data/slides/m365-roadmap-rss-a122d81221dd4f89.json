@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-a122d81221dd4f89",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central で Shopify 注文・返品の販売ドキュメント作成を制御可能に",
+        "subtitleJa": "注文番号の利用と返品の処理方法を、ショップカードで設定できます",
+        "en": "Dynamics 365 Business Central: Ecommerce - Control sales document creation for Shopify orders and returns"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central で Shopify コネクタを使う作成者・運用担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "販売ドキュメントを作成する前に、連絡先を確認しながら制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "必要に応じて、ショップカードで Use Shopify Order No. と Process Returns as を設定する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-16T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "ショップカードの **Use Shopify Order No.** と **Process Returns as** を設定し、連絡先を確認してから「Create Sales Document」を選べます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Use Shopify Order No.: Shopify の注文番号を、作成する販売ドキュメントの番号として使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "Process Returns as: 販売クレジットメモか販売返品注文のどちらを作成するかを決める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Shopify Shops から対象ショップのショップカードを開き、Orders を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "To create sales documents", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "注文を選んで Create Sales Documents を実行し、「はい」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "To create sales documents", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "注文番号を使うには、販売ドキュメントの番号シリーズで手動番号を許可する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "Process Returns as は、返品処理を Auto Create Sales Document にした場合に有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Shopify 注文ごとに、販売ドキュメント作成前に Use Shopify Order No. を上書きできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "Auto Create Sales Documents をオンにすると、注文の取り込み後に自動で作成を試みる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Create sales documents in Business Central", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Directed Put-away and Pick の拠点では、Process Returns as を Return Order にする運用が案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Location mapping", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "shopify-shop-card", "term": "Shopify ショップカード", "type": "feature", "oneLine": { "text": "Business Central で Shopify ショップごとの同期設定を行うページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "use-shopify-order-no", "term": "Use Shopify Order No.", "type": "feature", "oneLine": { "text": "Shopify の注文番号を販売ドキュメントの番号として使う設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "process-returns-as", "term": "Process Returns as", "type": "feature", "oneLine": { "text": "返品から作成する文書を、クレジットメモか返品注文から選ぶ設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573340",
+        "learn": [{ "title": "Synchronize and fulfill sales orders", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
