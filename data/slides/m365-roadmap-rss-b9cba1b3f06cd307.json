@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b9cba1b3f06cd307",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Teams のチャットとチャネルで SharePoint エージェントを追加できるように",
+        "subtitleJa": "アプリ内ストアから探して、会話にそのまま追加できます",
+        "en": "Microsoft Teams: Adaptive card-based app & copilot agent link unfurling in Teams"
+      },
+      "meta": {
+        "publishedJst": "2026-10-02",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Teams"],
+        "categories": ["agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams のチャットやチャネルで共同作業するユーザー**（作成者向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会話を離れずに SharePoint エージェントを見つけて追加し、グループで使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "必要に応じてユーザーが使う機能。ロードマップ上、導入作業の記載はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "チャットやチャネルで、名簿のドロップダウンの「Add agents and bots」からアプリ内ストアを開き、**SharePoint エージェントを会話に直接追加**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "アプリ内ストアで SharePoint エージェントを探して追加できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "追加したエージェントを、グループの会話で共同利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "チャットまたはチャネルの名簿ドロップダウンから「Add agents and bots」を選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "開いたアプリ内ストアで SharePoint エージェントを選び、会話に追加する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "related-features",
+          "heading": "関連: リンク展開",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams のリンク展開は、アダプティブ カード バージョン 1.3 以前をサポートする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locator": "リンク展開", "retrievedAt": "2026-10-15T21:20:00Z" }] },
+            { "text": "モバイルでは、認証が不要なリンクのみリンク展開に対応する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locator": "リンク展開", "retrievedAt": "2026-10-15T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず小さなチャネルで試し、共有したいエージェントを決める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sharepoint-agent", "term": "SharePoint エージェント", "type": "feature", "oneLine": { "text": "アプリ内ストアから探して、チャットやチャネルの会話に追加できるエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "in-context-store", "term": "アプリ内ストア", "type": "feature", "oneLine": { "text": "チャットやチャネルの中で、エージェントを探して追加できるストア。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "link-unfurling", "term": "リンク展開", "type": "term", "oneLine": { "text": "URL を貼り付けたとき、アプリが追加情報やアクションを持つカードで応答する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locator": "冒頭", "retrievedAt": "2026-10-15T21:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=515465",
+        "learn": [
+          { "title": "リンク展開（Teams プラットフォーム）", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
