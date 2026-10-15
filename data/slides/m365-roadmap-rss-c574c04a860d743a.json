@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c574c04a860d743a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Purview 自動ラベル付けの処理上限が SharePoint と OneDrive で拡大",
+        "subtitleJa": "1 日あたりの処理数が最大 500,000 ファイルへ引き上げられます",
+        "en": "Microsoft Purview: Information Protection - Auto-labeling scale increase for SharePoint and OneDrive"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview の自動ラベル付けポリシーを運用する管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存コンテンツのラベル付けの抜け漏れを、より早く解消できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "既存の自動ラベル付けポリシーの上限が拡大される。ポリシー未作成なら作成から", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "自動ラベル付けポリシーの制限", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "SharePoint と OneDrive の自動ラベル付けは、テナントあたり 1 日 100,000 ファイルまで", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "テナントあたり 1 日**最大 500,000 ファイル**まで自動ラベル付けできます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "自動ラベル付けポリシーの制限", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "サービス側の自動ラベル付け: SharePoint・OneDrive に保存済みのファイルへ、ポリシーでラベルを適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "サービス側のラベル付け", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "ユーザーのアプリのバージョンに依存せず、ポリシーを有効にした時点から組織全体で動作", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "サービス側のラベル付け", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "ポリシーは既定でシミュレーション モードで実行され、ラベルを適用せず一致を評価", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "シミュレーション モードの詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Purview ポータル → Information Protection → ポリシー → 自動ラベル付けポリシー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "ライセンスと各サーフェスの場所", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "ポリシーを有効にするには、コンプライアンス管理者などのロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "前提条件のチェックリスト", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "シミュレーションには Microsoft 365 の監査の有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "前提条件のチェックリスト", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "1 テナントあたり最大 100 ポリシー。ポリシーごとに明示指定のサイトは最大 1,000", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "自動ラベル付けポリシーの制限", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "PDF を処理するには、テナントで PDF のラベル付けを有効にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "自動ラベル付けポリシーの制限", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能・ライセンス",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "シミュレーション モードは最大 20,000,000 個の一致ファイルまで対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "シミュレーション モードの詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "サービス側の自動ラベル付けは E5 / Azure Information Protection Premium P2 層のライセンスが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "ライセンスと各サーフェスの場所", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存コンテンツが多いテナントは、シミュレーションで一致数を確認してから有効化する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "auto-labeling", "term": "自動ラベル付け", "type": "feature", "oneLine": { "text": "条件に一致するコンテンツへ、秘密度ラベルを自動的に適用する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "service-side-labeling", "term": "サービス側のラベル付け", "type": "term", "oneLine": { "text": "SharePoint・OneDrive に保存済みのコンテンツやメールに、ポリシーでラベルを適用する方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "サービス側のラベル付け", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "simulation-mode", "term": "シミュレーション モード", "type": "term", "oneLine": { "text": "ラベルを適用せずに、ポリシーの一致を評価してログに記録するモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "シミュレーション モードの詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "sensitivity-label", "term": "秘密度ラベル", "type": "term", "oneLine": { "text": "Office for the web などで、ファイルに適用して保護設定を割り当てるラベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-sharepoint-onedrive-files", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567890",
+        "learn": [
+          { "title": "Microsoft 365 データに秘密度ラベルを自動的に適用する", "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locale": "ja-jp" },
+          { "title": "SharePoint および OneDrive でファイルの秘密度ラベルを有効にする", "url": "https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-sharepoint-onedrive-files", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
