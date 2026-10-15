@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2ac0d7a58715e860",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio エージェントに専用アカウントを付与する永続的な ID（開発中）",
+        "subtitleJa": "エージェントを、管理者が統制できる Microsoft 365 の ID として運用できます",
+        "en": "Microsoft Copilot Studio: Persistent identity for Copilot Studio Agents"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio", "Microsoft Copilot Studio"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Microsoft 365 / Entra の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "専用のメールボックス、Teams のプレゼンス、Office へのアクセスを持つエージェントを、管理者が統制しながら運用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため、今すぐの対応は不要。提供開始に備えて情報を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "作成者がエージェントに**専用アカウント**を与え、チームをまたぐ共同の業務プロセスで使える、ガバナンスされた Microsoft 365 ID にできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供内容の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "作成者が Copilot Studio エージェントに専用アカウントを付与できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "専用のメールボックス、Teams のプレゼンス、Office へのアクセスを持てる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エージェントは仕事が行われる場所で協働し、管理者は統制とガバナンスを行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステータスは開発中。提供時期は月・日とも公表されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現在の ID 管理（参考）",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Studio は新規エージェントごとに Microsoft Entra エージェント ID を自動作成し、Entra 管理センターで管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "冒頭", "retrievedAt": "2026-10-15T16:40:00Z" }] },
+            { "text": "Entra での監査ログ、ライフサイクル管理、条件付きアクセスによるコネクタ権限の制御が可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "主な利点", "retrievedAt": "2026-10-15T16:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "作成者がエージェントを構築・公開するための Microsoft のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "冒頭", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
+        { "termKey": "entra-agent-id", "term": "Microsoft Entra エージェント ID", "type": "feature", "oneLine": { "text": "ID ガバナンスと可視性をエージェントに拡張する、Microsoft Entra の ID。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "冒頭", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
+        { "termKey": "conditional-access", "term": "条件付きアクセス", "type": "term", "oneLine": { "text": "ネットワークの場所やデバイスのコンプライアンスなどの条件を、アクセス許可の前提にする Entra のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "エージェント ID に対するコネクタのアクセス許可", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570430",
+        "learn": [{ "title": "Copilot Studio エージェント向けの Microsoft Entra エージェント ID", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
