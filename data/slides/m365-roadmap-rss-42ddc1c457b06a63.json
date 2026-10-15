@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-42ddc1c457b06a63",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Chat が Word・PowerPoint 内の画像テキストを検索一致の対象に（開発中）",
+        "subtitleJa": "スキャンした契約書など、画像内の文字も検索で見つけやすくなります",
+        "en": "Microsoft Copilot (Microsoft M365): Copilot Chat can now better match search results from text that appears inside images embedded in Word and PowerPoint files"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Chat で Word・PowerPoint のファイルを探す人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "スキャンした契約書や表・画像内の文字など、これまで探しにくかった内容が検索で見つかりやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "セマンティック インデックスは自動で有効化され、管理者の設定は不要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "管理者の関与は必要ありません", "retrievedAt": "2026-10-15T23:40:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word や PowerPoint に埋め込まれた**画像内のテキスト**も、Copilot Chat の検索結果として一致しやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Word・PowerPoint ファイルに埋め込まれた画像内のテキスト", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スキャンした契約書、表のテキスト、画像内のテキストなどが例", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はユーザー自身の作業ファイル", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プラットフォームは Web、クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "検索で表示されるのは、各ユーザーがアクセスを許可されているコンテンツのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "プライバシー、コンプライアンス、セキュリティ", "retrievedAt": "2026-10-15T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "インデックス作成に管理者の関与は不要。セマンティック インデックスは無効にできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "管理者の関与", "retrievedAt": "2026-10-15T23:40:00Z" }] },
+            { "text": "ファイルを除外したい場合は、Purview DLP の利用や SharePoint サイトの除外を検討できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "管理者向けの任意のアクティビティ", "retrievedAt": "2026-10-15T23:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot の、組織のデータを踏まえて質問できるチャット。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "semantic-index", "term": "セマンティック インデックス", "type": "feature", "oneLine": { "text": "Microsoft Graph のコンテンツから作られ、完全一致を超えた検索を可能にするインデックス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "インデックスとは", "retrievedAt": "2026-10-15T23:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570469",
+        "learn": [
+          { "title": "Microsoft Copilot のセマンティック インデックス作成", "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
