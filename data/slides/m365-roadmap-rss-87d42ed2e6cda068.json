@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-87d42ed2e6cda068",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 の ERP エージェント向けロールベースアクセス制御（開発中）",
+        "subtitleJa": "エージェント経由のアクセスにだけ適用する追加の制限を設定できます",
+        "en": "Dynamics 365 Finance and Operations cross-app: Role-based access controls for ERP agents"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Finance and Operations cross-app", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 ERP のセキュリティ管理者**と、ERP エージェントを作成・運用する人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェント経由のアクセスだけに追加の制限をかけられるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、今すぐの対応は不要。現行のロールと権限の棚卸しが準備になる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ユーザーが**エージェント経由で ERP にアクセスする場合にのみ**適用される制限を、既存のセキュリティ モデルで定義できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ERP のセキュリティ管理者が、エージェント固有の制限を設定する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロール・職務・権限を割り当てて、エージェント経由のアクセスだけに適用する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の提供範囲は Worldwide、GCC、GCC High（Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在は開発中の段階で、仕様や提供内容は今後変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行の ERP MCP は権限を昇格せず、ユーザーに割り当てた権限をそのまま適用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "承認とアクセス制御", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "current-model",
+          "heading": "現在のセキュリティ モデル",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロール、職務、権限、レコード レベルのセキュリティが全リクエストに適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "承認とアクセス制御", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "別個のセキュリティ境界は作らず、認証済みユーザーの文脈で評価する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "セキュリティ モデル", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "MCP 経由で使うユーザーのロール、職務、権限を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "Administrators", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "「許可された MCP クライアント」で接続できるエージェントを管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "許可される MCP クライアント", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "erp-agent", "term": "ERP エージェント", "type": "feature", "oneLine": { "text": "Dynamics 365 の財務・運用アプリにエージェント経由でアクセスする仕組みを使うエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "rbac", "term": "ロールベースアクセス制御", "type": "term", "oneLine": { "text": "ユーザーに割り当てたロール、職務、権限でアクセス可否を決める仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "承認とアクセス制御", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェント クライアントが外部アプリに接続するためのモデル コンテキスト プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571677",
+        "learn": [
+          { "title": "Dynamics 365 ERP MCPのセキュリティ", "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security#security-model", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
