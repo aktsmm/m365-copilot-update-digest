@@ -351,6 +351,10 @@ h3 {
   gap: 16px;
 }
 
+.card-grid[data-ex-results] {
+  grid-template-columns: 1fr;
+}
+
 .update-card,
 .column-card,
 .search-shell,
