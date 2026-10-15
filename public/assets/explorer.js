@@ -97,7 +97,6 @@
       <div class="card-links">
         ${original ? `<a href="${esc(original)}" target="_blank" rel="noopener noreferrer">${esc(L.source)}</a>` : ""}
         <a href="${esc(href)}">${esc(L.detail)}</a>
-        ${hasPdf ? `<a href="#" data-slide-pdf="${esc(entry.slideKey)}">${esc(L.slide)}</a>` : ""}
       </div>
       ${docs.length ? `<div class="related-documents"><strong>${esc(L.related)}</strong><ul>${docs.map((d) => `<li><a href="${esc(safeUrl(d.url))}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a></li>`).join("")}</ul></div>` : ""}
     </article>`;
