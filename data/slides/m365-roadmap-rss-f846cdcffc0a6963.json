@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f846cdcffc0a6963",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の MCP Server でデータクエリを実行可能に",
+        "subtitleJa": "API がないデータも、MCP アプリケーションからクエリできます",
+        "en": "Dynamics 365 Business Central: Copilot and agents - Run data queries with MCP Server"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central のエージェントや MCP アプリケーションを作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存の API がないデータも、カスタムのクエリで取得できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "使うには、MCP サーバー構成で Data Query Tools を有効化する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Configure data query tools (preview)", "retrievedAt": "2026-10-15T22:45:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "新しい MCP ツールで、**カスタムのデータクエリを定義・検証・実行**できます。既存の API がないデータも MCP アプリケーションから照会できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "bc_data_query が AL クエリをコンパイル・検証し、returnData で実行して行を返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Configure data query tools (preview)", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "テーブル検索・スキーマ取得・リレーション取得のツールでクエリ作成を支援", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Configure data query tools (preview)", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "データクエリ ツールは読み取り専用で、作成・変更・削除はできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Configure data query tools (preview)", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MCP - Admin 権限セット（または同等の権限）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Prerequisites", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "MCP サーバー構成ページで Data Query Tools の Activate を選ぶ。追加設定は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Create MCP server configurations", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "構成は Active にすると読み取り専用になり、変更時は一度オフにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Create MCP server configurations", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Business Central online が対象。Learn では Data Query Tools に「Preview」表記がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Server Features", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "有効化しても、ユーザーの権限で使えるデータの範囲は変わらない想定で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "API Tools: 管理者が選んだ API ページと API クエリをエージェントに公開（クエリは読み取りのみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Configure available APIs", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "2026 年 6 月の強化: 標準 API 全体の公開と、API クエリのサポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/unlock-more-business-central-data-mcp-server-enhancements", "locator": "機能の詳細", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "API がない集計・分析を、エージェントから自然言語で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp-server-bc", "term": "Business Central MCP Server", "type": "product", "oneLine": { "text": "AI クライアントが Business Central 環境に接続し、データやロジックを操作できるようにするサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "冒頭", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
+        { "termKey": "data-query-tools", "term": "Data Query Tools", "type": "feature", "oneLine": { "text": "エージェントが Business Central のデータベースに対して直接クエリを実行できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Server Features", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
+        { "termKey": "api-query", "term": "API クエリ", "type": "term", "oneLine": { "text": "事前に集約・最適化されたデータセットを取得する、Business Central の API オブジェクト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/unlock-more-business-central-data-mcp-server-enhancements", "locator": "機能の詳細", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573312",
+        "learn": [
+          { "title": "Configure the Business Central MCP server", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locale": "en-us" },
+          { "title": "MCPサーバーの強化でBusiness Centralのデータをさらに解放しよう", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/unlock-more-business-central-data-mcp-server-enhancements", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
