@@ -785,6 +785,8 @@ function buildSearchIndex(events) {
     sourceName: event.sourceName,
     releaseStage: event.releaseStage,
     roleTags: event.roleTags || [],
+    roadmapIds: event.roadmapIds || [],
+    importanceReason: event.importanceReason || "",
     publishedAt: event.publishedAt,
     url: event.url,
     relatedDocuments: event.relatedDocuments || [],

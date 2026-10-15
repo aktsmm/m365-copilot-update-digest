@@ -353,7 +353,23 @@ h3 {
 
 .card-grid[data-ex-results] {
   grid-template-columns: 1fr;
+  gap: 10px;
 }
+
+.card-grid[data-ex-results] .update-card { padding: 10px 14px; }
+.card-grid[data-ex-results] .update-card p { margin: 4px 0; }
+.ex-head { display: flex; align-items: flex-start; gap: 10px; }
+.ex-head h3 { flex: 1; min-width: 0; margin: 0 0 2px; font-size: 1.02rem; }
+.ex-head .badge { flex: none; }
+.ex-sel { display: inline-flex; padding-top: 3px; cursor: pointer; }
+.ex-sel input { width: 18px; height: 18px; margin: 0; cursor: pointer; }
+.ex-meta { font-size: 0.82rem; color: var(--muted); margin: 0 0 4px; }
+.card-grid[data-ex-results] .badge-row { margin: 4px 0; gap: 6px; }
+.ex-summary { line-height: 1.55; }
+.ex-reason { font-size: 0.85rem; color: var(--muted); }
+.ex-links { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; font-size: 0.85rem; margin-top: 4px; }
+.ex-docs { color: var(--muted); }
+.badge-role { background: #eef2f7; color: #51607a; }
 
 .update-card,
 .column-card,
