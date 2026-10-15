@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5b2ce03efc2e7670",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Copilot Studio の Agent Readiness でエージェントの状態を常時確認（展開中）",
+        "subtitleJa": "公開を妨げる問題を、ビルド画面の「Review」で事前に把握できます",
+        "en": "Microsoft Copilot Studio: Agent Readiness in Microsoft Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Copilot Studio", "Microsoft Copilot Studio"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Copilot Studio でエージェントを作る**作成者**と、その**管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "公開を妨げる項目や危険にさらす項目を、作成中にリアルタイムで確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "作成者向けの機能追加で、管理者の対応は発表上は求められていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ビルド画面の**「Review」インジケーター**1 つで、ポリシー制限や評価の不足など、公開前に対処すべき項目を常に確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "レビューのアイコンは作成中は常に表示され、未解決の問題数を示す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "冒頭", "retrievedAt": "2026-10-15T17:12:00Z" }] },
+            { "text": "問題は重大度別に表示: ブロッキング（公開不可）と警告（公開は可能）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-15T17:12:00Z" }] },
+            { "text": "ブロックされたツールやコネクターは、一覧で無効化表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "ブロックされたツール、コネクター、モデル、スキル", "retrievedAt": "2026-10-15T17:12:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェント作成中に、上部バーのレビューアイコンからパネルを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "冒頭", "retrievedAt": "2026-10-15T17:12:00Z" }] },
+            { "text": "各項目の「設定の更新」「管理者への連絡」から解決先へ進める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-15T17:12:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Learn の解説は GitHub Copilot ハーネスで動くエージェント向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "Note", "retrievedAt": "2026-10-15T17:12:00Z" }] },
+            { "text": "管理レベルのガバナンスやコンプライアンス報告の代わりにはならない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "Note", "retrievedAt": "2026-10-15T17:12:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上は展開中。対象は Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "指摘される例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "データポリシーによるツール・コネクタ・ナレッジのブロック", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-15T17:12:00Z" }] },
+            { "text": "サインイン不要の設定や、実験・プレビュー モデルの使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-15T17:12:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-readiness", "term": "Agent Readiness", "type": "feature", "oneLine": { "text": "エージェントの公開を妨げる、または危険にさらす項目を作成中に確認できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "review-panel", "term": "レビュー パネル", "type": "feature", "oneLine": { "text": "準備状況、ガバナンス、セキュリティに影響する問題を一か所で確認できる画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "冒頭", "retrievedAt": "2026-10-15T17:12:00Z" }] } },
+        { "termKey": "acp", "term": "Advanced Connector Policies", "type": "term", "oneLine": { "text": "組織がコネクタの利用を制御するための Power Platform のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "冒頭", "retrievedAt": "2026-10-15T17:12:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、順次展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568762",
+        "learn": [{ "title": "エージェントの準備状況と状況を確認する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
