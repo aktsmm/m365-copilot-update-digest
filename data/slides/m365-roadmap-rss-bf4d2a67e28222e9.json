@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-bf4d2a67e28222e9",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Teams Rooms on Windows コンソールから会議室を即時予約可能に",
+        "subtitleJa": "空いている会議室を、その場で予約してすぐ使えます",
+        "en": "Microsoft Teams: Ad-hoc room reservation from Teams Rooms on Windows console"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Teams"],
+        "categories": ["m365-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams Rooms on Windows を使う社員**と、会議室を管理する IT 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会議室の予定の競合を避け、突発的な会議も中断なく行える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "IT 管理者は、Pro 管理ポータルでこの機能のオン・オフを制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議室が使用可能なとき、コンソールの予定表に**予約ボタン**が表示され、その場で予約してすぐ使えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議室が使用可能な場合、予定表に「予約」ボタンが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "すぐ使う会議室をすばやく予約でき、スケジュールの競合を避けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者: Pro 管理ポータル > 会議室 > 対象の会議室 > 設定 > 会議のトグルで制御", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "Teams Rooms Pro ライセンスの会議室で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams Rooms Pro ライセンスを持つ会議室が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide、GCC、GCC High、DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Android の Teams Rooms では「アドホック会議室の予約を許可」の設定で切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "会議室の予定表には、空き状況と予定済みの会議が表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "予定表", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "空き時間が多い会議室から、予約ボタンの運用を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "teams-rooms", "term": "Teams Rooms", "type": "product", "oneLine": { "text": "タッチ コンソールで予定表の表示や会議参加ができる、会議室向けの Teams デバイス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "adhoc-room-reservation", "term": "アドホックな部屋の予約", "type": "feature", "oneLine": { "text": "使用可能な会議室を、予定表の予約ボタンからその場で予約する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "pro-portal", "term": "Pro 管理ポータル", "type": "term", "oneLine": { "text": "Teams Rooms Pro の会議室設定を、管理者が構成するポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=548648",
+        "learn": [{ "title": "Teams Rooms (Windows および Android) のホーム画面と管理コントロール", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
