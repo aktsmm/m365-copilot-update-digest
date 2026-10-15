@@ -9,27 +9,67 @@
   "categories": [
     {
       "id": "copilot-chat",
-      "label": "Copilot Chat",
-      "labelEn": "Copilot Chat",
+      "label": "Copilot Chat・検索",
+      "labelEn": "Copilot Chat & Search",
       "products": [],
       "tags": ["Microsoft 365 Copilot Chat", "Microsoft 365 Copilot app"],
-      "titleRegex": ["Copilot Chat", "\\bCopilot app\\b", "\\bnotebook\\b", "\\bpages?\\b.*Copilot"]
+      "titleRegex": ["Copilot Chat", "\\bCopilot app\\b", "\\bnotebook\\b", "\\bpages?\\b.*Copilot", "Copilot Search", "\\bsearch\\b", "\\bvoice\\b", "Microsoft Copilot \\(Microsoft 365\\)", "\\bresponses?\\b", "\\bcitations?\\b", "\\bCopilot about\\b", "\\bscheduling\\b"]
+    },
+    {
+      "id": "copilot-studio",
+      "label": "Copilot Studio",
+      "labelEn": "Copilot Studio",
+      "products": ["Copilot Studio"],
+      "tags": ["Copilot Studio", "Microsoft Copilot Studio"],
+      "titleRegex": ["Copilot Studio"]
     },
     {
       "id": "agents",
       "label": "エージェント・拡張",
       "labelEn": "Agents & extensibility",
-      "products": ["Copilot Studio"],
-      "tags": ["Copilot Studio", "Microsoft Copilot Studio", "Microsoft 365 Copilot extensibility", "Copilot extensibility"],
-      "titleRegex": ["\\bagents?\\b", "Agent Builder", "\\bMCP\\b", "\\bconnectors?\\b", "\\bplugins?\\b"]
+      "products": [],
+      "tags": ["Microsoft 365 Copilot extensibility", "Copilot extensibility"],
+      "titleRegex": ["\\bagents?\\b", "Agent Builder", "\\bMCP\\b", "\\bconnectors?\\b", "\\bplugins?\\b", "\\bCowork\\b"]
     },
     {
-      "id": "m365-apps",
-      "label": "Office・Teams アプリ",
-      "labelEn": "Office & Teams apps",
-      "products": ["Word", "Excel", "PowerPoint", "Outlook", "OneNote", "Planner", "Microsoft Teams", "SharePoint", "OneDrive"],
-      "tags": ["Word", "Excel", "PowerPoint", "Outlook", "OneNote", "Planner", "Microsoft Teams", "SharePoint", "OneDrive"],
-      "titleRegex": []
+      "id": "work-iq",
+      "label": "Work IQ・データ基盤",
+      "labelEn": "Work IQ & data",
+      "products": [],
+      "tags": [],
+      "titleRegex": ["\\bWork IQ\\b", "\\bIQ\\b", "\\bgraph\\b", "\\bPeople Skills\\b", "\\bDataverse\\b"]
+    },
+    {
+      "id": "teams",
+      "label": "Teams・会議",
+      "labelEn": "Teams & meetings",
+      "products": ["Microsoft Teams"],
+      "tags": ["Microsoft Teams"],
+      "titleRegex": ["\\bTeams\\b", "\\bmeetings?\\b", "\\bIntelligent Recap\\b"]
+    },
+    {
+      "id": "outlook",
+      "label": "Outlook・メール",
+      "labelEn": "Outlook & mail",
+      "products": ["Outlook"],
+      "tags": ["Outlook"],
+      "titleRegex": ["\\bOutlook\\b", "\\be-?mail\\b", "\\bcalendar\\b"]
+    },
+    {
+      "id": "office-apps",
+      "label": "Word・Excel・PowerPoint 他",
+      "labelEn": "Word, Excel, PowerPoint & more",
+      "products": ["Word", "Excel", "PowerPoint", "OneNote", "Planner", "Loop", "Microsoft Loop", "Clipchamp", "Visio", "Whiteboard", "Forms"],
+      "tags": ["Word", "Excel", "PowerPoint", "OneNote", "Planner", "Loop", "Clipchamp", "Visio", "Whiteboard", "Forms"],
+      "titleRegex": ["\\bWord\\b", "\\bExcel\\b", "\\bPowerPoint\\b", "\\bOneNote\\b", "\\bVisio\\b", "\\bClipchamp\\b", "\\bForms\\b"]
+    },
+    {
+      "id": "sharepoint",
+      "label": "SharePoint・OneDrive",
+      "labelEn": "SharePoint & OneDrive",
+      "products": ["SharePoint", "OneDrive"],
+      "tags": ["SharePoint", "OneDrive"],
+      "titleRegex": ["\\bSharePoint\\b", "\\bOneDrive\\b"]
     },
     {
       "id": "security-compliance",
@@ -37,7 +77,7 @@
       "labelEn": "Security & compliance",
       "products": ["Microsoft Purview", "Security Copilot"],
       "tags": ["Microsoft Purview", "Security Copilot"],
-      "titleRegex": ["\\bsecurity\\b", "\\bcompliance\\b", "\\bDLP\\b", "sensitivity label", "\\bgovernance\\b", "\\baudit\\b"]
+      "titleRegex": ["\\bsecurity\\b", "\\bcompliance\\b", "\\bDLP\\b", "sensitivity label", "\\bgovernance\\b", "\\baudit\\b", "\\bPurview\\b"]
     },
     {
       "id": "admin",
@@ -45,15 +85,31 @@
       "labelEn": "Admin & licensing",
       "products": [],
       "tags": ["Microsoft 365 admin center"],
-      "titleRegex": ["admin center", "\\blicens", "\\bpricing\\b", "\\bpay-as-you-go\\b", "\\busage report"]
+      "titleRegex": ["admin center", "\\blicens", "\\bpricing\\b", "\\bpay-as-you-go\\b", "\\busage report", "\\bPower BI\\b", "\\bInsights\\b", "\\bdashboards?\\b", "\\bunintended access\\b"]
     },
     {
-      "id": "viva-others",
-      "label": "Viva・その他の製品",
-      "labelEn": "Viva & other products",
-      "products": ["Microsoft Viva", "Viva Insights", "Microsoft Edge", "Dynamics 365 Business Central", "Dynamics 365 Field Service", "Dynamics 365 Sales", "Dynamics 365 Supply Chain Management"],
-      "tags": ["Microsoft Viva", "Viva Insights", "Microsoft Edge"],
-      "titleRegex": []
+      "id": "viva",
+      "label": "Viva",
+      "labelEn": "Viva",
+      "products": ["Microsoft Viva", "Viva Insights"],
+      "tags": ["Microsoft Viva", "Viva Insights"],
+      "titleRegex": ["\\bViva\\b"]
+    },
+    {
+      "id": "dynamics",
+      "label": "Dynamics 365",
+      "labelEn": "Dynamics 365",
+      "products": ["Dynamics 365 Business Central", "Dynamics 365 Field Service", "Dynamics 365 Sales", "Dynamics 365 Supply Chain Management", "Dynamics 365 Commerce", "Dynamics 365 Customer Service", "Dynamics 365 Finance"],
+      "tags": [],
+      "titleRegex": ["\\bDynamics 365\\b", "\\bPower Apps\\b", "\\bPower Platform\\b"]
+    },
+    {
+      "id": "edge-windows",
+      "label": "Edge・Windows",
+      "labelEn": "Edge & Windows",
+      "products": ["Microsoft Edge", "Windows"],
+      "tags": ["Microsoft Edge", "Windows"],
+      "titleRegex": ["\\bEdge\\b", "\\bWindows\\b"]
     },
     {
       "id": "other",

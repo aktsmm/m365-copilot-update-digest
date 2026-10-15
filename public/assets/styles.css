@@ -797,11 +797,18 @@ h3 {
 /* カテゴリは塗りつぶさず、色の枠で種類と区別する */
 .badge-cat { background: #fff; border: 1.5px solid var(--cat-color, #6b778a); color: var(--cat-color, #6b778a); font-weight: 600; }
 .badge-cat-copilot-chat, .chip-cat-copilot-chat { --cat-color: #0e7c86; }
+.badge-cat-copilot-studio, .chip-cat-copilot-studio { --cat-color: #1d7a4d; }
 .badge-cat-agents, .chip-cat-agents { --cat-color: #a23b8e; }
-.badge-cat-m365-apps, .chip-cat-m365-apps { --cat-color: #3a5ba0; }
+.badge-cat-work-iq, .chip-cat-work-iq { --cat-color: #5b4bb7; }
+.badge-cat-teams, .chip-cat-teams { --cat-color: #4b53bc; }
+.badge-cat-outlook, .chip-cat-outlook { --cat-color: #0f6cbd; }
+.badge-cat-office-apps, .chip-cat-office-apps { --cat-color: #3a5ba0; }
+.badge-cat-sharepoint, .chip-cat-sharepoint { --cat-color: #038387; }
 .badge-cat-security-compliance, .chip-cat-security-compliance { --cat-color: #b4531a; }
 .badge-cat-admin, .chip-cat-admin { --cat-color: #7a6a1a; }
-.badge-cat-viva-others, .chip-cat-viva-others { --cat-color: #4a7a2a; }
+.badge-cat-viva, .chip-cat-viva { --cat-color: #4a7a2a; }
+.badge-cat-dynamics, .chip-cat-dynamics { --cat-color: #8a3b3b; }
+.badge-cat-edge-windows, .chip-cat-edge-windows { --cat-color: #2f6f8f; }
 .badge-cat-other, .chip-cat-other { --cat-color: #6b778a; }
 .check-chip[class*="chip-cat-"] { border-color: var(--cat-color); color: var(--cat-color); }
 .check-chip[class*="chip-cat-"]:has(input:checked) { background: var(--cat-color); color: #fff; }
