@@ -584,7 +584,6 @@ function renderUpdateCard(event, locale, depth, text, options = {}) {
       <div class="card-links">
         <a href="${originalHref}" target="_blank" rel="noreferrer">${escapeHtml(text.openSource)}</a>
         ${detailHref ? `<a href="${escapeHtml(detailHref)}">${escapeHtml(text.openDigest)}</a>` : ""}
-        ${slideKeys.has(event.id) ? `<a href="${escapeHtml(relativeHref(depth, `pdf/${event.id}.pdf.enc`))}" data-slide-pdf="${escapeHtml(event.id)}" hidden>${escapeHtml(text.slideLink)}</a>` : ""}
       </div>
       ${event.relatedDocuments?.length ? `<div class="related-documents"><strong>${escapeHtml(text.relatedDocuments)}</strong><ul>${event.relatedDocuments.map((document) => `<li><a href="${escapeHtml(document.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(document.title)}</a>${document.supplemental ? `<span class="document-supplemental">${escapeHtml(text.documentSupplemental)}</span>` : ""}</li>`).join("")}</ul></div>` : `<p class="document-status">${escapeHtml(event.relatedDocumentStatus === "not-found" ? text.documentNotFound : event.relatedDocumentStatus === "error" ? text.documentError : text.documentPending)}</p>`}
     </article>
