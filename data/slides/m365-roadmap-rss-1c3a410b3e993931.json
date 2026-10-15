@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1c3a410b3e993931",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Customer Service のツール・スキル・プラグインが Cowork、Code、Scout で利用可能に（開発中）",
+        "subtitleJa": "サービス情報の参照と操作を、Copilot の各体験から行えるようになります",
+        "en": "Dynamics 365 Customer Service: Service tools, skills and plugins are now available for Cowork, Code and Scout"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Dynamics 365 Customer Service"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**カスタマー サービス担当者**と、Microsoft 365 / Dynamics 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "前提条件", "retrievedAt": "2026-10-15T16:15:00Z" }] },
+        "change": { "text": "Customer Service の情報や操作を、アプリを切り替えずに Copilot の各体験で使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階。将来使う際は Service アプリの割り当てと環境の設定が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "前提条件", "retrievedAt": "2026-10-15T16:15:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "更新された Service アプリにより、Customer Service のコンテキスト・アクション・ガイド付きワークフローを Chat、Cowork、Code、Scout で使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Customer Service のコンテキストとアクションを Copilot の各体験へ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Cowork では、ケースの調査から次の手順の実行までを委任できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "冒頭", "retrievedAt": "2026-10-15T16:15:00Z" }] },
+            { "text": "Service Agent はケースの要約、ナレッジ取得、ノート追加などに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-service-agent", "locator": "Service Agent でできること", "retrievedAt": "2026-10-15T16:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在は開発中の段階で、内容は今後変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Cowork の利用権、Customer Service ライセンス、環境と記録への権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "前提条件", "retrievedAt": "2026-10-15T16:15:00Z" }] },
+            { "text": "ツール呼び出しは、適用前にユーザーの承認が必要になる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "Cowork でスキルを使用する", "retrievedAt": "2026-10-15T16:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Service アプリのインストールだけでは、環境の設定やデータへのアクセスは付与されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス エージェントを有効にする", "retrievedAt": "2026-10-15T16:15:00Z" }] },
+            { "text": "Cowork ではカスタマイズで「Service」を検索してオンにし、環境を選択する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "プラグインの有効化", "retrievedAt": "2026-10-15T16:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "service-agent", "term": "Service Agent", "type": "feature", "oneLine": { "text": "顧客サービス担当者がケースなどの情報を検索・要約・更新するのを助ける Copilot エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-service-agent", "locator": "冒頭", "retrievedAt": "2026-10-15T16:15:00Z" }] } },
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "依頼を小さな手順に分解し、プラグインやスキルを呼び出して実行する Copilot の体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "Cowork でスキルを使用する", "retrievedAt": "2026-10-15T16:15:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントを外部のツールやデータにつなぐための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "Note", "retrievedAt": "2026-10-15T16:15:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571678",
+        "learn": [
+          { "title": "Copilot Cowork でカスタマー サービス スキルを使用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locale": "ja-jp" },
+          { "title": "カスタマー サービスでサービス エージェントを使用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-service-agent", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot で Service Agent を有効にする", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
