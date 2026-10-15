@@ -134,6 +134,19 @@
     renderMore();
     periodLabel.textContent = `${startInput.value || "…"} ～ ${endInput.value || "…"}（${L.basis}）: ${filtered.length} ${L.items}`;
     syncExport();
+    syncUrl();
+  }
+
+  function syncUrl() {
+    const p = new URLSearchParams();
+    if (startInput.value) p.set("start", startInput.value);
+    if (endInput.value) p.set("end", endInput.value);
+    if (importanceSelect.value !== "all") p.set("imp", importanceSelect.value);
+    if (selected.kinds.size) p.set("kind", [...selected.kinds].join(","));
+    if (selected.categories.size) p.set("cat", [...selected.categories].join(","));
+    if (textInput.value.trim()) p.set("q", textInput.value.trim());
+    const qs = p.toString();
+    history.replaceState(null, "", `${location.pathname}${qs ? `?${qs}` : ""}${location.hash}`);
   }
 
   function syncExport() {
@@ -182,6 +195,39 @@
       checkboxes($("[data-ex-categories]"), facets.categories, selected.categories, "cat");
       [startInput, endInput, importanceSelect].forEach((el) => el.addEventListener("change", apply));
       textInput.addEventListener("input", apply);
+      const defaults = { start: startInput.value, end: endInput.value };
+      const params = new URLSearchParams(location.search);
+      if (params.get("start")) startInput.value = params.get("start");
+      if (params.get("end")) endInput.value = params.get("end");
+      if (params.get("imp") && [...importanceSelect.options].some((o) => o.value === params.get("imp"))) importanceSelect.value = params.get("imp");
+      if (params.get("q")) textInput.value = params.get("q");
+      [["kind", selected.kinds, "[data-ex-kinds]"], ["cat", selected.categories, "[data-ex-categories]"]].forEach(([name, set, selector]) => {
+        (params.get(name) || "").split(",").filter(Boolean).forEach((id) => {
+          const box = $(selector).querySelector(`input[value="${CSS.escape(id)}"]`);
+          if (box) {
+            box.checked = true;
+            set.add(id);
+          }
+        });
+      });
+      $("[data-ex-reset]").addEventListener("click", () => {
+        startInput.value = defaults.start;
+        endInput.value = defaults.end;
+        importanceSelect.value = "all";
+        textInput.value = "";
+        selected.kinds.clear();
+        selected.categories.clear();
+        root.querySelectorAll("[data-ex-kinds] input, [data-ex-categories] input").forEach((box) => {
+          box.checked = false;
+        });
+        apply();
+      });
+      const sample = [...slideIndex.values()].find((slide) => slide.free);
+      if (sample) {
+        const link = $("[data-ex-sample]");
+        link.href = `${base}pdf/${sample.key}.pdf`;
+        link.hidden = false;
+      }
       root.querySelectorAll("[data-ex-preset]").forEach((b) => b.addEventListener("click", () => preset(Number(b.dataset.exPreset))));
       more.addEventListener("click", renderMore);
       results.addEventListener("change", (event) => {

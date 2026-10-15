@@ -970,6 +970,8 @@ const EXPLORER_TEXT = {
     pptx: "PPTX",
     json: "JSON",
     exportLabel: "出力対象",
+    reset: "条件クリア",
+    sample: "サンプル PDF",
     selectAll: "全選択",
     selectNone: "全解除",
   },
@@ -990,6 +992,8 @@ const EXPLORER_TEXT = {
     pptx: "PPTX",
     json: "JSON",
     exportLabel: "Export selection",
+    reset: "Reset filters",
+    sample: "Sample PDF",
     selectAll: "Select all",
     selectNone: "Select none",
   },
@@ -1008,6 +1012,7 @@ function renderExplorerShell(locale) {
           <button type="button" class="btn-outline" data-ex-preset="30">${escapeHtml(t.last30)}</button>
           <button type="button" class="btn-outline" data-ex-preset="7">${escapeHtml(t.last7)}</button>
           <label>${escapeHtml(t.importance)} <select data-ex-importance><option value="all">${escapeHtml(t.all)}</option></select></label>
+          <button type="button" class="btn-outline" data-ex-reset>${escapeHtml(t.reset)}</button>
           <input class="search-input" type="search" data-ex-text placeholder="${escapeHtml(t.search)}" />
         </div>
         <div class="filter-row filter-actions">
@@ -1015,6 +1020,7 @@ function renderExplorerShell(locale) {
             <button type="button" class="btn-outline" data-ex-selall>${escapeHtml(t.selectAll)}</button>
             <button type="button" class="btn-outline" data-ex-selnone>${escapeHtml(t.selectNone)}</button></span>
           <span class="download-status" data-download-status></span>
+          <a class="btn-outline" data-ex-sample href="#" target="_blank" rel="noopener" hidden>${escapeHtml(t.sample)}</a>
           <button type="button" class="btn-outline" data-ex-json>${escapeHtml(t.json)}</button>
           <button type="button" class="btn-outline" data-download-merged hidden>${escapeHtml(t.pdf)}</button>
           <button type="button" class="btn-outline" data-download-pptx hidden>${escapeHtml(t.pptx)}</button>
