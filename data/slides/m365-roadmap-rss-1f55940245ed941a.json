@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1f55940245ed941a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central のレポート出力を自動化する新 API を提供開始",
+        "subtitleJa": "レポート受信トレイの API で、Power Automate や MCP との連携を広げられます",
+        "en": "Dynamics 365 Business Central: Reporting and data analysis - Automate report outputs"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["viva-others"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central のレポートを自動化・連携したい開発者や作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "レポート受信トレイの内容を、API 経由で自動処理に組み込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、Business Central の API を有効にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-content-api", "locator": "Note", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "レポート受信トレイの新しい API により、**Power Automate や MCP でレポート出力の自動化を拡張**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エントリ情報を GET で取得し、既読状態を PATCH で更新できる（Items API）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locator": "Methods", "retrievedAt": "2026-10-15T16:30:00Z" }] },
+            { "text": "ファイル名・出力形式・サイズ・ファイル内容を GET で取得できる（Content API）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-content-api", "locator": "Properties", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Business Central で API を有効にする（手順は API 有効化の記事を参照）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-content-api", "locator": "Note", "retrievedAt": "2026-10-15T16:30:00Z" }] },
+            { "text": "対象は Business Central 2026 release wave 2 以降", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locator": "APPLIES TO", "retrievedAt": "2026-10-15T16:30:00Z" }] },
+            { "text": "Update 29.0 が 2026 release wave 2 の開始で、本機能は一般提供として掲載", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/whatsnew/whatsnew-update-29-0", "locator": "New and updated features", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "出力形式は PDF・Word・Excel・Zip のいずれか", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locator": "Properties", "retrievedAt": "2026-10-15T16:30:00Z" }] },
+            { "text": "Content API は GET のみ。Items API は GET と PATCH に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-content-api", "locator": "Methods", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "関連 API: Report Inbox の Companies / File / Items / Content", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-content-api", "locator": "Related information", "retrievedAt": "2026-10-15T16:30:00Z" }] },
+            { "text": "Power Automate や MCP と組み合わせた自動化の拡張が想定されている", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "生成済みレポートを取得して、承認や配信のフローにつなぐ使い方が考えられる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "reportName や entryNo で、どのレポートの出力かを識別できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locator": "Properties", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "report-inbox", "term": "レポート受信トレイ", "type": "feature", "oneLine": { "text": "Business Central で生成されたレポートのエントリを扱う場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locator": "冒頭", "retrievedAt": "2026-10-15T16:30:00Z" }] } },
+        { "termKey": "power-automate", "term": "Power Automate", "type": "product", "oneLine": { "text": "ロードマップで、レポート出力の自動化を拡張する連携先として挙げられているサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "ロードマップで、レポート出力の自動化を拡張する連携先として挙げられている仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573318",
+        "learn": [
+          { "title": "Work with report inbox items through the API", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locale": "en-us" },
+          { "title": "Get report inbox content through the API", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-content-api", "locale": "en-us" },
+          { "title": "Update 29.0 for Business Central 2026 release wave 2", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/whatsnew/whatsnew-update-29-0", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
