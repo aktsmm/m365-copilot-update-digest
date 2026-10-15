@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3a5d49dd662d9997",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central で仕入先別のセルフビリング請求書番号系列を設定可能に（開発中）",
+        "subtitleJa": "仕入先ごとの採番ルールに合わせて、請求書番号を割り当てられます",
+        "en": "Dynamics 365 Business Central: Finance - Vendor specific number series for Self-billing Invoices"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["viva-others"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS", "Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**セルフビリングを行う組織**の経理・購買担当と、Business Central の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "仕入先固有の採番ルールに対応しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため、今すぐの対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "セルフビリングの購入請求書に、**仕入先ごとの専用番号系列**を設定・割り当てできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "セルフビリングの購入請求書に、仕入先単位で専用の番号系列を設定できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "仕入先ごとに固有の採番ルールがある場合に対応しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期はまだ示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象クラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Learn では、仕入先カードの「請求」FastTab でセルフビリング契約をオンにし、番号系列を選ぶ手順が案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-register-new-vendors", "locator": "Set up a self-billing vendor", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "仕入先別の設定は、購買設定の全体設定より優先される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-register-new-vendors", "locator": "Set up a self-billing vendor", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "self-billing", "term": "セルフビリング", "type": "term", "oneLine": { "text": "購入側の組織が、自社でセルフビリング契約に基づき仕入先に代わって購入請求書を作成する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-register-new-vendors", "locator": "Use self-billed invoices for vendors", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "number-series", "term": "番号系列", "type": "term", "oneLine": { "text": "請求書などの文書に割り当てる、連続した番号の並び。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-register-new-vendors", "locator": "Set up a self-billing vendor", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "vendor-card", "term": "仕入先カード", "type": "feature", "oneLine": { "text": "仕入先から購入するために必要な情報を保持する、Business Central のカード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-register-new-vendors", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップに掲載された、まだ提供が始まっていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573307",
+        "learn": [
+          { "title": "仕入先の登録（セルフビリング請求書）", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-register-new-vendors#use-self-billed-invoices-for-vendors", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
