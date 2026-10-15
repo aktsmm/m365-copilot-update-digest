@@ -767,6 +767,10 @@ function knownJapaneseRoadmapTitle(event) {
     return "Work IQ: アップロード";
   }
 
+  if (/copilot response personalization - memory citations/.test(text)) {
+    return "Copilot の応答のパーソナライゼーション - メモリの引用";
+  }
+
   if (/delete meeting generated content in recap/.test(text)) {
     return "会議の要約から会議で生成されたコンテンツを削除";
   }
