@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-23b4052df51e1de2",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Sales エージェントのリード強化による見込み客への迅速な対応（廃止・終了区分）",
+        "subtitleJa": "インバウンドリードの選別を助ける項目が、ロードマップ上で Retirement になっています",
+        "en": "Microsoft Copilot (Microsoft 365): Engage prospects faster with Sales Agent-enriched leads"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**営業チームと Sales エージェントの利用者**、および管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ロードマップ上のステージが Retirement になっている", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "終了日や代替手段は公開情報で確認できないため、元の発表を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "営業チームは、多くのインバウンドリードのうち対応すべきものを選ぶ際に、複数のツールやデータ ソースのデータを確認する必要があります。この項目は、その負担を減らす Sales エージェントのリード強化に関するものです", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Web 版、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステージは Retirement", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Sales エージェントは、接続された CRM のデータやメール、Teams 会議などから情報を取得して回答する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "セールス エージェントは何に役立ちますか?", "retrievedAt": "2026-10-15T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの項目で終了時期と影響範囲を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Sales エージェントを使っている場合は、リード関連の利用状況を棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-agent", "term": "Sales エージェント", "type": "product", "oneLine": { "text": "Microsoft Copilot 内で使える、営業データを検索・合成して操作を支援する会話型エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T23:30:00Z" }] } },
+        { "termKey": "inbound-lead", "term": "インバウンドリード", "type": "term", "oneLine": { "text": "営業チームに寄せられる見込み客で、対応するかどうかを選別する対象。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567000",
+        "learn": [
+          { "title": "Microsoft Copilot の販売エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
