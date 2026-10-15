@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6e7c45551b542a00",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central でエージェントの権限管理が容易に（提供開始）",
+        "subtitleJa": "エージェントが求めた追加の権限を、その場で割り当てられます",
+        "en": "Dynamics 365 Business Central: Copilot and agents - Manage agent permissions easier"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "viva-others"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central でカスタム エージェントを設計・運用する管理者と作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントが追加の権限を求めたとき、権限セットを選んで割り当てられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "エージェントを構成できないユーザーは、管理者に権限付与を依頼する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "カスタム エージェントが別の権限セットを必要としてタスクを止めた際、**権限セットを選んで付与し、そのまま再開**できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "カスタム エージェントは、別の権限セットが必要になるとタスクを一時停止する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }] },
+            { "text": "Tasks ペインで権限要求を開き、候補の権限セットと説明を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }] },
+            { "text": "必要なアクセスを与える権限セットを選び、確認するとタスクが再開する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントが有効化されており、利用権限があることが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Prerequisites", "retrievedAt": "2026-10-15T17:40:00Z" }] },
+            { "text": "Copilot & agent capabilities ページで機能の有効・無効を管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/enable-ai", "locator": "Activate features", "retrievedAt": "2026-10-15T17:40:00Z" }] },
+            { "text": "エージェント アイコンの通知バッジから、対応が必要なタスクを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Understand how agents request your help", "retrievedAt": "2026-10-15T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "権限要求の対象はカスタム エージェント。Microsoft 提供のエージェントは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }] },
+            { "text": "エージェントを構成できないユーザーには、権限付与の操作が表示されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する管理機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot とエージェント機能へのアクセスは、権限セットで制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/enable-ai", "locator": "Granting user access", "retrievedAt": "2026-10-15T17:40:00Z" }] },
+            { "text": "エージェントの作業は、Tasks ペインのほかページ上のデータ レビュー バーでも確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review directly on pages", "retrievedAt": "2026-10-15T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "要求内容と権限セットの説明を読み、必要な権限だけを付与する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "付与前に、要求内のリンクで対象ページを確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Resolve a permission request", "retrievedAt": "2026-10-15T17:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "custom-agent", "term": "カスタム エージェント", "type": "feature", "oneLine": { "text": "Business Central で設計またはコードで作成するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/enable-ai", "locator": "Granting user access", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
+        { "termKey": "permission-set", "term": "権限セット", "type": "term", "oneLine": { "text": "Business Central の権限管理で、アクセス権をまとめて付与する単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/enable-ai", "locator": "Granting user access", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
+        { "termKey": "tasks-pane", "term": "Tasks ペイン", "type": "feature", "oneLine": { "text": "選んだエージェントのタスクを状態別に表示し、対応が必要なものを上部に示す画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review from the Tasks pane", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573370",
+        "learn": [
+          { "title": "Supervise agent activities", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locale": "en-us" },
+          { "title": "Configure Copilot and agent capabilities", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/enable-ai", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
