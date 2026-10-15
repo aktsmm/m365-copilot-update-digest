@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2271c83248fe8add",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の Shopify B2B で企業・カタログ・価格を管理",
+        "subtitleJa": "企業の同期、B2B 注文処理、マーケットカタログを Shopify コネクタで扱えます",
+        "en": "Dynamics 365 Business Central: Ecommerce - Manage Shopify B2B companies, catalogs, and pricing"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["admin", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central の Shopify コネクタで B2B 販売をする企業**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "税識別子や企業情報、カタログ価格を Business Central と Shopify で揃えやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "既存の Shopify 連携は、ショップ カードで「有効」を一度オフ→オンにしてプラン情報を更新する",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Shopify の B2B 機能が**全プランに拡大**し、コネクタが**企業の同期・B2B 注文処理・マーケットカタログ**に対応します",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "会社同期: Shopify の B2B 企業と所在地を取り込み、Business Central の顧客にマッピング", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "B2B 注文処理: 会社の所在地から、正しい請求先・発送先の顧客を解決", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "マーケットカタログ: B2B マーケットにカタログを割り当て、価格を同期", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始めるには", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "既存の Shopify 利用者は、ショップ カードの「有効」をオフ→オンでプラン情報を更新", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "税 ID は「法人税 ID マッピング」で、登録番号か VAT 登録番号を選んで送信", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "価格は「同期価格」トグルをオンにして同期を開始", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Basic / Grow / Advanced のマーケットカタログ割り当ては最大 3 件（Plus は無制限）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "企業カタログの直接割り当てと B2B カタログ ページは Advanced / Plus プランのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "スタッフ メンバー マッピング（Shopify スタッフを営業担当者に対応付け）は Advanced / Plus のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "税 ID を使うと、インポートした会社を既存の顧客に対応付けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "活用のヒント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "カタログの「お客様番号」を入力すれば、顧客価格グループなどの入力は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "まず Shopify のプランで使える範囲を確認してから設定する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "shopify-connector", "term": "Shopify コネクタ", "type": "feature", "oneLine": { "text": "Business Central と Shopify の間で顧客や注文、価格などを連携する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "market-catalog", "term": "マーケットカタログ", "type": "feature", "oneLine": { "text": "B2B マーケットに割り当てて、価格同期に使うカタログ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "company-location", "term": "会社の所在地", "type": "term", "oneLine": { "text": "Shopify の企業に紐づく所在地。支払い条件や税 ID を持てる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573342",
+        "learn": [
+          { "title": "B2B企業同期により、より多くのShopifyプランで法人顧客に販売可能に", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locale": "ja-jp" },
+          { "title": "Shopify B2B 企業および企業所在地に関する、より多くのデータをインポートおよびエクスポートする", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
