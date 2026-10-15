@@ -11,7 +11,7 @@ test("classifies by product area, tag, and title; order follows config", () => {
   );
   assert.deepEqual(
     classifyCategories({ productArea: "Word", tags: ["Copilot Studio"], title: "New thing" }, config),
-    ["agents", "m365-apps"],
+    ["copilot-studio", "office-apps"],
   );
   assert.deepEqual(
     classifyCategories({ productArea: "Microsoft 365 Copilot", tags: [], title: "Agent Builder GA" }, config),
