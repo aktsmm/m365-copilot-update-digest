@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3ab95e2cf9b56888",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の一覧にエージェント操作のレビュー通知バーを追加",
+        "subtitleJa": "人の確認が必要なエージェントの作業を、ドキュメント上で確認できます",
+        "en": "Dynamics 365 Business Central: User experiences - Agent actions review notifications on lists"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "viva-others"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central でエージェントの作業を確認する利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントが変更したドキュメントを、そのページ上で確認して進められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review directly on pages", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "エージェントが有効で、利用権限があれば使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Prerequisites", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが変更したドキュメントの上部に**データ レビュー バー**が出て、タスク ペインを開かずに項目単位の提案を確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review directly on pages", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ドキュメント上部にバーが出て、変更したエージェントと確認ボタンを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review directly on pages", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "Review (N) ボタンで、エージェントが変更した項目の一覧を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "What the data review bar shows", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "項目の情報アイコンで、変更したエージェント・理由・信頼度を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review field suggestions", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "前提: エージェントが有効化済みで、利用権限があること", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Prerequisites", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "確認後に Done で完了、後で見るなら Dismiss でバーを非表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Complete or dismiss the review", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "タスク ペインから確認する方法も使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review and approve agent work", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "バーは Card・Document・List Plus・Worksheet ページでのみ表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Troubleshooting", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "利用権限がなくてもバーは表示されるが、タスクへのリンクは出ない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review directly on pages", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "タスク ペインは、タスクの経過確認や停止中のエージェントへの指示に向く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review and approve agent work", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "バー表示中はページ通知が隠れ、リンクから表示できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Show page notifications during review", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "オレンジのアイコンは低信頼度の値で、慎重な確認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review field suggestions", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "まずオレンジのアイコンの項目から確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "data-review-bar", "term": "データ レビュー バー", "type": "feature", "oneLine": { "text": "エージェントが作成・変更したドキュメントの上部に出る、確認用のバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review directly on pages", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "tasks-pane", "term": "タスク ペイン", "type": "feature", "oneLine": { "text": "選んだエージェントのタスクを状態別に表示するペイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review from the Tasks pane", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "payables-agent", "term": "Payables Agent", "type": "product", "oneLine": { "text": "見積や請求書などの依頼を自律的に処理する Business Central のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Supervise agent activities", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573369",
+        "learn": [{ "title": "Supervise agent activities", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
