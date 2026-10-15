@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-27474759111f8f42",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Chat のモデル選択で従量課金（UBB）モデルが利用可能に（開発中）",
+        "subtitleJa": "管理者が割り当てたクレジットで、UBB が必要なモデルを選べるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Chat: Access to UBB models via the model selector"
+      },
+      "meta": {
+        "publishedJst": "2026-10-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の Chat を使うユーザー**と、テナント管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "使用量ベース課金（UBB）が必要なモデルを、Chat のモデル セレクターから選べるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は、使用量ベース課金と支出ポリシーを事前に確認しておくとよい",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locator": "Microsoft 365 管理センターで使用量ベースの課金を管理する", "retrievedAt": "2026-10-15T15:50:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "Chat の**モデル セレクター**から UBB モデルを利用できます。管理者がクレジットを割り当てることで使えるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Chat のモデル セレクターで、UBB が必要なモデルにアクセスできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Web とデスクトップ、Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "テナント管理者によるクレジットの割り当てが必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "割り当てられたクレジットを使い切ると、ユーザーは管理者にクレジットを要求できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は管理センターのコスト管理で、支出ポリシーや制限、アラートを構成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locator": "コスト管理ダッシュボードを使用する", "retrievedAt": "2026-10-15T15:50:00Z" }] },
+            { "text": "支出ポリシーで、Copilot クレジットを使えるユーザーを制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locator": "セットアップと構成", "retrievedAt": "2026-10-15T15:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ubb", "term": "使用量ベース課金（UBB）", "type": "term", "oneLine": { "text": "Copilot クレジットで測定される実際の使用量に基づいて課金されるモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locator": "冒頭", "retrievedAt": "2026-10-15T15:50:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "使用量ベース課金が適用される対象サービスの共通通貨。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locator": "Copilot クレジットを理解する", "retrievedAt": "2026-10-15T15:50:00Z" }] } },
+        { "termKey": "spending-policy", "term": "支出ポリシー", "type": "feature", "oneLine": { "text": "Copilot クレジットを使えるユーザーや支出制限を管理者が設定する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locator": "コスト管理ダッシュボードを使用する", "retrievedAt": "2026-10-15T15:50:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571400",
+        "learn": [
+          { "title": "Copilot クレジットの使用量ベースの課金とコスト管理を理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locale": "ja-jp" },
+          { "title": "Copilot クレジットの使用量ベースの請求を設定する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
