@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-935c57db4678f306",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の AL テストをコマンドラインや CI/CD で実行可能に",
+        "subtitleJa": "ALTool で、AL テストのコンパイル・デプロイ・実行をパイプラインに組み込めます",
+        "en": "Dynamics 365 Business Central: Development - Run AL tests from command-line and CI/CD workflows"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["viva-others"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central の AL 開発チーム**（拡張機能の開発者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "MCP サーバーに頼らず、ビルド・リリースのパイプラインで AL テストを自動実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、ALTool を含む AL Development Tools パッケージを導入する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Get started", "retrievedAt": "2026-10-16T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**ALTool** で AL テスト プロジェクトのコンパイル、デプロイ、実行をスクリプトやパイプラインから行えます。テストごとの結果と成功・失敗・スキップ数が JSON で得られます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ALTool で AL テスト プロジェクトをコンパイル・デプロイ・実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "テスト メソッドごとの結果と、成功・失敗・スキップ数を JSON で取得", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure DevOps や GitHub Actions などの CI/CD に組み込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Overview", "retrievedAt": "2026-10-16T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AL Development Tools パッケージ（NuGet）を導入すると ALTool が使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Get started", "retrievedAt": "2026-10-16T09:00:00Z" }] },
+            { "text": "`al` エイリアスで実行でき、`al help` でコマンド一覧を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "ALTool commands", "retrievedAt": "2026-10-16T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ALTool で作成したコードのデプロイには、サンドボックス テナントが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Note", "retrievedAt": "2026-10-16T09:00:00Z" }] },
+            { "text": "Visual Studio Code の完全なインストールなしで ALTool を単体利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Overview", "retrievedAt": "2026-10-16T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ALTool には AL の MCP サーバーや LSP サーバーを起動するコマンドもある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "ALTool commands", "retrievedAt": "2026-10-16T09:00:00Z" }] },
+            { "text": "今回の機能は MCP サーバーに依存せずにテストを実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "自動ビルド・リリースのパイプラインで AL テストを直接実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "まずサンドボックスのパイプラインで試し、結果の JSON を集計に使う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "altool", "term": "ALTool", "type": "feature", "oneLine": { "text": "Visual Studio Code の外で AL 拡張機能のコンパイルなどを行う、クロスプラットフォームのコマンドライン ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Overview", "retrievedAt": "2026-10-16T09:00:00Z" }] } },
+        { "termKey": "cicd", "term": "CI/CD", "type": "term", "oneLine": { "text": "ビルドとデプロイを自動化する仕組み。Azure DevOps や GitHub Actions などで使われる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Overview", "retrievedAt": "2026-10-16T09:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "ALTool の launchmcpserver コマンドで起動できる Model Context Protocol サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "ALTool commands", "retrievedAt": "2026-10-16T09:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573334",
+        "learn": [
+          { "title": "AL Development Tools package", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
