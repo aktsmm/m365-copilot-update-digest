@@ -92,7 +92,7 @@
     return `<article class="update-card" data-kind="${esc(entry.kind)}">
       <div class="ex-head">
         <label class="ex-sel" title="${esc(L.include)}"><input type="checkbox" class="selbox" data-id="${esc(entry.id)}"${excluded.has(entry.id) ? "" : " checked"} aria-label="${esc(L.include)}" /></label>
-        <h3><span class="ex-no">${index + 1}.</span> <a href="${esc(href)}">${esc(title)}</a></h3>
+        <h3><span class="ex-no">${index + 1}.</span> <a href="${esc(original || href)}"${original ? ' target="_blank" rel="noopener noreferrer"' : ""}>${esc(title)}</a></h3>
         ${kind ? `<span class="badge badge-kind-${esc(kind.id)}">${esc(label(kind))}</span>` : ""}
       </div>
       ${locale === "ja" && entry.titleEn && entry.titleEn !== title ? `<p class="card-original-title">${esc(entry.titleEn)}</p>` : ""}
