@@ -76,7 +76,7 @@
     return true;
   }
 
-  function card(entry) {
+  function card(entry, index) {
     const title = locale === "en" ? entry.titleEn : entry.titleJa;
     const summary = locale === "en" ? entry.summaryEn : entry.summaryJa;
     const href = `${base}${locale === "en" ? "en/" : ""}${entry.detailPath}`;
@@ -92,7 +92,7 @@
     return `<article class="update-card" data-kind="${esc(entry.kind)}">
       <div class="ex-head">
         <label class="ex-sel" title="${esc(L.include)}"><input type="checkbox" class="selbox" data-id="${esc(entry.id)}"${excluded.has(entry.id) ? "" : " checked"} aria-label="${esc(L.include)}" /></label>
-        <h3><a href="${esc(href)}">${esc(title)}</a></h3>
+        <h3><span class="ex-no">${index + 1}.</span> <a href="${esc(href)}">${esc(title)}</a></h3>
         ${kind ? `<span class="badge badge-kind-${esc(kind.id)}">${esc(label(kind))}</span>` : ""}
       </div>
       ${locale === "ja" && entry.titleEn && entry.titleEn !== title ? `<p class="card-original-title">${esc(entry.titleEn)}</p>` : ""}
@@ -115,7 +115,7 @@
 
   function renderMore() {
     const next = filtered.slice(shown, shown + PAGE);
-    results.insertAdjacentHTML("beforeend", next.map(card).join(""));
+    results.insertAdjacentHTML("beforeend", next.map((entry, i) => card(entry, shown + i)).join(""));
     shown += next.length;
     more.hidden = shown >= filtered.length;
   }
