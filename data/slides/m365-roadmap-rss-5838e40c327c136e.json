@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5838e40c327c136e",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot の Excel エージェントが提供開始",
+        "subtitleJa": "データをグラフ・要約・インサイトに変える作業を任せられます",
+        "en": "Microsoft Copilot (Microsoft 365): Excel Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Excel"],
+        "categories": ["copilot-chat", "agents", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Excel でデータを扱う作成者**と、Microsoft Copilot の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "データ準備・数式・可視化を、エージェントとの対話で進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は Anthropic モデルの有効化状況を確認する（無効だとエージェントは表示されない）",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "管理の有効化と制御", "retrievedAt": "2026-10-15T23:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "組み込みの数式やロジックで、データを**グラフ・要約・インサイト**に変えられます。マルチターンのチャットで出力を調整し、Excel で開いて編集もできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "組み込みの数式とロジックで、データをグラフ・要約・インサイトに変える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "データ準備・数式・可視化を効率化し、数字の背景にあるストーリーに集中できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft Copilot 内で Excel ファイルを作成する、プレミアム機能のエージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "冒頭", "retrievedAt": "2026-10-15T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "マルチターンのチャットで出力を調整し、Excel で開いて編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "有料の Microsoft 365 Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "制限事項とサポート", "retrievedAt": "2026-10-15T23:00:00Z" }] },
+            { "text": "Anthropic モデルが有効なら、[ツール] メニューと [すべてのエージェント] に表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "管理の有効化と制御", "retrievedAt": "2026-10-15T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Anthropic モデルの有効化が必須。管理者が無効にするとエージェントは非表示になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "管理の有効化と制御", "retrievedAt": "2026-10-15T23:00:00Z" }] },
+            { "text": "ライセンスのない Copilot Chat ユーザーは利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "制限事項とサポート", "retrievedAt": "2026-10-15T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "データとセキュリティ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ により、権限のあるファイル・メール・会議・サイトから情報を取得", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "エンタープライズ データ", "retrievedAt": "2026-10-15T23:00:00Z" }] },
+            { "text": "生成されたドキュメントは組織テナントの OneDrive に保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "エンタープライズ データ", "retrievedAt": "2026-10-15T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "展開前に、Anthropic モデルを有効にする方針を管理者間で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Anthropic モデルは EU データ境界と国内処理コミットメントの対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "データのプライバシーとセキュリティ", "retrievedAt": "2026-10-15T23:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "excel-agent", "term": "Excel エージェント", "type": "feature", "oneLine": { "text": "組み込みの数式やロジックで、データをグラフ・要約・インサイトに変えるエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "ユーザーが権限を持つファイル・メール・会議・サイトから情報を取得する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "エンタープライズ データ", "retrievedAt": "2026-10-15T23:00:00Z" }] } },
+        { "termKey": "anthropic-subprocessor", "term": "Anthropic（サブプロセッサ）", "type": "term", "oneLine": { "text": "Microsoft の指示と契約上の保護措置の下で動作する Microsoft のサブプロセッサ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "データのプライバシーとセキュリティ", "retrievedAt": "2026-10-15T23:00:00Z" }] } },
+        { "termKey": "multi-turn", "term": "マルチターン チャット", "type": "term", "oneLine": { "text": "やり取りを重ねながら、出力を調整していく対話形式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=543422",
+        "learn": [{ "title": "Microsoft Copilot で Word、Excel、PowerPoint エージェントの使用を開始する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
