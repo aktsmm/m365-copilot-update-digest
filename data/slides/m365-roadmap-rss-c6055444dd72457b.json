@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c6055444dd72457b",
+      "kind": "retirement",
+      "kindSource": "tags",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Purview の Data Security Posture エージェントに資格情報スキャンを追加",
+        "subtitleJa": "公開された資格情報を、対象範囲内から検出して優先度順に確認できます",
+        "en": "Microsoft Purview: Credential Scanning in Data Security Posture Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Purview"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "Microsoft Purview を運用する**セキュリティ・コンプライアンス管理者**",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "公開された資格情報を、対象範囲内から検出し、優先度の高い結果に対応できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用するなら、エージェントの有効化と Security Copilot の SCU 割り当てが前提",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+              "locator": "前提条件",
+              "retrievedAt": "2026-10-15T15:40:00Z"
+            }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エージェントに**資格情報スキャン タスク**を割り当て、進捗を追跡し、優先度の高い検出結果に対応できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "ロードマップ上のステージは Retirement。機能追加として告知されている",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "SharePoint・OneDrive・Exchange・Teams などの範囲で資格情報を検出",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                  "locator": "概要",
+                  "retrievedAt": "2026-10-15T15:40:00Z"
+                }
+              ]
+            },
+            {
+              "text": "結果には AI 生成のリスク スコアと信頼度、判定の理由が付く",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                  "locator": "アイテムの詳細",
+                  "retrievedAt": "2026-10-15T15:40:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応の目安",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Purview ポータルでポスチャ エージェントを有効にし、SCU を用意する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                  "locator": "前提条件 / ポスチャ エージェントを有効にする",
+                  "retrievedAt": "2026-10-15T15:40:00Z"
+                }
+              ]
+            },
+            {
+              "text": "スコープを誤った場合は、タスクを停止して新しく作成する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                  "locator": "資格情報スキャン タスクを作成する",
+                  "retrievedAt": "2026-10-15T15:40:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "usage",
+          "heading": "使い方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "テナント全体、または特定のサイト・ユーザー・グループに絞ってスキャン",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                  "locator": "資格情報スキャン タスクを作成する",
+                  "retrievedAt": "2026-10-15T15:40:00Z"
+                }
+              ]
+            },
+            {
+              "text": "かんばん形式のタスク ボードで進行中・レビュー準備完了・クローズを確認",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                  "locator": "タスク ボード上のタスクを監視する",
+                  "retrievedAt": "2026-10-15T15:40:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "results",
+          "heading": "結果の活用",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Data Explorer で KQL クエリを実行し、結果レポートをダウンロードできる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                  "locator": "Data Explorerを使用してデータを探索する",
+                  "retrievedAt": "2026-10-15T15:40:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "posture-agent",
+          "term": "Data Security Posture エージェント",
+          "type": "feature",
+          "oneLine": {
+            "text": "組織のデータに埋め込まれた資格情報を、大規模に検出するエージェント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-15T15:40:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "scu",
+          "term": "SCU",
+          "type": "term",
+          "oneLine": {
+            "text": "セキュリティ コンピューティング ユニット。ポスチャ エージェントの実行に必要。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                "locator": "前提条件",
+                "retrievedAt": "2026-10-15T15:40:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "kql",
+          "term": "KQL",
+          "type": "term",
+          "oneLine": {
+            "text": "Kusto 照会言語。Data Explorer で資格情報の結果を調べるときに使う。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                "locator": "Data Explorerを使用してデータを探索する",
+                "retrievedAt": "2026-10-15T15:40:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-retirement",
+          "term": "Retirement",
+          "type": "label",
+          "oneLine": {
+            "text": "この更新のロードマップ上のステージ表示。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
+        "learn": [
+          {
+            "title": "データ セキュリティ調査での Data Security Posture エージェント（プレビュー）の概要",
+            "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Microsoft Purview のエージェントの Security Copilot の概要",
+            "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-agents-overview#data-security-posture-agent",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
