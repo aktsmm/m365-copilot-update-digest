@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-973341cc06b34056",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の AL オブジェクト構造エラーが分かりやすく",
+        "subtitleJa": "セクションの宣言順の誤りを、診断 AL0926 が直接指摘します",
+        "en": "Dynamics 365 Business Central: Development - Get clearer guidance for AL object structure"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central の AL 開発者**と、コーディングエージェントを使う開発チーム", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "宣言順の誤りの原因を、直接の説明で把握しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発時のコンパイラ診断が改善される更新で、特別な設定は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "宣言順が誤っていても、複数の**二次的で曖昧な構文エラー**を読み解かず、AL0926 の**直接の説明**で原因を把握できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AL0926: メタデータ セクションがオブジェクト内の誤った位置にあると報告される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Description", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "オブジェクト種別ごとにセクション順が決まっている（例: テーブルは fields → keys → fieldgroups）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Description", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "既定の重大度は Error", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "AL Compiler diagnostics 一覧（AL0926）", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "メッセージに、そのオブジェクトで期待されるセクション順が示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Compiler Error AL0926", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "メタデータ セクションは var 宣言・トリガー・プロシージャより前に置く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Compiler Error AL0926", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AL 診断のトピックはプレビュー扱いと Learn に明記されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Note", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連情報",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AL コンパイラ診断は、一覧ページで ID ごとに確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Related information", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エラーが出たら、メッセージ中の期待順序に合わせてセクションを並べ替える", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "al", "term": "AL", "type": "term", "oneLine": { "text": "Business Central の拡張機能を開発するための言語。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "al0926", "term": "AL0926", "type": "feature", "oneLine": { "text": "メタデータ セクションがオブジェクト内で無効な位置にあるときのコンパイラ エラー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Description", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "metadata-section", "term": "メタデータ セクション", "type": "term", "oneLine": { "text": "テーブルの fields・keys など、AL オブジェクトの構造を定義するセクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Description", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573337",
+        "learn": [
+          { "title": "Compiler Error AL0926", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
