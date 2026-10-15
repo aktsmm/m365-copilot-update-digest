@@ -740,6 +740,8 @@ h3 {
 }
 .filter-row .search-input { flex: 1 1 240px; margin: 0; padding: 7px 12px; }
 .filter-actions { justify-content: flex-end; }
+.export-selection { margin-right: auto; display: inline-flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; font-size: 0.9rem; }
+.card-select { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.4rem; cursor: pointer; }
 .btn-outline {
   font: inherit; font-size: 0.88rem; padding: 5px 12px; cursor: pointer; border-radius: 8px;
   border: 1px solid rgba(37, 105, 246, 0.45); background: #fff; color: var(--accent-strong);
