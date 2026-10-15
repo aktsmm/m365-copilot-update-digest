@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2bf238a95e673a40",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の AL MCP サーバー診断をファイルログで確認可能に",
+        "subtitleJa": "診断情報をファイルに残し、詳細レベルも選べます",
+        "en": "Dynamics 365 Business Central: Development - Diagnose AL MCP server activity with file logging"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "viva-others"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Business Central の AL 拡張を開発する**開発者**と、その環境の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "断続的な障害やエージェントの動作を、ログファイルで後から確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "既定でログは書き出される。場所や詳細度を変えたい場合に起動オプションを指定する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "AL MCP サーバーの診断を**設定可能なファイルへ書き出し**、詳細レベルを選べます。不要なら無効にもできます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AL MCP サーバーは、エージェントが AL ワークスペースを操作するためのサーバー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "ALTool の launchmcpserver コマンドで起動する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "--logfile でログの出力先、--loglevel で詳細レベルを指定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "--nolog を付けると、ログ出力を完全に無効にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "既定値と指定できるレベル",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "--logfile 未指定の既定の出力先は ~/.al-mcp/almcp.log（Windows・Linux・macOS 共通）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "レベルは Debug / Verbose / Normal（既定）/ Warning / Error", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する ALTool の機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AL LSP サーバー（launchlspserver）にも同じ --logfile / --loglevel / --nolog がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "--noauth は、外部で認証を行う CI/CD などの無人実行向けのオプション", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "Headless authentication", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "障害の調査時は Verbose などに上げ、調査後に Normal へ戻す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "CI/CD では、出力先を固定してビルド成果物と一緒に保管する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "al-mcp", "term": "AL MCP サーバー", "type": "feature", "oneLine": { "text": "自律型エージェントが AL ワークスペースとやり取りするための MCP サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "altool", "term": "ALTool", "type": "product", "oneLine": { "text": "AL 拡張のコンパイルとパッケージ化に使うコマンド ライン ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP（Model Context Protocol）", "type": "term", "oneLine": { "text": "AI エージェントがツールや外部データと連携するためのプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573349",
+        "learn": [{ "title": "ALTool で AL 拡張機能を開発する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
