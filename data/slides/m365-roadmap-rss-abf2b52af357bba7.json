@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-abf2b52af357bba7",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dataverse のデータを Microsoft Copilot から検索・照会可能に",
+        "subtitleJa": "Dataverse に置いたビジネスデータを、自然言語で尋ねて要約できます",
+        "en": "Microsoft Copilot (Microsoft 365): Dataverse data connected to Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "work-iq"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dataverse（Power Apps など）のデータを業務で使うユーザー**と、管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Dataverse のビジネスデータを、Microsoft Copilot に質問して調べたり要約したりできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "冒頭", "retrievedAt": "2026-10-15T21:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は Microsoft 365 管理センターで利用範囲（全ユーザーまたは特定グループ）を設定できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "Microsoft 365 管理センター Copilot Dataverse 設定を有効にする", "retrievedAt": "2026-10-15T21:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Microsoft Copilot が、アクセス権のある **Dataverse テーブルのデータを検索・推論**し、関連レコードも含めて質問に回答・要約します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "冒頭・どのように機能するのか", "retrievedAt": "2026-10-15T21:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot が、アクセス権を持つ Dataverse テーブルを検索する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "どのように機能するのか", "retrievedAt": "2026-10-15T21:10:00Z" }] },
+            { "text": "テーブルのリレーションシップで関連レコードを取り込み、概要やリストで回答する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "どのように機能するのか", "retrievedAt": "2026-10-15T21:10:00Z" }] },
+            { "text": "Copilot Chat、Power Apps、Outlook、Word、Teams などで利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "サポートされているエクスペリエンス", "retrievedAt": "2026-10-15T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 管理センターの Copilot 設定で Dataverse データの利用を有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "Microsoft 365 管理センター Copilot Dataverse 設定を有効にする", "retrievedAt": "2026-10-15T21:10:00Z" }] },
+            { "text": "Power Platform 管理者が、環境の Copilot 設定と Dataverse 検索も有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "前提条件", "retrievedAt": "2026-10-15T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "設定変更には AI 管理者またはグローバル管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "前提条件", "retrievedAt": "2026-10-15T21:10:00Z" }] },
+            { "text": "返せるのはアクセスが許可された Dataverse データのみ。結果の質はデータ品質やモデル設計に左右される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "Considerations", "retrievedAt": "2026-10-15T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能・プライバシー",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Dataverse インテリジェンスは Work IQ のビジネス アプリケーションの一部になった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "冒頭の注記", "retrievedAt": "2026-10-15T21:10:00Z" }] },
+            { "text": "Dataverse へはユーザーやテナントの識別子を除いた最小限の検索クエリのみが送信される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/wp-compliance-data-privacy", "locator": "Microsoft 365 Copilot の Dataverse データ", "retrievedAt": "2026-10-15T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "例:「最も優先度の高いオープン ケースを表示して」「このアカウントの最近のアクティビティを要約して」", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "プロンプトの例", "retrievedAt": "2026-10-15T21:10:00Z" }] },
+            { "text": "テーブル名・期間・状態値を明示すると、より正確な回答が得られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "Considerations", "retrievedAt": "2026-10-15T21:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dataverse", "term": "Dataverse", "type": "product", "oneLine": { "text": "Power Apps 用のデータ プラットフォームで、ビジネスデータをテーブルに格納する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "冒頭", "retrievedAt": "2026-10-15T21:10:00Z" }] } },
+        { "termKey": "dataverse-search", "term": "Dataverse 検索", "type": "feature", "oneLine": { "text": "Copilot の応答用にデータのインデックスを提供する環境設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "前提条件", "retrievedAt": "2026-10-15T21:10:00Z" }] } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "エージェントがファイル、会議、メッセージなどの作業成果物を理解するのを助ける仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "冒頭", "retrievedAt": "2026-10-15T21:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560539",
+        "learn": [
+          { "title": "Microsoft Copilot 内の Dataverse データ", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locale": "ja-jp" },
+          { "title": "Dataverse インテリジェンスとは (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
