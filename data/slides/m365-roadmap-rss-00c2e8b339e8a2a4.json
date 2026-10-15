@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-00c2e8b339e8a2a4",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "OneDrive の Copilot にプロンプト ギャラリーが登場（開発中）",
+        "subtitleJa": "ファイル作業向けのプロンプトから、Copilot の使い方を探せます",
+        "en": "OneDrive: Prompt gallery for Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["OneDrive", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**OneDrive で Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ファイル作業向けのプロンプトから始められ、自分向けにカスタマイズできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザー向けの利用支援機能のため、現時点で必須の対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "OneDrive の Copilot で、**ファイル作業向けのすぐに使えるプロンプト**を選んで始められます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ファイルの一般的な作業向けに、すぐ使えるプロンプトを用意", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot でできることを知り、プロンプトを自分向けに調整できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "OneDrive 右下の Copilot ボタンからアクセスできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供範囲は Worldwide（標準マルチテナント）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "OneDrive 版の提供時期や詳細な仕様は、ロードマップの更新を待つ必要がある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "参考: Copilot のプロンプト ギャラリー",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot には、Microsoft が作成したプロンプトを集めたプロンプト ギャラリーがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "プロンプトは保存してチームと共有でき、管理者は利用状況を分析ツールで追跡できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "prompt-gallery", "term": "プロンプト ギャラリー", "type": "feature", "oneLine": { "text": "ユーザーが Copilot を理解して使うための、プロンプト・ビデオ・記事のリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "prompt", "term": "プロンプト", "type": "term", "oneLine": { "text": "Copilot にタスクを依頼するために入力する指示文。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "onedrive", "term": "OneDrive", "type": "product", "oneLine": { "text": "ファイルを保存・共有する Microsoft のクラウド ストレージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571308",
+        "learn": [{ "title": "Copilot のプロンプト ギャラリーを理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
