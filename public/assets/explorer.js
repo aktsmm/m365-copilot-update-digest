@@ -18,8 +18,8 @@
   const more = $("[data-ex-more]");
   const periodLabel = $("[data-explorer-period]");
   const L = {
-    ja: { items: "件", basis: "JST・発行日基準", detail: "日次の該当箇所", source: "原文を開く", related: "関連ドキュメント", include: "出力に含める", published: "発行", noRelated: "" },
-    en: { items: "items", basis: "JST, by publish date", detail: "View in daily digest", source: "Open source", related: "Related documentation", include: "Include in export", published: "Published", noRelated: "" },
+    ja: { items: "件", basis: "JST・発行日基準", detail: "日次の該当箇所", source: "原文を開く", related: "関連ドキュメント", include: "出力に含める", why: "注目理由", published: "発行", noRelated: "" },
+    en: { items: "items", basis: "JST, by publish date", detail: "View in daily digest", source: "Open source", related: "Related documentation", include: "Include in export", why: "Why it matters", published: "Published", noRelated: "" },
   }[locale];
 
   let entries = [];
@@ -86,23 +86,30 @@
     const docs = (entry.relatedDocuments || []).filter((d) => safeUrl(d.url) && d.title).slice(0, 3);
     const original = safeUrl(entry.url);
     const hasPdf = entry.slideKey && slideIndex.has(entry.slideKey);
+    const ids = entry.roadmapIds || [];
+    const roles = (entry.roleTags || []).slice(0, 3);
+    const reason = locale === "ja" ? entry.importanceReason : "";
     return `<article class="update-card" data-kind="${esc(entry.kind)}">
-      <label class="card-select"><input type="checkbox" class="selbox" data-id="${esc(entry.id)}"${excluded.has(entry.id) ? "" : " checked"} /> ${esc(L.include)}</label>
-      <div class="badge-row">
+      <div class="ex-head">
+        <label class="ex-sel" title="${esc(L.include)}"><input type="checkbox" class="selbox" data-id="${esc(entry.id)}"${excluded.has(entry.id) ? "" : " checked"} aria-label="${esc(L.include)}" /></label>
+        <h3><a href="${esc(href)}">${esc(title)}</a></h3>
         ${kind ? `<span class="badge badge-kind-${esc(kind.id)}">${esc(label(kind))}</span>` : ""}
+      </div>
+      ${locale === "ja" && entry.titleEn && entry.titleEn !== title ? `<p class="card-original-title">${esc(entry.titleEn)}</p>` : ""}
+      <div class="ex-meta">${esc(L.published)} ${esc(entry.publishedAt.slice(0, 10))} ／ ${esc(entry.sourceName)}${ids.length ? ` ／ ID ${esc(ids.join(", "))}` : ""}</div>
+      <div class="badge-row">
         ${entry.importance !== "normal" && level ? `<span class="badge badge-pinned">${esc(label(level))}</span>` : ""}
         <span class="badge badge-product">${esc(entry.productArea)}</span>
         ${cats.map((c) => `<span class="badge badge-cat badge-cat-${esc(c.id)}">${esc(label(c))}</span>`).join("")}
+        ${roles.map((r) => `<span class="badge badge-role">${esc(r)}</span>`).join("")}
       </div>
-      <h3><a href="${esc(href)}">${esc(title)}</a></h3>
-      ${locale === "ja" && entry.titleEn && entry.titleEn !== title ? `<p class="card-original-title">${esc(entry.titleEn)}</p>` : ""}
-      <p>${esc(summary)}</p>
-      <dl class="meta-list"><div><dt>${esc(L.published)}</dt><dd>${esc(entry.publishedAt.slice(0, 10))}</dd></div><div><dt>${locale === "en" ? "Source" : "ソース"}</dt><dd>${esc(entry.sourceName)}</dd></div></dl>
-      <div class="card-links">
+      <p class="ex-summary">${esc(summary)}</p>
+      ${reason ? `<p class="ex-reason">${esc(L.why)}: ${esc(reason)}</p>` : ""}
+      <div class="ex-links">
         ${original ? `<a href="${esc(original)}" target="_blank" rel="noopener noreferrer">${esc(L.source)}</a>` : ""}
         <a href="${esc(href)}">${esc(L.detail)}</a>
+        ${docs.length ? `<span class="ex-docs">${esc(L.related)}: ${docs.map((d) => `<a href="${esc(safeUrl(d.url))}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>`).join(" ・ ")}</span>` : ""}
       </div>
-      ${docs.length ? `<div class="related-documents"><strong>${esc(L.related)}</strong><ul>${docs.map((d) => `<li><a href="${esc(safeUrl(d.url))}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a></li>`).join("")}</ul></div>` : ""}
     </article>`;
   }
 
