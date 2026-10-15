@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f74222e42be10634",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の低速セッションを AI エージェントでプロファイル可能に",
+        "subtitleJa": "プロファイリングの予約から結果の要約まで、エージェントに任せられます",
+        "en": "Dynamics 365 Business Central: Development - Profile slow Business Central sessions with AI agents"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Business Central の**開発者と管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "低速なセッションの調査を、手作業ではなくエージェントの支援で進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "使う場合は、環境で MCP サーバーを有効にし、必要な権限を確認する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Profiling with an AI agent (MCP server)", "retrievedAt": "2026-10-15T22:45:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エージェントが**対象セッションのプロファイルを予約・収集し、遅い箇所を説明**します。Profiler Schedules ページを開く必要はありません",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Profiling with an AI agent (MCP server)", "retrievedAt": "2026-10-15T22:45:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Performance Profiling MCP サーバー経由で、エージェントがスケジュール作成から結果の分析まで実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Profiling with an AI agent (MCP server)", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "対象時間は既定 5 分、最大 1 時間。終了時に .alcpuprofile と SQL・HTTP の概要を取得", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "ツール一覧", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "セッションの推定メモリ使用量とオブジェクト数も自動で取得される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Session memory usage", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ALTool の launchprofilingmcpproxy コマンドを MCP ホストに登録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Part of the Business Central MCP server", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "Visual Studio Code のエージェント モードでは AL 拡張機能が自動登録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Visual Studio Code", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "対象の数値セッション ID をプロンプトで伝えて依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Before you start", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "環境で Business Central MCP サーバーを有効にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Permissions", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "他のユーザーのセッションは D365 ATTACH DEBUG 権限セットが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Permissions", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "既存機能との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "手動の Profiler Schedules と同じエンジンで、取得・保存・分析の仕組みは変わらない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Profiling with an AI agent (MCP server)", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "取得したプロファイルは VS Code の AL Profiler でも開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Profiling with an AI agent (MCP server)", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "利用上の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロファイル中は対象ユーザーの AL 実行にのみ約 10% のオーバーヘッド", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "FAQ", "retrievedAt": "2026-10-15T22:45:00Z" }] },
+            { "text": "保存されたローカル ファイルには機微な業務データが含まれ得るため、安全に取り扱う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Profiling with an AI agent (MCP server)", "retrievedAt": "2026-10-15T22:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "bc-profiler-schedule", "term": "Profiler Schedules", "type": "feature", "oneLine": { "text": "処理のスナップショットを記録するタイミングを、管理者やパートナーが設定するページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP サーバー", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータを呼び出すための共通の仕組み（Model Context Protocol）のサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Part of the Business Central MCP server", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
+        { "termKey": "alcpuprofile", "term": ".alcpuprofile", "type": "term", "oneLine": { "text": "AL コードの CPU サンプリング結果を記録したプロファイルのファイル形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "ツール一覧", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573335",
+        "learn": [{ "title": "Scheduled performance profiler overview", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview#profiling-with-an-ai-agent-mcp-server", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
