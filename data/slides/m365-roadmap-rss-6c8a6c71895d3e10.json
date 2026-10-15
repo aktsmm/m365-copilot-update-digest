@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6c8a6c71895d3e10",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio エージェントの自己学習機能（開発中）",
+        "subtitleJa": "完了した実行の教訓から、エージェントの改善提案を受けられます",
+        "en": "Microsoft Copilot Studio: Self-learning for Copilot Studio Agents"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "完了した実行の教訓から、エージェント改善の提案を受けられるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが**繰り返されるツール利用の流れ**を見つけ、ワークフローで処理する提案をメーカーに示します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲の概要",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "完了した実行の教訓から、メーカーのエージェント改善を支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "繰り返されるツール利用の流れを、ワークフロー化の候補として特定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "動作の標準化、エラーの削減、コスト管理につなげられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、変更される可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えるポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "ワークフローは、繰り返しの決定論的なプロセスをエージェントが実行するための仕組み",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-workflow", "locator": "冒頭", "retrievedAt": "2026-10-15T17:30:00Z" }]
+            },
+            { "text": "提供に備え、繰り返し発生する処理をワークフローとして整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "エージェントを作成し、ワークフローなどのツールを追加できる Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-workflow", "locator": "冒頭", "retrievedAt": "2026-10-15T17:30:00Z" }] } },
+        { "termKey": "workflow", "term": "ワークフロー", "type": "feature", "oneLine": { "text": "Copilot Studio のフローデザイナーで構築する、多段階のプロセスを自動化するフロー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-workflow", "locator": "冒頭", "retrievedAt": "2026-10-15T17:30:00Z" }] } },
+        { "termKey": "maker", "term": "メーカー", "type": "term", "oneLine": { "text": "Copilot Studio でエージェントを作成・改善する人。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570432",
+        "learn": [
+          { "title": "ツールとしてエージェントにワークフローを追加する(GitHub Copilot)(プレビュー)", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-workflow", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
