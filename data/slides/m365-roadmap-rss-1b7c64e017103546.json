@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1b7c64e017103546",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams 管理センターで既存アプリ向けエージェントを有効化（開発中）",
+        "subtitleJa": "利用中のサードパーティアプリに対応するエージェントを管理者が見つけて有効化",
+        "en": "Microsoft Teams: Enable agents for existing applications in your organization"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams"],
+        "categories": ["agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "組織でサードパーティアプリを使っている **Teams 管理者**", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] },
+        "change": { "text": "対応する Teams エージェントを管理センター内で検出・有効化でき、高価値エージェントの推奨も受けられる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため、今すぐの対応は不要", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "利用中のサードパーティアプリに対応する**エージェント**を Teams 管理センターで検出し、有効化の手順の中で必要な構成変更も確認できます", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "既存のサードパーティアプリに対応するエージェントを管理者が検出・有効化", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] },
+            { "text": "価値の高いエージェントを推奨として表示", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] },
+            { "text": "有効化の過程で、必要な構成変更を事前に確認できる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ステージは開発中。対象は Worldwide と GCC、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] },
+            { "text": "Teams 管理センターの利用には Teams 管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "Teams 管理センターを使用するには", "retrievedAt": "2026-10-16T21:14:00Z" }] },
+            { "text": "テナントと同じリリースチャネルのエージェントとアプリのみ管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "リリース チャネル", "retrievedAt": "2026-10-16T21:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "サードパーティ製アプリは、1 つのコントロールで新規・既存の一括可用性を管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "エージェントとアプリのガバナンス", "retrievedAt": "2026-10-16T21:14:00Z" }] },
+            { "text": "GCCH と DoD では、サードパーティのエージェントとアプリは既定でブロックされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "Microsoft 365 Government", "retrievedAt": "2026-10-16T21:14:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "tac", "term": "Teams 管理センター", "type": "product", "oneLine": { "text": "エージェントとアプリを管理するための専用ページを備えた、Teams の管理ポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-16T21:14:00Z" }] } },
+        { "termKey": "agent", "term": "エージェント", "type": "term", "oneLine": { "text": "Teams で利用でき、アプリとあわせて管理者が許可やブロックを制御できる対象。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-16T21:14:00Z" }] } },
+        { "termKey": "third-party", "term": "サードパーティ製アプリ", "type": "term", "oneLine": { "text": "Microsoft 以外が提供するアプリで、新規・既存の可用性を 1 つのコントロールで管理できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "エージェントとアプリのガバナンス", "retrievedAt": "2026-10-16T21:14:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "Roadmap 上で開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] } }
+      ],
+      "qa": [
+        { "question": "提供開始はいつですか？", "answer": { "text": "Roadmap では開発中で、提供月はまだ示されていません。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] } },
+        { "question": "どの環境で使えますか？", "answer": { "text": "Roadmap では Worldwide (Standard Multi-Tenant) と GCC、Web が対象とされています。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=569608", "locator": "Roadmap ID 569608", "retrievedAt": "2026-10-16T21:14:00Z" }] } },
+        { "question": "エージェントを管理するにはどのロールが必要ですか？", "answer": { "text": "Teams 管理センターの利用には Teams 管理者ロールが必要で、可能な限り低い特権ロールの使用が推奨されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "Teams 管理センターを使用するには", "retrievedAt": "2026-10-16T21:14:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569608",
+        "learn": [
+          { "title": "Teams 管理センターでのエージェントとアプリの管理とガバナンスの概要", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps#agent-and-app-governance", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
