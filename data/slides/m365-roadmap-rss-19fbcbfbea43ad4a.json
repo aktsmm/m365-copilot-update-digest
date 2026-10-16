@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-19fbcbfbea43ad4a",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Field Service モバイル アプリに Microsoft Copilot の会話型チャットが登場（開発中）",
+        "subtitleJa": "現場の技術者が自然な言葉でデータについて質問できるようになる予定です",
+        "en": "Dynamics 365 Field Service: Microsoft Copilot in Field Service Mobile app"
+      },
+      "meta": {
+        "publishedJst": "2026-09-25",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Field Service"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS"],
+        "productArea": "Dynamics 365 Field Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Field Service モバイル アプリを使う現場の技術者**と、Copilot の有効化を担う管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アプリ内で自然言語の質問をして、組織のデータに基づく回答を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない。提供時期は今後のロードマップで確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Field Service モバイル アプリで、Microsoft Copilot の**会話型 AI チャット**を使い、Field Service のデータについて質問できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供予定の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "モバイル アプリに Microsoft Copilot の会話型 AI チャットが入る", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "有効化すると、技術者が Field Service のデータについて自然言語で質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "回答はアプリでの操作内容と、組織のデータに基づく", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、機能や提供時期は変更される場合がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）。Android・iOS・Desktop が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連機能: Field Service の Copilot は作業指示書の要約や更新でモバイル技術者を支援する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "Field Service アプリケーションを使用する", "retrievedAt": "2026-10-16T22:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Web アプリの Microsoft Copilot は管理者が有効化する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/use-microsoft-365-copilot-model-driven-apps", "locator": "前提条件", "retrievedAt": "2026-10-16T22:10:00Z" }] },
+            { "text": "Dynamics 365 アプリでは Enterprise または Premium ライセンスが必要。Work IQ の完全な機能には Microsoft 365 Copilot ライセンスも必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/use-microsoft-365-copilot-model-driven-apps", "locator": "前提条件", "retrievedAt": "2026-10-16T22:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "field-service", "term": "Dynamics 365 Field Service", "type": "product", "oneLine": { "text": "顧客先でのオンサイト サービスを支援する、ビジネス アプリケーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "概要", "retrievedAt": "2026-10-16T22:10:00Z" }] } },
+        { "termKey": "field-technician", "term": "フィールド技術者", "type": "term", "oneLine": { "text": "モバイル アプリで作業指示書を管理し、客先で保守・修理を行う担当者。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "フィールドサービスの役割", "retrievedAt": "2026-10-16T22:10:00Z" }] } },
+        { "termKey": "work-order", "term": "作業指示書", "type": "term", "oneLine": { "text": "技術者が客先で実行する必要がある作業を説明するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "Field Service アプリケーションを使用する", "retrievedAt": "2026-10-16T22:10:00Z" }] } },
+        { "termKey": "ms-copilot-apps", "term": "アプリ向け Microsoft Copilot", "type": "feature", "oneLine": { "text": "自然言語の会話で、アプリ内のデータを探索し理解するための AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/use-microsoft-365-copilot-model-driven-apps", "locator": "概要", "retrievedAt": "2026-10-16T22:10:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Web アプリの Copilot とは何が違いますか？",
+          "answer": { "text": "Web アプリのサイド ペインでも自然言語でデータに質問できます。今回の更新はモバイル アプリ向けの会話型チャットです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/copilot-side-pane", "locator": "Copilot によるチャット", "retrievedAt": "2026-10-16T22:10:00Z" }] }
+        },
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "利用に追加のライセンスは必要ですか？",
+          "answer": { "text": "モバイル アプリ向けのライセンス要件は確認できていません。Web 版では Dynamics 365 Enterprise／Premium ライセンスが前提です。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571663",
+        "learn": [
+          { "title": "Dynamics 365 Field Serviceの概要", "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locale": "ja-jp" },
+          { "title": "フィールドサービスでMicrosoft Copilotを使う", "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/use-microsoft-365-copilot-model-driven-apps", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
