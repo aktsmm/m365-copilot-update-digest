@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-a03ae5a0c0d01e38",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "PowerPoint の Copilot が作業完了を非同期で通知（開発中）",
+        "subtitleJa": "PowerPoint を離れても、Copilot の完了や要対応を通知で受け取れます",
+        "en": "PowerPoint: Async Notifications for Copilot in PowerPoint"
+      },
+      "meta": {
+        "publishedJst": "2026-09-26",
+        "availability": [],
+        "status": "In development",
+        "products": ["PowerPoint"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Mac"],
+        "productArea": "PowerPoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot を使う作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot の作業完了や要対応を、アプリの外でも把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "PowerPoint を離れる、デバイスを切り替える、オフラインになる、業務を終えるといった場面でも、Copilot が**作業完了や対応が必要な時に通知**します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint の Copilot からの非同期通知", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "通知のきっかけは、作業の完了と、ユーザーの対応が必要な時", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の提供範囲は Worldwide（標準マルチテナント）の Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "PowerPoint の Copilot の全機能の利用には、Microsoft 365 Copilot アドオン ライセンスが関係する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "ライセンスの比較表", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在の PowerPoint の Copilot は、プロンプトからのプレゼンテーション作成、要約、編集に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "PowerPoint", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "提供開始の案内に備え、ロードマップの更新を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-powerpoint", "term": "PowerPoint の Copilot", "type": "feature", "oneLine": { "text": "プロンプトや既存のコンテンツからプレゼンテーションを作成、要約、編集できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "PowerPoint", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "copilot-license", "term": "Microsoft 365 Copilot アドオン ライセンス", "type": "term", "oneLine": { "text": "Word、Excel、PowerPoint、OneNote の Copilot のすべてのエクスペリエンスに優先アクセスできるライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "ライセンスの比較表", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示す段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570436",
+        "learn": [{ "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
