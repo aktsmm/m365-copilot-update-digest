@@ -101,7 +101,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data summaries drafts config/summary-ja-cache.json config/related-documents.json
           git commit -m "chore: collect daily updates"
-          git push
+          # 収集中に main が進んで push が拒否されたら、rebase して数回だけやり直す
+          for attempt in 1 2 3; do
+            if git push; then break; fi
+            if [ "$attempt" = "3" ]; then echo "push failed after retries"; exit 1; fi
+            echo "push rejected; rebasing (attempt $attempt)"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || { git rebase --abort || true; exit 1; }
+          done
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Dispatch Pages deploy
