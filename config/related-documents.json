@@ -24591,16 +24591,28 @@
     ]
   },
   "m365-copilot-release-notes-f2d1bd8f99fe17f6": {
-    "inputFingerprint": "a9b4e5a0bfac6d3cb0ccb20df416a016b2b271c8677d1a8610fc30eb515bd55e",
+    "inputFingerprint": "577363853d0b796ea9e9774177a8f9e1ed5efea27e21cbfd6c7918c5fdcdaecd",
     "status": "verified",
-    "checkedAt": "2026-10-14T08:07:11.647Z",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
     "localePreference": "ja-jp",
     "documents": [
       {
         "title": "ServiceNow Knowledge Copilot connector overview",
-        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-overview#connector-capabilities-and-limitations",
-        "provenance": "source",
-        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all"
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-overview",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-overview"
+      },
+      {
+        "title": "Copilot Studioの概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-what-is-copilot-studio",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-overview"
+      },
+      {
+        "title": "エージェント ビルダーの概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agent-builder",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-overview"
       }
     ]
   },
@@ -36809,10 +36821,20 @@
   },
   "m365-roadmap-rss-232eee41a8d5e6f1": {
     "inputFingerprint": "1f03b0a7a91ac4a49b597b37b5897adae6670de80840f9627211e6f21c7c1484",
-    "status": "not-found",
-    "checkedAt": "2026-10-16T11:24:09.101Z",
+    "status": "verified",
+    "checkedAt": "2026-10-16T16:39:29.531Z",
     "localePreference": "ja-jp",
-    "documents": []
+    "documents": [
+      {
+        "title": "Microsoft Edge Beta チャネルのリリースノート",
+        "sourceTitle": "Release notes for Microsoft Edge Beta Channel",
+        "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel#version-1440371911-december-11,-2025",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=536579",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: icon, visibility"
+      }
+    ],
+    "mcpStatus": "verified"
   },
   "m365-roadmap-rss-8bca2d3bcf2fe22e": {
     "inputFingerprint": "2b947eb76c0e7d1618d09c0f821b7b558f5d34b51347b605b0faa34ed44451e9",
@@ -36834,7 +36856,126 @@
   "m365-roadmap-rss-db2a8cc212c34759": {
     "inputFingerprint": "e3df245ec0348c3d8a441e47b6d4b771369cbcb36a6831b849343af20d347377",
     "status": "not-found",
-    "checkedAt": "2026-10-16T11:24:09.101Z",
+    "checkedAt": "2026-10-16T16:39:29.531Z",
+    "localePreference": "ja-jp",
+    "documents": [],
+    "mcpStatus": "not-found",
+    "mcpRetryAfter": "2026-10-23T16:39:29.531Z"
+  },
+  "m365-roadmap-rss-14bf591bcca6ffcf": {
+    "inputFingerprint": "d241d5078413284bc12b6df06b659c4e86360241bfc8961956167482976bb42e",
+    "status": "verified",
+    "checkedAt": "2026-10-16T16:39:29.531Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "SharePoint ドキュメント ライブラリの既定の秘密度ラベルを構成する",
+        "sourceTitle": "Configure a default sensitivity label for a SharePoint document library",
+        "url": "https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-sharepoint-default-label",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=485733",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: doc, library, default, label, sharepoint, online"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-9ea540999ea438f8": {
+    "inputFingerprint": "3602dd3f5a0edf831a09c72b53dd769b578b2b40b996d5ae2287de769b137a23",
+    "status": "verified",
+    "checkedAt": "2026-10-16T16:39:29.531Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "ServiceNow Knowledge Copilot connector overview",
+        "sourceTitle": "ServiceNow Knowledge Copilot connector overview",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-overview#connector-capabilities-and-limitations",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=505436",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: knowledge, template, support, servicenow, connector"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-da1ac36566538109": {
+    "inputFingerprint": "6a89697c2e7a4b6899d515288372969f6eb55d86d9a575fbdc4a9ce0130f2d39",
+    "status": "verified",
+    "checkedAt": "2026-10-16T16:39:29.531Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilot Studio エージェント レポート",
+        "sourceTitle": "Copilot Studio agents report",
+        "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-studio-agents#topics-recommendations",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=499421",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: enhancement, studio, agent, report"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-0317f937c8f07a6c": {
+    "inputFingerprint": "04e55168eaf5ec88df0211d2bb71e7d75d31a77e591be72b6a45e23d651bd819",
+    "status": "verified",
+    "checkedAt": "2026-10-16T16:39:29.531Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Microsoft Copilot で Word、Excel、PowerPoint エージェントの使用を開始する",
+        "sourceTitle": "Get started with Word, Excel, and PowerPoint Agents in Microsoft Copilot",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=545012",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: when, using, agent, mode, word, you, will, able, manually, select, which, model"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-230730f114654073": {
+    "inputFingerprint": "067d018dcf0c8a9c841bb60aab2db5ae6b9b4a1aa093bf3109dd7e7516eeb53b",
+    "status": "not-found",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
+    "localePreference": "ja-jp",
+    "documents": []
+  },
+  "m365-roadmap-rss-bb0db146083f5045": {
+    "inputFingerprint": "27b438bc42acfd6c5e8f43b1fc545d9847850d674d98ff0929da7c21f31b91dc",
+    "status": "not-found",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
+    "localePreference": "ja-jp",
+    "documents": []
+  },
+  "m365-roadmap-rss-8fa00ccad8514e35": {
+    "inputFingerprint": "657fdeb35e02b1305c83aed52bf1a0eaa4d113d38fc92a5daf8087a1c5a9ebe3",
+    "status": "not-found",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
+    "localePreference": "ja-jp",
+    "documents": []
+  },
+  "m365-roadmap-rss-059e33c566649972": {
+    "inputFingerprint": "aa8f8178084a0729ad2562b1ed7bfa9a54a9fe4d334e5ea2f4d5c4fc621911a4",
+    "status": "not-found",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
+    "localePreference": "ja-jp",
+    "documents": []
+  },
+  "m365-roadmap-rss-38351414a3e4c827": {
+    "inputFingerprint": "5c7108f0db6d76f1a2020a78e451d72f58a08f9d83a3d14c6a4326eba3425964",
+    "status": "not-found",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
+    "localePreference": "ja-jp",
+    "documents": []
+  },
+  "m365-roadmap-rss-4d7021b1a1229dea": {
+    "inputFingerprint": "d11679e9ea841fc29d6f066045dd8311af6d76d52d81163344f0de36c06253bd",
+    "status": "not-found",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
+    "localePreference": "ja-jp",
+    "documents": []
+  },
+  "m365-roadmap-rss-7bcfe3f714b5b04d": {
+    "inputFingerprint": "6034f2ff3c3c3b3d75734ed746386a62fafaeac39babc371458b68cf74f85e09",
+    "status": "not-found",
+    "checkedAt": "2026-10-16T16:39:28.821Z",
     "localePreference": "ja-jp",
     "documents": []
   }
