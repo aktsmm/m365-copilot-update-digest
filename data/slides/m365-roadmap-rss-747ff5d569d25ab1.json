@@ -75,6 +75,20 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントがツールやデータにつながるための標準プロトコル。Work IQ MCP は Microsoft 365 データへの汎用ツールを提供する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "ツール", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能を開発している段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Work IQ API を呼び出すときの認証方式は？",
+          "answer": { "text": "Microsoft Entra ID の代理（OBO）認証で、サインインしたユーザーのコンテキストで実行されます。アプリケーションのみの認証は未対応です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "認証とセキュリティ", "retrievedAt": "2026-10-16T06:58:00Z" }] }
+        },
+        {
+          "question": "Work IQ API の利用料金はどうなりますか？",
+          "answer": { "text": "Copilot クレジットを使う使用量ベースの課金です。詳細は Copilot クレジットの使用量ベース課金の記事で案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "ライセンスの要件", "retrievedAt": "2026-10-16T06:58:00Z" }] }
+        },
+        {
+          "question": "A2A と MCP はどう使い分けますか？",
+          "answer": { "text": "別のエージェントがタスクを Work IQ に委任して結果を受け取るなら A2A、AI アシスタントがツールとして呼び出すなら MCP が推奨です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "プロトコルの選択", "retrievedAt": "2026-10-16T06:58:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570851",
         "learn": [
