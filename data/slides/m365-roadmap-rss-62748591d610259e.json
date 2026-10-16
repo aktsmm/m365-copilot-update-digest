@@ -84,6 +84,37 @@
         { "termKey": "csu", "term": "Commerce Scale Unit（CSU）", "type": "term", "oneLine": { "text": "MCP サーバーが、他のチャネルと同じ価格・在庫・注文管理を動かす実行基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "Commerce MCP が重要な理由", "retrievedAt": "2026-10-14T19:50:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "MCP の有効化・無効化は管理者が自分で行えますか？",
+          "answer": {
+            "text": "はい。LCS の CSU 詳細ページで「MCP を有効にする／無効にする」を切り替えられ、Microsoft サポートへのチケットは不要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "コマース スケール ユニットでのセルフサービス有効化", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          }
+        },
+        {
+          "question": "エージェントからの呼び出しにアクセス制御はかかりますか？",
+          "answer": {
+            "text": "はい。MCP はベアラー トークンを検証し、Commerce がチャネル・顧客・ロールに基づく認可を各ツール呼び出しに適用します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/commerce/commerce-mcp", "locator": "エンドポイント、セキュリティ、拡張性の考慮事項", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": {
+            "text": "ロードマップ上は開発中で、提供時期は示されていません。時期を案内せず、ロードマップの更新を確認するよう伝えるのが安全です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574124",
         "learn": [
