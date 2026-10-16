@@ -75,6 +75,49 @@
         { "termKey": "followup-scenario", "term": "フォローアップシナリオ", "type": "feature", "oneLine": { "text": "仕入先への送信メールの目的や指示を定める、組み込みまたは独自の設定。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "エージェントが作成したメールは、確認なしで送信されますか？",
+          "answer": {
+            "text": "現行機能では、下書きを確認・修正してから送信できます。確認なしの自動送信は任意の機能で、管理者が機能管理で有効にし、メールのフッターも必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up",
+                "locator": "フォローアップ メールの自動送信を構成する",
+                "retrievedAt": "2026-10-16T06:55:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "調達エージェントの利用にライセンス面の注意はありますか？",
+          "answer": {
+            "text": "調達エージェントは Premium レベルのコネクタを使うため、エージェント ID ユーザーにそれらを許可するライセンスの割り当てが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-setup-wizard",
+                "locator": "必要な製品ライセンスの割り当て",
+                "retrievedAt": "2026-10-16T06:55:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "独自シナリオの提供時期はいつですか？",
+          "answer": {
+            "text": "ロードマップは開発中で、提供日は示されていません。時期を案内せず、公開後の更新を確認する旨を伝えるのが無難です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573705",
         "learn": [
