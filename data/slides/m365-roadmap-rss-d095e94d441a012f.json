@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d095e94d441a012f",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central で全エージェントのタスクを専用ペインで管理可能に",
+        "subtitleJa": "エージェントが作成したタスクを、どこからでも開ける 1 つのペインで確認できます",
+        "en": "Dynamics 365 Business Central: Copilot and agents - Manage tasks from all agents in dedicated task pane"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central でエージェントを使う会計担当・営業担当・マネージャー**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+        "change": { "text": "分散していた通知に頼らず、エージェントのタスクを 1 か所でレビューして対応できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザー向けの機能で、自動的に有効化される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "有効対象", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "エージェントのタスクの通知が、さまざまなページに分散していた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+        "after": { "text": "専用のタスク ペインに、**すべてのエージェントのタスクが集約**されます。タスクの見逃しを減らし、スループットの向上につながります", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "ビジネス バリュー / 機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "タスク ペインは UI の追加パネルとして表示され、Business Central のどこからでも開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "タスクには、提案・検証・フォローアップ・下書き文書へのアクセスなどが含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "詳細の確認、該当レコードへの移動、タスクの完了・却下ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザー向けの機能で、自動的に有効化される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "有効対象", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "リリース プランでは、一般提供は 2026 年 4 月 1 日と記載されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "有効対象", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated",
+          "priority": "detail",
+          "items": []
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との関係",
+          "availability": "not-stated",
+          "priority": "detail",
+          "items": []
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "財務・購買・販売・運用の各分野のエージェントが作成したタスクをまとめて確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "1 日に複数のエージェントとやり取りする、会計担当・営業担当・マネージャーに特に有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "business-central", "term": "Business Central", "type": "product", "oneLine": { "text": "Dynamics 365 Business Central。財務・購買・販売・運用などの業務を扱うビジネス アプリケーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "agent-task", "term": "エージェントのタスク", "type": "feature", "oneLine": { "text": "エージェントが生成する提案・検証・フォローアップ・下書き文書へのアクセスなどの項目。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "task-pane", "term": "タスク ペイン", "type": "feature", "oneLine": { "text": "UI の追加パネルとして表示され、すべてのエージェント タスクを一覧できる専用の画面領域。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "機能の詳細", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者が有効化の操作をする必要はありますか？",
+          "answer": { "text": "リリース プランでは、ユーザー向けで自動的に有効化される機能とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "有効対象", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        },
+        {
+          "question": "提供地域や対応言語はどこで確認できますか？",
+          "answer": { "text": "リリース プランに、機能の対象地域の確認レポートと Explore Feature Language レポートへのリンクがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locator": "地域 / 利用可能な言語", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573363",
+        "learn": [{ "title": "専用のタスク ペインですべてのエージェントのタスクを管理する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-tasks-all-agents-dedicated-task-pane", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
