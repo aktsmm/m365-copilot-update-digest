@@ -188,6 +188,49 @@
           }
         }
       ],
+      "qa": [
+        {
+          "question": "ライセンスはどこで利用者に割り当てますか？",
+          "answer": {
+            "text": "Microsoft 365 管理センターで利用者に Copilot ライセンスを割り当てます。Copilot ライセンス詳細診断で、特定ユーザーが要件を満たすか確認できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-licensing",
+                "locator": "Microsoft Copilot ライセンス／セットアップのヘルプとガイダンス",
+                "retrievedAt": "2026-10-16T07:20:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "ライセンスがない利用者は使えませんか？",
+          "answer": {
+            "text": "Copilot Chat の職場ベースのチャットは Copilot ライセンスで利用できます。音声メモ自体のライセンス要否は、ロードマップの記載（ライセンス保有者向け）を確認してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-licensing",
+                "locator": "Microsoft Copilot Chat",
+                "retrievedAt": "2026-10-16T07:20:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "利用者への案内はどう進めるとよいですか？",
+          "answer": {
+            "text": "対象はモバイル利用者に限られるため、まず Copilot ライセンスを持つ外出の多い部門に案内し、反応を見て広げるのが進めやすいです。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=498640",
         "learn": [
