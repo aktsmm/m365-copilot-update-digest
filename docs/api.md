@@ -21,11 +21,11 @@ GitHub Pages から配信する読み取り専用の静的 JSON です。認証�
 
 ## 更新（item）のフィールド
 
-`key`、`title` / `summary`（`ja` / `en`）、`publishedJst`、`stage`、`productArea`、`sourceId` / `sourceName` / `sourceFamily`、`categories`（表示カテゴリ、複数可）、`importance`（`level` / `score` / `reasonJa`）、`roleTags`、`roadmapIds`、`tags`、`related`（Microsoft Learn の確認済み資料）、`urls`（`self` / `source` / 存在する場合 `slide` と `slidePdfEncrypted`）。
+`key`、`title` / `summary`（`ja` / `en`）、`publishedJst`、`stage`、`productArea`、`sourceId` / `sourceName` / `sourceFamily`、`categories`（表示カテゴリ、複数可）、`importance`（`level` / `score` / `reasonJa`）、`roleTags`、`roadmapIds`、`tags`、`related`（Microsoft Learn の確認済み資料）、`qaCount`（想定問答の件数。詳細は `qa.json` か `updates/{key}.json`）、`urls`（`self` / `source` / 存在する場合 `slide` と `slidePdfEncrypted`）。
 
 ## 注意
 
 - **取得状態**: `coverage.status` が `complete` 以外のときは、ソースの取得に欠けがある可能性があります。件数が少なくても 0 件とは限りません。`coverage.sources[]` の `empty` は「取得できたが 0 件」（フィードが空など）です。
 - **安定性**: `schema` と `apiVersion` を持ちます。互換性のない変更は `api/v2/` に分けます。
-- **スライド PDF**: 最新の 1 件は暗号化なしの無料サンプル（`pdf/{key}.pdf`、`data/slides.json` の `free: true`）です。それ以外の `pdf/{key}.pdf.enc` は AES-256-GCM で暗号化しています（形式は `scripts/lib/pdf-crypto.mjs`）。サイトのリンクからパスワードを入力するとブラウザ内で復号して開き、表示中のスライドを 1 つの PDF にまとめて保存もできます。
+- **スライド PDF**: 最新の 1 件は暗号化なしの無料サンプル（`pdf/{key}.pdf`、`data/slides.json` の `free: true`）です。それ以外の `pdf/{key}.pdf.enc` は AES-256-GCM で暗号化しています（形式は `scripts/lib/pdf-crypto.mjs`）。サイトの「PDF」ボタンでパスワードを入力するとブラウザ内で復号し、選んだスライドを 1 つの PDF にまとめて保存できます。
 - **ライセンス**: CC BY-NC-SA 4.0。Microsoft の原文は対象外です。出典を明記してください。

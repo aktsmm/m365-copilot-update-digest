@@ -2,7 +2,7 @@
 
 Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデートを継続的に収集し、日次 JSON、日次 Markdown、記事 draft、X 投稿 draft、GitHub Pages 向けの静的サイトを生成するリポジトリです。
 
-現段階の実装は MVP で、次の 5 系統を収集対象にしています。
+現在は次の 5 系統を収集対象にし、重要・注目の更新に日本語要約・解説スライド（想定問答つき）を付けて公開しています。全体の自動運用は「[自動運用の全体像](#自動運用の全体像)」を参照してください。
 
 - Microsoft 365 Copilot release notes (Microsoft Learn)
 - What's new in Copilot Studio (Microsoft Learn)
@@ -12,13 +12,15 @@ Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデー�
 
 ## できること
 
-- トップに、期間（開始・終了・過去30日/7日）、重要度、全文検索、種類、カテゴリを 1 つのコンパクトなパネルにまとめ、結果をその場で絞り込む。表示中の更新を JSON / PDF（まとめ）/ PPTX で保存できる（`public/assets/explorer.js`）
+- トップに、期間（開始・終了・過去30日/7日）、重要度、全文検索、種類、カテゴリを 1 つのコンパクトなパネルにまとめ、結果をその場で絞り込む。絞り込み条件は URL に保存され（共有できる）、「条件クリア」で初期状態に戻せる。各カードは通し番号つきで、タイトルから原文へ移動できる（`public/assets/explorer.js`）
+- 各カードのチェックで出力対象を選び、表示中の更新を JSON / PDF（まとめ）/ PPTX で保存できる。スライドのない更新が含まれるときは、ボタンに「12 / 48」のように件数を示す。最新の 1 件はパスワード不要のサンプル PDF（「サンプル PDF」リンク）
 - 「新規」は発行日基準の過去1日 / 過去7日の件数（以前は最後の収集 run だけの件数で、多くの場合 0 になっていた）
-- カテゴリ（Copilot Chat・検索 / Copilot Studio / エージェント・拡張 / Work IQ / Teams / Outlook / Office アプリ / SharePoint / セキュリティ / 管理 / Viva / Dynamics 365 / Edge・Windows など）と重要度（重要 / 注目 / 通常）で絞り込む（`config/categories.json`）
+- カテゴリ（Copilot Chat・検索 / Copilot Studio / エージェント・拡張 / Work IQ / Teams / Outlook / Office アプリ / SharePoint / セキュリティ / 管理 / Viva / Dynamics 365 / Edge・Windows など 14 種、1 件が複数に属する）と重要度（重要 / 注目 / 通常）、種類（プレビュー / 提供開始 / 展開中 / 開発中 / 廃止・終了 / アップデート、色分け）で絞り込む（`config/categories.json`）
 - 重要・注目の更新を、直近 3 か月分、1 更新 1 枚の解説スライド（種類別パネル・Before/After・用語解説・根拠付き関連リンク）にする。gh-aw が Microsoft Learn の実ページを取得して作り、検証・描画確認を通ったものだけ自動マージして公開する。JSON は公開、PDF はパスワード保護（[docs/slide-schema.md](docs/slide-schema.md)）
-- 静的 JSON API を公開する（[docs/api.md](docs/api.md)）
+- スライドには、発表者向けの**想定問答**（任意項目 `qa`）を持てる。PPTX のスライドノートにだけ出力し、スライド本体には描画しない。既存スライドへは `slide-qa` が毎日少しずつ追加する
+- 静的 JSON API を公開する（[docs/api.md](docs/api.md)）。想定問答は `api/v1/qa.json` と各更新の `qa` から取得できる
 - ソース別の取得状態（complete / empty / partial / failed）を記録し、欠けがあるときはサイトに明示する
-- gh-aw（GitHub Agentic Workflow）で、重要・注目の更新に日本語の見出し・要約・対象読者・対応をつけ、PR 経由で自動マージする（`.github/workflows/summarize.md`、出力は `data/summaries/{key}.json`）
+- gh-aw（GitHub Agentic Workflow）で、重要・注目の更新に日本語の見出し・要約・対象読者・対応をつけ、PR 経由で自動マージする（`.github/workflows/summarize.md`、出力は `data/summaries/{key}.json`）。中身のない定型文の要約は検証で弾く
 
 - 公開ソースからアップデートを取得して日次 JSON に保存する
 - 日次 Markdown を生成する
@@ -170,8 +172,26 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 
 - 公開で安定取得できる release plan 系ソースの追加
 - RSS フィード出力（キュレーション結果を他ツールで購読可能にする）
-- AI 要約の精度改善（ソース種別ごとの特化）
+- 提供・廃止予定を月ごとに見る専用ページ（本家 azure-update-digest の「提供・廃止予定」相当）
+- 既存スライドの想定問答の拡充（件数・品質の見直し）
 - SSG（Astro / 11ty 等）への移行検討
+
+## 自動運用の全体像
+
+手動の操作なしで回り続けるように、次の仕組みが動いています（時刻は目安で、GitHub の定期実行は遅れることがあります）。
+
+| 仕組み | Workflow | 頻度 | 内容 |
+| ------ | -------- | ---- | ---- |
+| 収集 | `collect-updates.yml` | 6 時間ごと | 5 系統の更新を取得し、データを main へ push（拒否されたら rebase して最大 3 回再試行）。Pages を再デプロイ |
+| 日本語要約 | `summarize.md`（gh-aw） | 6 時間ごと | 重要・注目の更新に見出し・要約・対象読者・対応を付ける。定型文だけの要約は検証で弾く |
+| スライド生成 | `slide-dispatch.yml` → `slide.md`（gh-aw） | 毎日 03:00 JST（最大 30 件） | 直近 3 か月の重要・注目の更新を 1 件 1 枚のスライド JSON にする。起動済み・PR 済みの更新は飛ばす |
+| 想定問答の追加 | `slide-qa-dispatch.yml` → `slide-qa.md`（gh-aw） | 毎日 04:00 JST（最大 20 件） | 既存スライドへ `qa` を追加する。`qa` 以外が変わったら失敗にする |
+| 自動マージ | `auto-merge-slides.yml` / `auto-merge-summaries.yml` | 3 時間ごと＋実行完了時 | 検証・描画確認を通った PR だけマージ。通らない PR はクローズし、次回の生成で作り直す |
+| 見張り（AI なし） | `watchdog.yml` | 毎日 05:41 JST | 40 分を超えて動くエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 |
+| 保守エージェント | `maintenance.md`（gh-aw） | 約 2 週間ごと | パイプライン全体を点検し、再起動・小修正・Issue で知らせる（下記） |
+| トークン期限チェック | `token-expiry.yml` | 毎週月曜 | `COPILOT_GITHUB_TOKEN` の期限が 14 日以内なら Issue を作る（期限なしのトークンなら何もしない） |
+
+gh-aw のモデルは、日本語要約・スライド生成・想定問答・保守のすべて `claude-sonnet-5.5` です。変えるときは各 `.md` の `model:` を書き換えて `gh aw compile` を実行します。
 
 ## Cloud Automation
 
@@ -216,11 +236,11 @@ workflow / validator 変更は **Validate automation workflows** が GitHub 上�
 
 ### 保守エージェント（pipeline doctor）
 
-`maintenance.md`（gh-aw）が約 2 週間ごと（15 日と 29 日の 03:30 JST）に、収集・要約・スライド・自動マージ・デプロイが回り続けているかを点検します。一時的な失敗は該当 workflow を再起動し、検証ルールの行き過ぎなど小さな不具合は `[maintenance]` PR で直し、トークン失効などは Issue で知らせます。問題がなければ `Pipeline healthy` の Issue を作り、本家（azure-update-digest）の新しい更新も一覧にします。モデルは指定せず、既定（Auto）を使います。
+`maintenance.md`（gh-aw）が約 2 週間ごと（15 日と 29 日の 03:30 JST）に、収集・要約・スライド・自動マージ・デプロイが回り続けているかを点検します。一時的な失敗は該当 workflow を再起動し、検証ルールの行き過ぎなど小さな不具合は `[maintenance]` PR で直し、トークン失効などは Issue で知らせます。問題がなければ `Pipeline healthy` の Issue を作り、本家（azure-update-digest）の新しい更新も一覧にします。モデルは `claude-sonnet-5.5` です。
 
 ### 必要な設定
 
-- 日本語要約（gh-aw）: Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限）と、リポジトリ設定「Actions に PR の作成・承認を許可」。`summarize.md` を変更したら `gh aw compile summarize` で `summarize.lock.yml` を更新する。要約は原文の指紋（`sourceFingerprint`）が変わった項目だけ再生成し、`npm run validate:data` を通ったものだけが **Auto-merge summaries** でマージされる。未生成・失敗のときは従来の機械翻訳のまま表示する
+- 日本語要約・スライド生成・保守（gh-aw）: Secret `COPILOT_GITHUB_TOKEN`（細粒度 PAT、Copilot Requests 権限のみ。OAuth トークン `gho_` は使えない）と、リポジトリ設定「Actions に PR の作成・承認を許可」。`*.md` を変更したら `gh aw compile <名前>` で `*.lock.yml` を更新する。要約は原文の指紋（`sourceFingerprint`）が変わった項目だけ再生成し、`npm run validate:data` を通ったものだけが **Auto-merge summaries** でマージされる。未生成・失敗のときは従来の機械翻訳のまま表示する。トークンを期限つきで作った場合は、`token-expiry.yml` が期限の 14 日前に Issue で知らせる
 
 - Roadmap は MRC（`https://www.microsoft.com/releasecommunications/mcp`）から取得する。MRC が使えないときは RSS へ切り替えず、そのソースを `failed` として記録する（既存データは保持）
 - スライド PDF を公開するには、リポジトリ Secret `PDF_PASSWORD` を設定する（未設定なら PDF は公開されず、スライド JSON と API だけ公開される）。変更後は **Deploy GitHub Pages** を再実行する
