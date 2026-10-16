@@ -75,6 +75,33 @@
         { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Copilot が組織の作業データを根拠にするために、Microsoft Graph と並んで使われる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Premium ライセンス", "retrievedAt": "2026-10-14T21:18:24Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、Microsoft が機能を開発している段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "OneNote の Copilot はどのライセンスで使えますか？",
+          "answer": {
+            "text": "現行の概要ページでは、OneNote の Copilot は Copilot アドオン ライセンスがなくても標準アクセスで利用でき、フル エクスペリエンスと優先アクセスは Premium ライセンスが対象とされています。この新機能の対象ライセンスは、ロードマップでは示されていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview",
+                "locator": "Microsoft 365 Copilot ライセンスの比較",
+                "retrievedAt": "2026-10-16T22:05:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "削除などの編集操作を安心して任せてよいですか？",
+          "answer": {
+            "text": "提供前のため挙動は未確認です。重要なノートブックでは、導入時にまず検証用のノートで編集・削除の動作を確認することをお勧めします。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573446",
         "learn": [
