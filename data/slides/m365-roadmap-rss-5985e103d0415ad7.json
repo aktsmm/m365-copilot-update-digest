@@ -92,6 +92,33 @@
         { "termKey": "edit-with-copilot", "term": "Edit with Copilot", "type": "feature", "oneLine": { "text": "Excel でブックの作成・変更を行う機能（以前の Agent Mode）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "March 10, 2026 / Excel", "retrievedAt": "2026-10-14T21:50:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Plan Mode を使うには Copilot ライセンスが必要ですか？",
+          "answer": {
+            "text": "Microsoft Copilot はアドオン ライセンスで、対象の Microsoft 365 プランに追加して利用します。Plan Mode 個別のライセンス要件はロードマップには示されていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing",
+                "locator": "Microsoft Copilot ライセンス",
+                "retrievedAt": "2026-10-16T22:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "どんな作業で Plan Mode を試すのがよいですか？",
+          "answer": {
+            "text": "複数シートにまたがる集計や整形など、変更範囲が広い作業で、まず手順を確認してから試すのが進めやすいです。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560338",
         "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
