@@ -44,6 +44,8 @@ steps:
     run: |
       npm ci
       test -f "data/slides/${SLIDE_ID}.json"
+      mkdir -p .work
+      printf "%s" "${SLIDE_ID}" > .work/target-id.txt
 post-steps:
   - uses: actions/setup-node@v4
     with:
@@ -71,6 +73,7 @@ Add the optional `qa` field (expected Q&A for the presenter) to the existing fil
 
 ## Inputs
 
+- `.work/target-id.txt` — **the slide key to work on** (`<id>` below). Read it first; it is the only target. Never pick a slide yourself.
 - `data/slides/<id>.json` — the existing one-slide deck. Read all of it first (title, panels, glossary, references).
 - `schema/slide.schema.json` — the contract for `qa` (`question` 4–120 characters; `answer` is a claim with `text`, `origin`, `assertion`, `verification`, `evidence`).
 - `examples/slide.sample.json` — the first sample slide has a finished `qa` block: match its style.
