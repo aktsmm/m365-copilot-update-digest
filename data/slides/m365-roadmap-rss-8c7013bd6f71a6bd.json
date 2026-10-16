@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8c7013bd6f71a6bd",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Windows 版 Teams Rooms に IntelliFrame の人物ラベルを追加（開発中）",
+        "subtitleJa": "会議室内の参加者が誰かを、リモート参加者にも示せるようになります",
+        "en": "Microsoft Teams: IntelliFrame people labels in Teams Rooms on Windows"
+      },
+      "meta": {
+        "publishedJst": "2026-09-25",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams"],
+        "categories": ["teams", "edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams Rooms on Windows を管理する IT 管理者**と、会議室とリモートでつなぐ参加者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "リモート参加者が、室内の誰が話しているかを把握しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。導入時は認識設定とユーザー登録の準備が必要になる可能性があります", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "IntelliFrame の**人物ラベル**で室内参加者を識別し、ホバーすると連絡先カードを表示できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Windows 版 Teams Rooms の IntelliFrame に人物ラベルが追加される予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "インテリジェント カメラとクラウド上の音声・顔プロファイルを利用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は Worldwide（標準マルチテナント）と GCC", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "People 認識は Teams Rooms Pro ライセンスのデバイス専用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "重要", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "顔認識には、対応カメラまたは Cloud IntelliFrame が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "People 認識とは何ですか?", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "音声・顔認識は既定でオフ。登録したユーザーのみ識別される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "手順 1 / 手順 2", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Pro 管理ポータルの [設定] > [認識] で音声・顔認識を構成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "Pro 管理ポータルを使用する", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "ユーザーの登録可否は Teams AI ポリシーで管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "手順 2", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "intelliframe", "term": "IntelliFrame", "type": "feature", "oneLine": { "text": "Teams Rooms のカメラが室内の参加者を個別に映し出す機能。", "origin": "learn", "assertion": "fact", "verification": "unverified" } },
+        { "termKey": "people-recognition", "term": "People 認識", "type": "feature", "oneLine": { "text": "音声や顔で登録済みユーザーを識別し、文字起こしなどに反映する Teams Rooms の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "People 認識とは何ですか?", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "teams-rooms-pro", "term": "Teams Rooms Pro", "type": "product", "oneLine": { "text": "People 認識の利用に必要な、Teams Rooms デバイス向けのライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "重要", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用するには何のライセンスが必要ですか？",
+          "answer": { "text": "関連する People 認識は、Teams Rooms Pro ライセンスを持つデバイス専用と案内されています。人物ラベルの条件はロードマップ上で確定表記を確認してください。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "重要", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        },
+        {
+          "question": "プライバシー面の管理はどうなりますか？",
+          "answer": { "text": "ユーザーはいつでも登録を解除でき、組織はポリシーで登録や認識を無効にできます。認識データは会議内の識別・文字起こし・AI 要約にのみ使われます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locator": "プライバシーとコンプライアンス", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566700",
+        "learn": [
+          { "title": "Teams Rooms で People認識を有効にする", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/teams-rooms-people-recognition", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
