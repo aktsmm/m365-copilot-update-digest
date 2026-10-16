@@ -74,6 +74,11 @@
         { "termKey": "natural-language", "term": "自然言語検索", "type": "term", "oneLine": { "text": "日常の言葉で質問や要求を入力し、意図に沿った結果を得る検索方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "自然言語検索", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        { "question": "管理者が事前に設定する必要はありますか？", "answer": { "text": "Copilot 検索については、管理者やユーザーが設定する操作は不要です。対象ライセンスがあれば Microsoft Copilot アプリにタブとして表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-16T07:10:00Z" }] } },
+        { "question": "Copilot 検索と Copilot Chat のデータソースの違いは？", "answer": { "text": "Copilot 検索は Microsoft Graph とサードパーティ製コネクタが対象で、Copilot Chat はそれに加えて Web も対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "Microsoft Copilot 検索 と Microsoft Copilot Chat の違い", "retrievedAt": "2026-10-16T07:10:00Z" }] } },
+        { "question": "検索はキーワードだけでなく文章でも指定できますか？", "answer": { "text": "はい。日常の言葉による自然言語クエリに対応しつつ、従来のキーワード検索（完全一致・部分一致）も使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search", "locator": "自然言語検索", "retrievedAt": "2026-10-16T07:10:00Z" }] } }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570469",
         "learn": [
