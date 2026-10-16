@@ -75,6 +75,20 @@
         { "termKey": "sharepoint-embedded", "term": "SharePoint Embedded", "type": "term", "oneLine": { "text": "API 専用のファイルおよびドキュメント管理システム。AI アーカイブの格納先に使われる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ Storage", "retrievedAt": "2026-10-14T22:30:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "AI アーカイブは誰が閲覧・利用できますか？",
+          "answer": { "text": "会議に招待されたユーザーと、会議の要約を共有されたユーザーのみが、Copilot などの AI 経由で利用できます。アクセス権のないユーザーには会議の分析情報は共有されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブにアクセスできるユーザー", "retrievedAt": "2026-10-16T07:10:00Z" }] }
+        },
+        {
+          "question": "会議ごとに AI アーカイブの作成を止められますか？",
+          "answer": { "text": "はい。会議オプションで Copilot とファシリテーターを「会議中のみ」にすると、その会議では作成されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ生成をオフにする", "retrievedAt": "2026-10-16T07:10:00Z" }] }
+        },
+        {
+          "question": "録音や文字起こしを削除すると AI アーカイブも消えますか？",
+          "answer": { "text": "自動では削除されません。開催者が会議の要約から「Recap content の削除」を選ぶか、管理者が PowerShell で削除します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-16T07:10:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558933",
         "learn": [
