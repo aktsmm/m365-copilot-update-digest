@@ -4,7 +4,7 @@ import path from "node:path";
 import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
 import { applyAgentSummaries, loadAgentSummaries } from "./lib/agent-summaries.mjs";
 import { brokenSources } from "./lib/coverage.mjs";
-import { buildApi } from "./lib/api.mjs";
+import { buildApi, publicQa } from "./lib/api.mjs";
 import { KIND_IDS, KIND_LABEL, KIND_LABEL_EN, loadSlides, slideKind, stableStringify } from "./lib/slides.mjs";
 import { matchingRecord, withRelatedDocuments, validateDocumentCache } from "./lib/related-documents.mjs";
 
@@ -1318,11 +1318,13 @@ async function main() {
   slideKeys = new Set(slides.map((entry) => entry.key));
   for (const entry of slides) {
     await writeText(path.join(siteDir, "slides", `${entry.key}.json`), `${JSON.stringify({ schemaVersion: 1, slides: [entry.slide] })}\n`);
-  }  for (const file of buildApi(allEvents, {
+  }  const slideQa = new Map(slides.filter((entry) => (entry.slide.qa ?? []).length > 0).map((entry) => [entry.key, publicQa(entry.slide.qa)]));
+  for (const file of buildApi(allEvents, {
     snapshotAt: siteContext.lastCheckedAt,
     categoryConfig,
     coverage: runSummary.coverage,
     slideKeys,
+    slideQa,
   })) {
     await writeText(path.join(siteDir, file.path), `${stableStringify(file.body)}\n`);
   }

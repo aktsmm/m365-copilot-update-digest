@@ -19,9 +19,11 @@ function addDays(date, days) {
 const byNewest = (left, right) =>
   right.publishedJst.localeCompare(left.publishedJst) || left.key.localeCompare(right.key);
 
-export function publicItem(event, slideKeys = new Set()) {
+export function publicItem(event, slideKeys = new Set(), slideQa = new Map()) {
+  const qa = slideQa.get(event.id) ?? [];
   return {
     key: event.id,
+    qaCount: qa.length,
     title: { ja: event.titleJa || event.title, en: event.titleEn || event.title },
     summary: { ja: event.summaryJa || event.summary || "", en: event.summaryEn || event.summary || "" },
     publishedJst: jstDate(event.publishedAt),
@@ -45,9 +47,20 @@ export function publicItem(event, slideKeys = new Set()) {
   };
 }
 
+/** スライドの想定問答（qa）を API 向けの形にする。 */
+export function publicQa(qa) {
+  return (qa ?? []).map((entry) => ({
+    question: entry.question,
+    answer: entry.answer.text,
+    assertion: entry.answer.assertion,
+    verification: entry.answer.verification,
+    sources: (entry.answer.evidence ?? []).map((evidence) => evidence.url),
+  }));
+}
+
 /** 静的 JSON API。純粋関数: 同じ入力なら同じファイルを返す。 */
-export function buildApi(events, { snapshotAt, categoryConfig, coverage, slideKeys = new Set() }) {
-  const items = events.map((event) => publicItem(event, slideKeys)).sort(byNewest);
+export function buildApi(events, { snapshotAt, categoryConfig, coverage, slideKeys = new Set(), slideQa = new Map() }) {
+  const items = events.map((event) => publicItem(event, slideKeys, slideQa)).sort(byNewest);
   const files = [];
   const months = new Map();
   for (const item of items) {
@@ -81,6 +94,7 @@ export function buildApi(events, { snapshotAt, categoryConfig, coverage, slideKe
         latest: `${BASE}/latest.json`,
         month: `${BASE}/months/{YYYY-MM}.json`,
         update: `${BASE}/updates/{key}.json`,
+        qa: `${BASE}/qa.json`,
         category: `${BASE}/categories/{category}.json`,
         slide: "slides/{key}.json",
         slideIndex: "data/slides.json",
@@ -94,8 +108,13 @@ export function buildApi(events, { snapshotAt, categoryConfig, coverage, slideKe
   }
 
   for (const item of items) {
-    files.push({ path: `${BASE}/updates/${item.key}.json`, body: { schema: 1, item } });
+    files.push({ path: `${BASE}/updates/${item.key}.json`, body: { schema: 1, item, ...(slideQa.has(item.key) ? { qa: slideQa.get(item.key) } : {}) } });
   }
+
+  const qaItems = items
+    .filter((item) => slideQa.has(item.key))
+    .map((item) => ({ key: item.key, title: item.title, publishedJst: item.publishedJst, qa: slideQa.get(item.key) }));
+  files.push({ path: `${BASE}/qa.json`, body: { schema: 1, count: qaItems.length, items: qaItems } });
 
   for (const category of categories) {
     const list = items.filter((item) => item.categories.includes(category.id));

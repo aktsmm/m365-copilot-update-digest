@@ -11,7 +11,8 @@ GitHub Pages から配信する読み取り専用の静的 JSON です。認証�
 | `api/v1/index.json` | バージョン、取得時点（`snapshotAt`）、件数、ソース別の取得状態（`coverage`）、カテゴリと重要度の定義、月の一覧、エンドポイント一覧 |
 | `api/v1/latest.json` | 取得時点までの直近 30 日（JST）の更新 |
 | `api/v1/months/YYYY-MM.json` | 月別の更新一覧（発行日の JST 月） |
-| `api/v1/updates/{key}.json` | 1 件の詳細 |
+| `api/v1/updates/{key}.json` | 1 件の詳細。スライドに想定問答があるときは `qa` も含む |
+| `api/v1/qa.json` | 想定問答（`question` / `answer` / `assertion` / `verification` / `sources`）がある更新の一覧 |
 | `api/v1/categories/{category}.json` | カテゴリ別の軽量索引（複数所属あり） |
 | `slides/{key}.json` | スライド JSON（[スキーマ](../schema/slide.schema.json)）。gh-aw が作成済みのもののみ |
 | `data/slides.json` | 公開している暗号化 PDF の一覧と、復号用の検証値（`pdfGate`） |
