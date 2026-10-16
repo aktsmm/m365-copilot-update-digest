@@ -18,8 +18,8 @@
   const more = $("[data-ex-more]");
   const periodLabel = $("[data-explorer-period]");
   const L = {
-    ja: { items: "件", basis: "JST・発行日基準", detail: "日次の該当箇所", source: "原文を開く", related: "関連ドキュメント", include: "出力に含める", why: "注目理由", published: "発行", noRelated: "" },
-    en: { items: "items", basis: "JST, by publish date", detail: "View in daily digest", source: "Open source", related: "Related documentation", include: "Include in export", why: "Why it matters", published: "Published", noRelated: "" },
+    ja: { items: "件", basis: "JST・発行日基準", detail: "日次の該当箇所", source: "原文を開く", related: "関連ドキュメント", include: "出力に含める", slideMark: "スライドあり", why: "注目理由", published: "発行", noRelated: "" },
+    en: { items: "items", basis: "JST, by publish date", detail: "View in daily digest", source: "Open source", related: "Related documentation", include: "Include in export", slideMark: "Slides", why: "Why it matters", published: "Published", noRelated: "" },
   }[locale];
 
   let entries = [];
@@ -93,6 +93,7 @@
       <div class="ex-head">
         <label class="ex-sel" title="${esc(L.include)}"><input type="checkbox" class="selbox" data-id="${esc(entry.id)}"${excluded.has(entry.id) ? "" : " checked"} aria-label="${esc(L.include)}" /></label>
         <h3><span class="ex-no">${index + 1}.</span> <a href="${esc(original || href)}"${original ? ' target="_blank" rel="noopener noreferrer"' : ""}>${esc(title)}</a></h3>
+        ${hasPdf ? `<span class="badge badge-slide">${esc(L.slideMark)}</span>` : ""}
         ${kind ? `<span class="badge badge-kind-${esc(kind.id)}">${esc(label(kind))}</span>` : ""}
       </div>
       ${locale === "ja" && entry.titleEn && entry.titleEn !== title ? `<p class="card-original-title">${esc(entry.titleEn)}</p>` : ""}
@@ -163,7 +164,7 @@
     Object.entries(counts).forEach(([attr, n]) => {
       root.querySelectorAll(`[${attr}]`).forEach((b) => {
         b.dataset.label = b.dataset.label || b.textContent;
-        b.textContent = `${b.dataset.label}（${n}）`;
+        b.textContent = `${b.dataset.label}（${n < picked.length ? `${n} / ${picked.length}` : n}）`;
       });
     });
   }
