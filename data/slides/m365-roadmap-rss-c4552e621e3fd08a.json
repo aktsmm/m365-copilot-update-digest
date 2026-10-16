@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c4552e621e3fd08a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central で Shopify の注文変更・交換・返金処理に対応",
+        "subtitleJa": "編集・交換された Shopify 注文を、販売ドキュメントや返金処理で整合させられます",
+        "en": "Dynamics 365 Business Central: Ecommerce - Process Shopify order changes, exchanges, and refunds"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central で Shopify コネクタを使う EC 担当者・経理担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "交換を含む返品や注文変更を、販売ドキュメントに整合させて処理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "Shopify Shop Card の返品・返金設定で処理方法を選べる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "返品に交換品が含まれる場合、**返品商品と交換商品がまとめて取り込まれ**、販売返品伝票などに追加されます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Process an exchange", "retrievedAt": "2026-10-16T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "交換を含む返品では、返品商品と交換商品が一緒に取り込まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Process an exchange", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "返品商品は数量が正、交換商品は負で、同じ販売クレジットメモや返品注文に登録できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Process an exchange", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "交換品を別ドキュメントで処理するには「Move Negative Lines」を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Process an exchange", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Shopify Shop Card で返品・返金の処理方法（Import Only / Auto Create Sales Document）を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "自動作成では「Process Returns as」で販売クレジットメモか販売返品注文を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "元の Shopify 注文が処理済みの場合のみ、返金の販売ドキュメントを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "交換品の方が高額な場合、Refund Account の調整行は追加されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Process an exchange", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Return Location Priority で、Shopify の元の返品先をクレジットメモに使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "返金は、商品・ギフトカード・その他の金額ごとに行が作成される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "処理後に Shopify で更新された注文は、Shopify Orders のビューで競合として確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Review imported orders", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "shopify-connector", "term": "Shopify コネクタ", "type": "feature", "oneLine": { "text": "Shopify の注文や返金を Business Central に取り込む連携機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "sales-credit-memo", "term": "販売クレジットメモ", "type": "term", "oneLine": { "text": "返金に対して作成できる Business Central の販売ドキュメント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "sales-return-order", "term": "販売返品注文", "type": "term", "oneLine": { "text": "クレジットメモの代わりに選べる、返品用の販売ドキュメント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573343",
+        "learn": [{ "title": "Synchronize and fulfill sales orders", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders#returns-and-refunds", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
