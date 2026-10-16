@@ -6,8 +6,12 @@ export function loadCategoryConfig(file = new URL("../../config/categories.json"
   return JSON.parse(fs.readFileSync(file, "utf8"));
 }
 
+const NOISE_PREFIX = /^\s*Microsoft Copilot \(Microsoft 365\)\s*:\s*/i;
+const NOISE_PLATFORM = /\s*\[[^\]]*\]\s*$/;
+
+// 先頭の製品名接頭辞と末尾の [Windows、Web] などの提供プラットフォーム表記は分類のノイズになるため除く
 function eventTitles(event) {
-  return [event.titleEn, event.title].filter(Boolean);
+  return [event.titleEn, event.title].filter(Boolean).map((title) => title.replace(NOISE_PREFIX, "").replace(NOISE_PLATFORM, ""));
 }
 
 /** Returns display category ids in config order. An update may belong to several; none falls back to fallbackId. */
