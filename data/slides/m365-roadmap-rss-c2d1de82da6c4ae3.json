@@ -94,6 +94,38 @@
         { "termKey": "custom-instructions", "term": "カスタム指示", "type": "term", "oneLine": { "text": "設定 > 個人用設定で管理する、Copilot の応答方法に関する指示。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "カスタム指示", "retrievedAt": "2026-10-15T15:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Purview の保持ポリシーはメモリにも適用されますか？",
+          "answer": {
+            "text": "いいえ。Purview の保持ポリシーや保持ラベルは Copilot メモリに適用されず、メモリ専用の保持ルールを設定する管理者コントロールもありません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "メモリのアイテム保持ポリシー", "retrievedAt": "2026-10-16T06:20:00Z" }]
+          }
+        },
+        {
+          "question": "チャットを削除すれば、保存されたメモリも消えますか？",
+          "answer": {
+            "text": "消えません。保存されたメモリは、ユーザーが設定 > 個人用設定で明示的に削除するまで保持されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "保存されたメモリー", "retrievedAt": "2026-10-16T06:20:00Z" }]
+          }
+        },
+        {
+          "question": "管理者はユーザーのメモリを検索・削除できますか？",
+          "answer": {
+            "text": "はい。Purview の電子情報開示やコンテンツ検索で検索でき、削除には Microsoft Graph エクスプローラーを使えます。ただしカスタム指示はまだ検出できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "管理者はユーザーのメモリを検出して削除できますか?", "retrievedAt": "2026-10-16T06:20:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574111",
         "learn": [
