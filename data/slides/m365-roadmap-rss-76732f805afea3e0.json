@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-76732f805afea3e0",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint・OneDrive の自動ラベル付け上限を 1 日 50 万ファイルに拡大（開発中）",
+        "subtitleJa": "保存済みデータへのラベル付けを速く進め、ラベルの空白を埋められます",
+        "en": "Microsoft Purview: Information Protection-Auto-labeling scale increase for SharePoint and OneDrive"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["sharepoint", "security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**秘密度ラベルの自動ラベル付けを運用する Purview 管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "テナントあたりの 1 日の最大処理能力が 100,000 から 500,000 ファイルに増える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は開発中で、現時点で必要な対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "テナントあたり 1 日最大 100,000 ファイルまでの処理能力", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "**1 日最大 500,000 ファイル**まで処理でき、既存コンテンツのラベルの空白を速く埋められます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "SharePoint と OneDrive の自動ラベル付け容量を、テナントあたり 1 日 500,000 ファイルへ拡大", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "保存済みデータに秘密度ラベルと保護設定を適用する作業を加速", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供範囲は GCC / GCC High / DoD の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "自動ラベル付けポリシーはテナントあたり最大 100 個まで", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "自動ラベル付けの制限", "retrievedAt": "2026-10-16T21:25:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "SharePoint と OneDrive の Office ファイルで秘密度ラベルを有効にしておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "前提条件", "retrievedAt": "2026-10-16T21:25:00Z" }] },
+            { "text": "PDF を処理するには、テナントの PDF ラベル付けを有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "SharePoint と OneDrive のサポート対象", "retrievedAt": "2026-10-16T21:25:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "auto-labeling", "term": "自動ラベル付け", "type": "feature", "oneLine": { "text": "ポリシーの条件に一致するファイルやメールに、秘密度ラベルを自動で適用する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "概要", "retrievedAt": "2026-10-16T21:25:00Z" }] } },
+        { "termKey": "sensitivity-label", "term": "秘密度ラベル", "type": "feature", "oneLine": { "text": "コンテンツの機密レベルを示し、保護設定を適用するためのラベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "概要", "retrievedAt": "2026-10-16T21:25:00Z" }] } },
+        { "termKey": "purview", "term": "Microsoft Purview", "type": "product", "oneLine": { "text": "データのガバナンス、保護、コンプライアンスを扱う Microsoft のサービス群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "冒頭", "retrievedAt": "2026-10-16T21:25:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571309",
+        "learn": [{ "title": "Microsoft 365 データに秘密度ラベルを自動的に適用する", "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
