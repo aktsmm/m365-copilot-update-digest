@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b21a356080ca0f8a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の製造ドキュメントと能力カレンダーの操作性を改善",
+        "subtitleJa": "計画・製造画面を行き来する作業の手間を減らします",
+        "en": "Dynamics 365 Business Central: Supply Chain Management - Work more efficiently with manufacturing documents and capacity calendars"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**生産計画担当者・製造管理者**（Business Central 利用者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ページアクション、フィールド、フィルター、エラーへの移動が改善され、余計な操作が減る", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は提供開始済み。利用者側で必要な設定は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "計画ワークシート、製造指示書、作業・機械センター、製造 BOM、工順を行き来する際の**小さな手間が減り、生産スケジュール作業が進めやすく**なります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: 計画ワークシート、製造指示書、作業・機械センター、製造 BOM、工順", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "改善点: ページアクション、フィールド、フィルター、エラーへの移動", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "製造指示書は、製造の計画・管理・追跡の起点となる文書", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-about-production-orders", "locator": "About production orders", "retrievedAt": "2026-10-16T20:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供開始済み（Worldwide・Web）。追加の設定手順は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "製造機能は Premium エクスペリエンスで利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-manage-manufacturing", "locator": "Manufacturing の注記", "retrievedAt": "2026-10-16T20:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "製造機能は Premium エクスペリエンスが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-manage-manufacturing", "locator": "Manufacturing の注記", "retrievedAt": "2026-10-16T20:50:00Z" }] },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "計画ワークシートで MPS・MRP を実行し、供給計画を自動作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-planning", "locator": "Planning", "retrievedAt": "2026-10-16T20:50:00Z" }] },
+            { "text": "作業・機械センターのカレンダーは、計画変更に応じて再計算できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-planning", "locator": "Planning", "retrievedAt": "2026-10-16T20:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "計画ワークシートから複数の製造指示書をまとめて作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-about-production-orders", "locator": "Production order creation", "retrievedAt": "2026-10-16T20:50:00Z" }] },
+            { "text": "週次の供給計画の見直しで、画面間の移動が減るか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "production-order", "term": "製造指示書", "type": "term", "oneLine": { "text": "製造する品目と必要な材料を管理し、製造の計画・管理・追跡の起点となる文書。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-about-production-orders", "locator": "About production orders", "retrievedAt": "2026-10-16T20:50:00Z" }] } },
+        { "termKey": "planning-worksheet", "term": "計画ワークシート", "type": "feature", "oneLine": { "text": "MPS・MRP を実行し、全品目レベルの供給計画を自動作成するページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-planning", "locator": "Planning", "retrievedAt": "2026-10-16T20:50:00Z" }] } },
+        { "termKey": "work-machine-center", "term": "作業センター・機械センター", "type": "term", "oneLine": { "text": "製造の能力とコストをモデル化する単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-manage-manufacturing", "locator": "Manufacturing", "retrievedAt": "2026-10-16T20:50:00Z" }] } },
+        { "termKey": "production-bom", "term": "製造 BOM", "type": "term", "oneLine": { "text": "製造品目の構成部品を定義する部品表。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-manage-manufacturing", "locator": "Manufacturing", "retrievedAt": "2026-10-16T20:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用者や管理者に必要な対応はありますか？",
+          "answer": { "text": "ロードマップには利用者側の設定手順は示されていません。画面の操作性が改善される更新です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの画面が対象ですか？",
+          "answer": { "text": "計画ワークシート、製造指示書、作業・機械センター、製造 BOM、工順を行き来する作業が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "製造機能を使うための前提は？",
+          "answer": { "text": "製造機能は Business Central の Premium エクスペリエンスで利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-manage-manufacturing", "locator": "Manufacturing の注記", "retrievedAt": "2026-10-16T20:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573358",
+        "learn": [
+          { "title": "Manufacturing", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-manage-manufacturing", "locale": "en-us" },
+          { "title": "About production orders", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-about-production-orders", "locale": "en-us" },
+          { "title": "Planning", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/production-planning", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
