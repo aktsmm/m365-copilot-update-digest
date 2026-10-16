@@ -751,6 +751,26 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/improve customer outcomes with service agent in microsoft 365 copilot/.test(text)) {
+    return "Dynamics 365 Customer Service の Service Agent で顧客対応を改善";
+  }
+
+  if (/use copilot cowork to orchestrate insights and actions across dynamics 365 erp/.test(text)) {
+    return "Dynamics 365 Finance and Operations で Copilot Cowork が洞察とアクションを調整";
+  }
+
+  if (/classify emails by category and subcategory with case management agent/.test(text)) {
+    return "Case Management Agent でメールをカテゴリ・サブカテゴリ別に分類";
+  }
+
+  if (/boost agent performance with optimal tool execution paths in dynamics 365 erp mcp/.test(text)) {
+    return "Dynamics 365 ERP MCP で最適なツール実行経路によりエージェント性能を向上";
+  }
+
+  if (/enhance dataverse record descriptions for copilot \/mention/.test(text)) {
+    return "Copilot の /mention で Dataverse レコードの説明を強化";
+  }
+
   if (
     /use copilot in your search tab in the microsoft 365 copilot mobile app/.test(
       text,
@@ -1622,6 +1642,30 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^dynamics 365 field service:/.test(text)) {
     return "Dynamics 365 Field Service";
+  }
+
+  if (/^dynamics 365 customer service:/.test(text)) {
+    return "Dynamics 365 Customer Service";
+  }
+
+  if (/^dynamics 365 contact center:/.test(text)) {
+    return "Dynamics 365 Contact Center";
+  }
+
+  if (/^dynamics 365 finance and operations cross-app:/.test(text)) {
+    return "Dynamics 365 Finance and Operations";
+  }
+
+  if (/^dynamics 365 finance:/.test(text)) {
+    return "Dynamics 365 Finance";
+  }
+
+  if (/^dynamics 365 project operations:/.test(text)) {
+    return "Dynamics 365 Project Operations";
+  }
+
+  if (/^microsoft dataverse:/.test(text)) {
+    return "Microsoft Dataverse";
   }
 
   if (/^dynamics 365 business central:/.test(text)) {
