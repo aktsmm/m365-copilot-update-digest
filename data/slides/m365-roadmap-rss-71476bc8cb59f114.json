@@ -74,6 +74,20 @@
         { "termKey": "copilot-impact-template", "term": "Copilot インパクト テンプレート", "type": "feature", "oneLine": { "text": "Copilot の有効性を測るための、調査に基づく Pulse のテンプレート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Pulse の結果を Copilot ダッシュボードに統合するのに必要なライセンスは？",
+          "answer": { "text": "Viva Suite、Viva Workplace Analytics と従業員のフィードバック、Viva Glint、Microsoft Copilot のいずれか 1 つ以上が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "冒頭のライセンス要件", "retrievedAt": "2026-10-16T07:25:00Z" }] }
+        },
+        {
+          "question": "ダッシュボードにアクセスできない場合、Pulse アンケートは送れませんか？",
+          "answer": { "text": "送れます。ダッシュボードにアクセスできなくても、Web または Teams の Viva Pulse から Copilot インパクト テンプレートを使って開始できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "Viva Pulse から Copilot に関するセンチメントをキャプチャする", "retrievedAt": "2026-10-16T07:25:00Z" }] }
+        },
+        {
+          "question": "アンケートの受信者や終了日時は変更できますか？",
+          "answer": { "text": "現行の Viva Pulse では、受信者の追加・削除や終了日時の更新ができ、個人的なメモも追加できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/pulse/viva-integrations/measure-copilot-impact-in-your-organization", "locator": "Viva Pulse で Copilot インパクト テンプレートをカスタマイズする", "retrievedAt": "2026-10-16T07:25:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568072",
         "learn": [
