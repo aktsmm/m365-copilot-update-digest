@@ -10,7 +10,9 @@ permissions:
   actions: read
   issues: read
   pull-requests: read
-engine: copilot
+engine:
+  id: copilot
+  model: claude-haiku-5.5
 timeout-minutes: 45
 network:
   allowed:
