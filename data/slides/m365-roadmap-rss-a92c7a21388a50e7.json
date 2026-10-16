@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-a92c7a21388a50e7",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Word と Cowork で使える Copilot の法務プラグイン（開発中）",
+        "subtitleJa": "法的文書の要約・起案・レビュー・修正提案を専用スキルで支援します",
+        "en": "Word: Legal plugins in Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Word"],
+        "categories": ["agents", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Word",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Word や Cowork を使う**法務の専門家**と、プラグインを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "法的文書の要約・起案・レビュー・修正提案に特化したスキルを使えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word と Cowork で、法務向けの専用スキルを使って法的文書を**要約・起案・レビュー・修正提案**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供内容の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "法務の専門家向けに設計されたスキルを持つプラグイン", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Word と Cowork で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft 365 の業務コンテキストを活用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）のデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応するサードパーティの法務ソースと連携できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Cowork のプラグインは、管理者が組織向けにデプロイできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "管理によってデプロイされたプラグイン", "retrievedAt": "2026-10-16T21:40:00Z" }] },
+            { "text": "外部サービスのコネクタは、初回に 1 回限りのサインインが必要な場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "プラグイン サービスへの接続", "retrievedAt": "2026-10-16T21:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "plugin", "term": "プラグイン", "type": "feature", "oneLine": { "text": "Cowork に新しいスキルやコネクタを追加して、できることを広げる拡張。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "冒頭", "retrievedAt": "2026-10-16T21:40:00Z" }] } },
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "スキルとコネクタをプラグインで拡張できる Microsoft Copilot のエージェント機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "冒頭", "retrievedAt": "2026-10-16T21:40:00Z" }] } },
+        { "termKey": "skill", "term": "スキル", "type": "term", "oneLine": { "text": "財務分析や法的調査など、特定分野の専門知識を Cowork に教える機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "冒頭", "retrievedAt": "2026-10-16T21:40:00Z" }] } },
+        { "termKey": "connector", "term": "コネクタ", "type": "term", "oneLine": { "text": "Cowork を外部のデータ ソースやサービスにつなぐ仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "冒頭", "retrievedAt": "2026-10-16T21:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "プラグインはどこで入手し、管理者はどう関与しますか？",
+          "answer": {
+            "text": "Cowork のプラグインは Microsoft 365 のプラグイン マーケットプレースで検索でき、管理者が自動デプロイすることもできます。管理者がデプロイしたプラグインはユーザーが削除できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "管理によってデプロイされたプラグイン", "retrievedAt": "2026-10-16T21:40:00Z" }]
+          }
+        },
+        {
+          "question": "スキルは手動で呼び出す必要がありますか？",
+          "answer": {
+            "text": "Cowork の一般的なプラグイン スキルは、会話のコンテキストに基づいて自動で選択されます。法務プラグインの個別の動作は提供開始時の情報を確認してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "プラグイン スキルの仕組み", "retrievedAt": "2026-10-16T21:40:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571884",
+        "learn": [
+          { "title": "Copilot Cowork でプラグインを使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locale": "ja-jp" },
+          { "title": "Copilot Cowork で使用可能なプラグイン", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-available-plugins", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
