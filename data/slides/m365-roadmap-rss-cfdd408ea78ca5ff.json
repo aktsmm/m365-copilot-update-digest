@@ -85,6 +85,33 @@
         { "termKey": "add-work-content", "term": "作業コンテンツを追加", "type": "feature", "oneLine": { "text": "プラス メニューから、プロンプトに作業コンテンツを挿入する操作。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Copilot が参照できる組織コンテンツはどう決まりますか？",
+          "answer": {
+            "text": "Copilot はユーザーのアクセス許可の範囲内でデータにアクセスします。Copilot Chat (Basic) では、組織コンテンツをプロンプトに明示的に提供する必要があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview",
+                "locator": "Copilot Chat (Basic) のライセンスとエクスペリエンス / ユーザーのアクセス許可によるスコープ",
+                "retrievedAt": "2026-10-16T07:45:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "ピルで表示されても、挿入した内容は Copilot に渡されますか？",
+          "answer": {
+            "text": "ロードマップ上は表示の変更のみで、プロンプト本文に繰り返されなくなる点だけが違います。内容自体は引き続き利用されると考えられます。",
+            "origin": "editorial",
+            "assertion": "inference",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=552592",
         "learn": [
