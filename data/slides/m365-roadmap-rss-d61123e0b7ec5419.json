@@ -94,6 +94,20 @@
         { "termKey": "transcript", "term": "文字起こし", "type": "term", "oneLine": { "text": "会議の発言を記録したもので、開催者の Exchange Online アカウントなどに格納される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/privacy/intelligent-recap", "locator": "インテリジェントな要約を提供するために使用されるコンテンツと保存場所", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "要約を削除すると AI アーカイブも消えますか？",
+          "answer": { "text": "開催者が要約の「…」メニューから「Recap content の削除」を選ぶと、AI アーカイブも削除されます。ただし、文字起こしや記録の削除・期限切れだけでは自動削除されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-16T22:15:00Z" }] }
+        },
+        {
+          "question": "AI アーカイブの保存期間は管理者が制御できますか？",
+          "answer": { "text": "はい。既定の有効期限は 5 年（1,825 日）で、Teams 管理センターで変更できます。Purview のアイテム保持ポリシーを設定した場合は、そちらが優先されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議アーカイブ Filesの既定の有効期限の設定", "retrievedAt": "2026-10-16T22:15:00Z" }] }
+        },
+        {
+          "question": "AI アーカイブの生成そのものを止められますか？",
+          "answer": { "text": "はい。Teams 管理センターで組織全体の生成をオフにできます（一部のユーザーだけの有効化はできません）。個別の会議では、Copilot の許可を「会議中のみ」にすると生成されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ生成をオフにする", "retrievedAt": "2026-10-16T22:15:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=557170",
         "learn": [
