@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-4e352f0fb653e29f",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Sales agent のレコード要約にカスタムインサイトを追加（廃止・終了区分）",
+        "subtitleJa": "CRM 以外のアプリの情報で、アカウントや商談の要約を補強する項目が Retirement になっています",
+        "en": "Microsoft Copilot (Microsoft 365): Add custom insights to record summaries in Sales agent"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Sales agent を使う営業担当者**と、連携 API を作成する開発者・管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ロードマップ上のステージが Retirement になっている", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "終了日や代替手段は確認できないため、ロードマップの項目を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "CRM 以外のシステムにある情報を任意のアプリから取り込み、Sales agent のアカウントや商談の要約を補強して、営業担当者に**統合されたビュー**を提供します",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Web 版、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステージは Retirement", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Sales agent が独自アプリの分析情報で CRM レコードの要約を拡張できる機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/extend-record-summary", "locator": "冒頭", "retrievedAt": "2026-10-16T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの項目で終了時期と影響範囲を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "連携 API を作成済みの場合は、利用状況を棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-agent", "term": "Sales agent", "type": "product", "oneLine": { "text": "AI で各 CRM レコードの概要を生成し、営業担当者を支援するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/extend-record-summary", "locator": "冒頭", "retrievedAt": "2026-10-16T21:20:00Z" }] } },
+        { "termKey": "crm-record-summary", "term": "CRM レコードの要約", "type": "feature", "oneLine": { "text": "営業のフェーズ、予算、契約完了予定日などの重要な詳細を強調する要約。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/extend-record-summary", "locator": "冒頭", "retrievedAt": "2026-10-16T21:20:00Z" }] } },
+        { "termKey": "crm", "term": "CRM", "type": "term", "oneLine": { "text": "顧客関係管理（Customer Relationship Management）のこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/extend-record-summary", "locator": "冒頭", "retrievedAt": "2026-10-16T21:20:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "連携するアプリ側は何を用意しますか？",
+          "answer": {
+            "text": "Learn のプレビュー向け手順では、API の説明をアクションに追加し、レコード タイプや recordId を受け取って分析情報の一覧を返す GET 操作を用意します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/extend-record-summary", "locator": "API 操作・入力パラメーター", "retrievedAt": "2026-10-16T21:20:00Z" }]
+          }
+        },
+        {
+          "question": "終了日や代替機能はありますか？",
+          "answer": { "text": "ロードマップの情報からは確認できません。元の発表で最新の状況を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567002",
+        "learn": [
+          { "title": "アプリケーションからの分析情報を活用して CRM レコードのサマリーを充実させる (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/extend-record-summary", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
