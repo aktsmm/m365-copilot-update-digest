@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-78e1b9121ce890be",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "OneNote の Copilot Notebooks で Android 向けマルチモーダルキャプチャが提供開始",
+        "subtitleJa": "音声・写真・テキストを 1 回のセッションで記録し、Copilot ページにまとめられます",
+        "en": "OneNote: Multimodal capture in Copilot Notebooks (Android)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "Launched",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**OneNote の Copilot Notebooks を Android で使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対面の会話などの記録を、音声・写真・テキストでまとめて残せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は、クラウド ポリシーで Copilot ノートブックの作成と表示を制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-16T21:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "**音声の文字起こし、画像の撮影、テキスト入力を 1 回のセッション**で行えます。Copilot が構造化された Copilot ページを作成し、選んだ Copilot ノートブックに保存します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "文字起こし・撮影・テキスト入力を、1 回のセッションでまとめて実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot が、インサイトと記録内容を含む Copilot ページを作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ページは、ユーザーが選んだ Copilot ノートブックに保存される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot ノートブックの一覧ページで [Capture] をタップして開始", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes#july-01,-2026", "locator": "Try this", "retrievedAt": "2026-10-16T21:30:00Z" }] },
+            { "text": "Copilot ノートブックの利用には Microsoft Copilot または Copilot Chat ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-16T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "OneDrive の作成が無効なユーザーは、Copilot ノートブックを作成できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-16T21:30:00Z" }] },
+            { "text": "ポリシー変更の反映には、既存設定の変更で最大 90 分、新規で最大 24 時間かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-16T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能・管理設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "「Copilot ページと Copilot ノートブックを作成して表示する」ポリシー（既定は有効）で制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-16T21:30:00Z" }] },
+            { "text": "ノートブックは .pod ファイルとして、ユーザー所有の SharePoint Embedded コンテナーに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-16T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対面での会話など、オフラインの場面の記録に使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "会議メモと現場の写真を同じ Copilot ページに残したい場面で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "Copilot で扱うノートの保存先。.pod ファイルとして保存される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-16T21:30:00Z" }] } },
+        { "termKey": "copilot-pages", "term": "Copilot ページ", "type": "feature", "oneLine": { "text": "Copilot が作成するページ。.page ファイルとして保存される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-16T21:30:00Z" }] } },
+        { "termKey": "multimodal-capture", "term": "マルチモーダルキャプチャ", "type": "feature", "oneLine": { "text": "音声の文字起こし、撮影、テキスト入力を 1 回のセッションで行う機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "管理者が Copilot ノートブックの作成などを制御する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-16T21:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者はこの機能を止められますか？",
+          "answer": { "text": "Copilot ノートブックの作成と表示は、クラウド ポリシーで無効にできます。無効にしても、既存のノートブックは削除されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-16T21:30:00Z" }] }
+        },
+        {
+          "question": "必要なライセンスは何ですか？",
+          "answer": { "text": "Copilot ノートブックには、Microsoft Copilot または Copilot Chat ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-16T21:30:00Z" }] }
+        },
+        {
+          "question": "保存したデータはどこにありますか？",
+          "answer": { "text": "ユーザー所有の SharePoint Embedded コンテナーに保存され、組織の SharePoint クォータに計上されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-16T21:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567895",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブックの要件", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
