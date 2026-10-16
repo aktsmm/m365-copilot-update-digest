@@ -84,6 +84,20 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Model Context Protocol。Work IQ のチャット体験で使われる接続の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-14T20:40:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供開始前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Work IQ がアクセスできるデータの範囲は？",
+          "answer": { "text": "既存の Power Platform のセキュリティ アクセス許可に従い、テーブル セキュリティやビジネス ルールも適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "フォームの動作と検証", "retrievedAt": "2026-10-16T07:30:00Z" }] }
+        },
+        {
+          "question": "レコードの削除もできますか？",
+          "answer": { "text": "できますが、削除前にレコードのフィールドが表示され、明示的な確認が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "サポートされているアプリのコンポーネントと機能", "retrievedAt": "2026-10-16T07:30:00Z" }] }
+        },
+        {
+          "question": "JavaScript があるフォームではどうなりますか？",
+          "answer": { "text": "作成・更新はできませんが、応答内のリンクからモデル駆動型アプリでレコードを開いて変更できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/user/use-business-apps-work-iq", "locator": "既知の制限", "retrievedAt": "2026-10-16T07:30:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571888",
         "learn": [
