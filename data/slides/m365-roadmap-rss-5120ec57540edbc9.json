@@ -88,6 +88,37 @@
         { "termKey": "cloud-worldwide", "term": "Worldwide (Standard Multi-Tenant)", "type": "term", "oneLine": { "text": "ロードマップ上で、一般向けの標準マルチテナント クラウドを指す提供範囲。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者は Word の Copilot の使用状況を確認できますか？",
+          "answer": {
+            "text": "はい。Microsoft Copilot の使用状況レポートで、Word などのアプリ内での利用状況を確認できます。このレポートには Microsoft 365 Copilot (Basic) または (Premium) ライセンスが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Microsoft Copilot の使用状況レポート", "retrievedAt": "2026-10-16T22:30:00Z" }]
+          }
+        },
+        {
+          "question": "管理者は Copilot へのアクセスを制御できますか？",
+          "answer": {
+            "text": "Copilot Chat へのユーザー アクセスの削除や Web 検索ポリシーなどを管理者が制御できます。AI 管理者ロールなら、グローバル管理者権限なしで Copilot を管理できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Copilot コントロール", "retrievedAt": "2026-10-16T22:30:00Z" }]
+          }
+        },
+        {
+          "question": "最初に誰へ案内するのがよいですか？",
+          "answer": {
+            "text": "Word で共同編集の機会が多く、Copilot ライセンスを持つユーザーから案内すると効果を実感しやすいです。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=489825",
         "learn": [
