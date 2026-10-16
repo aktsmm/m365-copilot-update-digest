@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e5838cd34a9339b6",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Field Service で作業指示明細行ごとに複数の支払者を設定可能に（開発中）",
+        "subtitleJa": "同じ訪問の中でも、明細行ごとに費用の負担先を分けられる予定です",
+        "en": "Dynamics 365 Field Service: Support multiple payers across Work Order lines"
+      },
+      "meta": {
+        "publishedJst": "2026-09-26",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Field Service"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Field Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Field Service の管理者**と、作業指示の請求を扱う担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "保証提供元やメーカーなど、品目ごとの負担先を 1 回の訪問内で分けて扱える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供時期の発表を待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "1 回の訪問で、主たるサービスは顧客、特定の製品やサービスは別の支払者、というように作業指示明細行ごとに支払者を指定できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "作業指示の明細行ごとに、異なる支払者を設定できるようにする機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "支払者の例は、保証提供元、メーカー、パートナー、その他の請求対象の顧客", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "主たるサービスは顧客が負担し、特定の製品やサービスは別の相手が負担する場合を想定", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "仕様や提供内容は変更される可能性があるため、確定情報として扱わない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存機能として、タスク単位の請求で複数の請求者や請求取り決めを扱うシナリオがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/project-operations-integration-scenarios", "locator": "シナリオ 4:複数の請求者または請求取り決めのためのタスクベースの請求", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "現在の請求運用で、負担先が分かれる案件を洗い出しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "field-service", "term": "Dynamics 365 Field Service", "type": "product", "oneLine": { "text": "作業指示書で技術者の現場作業を管理する Dynamics 365 のアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/project-operations-integration-scenarios", "locator": "冒頭", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "work-order", "term": "作業指示書", "type": "feature", "oneLine": { "text": "技術者が行う現場作業を表すもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/project-operations-integration-scenarios", "locator": "冒頭", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "payer", "term": "支払者", "type": "term", "oneLine": { "text": "保証提供元、メーカー、パートナーなど、特定の製品やサービスの費用を負担する相手。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっておらず開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供時期の月が示されていません。段階は開発中です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存の仕組みで複数の請求者に分けることはできますか？",
+          "answer": { "text": "Project Operations 連携では、タスクベースの請求でタスクごとに異なる請求者や契約ラインへ分けるシナリオが案内されています。今回の機能は作業指示の明細行単位で支払者を指定するものです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/project-operations-integration-scenarios", "locator": "シナリオ 4", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570862",
+        "learn": [
+          { "title": "作業指示書を付けてプロジェクトを設定しましょう", "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/project-operations-integration-scenarios#scenario-4-task-based-billing-for-multiple-billers-or-billing-arrangements", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
