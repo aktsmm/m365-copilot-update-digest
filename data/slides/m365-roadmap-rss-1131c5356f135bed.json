@@ -75,6 +75,28 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "リモート MCP サーバーが提供するツールに、プラグインから接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "プラグインには何を含めることができますか?", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "共有プラグインはすぐに使えるようになりますか？",
+          "answer": {
+            "text": "共有・公開されたプラグインでも、使う前に承認、インストール、接続のセットアップが必要になる場合があります。手順は共有方法と組織の設定で変わります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "プラグインのアイデアから使用に移す", "retrievedAt": "2026-10-16T07:35:00Z" }]
+          }
+        },
+        {
+          "question": "プラグインの管理や統制はどこで確認できますか？",
+          "answer": {
+            "text": "プラグインの管理は Microsoft Agent 365 の管理マップで行い、スタンドアロンのスキルや MCP サーバーは別の管理手順があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugins-overview", "locator": "開始する", "retrievedAt": "2026-10-16T07:35:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570669",
         "learn": [
