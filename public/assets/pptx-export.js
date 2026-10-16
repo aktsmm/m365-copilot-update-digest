@@ -104,6 +104,15 @@
     s.addText(links, { x: 0.4, y: 7.0, w: 10.5, h: 0.3, fontFace: FONT, fontSize: 9, fit: "shrink" });
     const clouds = (slide.meta.cloudInstances || []).join(" ／ ");
     s.addText(`${clouds ? `提供範囲: ${clouds}　` : ""}ID ${slide.key}`, { x: 9.0, y: 7.1, w: 3.95, h: 0.25, fontFace: FONT, fontSize: 8, color: "6B778A", align: "right", fit: "shrink" });
+
+    if ((slide.qa || []).length) {
+      const mark = (a) => (a.assertion === "inference" ? "（推測）" : a.assertion === "recommendation" ? "（提案）" : a.verification === "verified" ? "" : "（未確認）");
+      const notes = slide.qa.map((entry, i) => {
+        const src = (entry.answer.evidence || []).map((e) => e.url).filter(Boolean)[0];
+        return `Q${i + 1}. ${entry.question}\nA. ${plain(entry.answer.text)}${mark(entry.answer)}${src ? `\n根拠: ${src}` : ""}`;
+      });
+      s.addNotes(`【想定問答】\n\n${notes.join("\n\n")}`);
+    }
   }
 
   // 先頭の概要表（15 件ごとに分割）。ページ番号は概要スライドの枚数を含めて数える。

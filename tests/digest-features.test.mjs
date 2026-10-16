@@ -37,6 +37,23 @@ test("sample slides satisfy the schema and semantic rules", () => {
   const deck = JSON.parse(fs.readFileSync(new URL("../examples/slide.sample.json", import.meta.url), "utf8"));
   assert.deepEqual(validateDeck(deck), []);
   assert.equal(deck.slides.length, 2);
+  assert.equal(deck.slides[0].qa.length, 2);
+});
+
+test("expected Q&A is optional, capped, and its evidence host is checked", () => {
+  const deck = JSON.parse(fs.readFileSync(new URL("../examples/slide.sample.json", import.meta.url), "utf8"));
+  const none = structuredClone(deck);
+  delete none.slides[0].qa;
+  assert.deepEqual(validateDeck(none), []);
+  const many = structuredClone(deck);
+  many.slides[0].qa = Array.from({ length: 6 }, (_, i) => ({ question: `質問その${i + 1}`, answer: { text: "答えです。", origin: "editorial", assertion: "inference", verification: "unverified" } }));
+  assert.ok(validateDeck(many).length > 0);
+  const host = structuredClone(deck);
+  host.slides[0].qa[0].answer.evidence[0].url = "https://example.com/x";
+  assert.ok(validateDeck(host).some((p) => p.message.includes("host not allowed")));
+  const verifiedRecommendation = structuredClone(deck);
+  verifiedRecommendation.slides[0].qa[1].answer.verification = "verified";
+  assert.ok(validateDeck(verifiedRecommendation).length > 0);
 });
 
 test("validation rejects forbidden wording, bad hosts and unverified evidence", () => {

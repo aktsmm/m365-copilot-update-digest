@@ -104,6 +104,33 @@
         { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T18:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者は Planner エージェントを無効にできますか？",
+          "answer": {
+            "text": "はい。管理者は Planner エージェントをオフにできます。手順は Microsoft Learn の「Planner エージェントをオフにする」にあります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "source-only",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent",
+                "locator": "全体",
+                "retrievedAt": "2026-10-14T18:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "最初にどのチームで試すのがよいですか？",
+          "answer": {
+            "text": "Planner を日常的に使っているチームで、小さな計画の作成から試すのが進めやすいです。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=516576",
         "learn": [{ "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }]

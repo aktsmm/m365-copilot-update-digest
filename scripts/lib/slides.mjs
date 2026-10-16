@@ -131,6 +131,7 @@ function claimsOf(slide) {
   const claims = [slide.audience?.who, slide.audience?.change, slide.action?.summary, slide.beforeAfter?.before, slide.beforeAfter?.after].filter(Boolean);
   for (const panel of slide.panels ?? []) for (const item of panel.items ?? []) claims.push(item);
   for (const entry of slide.glossary ?? []) if (entry.oneLine) claims.push(entry.oneLine);
+  for (const entry of slide.qa ?? []) if (entry.answer) claims.push(entry.answer);
   return claims;
 }
 
