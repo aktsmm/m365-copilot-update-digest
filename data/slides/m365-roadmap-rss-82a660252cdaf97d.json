@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-82a660252cdaf97d",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "PowerPoint の Agent Mode で SharePoint・OneDrive のファイルを参照可能に",
+        "subtitleJa": "プロンプトで名前を挙げるだけで、保存済みファイルを資料作成に使えます",
+        "en": "Microsoft Copilot (Microsoft 365): Reference files saved in SharePoint libraries and OneDrive folders when creating a presentation with Agent Mode in PowerPoint"
+      },
+      "meta": {
+        "publishedJst": "2026-09-24",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "categories": ["agents", "office-apps", "sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Mac"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint の Agent Mode で資料を作る Mac ユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "手動で添付・アップロードせずに、SharePoint や OneDrive のファイルを資料作成に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 9 月 23 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者・ユーザーとも特別な対応は不要。プロンプトでファイルを参照して使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "これらの場所に保存されたファイルへの暗黙的なファイル参照は、サポートされていませんでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 9 月 23 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+        "after": { "text": "プロンプトでファイル名やドキュメント名を挙げると、**SharePoint・OneDrive のファイルを参照**して資料を作成できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 9 月 23 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プロンプトでメンションしたファイル名・ドキュメント名を Copilot が認識する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 9 月 23 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "SharePoint ライブラリと OneDrive フォルダーのファイルが参照対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 9 月 23 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "参照したファイルは、プレゼンテーション作成時のコンテキストになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 9 月 23 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint を開き、Copilot でプレゼンテーションの作成を開始する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "次の操作を試してください", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "プロンプトで、ファイルをドキュメント名または所有者で参照する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "次の操作を試してください", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "そのファイルの情報で資料を作るよう Copilot に依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "次の操作を試してください", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の対象プラットフォームは Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供クラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Agent Mode では、Teams 会議やチャットの参照にも対応している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 7 月 1 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "例:「ドキュメント名からの主な結果を要約したプレゼンテーションを作成してください」", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "次の操作を試してください", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "Agent Mode", "type": "feature", "oneLine": { "text": "PowerPoint の Copilot でプレゼンテーションを作成する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "sharepoint-library", "term": "SharePoint ライブラリ", "type": "term", "oneLine": { "text": "SharePoint 上でファイルを保存・共有する場所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "onedrive", "term": "OneDrive", "type": "product", "oneLine": { "text": "Microsoft 365 のクラウド ファイル ストレージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "以前はファイルをどう使っていましたか？",
+          "answer": { "text": "SharePoint や OneDrive のファイルへの暗黙的な参照は未対応でした。今回の更新で、手動の添付やアップロードなしに使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint(2026 年 9 月 23 日)", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        },
+        {
+          "question": "どの端末で使えますか？",
+          "answer": { "text": "ロードマップでは Mac が対象として案内されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555897",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
