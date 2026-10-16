@@ -780,7 +780,10 @@ h3 {
 .explorer-more { text-align: center; margin: 14px 0 0; }
 .hero { padding-top: 22px; padding-bottom: 22px; }
 .hero h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
-.metric-card { padding: 14px 18px; }
+.metric-card { padding: 8px 18px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; }
+.metric-card strong { display: inline; margin-top: 0; font-size: 1.4rem; }
+.metric-card small { display: inline; margin-top: 0; }
+.metric-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-content: start; }
 
 /* 種類（段階）の色分け: カードの左端の帯・バッジ・絞り込みチップで同じ色を使う */
 .update-card[data-kind] { border-left: 6px solid var(--kind-color, #5b6777); }
