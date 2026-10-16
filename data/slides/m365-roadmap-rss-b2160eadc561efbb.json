@@ -76,6 +76,20 @@
         { "termKey": "people-skills", "term": "People Skills", "type": "feature", "oneLine": { "text": "組織のスキル データ。使用前にテナントでの設定が必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "データの種類", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "マネージャーの判定ルールは変更できますか？",
+          "answer": { "text": "はい。組織データに SupervisorIndicator 列を追加すると、既定の「直属の部下がいる人」という判定を上書きできます。ただしレポート階層やアクセス制御、委任は変わりません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "マネージャーの識別方法をカスタマイズする", "retrievedAt": "2026-10-16T22:30:00Z" }] }
+        },
+        {
+          "question": "管理者がテナント全体で設定できる項目はありますか？",
+          "answer": { "text": "テナント全体の AI 免責事項フッターを構成でき、チャットボックスの下と対象ユーザーのホームページに表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "カスタム AI 免責事項を構成する", "retrievedAt": "2026-10-16T22:30:00Z" }] }
+        },
+        {
+          "question": "SupervisorIndicator にはどんな値を入れますか？",
+          "answer": { "text": "True/False、またはマネージャーを示す Mgr・Mgr+、個人貢献者を示す ic を使います。未対応の値ではマネージャー状態を確実に判定できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locator": "マネージャーの識別方法をカスタマイズする", "retrievedAt": "2026-10-16T22:30:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=515145",
         "learn": [{ "title": "Workforce Insights エージェント", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/workforce-insights-agent", "locale": "ja-jp" }]
