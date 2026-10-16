@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-107ab272725e90ca",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "GCC・GCC High・DoD 向け Copilot Chat 使用状況レポートが提供開始",
+        "subtitleJa": "Microsoft 365 管理センターで Copilot Chat の利用状況を確認できます",
+        "en": "Microsoft Copilot (Microsoft 365): Microsoft 365 admin center - Usage reports - Copilot Chat for GCC, GCC High and DoD"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "admin"],
+        "importance": "high",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "GCC・GCC High・DoD 環境で **Copilot Chat の導入状況を把握したい管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アクティブ ユーザー数やアプリ別の利用状況を、管理センターで確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "管理センターのレポートから確認するだけで、設定変更は不要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "Microsoft 365 管理センターで Microsoft Copilot Chat の使用状況レポートを表示する", "retrievedAt": "2026-10-16T21:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "**アクティブ ユーザー数、アプリごとの利用状況、ユーザー単位のアクティビティ**（既定で匿名化）を、1 つのレポートで確認できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "アクティブ ユーザー、1 日の平均アクティブ ユーザー、送信プロンプト数などを集計", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "冒頭", "retrievedAt": "2026-10-16T21:10:00Z" }] },
+            { "text": "Teams・Outlook・Edge・Word・Excel・PowerPoint などアプリ別の利用状況を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "レポートを解釈する", "retrievedAt": "2026-10-16T21:10:00Z" }] },
+            { "text": "概要ビューとトレンド ビューを切り替え、7・28・90・180 日の期間で確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "レポートを解釈する", "retrievedAt": "2026-10-16T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理センター →［レポート］→［使用状況］→ Microsoft Copilot → Copilot Chat", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "管理センターでレポートを表示する", "retrievedAt": "2026-10-16T21:10:00Z" }] },
+            { "text": "閲覧には、グローバル管理者・レポート閲覧者・AI 管理者などのロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports", "locator": "開始する前に", "retrievedAt": "2026-10-16T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象は Microsoft Copilot ライセンスを持たないユーザーの Copilot Chat 利用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "注", "retrievedAt": "2026-10-16T21:10:00Z" }] },
+            { "text": "ある日のデータは通常、その日の終了（UTC）から 48 時間以内に反映", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "冒頭", "retrievedAt": "2026-10-16T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連レポートとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot ライセンス ユーザーの利用は「Microsoft Copilot の使用状況」レポートで確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "FAQ", "retrievedAt": "2026-10-16T21:10:00Z" }] },
+            { "text": "Copilot Chat の使用状況は GCC・GCC High・DoD のいずれも対象に掲載", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports", "locator": "利用可能な利用状況レポート", "retrievedAt": "2026-10-16T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "アプリ別の利用差を見て、周知や定着施策の優先先を決める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ユーザー名の表示は、全体管理者が組織設定で切り替えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports", "locator": "使用状況レポートにユーザー、グループ、またはサイトの詳細を表示する", "retrievedAt": "2026-10-16T21:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat-usage-report", "term": "Copilot Chat 使用状況レポート", "type": "feature", "oneLine": { "text": "Copilot Chat のアクティブな使用状況を示す、管理センターのレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "冒頭", "retrievedAt": "2026-10-16T21:10:00Z" }] } },
+        { "termKey": "gcc", "term": "GCC・GCC High・DoD", "type": "term", "oneLine": { "text": "Microsoft 365 管理センターの使用状況レポートで、環境ごとに提供可否が示されるクラウド環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports", "locator": "利用可能な利用状況レポート", "retrievedAt": "2026-10-16T21:10:00Z" }] } },
+        { "termKey": "anonymized", "term": "匿名化", "type": "term", "oneLine": { "text": "既定でユーザー名や表示名などが使用状況レポートに表示されない設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports", "locator": "使用状況レポートにユーザー、グループ、またはサイトの詳細を表示する", "retrievedAt": "2026-10-16T21:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ユーザー名を表示して確認することはできますか？",
+          "answer": {
+            "text": "既定では匿名化されますが、全体管理者が組織設定で非表示の解除を行えます。表示は Purview の監査ログに記録されるイベントです。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports", "locator": "使用状況レポートにユーザー、グループ、またはサイトの詳細を表示する", "retrievedAt": "2026-10-16T21:10:00Z" }]
+          }
+        },
+        {
+          "question": "ライセンス付与済みユーザーの Copilot 利用はこのレポートで見られますか？",
+          "answer": {
+            "text": "いいえ。このレポートは Microsoft Copilot ライセンスを持たないユーザーが対象で、ライセンス ユーザーは「Microsoft Copilot の使用状況」レポートで確認します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "FAQ", "retrievedAt": "2026-10-16T21:10:00Z" }]
+          }
+        },
+        {
+          "question": "データはいつ反映されますか？",
+          "answer": {
+            "text": "ある日の Copilot アクティビティは、通常その日の終了（UTC）から 48 時間以内にレポートへ反映されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locator": "冒頭", "retrievedAt": "2026-10-16T21:10:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567121",
+        "learn": [
+          { "title": "Microsoft Copilot Chat 使用状況レポート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-copilot-usage", "locale": "ja-jp" },
+          { "title": "Microsoft 365 管理センターの使用状況レポートの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/activity-reports", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
