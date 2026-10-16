@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e9d6b96daced60bc",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Sales agent の会議準備をより多くのデータソースで強化",
+        "subtitleJa": "サービスチケットなどのデータを会議準備に取り込む機能です（ロードマップ上は Retirement 区分）",
+        "en": "Microsoft Copilot (Microsoft 365): Enrich Sales agent meeting prep with more data sources"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Sales agent で顧客会議の準備をする営業担当者**と、Sales agent の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "セールス エージェントは何に役立ちますか?", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+        "change": { "text": "会議準備に使うデータが広がり、未解決の問題や機会を会話の前に把握しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "ロードマップ項目には廃止日や代替手段の記載がないため、更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "サービスチケットなどの**より豊富なデータ**を会議準備に取り込み、顧客との会話前に未解決の問題や機会を把握できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは Retirement（Web / Worldwide 向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Sales agent の会議準備。会議前にインサイトを確認する機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "Meeting preparation card", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "会議準備カードは CRM・過去の会議やメールなどを基に生成される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "Highlights", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "現在の会議準備の仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議準備カードは Teams の Sales ボットとの個人チャットに届く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "Meeting preparation card", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "既定では会議の 1 時間前にカードが届く（管理者が設定可能）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "View a meeting preparation card", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "確認のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "会議準備の利用状況と、ロードマップの更新内容を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "カードの生成には外部参加者が 1 名以上いる会議などの条件がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "Meeting requirements for preparation cards", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "定期会議や終日の予定、非公開の会議はカードの対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "Meeting requirements for preparation cards", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "生成されたインサイトは Dataverse に 90 日間保持される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "Data storage and retention", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-agent", "term": "Sales agent", "type": "product", "oneLine": { "text": "Microsoft 365 Copilot 内で使える、営業データを検索・要約・活用するための会話型エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] } },
+        { "termKey": "meeting-prep-card", "term": "会議準備カード", "type": "feature", "oneLine": { "text": "顧客会議の前に、AI が生成したハイライトを Teams で確認できるカード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] } },
+        { "termKey": "crm", "term": "CRM", "type": "term", "oneLine": { "text": "顧客・商談などの営業データを管理するシステムで、Sales agent が接続して参照する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "セールス エージェントは何に役立ちますか?", "retrievedAt": "2026-10-16T21:50:00Z" }] } },
+        { "termKey": "label-retirement", "term": "Retirement", "type": "label", "oneLine": { "text": "ロードマップ上で、提供終了や廃止に関わる段階を示すラベル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "会議準備カードにはどのような情報が出ますか？",
+          "answer": { "text": "会議のタイトルと日時、過去の会議やメール、CRM の情報から生成された最大 3 件のハイライトが表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "Highlights", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+        },
+        {
+          "question": "カードが届くタイミングは変えられますか？",
+          "answer": { "text": "既定は会議の 1 時間前ですが、管理者が会議前の準備通知の設定で調整できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locator": "View a meeting preparation card", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567003",
+        "learn": [
+          { "title": "Microsoft 365 Copilot の販売エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locale": "ja-jp" },
+          { "title": "Meeting preparation card", "url": "https://learn.microsoft.com/microsoft-sales-copilot/meeting-prep", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
