@@ -83,6 +83,11 @@
         { "termKey": "voicesim", "term": "音声シミュレーション", "type": "term", "oneLine": { "text": "翻訳音声を話者本人の声に似せて生成する機能。音声サンプルは保存されない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "インタープリターがユーザーの声を使用する方法", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
         { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、計画された変更を進めない、または終了することを示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        { "question": "Interpreter でサポートされる言語は？", "answer": { "text": "中国語（北京語）、英語、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語、スペイン語の 9 言語です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "サポートされている言語", "retrievedAt": "2026-10-16T22:05:00Z" }] } },
+        { "question": "Interpreter は 1:1 の通常の電話（PSTN）でも使えますか？", "answer": { "text": "いいえ。1:1 の Teams 間 VoIP 通話は対応しますが、1:1 PSTN 通話と Teams イベントは非対応です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "サポートされているプラットフォームとクライアント", "retrievedAt": "2026-10-16T22:05:00Z" }] } },
+        { "question": "自分の声に似せた翻訳音声を組織の既定で止められますか？", "answer": { "text": "はい。-VoiceSimulationInInterpreter を Disabled にすると、既定が自動音声（Ava）になります。ただし Learn は Enabled を強く推奨しています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "会議でのインタープリターの管理", "retrievedAt": "2026-10-16T22:05:00Z" }] } }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565217",
         "learn": [{ "title": "組織の通訳エージェントを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locale": "ja-jp" }]
