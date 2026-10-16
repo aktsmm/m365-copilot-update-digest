@@ -105,6 +105,38 @@
         { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "Microsoft 365 アプリの設定をユーザーやグループ単位で管理するポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-15T15:20:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Notebooks の作成を無効にすると、既存のノートブックはどうなりますか？",
+          "answer": {
+            "text": "既存のノートブックは削除されませんが、Microsoft Copilot アプリではノートブックのモジュールが非表示になり、アプリ経由ではアクセスできなくなります。また、ノートブックへのリンク共有も機能しません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-16T22:50:00Z" }]
+          }
+        },
+        {
+          "question": "Loop を無効にしている場合でも Notebooks は使えますか？",
+          "answer": {
+            "text": "使えます。Copilot ノートブックは Loop と独立しており、個別に有効・無効を設定できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "Loop コンポーネントとの関係", "retrievedAt": "2026-10-16T22:50:00Z" }]
+          }
+        },
+        {
+          "question": "Notebooks のデータは SharePoint の容量に影響しますか？",
+          "answer": {
+            "text": "はい。ストレージは組織全体の SharePoint クォータに計上されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "概要", "retrievedAt": "2026-10-16T22:50:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566318",
         "learn": [
