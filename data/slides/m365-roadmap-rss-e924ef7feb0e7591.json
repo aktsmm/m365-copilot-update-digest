@@ -94,6 +94,20 @@
         { "termKey": "custom-engine-agent", "term": "カスタム エンジン エージェント", "type": "term", "oneLine": { "text": "独自のオーケストレーターとモデルを持ち込んで構築する、完全にカスタマイズされた AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Copilot ライセンスがなくても使えるエージェントはありますか？",
+          "answer": { "text": "はい。Copilot Chat では、指示と公開 Web サイトに基づく宣言型エージェントは追加料金なしで使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントを有効にする", "retrievedAt": "2026-10-16T22:20:00Z" }] }
+        },
+        {
+          "question": "従量課金のエージェントはすぐ使えますか？",
+          "answer": { "text": "いいえ。SharePoint などのテナント データを使うエージェントは既定でオフで、管理者が課金を設定すると有効にできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントを有効にする", "retrievedAt": "2026-10-16T22:20:00Z" }] }
+        },
+        {
+          "question": "管理者はエージェントへのアクセスを制御できますか？",
+          "answer": { "text": "はい。Microsoft 365 管理センターでエージェントへのアクセスを制御・構成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "エージェントの管理", "retrievedAt": "2026-10-16T22:20:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=486696",
         "learn": [
