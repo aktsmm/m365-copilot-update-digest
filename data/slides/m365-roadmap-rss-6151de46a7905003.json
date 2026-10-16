@@ -75,6 +75,38 @@
         { "termKey": "feature-settings", "term": "機能設定", "type": "feature", "oneLine": { "text": "Power Apps での機能の表示方法と動作を、環境ごとに調整する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/settings-features", "locator": "冒頭", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "環境の既定設定のままだと、Copilot チャットは使えますか？",
+          "answer": {
+            "text": "既定では、Power Apps ライセンスの環境では無効、Dynamics 365 ライセンスの環境では有効です。オンにすると、ライセンスの種類に関係なく有効になります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locator": "環境内のモデル駆動型アプリのCopilotを有効にする", "retrievedAt": "2026-10-16T06:40:00Z" }]
+          }
+        },
+        {
+          "question": "アプリ単位で Copilot チャットをオフにできますか？",
+          "answer": {
+            "text": "はい。作成者がアプリ デザイナーの設定で Copilot コントロールを [既定] または [オフ] にし、保存して公開します。環境の値に戻すこともできます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locator": "モデル駆動型アプリCopilotチャットを無効にする", "retrievedAt": "2026-10-16T06:40:00Z" }]
+          }
+        },
+        {
+          "question": "Copilot チャットでデータの更新や作成はできますか？",
+          "answer": {
+            "text": "いいえ。Dataverse の読み取り専用の操作に限られ、データの変更やメモの作成などはサポートされていません。Power Apps モバイル アプリも非対応です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/add-ai-copilot", "locator": "既知の制限", "retrievedAt": "2026-10-16T06:40:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574104",
         "learn": [
