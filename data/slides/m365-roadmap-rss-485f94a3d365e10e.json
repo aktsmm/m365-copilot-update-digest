@@ -72,6 +72,20 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントにWork IQ(プレビュー)を追加してください", "retrievedAt": "2026-10-14T19:40:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期はまだ示されていません。公開情報が更新されるまで確認が必要です。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        },
+        {
+          "question": "どの AI クライアントで使えますか？",
+          "answer": { "text": "対応クライアントの一覧は現時点で確認できていないため、公開時の情報を待つ必要があります。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        },
+        {
+          "question": "事前に何を確認しておくとよいですか？",
+          "answer": { "text": "Windows 端末と Visio デスクトップのライセンスの有無を棚卸しし、利用候補の人を絞っておくと進めやすいです。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574125"
       },
