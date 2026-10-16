@@ -32,6 +32,7 @@ test("valid summary passes and bad ones are rejected", () => {
   assert.ok(validateAgentSummary({ ...good(e), summaryJa: "短い" }, "e-1").length > 0);
   assert.ok(validateAgentSummary({ ...good(e), summaryJa: `${good(e).summaryJa} https://example.com` }, "e-1").length > 0);
   assert.ok(validateAgentSummary(good(e), "other").length > 0);
+  assert.ok(validateAgentSummary({ ...good(e), summaryJa: `${good(e).summaryJa}詳細は原文を確認してください。` }, "e-1").length > 0);
 });
 
 test("only fresh, valid summaries override machine translation", () => {
