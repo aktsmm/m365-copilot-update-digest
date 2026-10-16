@@ -75,6 +75,16 @@
         { "termKey": "connector", "term": "コネクタ", "type": "term", "oneLine": { "text": "Cowork を外部のデータ ソースやサービスにつなぐ仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "冒頭", "retrievedAt": "2026-10-14T19:40:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者が展開したプラグインでも、ユーザーのサインインは必要ですか？",
+          "answer": { "text": "はい。コネクタが必要な場合、管理者は代理でサインインできないため、ユーザー自身が 1 回限りのサインインを行います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "管理によってデプロイされたプラグイン", "retrievedAt": "2026-10-16T06:40:00Z" }] }
+        },
+        {
+          "question": "管理者が展開したプラグインをユーザーが削除できますか？",
+          "answer": { "text": "削除はできません。追加と削除は管理者のみですが、ユーザーは自分のセッションで有効・無効を切り替えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locator": "管理によってデプロイされたプラグイン", "retrievedAt": "2026-10-16T06:40:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571884",
         "learn": [
