@@ -1,6 +1,6 @@
 {
   "date": "2026-02-11",
-  "generatedAt": "2026-10-16T01:33:58.409Z",
+  "generatedAt": "2026-10-16T01:41:31.673Z",
   "events": [
     {
       "id": "m365-roadmap-rss-2eddd90606ec191f",
@@ -16,6 +16,16 @@
       "summaryJa": "Microsoft 365 Copilot ライセンスを持たないユーザーでも、Copilot チャットを使用して、ワンクリックでメールを簡単に要約できるようになりました。ユーザーが利用するには、Copilot チャットへのアクセスとピン留めが有効になっている必要があります。この変更は、従来の Windows 版 Outlook と新しい Windows 版 Outlook の両方に適用されます #newoutlookforwindows",
       "summaryEn": "Users without a Microsoft 365 Copilot license can now easily summarize emails in a single click, using Copilot chat. Users must have access to Copilot chat and pinning enabled to utilize. This change is coming to both Classic and New Outlook for Windows #newoutlookforwindows",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=498320",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft Copilot Chatの概要",
+          "sourceTitle": "Overview of Microsoft Copilot Chat",
+          "url": "https://learn.microsoft.com/ja-jp/copilot/overview#how-grounding-works-in-copilot-chat",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=498320",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: summarize, email, chat, outlook"
+        }
+      ],
       "publishedAt": "2026-02-11T12:00:00.000Z",
       "capturedAt": "2026-10-14T17:31:47.169Z",
       "sourceLastSeen": "2026-10-14T17:31:47.169Z",
@@ -41,17 +51,7 @@
         "管理者向け"
       ],
       "importanceScore": 138,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / ライセンス設計や展開判断に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft Copilot Chatの概要",
-          "sourceTitle": "Overview of Microsoft Copilot Chat",
-          "url": "https://learn.microsoft.com/ja-jp/copilot/overview#how-grounding-works-in-copilot-chat",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=498320",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: summarize, email, chat, outlook"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / ライセンス設計や展開判断に直結するため"
     },
     {
       "id": "m365-roadmap-rss-215cd8bff2489468",
@@ -67,6 +67,16 @@
       "summaryJa": "お客様は、Copilot コネクタを使用して Microsoft 365 Copilot を Bitbucket に接続し、ナレッジ ベースのコンテンツをクエリしたりプル リクエストを実行できるようになりました。",
       "summaryEn": "Customers can now connect Microsoft 365 Copilot to Bitbucket with Copilot connectors to query knowledge base content and pull requests.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=515163",
+      "relatedDocuments": [
+        {
+          "title": "Bitbucket Pull Request connector overview",
+          "sourceTitle": "Bitbucket Pull Request Microsoft 365 Copilot connector overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/bitbucket-pull-request-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=515163",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: query, bitbucket, pull, request, connector"
+        }
+      ],
       "publishedAt": "2026-02-11T12:00:00.000Z",
       "capturedAt": "2026-10-14T17:31:47.169Z",
       "sourceLastSeen": "2026-10-14T17:31:47.169Z",
@@ -102,6 +112,16 @@
       "summaryJa": "お客様は、Copilot コネクタを使用して Microsoft 365 Copilot を GitLab に接続し、ナレッジ ベースのコンテンツをクエリしたり、リクエストをマージしたりできるようになりました",
       "summaryEn": "Customers can now connect Microsoft 365 Copilot to GitLab with Copilot connectors to query knowledge base content and merge requests",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=515162",
+      "relatedDocuments": [
+        {
+          "title": "GitLab Merge Requests Server connector overview",
+          "sourceTitle": "GitLab Merge Requests Server Microsoft 365 Copilot connector overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/gitlab-merge-requests-server-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=515162",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: query, gitlab, merge, request, content"
+        }
+      ],
       "publishedAt": "2026-02-11T12:00:00.000Z",
       "capturedAt": "2026-10-14T17:31:47.169Z",
       "sourceLastSeen": "2026-10-14T17:31:47.169Z",
@@ -137,6 +157,16 @@
       "summaryJa": "お客様は、Copilot コネクタを使用して Microsoft 365 Copilot を Miro に接続し、ビジュアル ボードや図をクエリできるようになりました。",
       "summaryEn": "Customers can now connect Microsoft 365 Copilot to Miro with Copilot connectors to query visual boards and diagrams.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=515166",
+      "relatedDocuments": [
+        {
+          "title": "Deploy the Miro connector",
+          "sourceTitle": "Deploy the Miro Microsoft 365 Copilot connector",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/miro-deployment#customize-settings-optional",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=515166",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: query, miro, visual, connector"
+        }
+      ],
       "publishedAt": "2026-02-11T12:00:00.000Z",
       "capturedAt": "2026-10-14T17:31:47.169Z",
       "sourceLastSeen": "2026-10-14T17:31:47.169Z",
@@ -172,6 +202,16 @@
       "summaryJa": "お客様は Microsoft Copilot をショートカットに接続し、Copilot Connector を使用してアジャイル開発ワークフローを管理できます。",
       "summaryEn": "Customers can connect M365 Copilot with Shortcut to manage agile development workflows with Copilot Connector.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=515178",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#march-10,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=515178",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: customer, connect, m365, shortcut, manage, agile, development, workflow, connector"
+        }
+      ],
       "publishedAt": "2026-02-11T12:00:00.000Z",
       "capturedAt": "2026-10-14T17:31:47.169Z",
       "sourceLastSeen": "2026-10-14T17:31:47.169Z",
@@ -248,6 +288,16 @@
       "summaryJa": "お客様は Microsoft Copilot を Aha! に接続できます。 Copilot Connector を使用して製品の機能と顧客のアイデアを管理します。",
       "summaryEn": "Customers can connect M365 Copilot with Aha! to manage product features and customer ideas with Copilot Connector.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=515159",
+      "relatedDocuments": [
+        {
+          "title": "Aha! connector overview",
+          "sourceTitle": "Aha! Microsoft 365 Copilot connector overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/aha-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=515159",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: customer, connect, m365, aha, manage, product, feature, idea, connector"
+        }
+      ],
       "publishedAt": "2026-02-11T12:00:00.000Z",
       "capturedAt": "2026-10-14T17:31:47.169Z",
       "sourceLastSeen": "2026-10-14T17:31:47.169Z",
