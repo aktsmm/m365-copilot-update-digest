@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-431bdb559440f645",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot の音声チャットでクイックコンポーザー使用時にライブ字幕が利用可能に",
+        "subtitleJa": "会話の内容を、字幕で目で追いやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): Live subtitles on voice chat in Copilot when using the quick composer"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の音声チャットを使うデスクトップ ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "音声チャットの会話をライブ字幕で目で追えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "音声チャットに機能固有の管理者向けオン/オフ設定はなく、特別な対応は不要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "クイックコンポーザーで音声チャットを使うとき、**ライブ字幕**で会話内容を追えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "音声チャットの会話にライブ字幕を表示し、内容を追いやすくする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "音声チャットでは Copilot とディスカッションし、リアルタイムの音声応答を受け取れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Windows では Copilot キー（Win+C）の短押しで音声チャットを開始できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "長押しすると、画面上に残る小さな音声コントローラーが開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象はデスクトップ、提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザーや Copilot の音声は保存されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "音声チャットのテキスト トランスクリプトは通常の会話と同様に管理され、保持・電子情報開示・監査ポリシーが適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "周囲が静かでない場所でも、字幕で内容を確認しやすくなる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "voice-chat", "term": "音声チャット", "type": "feature", "oneLine": { "text": "Copilot と話しながら、作業データに基づく音声応答を受け取れる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "voice-controller", "term": "音声コントローラー", "type": "feature", "oneLine": { "text": "音声チャット中に画面上に表示される小さなウィンドウ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "live-subtitles", "term": "ライブ字幕", "type": "feature", "oneLine": { "text": "音声チャットの会話内容を、見て追えるように表示する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502858",
+        "learn": [{ "title": "更新された Windows および Microsoft Copilot Chat エクスペリエンス", "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
