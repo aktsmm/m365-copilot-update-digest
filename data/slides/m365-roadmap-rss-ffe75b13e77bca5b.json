@@ -74,6 +74,20 @@
         { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "タスクの実行やより深い対話のためのワークスペースとなる、Copilot のチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Copilot 検索と Microsoft Copilot のしくみ", "retrievedAt": "2026-10-14T20:50:00Z" }] } },
         { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "提供や計画が終了することを示すステージ表示。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Copilot 検索と Copilot Chat はどう使い分けますか？",
+          "answer": { "text": "検索は必要な情報をすばやく見つける用途、Chat は深い回答の生成やコンテンツ作成、タスク実行の用途です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Microsoft Copilot 検索 と Microsoft Copilot Chat の違い", "retrievedAt": "2026-10-16T07:30:00Z" }] }
+        },
+        {
+          "question": "Copilot 検索と無料の Microsoft Search の違いは何ですか？",
+          "answer": { "text": "Copilot 検索は Copilot ライセンスが必要な AI セマンティック検索で、Microsoft Search はキーワードベースで未ライセンスの Entra ID ユーザーも利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Microsoft Copilot 検索 と Microsoft Search の違い", "retrievedAt": "2026-10-16T07:30:00Z" }] }
+        },
+        {
+          "question": "管理者は検索の回答を調整できますか？",
+          "answer": { "text": "はい。管理者は頭字語、ブックマーク、People の回答をキュレートして、組織向けの結果を提供できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "回答の種類", "retrievedAt": "2026-10-16T07:30:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=485731",
         "learn": [
