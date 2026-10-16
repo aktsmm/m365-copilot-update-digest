@@ -76,6 +76,20 @@
         { "termKey": "ntp-policy", "term": "CopilotNewTabPageEnabled", "type": "term", "oneLine": { "text": "Copilot の新しいタブ ページの可用性を構成する Edge ポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-10-14T19:30:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者が有効化する前提条件や反映時間はありますか？",
+          "answer": { "text": "対象ユーザーを含む Microsoft Entra グループを事前に用意する必要があります。構成がデバイスに届くまで最大 90 分かかることがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "前提条件 / 有効になっていることを確認する", "retrievedAt": "2026-10-16T06:30:00Z" }] }
+        },
+        {
+          "question": "ユーザー自身でこの新しいタブ ページやワーク カードをオフにできますか？",
+          "answer": { "text": "ワーク カードは新しいタブ ページの設定でオフにできます。エクスペリエンス全体も、組織の設定によっては edge://settings/ai から無効にできる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "FAQ とトラブルシューティング", "retrievedAt": "2026-10-16T06:30:00Z" }] }
+        },
+        {
+          "question": "従来の新しいタブ ページ向けポリシーはそのまま使えますか？",
+          "answer": { "text": "アプリ起動ツール、背景画像、組織のロゴ、クイック リンク関連のポリシーはサポートされます。一方、NewTabPageBingChatEnabled はサポートされていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "新規タブ ページ ポリシー", "retrievedAt": "2026-10-16T06:30:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566703",
         "learn": [
