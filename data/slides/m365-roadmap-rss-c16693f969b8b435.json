@@ -93,6 +93,38 @@
         { "termKey": "premium-connector", "term": "Premium コネクタ", "type": "term", "oneLine": { "text": "一部の Copilot Studio プランで使える事前構築済みコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "冒頭", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
         { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "コネクタを使う側の利用者の認証はどうなりますか？",
+          "answer": {
+            "text": "既定では、エージェントの利用者がツール使用時に各サービスの資格情報を入力します。作成者の資格情報を使うには、認証されたチャネルの設定と、ツールの［使用する資格情報］の変更が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "作成者が指定した資格情報でコネクタを使用する", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          }
+        },
+        {
+          "question": "この機能で Premium コネクタも追加の契約なしで使えますか？",
+          "answer": {
+            "text": "標準コネクタはすべての Copilot Studio プランに含まれますが、Premium コネクタは一部のプランでのみ利用できます。利用前にプランの要件を確認してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "冒頭（事前構築済みコネクタ）", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          }
+        },
+        {
+          "question": "チャットでサインインできない場合の注意点はありますか？",
+          "answer": {
+            "text": "カスタム Active Directory 認証で Teams に配置したエージェントでは、コネクタの SSO が使えず、ユーザーが各コネクタに手動で認証する必要があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "Limitations", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569930",
         "learn": [
