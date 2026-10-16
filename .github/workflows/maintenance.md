@@ -12,7 +12,7 @@ permissions:
   pull-requests: read
 engine:
   id: copilot
-  model: claude-haiku-5.5
+  model: claude-sonnet-5.5
 timeout-minutes: 45
 network:
   allowed:
