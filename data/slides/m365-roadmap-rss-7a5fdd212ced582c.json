@@ -95,6 +95,20 @@
         { "termKey": "billing-node", "term": "課金ノード", "type": "feature", "oneLine": { "text": "Microsoft 365 管理センターで従量課金の課金ポリシーを作成する場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージの従量課金を設定する", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている提供前の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "想定外のコスト増を防ぐ方法はありますか？",
+          "answer": { "text": "はい。Microsoft 365 で従量課金の予算を作成すると、使用状況を監視し、コストが設定したしきい値に近づいたときにアラートを受け取れます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージ", "retrievedAt": "2026-10-16T22:45:00Z" }] }
+        },
+        {
+          "question": "従量課金を設定したら、ユーザーの容量は自動的に増えますか？",
+          "answer": { "text": "いいえ。従量課金を設定した後に、特定ユーザーの OneDrive 記憶域の上限を別途変更する必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "選択したユーザーのストレージ制限を更新する", "retrievedAt": "2026-10-16T22:45:00Z" }] }
+        },
+        {
+          "question": "容量パックを購入した場合、ユーザーへの割り当ては必要ですか？",
+          "answer": { "text": "はい。購入した追加ストレージは、他のアドオン ライセンスと同様にライセンス ユーザーへ割り当てます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "OneDrive の追加ストレージを追加する", "retrievedAt": "2026-10-16T22:45:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562352",
         "learn": [
