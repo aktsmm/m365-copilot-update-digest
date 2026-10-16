@@ -187,6 +187,38 @@
           }
         }
       ],
+      "qa": [
+        {
+          "question": "特定のユーザーだけ生成をオンにできますか？",
+          "answer": {
+            "text": "できません。生成はテナント単位の設定で、ユーザーの一部だけに有効化することはできません。会議単位では、会議オプションで Copilot を「会議中のみ」にすると生成をオフにできます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "組織の AI アーカイブ 生成の管理", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          }
+        },
+        {
+          "question": "会議の文字起こしを削除すると AI アーカイブも消えますか？",
+          "answer": {
+            "text": "自動では削除されません。開催者が会議の要約からコンテンツを削除するか、管理者が PowerShell で削除し、それ以外は有効期限まで残ります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          }
+        },
+        {
+          "question": "Purview の保持ポリシーと管理センターの有効期限はどちらが優先されますか？",
+          "answer": {
+            "text": "Purview のアイテム保持ポリシーが、Teams 管理センターの有効期限設定より優先されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "アイテム保持ポリシーの設定", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558933",
         "learn": [
