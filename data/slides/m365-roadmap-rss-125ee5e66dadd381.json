@@ -92,6 +92,20 @@
         { "termKey": "ocr", "term": "光学式文字認識（OCR）", "type": "term", "oneLine": { "text": "Microsoft 365 管理センターで設定する、従量課金制のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "SharePoint の OCR を使えるサイトを管理者は制限できますか？",
+          "answer": { "text": "はい。SharePoint の OCR は既定で全サイトのライブラリで有効ですが、管理センターで「選択したサイト（最大 100 個）」または「サイトなし」に変更できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr", "locator": "OCR が有効になっているサイトを管理する", "retrievedAt": "2026-10-16T23:15:00Z" }] }
+        },
+        {
+          "question": "OCR の設定に必要なライセンスや管理者ロールは？",
+          "answer": { "text": "従量課金制の Azure サブスクリプションのリンクが前提で、設定には SharePoint 管理者またはグローバル管理者のロールが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr", "locator": "前提条件", "retrievedAt": "2026-10-16T23:15:00Z" }] }
+        },
+        {
+          "question": "今回の Copilot Chat の機能は SharePoint の OCR 設定に依存しますか？",
+          "answer": { "text": "ロードマップと参照ページからは依存関係を確認できていません。顧客へ案内する前に、Microsoft の最新情報で確認することをお勧めします。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559613",
         "learn": [
