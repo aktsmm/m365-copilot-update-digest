@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9644508fac8bb5b3",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Clipchamp Video Hub で Copilot によるエージェント型動画作成（開発中）",
+        "subtitleJa": "プロンプトから動画を生成・編集・改善し、チャット内で確認できます",
+        "en": "Microsoft Clipchamp: Copilot video creation updates"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Clipchamp", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Clipchamp で動画を作る人**（作成者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プロンプトで動画を作り、チャット内で確認しながら仕上げまで改善を重ねられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot が Clipchamp Video Hub で**エージェント型の動画作成**に対応し、プロンプトから動画を生成・編集・改善できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対応範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "指定した文書や WorkIQ の知識を基に、動画を生成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "生成・編集・改善をプロンプトで繰り返し、完成まで進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "動画のプレビューと再生を、チャット内で直接行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "提供範囲・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象プラットフォームは Web、クラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステータスは開発中で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前情報",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "2025 年 2 月に、プロンプトから動画案を作る Clipchamp の機能が Web で提供済み",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 2 月 4 日 / Microsoft 365 Clipchamp", "retrievedAt": "2026-10-16T21:40:00Z" }]
+            },
+            { "text": "提供開始に備え、動画の元になる文書の置き場所を整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "clipchamp", "term": "Clipchamp", "type": "product", "oneLine": { "text": "プロンプトから動画案を作成する機能を備えた、Microsoft の動画編集アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 2 月 4 日 / Microsoft 365 Clipchamp", "retrievedAt": "2026-10-16T21:40:00Z" }] } },
+        { "termKey": "workiq", "term": "WorkIQ", "type": "term", "oneLine": { "text": "動画作成の基になる知識として、ロードマップに挙げられている情報源。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "agentic", "term": "エージェント型", "type": "term", "oneLine": { "text": "プロンプトに沿って、生成から改善まで Copilot が進める動作。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されていないため、時期は現時点で公開されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どのプラットフォームが対象ですか？",
+          "answer": { "text": "ロードマップでは Web と Worldwide (Standard Multi-Tenant) が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570963",
+        "learn": [{ "title": "2025 Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
