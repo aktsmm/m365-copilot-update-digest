@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-a2a1f27cb81bc549",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Edge for Business の Copilot Chat が開いている OneDrive・SharePoint 文書を基に回答（開発中）",
+        "subtitleJa": "開いているクラウド上の文書について、関連性の高い回答や洞察を得られます",
+        "en": "Microsoft Edge: Ground Microsoft 365 Copilot Chat in Edge for Business in your open OneDrive and SharePoint documents"
+      },
+      "meta": {
+        "publishedJst": "2026-09-26",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "sharepoint", "edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Edge for Business で Copilot Chat を使うユーザー**と、Edge を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "開いているクラウド上の文書について、Copilot Chat から関連性の高い回答や洞察を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": {
+          "text": "開発中のため、現時点で必須の対応は案内されていない。ページ コンテンツ関連のポリシーは確認しておくとよい",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/edgeentracopilotpagecontext", "locator": "説明", "retrievedAt": "2026-10-16T22:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Edge の Copilot Chat で、**開いている OneDrive・SharePoint 文書**に基づく回答や洞察を得られるようになります",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Edge for Business の Copilot Chat と、開いている OneDrive・SharePoint 文書", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Edge の Copilot Chat は、Edge サイドバーから利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "冒頭", "retrievedAt": "2026-10-16T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Edge の Copilot Chat が要約できる文書の種類には、現在制限がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "Edge での Copilot チャットによるページの要約", "retrievedAt": "2026-10-16T22:00:00Z" }] },
+            { "text": "DLP ポリシーで保護されたページのコンテンツには、Copilot はアクセスできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/edgeentracopilotpagecontext", "locator": "説明", "retrievedAt": "2026-10-16T22:00:00Z" }] },
+            { "text": "ロードマップ上は開発中で、提供時期はまだ示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "管理者の準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "EdgeEntraCopilotPageContext ポリシーで、ページ コンテンツ等へのアクセスを制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/edgeentracopilotpagecontext", "locator": "説明", "retrievedAt": "2026-10-16T22:00:00Z" }] },
+            { "text": "未構成の場合、EU 以外では既定で有効、EU では既定で無効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/edgeentracopilotpagecontext", "locator": "このポリシーを構成しない場合", "retrievedAt": "2026-10-16T22:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat-edge", "term": "Edge の Copilot Chat", "type": "feature", "oneLine": { "text": "Edge のサイドバーからアクセスでき、閲覧コンテキストを使って回答するチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "冒頭", "retrievedAt": "2026-10-16T22:00:00Z" }] } },
+        { "termKey": "edp", "term": "エンタープライズ データ保護", "type": "term", "oneLine": { "text": "Microsoft Entra アカウントでサインインしたユーザーのプロンプトと応答に適用される保護。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "Edge で Copilot チャットで使用されるデータ", "retrievedAt": "2026-10-16T22:00:00Z" }] } },
+        { "termKey": "dlp", "term": "データ損失防止（DLP）", "type": "term", "oneLine": { "text": "不正なデータ漏えいを防ぐポリシー。Edge for Business が強制する機能を備える。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "データ損失防止を適用する方法", "retrievedAt": "2026-10-16T22:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "機密情報の扱いはどうなりますか？",
+          "answer": {
+            "text": "Entra アカウントでサインインしたユーザーにはエンタープライズ データ保護が適用され、DLP で保護されたページのコンテンツに Copilot はアクセスできません。この新機能での詳細は未案内です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "Edge で Copilot チャットで使用されるデータ", "retrievedAt": "2026-10-16T22:00:00Z" },
+              { "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/edgeentracopilotpagecontext", "locator": "説明", "retrievedAt": "2026-10-16T22:00:00Z" }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=499423",
+        "learn": [
+          { "title": "Edge での Copilot Chat", "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locale": "ja-jp" },
+          { "title": "EdgeEntraCopilotPageContext ポリシー", "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/edgeentracopilotpagecontext", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
