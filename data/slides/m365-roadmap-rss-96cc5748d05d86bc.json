@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-96cc5748d05d86bc",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の AL 言語インテリジェンスを AI エージェントやエディターで利用（提供開始）",
+        "subtitleJa": "VS Code の外でも、補完・参照・名前変更などの AL 機能を使えます",
+        "en": "Dynamics 365 Business Central: Development - Use AL language intelligence from AI agents and other editors"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central の AL 開発者**と、AI コーディングエージェントを使う開発チーム", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Visual Studio Code に依存せず、AL の言語機能を AI エージェントやエディターで使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "LSP 対応のエージェントやエディターで AL を開発する場合に、ALTool の launchlspserver を設定する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "スタンドアロンの AL 言語サーバーにより、**LSP に対応する AI エージェントやエディターで AL の言語インテリジェンスを利用**できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ALTool の launchlspserver で AL LSP サーバーを起動し、stdio の JSON-RPC で通信する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] },
+            { "text": "hover・定義へ移動・補完・参照検索・名前変更・書式設定・型階層などを提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] },
+            { "text": "複数プロジェクトの依存関係（internalsVisibleTo など）を解決して参照を検索", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "LSP ホストのプラグイン設定で ALTool を launchlspserver として呼び出す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] },
+            { "text": "引数にプロジェクトのフォルダーを指定する（省略時は rootUri を走査）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] },
+            { "text": "全機能の利用にはシンボル パッケージ（.app）のキャッシュが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象は AL Language 拡張機能 17.0 以降", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "Applies to", "retrievedAt": "2026-10-15T22:00:00Z" }] },
+            { "text": "標準外の場所の .NET アドインを参照する場合は assemblyprobingpaths が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP のオプション", "retrievedAt": "2026-10-15T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AL MCP サーバーは、ビルドや公開などの個別タスクを実行する用途", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "AL LSP for semantic code intelligence", "retrievedAt": "2026-10-15T22:00:00Z" }] },
+            { "text": "AL LSP サーバーは、コードの構造的な理解とナビゲーションに向く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "AL LSP for semantic code intelligence", "retrievedAt": "2026-10-15T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "複数プロジェクトの AL ワークスペースで、テキスト検索より正確に参照を追える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] },
+            { "text": "まず単一プロジェクトで AI エージェントとの連携を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "al-lsp", "term": "AL LSP", "type": "feature", "oneLine": { "text": "AL の補完や参照検索などを JSON-RPC で提供する言語サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] } },
+        { "termKey": "lsp", "term": "LSP（Language Server Protocol）", "type": "term", "oneLine": { "text": "エディターや IDE がコード インテリジェンスを得るための共通の規約。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-15T22:00:00Z" }] } },
+        { "termKey": "altool", "term": "ALTool", "type": "product", "oneLine": { "text": "AL 拡張機能のコンパイルとパッケージ化に使うコマンド ライン ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "Develop AL extensions with ALTool", "retrievedAt": "2026-10-15T22:00:00Z" }] } },
+        { "termKey": "al-mcp", "term": "AL MCP サーバー", "type": "feature", "oneLine": { "text": "AL のツールを Model Context Protocol で公開するスタンドアロン サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "Surface table", "retrievedAt": "2026-10-15T22:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573338",
+        "learn": [
+          { "title": "AI agent tools for AL development", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locale": "en-us" },
+          { "title": "Develop AL extensions with ALTool", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
