@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-03b1645af2c807a9",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Teams の Queues アプリで通話後に Copilot Chat を利用可能に",
+        "subtitleJa": "録画された通話の要点を、Copilot で素早く把握できます",
+        "en": "Microsoft Teams: Use Copilot Chat after a call in Queues app"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams の Queues アプリで顧客対応をするエージェントやリード**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "文字起こしを手作業で探したり録画を聞き直したりせず、顧客の問題を素早く解決できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には Queues アプリ（Teams 電話と Teams Premium のライセンス）が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-15T22:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "録画された通話の終了後、Queues アプリ内の **Copilot で要点の把握やインサイトの発見**ができます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "録画された通話の終了後、Queues アプリ内の Copilot を利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "要点の把握やインサイトの発見を、文字起こし検索や録画の聞き直しなしで行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Queues アプリの統合通話履歴に移動し、録画された通話を選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Queues アプリには Teams 電話と Teams Premium のライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-15T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Queues アプリは Teams デスクトップ、Mac、VDI、モバイルなどで利用でき、Web クライアントは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-15T22:50:00Z" }] },
+            { "text": "通話の録音・文字起こしには、通話キューの自動レコーディング テンプレートを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locator": "通話キューの自動レコーディング テンプレート", "retrievedAt": "2026-10-15T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "共有通話履歴を有効にすると、録音と文字起こしにキュー アプリからアクセスできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locator": "前提条件", "retrievedAt": "2026-10-15T22:50:00Z" }] },
+            { "text": "テンプレートで、エージェントが録音にアクセスできるか選べる（既定は承認されたユーザー）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locator": "テンプレートを作成する", "retrievedAt": "2026-10-15T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず少人数のキューで、録画された通話の振り返りに使って効果を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "queues-app", "term": "Queues アプリ", "type": "product", "oneLine": { "text": "通話キューと自動応答の高度な通話機能を提供する Teams ネイティブのアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-15T22:50:00Z" }] } },
+        { "termKey": "shared-call-history", "term": "共有通話履歴", "type": "feature", "oneLine": { "text": "通話キューで、承認されたユーザーと代表者が通話の記録を参照できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locator": "前提条件", "retrievedAt": "2026-10-15T22:50:00Z" }] } },
+        { "termKey": "auto-recording", "term": "自動レコーディング テンプレート", "type": "feature", "oneLine": { "text": "録音・文字起こしの保存先や、アクセスできるユーザーを定義する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locator": "通話キューの自動レコーディング テンプレート", "retrievedAt": "2026-10-15T22:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568933",
+        "learn": [
+          { "title": "organization の Microsoft Teams 用キュー アプリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locale": "ja-jp" },
+          { "title": "通話キューの自動レコーディング テンプレート", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
