@@ -42,10 +42,12 @@ jobs:
           [ "$LIMIT" -gt 30 ] && LIMIT=30
           queued=$(gh run list --workflow slide-qa.lock.yml --limit 100 --json status -q '[.[] | select(.status=="queued" or .status=="in_progress" or .status=="pending" or .status=="waiting")] | length')
           echo "in-flight qa runs: $queued"
+          openfiles=$(gh pr list --state open --limit 200 --json title,files -q '.[] | select(.title | startswith("[slides] ")) | .files[].path')
           skip=$queued
           started=0
           for id in $(node scripts/pending-qa.mjs --limit 100); do
             [ "$started" -ge "$LIMIT" ] && break
+            if echo "$openfiles" | grep -qx "data/slides/$id.json"; then echo "skip $id: open PR"; continue; fi
             if [ "$skip" -gt 0 ]; then skip=$((skip - 1)); echo "skip $id: already in the run queue"; continue; fi
             echo "dispatch $id"
             gh workflow run slide-qa.lock.yml -f id="$id"

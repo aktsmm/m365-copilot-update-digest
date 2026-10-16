@@ -53,8 +53,16 @@ jobs:
             if [ "$(git rev-parse FETCH_HEAD)" != "$sha" ]; then echo "skip: head moved while checking"; continue; fi
             git reset -q --hard origin/main
             git checkout -q FETCH_HEAD -- "$f"
-            if ! npm run -s validate:slides; then echo "skip: validation failed"; git reset -q --hard origin/main; continue; fi
-            if ! npm run -s pdf -- --ids "$id" --out .slide-check; then echo "skip: render check failed"; git reset -q --hard origin/main; rm -rf .slide-check; continue; fi
+            if ! npm run -s validate:slides; then
+              echo "skip: validation failed"; git reset -q --hard origin/main
+              gh pr close "$n" -c "検証に失敗したためクローズします。次回のスライド生成で作り直されます。" || true
+              continue
+            fi
+            if ! npm run -s pdf -- --ids "$id" --out .slide-check; then
+              echo "skip: render check failed"; git reset -q --hard origin/main; rm -rf .slide-check
+              gh pr close "$n" -c "描画確認に失敗したためクローズします。次回のスライド生成で作り直されます。" || true
+              continue
+            fi
             git reset -q --hard origin/main
             git clean -fdq data/slides
             rm -rf .slide-check
