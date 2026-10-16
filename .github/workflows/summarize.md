@@ -88,7 +88,7 @@ Rules for `summaryJa`:
 - State only what the source says: what changed, for which product, and what the reader should check if the source says so.
 - Do **not** add facts, dates, versions, regions, prices or timelines that are not in the source. Do not turn month-only timing into a specific day.
 - Paraphrase; do not copy sentences from the source verbatim.
-- If the source is too thin to summarize safely, write a short neutral sentence based on the title only and say that details are in the original announcement.
+- If the source is too thin to summarize safely, write a short neutral sentence from the title and the stage only (what the feature is and for which product). Do **not** pad it with filler such as 「詳細は原文を確認してください」 or 「〜に関する更新です」; summaries containing such filler are rejected by validation.
 
 Rules for `audienceJa` and `actionJa` (shown on the slide; each a single plain Japanese line of **4–120 characters**, no URLs):
 
