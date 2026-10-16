@@ -75,6 +75,20 @@
         { "termKey": "community-expert", "term": "コミュニティ専門家", "type": "term", "oneLine": { "text": "エージェントが下書きした回答を確認・承認・編集できるコミュニティの役割。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "アクセス要件", "retrievedAt": "2026-10-14T21:10:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供に向けて開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "エージェントは、どんな質問にも回答を投稿しますか？",
+          "answer": { "text": "いいえ。ベスト回答や検証済み回答がある質問、14 日より前の質問、ソースに関連情報がない質問はスキップします。回答の信頼度が低い場合は、管理者か専門家の承認が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "エージェントが応答したとき", "retrievedAt": "2026-10-16T07:50:00Z" }] }
+        },
+        {
+          "question": "参照する情報に、機密情報が含まれないか心配です。",
+          "answer": { "text": "コミュニティより高い秘密度ラベルのコンテンツは、後から追加されたものでも回答に使われません。ただし、情報バリアや DLP などの SharePoint コンプライアンス機能は未サポートです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "秘密度ラベル", "retrievedAt": "2026-10-16T07:50:00Z" }] }
+        },
+        {
+          "question": "利用状況や効果は確認できますか？",
+          "answer": { "text": "はい。コミュニティ管理者はエージェント分析で、質問の範囲、生成・投稿された回答数、レビューの時間などを確認できます。ネットワーク全体の分析には Viva Engage プレミアムが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/community-agent", "locator": "アクティビティの測定とデータのエクスポート", "retrievedAt": "2026-10-16T07:50:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=499898",
         "learn": [
