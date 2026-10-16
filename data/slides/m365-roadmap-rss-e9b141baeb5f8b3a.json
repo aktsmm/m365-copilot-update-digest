@@ -106,6 +106,20 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Model Context Protocol。コネクタが外部データを取得するために使う仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者の資格情報で HubSpot のデータにアクセスしますか？",
+          "answer": { "text": "いいえ。同期型コネクタは組織単位ですが、フェデレーション コネクタはユーザー単位で、接続には管理者ではなくユーザー自身の資格情報が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "FAQ", "retrievedAt": "2026-10-16T07:00:00Z" }] }
+        },
+        {
+          "question": "コネクタを一括で無効にする方法はありますか？",
+          "answer": { "text": "あります。許可されるエージェントの種類（Allowed agent types）で一括して無効にし、必要なコネクタだけ管理センターで個別に有効化できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Admin experience and controls", "retrievedAt": "2026-10-16T07:00:00Z" }] }
+        },
+        {
+          "question": "Researcher 以外でも使えますか？",
+          "answer": { "text": "Researcher のほか、Copilot チャットの deep research モードや、利用可能な環境の Copilot Chat でもデータ ソースを見つけられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "User experience and controls", "retrievedAt": "2026-10-16T07:00:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=501292",
         "learn": [{ "title": "Federated connectors overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locale": "en-us" }]
