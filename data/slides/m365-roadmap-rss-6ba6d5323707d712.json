@@ -87,6 +87,33 @@
         { "termKey": "agent-insights", "term": "エージェント インサイト レポート", "type": "feature", "oneLine": { "text": "組織内で最近作成されたエージェントの情報を管理者に示すレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/insights-on-sharepoint-agents", "locator": "概要", "retrievedAt": "2026-10-14T20:25:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "エージェント インサイト レポートとは何が違いますか？",
+          "answer": {
+            "text": "エージェント インサイト レポートは管理者向けで、エージェントが多く作成されたサイトを監査データから確認するものです。今回の引用分析は、ページやファイルが回答で参照された頻度を見る機能です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/sharepoint/insights-on-sharepoint-agents",
+                "locator": "概要",
+                "retrievedAt": "2026-10-16T07:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "必要なライセンスや権限は何ですか？",
+          "answer": {
+            "text": "確認できた公開情報には、この引用分析の必要ライセンスや権限の記載がありません。展開前にロードマップの項目と管理センターで確認するのが安全です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=480725",
         "learn": [
