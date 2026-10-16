@@ -2,7 +2,7 @@
 
 重要度が「重要」「注目」の更新を、直近 3 か月分、1 更新 1 枚の解説スライドにします。本家 [azure-update-digest](https://github.com/aktsmm/azure-update-digest) のスライド仕様を M365 向けにしたものです。
 
-- スキーマ: [`schema/slide.schema.json`](../schema/slide.schema.json)（JSON Schema 2020-12）
+- スキーマ: [`schema/slide.schema.json`](../schema/slide.schema.json)（JSON Schema 2020-12）。任意項目 `qa` に想定問答（質問と根拠付きの回答、最大 5 件）を持てます。スライドには描画せず、PowerPoint のスライドノートにだけ出力します。
 - 品質の基準（完成見本）: [`examples/slide.sample.json`](../examples/slide.sample.json)（GA とプレビューの 2 枚）
 - 生成: gh-aw の [`slide.md`](../.github/workflows/slide.md)（Learn MCP で根拠を取得し、`data/slides/{key}.json` を書く）
 - 検証・描画: `npm run validate:slides` / `npm run pdf -- --ids <key> --out dist-pdf`
