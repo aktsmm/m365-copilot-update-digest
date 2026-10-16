@@ -5,10 +5,10 @@ import { Ajv2020 } from "ajv/dist/2020.js";
 export const SLIDES_DIR = "data/slides";
 
 /** 利用者に見せる文言に混ぜない、社内メモ的な表現。 */
-export const FORBIDDEN_PHRASES = ["記載なし", "要確認", "推定", "未発表", "判定保留", "データ時点", "（原文）", "（Learn）", "初心者向け"];
+export const FORBIDDEN_PHRASES = ["記載なし", "要確認", "未発表", "判定保留", "データ時点", "（原文）", "（Learn）", "初心者向け"];
 
 /** 単独のメモ書きとしてだけ禁止する語（製品機能の説明に出る「AI 生成」「未確認の発注書」などは許可する）。 */
-export const FORBIDDEN_PATTERNS = [/^\s*未確認\s*$/, /[（(]\s*未確認\s*[）)]/, /^\s*AI\s*生成\s*$/, /[（(]\s*AI\s*生成\s*[）)]/];
+export const FORBIDDEN_PATTERNS = [/^\s*未確認\s*$/, /[（(]\s*未確認\s*[）)]/, /^\s*AI\s*生成\s*$/, /[（(]\s*AI\s*生成\s*[）)]/, /推定(?:され|です|と(?!い))/, /[（(]\s*推定\s*[）)]/];
 
 /** 根拠・参照 URL に許可するホスト。 */
 export const ALLOWED_HOSTS = new Set(["learn.microsoft.com", "www.microsoft.com", "techcommunity.microsoft.com", "azure.microsoft.com", "support.microsoft.com", "devblogs.microsoft.com"]);
