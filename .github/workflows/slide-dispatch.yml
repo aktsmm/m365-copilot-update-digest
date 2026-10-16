@@ -43,9 +43,14 @@ jobs:
           case "$LIMIT" in ''|*[!0-9]*) echo "invalid limit"; exit 1;; esac
           [ "$LIMIT" -gt 30 ] && LIMIT=30
           open=$(gh pr list --state open --limit 200 --json title -q '.[].title' | grep '^\[slides\]' || true)
+          # 起動済みでまだ終わっていない実行は、待ち行列の先頭から順に処理される。同じ更新を二重に起動しないよう、その件数ぶん先頭を飛ばす
+          queued=$(gh run list --workflow slide.lock.yml --limit 100 --json status -q '[.[] | select(.status=="queued" or .status=="in_progress" or .status=="pending" or .status=="waiting")] | length')
+          echo "in-flight slide runs: $queued"
+          skip=$queued
           started=0
           for id in $(npm run -s pending-slides -- --limit 100 2>/dev/null); do
             [ "$started" -ge "$LIMIT" ] && break
+            if [ "$skip" -gt 0 ]; then skip=$((skip - 1)); echo "skip $id: already in the run queue"; continue; fi
             if echo "$open" | grep -q "$id"; then echo "skip $id: open PR"; continue; fi
             echo "dispatch $id"
             gh workflow run slide.lock.yml -f id="$id"

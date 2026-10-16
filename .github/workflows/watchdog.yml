@@ -1,0 +1,52 @@
+name: Watchdog
+
+# AI を使わず、GitHub 側で詰まったときにパイプラインを前に進める。
+#  - 40 分を超えて動き続けているエージェント実行を取り消す（直列キューが何時間も止まるのを防ぐ）
+#  - 直近の Pages デプロイが失敗していたら 1 回だけ再実行する（デプロイが同時に終わると衝突することがある）
+on:
+  schedule:
+    # 毎日 05:41 JST（= 20:41 UTC）。GitHub の定期実行は遅れることがあるので時刻は厳密ではない
+    - cron: "41 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Cancel hung agent runs
+        run: |
+          limit=$(date -u -d '40 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          for wf in slide.lock.yml summarize.lock.yml maintenance.lock.yml; do
+            for id in $(gh run list --workflow "$wf" --status in_progress --limit 20 --json databaseId,startedAt \
+                -q ".[] | select(.startedAt < \"$limit\") | .databaseId"); do
+              echo "cancel $wf #$id (running > 40 min)"
+              gh run cancel "$id" || true
+              sleep 60
+              if [ "$(gh run view "$id" --json status -q .status)" != "completed" ]; then
+                gh api -X POST "repos/$GH_REPO/actions/runs/$id/force-cancel" || true
+              fi
+            done
+          done
+      - name: Re-run a failed Pages deploy once
+        run: |
+          read -r id attempt concl created < <(gh run list --workflow deploy-pages.yml --limit 1 --json databaseId,attempt,conclusion,createdAt \
+            -q '.[0] | "\(.databaseId) \(.attempt) \(.conclusion // "none") \(.createdAt)"')
+          age=$(( $(date +%s) - $(date -d "$created" +%s) ))
+          if [ "$concl" = "failure" ] && [ "$attempt" = "1" ] && [ "$age" -lt 7200 ]; then
+            echo "re-running deploy #$id"
+            gh run rerun "$id" --failed
+          else
+            echo "deploy ok or already retried ($concl, attempt $attempt)"
+          fi
