@@ -266,6 +266,56 @@
           }
         }
       ],
+      "qa": [
+        {
+          "question": "データ セキュリティ調査の構成や課金は必要ですか？",
+          "answer": {
+            "text": "不要です。ポスチャ エージェントはデータ セキュリティ調査から独立しており、エージェントの有効化と SCU のプロビジョニングがあれば使えます。調査や AI 分析の作成など他の機能は別途構成と課金が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                "locator": "前提条件（ヒント）",
+                "retrievedAt": "2026-10-16T23:05:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "DSPM でエージェントを有効に済みの場合、再設定は必要ですか？",
+          "answer": {
+            "text": "不要です。DSPM と同じエージェントなので、有効化済みならデータ セキュリティ調査でもそのまま利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                "locator": "ポスチャ エージェントのしくみ",
+                "retrievedAt": "2026-10-16T23:05:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "AI が付けるリスク評価はそのまま信頼してよいですか？",
+          "answer": {
+            "text": "いいえ。Learn には AI の結果が常に正確・完全とは限らないとあり、情報を確認して慎重に使うよう求めています。なお、この機能は現時点でプレビューです。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/purview/data-security-investigations-posture-agent",
+                "locator": "冒頭の重要事項",
+                "retrievedAt": "2026-10-16T23:05:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558436",
         "learn": [
