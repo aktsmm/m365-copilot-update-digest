@@ -92,6 +92,27 @@
         { "termKey": "powerpoint", "term": "PowerPoint", "type": "product", "oneLine": { "text": "Microsoft 365 のプレゼンテーション作成アプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "テナント内の全員が同時に使えるようになりますか？",
+          "answer": {
+            "text": "いいえ。Copilot の機能は、まずテナント内の一部のユーザーに段階的に展開され、その後に組織全体へ広がります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭の説明（安全な展開モデル）", "retrievedAt": "2026-10-16T21:58:00Z" }]
+          }
+        },
+        {
+          "question": "Windows 版や Web 版の PowerPoint でも使えますか？",
+          "answer": {
+            "text": "ロードマップ上の対象プラットフォームは Mac のみで、他のプラットフォームの提供は確認できていません。必要な場合は最新のロードマップで確認してください。",
+            "origin": "editorial",
+            "assertion": "inference",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555886",
         "learn": [
