@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-910bb89e5e9d5c63",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のスキルカタログでスキルを検出・追加（開発中）",
+        "subtitleJa": "承認済みの組織のスキルを見つけて再利用し、選択的に共有できます",
+        "en": "Microsoft Copilot Studio: Discover & Add Skills from the skill catalog"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio", "Microsoft Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、組織のスキルを管理する担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントごとに同じ指示やワークフローを作り直さずに済む", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必須の対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "スキルカタログから、**承認済みの組織のスキルを検出して再利用**でき、選択的に共有もできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供内容の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "作成者が、承認済みの組織のスキルを検出・再利用・選択的に共有できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "共有カタログは Microsoft 365 App Store が基盤", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存のスキルは、スキル カタログの閲覧またはパッケージのアップロードで追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-add-existing", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はパブリック クラウド（Worldwide）で、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スキルは GitHub Copilot ハーネスのエージェントで使われ、Copilot クレジットを消費することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview", "locator": "Note", "retrievedAt": "2026-10-16T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "スキルは名前・説明・Markdown の指示で定義し、SKILL.md や ZIP でアップロードできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-add-existing", "locator": "スキル ファイルとパッケージの対応形式", "retrievedAt": "2026-10-16T00:00:00Z" }] },
+            { "text": "共有したいスキルを今のうちに整理し、再利用の候補を洗い出す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "skill", "term": "スキル", "type": "feature", "oneLine": { "text": "名前・説明・Markdown の指示で定義され、エージェントに特定タスクの扱い方を教える機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview", "locator": "スキルとは", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "skill-catalog", "term": "スキルカタログ", "type": "feature", "oneLine": { "text": "既存のスキルを閲覧して、エージェントに追加できる場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-add-existing", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "エージェントを作成・管理するための Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview", "locator": "新しいスキルの追加", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571880",
+        "learn": [
+          { "title": "エージェント向けスキル概要（GitHub Copilot）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview", "locale": "ja-jp" },
+          { "title": "既存のスキルをエージェントに追加する（GitHub Copilot）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-add-existing", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
