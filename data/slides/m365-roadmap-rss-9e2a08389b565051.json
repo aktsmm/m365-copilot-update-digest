@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9e2a08389b565051",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio 作成者向けの Maker Guidelines を管理者が提示可能に（開発中）",
+        "subtitleJa": "環境の承認済みツールや申請窓口を、作成の流れの中で案内できます",
+        "en": "Microsoft Power Platform governance and administration: Maker Guidelines"
+      },
+      "meta": {
+        "publishedJst": "2026-09-26",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["security-compliance", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Power Platform 管理者**と、Copilot Studio でエージェントを作る人", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+        "change": { "text": "環境のルールや申請先を、エージェントのレビュー中に確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "作成者に表示される内容", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用にはマネージド環境が必要。構成は Power Platform 管理センターで行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "前提条件", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が**環境固有のガイダンス**を作成者に直接届けられます。作成者はレビュー画面を離れずにリンクやメールで問い合わせできます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "作成者に表示される内容", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者が環境の利用可否や申請先を、作成者に案内できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "個々のマネージド環境または環境グループに対して構成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "作成者のガイドラインを構成する", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "メッセージは Copilot Studio の「レビュー」ウィンドウに表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "作成者のガイドラインはマネージド環境でのみ使用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "前提条件", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "メッセージは最大 400 文字のプレーンテキスト、ボタン ラベルは最大 50 文字", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "メッセージを構成する", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "Learn の関連ドキュメントはプレリリースで、変更されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "任意でボタンのリンク（HTTPS）と連絡先メールを追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "メッセージを構成する", "retrievedAt": "2026-10-16T21:50:00Z" }] },
+            { "text": "ウェルカム コンテンツで最初の期待値を示し、本機能で作業中も参照させる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+          ]
+        }
+      ],
+      "qa": [
+        {
+          "question": "作成者にはどこで表示されますか？",
+          "answer": { "text": "Copilot Studio でエージェントの「レビュー」を選ぶと、ブロックや警告と共に管理者からのメッセージが表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "作成者に表示される内容", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+        },
+        {
+          "question": "問題のないエージェントでも表示されますか？",
+          "answer": { "text": "はい。阻害要因や警告がない場合も引き続き利用でき、組織の期待や支援先を見つける場所になります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "作成者に表示される内容", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+        },
+        {
+          "question": "ウェルカム コンテンツとの違いは何ですか？",
+          "answer": { "text": "ウェルカム コンテンツは作成者が最初に製品に入るときの期待値を示し、作成者のガイドラインは作業中にも参照できる点が異なります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] }
+        }
+      ],
+      "glossary": [
+        { "termKey": "maker-guidelines", "term": "作成者のガイドライン", "type": "feature", "oneLine": { "text": "管理者が Copilot Studio 作成者に、組織固有のガイダンスを共有する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "冒頭", "retrievedAt": "2026-10-16T21:50:00Z" }] } },
+        { "termKey": "managed-env", "term": "マネージド環境", "type": "term", "oneLine": { "text": "作成者のガイドラインを使うために必要な、管理機能付きの Power Platform 環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "前提条件", "retrievedAt": "2026-10-16T21:50:00Z" }] } },
+        { "termKey": "env-group", "term": "環境グループ", "type": "term", "oneLine": { "text": "複数の環境をまとめて、同じ設定を構成できる単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locator": "作成者のガイドラインを構成する", "retrievedAt": "2026-10-16T21:50:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で開発が進められている段階の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570967",
+        "learn": [
+          { "title": "Copilot Studioの作成者のガイドラインを構成する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/maker-guidelines", "locale": "ja-jp" },
+          { "title": "作成者を歓迎するコンテンツを有効にする", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/welcome-content", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
