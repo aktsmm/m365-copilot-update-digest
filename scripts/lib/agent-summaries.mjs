@@ -8,6 +8,8 @@ const URL_PATTERN = /https?:\/\/|www\./i;
 const MARKDOWN_PATTERN = /[*_`#]{2,}|^\s*[-*]\s|\[[^\]]+\]\([^)]+\)/m;
 const JAPANESE_PATTERN = /[\u3040-\u30ff\u3400-\u9fff]/;
 const TITLE_BAD_ENDINGS = /(?:。|です|ます|ました|ください)$/;
+// 中身のない定型文（要約が具体的な内容を持たないときに出やすい表現）
+const FILLER_PATTERN = /(詳細は(?:原文|公式|リンク)|(?:原文|公式ページ|詳細)をご(?:確認|覧)ください|についてのお知らせです|に関する(?:アップデート|更新)です$|新機能が(?:追加|提供)されました。?$)/;
 
 /** 原文（英語の題名・要約・段階）が変わったときだけ再生成するための指紋。 */
 export function sourceFingerprint(event) {
@@ -39,6 +41,7 @@ export function validateAgentSummary(summary, fileKey) {
   else {
     if (!JAPANESE_PATTERN.test(text)) bad("summaryJa must contain Japanese");
     if (URL_PATTERN.test(text) || MARKDOWN_PATTERN.test(text)) bad("summaryJa must be plain text without URLs");
+    if (FILLER_PATTERN.test(text)) bad("summaryJa must state concrete points, not filler such as 'see the original for details'");
   }
 
   for (const field of ["audienceJa", "actionJa"]) {
