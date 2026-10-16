@@ -1,0 +1,61 @@
+name: Dispatch slide Q&A backfill
+
+# 想定問答（qa）がない既存スライドへ、slide-qa ワークフロー（gh-aw）を 1 件ずつ起動する。毎日 04:00 JST（= 19:00 UTC）に最大 20 件。
+# 起動済みで終わっていない実行は先頭から飛ばし、同じスライドを二重に起動しない。
+on:
+  schedule:
+    - cron: "0 19 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum number of slides"
+        required: false
+        default: "20"
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+  pull-requests: read
+
+concurrency:
+  group: slide-qa-dispatch
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Dispatch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          LIMIT: ${{ inputs.limit || '20' }}
+        run: |
+          case "$LIMIT" in ''|*[!0-9]*) echo "invalid limit"; exit 1;; esac
+          [ "$LIMIT" -gt 30 ] && LIMIT=30
+          queued=$(gh run list --workflow slide-qa.lock.yml --limit 100 --json status -q '[.[] | select(.status=="queued" or .status=="in_progress" or .status=="pending" or .status=="waiting")] | length')
+          echo "in-flight qa runs: $queued"
+          skip=$queued
+          started=0
+          for id in $(node scripts/pending-qa.mjs --limit 100); do
+            [ "$started" -ge "$LIMIT" ] && break
+            if [ "$skip" -gt 0 ]; then skip=$((skip - 1)); echo "skip $id: already in the run queue"; continue; fi
+            echo "dispatch $id"
+            gh workflow run slide-qa.lock.yml -f id="$id"
+            started=$((started + 1))
+            sleep 60
+          done
+          echo "started $started"
+      - name: Trigger auto-merge after the last agent run has had time to finish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 900
+          gh workflow run auto-merge-slides.yml
