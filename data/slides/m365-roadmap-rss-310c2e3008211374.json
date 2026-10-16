@@ -93,6 +93,20 @@
         { "termKey": "federated-connector", "term": "連携型コネクタ", "type": "term", "oneLine": { "text": "MCP を使い、インデックスせずにリアルタイムでデータを取得するコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-10-14T21:40:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "コネクタのコンテンツが見えない人がいるのはなぜですか？",
+          "answer": { "text": "コネクタはソース システムのアクセス許可を尊重するため、権限のないコンテンツは Copilot にも表示されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "How Copilot connectors work", "retrievedAt": "2026-10-16T22:20:00Z" }] }
+        },
+        {
+          "question": "同期型と連携型のコネクタはどう違いますか？",
+          "answer": { "text": "同期型は外部データを Microsoft 365 にインデックスし、連携型はインデックスせず MCP でリアルタイムに取得します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-10-16T22:20:00Z" }] }
+        },
+        {
+          "question": "コネクタは誰が設定しますか？",
+          "answer": { "text": "テナント構成型は管理者が管理センターで設定し、セルフサービス型と連携型は管理者が有効化してユーザーが認証します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-10-16T22:20:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502541",
         "learn": [
