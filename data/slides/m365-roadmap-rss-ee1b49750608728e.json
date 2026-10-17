@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ee1b49750608728e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot のローカル推論で AI 処理を地域内で実施（開発中）",
+        "subtitleJa": "対応する Copilot の操作の AI 推論を、該当する地域内で行えるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Local inferencing"
+      },
+      "meta": {
+        "publishedJst": "2026-09-22",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Excel", "Exchange", "Forms", "Microsoft 365", "Microsoft 365 admin center", "OneDrive", "OneNote", "Outlook", "Planner", "Word", "Microsoft 365 app", "Microsoft Copilot (Microsoft 365)", "Microsoft Agent 365"],
+        "categories": ["outlook", "office-apps", "sharepoint", "admin"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**オーストラリア・インド・UAE・英国・米国の組織**と、データ所在地を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対応する Copilot の操作で、AI 推論を該当する地域内で処理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供開始時に設定の有無を確認するとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "対応する Copilot の操作の**AI 推論を、該当する地域内で実施**できるようになり、Microsoft Copilot のソブリン コントロールが拡張されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "開始予定の地域は、オーストラリア・インド・UAE・英国・米国", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は「対応する Copilot の操作」で、すべての操作とは限らない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft Copilot のソブリン コントロールを拡張する機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現状、EU 外のお客様のクエリは米国・EU・その他のリージョンで処理される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-privacy", "locator": "Microsoft Copilot とデータ所在地", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Advanced Data Residency と Multi-Geo は、Copilot のデータ所在地コミットメントを含む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-privacy", "locator": "Microsoft Copilot とデータ所在地", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "自社テナントの所在国が対象 5 地域に当たるか確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "related",
+          "heading": "関連機能: フレックス ルーティング",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "EU・EFTA 向け設定。需要ピーク時に EU データ境界外での LLM 推論を許可する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-flex-routing", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "AI 管理者ロールで Microsoft 365 管理センターから変更できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-flex-routing", "locator": "フレックス ルーティングの構成", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "inference", "term": "推論（インファレンス）", "type": "term", "oneLine": { "text": "AI モデルがプロンプトを実行して、要約や回答などの出力を生成する処理ステップ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-flex-routing", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "local-inferencing", "term": "ローカル推論", "type": "feature", "oneLine": { "text": "対応する Copilot の操作の AI 推論を、該当する地域内で行う機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "data-residency", "term": "データ所在地", "type": "term", "oneLine": { "text": "Microsoft Copilot は、製品条件に記載されたデータ所在地コミットメントの対象ワークロード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-privacy", "locator": "Microsoft Copilot とデータ所在地", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供はいつ始まりますか？",
+          "answer": { "text": "ロードマップに提供月は示されていません。開始予定の地域は、オーストラリア、インド、UAE、英国、米国です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "フレックス ルーティングとの違いは何ですか？",
+          "answer": { "text": "フレックス ルーティングは EU・EFTA 向けに、ピーク時の EU データ境界外での推論を許可する設定です。本件は推論を該当地域内で行う取り組みで、対象地域も異なります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-flex-routing", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571886",
+        "learn": [
+          { "title": "Microsoft Copilot のデータ、プライバシー、セキュリティ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-privacy", "locale": "ja-jp" },
+          { "title": "フレックス ルーティング (EU および EFTA)", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-flex-routing", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
