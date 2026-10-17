@@ -92,6 +92,16 @@
         { "termKey": "pro-portal", "term": "Pro 管理ポータル", "type": "term", "oneLine": { "text": "Teams Rooms Pro の会議室設定を、管理者が構成するポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Android の Teams Rooms でも同じ予約機能を使えますか？",
+          "answer": { "text": "Learn には Android 版 Teams Rooms にも同機能の切り替え設定があり、Teams 管理設定の「アドホック会議室の予約を許可」または Teams 管理センターの構成プロファイルで制御します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-16T22:58:00Z" }] }
+        },
+        {
+          "question": "「今すぐ会議」とは何が違いますか？",
+          "answer": { "text": "「今すぐ会議」はアドホックな Teams 会議を即座に開始する機能で、今回の機能は空いている会議室を予定表から予約するものです。「今すぐ会議」はポリシーでブロックされていないことの確認が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "今すぐ会議 / アドホックな部屋の予約", "retrievedAt": "2026-10-16T22:58:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=548648",
         "learn": [{ "title": "Teams Rooms (Windows および Android) のホーム画面と管理コントロール", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locale": "ja-jp" }]
