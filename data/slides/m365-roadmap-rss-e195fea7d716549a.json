@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e195fea7d716549a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot Search の権威コンテンツを管理センターで指定可能に",
+        "subtitleJa": "信頼できる SharePoint サイトを最大 100 件まで指定し、検索での関連性を高めます",
+        "en": "Microsoft 365 Admin Center: Authoritative content management for Microsoft 365 Copilot Search"
+      },
+      "meta": {
+        "publishedJst": "2026-09-22",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "admin"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot Search を展開する**テナント管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "公式コンテンツを管理センターから指定でき、検索結果の信頼性を高められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "公式サイトを指定したい場合のみ、管理者が設定する",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "管理センターの Copilot > 検索 > 権威あるコンテンツで、**SharePoint サイトを最大 100 件**追加・管理できます。指定したサイトは Copilot Search での関連性とランキングが高まります",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "指定したサイトのコンテンツを、Copilot 検索が信頼できるものとして認識する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "「From your organization」ラベルなどで、信頼できるアイテムを見分けやすくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理センターの Copilot > 検索 > 権威あるコンテンツで SharePoint サイトを追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "PowerShell では Set-SPOSite の -IsAuthoritative $true でも指定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "SharePoint Online 管理シェルを使用して権限のあるサイトを構成する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot ライセンスが必要。変更の反映には最大 72 時間かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項・トラブルシューティング", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "指定はサイト単位のみで、個人用サイトは指定できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する運用",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "複数地域のテナントでは、地域ごとに権限のあるサイトのデータを管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "古いサイトや非公式サイトは、定期的に一覧から削除することが推奨されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "ライフサイクルとメンテナンス", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "規程集や社内ポータルなど、公式な情報源のサイトから優先して指定する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "100 件の上限があるため、指定するサイトを絞り込む", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "authoritative-site", "term": "権威あるサイト", "type": "feature", "oneLine": { "text": "管理者が公式で組織が管理する SharePoint ソースとして指定したサイト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "copilot-search", "term": "Copilot Search", "type": "product", "oneLine": { "text": "Microsoft Copilot の検索エクスペリエンス。信頼できるサイトのコンテンツを認識します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "csom", "term": "CSOM", "type": "term", "oneLine": { "text": "一括操作や自動化に使える、SharePoint のクライアント側オブジェクト モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "CSOM を使用した権限のあるサイトの構成", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "設定が検索結果に反映されるまでどれくらいかかりますか？",
+          "answer": { "text": "変更がサポートされているエクスペリエンスに反映されるまで、最大 72 時間かかる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "OneDrive の個人用サイトも指定できますか？",
+          "answer": { "text": "いいえ。個人用サイトは権限のあるサイトとして指定できず、指定はサイト レベルのみです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=503553",
+        "learn": [{ "title": "Copilot 検索の SharePoint 権限のあるサイト", "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
