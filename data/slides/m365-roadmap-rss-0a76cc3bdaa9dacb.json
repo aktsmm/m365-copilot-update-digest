@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0a76cc3bdaa9dacb",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot の /mention で Dataverse レコードの説明を強化（提供開始）",
+        "subtitleJa": "環境・アプリ・テーブル名入りのラベルで、目的のレコードを選びやすくなります",
+        "en": "Microsoft Dataverse: Improved enterprise experiences in Power Platform - Enhance Dataverse record descriptions for Copilot /mention"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Dataverse", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Dataverse",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot で Dynamics 365 / Power Apps のレコードを参照するユーザー**と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "似たレコードの中から、正しいレコードを見分けて選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には Power Platform 管理センターで環境ごとの設定をオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "/メンション機能をオンにする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Dataverse・Dynamics 365・Power Apps のレコードに**環境名 + アプリ名 + レコード名**のラベルが付き、正しいレコードを識別しやすくなります", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "最近表示した Dynamics 365 および Power Apps のレコード", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "最近表示したレコードを、Copilot の / メンションで参照できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "最近表示した Dynamics 365 および Power Apps のレコード", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "各レコードに環境名・アプリ名・レコード名を含む拡張ラベルを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "最近表示した Dynamics 365 および Power Apps のレコード", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "複数アプリで開いた同じレコードは、最後に使ったアプリがラベルに反映", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "最近表示した Dynamics 365 および Power Apps のレコード", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Power Platform 管理センターの環境で「Microsoft 365 アプリでレコードを検索する」をオン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "/メンション機能をオンにする", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Copilot Chat で / とレコード名の数文字を入力し、候補から選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "ビジネス レコードへの参照を Copilot Chat に依頼する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "表示から / メンションで使えるまで最大 15 分かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "/メンション機能をオンにする", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "共有先は、環境へのアクセスとセキュリティ ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "/メンション機能をオンにする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "対応アプリ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Chat、Researcher、Word、Teams、Outlook Web で利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "Copilot Chat、Researcher、Word、および Teams クライアントでビジネス レコードにリンクする", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Researcher は参照レコードをコンテキストとして使い、ライブデータは取得しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "Researcher の注記", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "例: 「/Contoso アカウントのすべてのクローズ済みの営業案件を表示する」", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "ビジネス レコードへの参照を Copilot Chat に依頼する", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Dataverse から少量のデータが Microsoft 365 に同期される点に注意", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "地域、サービス、コンプライアンスの境界", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mention", "term": "/mention（/メンション）", "type": "feature", "oneLine": { "text": "/ を入力して、Dynamics 365 や Dataverse のレコードにリンク・参照する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "全体", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "dataverse", "term": "Microsoft Dataverse", "type": "product", "oneLine": { "text": "Dynamics 365 や Power Apps のビジネス データの参照元となるデータ基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "全体", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "ppac", "term": "Power Platform 管理センター", "type": "product", "oneLine": { "text": "環境ごとの機能設定を管理者が行う管理ポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "/メンション機能をオンにする", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は何を設定する必要がありますか？",
+          "answer": { "text": "Power Platform 管理センターで、対象環境の「Microsoft 365 アプリでレコードを検索する」をオンにします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "/メンション機能をオンにする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "どのレコードが候補に出ますか？",
+          "answer": { "text": "ユーザーがアクセスできる、最近使用したレコードのみが利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576788",
+        "learn": [{ "title": "/mention を使用して、Microsoft 365 Copilot経由でビジネス レコードにリンクする", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/link-records-outlook-web", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
