@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2693adb28b6b02a8",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dynamics 365 Customer Service で Microsoft Copilot Chat が利用可能に",
+        "subtitleJa": "Microsoft Copilot から、サービス業務の情報にアクセスできます",
+        "en": "Dynamics 365 Customer Service: Copilot and AI innovation - Improve customer outcomes with Service Agent in Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Customer Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service のサービス担当者**と、Microsoft 365 / Dynamics 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス エージェントを有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "change": { "text": "手動でデータを検索せず、Microsoft Copilot からケースや顧客情報を扱える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は Service アプリの割り当てと、Customer Service 環境への Microsoft Copilot 追加を行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス エージェントを有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot と同じチャット体験を、**サービス業務に合わせたグラウンディングとワークフロー**付きで Customer Service で使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Service Agent が Microsoft Copilot にカスタマーサービス特化の機能を拡張", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ケース、顧客記録、最近のやり取りを取得・要約・運用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Copilot Service workspace 内の Service Agent も利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 管理者が Service アプリのインストールと割り当てを管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス エージェントを有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Dynamics 365 管理者が Customer Service 環境に Microsoft Copilot を追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス アプリをインストールする", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "設定後、担当者はケースや顧客、やり取りについて Microsoft Copilot に質問できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス アプリをインストールする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Customer Service のライセンスがテナントに割り当てられていると、アプリは自動でインストールされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス アプリをインストールする", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ツールの利用可否は、設定と担当者の Dataverse セキュリティ権限で決まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "Note", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "サポートされる場合、Copilot Studio エージェントや MCP ツールで Service Agent を拡張できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "Note", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "他のサービスへの接続は、コスト発生やデータが Dynamics 365 のコンプライアンス境界外に送られる可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "Important", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "まず一部の担当者に割り当てて、使い勝手を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "service-agent", "term": "Service Agent", "type": "feature", "oneLine": { "text": "Microsoft Copilot にカスタマーサービス特化の機能を拡張するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "customer-service", "term": "Dynamics 365 Customer Service", "type": "product", "oneLine": { "text": "Service Agent と統合される、カスタマーサービス向けの Dynamics 365 アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "何が有効になるか", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Model Context Protocol。Service Agent を拡張するツールの接続方式のひとつ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "Note", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Service アプリのインストールで、ユーザーは Customer Service のデータにアクセスできますか？",
+          "answer": { "text": "いいえ。Service アプリのインストールだけでは、環境の設定や Customer Service 記録へのアクセスは付与されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス エージェントを有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "管理作業は誰が担当しますか？",
+          "answer": { "text": "Service アプリのインストールと割り当ては Microsoft 365 管理者、環境への Microsoft Copilot 追加は Dynamics 365 管理者が行います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス エージェントを有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576818",
+        "learn": [{ "title": "Microsoft CopilotでService Agentを有効にする", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
