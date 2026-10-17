@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-aee2790d547eaa19",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Supply Chain Management で AI の説明により予測精度を把握可能に（開発中）",
+        "subtitleJa": "予測に影響した要因を、AI の説明で理解できるようになります",
+        "en": "Dynamics 365 Supply Chain Management: Copilot and AI innovation - Understand forecast accuracy with AI explanations"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Supply Chain Management"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Supply Chain Management",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Supply Chain Management を使う**需要計画の担当者（プランナー）**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "ビジネス価値", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "change": { "text": "予測の数値だけでなく、各予測に影響した主な要因を把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザー向けで自動的に有効化される機能のため、事前の設定は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "予測結果と過去データを一か所で見ながら、**AI 生成の説明**で予測要因を理解できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "主な利点", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "予定されている内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "予測結果に文脈的な洞察を組み合わせ、各予測の主要因を詳しく確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "対称平均絶対パーセンテージ誤差（SMAPE）の値を参照できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "主な利点", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "過去データと予測結果を一か所で閲覧できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "主な利点", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供タイムラインは変更される可能性があり、機能がリリースされない場合もある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "Important", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "提供リージョンと対応言語は、Microsoft の機能提供状況レポートで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "地域・利用可能な言語", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに準備すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プランナーに、予測の根拠を確認する新しい見方を事前に共有しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sc-management", "term": "Dynamics 365 Supply Chain Management", "type": "product", "oneLine": { "text": "需要計画などのサプライ チェーン業務を扱う Dynamics 365 の製品。予測機能もこの中で使います。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "smape", "term": "SMAPE", "type": "term", "oneLine": { "text": "対称平均絶対パーセンテージ誤差。予測の外れ具合を示す指標です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "主な利点", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で開発が進められている段階で、提供時期は変更される可能性があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "Important", "retrievedAt": "2026-10-18T00:00:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": {
+            "text": "Learn のリリース計画では、パブリック プレビューが 2026 年 7 月 31 日、一般公開が 2026 年 10 月と案内されています。ただし変更される可能性があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-18T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "管理者が有効化する必要はありますか？",
+          "answer": {
+            "text": "リリース計画では「ユーザー向けで、自動的に有効化される」とされており、管理者の有効化作業は示されていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-18T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576754",
+        "learn": [{ "title": "AI説明で予報の正確さを理解する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-supply-chain-management/understand-forecast-accuracy-ai-explanations", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
