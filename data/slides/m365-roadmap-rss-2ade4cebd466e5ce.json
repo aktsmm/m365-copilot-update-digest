@@ -65,6 +65,33 @@
         { "termKey": "reference-types", "term": "参照元", "type": "term", "oneLine": { "text": "Copilot の回答の根拠となるファイル・会議・Web・PDF など。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "現在の Copilot の回答にも引用（citation）は付きますか？",
+          "answer": {
+            "text": "はい。Copilot が生成した回答には引用が自動的に付きます。ただし、ユーザーが参照元を開けるとは限りません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/microsoft-365/copilot/extensibility/plugin-citations",
+                "locator": "冒頭の説明（The response body automatically includes citations for Copilot synthesized responses）",
+                "retrievedAt": "2026-10-17T21:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": {
+            "text": "現時点のロードマップは「開発中」で、提供時期は確認できていません。提供時期が示されるまでは案内を控え、ロードマップの更新を確認するのが安全です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=523223",
         "learn": [
