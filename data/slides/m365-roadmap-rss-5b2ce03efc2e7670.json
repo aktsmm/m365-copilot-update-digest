@@ -93,6 +93,20 @@
         { "termKey": "acp", "term": "Advanced Connector Policies", "type": "term", "oneLine": { "text": "組織がコネクタの利用を制御するための Power Platform のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "冒頭", "retrievedAt": "2026-10-15T17:12:00Z" }] } },
         { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、順次展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "警告が残っていても公開できますか？",
+          "answer": { "text": "はい。公開を止めるのはブロッキングの問題だけで、警告は公開可能です。ただし、エージェントの動作やコンプライアンスへの影響は確認しておく必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-17T22:10:00Z" }] }
+        },
+        {
+          "question": "組織のポリシーでブロックされた場合、作成者はどうすればよいですか？",
+          "answer": { "text": "組織が管理者の連絡先やヘルプ リンクを設定していれば、ブロックされた項目の横やレビュー パネルに案内が表示されます。未設定の場合は既定のメッセージが表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-17T22:10:00Z" }] }
+        },
+        {
+          "question": "管理者向けのガバナンス レポートの代わりに使えますか？",
+          "answer": { "text": "いいえ。レビュー パネルは管理レベルのガバナンスやコンプライアンス報告の代わりにはならず、詳細な診断は Power Platform 管理センターなど他の画面で提供される場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "Note", "retrievedAt": "2026-10-17T22:10:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568762",
         "learn": [{ "title": "エージェントの準備状況と状況を確認する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locale": "ja-jp" }]
