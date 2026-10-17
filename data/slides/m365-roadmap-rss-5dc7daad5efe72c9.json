@@ -87,6 +87,20 @@
         { "termKey": "agent-avatar", "term": "エージェントのアバター", "type": "term", "oneLine": { "text": "Business Central の画面でエージェントを表すアイコン。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "オンプレミスの Business Central でも使えますか？",
+          "answer": { "text": "いいえ。Copilot とエージェントは Business Central オンラインのお客様のみが利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2024wave2/smb/dynamics365-business-central/copilot-agents", "locator": "副操縦士とエージェント", "retrievedAt": "2026-10-17T22:20:00Z" }] }
+        },
+        {
+          "question": "Copilot を使うのに追加ライセンスは必要ですか？",
+          "answer": { "text": "Learn では、Business Central のライセンスがあれば追加費用なしで Copilot を利用できると説明されています。エージェント機能の課金条件はこのページでは確認できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2024wave2/smb/dynamics365-business-central/copilot-agents", "locator": "副操縦士とエージェント", "retrievedAt": "2026-10-17T22:20:00Z" }] }
+        },
+        {
+          "question": "Copilot と自律型エージェントは何が違いますか？",
+          "answer": { "text": "Copilot はチャットなどでユーザーの作業を支援し、自律型エージェントは買掛金処理のような主要なビジネス プロセスを自動化します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2024wave2/smb/dynamics365-business-central/copilot-agents", "locator": "副操縦士とエージェント", "retrievedAt": "2026-10-17T22:20:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573372",
         "learn": [{ "title": "副操縦士とエージェント（Business Central リリース プラン）", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2024wave2/smb/dynamics365-business-central/copilot-agents", "locale": "ja-jp" }]
