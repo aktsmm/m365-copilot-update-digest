@@ -99,6 +99,20 @@
         { "termKey": "org-theme", "term": "組織テーマ", "type": "feature", "oneLine": { "text": "管理者が作成する、上部ナビゲーション バーの外観（ロゴや色）の設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "冒頭", "retrievedAt": "2026-10-15T15:50:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "グループごとに異なるロゴを表示できますか？",
+          "answer": { "text": "はい。既定のテーマに加えて最大 4 つのグループ テーマを作成でき、Microsoft 365 グループに割り当てられます。複数のグループ テーマに属するユーザーには既定のテーマが表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "全般: テーマを変更する / よく寄せられる質問", "retrievedAt": "2026-10-16T23:10:00Z" }] }
+        },
+        {
+          "question": "ロゴをクリックしたときの移動先は変更できますか？",
+          "answer": { "text": "はい。[ロゴ] タブでクリックリンクの URL を指定できます。未指定の場合は Microsoft 365 ホーム ページになります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ロゴ: テーマのロゴを指定する", "retrievedAt": "2026-10-16T23:10:00Z" }] }
+        },
+        {
+          "question": "ダーク テーマ用のロゴは用意できますか？",
+          "answer": { "text": "はい。ダーク テーマ向けに最適化した代替ロゴを追加できます。既定のロゴと同じ要件（HTTPS・匿名アクセス可）が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ロゴ: テーマのロゴを指定する", "retrievedAt": "2026-10-16T23:10:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
         "learn": [
