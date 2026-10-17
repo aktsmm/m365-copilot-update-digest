@@ -107,6 +107,38 @@
         { "termKey": "acp", "term": "Advanced Connector Policies", "type": "term", "oneLine": { "text": "コネクタの利用を組織として制限するポリシー。レビューで制限が表示される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "警告が出ているエージェントは公開できますか？",
+          "answer": {
+            "text": "はい。警告は公開を妨げませんが、エージェントの動作やコンプライアンスに影響し得るため、公開前に内容の確認が推奨されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-17T21:20:00Z" }]
+          }
+        },
+        {
+          "question": "管理者が連絡先を設定していない場合、エラー時は何が表示されますか？",
+          "answer": {
+            "text": "組織がガイダンスを設定していない場合は、既定のメッセージが表示されます。連絡先メールと詳細情報リンクはデータ ポリシーの設定で追加・更新できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-17T21:20:00Z" }]
+          }
+        },
+        {
+          "question": "利用にコストはかかりますか？",
+          "answer": {
+            "text": "Learn では、エージェントの使用・構築・テスト・評価に使用率ベースの課金が適用され、Copilot クレジットを消費することがあると案内されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "概要", "retrievedAt": "2026-10-17T21:20:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568762",
         "learn": [{ "title": "エージェントの準備状況と状況を確認する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locale": "ja-jp" }]
