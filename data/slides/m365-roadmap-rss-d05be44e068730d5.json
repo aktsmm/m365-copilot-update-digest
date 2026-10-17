@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d05be44e068730d5",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Copilot Chat のセッション永続性強化のロードマップ項目が終了扱いに",
+        "subtitleJa": "プロンプト送信直後に履歴へ記録し、離れても会話を保つ強化が対象です",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat - Session Persistence Enhancement"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Web 版 Copilot Chat を使う作成者・一般ユーザー**と、ロードマップを追う管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "この強化のロードマップ項目は終了（Retirement）の扱いになった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の設定変更は案内されていない。ロードマップの更新を確認する程度でよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "対象の強化は、プロンプト送信直後にセッション履歴へ項目を作り、別画面へ移動しても会話を保つ内容でした", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象はロードマップ項目「Copilot Chat - Session Persistence Enhancement」", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "強化の内容: プロンプト送信直後にナビゲーション ペインの履歴へ項目を作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象環境は Worldwide・GCC・GCC High・DoD、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応の目安",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この項目に基づいて社内案内や計画を立てている場合は、前提を見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Copilot Chat の現在の機能は Learn の概要ページで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "Copilot Chat でできること", "retrievedAt": "2026-10-17T22:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "対象の Microsoft 365 ユーザーが使える、エンタープライズ保護付きの AI チャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "冒頭", "retrievedAt": "2026-10-17T22:30:00Z" }] } },
+        { "termKey": "session-history", "term": "セッション履歴", "type": "feature", "oneLine": { "text": "ナビゲーション ペインに並ぶ、過去の会話セッションの一覧。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "session-persistence", "term": "セッション永続性", "type": "term", "oneLine": { "text": "会話から離れても、戻ったときに続きから使えるように会話を保つこと。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、その項目が終了の扱いになっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "終了扱いになった理由は何ですか？",
+          "answer": { "text": "ロードマップの記載からは理由を読み取れません。詳細は公式ロードマップの項目で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Copilot Chat は Microsoft 365 Copilot ライセンスなしでも使えますか？",
+          "answer": { "text": "はい。Copilot Chat の利用に Microsoft 365 Copilot ライセンスは必要ありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "Copilot Chat の資格要件", "retrievedAt": "2026-10-17T22:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=500638",
+        "learn": [{ "title": "Microsoft Copilot Chat の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
