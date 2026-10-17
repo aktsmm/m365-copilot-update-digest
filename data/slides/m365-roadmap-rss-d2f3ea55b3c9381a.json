@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d2f3ea55b3c9381a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Case Management Agent でメールをカテゴリ・サブカテゴリに自動分類（提供開始）",
+        "subtitleJa": "管理者が定義した分類で、受信メールを AI が自動で仕分けします",
+        "en": "Dynamics 365 Customer Service: Copilot and AI innovation - Classify emails by category and subcategory with Case Management Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Customer Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service の管理者・作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "受信メールの仕分けを自動化し、サポート以外のメールによる雑多な処理を減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-17T20:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者が有効化し、カテゴリ・サブカテゴリを定義すると使い始められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が定義した分類をもとに、**受信メールを AI が自動で分類**します。結果はメールのアクティビティ レコードに保存されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI がメールの件名と本文を分析し、カテゴリまたはサブカテゴリを割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] },
+            { "text": "割り当て結果はメールのアクティビティ レコードに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] },
+            { "text": "ケース管理エージェント、自動レコード作成ルール、Power Automate、レポートがこの値を利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者がメール分類を有効にし、カテゴリ名・サブカテゴリ名・説明を定義する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] },
+            { "text": "対象とするメールボックス、送信者ドメイン、言語などの条件も設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供リージョンと対応言語は、Microsoft の Feature Geography / Language レポートで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "地域 / 利用可能な言語", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "管理者の操作",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "割り当て済みのカテゴリ・サブカテゴリは手動で更新できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] },
+            { "text": "分類を無効にすると、新しいメールの処理を停止できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "感謝状・ニュースレター・スパムなどサポート以外のメールを仕分け、本当に人の対応が必要なメールに集中できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "case-management-agent", "term": "ケース管理エージェント", "type": "feature", "oneLine": { "text": "Dynamics 365 Customer Service で、日常的な問題の処理を任せられるエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-17T20:55:00Z" }] } },
+        { "termKey": "email-classification", "term": "メール分類", "type": "feature", "oneLine": { "text": "カスタムのカテゴリ体系に沿って受信メールを自動分類する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] } },
+        { "termKey": "taxonomy", "term": "タクソノミー", "type": "term", "oneLine": { "text": "管理者が定義するカテゴリとサブカテゴリの分類体系。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップ上のステータスは Launched（提供開始）です。リリース プランでは一般公開日が 2026 年 8 月 21 日と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "表: 一般公開", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+        },
+        {
+          "question": "誰が設定しますか？",
+          "answer": { "text": "管理者がメール分類を有効にし、カテゴリや対象メールの条件を定義します。エンド ユーザー側の操作は必須ではありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-17T20:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576775",
+        "learn": [
+          { "title": "Case Management Agentでメールをカテゴリやサブカテゴリで分類できます", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/classify-emails-category-subcategory-case-management-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
