@@ -80,6 +80,37 @@
         { "termKey": "maker", "term": "メーカー", "type": "term", "oneLine": { "text": "Copilot Studio でエージェントを作成・改善する人。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "ワークフローを使うエージェントに前提条件はありますか？",
+          "answer": {
+            "text": "Learn のワークフロー追加手順では、前提として新しい体験で作成されたエージェントが必要と案内されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-workflow", "locator": "Prerequisites", "retrievedAt": "2026-10-17T22:20:00Z" }]
+          }
+        },
+        {
+          "question": "エージェントの利用に追加コストはかかりますか？",
+          "answer": {
+            "text": "Learn によると、エージェントの使用・構築・テスト・評価には使用率に基づく請求が適用され、Copilot クレジットを消費することがあります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-workflow", "locator": "冒頭の Note", "retrievedAt": "2026-10-17T22:20:00Z" }]
+          }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": {
+            "text": "ロードマップは「開発中」で、提供時期は示されていません。確定情報が出るまで日程は案内しないのが安全です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570432",
         "learn": [
