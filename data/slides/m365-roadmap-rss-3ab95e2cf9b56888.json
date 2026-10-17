@@ -95,6 +95,20 @@
         { "termKey": "payables-agent", "term": "Payables Agent", "type": "product", "oneLine": { "text": "見積や請求書などの依頼を自律的に処理する Business Central のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Supervise agent activities", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "確認を後回しにしたい場合はどうすればよいですか？",
+          "answer": { "text": "バーの Dismiss (X) で非表示にし、ページを更新して提案マークを消せます。後で確認したい場合や、手動で修正済みの場合に使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Complete or dismiss the review", "retrievedAt": "2026-10-17T22:00:00Z" }] }
+        },
+        {
+          "question": "複数のエージェントが同じドキュメントを変更した場合、バーはどうなりますか？",
+          "answer": { "text": "エージェントのアイコンが重なって表示されます。利用権限のあるエージェントについてのみ、タスクへのリンクやボタンが出ます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "What the data review bar shows", "retrievedAt": "2026-10-17T22:00:00Z" }] }
+        },
+        {
+          "question": "バーを表示したままページ通知を確認できますか？",
+          "answer": { "text": "はい。「Show other notifications」を選ぶとバーの下に表示され、表示や非表示を切り替えてもエージェントのレビューには影響しません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Show page notifications during review", "retrievedAt": "2026-10-17T22:00:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573369",
         "learn": [{ "title": "Supervise agent activities", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locale": "en-us" }]
