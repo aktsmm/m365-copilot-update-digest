@@ -751,6 +751,10 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/microsoft 365 admin center:\s*usage reports?\s*[–—-]\s*microsoft 365 copilot connectors/.test(text)) {
+    return "Microsoft 365 管理センターに Copilot コネクタの利用状況レポートを追加";
+  }
+
   if (/improve customer outcomes with service agent in microsoft 365 copilot/.test(text)) {
     return "Dynamics 365 Customer Service の Service Agent で顧客対応を改善";
   }
