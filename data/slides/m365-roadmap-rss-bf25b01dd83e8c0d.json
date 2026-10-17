@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-bf25b01dd83e8c0d",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Project Operations で Field Service の承認済み時間を工数に反映（提供開始）",
+        "subtitleJa": "現場作業の承認済み時間が、プロジェクトのタスク別工数に反映されます",
+        "en": "Dynamics 365 Project Operations: Optimize Project Operations - Track real project progress from field execution"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Project Operations", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Project Operations",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Field Service と Project Operations を統合して使う組織**のプロジェクト マネージャー",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }]
+        },
+        "change": {
+          "text": "手作業の突合なしで、実績工数や進捗率が現場の実態を反映する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-18T00:00:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "自動的に有効化されるため、特別な対応は不要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "有効対象", "retrievedAt": "2026-10-18T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "承認済みの Field Service 作業時間が、**Project Operations のタスク レベルの WBS 追跡に直接反映**され、実績工数・進捗率・EAC・スケジュール差異が最新に保たれます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-18T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "承認済みの Field Service 時間が、プロジェクト タスクの WBS 工数追跡に反映される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "完了工数・残工数・進捗率・完了時見積工数・スケジュール差異を算出", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "リーフ タスクで計算し、サマリー タスクやルートへ自動集計", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "自動的に有効化される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "有効対象", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Field Service と Project Operations の統合を有効にしておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "時間実績がプロジェクト タスク レベルで連携されるシナリオが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Field Service と Project Operations の統合が有効な場合にのみ利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "既存機能との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "新しい実行ロジックや数式は導入されず、既存の WBS 作業追跡が Field Service の実行を含むようになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "納品状況の健全性評価、成果の予測、スケジュール リスクの特定に活用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "project-operations", "term": "Dynamics 365 Project Operations", "type": "product", "oneLine": { "text": "プロジェクトの作業分解構造（WBS）などで工数を追跡できる Dynamics 365 の製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "field-service", "term": "Field Service", "type": "product", "oneLine": { "text": "フィールド技術者の作業時間を記録・承認できる Dynamics 365 の製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "wbs", "term": "作業分解構造（WBS）", "type": "term", "oneLine": { "text": "プロジェクトの作業をタスク単位に分解して管理する構造。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "eac", "term": "EAC（完成時見積）", "type": "term", "oneLine": { "text": "プロジェクト完成時点での見積値を示す指標。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "一般提供はいつからですか？",
+          "answer": { "text": "Learn のリリース プランでは、一般提供は 2026 年 7 月 31 日と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "有効対象", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "Field Service の時間はすべて反映されますか？",
+          "answer": { "text": "対象は、プロジェクト タスク レベルで連携される承認済みの時間です。統合が有効であることも必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576798",
+        "learn": [
+          { "title": "フィールドの実行から実際のプロジェクト進捗状況を追跡する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/enterprise-resource-planning/dynamics365-project-operations/track-real-project-progress-field-execution", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
