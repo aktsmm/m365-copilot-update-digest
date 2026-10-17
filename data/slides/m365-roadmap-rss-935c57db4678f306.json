@@ -94,6 +94,20 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "ALTool の launchmcpserver コマンドで起動できる Model Context Protocol サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "ALTool commands", "retrievedAt": "2026-10-16T09:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "ALTool は Windows 以外の環境でも使えますか？",
+          "answer": { "text": "はい。ALTool はクロスプラットフォームのツールで、Visual Studio Code を完全に導入していないビルド エージェントでも単体で使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Overview", "retrievedAt": "2026-10-17T22:35:00Z" }] }
+        },
+        {
+          "question": "`al` コマンドと alc.exe の違いは何ですか？",
+          "answer": { "text": "`al` はツール パッケージが用意するエイリアスで、alc.exe のフル パスを指定せずに ALTool を実行するためのものです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool-package", "locator": "Get started", "retrievedAt": "2026-10-17T22:35:00Z" }] }
+        },
+        {
+          "question": "まず何から試すのがよいですか？",
+          "answer": { "text": "ビルド エージェントに NuGet パッケージを導入し、`al help` で使えるコマンドを確認してから、サンドボックスのパイプラインで試すのが進めやすいです。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573334",
         "learn": [
