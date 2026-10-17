@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3e07c371311e1d77",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Copilot Chat から Planner のタスクとプランを作成・参照可能に（展開中）",
+        "subtitleJa": "Copilot と Planner の間で、タスクやプランをまとめて管理できます",
+        "en": "Microsoft Copilot (Microsoft 365): Planner capabilities in Copilot chat (M365 Copilot)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-26",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Planner と Microsoft Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot のチャットから Planner のタスクやプランを作成・照会できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "展開中の機能で、利用者側に必須の作業は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot のチャットで、**Planner のタスクやプランの作成と情報の照会**ができます。Copilot と Planner を行き来せずに管理できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot チャットで Planner のタスクとプランを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot チャットで Planner の情報を照会できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Planner エージェントの利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Planner エージェントは管理者が PowerShell（AllowPlannerCopilot）で制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner エージェントの設定変更は、反映まで最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供状況は展開中（Rolling out）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）のデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner を使うチームで、まず小さなタスクの作成から試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner", "term": "Planner", "type": "product", "oneLine": { "text": "タスクとプランを管理する Microsoft 365 のアプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat", "term": "Copilot チャット", "type": "feature", "oneLine": { "text": "Microsoft Copilot で自然言語により依頼や質問ができるチャット。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Planner エージェントを管理者は制限できますか？",
+          "answer": { "text": "はい。Set-PlannerConfiguration の -AllowPlannerCopilot で有効・無効を切り替え、特定のセキュリティ グループに限定することもできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "どの環境で提供されますか？",
+          "answer": { "text": "ロードマップ上は、Worldwide（標準マルチテナント）のデスクトップ向けです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=516577",
+        "learn": [{ "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
