@@ -71,9 +71,9 @@ const TEXT = {
     demoNavLabel: "デモ一覧",
     unofficialBadge: "Unofficial update digest",
     headerLead: "非公式アップデートダイジェスト",
-    heroTitle: "Microsoft Copilot の更新を、埋もれさせない。",
+    heroTitle: "Microsoft Copilot の更新を、毎日ひと目で。",
     heroCopy:
-      "Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデートを継続収集し、重要更新と新着を分けて追えるように整理します。まずは今日 / 今週の重要更新を見て、必要に応じて直近の新着、製品別一覧、週間まとめへ進めます。",
+      "Microsoft 365 Copilot・Copilot Studio・Agent Builder の公開アップデートを自動で集め、日本語の要約と解説スライドで読める形にします。期間・種類・カテゴリで絞り込み、必要な更新だけを JSON / PDF / PPTX で持ち出せます。",
     statsUpdates: "追跡中の更新",
     statsUpdatesDetail: "重複除去後の累計件数",
     statsSources: "監視ソース",
@@ -168,9 +168,9 @@ const TEXT = {
     demoNavLabel: "Demo sites",
     unofficialBadge: "Unofficial update digest",
     headerLead: "Unofficial update digest",
-    heroTitle: "Keep Microsoft Copilot updates from getting buried.",
+    heroTitle: "Microsoft Copilot updates, at a glance.",
     heroCopy:
-      "This site continuously collects public Microsoft 365 Copilot, Copilot Studio, and Agent Builder updates, separating high-impact changes from recent arrivals. Start with the most important changes, then move into recent items, product views, and weekly summaries.",
+      "We collect public Microsoft 365 Copilot, Copilot Studio, and Agent Builder updates automatically and turn them into readable summaries and explainer slides. Filter by period, type, and category, then export just the updates you need as JSON, PDF, or PPTX.",
     statsUpdates: "Tracked updates",
     statsUpdatesDetail: "Deduplicated cumulative count",
     statsSources: "Sources",
