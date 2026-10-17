@@ -75,6 +75,20 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントを外部のツールやデータにつなぐための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "Note", "retrievedAt": "2026-10-15T16:15:00Z" }] } },
         { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Cowork が使えるデータや操作の範囲は、誰が決めますか？",
+          "answer": { "text": "ユーザーまたはグループのペルソナに設定済みの Dynamics 365 と Microsoft 365 のアクセス許可の範囲内で動作します。フィールド更新などはチェックポイントで確認・承認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "主な機能", "retrievedAt": "2026-10-17T21:30:00Z" }] }
+        },
+        {
+          "question": "Service アプリのインストールは誰が、何のために行いますか？",
+          "answer": { "text": "Microsoft 365 管理者がインストールと割り当てを管理し、Dynamics 365 管理者が環境に Microsoft Copilot を追加します。これらは別のタスクです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-service-agent", "locator": "サービス エージェントを有効にする", "retrievedAt": "2026-10-17T21:30:00Z" }] }
+        },
+        {
+          "question": "Cowork で Customer Service の環境はどう選びますか？",
+          "answer": { "text": "Cowork のカスタマイズにある Service プラグインの設定で環境を選択します。他の Copilot 体験での選択は Cowork に適用されない場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "環境を選択する", "retrievedAt": "2026-10-17T21:30:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571678",
         "learn": [
