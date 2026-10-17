@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-201716a59ac8fe72",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Viva Advanced Analysis のカスタム クエリで Copilot メトリクスが最新化",
+        "subtitleJa": "主要な Copilot メトリクスが 2〜3 日前の値まで見られるようになります",
+        "en": "Microsoft Viva: Fresh Copilot Metrics in Custom Person Queries & Reports- Viva Advanced Analysis"
+      },
+      "meta": {
+        "publishedJst": "2026-09-22",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Viva", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["viva"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Viva Advanced Analysis で Copilot 利用状況を分析する**アナリスト・管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot の利用状況を、より新しいデータで分析できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "提供開始のため、特別な設定は不要。クエリとレポートを実行すれば新しい値が反映される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "カスタム パーソン クエリとレポートの**主要な Copilot メトリクスが、現在日から 2〜3 日前までの値**になります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "カスタム パーソン クエリとレポートの主要 Copilot メトリクスが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "メトリックは Viva Insights Web アプリのクエリ作成時に [メトリック] ウィンドウから追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "冒頭", "retrievedAt": "2026-10-17T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "クエリ作成時に [メトリック] ウィンドウから Microsoft Copilot メトリックを追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "冒頭", "retrievedAt": "2026-10-17T21:55:00Z" }] },
+            { "text": "提供範囲は Web、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot 分析メトリックは、ユーザーが意図的に Copilot を操作した場合にカウントされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-17T21:55:00Z" }] },
+            { "text": "メトリック ルールの調整により、定義は組織ごとに異なる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "冒頭の注", "retrievedAt": "2026-10-17T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "同じ Copilot メトリックは Microsoft Copilot ダッシュボードや高度なレポートにも使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-17T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "導入状況の確認や、非アクティブな Copilot ユーザーの把握に新しい値を使う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "viva-advanced-analysis", "term": "Viva Advanced Analysis", "type": "product", "oneLine": { "text": "Viva Insights Web アプリでクエリを作成して分析するための機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "冒頭", "retrievedAt": "2026-10-17T21:55:00Z" }] } },
+        { "termKey": "person-query", "term": "カスタム パーソン クエリ", "type": "feature", "oneLine": { "text": "メトリックを選んで従業員単位のデータを分析するクエリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-metrics", "term": "Microsoft Copilot メトリック", "type": "term", "oneLine": { "text": "従業員が Microsoft 365 アプリで Copilot をどう使っているかを示す分析情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-17T21:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562017",
+        "learn": [{ "title": "高度な分析メトリック", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics#microsoft-copilot-metrics", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
