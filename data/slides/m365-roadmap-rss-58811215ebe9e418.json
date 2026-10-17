@@ -94,6 +94,20 @@
         { "termKey": "app-json", "term": "app.json", "type": "term", "oneLine": { "text": "AL プロジェクトの依存関係などを記述する構成ファイル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-symbol-search", "locator": "Searching the connected environment", "retrievedAt": "2026-10-15T17:10:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "接続環境がない場合、検索はどうなりますか？",
+          "answer": { "text": "失敗せずに明確なエラーが返ります。filters.source を workspace にして、ローカル プロジェクトを検索し直せます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-symbol-search", "locator": "Searching the connected environment", "retrievedAt": "2026-10-17T22:10:00Z" }] }
+        },
+        {
+          "question": "検索で見つけたオブジェクトをコードで使うには何が必要ですか？",
+          "answer": { "text": "結果の appId・appName・appPublisher・appVersion を app.json の dependencies に追加し、al_downloadsymbols でシンボルを取得します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-symbol-search", "locator": "Searching the connected environment", "retrievedAt": "2026-10-17T22:10:00Z" }] }
+        },
+        {
+          "question": "一度に取得できる結果数に上限はありますか？",
+          "answer": { "text": "limit の最大値は 200 件です。結果がそれを超えると truncated が true になるため、検索条件を絞り込みます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-symbol-search", "locator": "Return value", "retrievedAt": "2026-10-17T22:10:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573339",
         "learn": [{ "title": "Search AL symbols - al_symbolsearch", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-symbol-search", "locale": "en-us" }]
