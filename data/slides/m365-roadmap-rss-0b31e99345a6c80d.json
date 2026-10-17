@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0b31e99345a6c80d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Classic Outlook に新しい Copilot のエントリポイント（開発中）",
+        "subtitleJa": "アプリ間で共通の入口から、文脈に合った Copilot の操作を呼び出せます",
+        "en": "Outlook: New Copilot entry point in Classic Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["outlook"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Classic Outlook（デスクトップ）で Microsoft Copilot を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アプリ間で共通の入口から、作業の文脈に合った Copilot の操作を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため、対応は不要。提供時期の更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot の入口がインターフェース内に散らばらず、**作業の上に位置する共通のエントリポイント**になります。作業の文脈を理解し、関連するアクションを提示します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "アプリ間で一貫した Copilot のエントリポイントを導入", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "作業の上に位置し、その下にある文脈を理解する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft 365 全体で Copilot を一つにつながったシステムとして位置づける", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「開発中」で、提供月は未公表", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はデスクトップ版。Worldwide・GCC・GCC High・DoD が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現在の Outlook での Copilot",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Outlook ではメールの下書き、スレッドの要約、トーン改善のコーチングを利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリでの Copilot 機能", "retrievedAt": "2026-10-17T21:20:00Z" }] },
+            { "text": "Outlook や Teams では、開いているコンテンツを Copilot Chat が認識する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Outlook と Teams での Copilot Chat", "retrievedAt": "2026-10-17T21:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-entry-point", "term": "Copilot のエントリポイント", "type": "feature", "oneLine": { "text": "アプリ内で Copilot を呼び出すための入口。今回は作業の上に位置する共通の入口が導入される。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "classic-outlook", "term": "Classic Outlook", "type": "product", "oneLine": { "text": "従来型のデスクトップ版 Outlook。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "Microsoft 365 アプリ内で、メールの下書きやスレッドの要約などを支援する AI 機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリでの Copilot 機能", "retrievedAt": "2026-10-17T21:20:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ提供されますか？",
+          "answer": { "text": "ロードマップのステージは「開発中」で、提供月は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どのクラウド環境が対象ですか？",
+          "answer": { "text": "ロードマップでは Worldwide（Standard Multi-Tenant）、GCC、GCC High、DoD が対象で、プラットフォームはデスクトップです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567007",
+        "learn": [{ "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
