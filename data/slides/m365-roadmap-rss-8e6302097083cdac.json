@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8e6302097083cdac",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Mac 版 PowerPoint の Agent Mode で画像の参照が可能に",
+        "subtitleJa": "画像を添えて、Copilot にプレゼンテーションの作成を依頼できます",
+        "en": "Microsoft Copilot (Microsoft 365): Attach and reference an image when creating a presentation with Copilot in PowerPoint using Agent Mode."
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "categories": ["agents", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Mac"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Mac 版 PowerPoint で Copilot を使うプレゼンテーション作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "画像を指定して、Agent Mode にスライド作成を任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者が Agent Mode で画像を参照するだけで、特別な準備は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Mac 版 PowerPoint の Agent Mode で、プレゼンテーション作成時に**画像を参照**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Agent Mode でプレゼンテーションを作成する際、画像を添付して参照できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Mac 版 PowerPoint（Worldwide の標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Mac 版 PowerPoint で Copilot の Agent Mode を使い、作成を依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステータスは Launched（提供開始）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Agent Mode では Teams の会議やチャットも参照して作成できる（Windows・Web・Mac）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: Teams の会議またはチャットを参照", "retrievedAt": "2026-10-17T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロゴや製品写真など手元の画像を指定し、スライド案を作らせて試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "Agent Mode", "type": "feature", "oneLine": { "text": "PowerPoint の Copilot で、プレゼンテーションの作成を任せられるモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint", "retrievedAt": "2026-10-17T21:50:00Z" }] } },
+        { "termKey": "copilot-ppt", "term": "Copilot in PowerPoint", "type": "product", "oneLine": { "text": "PowerPoint 上でプレゼンテーションの作成を支援する Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint", "retrievedAt": "2026-10-17T21:50:00Z" }] } },
+        { "termKey": "worldwide", "term": "Worldwide (Standard Multi-Tenant)", "type": "term", "oneLine": { "text": "ロードマップ上の提供範囲で、標準のマルチテナント環境を指す。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "今回の対象は Mac 版 PowerPoint です。クラウド環境は Worldwide (Standard Multi-Tenant) です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Teams の会議やチャットも参照できますか？",
+          "answer": { "text": "Agent Mode では、Teams の会議やチャットを参照した作成も Windows・Web・Mac 向けに案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: Teams の会議またはチャットを参照", "retrievedAt": "2026-10-17T21:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555890",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
