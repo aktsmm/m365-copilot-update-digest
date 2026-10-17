@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-dfd224a92a9741cf",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Sales Development agent の構成を複製・共有可能に（開発中）",
+        "subtitleJa": "一度作った設定を、他の事業部門へ配布できます",
+        "en": "Dynamics 365 Sales: Seller experiences - Clone and share Sales Development agent configuration across teams"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Sales", "Microsoft Copilot"],
+        "categories": ["agents", "teams", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Sales",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**営業リーダー**と、Sales Development agent を作成・運用する担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プレイブックやガードレールを一度設定すれば、チーム間で共有・複製できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "プレイブック・ガイドライン・ガードレール・設定を他の事業部門へ配布でき、営業チーム全体で一貫した体験を提供できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "機能の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントのプレイブック、ガイドライン、ガードレール、設定を他の事業部門へ配布", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Teams で元のエージェントに依頼し、設定をファイルにエクスポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "エクスポートしたファイルを新しいエージェントに添付して設定をインポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "コピーは同期ではなくスナップショット。元の変更は自動反映されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "アップロード文書・FAQ・URL などの知識ソースはエクスポートに含まれない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ロードマップ上の提供対象は Worldwide（Standard Multi-Tenant）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "インポート後、知識ソースは対象エージェントに直接追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "配布元となる標準の設定（プレイブック・ガードレール）を先に整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-development-agent", "term": "Sales Development agent", "type": "product", "oneLine": { "text": "見込み客へのアウトリーチを継続的に支援する、Dynamics 365 Sales のセールス開発エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "ビジネス価値", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "guardrail", "term": "ガードレール", "type": "term", "oneLine": { "text": "組織のベストプラクティスとともに、エージェントの品質とコンプライアンスを保つための設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "ビジネス価値", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "snapshot", "term": "スナップショット", "type": "term", "oneLine": { "text": "コピー時点の設定で、元のエージェントとは同期されない複製。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、提供前の開発段階にあることを示す。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "複製したエージェントは元の設定の変更に追従しますか？",
+          "answer": { "text": "追従しません。コピーはスナップショットで、後からの変更は自動では適用されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "ナレッジ（FAQ や文書）も一緒に複製されますか？",
+          "answer": { "text": "含まれません。インポート後に対象エージェントへ直接追加します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576637",
+        "learn": [
+          { "title": "チーム間でのセールス開発エージェント設定のクローンおよび共有", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/clone-share-sales-development-agent-configuration-across-teams", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
