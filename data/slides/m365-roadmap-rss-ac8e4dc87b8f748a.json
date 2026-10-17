@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ac8e4dc87b8f748a",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Finance 向け ERP 分析の MCP を提供予定（開発中）",
+        "subtitleJa": "AI エージェントが ERP の分析データとツールを構造化された形で扱えます",
+        "en": "Dynamics 365 Finance: Business performance - MCP for ERP Analytics"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Finance", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Finance",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Finance でエージェントを作る人**と、財務・分析の担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントがユーザーと同じ定義・モデルで ERP の分析データを扱えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが、ユーザーと同じ**メトリックとディメンション**の定義で、ERP の分析データを分析に使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供予定の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ERP の分析データとツールへ、構造化された形でアクセスできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エージェントはユーザーと同じ定義とモデルを使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "主要なメトリックやディメンションにもアクセスできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存の Dynamics 365 ERP MCP サーバーを環境で有効にすると、エージェントに追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/build-agent-mcp", "locator": "前提条件", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Copilot Studio の「ツールの追加」から MCP サーバーを選んで接続する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/build-agent-mcp", "locator": "MCP サーバーをエージェントに追加する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "AI エージェントをさまざまなデータ システムに接続するためのオープン標準（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "erp-mcp", "term": "Dynamics 365 ERP MCP", "type": "feature", "oneLine": { "text": "エージェントが財務および運用アプリのデータとビジネス ロジックを操作するための MCP サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/build-agent-mcp", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "erp", "term": "ERP", "type": "term", "oneLine": { "text": "財務・サプライ チェーンなどの業務を統合して管理する基幹システム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進行中の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップは開発中で、提供時期の月は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存の Dynamics 365 ERP MCP とは何が違いますか？",
+          "answer": { "text": "既存のサーバーは財務および運用アプリのデータ操作とビジネス ロジックが対象です。今回は分析データとツールへのアクセスが対象と説明されています。", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/build-agent-mcp", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576762",
+        "learn": [
+          { "title": "Dynamics 365 ERP MCP を使用してエージェントを構築する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/build-agent-mcp", "locale": "ja-jp" },
+          { "title": "財務と運用アプリにモデル コンテキスト プロトコルを使用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
