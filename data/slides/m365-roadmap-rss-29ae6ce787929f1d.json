@@ -88,6 +88,20 @@
         { "termKey": "task-pane", "term": "タスク ペイン", "type": "term", "oneLine": { "text": "従来、エージェント生成物の確認のために移動していた別の領域。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/review-content-generated-agents-directly-pages", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "一般提供はいつ始まりましたか？",
+          "answer": { "text": "Learn のリリース プランでは、一般提供の開始日は 2026 年 4 月 1 日と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/review-content-generated-agents-directly-pages", "locator": "有効対象", "retrievedAt": "2026-10-17T21:40:00Z" }] }
+        },
+        {
+          "question": "エージェントの提案はそのまま適用されますか？",
+          "answer": { "text": "いいえ。提案はインラインで表示され、適用する前に評価および編集できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/review-content-generated-agents-directly-pages", "locator": "機能の詳細", "retrievedAt": "2026-10-17T21:40:00Z" }] }
+        },
+        {
+          "question": "自分のテナントで使えるリージョンや言語はどこで確認できますか？",
+          "answer": { "text": "Microsoft の「機能の対象地域の確認」レポートと「Explore Feature Language」レポートで確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/review-content-generated-agents-directly-pages", "locator": "地域 / 利用可能な言語", "retrievedAt": "2026-10-17T21:40:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573366",
         "learn": [{ "title": "エージェントによって生成されたコンテンツをページ上で直接確認する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/review-content-generated-agents-directly-pages", "locale": "ja-jp" }]
