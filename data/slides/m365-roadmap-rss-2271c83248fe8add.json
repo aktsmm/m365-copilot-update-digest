@@ -88,6 +88,38 @@
         { "termKey": "company-location", "term": "会社の所在地", "type": "term", "oneLine": { "text": "Shopify の企業に紐づく所在地。支払い条件や税 ID を持てる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2025wave1/smb/dynamics365-business-central/import-export-more-data-shopify-b2b-companies-company-locations", "locator": "機能の詳細", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "これまで Shopify Plus が必要だった B2B 機能は変わりますか？",
+          "answer": {
+            "text": "はい。以前は Plus が必要だった中核の B2B 機能が、Basic、Grow、Advanced プランでも動作するようになります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-17T21:40:00Z" }]
+          }
+        },
+        {
+          "question": "一般提供の開始日はいつですか？",
+          "answer": {
+            "text": "リリース プランには、管理者・作成者・アナリスト向けの一般公開日が 2026 年 7 月 8 日と記載されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "対象となる場合は有効（一般公開）", "retrievedAt": "2026-10-17T21:40:00Z" }]
+          }
+        },
+        {
+          "question": "既存の連携でプラン情報を更新しないとどうなりますか？",
+          "answer": {
+            "text": "既存の Shopify 利用者は、最新の B2B 利用可否を反映するためにコネクタのプラン情報の更新が必要と説明されています。それ以上の影響は記載がなく確認できていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/sell-business-customers-more-shopify-plans-b2b-company-sync", "locator": "機能の詳細", "retrievedAt": "2026-10-17T21:40:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573342",
         "learn": [
