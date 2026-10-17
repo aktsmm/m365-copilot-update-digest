@@ -771,6 +771,14 @@ function knownJapaneseRoadmapTitle(event) {
     return "Copilot の /mention で Dataverse レコードの説明を強化";
   }
 
+  if (/create dataverse agent users with microsoft entra agent identity/.test(text)) {
+    return "Microsoft Entra エージェント ID で Dataverse エージェント ユーザーを作成";
+  }
+
+  if (/use dynamics 365 sales skills in microsoft 365 copilot cowork/.test(text)) {
+    return "Microsoft 365 Copilot Cowork で Dynamics 365 Sales のスキルを利用";
+  }
+
   if (
     /use copilot in your search tab in the microsoft 365 copilot mobile app/.test(
       text,

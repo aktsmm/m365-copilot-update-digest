@@ -1,6 +1,6 @@
 {
   "date": "2026-10-17",
-  "generatedAt": "2026-10-17T04:24:24.906Z",
+  "generatedAt": "2026-10-17T04:28:40.484Z",
   "events": [
     {
       "id": "m365-roadmap-rss-2693adb28b6b02a8",
@@ -502,7 +502,7 @@
       "productArea": "Microsoft Dataverse",
       "section": "Microsoft Dataverse",
       "title": "Microsoft Dataverse: Activate Enterprise Data in Copilot - Create Dataverse agent users with Microsoft Entra agent identity",
-      "titleJa": "Microsoft 365 Copilot のセキュリティ・管理・分析機能を強化",
+      "titleJa": "Microsoft Entra エージェント ID で Dataverse エージェント ユーザーを作成",
       "titleEn": "Microsoft Dataverse: Activate Enterprise Data in Copilot - Create Dataverse agent users with Microsoft Entra agent identity",
       "summary": "Organizations can securely deploy AI agents to access and interact with Dataverse data by using enterprise‑managed Microsoft Entra agent identities. This feature enables agents to be provisioned as Dataverse agent users with dedicated, least‑privileged security roles based on their intended capabilities. This...",
       "summaryJa": "組織は、企業が管理する Microsoft Entra エージェント ID を使用して、AI エージェントを安全に展開し、Dataverse データにアクセスし、データと対話できます。この機能により、エージェントは、意図された機能に基づいて、専用の最小権限のセキュリティ ロールを持つ Dataverse エージェント ユーザーとしてプロビジョニングできます。これは...",
@@ -619,7 +619,7 @@
       "productArea": "Dynamics 365 Sales",
       "section": "Dynamics 365 Sales",
       "title": "Dynamics 365 Sales: Copilot and AI innovation - Use Dynamics 365 Sales skills in Microsoft 365 Copilot Cowork",
-      "titleJa": "Dynamics 365 Sales の更新",
+      "titleJa": "Microsoft 365 Copilot Cowork で Dynamics 365 Sales のスキルを利用",
       "titleEn": "Dynamics 365 Sales: Copilot and AI innovation - Use Dynamics 365 Sales skills in Microsoft 365 Copilot Cowork",
       "summary": "As an admin, you can control who can access Copilot Cowork in your organization. The Dynamics 365 Sales plugin is installed by default in Copilot Cowork and available to all users who have access to Cowork. As a seller, you can use the sales skills in Copilot Cowork to: Understand customer, opportunity, and pipeline...",
       "summaryJa": "管理者は、組織内の誰が Copilot Cowork にアクセスできるかを制御できます。 Dynamics 365 Sales プラグインは、Copilot Cowork にデフォルトでインストールされ、Cowork にアクセスできるすべてのユーザーが使用できます。販売者は、Copilot Cowork の販売スキルを次の目的で使用できます。 顧客、機会、パイプラインを理解する...",
@@ -705,6 +705,16 @@
       "summaryJa": "この機能は、会話が提供されないままになる 2 つの主要なシナリオをインテリジェントに検出することにより、キューの処理を強化します。 キューが営業時間外に移行する: システムは、終了時間前にキューに入ったアクティブな会話を継続的に監視します。キューが次のように移行すると...",
       "summaryEn": "This capability enhances queue handling by intelligently detecting two key scenarios where conversations would otherwise remain unserved: Queue transitions to out-of-operating hours: The system continuously monitors active conversations that entered a queue before closing time. If the queue transitions to...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576759",
+      "relatedDocuments": [
+        {
+          "title": "キューが閉じたり、スタッフが割り当てられていないときに待機中の会話を処理する",
+          "sourceTitle": "Handle waiting conversations when queues close or become unstaffed",
+          "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed#feature-details",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=576759",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で、キューが閉じる／無人になる際の待機中会話の処理を説明する機能詳細を確認。日本語版は GET で 200 を確認した。ページには 2026 年 10 月時点でアーカイブ済みとの注意書きがある。"
+        }
+      ],
       "publishedAt": "2026-10-17T12:00:00.000Z",
       "capturedAt": "2026-10-16T21:06:50.805Z",
       "sourceLastSeen": "2026-10-16T21:06:50.805Z",
@@ -726,17 +736,7 @@
         "作成者向け"
       ],
       "importanceScore": 106,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "キューが閉じたり、スタッフが割り当てられていないときに待機中の会話を処理する",
-          "sourceTitle": "Handle waiting conversations when queues close or become unstaffed",
-          "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed#feature-details",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=576759",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で、キューが閉じる／無人になる際の待機中会話の処理を説明する機能詳細を確認。日本語版は GET で 200 を確認した。ページには 2026 年 10 月時点でアーカイブ済みとの注意書きがある。"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-57fa4991b9efc61b",
