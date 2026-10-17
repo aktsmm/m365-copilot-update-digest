@@ -107,6 +107,38 @@
         { "termKey": "tasks-pane", "term": "Tasks ペイン", "type": "feature", "oneLine": { "text": "選んだエージェントのタスクを状態別に表示し、対応が必要なものを上部に示す画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review from the Tasks pane", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "権限要求のタスクを停止すると、再開できますか？",
+          "answer": {
+            "text": "いいえ。停止したタスクは再開できず、ドキュメントが未完了のまま残ることがあるため、手動で仕上げる必要があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Stop a task", "retrievedAt": "2026-10-17T22:30:00Z" }]
+          }
+        },
+        {
+          "question": "エージェントを使う権限がないユーザーには何が見えますか？",
+          "answer": {
+            "text": "ドキュメント上のデータ レビュー バーでエージェントが変更したデータの存在は確認できますが、Tasks ペインでタスクを開くリンクやボタンは表示されません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Review directly on pages", "retrievedAt": "2026-10-17T22:30:00Z" }]
+          }
+        },
+        {
+          "question": "権限を付与する代わりにエージェントへ指示を出せますか？",
+          "answer": {
+            "text": "タスクが止まったときは指示を入力して再開させることもできますが、指示は現在のステップにのみ適用され、保存や再利用はされません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/supervise-agent-tasks", "locator": "Give instructions to the agent", "retrievedAt": "2026-10-17T22:30:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573370",
         "learn": [
