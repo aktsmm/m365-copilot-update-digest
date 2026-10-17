@@ -88,6 +88,38 @@
         { "termKey": "link-unfurling", "term": "リンク展開", "type": "term", "oneLine": { "text": "URL を貼り付けたとき、アプリが追加情報やアクションを持つカードで応答する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locator": "冒頭", "retrievedAt": "2026-10-15T21:20:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "リンク展開の結果は、更新がすぐ反映されますか？",
+          "answer": {
+            "text": "いいえ。リンク展開の結果は 30 分間キャッシュされるため、元の内容を変えてもすぐには反映されない場合があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locator": "リンク展開（キャッシュ）", "retrievedAt": "2026-10-17T21:25:00Z" }]
+          }
+        },
+        {
+          "question": "アプリが複数のカードで応答した場合はどうなりますか？",
+          "answer": {
+            "text": "複数のカードで応答しても、最初のカード応答のみが使われます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locator": "invoke 要求の処理", "retrievedAt": "2026-10-17T21:25:00Z" }]
+          }
+        },
+        {
+          "question": "リンク展開に登録するドメインに制限はありますか？",
+          "answer": {
+            "text": "はい。ワイルドカードは使えますが、*.com のような最上位ドメインや、*.onmicrosoft.com のように管理外のドメインを含む指定は認められません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/messaging-extensions/how-to/link-unfurling", "locator": "アプリ マニフェストにリンク展開を追加する", "retrievedAt": "2026-10-17T21:25:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=515465",
         "learn": [
