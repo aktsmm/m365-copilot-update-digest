@@ -96,6 +96,20 @@
         { "termKey": "sensitivity-label", "term": "秘密度ラベル", "type": "term", "oneLine": { "text": "Office for the web などで、ファイルに適用して保護設定を割り当てるラベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-sharepoint-onedrive-files", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "シミュレーションの一致ファイルが多すぎる場合はどうなりますか？",
+          "answer": { "text": "一致ファイルが 20,000,000 個を超えると、ポリシーをオンにしてラベルを適用できません。一致が少なくなるようポリシーを見直し、シミュレーションを再実行します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "シミュレーション モードの詳細", "retrievedAt": "2026-10-16T22:55:00Z" }] }
+        },
+        {
+          "question": "開いているファイルも自動ラベル付けされますか？",
+          "answer": { "text": "開いているセッションの一部であるファイルは自動ラベル付けできません。リスト アイテムへの添付も現在は対象外です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "自動ラベル付けポリシーの制限", "retrievedAt": "2026-10-16T22:55:00Z" }] }
+        },
+        {
+          "question": "自動ラベル付けで、ファイルの変更日や変更者は変わりますか？",
+          "answer": { "text": "いいえ。シミュレーション時もラベル適用時も、変更日・変更者の既存の値は変更されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "自動ラベル付けポリシーの制限", "retrievedAt": "2026-10-16T22:55:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567890",
         "learn": [
