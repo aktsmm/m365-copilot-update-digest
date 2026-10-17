@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e2202e54e15358e5",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "管理センターに Copilot Connectors の利用状況レポートが登場（開発中）",
+        "subtitleJa": "コネクタが Microsoft Copilot でどれだけ使われているかを把握できます",
+        "en": "Microsoft 365 admin center: Usage reports – Microsoft 365 Copilot Connectors"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents", "admin"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft 365 管理者**と、Copilot Connectors を展開・運用する担当者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "change": { "text": "組織・コネクタ・ユーザー単位でコネクタの利用状況を確認し、投資判断に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "事前対応は不要。管理センターの［レポート］→［使用状況］で確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "レポートを表示する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理センターで Copilot Chat・エージェント・検索を通じた**コネクタの利用状況**を、傾向とテーブルで確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "レポートを解釈する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "レポートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "組織・コネクタ・ユーザーの各レベルで、利用状況と傾向を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Copilot Chat、エージェント、Copilot 検索での利用を対象に集計", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ユーザー アクティビティから 1 時間以内にデータが更新される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn ではパブリック プレビューとされ、展開や機能は変更される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭の注", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "プロンプト送信とコネクタに基づく応答があって初めてアクティブ使用になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "FAQ", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "既定ではユーザー名などの固有情報は非表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "ユーザー アクティビティ テーブル", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "確認できる指標",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "期間は過去 7 日間または 30 日間。アクティブ ユーザーや応答数を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "レポートを解釈する", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ユーザー表は過去 180 日間に Copilot ライセンスを持った全ユーザーが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "FAQ", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connectors", "term": "Copilot Connectors", "type": "feature", "oneLine": { "text": "組織のコンテンツに基づく Copilot の応答（引用付き）を可能にするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "レポートを解釈する", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "usage-report", "term": "使用状況レポート", "type": "feature", "oneLine": { "text": "Microsoft 365 管理センターで、組織内のサービス利用状況を確認できるレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップ上で、機能が開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        { "question": "アクティブな使用としてカウントされる操作は？", "answer": { "text": "Microsoft Copilot ライセンスを持つユーザーがプロンプトを送り、コネクタに基づく応答を受け取った場合です。アプリを開くだけではカウントされません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "FAQ", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "question": "レポートはどこで確認できますか？", "answer": { "text": "管理センターの［レポート］→［使用状況］で、Microsoft Copilot の［コネクタ］を選択します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "レポートを表示する", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "question": "個々のユーザー名も見えますか？", "answer": { "text": "既定では非表示です。使用状況レポートの設定で表示する方法が Learn に案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "ユーザー アクティビティ テーブル", "retrievedAt": "2026-10-18T00:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=519571",
+        "learn": [
+          { "title": "Microsoft 365 Copilot コネクタの使用状況レポート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
