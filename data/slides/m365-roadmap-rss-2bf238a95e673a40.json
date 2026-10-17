@@ -104,6 +104,38 @@
         { "termKey": "mcp", "term": "MCP（Model Context Protocol）", "type": "term", "oneLine": { "text": "AI エージェントがツールや外部データと連携するためのプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "ALMCP", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "--noauth を付ければ接続設定は不要になりますか？",
+          "answer": {
+            "text": "いいえ。--noauth は MCP サーバー側の認証処理を省くだけで、接続先は launch.json か BC_SERVER_* 環境変数で別途指定する必要があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "Headless authentication", "retrievedAt": "2026-10-17T21:50:00Z" }]
+          }
+        },
+        {
+          "question": "AL LSP サーバーのログは、どこで確認できますか？",
+          "answer": {
+            "text": "標準のログ ファイル（--logfile）に書き出され、あわせて stderr にも出力されます。LSP ホストが自身の診断ストリームに表示するのが一般的です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-17T21:50:00Z" }]
+          }
+        },
+        {
+          "question": "プロファイリング用 MCP プロキシのログ出力先も同じですか？",
+          "answer": {
+            "text": "いいえ。launchprofilingmcpproxy の既定の出力先は %LOCALAPPDATA%/Microsoft/ALLanguageServer/profilingmcpproxy.log で、AL MCP サーバーの ~/.al-mcp/almcp.log とは異なります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "launchprofilingmcpproxy", "retrievedAt": "2026-10-17T21:50:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573349",
         "learn": [{ "title": "ALTool で AL 拡張機能を開発する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locale": "ja-jp" }]
