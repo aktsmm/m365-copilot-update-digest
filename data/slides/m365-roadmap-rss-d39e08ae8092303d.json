@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d39e08ae8092303d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Field Service で計画保守の需要予測を開発中",
+        "subtitleJa": "作業指示書の作成前に、保守の需要を先読みできるようになります",
+        "en": "Dynamics 365 Field Service: Forecast planned maintenance demand"
+      },
+      "meta": {
+        "publishedJst": "2026-09-24",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Field Service"],
+        "categories": ["dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Web"],
+        "productArea": "Dynamics 365 Field Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Field Service の管理者**と、保守計画・サービス運用の担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "作業指示書の作成前から保守需要を見通し、人員・スキル・部品・スケジュールを早めに準備できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため、今すぐの対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "保守需要を**作業指示書の作成前から**見通せるため、人員・スキル・部品・スケジュールの準備を前倒しできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "想定される範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "先を見通した保守予測で、予定された作業への早期の可視性を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "人員・スキル・部品・スケジュールの準備を早められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Field Service は契約に基づき、定期保守の作業指示書を自動生成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "サービス提供モデル", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在は開発中の段階で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）。Android・iOS・デスクトップ・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "予防保守は契約の間隔で作業指示書を自動生成する仕組みが既にある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "サービス提供モデル", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+            { "text": "保守契約・資産・部品の登録状況を、今のうちに棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "field-service", "term": "Dynamics 365 Field Service", "type": "feature", "oneLine": { "text": "顧客の場所でのオンサイト サービスを組織が提供できるよう支援するビジネス アプリケーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "冒頭", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "work-order", "term": "作業指示書", "type": "term", "oneLine": { "text": "客先で技術者が実行する必要のあるサービス作業を定義するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "主な機能", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "preventive", "term": "予防的（契約に基づく）保守", "type": "term", "oneLine": { "text": "契約に基づく間隔で作業指示書を自動生成し、設備のダウンタイムを減らす提供モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "サービス提供モデル", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり、まだ提供されていないことを示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供はいつ頃になりますか？",
+          "answer": { "text": "ロードマップには提供月の記載がなく、現時点では開発中の段階です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存の予防保守（契約）とどう違いますか？",
+          "answer": { "text": "既存の予防保守は契約の間隔で作業指示書を自動生成します。今回の機能は、作業指示書の作成前に需要を見通すためのものです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locator": "サービス提供モデル", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571668",
+        "learn": [{ "title": "Dynamics 365 Field Service の概要", "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
