@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f4f972924451d000",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 ERP MCP で最適なツール実行経路を選択可能に（開発中）",
+        "subtitleJa": "エージェントの不要なツール呼び出しを減らし、性能向上を狙います",
+        "en": "Dynamics 365 Finance and Operations cross-app: Boost productivity with Copilot - Boost agent performance with optimal tool execution paths in Dynamics 365 ERP MCP"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Finance and Operations", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Finance and Operations",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 ERP MCP サーバーでエージェントを作る人**（財務・運用アプリの開発者）", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "Roadmap 説明文" }] },
+        "change": { "text": "LLM が必要以上のツール呼び出しを選びにくくなり、エージェントの性能向上が見込める", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "Roadmap 説明文" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供開始の告知を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "動的ツールの実行順序が**最適な実行経路**に近づき、**余分なツール呼び出しを減らして**エージェントの性能を高めます", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "Roadmap 説明文" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Dynamics 365 ERP MCP サーバーの動的ツールを対象にした改善", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "Roadmap 説明文" }] },
+            { "text": "LLM が複数のツール呼び出し手順から選べる場面で、実行経路を最適化", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "Roadmap 説明文" }] },
+            { "text": "動的ツールはデータ・フォーム・アクションの 3 カテゴリで構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "動的 MCP ツール", "retrievedAt": "2026-10-17T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "ステージ" }] },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "タグ" }] },
+            { "text": "MCP サーバーはクラウド ホスト環境 (CHE) では非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "前提条件", "retrievedAt": "2026-10-17T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "前提: 財務・運用アプリ 10.0.47 / 10.0.46 PQU-2 / 10.0.45 PQU-7 以上", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "前提条件", "retrievedAt": "2026-10-17T21:10:00Z" }] },
+            { "text": "データ ツールで済む操作は、エージェントの指示でツール選択を案内すると性能が上がる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "データ ツール", "retrievedAt": "2026-10-17T21:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "erp-mcp", "term": "Dynamics 365 ERP MCP サーバー", "type": "product", "oneLine": { "text": "エージェントがデータ操作を行い、財務・運用アプリのビジネス ロジックにアクセスするための動的フレームワーク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "冒頭", "retrievedAt": "2026-10-17T21:10:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "AI エージェントをさまざまなデータ システムに接続するオープン標準（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "冒頭", "retrievedAt": "2026-10-17T21:10:00Z" }] } },
+        { "termKey": "dynamic-tools", "term": "動的ツール", "type": "feature", "oneLine": { "text": "データ・フォーム・アクションの 3 カテゴリで、財務・運用アプリを操作するツール群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "動的 MCP ツール", "retrievedAt": "2026-10-17T21:10:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で開発が進められている段階を示すラベル。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "ステージ" }] } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中で、提供時期は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576755", "locator": "ステージ" }] }
+        },
+        {
+          "question": "従来の静的 MCP サーバーも対象ですか？",
+          "answer": { "text": "ソースが対象とするのは動的ツールです。静的サーバーは 2026 年 10 月 1 日に終了と Learn に記載があり、新しい動的サーバーの利用が案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locator": "前提条件 Note", "retrievedAt": "2026-10-17T21:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576755",
+        "learn": [
+          { "title": "財務と運用アプリにモデル コンテキスト プロトコルを使用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
