@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-69411d4626bce82e",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dynamics 365 ERP で Copilot Cowork が洞察から実行までを支援",
+        "subtitleJa": "ERP データとメール・文書をまたぐ業務を、Cowork に任せられます",
+        "en": "Dynamics 365 Finance and Operations cross-app: Boost productivity with Copilot - Use Copilot Cowork to orchestrate insights and actions across Dynamics 365 ERP"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Finance and Operations", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Finance and Operations",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Finance and Operations を使う業務担当者**と、Copilot Cowork の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "change": { "text": "ERP データの取得や操作、メール・文書をまたぐ業務の調整を、Cowork に依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、管理者によるプラグインの有効化と環境の接続が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "Dynamics 365 ERP アプリ プラグインを有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Cowork が **ERP データの取得・操作と、メールや文書にまたがる業務ワークフローの調整**を担います", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プラグインが Dynamics 365 ERP MCP サーバー経由で Cowork と財務・運用環境を接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Cowork に ERP データの取得や操作の実行を依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "既存のセキュリティ ロールとデータ アクセス許可に従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "手順 3 の注", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cowork の Dynamics 365 ERP Apps プラグインを「Cowork に追加」で取得", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "手順 3", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "設定画面で財務・運用環境を選び、サインインと同意を完了", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "手順 3", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ERP 側の「許可された MCP クライアント」に Cowork のアプリ ID を追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "手順 2", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "フロンティア プレビュー プログラムへの登録と Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "前提条件", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "管理センターの Dataverse 設定の有効化が必要。反映に最大 1 時間かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "Copilot Dataverse 設定を有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "財務・運用環境で ERP MCP サーバーが有効であることが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "財務および運用環境の要件", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ユーザーに Dataverse の Finance and Operations Basic ユーザー ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "Dataverse ユーザー ロールの要件", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず少人数のユーザーと 1 つの環境で接続を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "エージェント エクスペリエンスを通じて業務データを操作できる Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "erp-mcp", "term": "Dynamics 365 ERP MCP サーバー", "type": "feature", "oneLine": { "text": "Cowork を財務および運用環境に接続するサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "概要", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "frontier", "term": "フロンティア プレビュー プログラム", "type": "term", "oneLine": { "text": "Cowork を使うために、テナントの登録が必要なプログラム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "前提条件", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "プラグインがカタログに表示されない場合は？",
+          "answer": { "text": "テナントがフロンティア プレビュー プログラムに未登録か、ERP アプリ パッケージが有効でない可能性があります。解消しなければ Microsoft サポートに連絡します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "一般的な問題", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "ユーザーは権限外のデータも見られますか？",
+          "answer": { "text": "いいえ。既存のセキュリティ ロールとデータ アクセス許可が尊重され、すでにアクセスできるデータのみが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locator": "手順 3 の注", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576838",
+        "learn": [{ "title": "Copilot Cowork (フロンティア) の Dynamics 365 ERP アプリ プラグインを有効にする", "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/enable-copilot-cowork-erp", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
