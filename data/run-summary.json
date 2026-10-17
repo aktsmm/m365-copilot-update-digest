@@ -1,19 +1,13 @@
 {
-  "generatedAt": "2026-10-17T04:29:55.956Z",
-  "lastCheckedAt": "2026-10-17T04:29:55.956Z",
+  "generatedAt": "2026-10-17T04:30:19.723Z",
+  "lastCheckedAt": "2026-10-17T04:30:19.723Z",
   "sourceCount": 5,
   "totalEvents": 2375,
   "newEventCount": 0,
-  "errorCount": 1,
-  "errors": [
-    {
-      "sourceId": "m365-roadmap-rss",
-      "sourceName": "Microsoft 365 Roadmap",
-      "message": "HTTP 403"
-    }
-  ],
+  "errorCount": 0,
+  "errors": [],
   "coverage": {
-    "status": "partial",
+    "status": "complete",
     "sources": [
       {
         "sourceId": "copilot-studio-techcommunity-blog",
@@ -37,8 +31,9 @@
       },
       {
         "sourceId": "m365-roadmap-rss",
-        "status": "failed",
-        "parsedCount": 0
+        "status": "complete",
+        "parsedCount": 556,
+        "totalCount": 556
       }
     ]
   },
