@@ -106,6 +106,20 @@
         { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "エージェントがファイル、会議、メッセージなどの作業成果物を理解するのを助ける仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "冒頭", "retrievedAt": "2026-10-15T21:10:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Dataverse のデータは誰にでも見えてしまいますか？",
+          "answer": { "text": "いいえ。Microsoft Copilot が返すのは、そのユーザーにアクセスが許可されている Dataverse データのみです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "Considerations", "retrievedAt": "2026-10-16T22:55:00Z" }] }
+        },
+        {
+          "question": "管理者が有効にする設定は Microsoft 365 管理センターだけですか？",
+          "answer": { "text": "いいえ。Power Platform 管理者による環境の Copilot 設定や Dataverse 検索などの有効化も前提条件です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-intelligence", "locator": "前提条件", "retrievedAt": "2026-10-16T22:55:00Z" }] }
+        },
+        {
+          "question": "Outlook や Word でも使えますか？",
+          "answer": { "text": "はい。ただしパブリック プレビュー中は、Outlook は Default mode、Word は Chat のみの Copilot 設定で Dataverse データを照会する旨が記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-data-copilot", "locator": "サポートされているエクスペリエンス", "retrievedAt": "2026-10-16T22:55:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560539",
         "learn": [
