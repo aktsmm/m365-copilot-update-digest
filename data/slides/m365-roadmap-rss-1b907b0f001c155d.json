@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1b907b0f001c155d",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Copilot の回答内の選択範囲だけを指定して質問可能に（展開中）",
+        "subtitleJa": "回答の一部だけを選び、その部分に絞って Copilot に依頼できます",
+        "en": "Microsoft Copilot (Microsoft 365): Ask Copilot about highlighted response content"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の回答を読んで使う人**（Web 版の利用者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "回答全体ではなく、気になる一節だけを深掘りでき、広すぎる回答を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は管理者の対応事項の記載はなく、展開を待てばよい", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "回答中の**文・段落・表を選択**し、その部分だけについて説明・要約・翻訳・次のステップなどを Copilot に依頼できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "回答内の文・段落・表を選び、その選択範囲だけを対象に依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "選択内容はプロンプトにプレビューされ、送信前に編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "説明・要約・翻訳・次のステップなど、確認中の箇所に合わせた応答が得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "クラウド環境は Worldwide (Standard Multi-Tenant)、段階は「展開中」", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "長い回答の中で、表の一部や特定の段落だけを要約・翻訳したいときに試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "ロードマップ上は「Microsoft Copilot (Microsoft 365)」として掲載されている Copilot のチャット体験。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "selection", "term": "選択範囲", "type": "feature", "oneLine": { "text": "回答中で選んだ文・段落・表。プロンプトにプレビューされ、編集できる。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "ロードマップ上の対象プラットフォームは Web です。クラウド環境は Worldwide (Standard Multi-Tenant) です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "選択した内容は送信前に変更できますか？",
+          "answer": { "text": "はい。選択内容はプロンプトにプレビューされ、送信前に編集できると説明されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=522616",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
