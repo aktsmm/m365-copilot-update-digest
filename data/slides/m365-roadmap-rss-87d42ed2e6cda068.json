@@ -84,6 +84,20 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェント クライアントが外部アプリに接続するためのモデル コンテキスト プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "冒頭", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "現時点で、エージェント経由の ERP アクセスを管理者はどう制御できますか？",
+          "answer": { "text": "ユーザーに割り当てたロール・職務・権限がそのまま適用され、権限は昇格されません。接続できるエージェント クライアントは「許可された MCP クライアント」で制御できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "承認とアクセス制御", "retrievedAt": "2026-10-17T22:30:00Z" }] }
+        },
+        {
+          "question": "エージェントが行った操作は誰の権限で実行されますか？",
+          "answer": { "text": "認証済みユーザーのアイデンティティで実行されます。自律型エージェントは独自のアイデンティティを持ち、その権限が適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/fin-ops-core/dev-itpro/copilot/mcp/mcp-security", "locator": "Authentication", "retrievedAt": "2026-10-17T22:30:00Z" }] }
+        },
+        {
+          "question": "提供時期が決まっていない機能に、今どう備えればよいですか？",
+          "answer": { "text": "エージェント経由で使うユーザーの現行ロールと権限を棚卸しし、許可する MCP クライアントを見直しておくのが現実的です。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571677",
         "learn": [
