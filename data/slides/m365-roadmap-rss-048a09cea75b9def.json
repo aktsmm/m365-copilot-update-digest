@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-048a09cea75b9def",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams 会議にファイルやリンクを追加して共有できる Meeting Shared Files（開発中）",
+        "subtitleJa": "会議に関連資料を追加し、参加者全員へ自動で共有できます",
+        "en": "Microsoft Teams: Meeting Shared Files"
+      },
+      "meta": {
+        "publishedJst": "2026-09-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議を主催・準備する人**と、会議で Facilitator を使う参加者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会議の資料を一か所にまとめて共有でき、会議中の AI も資料を根拠に回答できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "derived", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議に**関連ファイルやリンクを追加**すると、参加者全員へ自動的に共有されます。Facilitator などの会議中の AI は、それらを根拠に質問へ回答します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議にファイルとリンクを追加し、参加者全員へ自動で共有する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "会議中の AI（Facilitator など）が、追加したファイルを根拠に回答や支援を行う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供対象: Worldwide（Standard Multi-Tenant）の Desktop・Mac・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供開始の時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行の Facilitator は、Microsoft Copilot ライセンスを持つユーザーだけが開始できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "ファシリテーターの制限事項", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "現行の Facilitator は、1 対 1 チャット、グループ チャット、外部の会議では未サポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "ファシリテーターの制限事項", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Facilitator は Teams 管理センターで許可・ブロックを管理でき、既定では許可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議にファシリテーターを許可する", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "会議で Facilitator を使うには、Teams の Loop エクスペリエンスが有効である必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議の Facilitator 用に Teams で Loop エクスペリエンスを有効にする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "meeting-shared-files", "term": "Meeting Shared Files", "type": "feature", "oneLine": { "text": "会議に関連ファイルやリンクを追加し、参加者全員へ自動的に共有する Teams の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "facilitator", "term": "Facilitator", "type": "feature", "oneLine": { "text": "会議の議題の提示、進行の追跡、ハイライトの記録を支援する AI 搭載エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "AI が回答するときに、特定のファイルなどを根拠として参照すること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり提供開始前であることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期は示されていません。ロードマップ項目の更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Facilitator は誰でも使えますか？",
+          "answer": { "text": "Facilitator を開始できるのは Microsoft Copilot ライセンスを持つユーザーです。ライセンスのないユーザーも、プロンプトと応答を見ることはできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "ファシリテーターの制限事項", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570427",
+        "learn": [
+          { "title": "Microsoft Teams でファシリテーターを設定する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
