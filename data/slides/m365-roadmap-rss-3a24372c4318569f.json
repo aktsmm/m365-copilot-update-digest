@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3a24372c4318569f",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Entra agent identity で Dataverse エージェントユーザーを作成可能に",
+        "subtitleJa": "AI エージェントに最小権限で Dataverse データを扱わせられます",
+        "en": "Microsoft Dataverse: Activate Enterprise Data in Copilot - Create Dataverse agent users with Microsoft Entra agent identity"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Dataverse", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "work-iq"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Dataverse",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dataverse 環境の管理者**と、エージェントの作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "組織が管理するエージェント ID で、エージェントに Dataverse データへ安全にアクセスさせられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "使うなら、環境にエージェントを追加しセキュリティ ロールを割り当てる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザーの作成 (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Microsoft Entra の**エージェント ID** を持つエージェントを、Dataverse 環境のエージェント ユーザーとして追加できます。機能に応じた最小権限のロールで、データを安全に扱わせられます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            { "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576843", "locator": "説明", "retrievedAt": "2026-10-17T20:30:00Z" },
+            { "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザー (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }
+          ]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェント ユーザーは Entra エージェント ID のエージェント アイデンティティを持つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザー (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }] },
+            { "text": "データアクセスを得るため、エージェントを Dataverse 環境に追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザー (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }] },
+            { "text": "エージェントの機能に応じた最小権限のセキュリティ ロールを割り当てる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Power Platform 管理センター → 環境 → 設定 → ユーザー + 権限 → エージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザーの作成 (プレビュー) 手順 1〜6", "retrievedAt": "2026-10-17T20:30:00Z" }] },
+            { "text": "「+ エージェントの追加」で対象を選び、セキュリティ ロールを選んで保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザーの作成 (プレビュー) 手順 7〜10", "retrievedAt": "2026-10-17T20:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "事前に Microsoft Entra エージェント ID でエージェント ID を作成しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザーの作成 (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }] },
+            { "text": "Learn のエージェント ユーザー手順はプレビュー表記で、本番用途は想定されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "Important", "retrievedAt": "2026-10-17T20:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他のユーザー種別との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "通常の同期ユーザーは Microsoft Entra ID から同期されるユーザー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "ユーザーの種類", "retrievedAt": "2026-10-17T20:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "最初は読み取りなど必要最小限の権限のロールで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dataverse-agent-user", "term": "エージェント ユーザー", "type": "feature", "oneLine": { "text": "Entra のエージェント アイデンティティを持ち、データアクセスのために Dataverse 環境へ追加されるユーザー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザー (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }] } },
+        { "termKey": "entra-agent-id", "term": "Microsoft Entra agent identity", "type": "term", "oneLine": { "text": "Microsoft Entra エージェント ID 内でエージェントに付与される ID。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザー (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }] } },
+        { "termKey": "dataverse", "term": "Dataverse", "type": "product", "oneLine": { "text": "ロードマップ上で、データアクセス先となる Microsoft Dataverse（Power Platform のデータ基盤）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "エージェント ユーザーの追加はどこで行いますか？",
+          "answer": {
+            "text": "Power Platform 管理センターで環境を選び、設定の「ユーザー + 権限」から「エージェント」を開いて追加します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザーの作成 (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }]
+          }
+        },
+        {
+          "question": "エージェント ID はどう作成しますか？",
+          "answer": {
+            "text": "Microsoft Entra エージェント ID プラットフォームの「エージェント ID の作成」の手順で作成します。Learn に Microsoft Graph API の手順があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users", "locator": "エージェント ユーザーの作成 (プレビュー)", "retrievedAt": "2026-10-17T20:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576843",
+        "learn": [{ "title": "ユーザーの作成（エージェント ユーザー）", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/create-users#agent-users-preview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
