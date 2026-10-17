@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d645ccc34cf7ae90",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dynamics 365 Sales agent 内で商談エージェントの洞察についてチャット可能に（提供開始）",
+        "subtitleJa": "Sales agent の中から商談リサーチについて質問できます",
+        "en": "Dynamics 365 Sales: Opportunity acceleration - Chat about sales opportunity agent insights from inside Sales agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Sales", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Sales",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Sales の営業担当者**と、その管理者・作成者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "有効対象 / 機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "change": { "text": "会議準備やステージ移行などの場面に合わせ、必要な深さの分析をその場で得られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "公開情報では管理者の設定手順は示されていない", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "全体", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Sales agent から商談リサーチについて質問でき、**まず簡潔で行動につながる洞察**を確認し、必要なときだけ深い分析を依頼できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "コンテキストで質問: Sales agent から商談リサーチについて質問できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "まず簡潔に: 行動につながる示唆を提示し、詳しい分析は必要なときだけ依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web 版の Dynamics 365 Sales で Sales agent を開き、商談について質問する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "会議の準備、ステージ移行、確認したい特定のリスクなど、場面に応じたガイダンスを得る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "回答を探す時間が減り、重要な段階での販売者の信頼度が高まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-agent", "term": "Sales agent", "type": "feature", "oneLine": { "text": "Dynamics 365 Sales で営業活動を支援するエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "opportunity", "term": "商談（営業案件）", "type": "term", "oneLine": { "text": "営業担当者が成約を目指して進める、案件ごとの営業活動の単位。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "opportunity-research", "term": "商談リサーチ", "type": "feature", "oneLine": { "text": "Sales agent が商談について調べ、行動につながる洞察を示す機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供対象のクラウドと利用環境は？",
+          "answer": { "text": "ロードマップ上の提供範囲は Worldwide (Standard Multi-Tenant) で、プラットフォームは Web です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "地域や対応言語はどこで確認できますか？",
+          "answer": { "text": "Learn のリリース プランに、機能の対象地域と対応言語を確認できるレポートへのリンクがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locator": "地域 / 利用可能な言語", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576814",
+        "learn": [{ "title": "Sales agent からの営業案件エージェントのインサイトについてチャットする", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/chat-deal-insights-using-ask-and-refine-experience-sales-close-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
