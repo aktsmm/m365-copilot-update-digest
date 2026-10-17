@@ -75,6 +75,16 @@
         { "termKey": "edp", "term": "エンタープライズ データ保護", "type": "term", "oneLine": { "text": "Entra アカウントでサインインしたときに、プロンプトと応答に適用される保護。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/edge", "locator": "冒頭", "retrievedAt": "2026-10-14T22:00:00Z" }] } },
         { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "ライセンスのないユーザーにもアイコンは表示されますか？",
+          "answer": { "text": "ポリシーはライセンスの有無にかかわらず Entra ID プロファイルのユーザーが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/microsoft365copilotchaticonenabled", "locator": "説明", "retrievedAt": "2026-10-16T22:35:00Z" }] }
+        },
+        {
+          "question": "ポリシーを構成しない場合、ユーザーは表示を切り替えられますか？",
+          "answer": { "text": "はい。未構成の場合はツール バーに表示され、ユーザーは設定の [Copilot の表示] トグルで切り替えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/microsoft365copilotchaticonenabled", "locator": "説明", "retrievedAt": "2026-10-16T22:35:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=537284",
         "learn": [
