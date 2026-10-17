@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c0332f6340b3d82b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams Pro 管理ポータルでデスクの使用状況分析が可能に（開発中）",
+        "subtitleJa": "予約可能なデスクの利用状況を、会議室と同じ分析で確認できます",
+        "en": "Microsoft Teams: Analytics for desk utilization on Teams Pro Management portal"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams"],
+        "categories": ["teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 管理者**（予約可能なデスクを運用する IT 担当）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会議室向けと同様の使用状況分析を、デスクでも確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、デスクに周辺機器の関連付けとライセンスが必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Teams Pro 管理ポータルで、**予約可能なデスクの使用状況分析**を確認できます。現在の会議室向け分析と同様の機能です", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams Pro 管理ポータルでデスクの使用状況分析を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在の会議室向け分析と同様の機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行でも、予約可能なデスクの分析を Places 管理 Web アプリで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locator": "予約可能なデスクに使用する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "有効化の条件",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デスクに 1 つ以上の周辺機器が関連付けられている必要がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "デスクに必要なライセンスが付与されている必要がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2026 年 4 月から、デスク予約はスペースごとのライセンス モデルに変更", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locator": "予約可能なデスクに使用する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams 共有スペース ライセンス 1 つで、予約可能なデスクを 4 つ有効にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "追加の単一スペース ライセンスは MCA 課金アカウントでのみ購入できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locator": "Teams 共有スペース ライセンスを取得する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "desk-analytics", "term": "デスクの使用状況分析", "type": "feature", "oneLine": { "text": "予約可能なデスクがどれだけ使われたかを、管理ポータルで確認できる分析。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "bookable-desk", "term": "予約可能なデスク", "type": "feature", "oneLine": { "text": "共有スペース ライセンスを適用すると、組織内の Teams ユーザーが予約できるデスク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locator": "予約可能なデスクに使用する", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "shared-space", "term": "Teams 共有スペース ライセンス", "type": "term", "oneLine": { "text": "共有デバイス、予約可能なデスク、BYOD ルームなどに使うライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "デスクの使用状況分析を見るために何が必要ですか？",
+          "answer": { "text": "デスクに 1 つ以上の周辺機器が関連付けられ、必要なライセンスが付与されていることが条件です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "デスクのライセンスは誰に付与しますか？",
+          "answer": { "text": "ユーザーではなくデスク単位で、Teams 共有スペースまたは単一スペース ライセンスを適用します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locator": "予約可能なデスクに使用する", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570648",
+        "learn": [{ "title": "Microsoft Teams Shared Space ライセンス", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/teams-add-on-licensing/teams-shared-device-license", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
