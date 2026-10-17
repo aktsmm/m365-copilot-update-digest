@@ -91,6 +91,20 @@
         { "termKey": "pipeline", "term": "パイプライン", "type": "term", "oneLine": { "text": "営業の商談の進み具合をまとめた情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/use-dynamics-365-sales-skills-365-copilot-cowork", "locator": "ビジネス価値", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Learn のリリース プランでは、いつ提供される予定でしたか？",
+          "answer": { "text": "リリース プランでは、パブリック プレビューが 2026 年 5 月 5 日、一般公開が 2026 年 6 月 15 日と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/use-dynamics-365-sales-skills-365-copilot-cowork", "locator": "冒頭の提供時期の表", "retrievedAt": "2026-10-17T22:15:00Z" }] }
+        },
+        {
+          "question": "利用者側で有効化の操作は必要ですか？",
+          "answer": { "text": "リリース プランでは「ユーザー向けで、自動的に有効化される」とされており、プラグインも既定でインストールされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/use-dynamics-365-sales-skills-365-copilot-cowork", "locator": "冒頭の提供時期の表 / 機能の詳細", "retrievedAt": "2026-10-17T22:15:00Z" }] }
+        },
+        {
+          "question": "この Learn ページの情報は最新ですか？",
+          "answer": { "text": "このページは 2026 年 10 月時点でアーカイブされ更新されないため、最新情報はロードマップと Microsoft Learn で確認するよう案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/use-dynamics-365-sales-skills-365-copilot-cowork", "locator": "Important の注記", "retrievedAt": "2026-10-17T22:15:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573373",
         "learn": [
