@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ee9c2ec40d71c498",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview DSPM に Copilot 向けの準備状況評価とデータ エクスプローラーを追加（開発中）",
+        "subtitleJa": "データ セキュリティ チームが、組織の態勢把握とリスク調査をしやすくなります",
+        "en": "Microsoft Purview: DSPM-Copilot Readiness and Data Explorer"
+      },
+      "meta": {
+        "publishedJst": "2026-09-25",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Purview のデータ セキュリティ担当者**と、Microsoft Copilot を展開する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot の準備状況を踏まえ、データ セキュリティ態勢の評価とリスク調査を進めやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必須の対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "DSPM に **Microsoft Copilot の準備状況**と**データ エクスプローラー**の体験が加わり、態勢の可視化とリスク評価・調査に使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "追加される機能の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "DSPM に Microsoft Copilot の準備状況（readiness）の体験が加わる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "DSPM にデータ エクスプローラーの体験が加わる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "DSPM は機密データの検出・保護・調査を支援する Purview のソリューション", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locator": "冒頭", "retrievedAt": "2026-10-16T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供開始の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "DSPM の利用には、Entra のコンプライアンス管理者ロールなど適切な権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locator": "データ セキュリティ態勢管理の使用方法", "retrievedAt": "2026-10-16T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "DSPM は Purview ポータルの［ソリューション］＞［DSPM］から開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locator": "データ セキュリティ態勢管理の使用方法", "retrievedAt": "2026-10-16T22:30:00Z" }] },
+            { "text": "提供前に、DSPM の初期セットアップと担当者のロール割り当てを確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dspm", "term": "DSPM", "type": "feature", "oneLine": { "text": "データ セキュリティ態勢管理。機密データのリスクを検出、保護、調査するのに役立つ Purview のソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locator": "冒頭", "retrievedAt": "2026-10-16T22:30:00Z" }] } },
+        { "termKey": "purview", "term": "Microsoft Purview", "type": "product", "oneLine": { "text": "データ セキュリティやコンプライアンスを管理する Microsoft のサービス群。DSPM もその一つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locator": "データ セキュリティ態勢管理の使用方法", "retrievedAt": "2026-10-16T22:30:00Z" }] } },
+        { "termKey": "asset-explorer", "term": "資産エクスプローラー", "type": "feature", "oneLine": { "text": "DSPM で、ラベル付けされていないデータや分類されたデータを組織全体で一覧できるページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locator": "データ セキュリティ態勢管理の使用方法", "retrievedAt": "2026-10-16T22:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        { "question": "いつから使えますか？", "answer": { "text": "ロードマップには開発中としてのみ掲載されており、提供開始の月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "question": "現行の DSPM では何ができますか？", "answer": { "text": "Purview ポータルの DSPM で、ポスチャ、目標、AI の監視、資産エクスプローラー、レポートなどを使い、機密データのリスクを確認・対処できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locator": "データ セキュリティ態勢管理の使用方法", "retrievedAt": "2026-10-16T22:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571157",
+        "learn": [
+          { "title": "データ セキュリティ態勢管理について学習する", "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-learn-about", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
