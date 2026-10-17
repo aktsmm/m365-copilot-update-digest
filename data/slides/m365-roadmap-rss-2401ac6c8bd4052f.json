@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2401ac6c8bd4052f",
+      "kind": "retirement",
+      "kindSource": "tags",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Copilot Chat のコンテンツ ソース選択機能のロードマップ項目を取り消し",
+        "subtitleJa": "回答を選択したソースに限定する機能は、提供されないことになりました",
+        "en": "Microsoft Copilot (Microsoft 365): Content Sources in Copilot Chat"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Chat の利用を計画している管理者と作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "計画されていたコンテンツ ソース選択機能は、現時点では提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この機能を前提にした運用計画があれば、見直しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat でコンテンツ ソースを選び、回答をそのソースの内容に限定する機能の**ロードマップ項目が取り消されました**", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Chat で選択したソースの内容に回答を限定する機能は提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の更新は 2026 年 9 月 18 日に行われた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はデスクトップと Web、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この機能を前提にした展開計画や社内案内があれば見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "最新の状況は Microsoft 365 ロードマップで確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "content-sources", "term": "コンテンツ ソース", "type": "feature", "oneLine": { "text": "Copilot Chat の回答の元にする内容の範囲で、選択すると回答はそのソースの内容に限定される想定だった。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot のチャット体験で、今回の機能はデスクトップと Web 向けに予定されていた。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "今回はロードマップ項目が取り消され、機能の提供が予定されなくなったことを示す。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能は後日提供されますか？",
+          "answer": { "text": "ロードマップでは「現時点で取り消す」と案内されており、提供予定はありません。今後の動きは Microsoft 365 ロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "取り消されたのはいつですか？",
+          "answer": { "text": "ロードマップ上の更新日は 2026 年 9 月 18 日です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=496596"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
