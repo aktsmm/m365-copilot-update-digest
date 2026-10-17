@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-dd7037cee2cb916a",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams の AI 生成会議アーカイブでトランスクリプト期限後も会議の要点を保持（開発中）",
+        "subtitleJa": "期限が切れた過去の会議についても、Copilot に質問できます",
+        "en": "Microsoft Teams: AI-generated meeting archive for knowledge retention"
+      },
+      "meta": {
+        "publishedJst": "2026-09-22",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議で Copilot を使う人**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "トランスクリプトの期限後も、過去の会議について Copilot に質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は Teams 管理センターで生成の有効化と有効期限を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "組織の AI アーカイブ 生成の管理", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者がテナント全体のポリシーを有効にすると、Copilot と Facilitator が会議の重要な知見をトランスクリプトの保持期間後も保持します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot と Facilitator が、トランスクリプト期限後も会議について回答できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AI アーカイブは重要な分析情報と議論の要約を含む AI 生成の成果物", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブには何が含まれていますか?", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "生のユーザーデータやトランスクリプトの抜粋は格納されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブには何が含まれていますか?", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "暗号化会議や、コピー・転送を制限する秘密度ラベルの会議は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはいつ作成されますか?", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "ユーザーはアーカイブを直接開けず、Copilot などを通じてのみ使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはどのように使用されますか?", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Learn 上の AI アーカイブは現在プレビューで、Teams TAP の組織が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭の注意", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "管理者の準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定の有効期限は 5 年（1,825 日）で、管理センターから変更できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議アーカイブ Filesの既定の有効期限の設定", "retrievedAt": "2026-10-18T00:00:00Z" }] },
+            { "text": "Purview のアイテム保持ポリシーは、管理センターの有効期限より優先される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "アイテム保持ポリシーの設定", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ai-archive", "term": "AI アーカイブ", "type": "feature", "oneLine": { "text": "会議の議論とメタデータから重要な知識を凝縮した、AI 生成の成果物。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "facilitator", "term": "ファシリテーター", "type": "feature", "oneLine": { "text": "AI アーカイブを使って会議に関する質問に回答する Microsoft の AI ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "transcript", "term": "トランスクリプト", "type": "term", "oneLine": { "text": "AI アーカイブの生成条件として、作成・保存されている必要がある会議の文字起こし。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはいつ作成されますか?", "retrievedAt": "2026-10-18T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップ上で、機能が開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "AI アーカイブの生成は組織の一部のユーザーだけに有効化できますか?",
+          "answer": { "text": "できません。生成はテナント単位で、ユーザーの一部だけに有効化することはできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ 生成をオフにする", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "トランスクリプトが削除されたら AI アーカイブも消えますか?",
+          "answer": { "text": "自動では削除されません。有効期限の到達か、開催者による Recap の削除まで残ります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        },
+        {
+          "question": "AI アーカイブは誰が利用できますか?",
+          "answer": { "text": "会議に招待されたユーザーと、会議の要約を共有されたユーザーのみが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブにアクセスできるユーザー", "retrievedAt": "2026-10-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558933",
+        "learn": [{ "title": "Microsoft Teams会議のための AI アーカイブ", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
