@@ -94,6 +94,38 @@
         { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "ロードマップで、レポート出力の自動化を拡張する連携先として挙げられている仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "レポートのファイル本体は API で取得できますか？",
+          "answer": {
+            "text": "はい。Content API の documentContent でファイル内容を取得でき、fileName・outputType・byteSize も参照できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-content-api", "locator": "Properties", "retrievedAt": "2026-10-17T21:30:00Z" }]
+          }
+        },
+        {
+          "question": "API でレポート受信トレイの内容を書き換えられますか？",
+          "answer": {
+            "text": "Items API の PATCH で更新できるのはエントリ情報（既読かどうかなど）です。Content API は GET のみで、ファイル内容は変更できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locator": "Methods", "retrievedAt": "2026-10-17T21:30:00Z" }]
+          }
+        },
+        {
+          "question": "どのバージョンから使えますか？",
+          "answer": {
+            "text": "Business Central 2026 release wave 2 以降が対象です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/api-reporting/report-inbox-items-api", "locator": "APPLIES TO", "retrievedAt": "2026-10-17T21:30:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573318",
         "learn": [
