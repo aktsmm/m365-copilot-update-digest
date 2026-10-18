@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ce7f00630e3f9109",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "SharePoint ページで AI を使ったグラフ作成が可能に（提供開始）",
+        "subtitleJa": "ページ編集中にチャットで頼むだけで、インタラクティブなグラフを作れます",
+        "en": "SharePoint: Create charts on pages with AI"
+      },
+      "meta": {
+        "publishedJst": "2026-09-22",
+        "availability": [],
+        "status": "Launched",
+        "products": ["SharePoint", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint ページの作成者**と、Copilot in SharePoint を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "作りたいグラフを自然な言葉で伝えるだけで、データを視覚的に示せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には Microsoft Copilot ライセンスが必要。日常機能のオプトイン手順は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "ページ編集中のチャットで**作りたいグラフを説明**すると、AI がインタラクティブなグラフを作成します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "SharePoint ページの編集中に、チャットへ作りたいグラフを自然な言葉で入力", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AI が、操作できるインタラクティブなグラフを作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot in SharePoint は、ページや対話型レポートを自然言語で作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザーにアクティブな Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-18T20:40:00Z" }] },
+            { "text": "日常機能はライセンスに含まれ、追加のオプトイン手順は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-18T20:40:00Z" }] },
+            { "text": "提供範囲は Web 版、Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "大規模な自動化などの高度な作業は、使用量ベース課金と Copilot クレジットが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-18T20:40:00Z" }] },
+            { "text": "高度な作業の有効化は、管理センターの支出ポリシーで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "使用量ベースの請求を設定する", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ページ・ライブラリ・リストの作成と編集も、ライセンスに含まれる機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-18T20:40:00Z" }] },
+            { "text": "HTML、Word、Excel、PowerPoint ファイルの作成にも対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "売上や進捗など、数値を伝えたいニュース・報告ページで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "まず少人数の作成者で、指示の書き方と仕上がりを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-sharepoint", "term": "Copilot in SharePoint", "type": "product", "oneLine": { "text": "自然言語でサイト、ページ、対話型レポート、Office ファイルを作成できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-18T20:40:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "高度な作業で消費される、使用量ベース課金の単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-18T20:40:00Z" }] } },
+        { "termKey": "spending-policy", "term": "支出ポリシー", "type": "term", "oneLine": { "text": "管理センターで設定する、使用量ベース課金の対象や制限を決めるポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "使用量ベースの請求を設定する", "retrievedAt": "2026-10-18T20:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "追加ライセンスは必要ですか？",
+          "answer": { "text": "Microsoft Copilot ライセンスが必要です。日常的な機能は追加料金なしで含まれ、高度な作業のみ Copilot クレジットを使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "ロードマップでは Web 版、Worldwide（Standard Multi-Tenant）が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "最初にどのページで試すのがよいですか？",
+          "answer": { "text": "数値を示したいニュースや報告のページで、小さなグラフから試すと進めやすいです。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560076",
+        "learn": [{ "title": "Copilot in SharePoint の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
