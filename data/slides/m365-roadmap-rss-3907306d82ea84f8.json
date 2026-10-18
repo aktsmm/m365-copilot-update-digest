@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3907306d82ea84f8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams モバイルの検索から Copilot に質問できる Ask Copilot（開発中）",
+        "subtitleJa": "検索をやめずに、そのまま Copilot との会話に切り替えられます",
+        "en": "Microsoft Teams: Ask Copilot from Search on Mobile"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams モバイル（Android / iOS）で情報を探す人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索結果を見ながら、Copilot に質問して回答を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "開発中の段階で、現時点で公開されている対応事項はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "検索バーに入力すると、**検索結果と並んで Copilot に質問する選択肢**が表示されます。検索結果ページの「Ask Copilot」からも会話に切り替えられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "検索バーへの入力中に、検索結果と並んで Copilot に質問する選択肢を表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "検索結果ページの Ask Copilot から、クエリを Copilot の会話に切り替え", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "回答の取得に加え、フォローアップの質問もできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Android と iOS の Teams モバイル", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上は開発中の段階で、内容が変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ ID 571299 の更新を確認し、提供時期の公開を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "モバイルで Copilot を使うメンバーに、検索からの利用を案内する準備をする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ask-copilot", "term": "Ask Copilot", "type": "feature", "oneLine": { "text": "検索結果ページから、クエリを Copilot との会話に切り替えるための選択肢。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "teams-search", "term": "Teams の検索バー", "type": "term", "oneLine": { "text": "Teams で情報を探すために、キーワードを入力する検索の入口。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "follow-up", "term": "フォローアップの質問", "type": "term", "oneLine": { "text": "最初の回答を受けて、会話の中で続けて行う質問。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップには提供月が記載されておらず、時期は未定です。ロードマップ ID 571299 の更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "デスクトップ版の Teams でも使えますか？",
+          "answer": { "text": "ロードマップ上の対象プラットフォームは Android と iOS です。デスクトップでの提供は、このエントリでは示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571299",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
