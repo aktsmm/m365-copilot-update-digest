@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d36e8b36886fa5b4",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot アプリの検索のクイックアクセスから Copilot Notebook に参照を追加可能に",
+        "subtitleJa": "検索画面から、項目をそのままノートブックの参照として保存できます",
+        "en": "Microsoft 365 app: Add references to your Copilot Notebooks from the Quick Access section in Search on the M365 Copilot app"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365", "Microsoft 365 app", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Notebook を使って情報を整理する人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ノートブックの画面を開かずに、検索から参照を追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 9 月 23 日 Microsoft 365 Copilot アプリ", "retrievedAt": "2026-10-18T21:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対応は不要。管理者はクラウド ポリシーでノートブックの作成を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "概要", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "検索の**クイックアクセス**で項目のコンテキスト メニューから、Copilot Notebook に参照を直接追加できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 9 月 23 日 Microsoft 365 Copilot アプリ", "retrievedAt": "2026-10-18T21:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot アプリの検索にあるクイックアクセスが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 9 月 23 日", "retrievedAt": "2026-10-18T21:10:00Z" }] },
+            { "text": "項目横のコンテキスト メニュー（…）から参照として保存する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 9 月 23 日", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot アプリで［検索］を開き、クイックアクセスの項目の（…）を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 9 月 23 日", "retrievedAt": "2026-10-18T21:10:00Z" }] },
+            { "text": "［追加先］＞［ノートブック］を選び、追加先の Copilot Notebook を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 9 月 23 日", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Notebook の利用には Microsoft Copilot または Copilot Chat ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "ライセンス要件", "retrievedAt": "2026-10-18T21:10:00Z" }] },
+            { "text": "Exchange Online メールボックスがないと、@メンションなど一部機能が制限される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "Exchange Online の要件", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "管理者の設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "クラウド ポリシー「Copilot ページと Copilot ノートブックを作成して表示する」で制御（既定は有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "概要", "retrievedAt": "2026-10-18T21:10:00Z" }] },
+            { "text": "無効にすると、Microsoft Copilot アプリでノートブック モジュールが非表示になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "調査や案件で頻繁に開く資料を、検索から素早くノートブックにまとめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "従来はノートブックの画面で複数のメニューをたどって参照を追加していた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 9 月 23 日", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebook", "term": "Copilot Notebook", "type": "feature", "oneLine": { "text": "参照を集めて Copilot の回答の土台にできる、.pod ファイルとして保存されるノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "概要", "retrievedAt": "2026-10-18T21:10:00Z" }] } },
+        { "termKey": "quick-access", "term": "クイックアクセス", "type": "feature", "oneLine": { "text": "Microsoft Copilot アプリの検索にある、項目へ素早く移動するための領域。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "Microsoft 365 アプリの設定をクラウドから管理する仕組み。管理センターで構成する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-18T21:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者が Copilot Notebook を無効にしている場合はどうなりますか？",
+          "answer": { "text": "ユーザーは新しいノートブックを作成できず、Microsoft Copilot アプリではノートブック モジュールが非表示になります。既存のノートブックは削除されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+        },
+        {
+          "question": "追加の費用やライセンスは必要ですか？",
+          "answer": { "text": "Copilot Notebook には Microsoft Copilot または Copilot Chat ライセンスが必要です。この更新で追加のライセンス要件は案内されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "ライセンス要件", "retrievedAt": "2026-10-18T21:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=510099",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブックの要件", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
