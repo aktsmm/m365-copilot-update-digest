@@ -74,6 +74,20 @@
         { "termKey": "conditional-access", "term": "条件付きアクセス", "type": "term", "oneLine": { "text": "ネットワークの場所やデバイスのコンプライアンスなどの条件を、アクセス許可の前提にする Entra のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "エージェント ID に対するコネクタのアクセス許可", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "既存の Entra エージェント ID とは何が違いますか？",
+          "answer": { "text": "現在の Entra エージェント ID は、エージェントの管理・監査のための ID です。今回のロードマップ項目は、それに加えてメールボックスなどを持つ専用アカウントを与える内容です。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        },
+        {
+          "question": "現在、エージェント ID の自動作成を無効にできますか？",
+          "answer": { "text": "いいえ。2026年5月以降、新しいエージェントには Entra エージェント ID が必ず作成され、オプトアウトはできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "エージェント ID の自動作成をオプトアウトする", "retrievedAt": "2026-10-18T21:20:00Z" }] }
+        },
+        {
+          "question": "管理者はエージェントのコネクタ権限をどう統制できますか？",
+          "answer": { "text": "コネクタの権限は Entra 上のエージェント ID への API アクセス許可として見えるため、条件付きアクセス ポリシーで制御できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locator": "エージェント ID に対するコネクタのアクセス許可", "retrievedAt": "2026-10-18T21:20:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570430",
         "learn": [{ "title": "Copilot Studio エージェント向けの Microsoft Entra エージェント ID", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-use-entra-agent-identities", "locale": "ja-jp" }]
