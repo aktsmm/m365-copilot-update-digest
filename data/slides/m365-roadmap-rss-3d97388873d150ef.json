@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3d97388873d150ef",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Chat がファイル内の埋め込み画像を回答の根拠に利用可能に",
+        "subtitleJa": "Word・PowerPoint・PDF 内のグラフや図も、回答に反映されます",
+        "en": "Microsoft Copilot (Microsoft 365): Now smarter with visuals: Copilot Chat leverages embedded images for richer, more accurate answers."
+      },
+      "meta": {
+        "publishedJst": "2026-08-28",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Microsoft 365"],
+        "categories": ["copilot-chat"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Chat でファイルを扱うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャート・図・スクリーンショットの内容も踏まえた、より正確な回答を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザーは通常どおりファイルを使って質問するだけで利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word・PowerPoint・PDF に埋め込まれた**画像を Copilot が解釈し、回答の根拠にできます**。グラフや図の情報も回答に反映されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Word (.docx)、PowerPoint (.pptx)、PDF 内の埋め込み画像を解釈", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "チャート、図、スクリーンショットなどの視覚要素から情報を抽出", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "文章だけでなく画像の内容も踏まえて回答を生成", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "アップロードしたファイルに「4 ページ目の画像を分析して」のように依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "April 7, 2026 — Support for analyzing images in uploaded files", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "リリース ノートでは、この機能は Windows と Web が対象と記載されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "April 7, 2026 — Support for analyzing images in uploaded files", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)、プラットフォームは Desktop", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象ファイル形式は PDF、DOCX、PPTX", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "April 7, 2026 — Support for analyzing images in uploaded files", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "宣言型エージェントでも、Word・PowerPoint・PDF の埋め込み画像を回答の根拠にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "April 7, 2026 — Smarter answers with embedded image understanding", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "グラフや図を多く含む資料で、画像の内容を指定して質問してみる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "embedded-image", "term": "埋め込み画像", "type": "term", "oneLine": { "text": "ファイル内に含まれるチャート、図、スクリーンショットなどの視覚要素。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot のチャット機能で、ファイルを使った質問もできる。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "回答を、ファイルなどの具体的な情報に基づかせること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "Copilot の機能を拡張する、用途に合わせたエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "April 7, 2026", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのファイル形式が対象ですか？",
+          "answer": { "text": "Word (.docx)、PowerPoint (.pptx)、PDF が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "April 7, 2026 — Support for analyzing images in uploaded files", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "画像について質問する具体例はありますか？",
+          "answer": { "text": "アップロードしたファイルに対し「4 ページ目の画像を分析して」のように依頼すると、画像内容に基づく回答を得られます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "April 7, 2026 — Support for analyzing images in uploaded files", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560540",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
