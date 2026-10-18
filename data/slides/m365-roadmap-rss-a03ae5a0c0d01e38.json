@@ -73,6 +73,27 @@
         { "termKey": "copilot-license", "term": "Microsoft 365 Copilot アドオン ライセンス", "type": "term", "oneLine": { "text": "Word、Excel、PowerPoint、OneNote の Copilot のすべてのエクスペリエンスに優先アクセスできるライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "ライセンスの比較表", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示す段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "アドオン ライセンスがないユーザーも PowerPoint の Copilot を使えますか？",
+          "answer": {
+            "text": "アドオン ライセンスがなくても、標準アクセスで PowerPoint の Copilot を使える場合があります。ただし機能は制限され、優先アクセスはアドオン ライセンスのユーザーが対象です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 Copilot ライセンスの比較", "retrievedAt": "2026-10-18T22:30:00Z" }]
+          }
+        },
+        {
+          "question": "この通知機能はいつ使えるようになりますか？",
+          "answer": {
+            "text": "ロードマップは開発中で、提供時期は示されていません。時期は案内せず、ロードマップの更新を確認する旨を伝えるのが安全です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570436",
         "learn": [{ "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }]
