@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6581926556e564aa",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Purview データ ライフサイクル管理の Copilot 利用状況インサイト提供を見送り",
+        "subtitleJa": "ロードマップ上の計画は、2026 年 9 月 15 日に実施しないことが決まりました",
+        "en": "Microsoft Purview: Data Lifecycle Management – Insights and policy recommendations on Microsoft Copilot and AI Apps interactions for better Data Security and Compliance posture"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview で Copilot と AI アプリのデータを管理する管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "利用状況インサイトと保持ポリシーの推奨は、この計画では提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "計画は見送られたため、この変更に向けた準備は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot と AI アプリの**利用状況インサイトと保持ポリシーの推奨**を提供する計画は、**現時点では進めない**ことになりました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は、Copilot と AI アプリの利用状況インサイトと保持ポリシーの推奨を提供する計画", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2026 年 9 月 15 日に「現時点では進めない」と更新された", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "代替・移行",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "保持ポリシーは、Microsoft 365 Copilot、Copilot Studio、Entra 登録済み AI アプリなどを対象に作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locator": "冒頭の注", "retrievedAt": "2026-10-18T21:00:00Z" }] },
+            { "text": "構成は「アイテム保持ポリシーの作成と構成」の手順に従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locator": "構成ガイダンス", "retrievedAt": "2026-10-18T21:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応の目安",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "保持要件がある場合は、既存の保持ポリシーで Copilot の操作を管理する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "メッセージは Exchange メールボックスの非表示フォルダーに保存され、電子情報開示で検索できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locator": "AI アプリでのリテンション期間のしくみ", "retrievedAt": "2026-10-18T21:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "purview-dlm", "term": "データ ライフサイクル管理", "type": "product", "oneLine": { "text": "アイテム保持ポリシーなどで、コンテンツの保持と削除を管理する Microsoft Purview の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locator": "構成ガイダンス", "retrievedAt": "2026-10-18T21:00:00Z" }] } },
+        { "termKey": "retention-policy", "term": "アイテム保持ポリシー", "type": "feature", "oneLine": { "text": "Copilot や AI アプリのメッセージを、コンプライアンス上の理由で保持・削除するための設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locator": "保持と削除の対象となる機能", "retrievedAt": "2026-10-18T21:00:00Z" }] } },
+        { "termKey": "substrate-holds", "term": "SubstrateHolds フォルダー", "type": "term", "oneLine": { "text": "完全削除の前に、論理的に削除されたアイテムを格納する非表示のメールボックス フォルダー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locator": "AI アプリでのリテンション期間のしくみ", "retrievedAt": "2026-10-18T21:00:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "ロードマップ上で、計画の終了や提供の見送りを示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "見送りはいつ決まりましたか？",
+          "answer": { "text": "ロードマップに 2026 年 9 月 15 日付で「現時点では進めない」と更新されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Copilot の操作に保持ポリシーを使えますか？",
+          "answer": { "text": "はい。Microsoft 365 Copilot や Copilot Studio などの対話に対して、アイテム保持ポリシーを作成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locator": "冒頭の注", "retrievedAt": "2026-10-18T21:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561209",
+        "learn": [
+          { "title": "Copilot & AI アプリのリテンション期間について説明します", "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-copilot", "locale": "ja-jp" },
+          { "title": "Microsoft Purview を使用して、Entra登録済みの AI アプリのデータ セキュリティ & コンプライアンスを管理する", "url": "https://learn.microsoft.com/ja-jp/purview/ai-entra-registered", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
