@@ -91,6 +91,27 @@
         { "termKey": "metadata-section", "term": "メタデータ セクション", "type": "term", "oneLine": { "text": "テーブルの fields・keys など、AL オブジェクトの構造を定義するセクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Description", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "AL0926 はどんな書き方をしたときに出ますか？",
+          "answer": {
+            "text": "メタデータ セクションのキーワードが、トリガー・プロシージャ・変数宣言の後ろに書かれているときに出ます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/diagnostics/diagnostic-al926", "locator": "Description", "retrievedAt": "2026-10-18T21:30:00Z" }]
+          }
+        },
+        {
+          "question": "既存コードの修正は必要ですか？",
+          "answer": {
+            "text": "AL0926 が出たコードは、メッセージが示す期待順序にセクションを並べ替えれば解消できる見込みです。新たにエラーが出るかは、自分のプロジェクトのビルドで確認してください。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573337",
         "learn": [
