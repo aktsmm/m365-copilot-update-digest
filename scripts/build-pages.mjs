@@ -998,7 +998,6 @@ function renderExplorerShell(locale) {
           <label>${escapeHtml(t.end)} <input type="date" data-ex-end /></label>
           <button type="button" class="btn-outline" data-ex-preset="30">${escapeHtml(t.last30)}</button>
           <button type="button" class="btn-outline" data-ex-preset="7">${escapeHtml(t.last7)}</button>
-          <label>${escapeHtml(t.importance)} <select data-ex-importance><option value="all">${escapeHtml(t.all)}</option></select></label>
           <button type="button" class="btn-outline" data-ex-reset>${escapeHtml(t.reset)}</button>
           <input class="search-input" type="search" data-ex-text placeholder="${escapeHtml(t.search)}" />
         </div>
@@ -1012,6 +1011,7 @@ function renderExplorerShell(locale) {
           <button type="button" class="btn-outline" data-download-merged hidden>${escapeHtml(t.pdf)}</button>
           <button type="button" class="btn-outline" data-download-pptx hidden>${escapeHtml(t.pptx)}</button>
         </div>
+        <div class="filter-row check-row"><span class="check-label">${escapeHtml(t.importance)}</span><span data-ex-importance></span></div>
         <div class="filter-row check-row"><span class="check-label">${escapeHtml(t.kinds)}</span><span data-ex-kinds></span></div>
         <div class="filter-row check-row"><span class="check-label">${escapeHtml(t.categories)}</span><span data-ex-categories></span></div>
       </div>
