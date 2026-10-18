@@ -74,6 +74,28 @@
         { "termKey": "purview", "term": "Microsoft Purview", "type": "product", "oneLine": { "text": "データのガバナンス、保護、コンプライアンスを扱う Microsoft のサービス群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "冒頭", "retrievedAt": "2026-10-16T21:25:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "ポリシーを作ればすぐにラベルが適用されますか？",
+          "answer": {
+            "text": "いいえ。ポリシーで少なくとも 1 回シミュレーションを実行するまでは、ドキュメントやメールへの自動ラベル付けは行われません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "シミュレーション モードの詳細", "retrievedAt": "2026-10-18T22:20:00Z" }]
+          }
+        },
+        {
+          "question": "自動ラベル付けはどのライセンスでも使えますか？",
+          "answer": {
+            "text": "いいえ。自動ラベル付けはライセンスによって制限されるため、利用前に自社の SKU が対象か Microsoft 365 ライセンス ガイダンスで確認してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locator": "ライセンスと各サーフェスの場所", "retrievedAt": "2026-10-18T22:20:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571309",
         "learn": [{ "title": "Microsoft 365 データに秘密度ラベルを自動的に適用する", "url": "https://learn.microsoft.com/ja-jp/purview/apply-sensitivity-label-automatically", "locale": "ja-jp" }]
