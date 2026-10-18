@@ -105,6 +105,20 @@
         { "termKey": "sales-return-order", "term": "販売返品注文", "type": "term", "oneLine": { "text": "クレジットメモの代わりに選べる、返品用の販売ドキュメント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "自動作成を使うための前提設定はありますか？",
+          "answer": { "text": "「Auto Create Sales Document」を選ぶには、「Auto Create Sales Documents」トグルをオンにする必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-18T21:45:00Z" }] }
+        },
+        {
+          "question": "自動作成した返品ドキュメントは、そのまま使えますか？",
+          "answer": { "text": "作成されたドキュメントは、明細の入力後に自動でリリースされます。これは「Auto Release Sales Orders」の設定に関係ありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-18T21:45:00Z" }] }
+        },
+        {
+          "question": "Shopify 側で注文を編集した場合の影響はどこで確認できますか？",
+          "answer": { "text": "Learn の「Effect of order editing」の表で、処理前・処理済みの注文ごとに編集の影響を確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Effect of order editing", "retrievedAt": "2026-10-18T21:45:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573343",
         "learn": [{ "title": "Synchronize and fulfill sales orders", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders#returns-and-refunds", "locale": "en-us" }]
