@@ -89,7 +89,7 @@ test("stage maps to kind and unknown stages fall back to update", () => {
   assert.equal(slideKind({ releaseStage: "Update" }), "update");
 });
 
-test("selection keeps recent notable+ updates, newest first", () => {
+test("selection keeps recent updates of every importance, important first then newest", () => {
   const now = new Date("2026-10-14T00:00:00Z");
   assert.equal(retentionStart(now, 3), "2026-08-01");
   const selected = selectSlideEvents(
@@ -101,7 +101,7 @@ test("selection keeps recent notable+ updates, newest first", () => {
     ],
     { now },
   );
-  assert.deepEqual(selected.map((item) => item.id), ["ga", "pre"]);
+  assert.deepEqual(selected.map((item) => item.id), ["ga", "pre", "low"]);
 });
 
 test("pdf encryption round-trips and rejects a wrong key", () => {

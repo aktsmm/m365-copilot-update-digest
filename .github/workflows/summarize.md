@@ -101,4 +101,4 @@ Do not modify any file other than `data/summaries/*.json`.
 ## Finish
 
 1. Run `npm run validate:data`. If it reports problems in files you wrote, fix them and run it again.
-2. Create the pull request (safe output) with a short body listing the number of summaries written and any items you skipped. Do not include source descriptions in the PR body.
+2. Do **not** run `git` or create a branch or commit yourself: the pull request (safe output) is created for you from your file changes. Give it a short body listing the number of summaries written and any items you skipped. Do not include source descriptions in the PR body.

@@ -2,7 +2,7 @@
 
 Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデートを継続的に収集し、日次 JSON、日次 Markdown、記事 draft、X 投稿 draft、GitHub Pages 向けの静的サイトを生成するリポジトリです。
 
-現在は次の 5 系統を収集対象にし、重要・注目の更新に日本語要約・解説スライド（想定問答つき）を付けて公開しています。全体の自動運用は「[自動運用の全体像](#自動運用の全体像)」を参照してください。
+現在は次の 5 系統を収集対象にし、更新に日本語要約・解説スライド（想定問答つき）を付けて公開しています。全体の自動運用は「[自動運用の全体像](#自動運用の全体像)」を参照してください。
 
 - Microsoft 365 Copilot release notes (Microsoft Learn)
 - What's new in Copilot Studio (Microsoft Learn)
@@ -16,7 +16,7 @@ Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデー�
 - 各カードのチェックで出力対象を選び、表示中の更新を JSON / PDF（まとめ）/ PPTX で保存できる。スライドのない更新が含まれるときは、ボタンに「12 / 48」のように件数を示す。最新の 1 件はパスワード不要のサンプル PDF（「サンプル PDF」リンク）
 - 「新規」は発行日基準の過去1日 / 過去7日の件数（以前は最後の収集 run だけの件数で、多くの場合 0 になっていた）
 - カテゴリ（Copilot Chat・検索 / Copilot Studio / エージェント・拡張 / Work IQ / Teams / Outlook / Office アプリ / SharePoint / セキュリティ / 管理 / Viva / Dynamics 365 / Edge・Windows など 14 種、1 件が複数に属する）と重要度（重要 / 注目 / 通常）、種類（プレビュー / 提供開始 / 展開中 / 開発中 / 廃止・終了 / アップデート、色分け）で絞り込む（`config/categories.json`）
-- 重要・注目の更新を、直近 3 か月分、1 更新 1 枚の解説スライド（種類別パネル・Before/After・用語解説・根拠付き関連リンク）にする。gh-aw が Microsoft Learn の実ページを取得して作り、検証・描画確認を通ったものだけ自動マージして公開する。JSON は公開、PDF はパスワード保護（[docs/slide-schema.md](docs/slide-schema.md)）
+- 直近 3 か月の更新を（重要度は問わず、重要なものから順に）、1 更新 1 枚の解説スライド（種類別パネル・Before/After・用語解説・根拠付き関連リンク）にする。gh-aw が Microsoft Learn の実ページを取得して作り、検証・描画確認を通ったものだけ自動マージして公開する。JSON は公開、PDF はパスワード保護（[docs/slide-schema.md](docs/slide-schema.md)）
 - スライドには、発表者向けの**想定問答**（任意項目 `qa`）を持てる。PPTX のスライドノートにだけ出力し、スライド本体には描画しない。既存スライドへは `slide-qa` が毎日少しずつ追加する
 - 静的 JSON API を公開する（[docs/api.md](docs/api.md)）。想定問答は `api/v1/qa.json` と各更新の `qa` から取得できる
 - ソース別の取得状態（complete / empty / partial / failed）を記録し、欠けがあるときはサイトに明示する
@@ -184,7 +184,7 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 | ------ | -------- | ---- | ---- |
 | 収集 | `collect-updates.yml` | 6 時間ごと | 5 系統の更新を取得し、データを main へ push（拒否されたら rebase して最大 3 回再試行）。Pages を再デプロイ |
 | 日本語要約 | `summarize.md`（gh-aw） | 6 時間ごと | 重要・注目の更新に見出し・要約・対象読者・対応を付ける。定型文だけの要約は検証で弾く |
-| スライド生成 | `slide-dispatch.yml` → `slide.md`（gh-aw） | 毎日 03:00 JST（最大 30 件） | 直近 3 か月の重要・注目の更新を 1 件 1 枚のスライド JSON にする。起動済み・PR 済みの更新は飛ばす |
+| スライド生成 | `slide-dispatch.yml` → `slide.md`（gh-aw） | 毎日 03:00 / 15:00 JST（各最大 30 件） | 直近 3 か月の更新（重要度は問わず、重要なものから順）を 1 件 1 枚のスライド JSON にする。起動済み・PR 済みの更新は飛ばす |
 | 想定問答の追加 | `slide-qa-dispatch.yml` → `slide-qa.md`（gh-aw） | 毎日 04:00 JST（最大 20 件） | 既存スライドへ `qa` を追加する。`qa` 以外が変わったら失敗にする |
 | 自動マージ | `auto-merge-slides.yml` / `auto-merge-summaries.yml` | 3 時間ごと＋実行完了時 | 検証・描画確認を通った PR だけマージ。通らない PR はクローズし、次回の生成で作り直す |
 | 見張り（AI なし） | `watchdog.yml` | 毎日 05:41 JST | 40 分を超えて動くエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 |

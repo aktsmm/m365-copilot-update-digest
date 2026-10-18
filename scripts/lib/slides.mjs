@@ -97,11 +97,19 @@ export function orderSlides(items, get = (item) => item) {
 }
 
 /** スライドを作る対象: 直近 months か月で、指定した重要度以上の更新（新しい順）。 */
-export function selectSlideEvents(events, { now = new Date(), months = 3, levels = ["high", "notable"] } = {}) {
+const LEVEL_RANK = { high: 0, notable: 1, normal: 2 };
+
+/** スライド対象（直近 N か月、重要度は全レベル）。重要度の高い順、同じなら新しい順。 */
+export function selectSlideEvents(events, { now = new Date(), months = 3, levels = ["high", "notable", "normal"] } = {}) {
   const since = retentionStart(now, months);
   return events
     .filter((event) => levels.includes(event.importanceLevel) && (jstDate(event.publishedAt) ?? "") >= since)
-    .sort((a, b) => (jstDate(b.publishedAt) ?? "").localeCompare(jstDate(a.publishedAt) ?? "") || a.id.localeCompare(b.id));
+    .sort(
+      (a, b) =>
+        (LEVEL_RANK[a.importanceLevel] ?? 9) - (LEVEL_RANK[b.importanceLevel] ?? 9) ||
+        (jstDate(b.publishedAt) ?? "").localeCompare(jstDate(a.publishedAt) ?? "") ||
+        a.id.localeCompare(b.id),
+    );
 }
 
 let compiled = null;

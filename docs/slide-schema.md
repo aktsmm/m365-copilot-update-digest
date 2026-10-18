@@ -1,6 +1,6 @@
 # スライド JSON（1 更新 = 1 枚）
 
-重要度が「重要」「注目」の更新を、直近 3 か月分、1 更新 1 枚の解説スライドにします。本家 [azure-update-digest](https://github.com/aktsmm/azure-update-digest) のスライド仕様を M365 向けにしたものです。
+直近 3 か月の更新を、重要度を問わず（重要なものから順に）、1 更新 1 枚の解説スライドにします。本家 [azure-update-digest](https://github.com/aktsmm/azure-update-digest) のスライド仕様を M365 向けにしたものです。
 
 - スキーマ: [`schema/slide.schema.json`](../schema/slide.schema.json)（JSON Schema 2020-12）。任意項目 `qa` に想定問答（質問と根拠付きの回答、最大 5 件）を持てます。スライドには描画せず、PowerPoint のスライドノートにだけ出力します。
 - 品質の基準（完成見本）: [`examples/slide.sample.json`](../examples/slide.sample.json)（GA とプレビューの 2 枚）
@@ -10,7 +10,7 @@
 
 ## 運用の流れ
 
-1. **Dispatch slide generation**（毎日 03:00 JST）: スライドがない更新（重要・注目、直近 3 か月、新しい順）を最大 30 件、`slide.lock.yml` へ 1 件ずつ起動
+1. **Dispatch slide generation**（毎日 03:00 / 15:00 JST）: スライドがない更新（直近 3 か月、重要な順、同じなら新しい順）を各最大 30 件、`slide.lock.yml` へ 1 件ずつ起動
 2. **slide（gh-aw）**: `.work/slide-input.json`（原文・段階・提供範囲・検証済み Learn 候補）を入力に、Learn の実ページを取得してスライド JSON を書き、検証と PDF 描画を行い PR を作成（タイトル `[slides] …`）
 3. **Auto-merge slides**: PR が `data/slides/{key}.json` 1 件だけで、スキーマ・意味検証・描画確認を main 側のコードで通ったものだけをマージし、Pages を再デプロイ。検証や描画確認に落ちた PR はコメントを付けてクローズし、次回の生成で作り直す
 4. **Dispatch slide Q&A backfill**（毎日 04:00 JST）: 想定問答（`qa`）がない既存スライドを最大 20 件、[`slide-qa.md`](../.github/workflows/slide-qa.md)（gh-aw）へ 1 件ずつ起動。`scripts/check-qa-only.mjs` で `qa` 以外が変わっていないことを確認し、同じ Auto-merge slides でマージ
