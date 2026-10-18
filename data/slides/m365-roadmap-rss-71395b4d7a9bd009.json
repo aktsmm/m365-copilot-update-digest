@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-71395b4d7a9bd009",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のプレビューチャットと履歴でコストの可視化を開発中",
+        "subtitleJa": "テストや過去の実行ごとの消費コストを、作成中に確認できるようになります",
+        "en": "Microsoft Copilot Studio: Cost visibility in Preview Chat and History"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio", "Microsoft Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人（メーカー）**と、コストを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "テストや過去の実行で、消費コストを見ながら調整できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "メーカーは**プレビュー タブとエージェント履歴**で、テスト利用や過去の実行ごとの消費コストを確認できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "想定される範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレビュー タブで、テスト・反復中の消費コストを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エージェント履歴で、過去の実行ごとのコストも確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在も、プレビュー・評価・監視で推定 Copilot クレジットを表示している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレビューと評価の値は近似値で、請求完了前の目安", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "最終的な正確な値は、数時間以内にモニターへ反映される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に知っておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "モニターでは、請求済み Copilot クレジットの合計や課金トレンドを確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-consumption", "locator": "Copilot クレジットの消費", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "コストが大きいエージェントは、今のうちにモニターで消費傾向を把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-credit", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "エージェントの使用状況を測定する単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-consumption", "locator": "Copilot クレジットの消費", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "preview-tab", "term": "プレビュー", "type": "feature", "oneLine": { "text": "エージェントの作成中にテストする体験で、セッションの推定クレジットを確認できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "推定信用額の特定", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "monitor", "term": "モニター", "type": "feature", "oneLine": { "text": "エージェントが消費した請求済みクレジットなどを表示するページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-consumption", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "今でもクレジット消費の目安は確認できますか？",
+          "answer": { "text": "はい。Copilot Studio はプレビューと評価で推定クレジットを表示し、最終値はモニターで確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "プレビューに表示される値は請求額と同じですか？",
+          "answer": { "text": "いいえ。プレビューは近似値で、正確な値は数時間以内にモニターへ反映されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571194",
+        "learn": [
+          { "title": "推定クレジット使用量の理解", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locale": "ja-jp" },
+          { "title": "エージェントの課金使用量を表示する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-consumption", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
