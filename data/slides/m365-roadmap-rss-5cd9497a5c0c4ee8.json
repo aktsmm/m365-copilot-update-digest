@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5cd9497a5c0c4ee8",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Chrome 向け Microsoft Copilot 拡張機能のロードマップ項目を削除へ",
+        "subtitleJa": "内容が正確でなくなったため、ロードマップから削除されます",
+        "en": "Microsoft Copilot (Microsoft 365): Microsoft 365 Copilot – Chat & Search Browser Extension for Chrome"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Chrome 向け拡張機能のロードマップ項目を参照していた**管理者と展開担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ロードマップ項目は内容が正確でなくなったため、削除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この項目を前提にした展開計画がある場合は、計画の前提を見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "この項目は Copilot Chat と検索をブラウザーに直接取り込む Chrome 向け拡張機能に関するものでしたが、内容が正確でなくなったためロードマップから削除されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ項目が「内容が正確でなくなった」として削除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象: Web、Worldwide (Standard Multi-Tenant)。ステージは Retirement", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Chrome は Microsoft 365 の Web エクスペリエンスで引き続きサポートされるブラウザー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-requirements", "locator": "ブラウザーと Cookie の要件", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Chat は Copilot アプリ(Web)や Outlook・Teams などの対応アプリ、Edge のサイド ペインから利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "Copilot Chat にアクセスする場所", "retrievedAt": "2026-10-18T21:50:00Z" }] },
+            { "text": "Copilot アプリ(Web)の URL は copilot.cloud.microsoft", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "Copilot Chat にアクセスする場所", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "拡張機能の提供を前提に案内していた場合は、Web 版など既存の入口へ案内を変更する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "*.cloud.microsoft がネットワークでブロックされていないか確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-requirements", "locator": "cloud.microsoft ドメイン", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Microsoft Copilot Chat", "type": "product", "oneLine": { "text": "対象となる Microsoft 365 ユーザーが利用できる、安全な AI チャット エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:50:00Z" }] } },
+        { "termKey": "browser-extension", "term": "ブラウザー拡張機能", "type": "term", "oneLine": { "text": "Copilot Chat と検索をブラウザー内で直接使えるようにする追加機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "edp", "term": "エンタープライズ データ保護", "type": "term", "oneLine": { "text": "対象となる職場・学校アカウントの Copilot に含まれるデータ保護。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "セキュリティとアクセス許可", "retrievedAt": "2026-10-18T21:50:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了(Retirement)", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "拡張機能はすでに配布されていますか?",
+          "answer": { "text": "ソースにはロードマップ項目が削除されるとのみ記載されており、配布状況は確認できません。", "origin": "mrc", "assertion": "inference", "verification": "unverified" }
+        },
+        {
+          "question": "ブラウザーで Copilot Chat を使うにはどうすればよいですか?",
+          "answer": { "text": "Copilot アプリ(copilot.cloud.microsoft)や Edge のサイド ペインなどから利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "Copilot Chat にアクセスする場所", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+        },
+        {
+          "question": "Chrome は Copilot の Web 体験でサポートされますか?",
+          "answer": { "text": "Microsoft 365 Web エクスペリエンスでは Edge、Chrome、Firefox、Safari がサポートされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-requirements", "locator": "ブラウザーと Cookie の要件", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=530577",
+        "learn": [
+          { "title": "Microsoft Copilot Chat の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot の要件", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-requirements", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
