@@ -304,6 +304,56 @@
           }
         }
       ],
+      "qa": [
+        {
+          "question": "Planner エージェントとエージェント チャットは別々に制御できますか？",
+          "answer": {
+            "text": "いいえ。どちらも同じ -AllowPlannerCopilot の設定で一括して有効・無効になります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent",
+                "locator": "アクセスを管理する",
+                "retrievedAt": "2026-10-18T22:40:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "特定のグループだけに有効にした後、全員に戻すにはどうしますか？",
+          "answer": {
+            "text": "-AllowPlannerCopilot $true と -PlannerCopilotAllowedGroupId $null を指定すると、全ユーザーがオンの状態に戻ります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent",
+                "locator": "アクセスを管理する",
+                "retrievedAt": "2026-10-18T22:40:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "現在の設定はどこで確認できますか？",
+          "answer": {
+            "text": "Get-PlannerConfiguration を実行すると、AllowPlannerCopilot の値と、有効な場合は PlannerCopilotAllowedGroupId を確認できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent",
+                "locator": "アクセスを管理する",
+                "retrievedAt": "2026-10-18T22:40:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=516576",
         "learn": [
