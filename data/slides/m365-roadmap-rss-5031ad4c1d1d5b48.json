@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5031ad4c1d1d5b48",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Teams で音声プロファイルを素早く登録できる高速音声登録（提供開始）",
+        "subtitleJa": "会議中の音声から、声のプロファイルを自動で作成できます",
+        "en": "Microsoft Teams: Express voice enrollment in Microsoft Teams"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams の会議を使うユーザー**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "音声分離や話者の識別、Microsoft Copilot による会議の要約・洞察が、声のプロファイルで強化される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は、既定で有効な高速登録を Teams AI ポリシーで制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2: 登録設定を管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Teams の設定の**認識**から、**高速登録**で音声プロファイルを素早く作成できます。会議中の音声を使う方法では数回の会議が必要でした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1: 音声登録と顔認証を有効にする", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議中の音声から音声プロファイルを自動生成するか、オプトイン後に手動で登録", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1: 音声登録と顔認証を有効にする", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "話者識別・トランスクリプト・音声分離の品質を高める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "概要", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "会議室では、話者の帰属と Microsoft Copilot の精度向上に役立つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "概要", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams デスクトップ アプリの［設定］>［認識］でオプトインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1: 音声登録と顔認証を有効にする", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "管理者側のポリシー設定は PassiveVoiceEnrollment（既定で有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2: 登録設定を管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "機能が利用可能になった後も、ユーザー自身のオプトインが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2: 登録設定を管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "音声登録の言語は、インストールされた Teams アプリの言語で決まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "サポートされている登録言語", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "音声と顔の登録は GCC まで対応で、GCCH と DoD では利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能・管理",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "手動登録は EnrollVoice、顔登録は EnrollFace で別々に制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2: 登録設定を管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "管理者は Teams 管理センターで登録状態の確認とデータ削除ができる（エクスポートは不可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "Teams 管理センターで登録データを管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "データの扱い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロファイルは 1 年間未使用で自動削除され、オプトアウトすると直ちに削除される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "データ保持", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "高速登録は継続的に処理されるため、音声録音は保持されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "登録データをエクスポートする", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "express-enrollment", "term": "高速音声登録", "type": "feature", "oneLine": { "text": "話者識別、文字起こし、音声分離のために音声プロファイルを素早く作成できる登録方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2: 登録設定を管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "voice-isolation", "term": "音声分離", "type": "feature", "oneLine": { "text": "音声プロファイルを使い、背景ノイズやセカンダリ スピーカーを低減する Teams の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "概要", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "teams-ai-policy", "term": "CsTeamsAIPolicy", "type": "term", "oneLine": { "text": "管理者が PowerShell で音声・顔登録を管理するためのポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2: 登録設定を管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "高速登録は管理者が無効にできますか？",
+          "answer": { "text": "はい。Teams AI ポリシーの PassiveVoiceEnrollment で、組織全体または特定のユーザーに対して有効・無効を切り替えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2: 登録設定を管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        },
+        {
+          "question": "管理者はユーザーの音声データを取得できますか？",
+          "answer": { "text": "いいえ。エクスポートはエンド ユーザーのみが行えます。管理者は Teams 管理センターから登録データを削除できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "Teams 管理センターで登録データを管理する", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        },
+        {
+          "question": "「音声をキャプチャできませんでした」と出る場合は？",
+          "answer": { "text": "ネットワーク制限で音声認識サービスがブロックされている可能性があります。*.speech.microsoft.com を許可リストに登録してください。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=537269",
+        "learn": [{ "title": "音声と顔の登録の概要と構成", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
