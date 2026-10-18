@@ -97,6 +97,28 @@
         { "termKey": "live-subtitles", "term": "ライブ字幕", "type": "feature", "oneLine": { "text": "音声チャットの会話内容を、見て追えるように表示する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者は音声チャットを無効にできますか？",
+          "answer": {
+            "text": "現時点で音声チャット専用のオン/オフ切り替えはありません。オプションの接続エクスペリエンスをオフにすると Web グラウンディングは無効にできますが、テキストの Copilot など他の体験にも影響します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "音声チャットの音声データは保存されますか？",
+          "answer": {
+            "text": "ユーザーと Copilot の音声は保存されません。テキスト トランスクリプトのみが通常の会話と同様に扱われます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T00:00:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502858",
         "learn": [{ "title": "更新された Windows および Microsoft Copilot Chat エクスペリエンス", "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locale": "ja-jp" }]
