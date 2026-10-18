@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2188d8307bf02a81",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "検索結果でコネクターのリッチなエンティティ表示が可能に",
+        "subtitleJa": "コネクターのデータを、情報量の多い表現で検索結果に表示できます",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility]​​[Search UX] Rich entity representation for connectors in Search results"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクターを使う検索管理者・コネクター作成者**と、検索を使う利用者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索結果でコネクターのデータを、より情報量の多い形で確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "コネクター結果のインライン表示設定と、スキーマのセマンティック ラベルを確認する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "Microsoft 365 Copilot / Microsoft Search", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "検索結果で、コネクターのデータを**リッチなエンティティ表現**で表示できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "検索（Search）の結果で、コネクターのデータをリッチなエンティティ表現で表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "コネクターは外部サービスのコンテンツを Microsoft Graph に取り込み、検索で探せるようにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "検索管理者は［コネクタの結果の管理］で［結果をインラインで表示する］を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "Microsoft 365 Copilot", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "コネクター作成者は、スキーマにセマンティック ラベルを適用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "Microsoft Search", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot にコンテンツを表示するには iconUrl・title・url ラベルが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "Microsoft 365 Copilot", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "ロードマップ上の提供範囲は Worldwide（Standard Multi-Tenant）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Search ではセマンティック ラベルが既定の表示テンプレートに役立つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "Microsoft Search", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Copilot Search は 100 以上の構築済みコネクターで強化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "Use Copilot connectors to enhance Copilot Search", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用頻度の高いコネクターから、検索結果の見え方を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connector", "term": "Copilot コネクター", "type": "product", "oneLine": { "text": "外部サービスのコンテンツを Microsoft Graph に取り込み、Microsoft 365 で検出できるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "semantic-label", "term": "セマンティック ラベル", "type": "term", "oneLine": { "text": "スキーマの意味を解釈させ、検索結果の順位付けや既定の表示テンプレートに役立てるラベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "Microsoft Search", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "copilot-search", "term": "Copilot Search", "type": "feature", "oneLine": { "text": "Microsoft 365 全体と外部システムを横断する、AI による企業内検索。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この更新で管理者の対応は必要ですか？",
+          "answer": { "text": "必須ではありません。コネクターの結果をインライン表示する設定が有効か、確認しておくと安心です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locator": "Microsoft 365 Copilot", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "どのクラウド環境と端末で使えますか？",
+          "answer": { "text": "ロードマップ上の提供範囲は Worldwide（Standard Multi-Tenant）で、プラットフォームは Web です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502533",
+        "learn": [
+          { "title": "Copilot コネクタ エクスペリエンス", "url": "https://learn.microsoft.com/ja-jp/graph/connecting-external-content-experiences", "locale": "ja-jp" },
+          { "title": "Copilot connectors and Copilot Search", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
