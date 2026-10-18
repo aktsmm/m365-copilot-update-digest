@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-e31b663d80b7048f",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot 利用レポートの Power BI で追加属性をフィルターとして利用可能に",
+        "subtitleJa": "管理者が有効にした属性で、レポートを絞り込めます",
+        "en": "Unlocking Deeper Copilot Insights with Enhanced Power BI Filtering [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["admin"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**グローバル管理者・Insights 管理者**と、Power BI レポートを使うユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "予約済み属性や組織独自のカスタム属性で、レポートを絞り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使いたい属性は、Viva Insights の「属性フィルター」で管理者が有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "フィルターを有効にする方法", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が有効にした**追加属性**を、Power BI レポートのフィルターとして使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Power BI レポートのフィルター。予約済み属性とカスタム属性を有効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "有効化できるのはグローバル管理者と Insights 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "有効化後は、レポートにアクセスできるユーザーがフィルターを利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how",
+          "heading": "有効化の手順",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Viva Insights Web アプリの「分析の設定」で「属性フィルター」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "フィルターを有効にする方法", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "「データ フィールドの品質」で、対象属性の「フィルターを有効にする」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "フィルターを有効にする方法", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Organization・CountryOrRegion・FunctionType は既定で有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "フィルターを有効にする方法", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "Organization は事前構築済み Power BI レポートの必須フィルターで、オフにできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "フィルターを有効にする方法", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "power-bi-report", "term": "Power BI レポート", "type": "feature", "oneLine": { "text": "Viva Insights の事前構築済みレポート。有効化した属性フィルターで絞り込める。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "冒頭", "retrievedAt": "2026-10-18T20:00:00Z" }] } },
+        { "termKey": "attribute-filter", "term": "属性フィルター", "type": "feature", "oneLine": { "text": "Viva Insights の組織属性を、レポートのフィルターとして有効にする設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "フィルターを有効にする方法", "retrievedAt": "2026-10-18T20:00:00Z" }] } },
+        { "termKey": "insights-admin", "term": "Insights 管理者", "type": "term", "oneLine": { "text": "Viva Insights の高度な分析で使うフィルターなどを構成する管理者。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "冒頭", "retrievedAt": "2026-10-18T20:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の更新を示す、リリースノート上の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "既定で有効になっているフィルターはありますか？",
+          "answer": { "text": "はい。Organization、CountryOrRegion、FunctionType は Power BI レポートで既定で有効です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "フィルターを有効にする方法", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+        },
+        {
+          "question": "有効にしたフィルターはどこに表示されますか？",
+          "answer": { "text": "「レポート」タブの、事前構築済みレポートの「フィルター処理」の下に表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locator": "冒頭", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/viva/insights/advanced/admin/enable-filters-for-reports",
+        "learn": [
+          { "title": "すぐに使用するレポートのフィルターを有効にする", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/enable-filters-for-reports", "locale": "ja-jp" },
+          { "title": "Viva Insights のパーティション", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/partitions", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
