@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-6a9da3fb628cd819",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Studio の会話へのファイル添付が Excel・PowerPoint・Word に拡大（GA）",
+        "subtitleJa": "エージェントがファイルを読み取り、要約・推論できます",
+        "en": "(General availability) Attach files to a conversation so your agent can read, summarize, or otherwise reason over them,..."
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": null,
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "high",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作成する人**と、そのエージェントの利用者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ユーザーが会話にファイルを添付し、エージェントに読み取りや要約をさせられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "概要", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "新しいファイル形式にも添付が対応する。作成者に必須の作業は案内されていない", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ユーザーが**メッセージにファイルを添付**し、エージェントが読み取り・要約・分析できます。Excel、PowerPoint、Word にも対応しました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "概要・サポートされている添付ファイルの種類", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Excel はテキストと表を抽出し、エージェントが推論できるようにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "サポートされている添付ファイルの種類", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "PowerPoint と Word はテキストを抽出（PowerPoint は画像も対象）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "サポートされている添付ファイルの種類", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "添付は会話ごとの入力で、作成者が設定する知識源とは別物", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "添付資料と知識源の比較", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "メッセージ作成ツールの添付アイコンからファイルを選び、送信する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "ユーザーがファイルを添付する場所", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "テスト用の「プレビュー」タブや Teams、Microsoft Copilot、Web チャットで使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "ユーザーがファイルを添付する場所", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ファイルあたり 16 MiB まで。会話の最終アクティビティから 28 日で削除", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "保持期間と制限", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "処理できない添付はスキップされ、メッセージは送信される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "エージェントによる添付ファイルの処理方法", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "知識源との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "添付は会話ごと、知識源は設計時に作成者が追加し全会話で使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "添付資料と知識源の比較", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "添付ファイルは Microsoft Purview ラベルをサポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "サポートされている添付ファイルの種類", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "「この契約書を要約して」のように、依頼固有のファイルを渡す場面に向く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "添付資料と知識源の比較", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "attachment", "term": "添付ファイル", "type": "feature", "oneLine": { "text": "ユーザーがメッセージごとに渡し、エージェントが読み取れるファイル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "概要", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "knowledge-source", "term": "知識源", "type": "feature", "oneLine": { "text": "作成者が設計時に追加し、エージェントの全会話で使われる情報源。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "添付資料と知識源の比較", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "purview-label", "term": "Microsoft Purview ラベル", "type": "term", "oneLine": { "text": "ユーザーが添付したファイルでもサポートされる機密ラベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "サポートされている添付ファイルの種類", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "一般提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "添付できるファイルの大きさや保持期間は？",
+          "answer": { "text": "1 ファイルあたり 16 MiB までです。添付は会話の最終アクティビティから 28 日後に削除されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "保持期間と制限", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "知識源との使い分けは？",
+          "answer": { "text": "常に同じ内容を参照させるなら知識源、依頼ごとに固有のファイルなら添付を使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "添付資料と知識源の比較", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "URL も添付できますか？",
+          "answer": { "text": "はい。公開アクセス可能な HTTP/HTTPS の URL をダウンロードします。30 秒以内に完了しない場合はスキップされます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locator": "URL添付ファイル", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/attachments-overview",
+        "learn": [
+          { "title": "会話にファイルを添付する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview", "locale": "ja-jp" },
+          { "title": "エージェント向けの利用可能な知識ソース", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
