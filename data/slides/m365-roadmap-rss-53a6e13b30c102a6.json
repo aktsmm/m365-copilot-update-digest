@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-53a6e13b30c102a6",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "PowerPoint エージェントの非同期通知に対応（Windows デスクトップ・開発中）",
+        "subtitleJa": "PowerPoint を離れても、作業の完了や対応が必要なときに知らせてくれます",
+        "en": "PowerPoint: Async Notifications for PowerPoint Agent (Windows Desktop)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "In development",
+        "products": ["PowerPoint"],
+        "categories": ["agents", "office-apps", "edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "PowerPoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot のエージェントを使う作成者**（Windows デスクトップ）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "PowerPoint を閉じたりオフラインになったりしても、完了や要対応の通知を受け取れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階で、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "PowerPoint を離れる、デバイスを切り替える、オフラインになる、仕事を終えるといった場面でも、**Copilot が完了や要対応を通知**してくれる状態を目指しています", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "予定されている範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は PowerPoint エージェントの非同期通知", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "PowerPoint を離れる・デバイスを切り替える・オフラインでも通知される想定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "通知は作業の完了時と、ユーザーの対応が必要なときが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "提供範囲・段階",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プラットフォームは Windows デスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウド環境は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ ID 570437 を確認し、提供時期の更新を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "長時間タスクの通知の先行例は、Microsoft Copilot のリリース ノートで確認できる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "powerpoint-agent", "term": "PowerPoint エージェント", "type": "feature", "oneLine": { "text": "PowerPoint で Copilot がエージェント モードとして資料づくりを進める機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "PowerPoint（Agent Mode in Copilot in PowerPoint）", "retrievedAt": "2026-10-18T21:50:00Z" }] } },
+        { "termKey": "async-notification", "term": "非同期通知", "type": "term", "oneLine": { "text": "ユーザーが画面の前にいなくても、作業の完了や対応の必要を知らせる通知。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップの段階は「開発中」で、提供時期の月は示されていません。ロードマップ ID 570437 の更新で確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Mac や Web でも使えますか？",
+          "answer": { "text": "ロードマップのタイトルと対象プラットフォームは Windows デスクトップです。他のプラットフォームは示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570437",
+        "learn": [
+          { "title": "Microsoft Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
