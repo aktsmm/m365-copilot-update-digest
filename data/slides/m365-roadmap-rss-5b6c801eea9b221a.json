@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5b6c801eea9b221a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "PowerPoint の Agent Mode で画像の添付・参照が可能に",
+        "subtitleJa": "資料づくりの依頼に、手元の画像を添えて Copilot に渡せます",
+        "en": "Microsoft Copilot (Microsoft 365): Attach and reference an image when creating a presentation with Copilot in PowerPoint using Agent Mode."
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot を使って資料を作る人**（作成者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "画像を添付して参照させることで、意図に近い資料を作りやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者側の操作は不要。Agent Mode の画像添付が使えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "PowerPoint の Agent Mode でプレゼンテーションを作成するとき、**画像を添付して参照**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint の Agent Mode で、Copilot にプレゼンテーションを作成させる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "依頼時に画像を添付し、Copilot がその画像を参照して作成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint デスクトップで Copilot の Agent Mode を開き、画像を添付して依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "Word・Excel・PowerPoint エージェントは、有料の Microsoft 365 Copilot ライセンスが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "制限事項とサポート", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の提供対象プラットフォームはデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "管理者向けの関連情報",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Word・Excel・PowerPoint エージェントは Anthropic モデルの有効化が必須。管理者が無効にすると使えなくなる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "管理の有効化と制御", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロゴや図版など、資料に使いたい画像を添えて依頼してみる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "Agent Mode", "type": "feature", "oneLine": { "text": "PowerPoint で Copilot にプレゼンテーションを作成させる操作モード。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        {
+          "termKey": "office-agents",
+          "term": "Word、Excel、PowerPoint エージェント",
+          "type": "feature",
+          "oneLine": {
+            "text": "高度な AI モデルで Word・Excel・PowerPoint ファイルを Microsoft Copilot 内に作成するエージェント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の開発中・展開中・提供済みの機能を公開しているページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用にはどのライセンスが必要ですか？",
+          "answer": {
+            "text": "Word・Excel・PowerPoint エージェントは、有料の Microsoft 365 Copilot ライセンスを持つユーザーが対象で、Copilot Chat のみのユーザーは使えません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "制限事項とサポート", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "管理者が機能を止めることはできますか？",
+          "answer": {
+            "text": "Word・Excel・PowerPoint エージェントは Anthropic モデルが前提で、管理センターでプロバイダーをブロックすると、ライセンスのあるユーザーも使えなくなります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "管理の有効化と制御", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555881",
+        "learn": [
+          { "title": "Microsoft Copilot で Word、Excel、PowerPoint エージェントの使用を開始する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locale": "ja-jp" },
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
