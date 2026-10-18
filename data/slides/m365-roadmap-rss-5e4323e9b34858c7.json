@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5e4323e9b34858c7",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のエージェント評価でコストの可視化を開発中",
+        "subtitleJa": "評価にかかる消費コストを、作成者が直接確認できるようになります",
+        "en": "Microsoft Copilot Studio: Cost visibility in Agent Evaluations"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Copilot Studio でエージェントを作る人**と、利用状況を管理する管理者",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        },
+        "change": {
+          "text": "評価の生成・テスト実行・モデルによる採点ごとの消費コストを確認できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発中のため、現時点で必要な対応はない",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "テストや改善、会話の確認を進めながら、評価に伴う**消費コスト**を直接確認できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "評価に関連する消費コストを、作成者が直接確認できる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            },
+            {
+              "text": "内訳は、評価の生成・テスト実行・モデルによる採点（判定）の使用量",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            },
+            {
+              "text": "テスト・改善・会話の確認をしながらコストを把握できる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "提供対象は Worldwide（標準マルチテナント）、Web",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            },
+            {
+              "text": "評価の対象は、認証なしまたは Microsoft 認証のエージェントのみ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "Limitations", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            },
+            {
+              "text": "手動認証のエージェントと Fabric のデータエージェントは評価に未対応",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "Limitations", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に知っておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "月間の Copilot クレジット消費は、見積もりツールで事前に予測できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "Overview", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            },
+            {
+              "text": "実際の消費量は Microsoft 365 管理センターの課金と使用状況レポートで確認",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-19T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "まず小さなテストセットで評価を試し、現在の運用を把握しておく",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "agent-evaluation",
+          "term": "エージェント評価",
+          "type": "feature",
+          "oneLine": {
+            "text": "テストセットでエージェントの回答の精度・関連性・品質を測定できる機能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        },
+        {
+          "termKey": "test-set",
+          "term": "テストセット",
+          "type": "term",
+          "oneLine": {
+            "text": "ユーザーとエージェントの対話を模したテストケースをまとめたグループ。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "エージェント評価の仕組み", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        },
+        {
+          "termKey": "copilot-credit",
+          "term": "Copilot クレジット",
+          "type": "term",
+          "oneLine": {
+            "text": "エージェントの使用量を測る単位で、月ごとの消費量を見積もりツールで予測できる。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "Overview", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        },
+        {
+          "termKey": "label-in-development",
+          "term": "開発中",
+          "type": "label",
+          "oneLine": {
+            "text": "Microsoft 365 ロードマップで、機能が開発段階にあることを示すステータス。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "導入前にコストを見積もる方法はありますか？",
+          "answer": {
+            "text": "エージェント使用量見積もりツールで、月間の Copilot クレジット消費を予測できます。ただし保証値ではなく、10〜20% のバッファーが推奨されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "重要な免責事項", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "提供開始の時期はいつですか？",
+          "answer": {
+            "text": "ロードマップでは現在「開発中」で、提供月は示されていません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571195", "locator": "Roadmap ID 571195", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571195",
+        "learn": [
+          { "title": "エージェント評価について", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locale": "ja-jp" },
+          { "title": "エージェント使用量見積もりツール", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
