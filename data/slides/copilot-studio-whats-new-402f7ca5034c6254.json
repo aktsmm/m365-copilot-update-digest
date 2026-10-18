@@ -306,6 +306,56 @@
           }
         }
       ],
+      "qa": [
+        {
+          "question": "テナントで Work IQ を有効にするための前提条件は？",
+          "answer": {
+            "text": "Azure サブスクリプションとリソース グループに紐づく使用量ベースの課金プランと、そのプランへのユーザー割り当てが必要です。初回セットアップにはグローバル管理者ロールが要ります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq",
+                "locator": "前提条件",
+                "retrievedAt": "2026-10-18T22:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "従来の「メール」「Teams」などのツールとの違いは？",
+          "answer": {
+            "text": "従来のワークロード別ツールは標準ハーネスと標準の Copilot Studio ライセンス・課金を使い、Work IQ は別のランタイムと課金モデルです。Work IQ は単なる名称変更ではありません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq",
+                "locator": "Important",
+                "retrievedAt": "2026-10-18T22:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "管理センターでツールや MCP サーバーを許可・拒否できますか？",
+          "answer": {
+            "text": "この機能は、地域によってはまだ利用できない場合があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq",
+                "locator": "Note",
+                "retrievedAt": "2026-10-18T22:30:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/add-work-iq",
         "learn": [
