@@ -11,7 +11,6 @@
   const $ = (selector) => root.querySelector(selector);
   const startInput = $("[data-ex-start]");
   const endInput = $("[data-ex-end]");
-  const importanceSelect = $("[data-ex-importance]");
   const textInput = $("[data-ex-text]");
   const results = $("[data-ex-results]");
   const empty = $("[data-ex-empty]");
@@ -30,7 +29,7 @@
   let lastSig = "";
   const excluded = new Set();
   const chosen = () => filtered.filter((entry) => !excluded.has(entry.id));
-  const selected = { kinds: new Set(), categories: new Set() };
+  const selected = { importance: new Set(), kinds: new Set(), categories: new Set() };
   const label = (item) => (locale === "en" ? item.labelEn || item.label : item.label);
 
   const esc = (value) =>
@@ -44,7 +43,6 @@
     }
   };
   const addDays = (date, days) => new Date(Date.parse(`${date}T00:00:00Z`) + days * 86400000).toISOString().slice(0, 10);
-  const rank = { high: 2, notable: 1, normal: 0 };
 
   function checkboxes(container, items, set, prefix) {
     container.innerHTML = items
@@ -63,8 +61,7 @@
     const end = endInput.value;
     const date = entry.publishedAt.slice(0, 10);
     if ((start && date < start) || (end && date > end)) return false;
-    const level = importanceSelect.value;
-    if (level !== "all" && rank[entry.importance] < rank[level]) return false;
+    if (selected.importance.size && !selected.importance.has(entry.importance)) return false;
     if (selected.kinds.size && !selected.kinds.has(entry.kind)) return false;
     if (selected.categories.size && !(entry.categories || []).some((id) => selected.categories.has(id))) return false;
     if (tokens.length) {
@@ -142,7 +139,7 @@
     const p = new URLSearchParams();
     if (startInput.value) p.set("start", startInput.value);
     if (endInput.value) p.set("end", endInput.value);
-    if (importanceSelect.value !== "all") p.set("imp", importanceSelect.value);
+    if (selected.importance.size) p.set("imp", [...selected.importance].join(","));
     if (selected.kinds.size) p.set("kind", [...selected.kinds].join(","));
     if (selected.categories.size) p.set("cat", [...selected.categories].join(","));
     if (textInput.value.trim()) p.set("q", textInput.value.trim());
@@ -191,18 +188,17 @@
       endInput.max = latest;
       endInput.value = latest;
       startInput.value = addDays(latest, -29);
-      importanceSelect.insertAdjacentHTML("beforeend", facets.importanceLevels.filter((l) => l.id !== "normal").map((l) => `<option value="${esc(l.id)}">${esc(label(l))}</option>`).join(""));
+      checkboxes($("[data-ex-importance]"), facets.importanceLevels, selected.importance, "imp");
       checkboxes($("[data-ex-kinds]"), facets.kinds, selected.kinds, "kind");
       checkboxes($("[data-ex-categories]"), facets.categories, selected.categories, "cat");
-      [startInput, endInput, importanceSelect].forEach((el) => el.addEventListener("change", apply));
+      [startInput, endInput].forEach((el) => el.addEventListener("change", apply));
       textInput.addEventListener("input", apply);
       const defaults = { start: startInput.value, end: endInput.value };
       const params = new URLSearchParams(location.search);
       if (params.get("start")) startInput.value = params.get("start");
       if (params.get("end")) endInput.value = params.get("end");
-      if (params.get("imp") && [...importanceSelect.options].some((o) => o.value === params.get("imp"))) importanceSelect.value = params.get("imp");
       if (params.get("q")) textInput.value = params.get("q");
-      [["kind", selected.kinds, "[data-ex-kinds]"], ["cat", selected.categories, "[data-ex-categories]"]].forEach(([name, set, selector]) => {
+      [["imp", selected.importance, "[data-ex-importance]"], ["kind", selected.kinds, "[data-ex-kinds]"], ["cat", selected.categories, "[data-ex-categories]"]].forEach(([name, set, selector]) => {
         (params.get(name) || "").split(",").filter(Boolean).forEach((id) => {
           const box = $(selector).querySelector(`input[value="${CSS.escape(id)}"]`);
           if (box) {
@@ -214,11 +210,11 @@
       $("[data-ex-reset]").addEventListener("click", () => {
         startInput.value = defaults.start;
         endInput.value = defaults.end;
-        importanceSelect.value = "all";
+        selected.importance.clear();
         textInput.value = "";
         selected.kinds.clear();
         selected.categories.clear();
-        root.querySelectorAll("[data-ex-kinds] input, [data-ex-categories] input").forEach((box) => {
+        root.querySelectorAll("[data-ex-importance] input, [data-ex-kinds] input, [data-ex-categories] input").forEach((box) => {
           box.checked = false;
         });
         apply();

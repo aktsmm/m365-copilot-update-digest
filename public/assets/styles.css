@@ -826,3 +826,11 @@ h3 {
 .status-chip { display: inline-flex; align-items: baseline; gap: 6px; margin: 0; padding: 2px 10px; border-radius: 999px; background: rgba(11, 107, 203, 0.07); font-size: 0.85rem; }
 .status-chip span { color: var(--muted); }
 .status-chip strong { font-weight: 700; }
+
+/* 重要度（複数選択チップ） */
+.chip-imp-high { --imp-color: #c62828; }
+.chip-imp-notable { --imp-color: #d98b00; }
+.chip-imp-normal { --imp-color: #5b6777; }
+.check-chip[class*="chip-imp-"] { border-color: var(--imp-color); color: var(--imp-color); font-weight: 700; }
+.check-chip[class*="chip-imp-"]:has(input:checked) { background: var(--imp-color); color: #fff; }
+.check-chip[class*="chip-imp-"] input { accent-color: var(--imp-color); }
