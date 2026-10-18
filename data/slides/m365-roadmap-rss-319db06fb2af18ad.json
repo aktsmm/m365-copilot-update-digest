@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-319db06fb2af18ad",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot の Employee Self-Service Agent が提供開始",
+        "subtitleJa": "人事・IT の問い合わせ対応を、Copilot の中で完結できます",
+        "en": "Microsoft Copilot (Microsoft 365): Employee Self-Service Agent in M365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mobile", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**人事・IT 部門の管理者とエージェント作成者**、および社内の従業員", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ポリシーの質問への回答や、人事・IT の定型タスクを Copilot から行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "導入するなら、Copilot Studio で HR か IT のスターターを選んで構成する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "はじめに", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "従業員は**信頼できる情報を探し、接続された HR/IT システムを通じてサポート対象のタスクを完了**できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot の宣言型エージェントとして動作し、知識取得と従業員アクションを組み合わせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "ナレッジ ソースは SharePoint と、Graph コネクタ経由の ServiceNow 記事", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "知識と統合機能", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Workday と ServiceNow HRSD/ITSM のシナリオが事前構成済み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "知識と統合機能", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "最初に HR か IT のスターターを選ぶ（両方可だが、展開は一度に 1 つずつ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "はじめに", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Copilot Studio でパッケージを追加し、サンドボックスで検証してから発行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "はじめに", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Agent Developer Kit の FlightCheck で構成の問題を早期に確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "はじめに", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "正式に検証された言語は英語のみ。他言語は展開前にテストする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "言語サポート", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "宣言型エージェントへのアクセスは段階的に展開中。空き状況はアカウント チームに確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "注", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "カスタム エンジン エージェント版もあり、Copilot Studio 上でのカスタマイズ向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Hub エージェント スターターで、HR・IT などの複数エージェントを 1 つに統合できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "エージェント スターター", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "HR: ポリシー検索や福利厚生の理解。IT: デバイス設定やアカウント管理の案内", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "エージェント スターター", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "iOS/Android の Microsoft Copilot アプリのエージェント リストから利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "モバイルで Employee Self-Service を使用する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ess-agent", "term": "Employee Self-Service エージェント", "type": "feature", "oneLine": { "text": "人事と IT のセルフサービスを Copilot に取り込む、構成・拡張可能なエージェント テンプレート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "term", "oneLine": { "text": "Copilot のオーケストレーションと推論を使いながら、組織の知識やシステムに接続するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "技術アーキテクチャ", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "agent-starter", "term": "エージェント スターター", "type": "term", "oneLine": { "text": "HR や IT など特定ドメイン向けに、一般的なシナリオの既製の基礎を提供する出発点。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "エージェント スターター", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "flightcheck", "term": "FlightCheck", "type": "feature", "oneLine": { "text": "Agent Developer Kit に含まれ、構成の問題を早期に見つけるチェック機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "はじめに", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "日本語で使えますか？",
+          "answer": { "text": "Learn によると、正式に検証された言語は現在英語のみです。他の言語は、展開前にナレッジ ソースやトピックをテストすることが推奨されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "言語サポート", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "一度に HR と IT の両方を展開できますか？",
+          "answer": { "text": "両方のスターターを同じ体験の一部として使えますが、展開は一度に 1 つずつ行う必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "はじめに", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "モバイルで使うのに追加設定は必要ですか？",
+          "answer": { "text": "Web で有効化済みなら、モバイル アクセスのための追加構成は不要です。表示されない場合はアプリを最新版に更新します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locator": "モバイルで Employee Self-Service を使用する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=487836",
+        "learn": [
+          { "title": "Employee Self-Service 宣言型エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/declarative-agent-overview", "locale": "ja-jp" },
+          { "title": "Employee Self-Service エージェントに関する責任ある AI FAQ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/employee-self-service/rai-faq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
