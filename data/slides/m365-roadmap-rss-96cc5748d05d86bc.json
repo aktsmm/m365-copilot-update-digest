@@ -108,6 +108,38 @@
         { "termKey": "al-mcp", "term": "AL MCP サーバー", "type": "feature", "oneLine": { "text": "AL のツールを Model Context Protocol で公開するスタンドアロン サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "Surface table", "retrievedAt": "2026-10-15T22:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "複数プロジェクトの AL ワークスペースでも使えますか？",
+          "answer": {
+            "text": "はい。launchlspserver に複数のプロジェクト フォルダーを指定すると、各 app.json を読み取って依存関係を解決し、参照検索がプロジェクトをまたいで動作します。プロジェクトを省略した場合は rootUri の走査になり、単一プロジェクト向けで、プロジェクト間の解決は有効になりません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP", "retrievedAt": "2026-10-18T21:30:00Z" }]
+          }
+        },
+        {
+          "question": "設定を VS Code の settings.json から引き継げますか？",
+          "answer": {
+            "text": "はい。--settingspath で settings.json を指定でき、省略時は rootUri 配下の .vscode/settings.json を自動検出します。packageCachePath や assemblyProbingPaths などの al.* キーが既定値を上書きします。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-al-tool", "locator": "AL LSP のオプション", "retrievedAt": "2026-10-18T21:30:00Z" }]
+          }
+        },
+        {
+          "question": "ビルドや公開も AL LSP サーバーで行えますか？",
+          "answer": {
+            "text": "いいえ。AL LSP サーバーはコードの理解とナビゲーション用です。ビルド、公開、診断の取得などは AL MCP サーバー（altool launchmcpserver）のツールで行います。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "AL LSP for semantic code intelligence", "retrievedAt": "2026-10-18T21:30:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573338",
         "learn": [
