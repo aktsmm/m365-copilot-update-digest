@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9bc0d38a78cf31f0",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Copilot エクスペリエンス別チャット履歴フィルターは提供見送り",
+        "subtitleJa": "現在のエンドポイントに絞った履歴表示と「すべてのチャット」表示は提供されません",
+        "en": "Microsoft Copilot (Microsoft 365): Chat History Filtering by Copilot Experience"
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot のチャット履歴を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エクスペリエンス別の履歴フィルターと「すべてのチャット」表示は導入されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "計画されていた機能が提供されないだけで、新たな設定変更などはない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "現在の Copilot Chat エンドポイントに絞った履歴表示と「すべてのチャット」表示を提供する計画は、**提供しないことが決定**しました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Chat のエンドポイント別に履歴を絞り込む機能は提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "「すべてのチャット」を選んで表示するオプションも提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）の Desktop・Mac・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "代替・移行",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "機能自体が提供されないため、移行作業は発生しない", "origin": "derived", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "別件として、再設計されたナビゲーション ペインでチャット履歴を拡張表示する変更が掲載されている（Windows・Web）",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025年12月23日 / Microsoft 365 Copilot Chat", "retrievedAt": "2026-10-18T23:14:10Z" }]
+            }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応プラン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザー向けの案内や社内資料に、この機能を前提とした記述がないか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot で使えるチャット体験。このアップデートはその履歴表示に関する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "all-chats", "term": "すべてのチャット", "type": "feature", "oneLine": { "text": "エンドポイントで絞った履歴ではなく、全チャットを見るためのオプションとして計画されていた表示。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の開発中・提供中の機能を公開している一覧。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、機能を提供しないことが決まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能はいつ提供されますか？",
+          "answer": { "text": "提供されません。Microsoft はこの機能を進めないことを決定し、お詫びを添えて告知しています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者は何か対応が必要ですか？",
+          "answer": { "text": "ソースに対応を求める記載はなく、機能が提供されないだけなので、対応は不要とみられます。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559601",
+        "learn": [
+          { "title": "2025 Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
