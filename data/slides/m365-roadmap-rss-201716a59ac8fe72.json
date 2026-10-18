@@ -91,6 +91,38 @@
         { "termKey": "copilot-metrics", "term": "Microsoft Copilot メトリック", "type": "term", "oneLine": { "text": "従業員が Microsoft 365 アプリで Copilot をどう使っているかを示す分析情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-17T21:55:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Copilot のライセンスがないユーザーの利用も分析できますか？",
+          "answer": {
+            "text": "Copilot Chat のみを使うユーザー (Microsoft 365 ライセンスのみ) も、「アクティブな Copilot Chat ユーザー」メトリックで過去 28 日間の利用を把握できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Copilot の導入とライセンス メトリック", "retrievedAt": "2026-10-18T22:30:00Z" }]
+          }
+        },
+        {
+          "question": "自動生成された要約を表示しただけでも利用としてカウントされますか？",
+          "answer": {
+            "text": "いいえ。自動で生成された要約は、ユーザーが選択またはクリックして操作した場合にのみ Copilot アクションとしてカウントされます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-18T22:30:00Z" }]
+          }
+        },
+        {
+          "question": "以前作成した Copilot Chat のカスタム クエリはそのまま使えますか？",
+          "answer": {
+            "text": "旧「Copilot Chat (職場)」「Copilot Chat (Web)」メトリックで作ったクエリは更新時に失敗するため、統合後の「Copilot Chat」メトリックへの置き換えが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック (重要)", "retrievedAt": "2026-10-18T22:30:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562017",
         "learn": [{ "title": "高度な分析メトリック", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics#microsoft-copilot-metrics", "locale": "ja-jp" }]
