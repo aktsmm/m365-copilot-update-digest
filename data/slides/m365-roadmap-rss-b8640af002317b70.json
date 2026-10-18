@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b8640af002317b70",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "SharePoint のドキュメントとページで AI 引用分析を提供（展開中）",
+        "subtitleJa": "Copilot やエージェントに参照された回数を、ページ・ファイル単位で確認できます",
+        "en": "SharePoint: AI citations analytics for documents and pages"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": null,
+        "products": ["SharePoint"],
+        "categories": ["copilot-chat", "sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint のコンテンツ作成者**（ドキュメント・ニュース・ページの担当者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "自分のコンテンツが Copilot や AI エージェントの回答でどれだけ参照されたかを把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用に必要な操作はロードマップに示されていない。展開状況を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "SharePoint のドキュメント・ニュース・ページが、**Copilot と AI エージェントの回答で何回参照されたか**を追跡できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ページやファイルが Copilot の回答で参照された回数を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "サイト コンテンツの参照状況を集計した形でも確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "SharePoint の Copilot では、サイト・ページ・ニュース・ドキュメントの分析取得が Copilot クレジットを使う高度な作業に挙げられている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "高度な作業には、管理者が支出ポリシーで使用量ベースの請求を有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "使用量ベースの請求を設定する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "SharePoint の Copilot の利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide (Standard Multi-Tenant) で、Web 向けに展開中", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ai-citations", "term": "AI 引用", "type": "term", "oneLine": { "text": "Copilot や AI エージェントの回答で、ページやファイルが参照されること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-in-sharepoint", "term": "Copilot in SharePoint", "type": "product", "oneLine": { "text": "自然言語で SharePoint のコンテンツに質問したり、サイトやページを作成したりできる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "概要", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "高度な作業で、使用量ベースの課金により消費される単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、順次提供が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "AI 引用分析の利用に追加ライセンスは必要ですか？",
+          "answer": { "text": "Learn では、SharePoint の分析取得は Copilot クレジットを使う高度な作業として挙げられています。この機能自体の課金条件はロードマップに示されていません。", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "どのクラウドとプラットフォームが対象ですか？",
+          "answer": { "text": "ロードマップでは Worldwide (Standard Multi-Tenant) が対象で、プラットフォームは Web です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=480725",
+        "learn": [
+          { "title": "Copilot in SharePoint の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locale": "ja-jp" }
+        ]
+      }
+    }
+  ]
+}
