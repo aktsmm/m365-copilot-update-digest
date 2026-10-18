@@ -74,6 +74,20 @@
         { "termKey": "onedrive", "term": "OneDrive", "type": "product", "oneLine": { "text": "ファイルを保存・共有する Microsoft のクラウド ストレージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "プロンプト ギャラリーの利用状況を管理者は確認できますか？",
+          "answer": { "text": "はい。Microsoft Copilot のプロンプト ギャラリーでは、保存・いいね!・共有されたプロンプトの利用状況を、分析およびレポート ツールで追跡できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-18T22:10:00Z" }] }
+        },
+        {
+          "question": "プロンプトを保存してチームと共有できますか？",
+          "answer": { "text": "Microsoft Copilot のプロンプト ギャラリーでは可能です。保存したプロンプトはチーム間で共有でき、各プロンプトには個人用設定のヒントも付いています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-18T22:10:00Z" }] }
+        },
+        {
+          "question": "OneDrive 版はいつ使えるようになりますか？",
+          "answer": { "text": "ロードマップは開発中の段階で、提供時期は示されていません。ロードマップの更新を確認するのが確実です。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571308",
         "learn": [{ "title": "Copilot のプロンプト ギャラリーを理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locale": "ja-jp" }]
