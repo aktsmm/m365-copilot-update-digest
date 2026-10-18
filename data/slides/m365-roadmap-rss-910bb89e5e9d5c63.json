@@ -75,6 +75,37 @@
         { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "エージェントを作成・管理するための Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview", "locator": "新しいスキルの追加", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "スキルは既存のツールや知識ソースと何が違いますか？",
+          "answer": {
+            "text": "ツールが外部サービスに接続するのに対し、スキルは特定タスクの扱い方を示す、自己完結型の再利用できる指示とロジックのセットです。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview", "locator": "スキルと他のエージェント構成要素の違い", "retrievedAt": "2026-10-18T22:05:00Z" }]
+          }
+        },
+        {
+          "question": "スキルをアップロードするときの形式は？",
+          "answer": {
+            "text": "YAML フロント マター付きの Markdown ファイル、または SKILL.md を含む ZIP が使えます。ZIP にはスクリプトやテンプレートなどの補助ファイルも含められます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-add-existing", "locator": "スキル ファイルとパッケージの対応形式", "retrievedAt": "2026-10-18T22:05:00Z" }]
+          }
+        },
+        {
+          "question": "スキルカタログの提供時期や管理者向け設定はありますか？",
+          "answer": {
+            "text": "確認できた資料では、提供時期も管理者向けの制御も示されていません。ロードマップの更新を待って案内するのが安全です。",
+            "origin": "editorial",
+            "assertion": "inference",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571880",
         "learn": [
