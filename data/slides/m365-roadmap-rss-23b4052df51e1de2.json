@@ -69,6 +69,37 @@
         { "termKey": "inbound-lead", "term": "インバウンドリード", "type": "term", "oneLine": { "text": "営業チームに寄せられる見込み客で、対応するかどうかを選別する対象。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Sales エージェントは CRM の権限を超えた情報を返しますか？",
+          "answer": {
+            "text": "いいえ。すべての CRM クエリはセキュリティ アクセス レベルに準拠し、CRM で閲覧権限のないデータは Sales エージェントにも提供されません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "セールス エージェントは何に役立ちますか?", "retrievedAt": "2026-10-18T22:15:00Z" }]
+          }
+        },
+        {
+          "question": "Sales エージェントは誰が設定しますか？",
+          "answer": {
+            "text": "販売データと対話できるよう、管理者が構成します。設定手順は Learn の「Sales エージェントを設定する」を参照してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "作業の開始", "retrievedAt": "2026-10-18T22:15:00Z" }]
+          }
+        },
+        {
+          "question": "終了日や代替手段が不明なとき、現場にどう案内すべきですか？",
+          "answer": {
+            "text": "確定情報が出るまでは、ロードマップの項目を確認して利用状況を棚卸しするよう案内するのが無難です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567000",
         "learn": [
