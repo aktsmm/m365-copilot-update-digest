@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2bcd48ee866ff3df",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Edge の Copilot 新しいタブ ページがアップグレード（開発中）",
+        "subtitleJa": "1 つの検索ボックスから検索・チャット・Web 探索ができます",
+        "en": "Microsoft Edge: Upgraded Copilot new tab page"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge"],
+        "categories": ["edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Edge を使う社内ユーザーと、**Edge の設定を管理する管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索・チャット・仕事のコンテンツが新しいタブに集まり、作業を素早く始められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は CopilotNewTabPageEnabled ポリシーで可用性を構成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "1 つの検索ボックスで検索・チャット・Web 探索ができ、Copilot の提案アクションや仕事関連コンテンツも表示されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "適用範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot の新しいタブ ページを有効にしている Edge の組織が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "有効でないユーザーは、既存の新しいタブの動作とポリシーが変わらない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "ユーザーには更新された検索ボックスとワーク カードが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "ユーザーに表示される内容", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Edge 153 以降は、フィードの検出とフィードの切り替え機能が制限される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "重要", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "対応言語・市場の外では、作業フィードや検出フィードが出ない場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "重要", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "NewTabPageBingChatEnabled ポリシーは、このページではサポートされない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "サポートされていない新規タブ ページ ポリシー", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "管理者の準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象ユーザーを含む Microsoft Entra グループを管理センターで用意する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "前提条件", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+            { "text": "Edge 管理サービスの [Copilot] タブで有効化し、構成を割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "構成手順", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-ntp", "term": "Copilot の新しいタブ ページ", "type": "feature", "oneLine": { "text": "チャット、Web 検索、仕事用コンテンツを単一の入口に統合した Edge のスタート画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "冒頭", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "work-card", "term": "ワーク カード", "type": "feature", "oneLine": { "text": "ファイルや予定表イベントなどの組織コンテンツを新しいタブに表示するカード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "冒頭", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "side-rail", "term": "Copilot サイド レール", "type": "feature", "oneLine": { "text": "チャット、エージェントとスキル、タスク、Cowork にすばやく入れる折りたたみ式の領域。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "ユーザーに表示される内容", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者はこの新しいタブ ページを有効・無効にできますか？",
+          "answer": { "text": "はい。CopilotNewTabPageEnabled ポリシーや Edge 管理サービスの [Copilot] タブで構成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲 / 構成手順", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        },
+        {
+          "question": "ユーザーがワーク カードをオフにできますか？",
+          "answer": { "text": "はい。新しいタブ ページの設定（スライダー アイコン）でカードをオフにできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "FAQ とトラブルシューティング", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        },
+        {
+          "question": "設定変更はいつ端末に反映されますか？",
+          "answer": { "text": "構成プロファイルの対象デバイスへの更新のダウンロードに、最大 90 分かかる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "有効になっていることを確認する", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566703",
+        "learn": [
+          { "title": "Copilot の新しいタブ ページを構成する", "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
