@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1e66962f1a8071f0",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Windows の Microsoft Copilot 音声を「バイバイ」で終了できる機能",
+        "subtitleJa": "「bye」「goodbye」と話すだけで音声セッションを閉じられます",
+        "en": "Microsoft Copilot (Microsoft 365): Semantic Goodbye word for voice in Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Windows で Microsoft Copilot の音声を使うユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "「Hey Copilot」で始めて「bye」で終える、ハンズフリー操作ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "管理者の作業は不要。音声チャット専用の無効化スイッチは現時点でない",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "**「bye」「goodbye」と言うだけで音声セッションを終了**できます。「Hey Copilot」ウェイクワードと組み合わせると、音声操作が手を使わずに完結します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Windows で「bye」または「goodbye」と話すと、音声セッションが閉じる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "開始側の「Hey Copilot」は、PC のロック解除中に使えるオプトイン機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot キー（または Win+C）の短押しで音声チャットを開始できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] },
+            { "text": "長押しすると、画面に残る小さな音声コントローラーが直接開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザーと Copilot のオーディオは保存されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] },
+            { "text": "管理者向けの音声チャット専用の切り替えは、現時点でない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テキスト トランスクリプトには、既存の保持・電子情報開示・監査ポリシーが適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "手がふさがる場面で、ハンズフリーの音声操作を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "hey-copilot", "term": "Hey Copilot", "type": "feature", "oneLine": { "text": "音声チャットをハンズフリーで始めるためのウェイクワード（オプトイン機能）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] } },
+        { "termKey": "voice-chat", "term": "音声チャット", "type": "feature", "oneLine": { "text": "Copilot と話し、作業データに基づくリアルタイムの音声応答を受け取れる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] } },
+        { "termKey": "voice-controller", "term": "音声コントローラー", "type": "term", "oneLine": { "text": "音声を使いながら作業できるよう、画面上に表示される小さなウィンドウ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は音声チャットを無効にできますか？",
+          "answer": { "text": "音声チャット専用の切り替えは現時点でありません。オプションの接続エクスペリエンスをオフにすると Web グラウンディングは無効にできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+        },
+        {
+          "question": "音声の内容は保存されますか？",
+          "answer": { "text": "オーディオは保存されず、テキスト トランスクリプトが通常の Copilot 会話と同様に保存・管理されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locator": "Microsoft Copilot の Copilot キーと音声", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=529864",
+        "learn": [
+          { "title": "更新された Windows および Microsoft Copilot Chat エクスペリエンス", "url": "https://learn.microsoft.com/ja-jp/windows/client-management/manage-windows-copilot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
