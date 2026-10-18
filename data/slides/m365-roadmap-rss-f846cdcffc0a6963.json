@@ -105,6 +105,38 @@
         { "termKey": "api-query", "term": "API クエリ", "type": "term", "oneLine": { "text": "事前に集約・最適化されたデータセットを取得する、Business Central の API オブジェクト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/unlock-more-business-central-data-mcp-server-enhancements", "locator": "機能の詳細", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Data Query Tools は初期状態で有効ですか？",
+          "answer": {
+            "text": "いいえ。既定の構成では Data Query Tools は「Not activated」で、MCP サーバー構成ページで Activate を選んで有効にします。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Default configuration / Server Features", "retrievedAt": "2026-10-18T21:50:00Z" }]
+          }
+        },
+        {
+          "question": "API Tools や動的ツール モードとの違いは何ですか？",
+          "answer": {
+            "text": "API Tools は公開した API ページ・API クエリを使うのに対し、Data Query Tools はエージェントがデータベースへ直接クエリを実行します。どちらも読み取りに使えますが、データクエリ ツールは作成・変更・削除ができません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Server Features / Configure data query tools (preview)", "retrievedAt": "2026-10-18T21:50:00Z" }]
+          }
+        },
+        {
+          "question": "大量の結果を返すクエリはどう扱いますか？",
+          "answer": {
+            "text": "bc_data_query には top・skip・resultFormat があり、ページングや大きな結果の扱いに使えます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/configure-mcp-server", "locator": "Configure data query tools (preview)", "retrievedAt": "2026-10-18T21:50:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573312",
         "learn": [
