@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-98103e037fe3f4e0",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Edge の自動入力でパスポートや運転免許証などにも対応（開発中）",
+        "subtitleJa": "保存済みの住所に加えて、文書情報もデスクトップ版で自動入力できます",
+        "en": "Microsoft Edge: Enhanced Autofill"
+      },
+      "meta": {
+        "publishedJst": "2026-09-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge"],
+        "categories": ["edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**デスクトップ版 Microsoft Edge のユーザー**と、Edge を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "住所に加え、パスポートや運転免許証などの文書情報も自動入力できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Version 156.0.4314.8: October 6, 2026 - Enhanced Autofill", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必須の対応はなし。提供開始に備えて動向を確認する程度でよい", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "住所だけでなく、**パスポートや運転免許証などの文書情報**もデスクトップ版 Edge で自動入力できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Version 156.0.4314.8: October 6, 2026 - Enhanced Autofill", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デスクトップ版 Microsoft Edge が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Enhanced Autofill", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "対象は、パスポート、運転免許証、その他の専用フォーム", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Enhanced Autofill", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Edge Beta チャネルのリリースノートでは、段階的な提供（controlled rollout）とされている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Enhanced Autofill の注記", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "機能が表示されない場合は、提供の拡大を待つ必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Enhanced Autofill の注記", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "ロードマップ上の状態は「開発中」", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は、Beta チャネルのリリースノートで提供状況を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "文書情報の自動入力について、社内の利用方針を事前に検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "autofill", "term": "自動入力", "type": "feature", "oneLine": { "text": "保存済みの情報を、Web フォームに自動で入力する Edge の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "beta", "term": "Edge Beta チャネル", "type": "term", "oneLine": { "text": "Edge の新機能を先行して提供し、リリースノートが公開されているチャネル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "controlled-rollout", "term": "controlled rollout", "type": "term", "oneLine": { "text": "機能を段階的に提供する方式。表示されない場合は提供の拡大を待つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Enhanced Autofill の注記", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すラベル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "自動入力できる文書の種類は？",
+          "answer": { "text": "パスポート、運転免許証、その他の専用フォームが挙げられています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Enhanced Autofill", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "すぐに使えますか？",
+          "answer": { "text": "Beta チャネルでは段階的に提供されており、表示されない場合は提供の拡大を待つ必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "Enhanced Autofill の注記", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=554938",
+        "learn": [{ "title": "Microsoft Edge Beta チャネルのリリースノート", "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
