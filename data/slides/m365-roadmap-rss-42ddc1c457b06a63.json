@@ -80,6 +80,20 @@
         { "termKey": "semantic-index", "term": "セマンティック インデックス", "type": "feature", "oneLine": { "text": "Microsoft Graph のコンテンツから作られ、完全一致を超えた検索を可能にするインデックス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "インデックスとは", "retrievedAt": "2026-10-15T23:40:00Z" }] } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "この検索を使うには Copilot ライセンスが必要ですか？",
+          "answer": { "text": "セマンティック インデックスは、有料の Microsoft Copilot ライセンスを持つユーザー向けに生成されると説明されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "有料の Microsoft Copilot ライセンスを持つユーザー", "retrievedAt": "2026-10-18T22:20:00Z" }] }
+        },
+        {
+          "question": "機密性の高いファイルを検索対象から外せますか？",
+          "answer": { "text": "はい。Purview DLP で除外できます。DLP がない場合は、SharePoint サイトをテナント レベルのインデックスから除外できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "SharePoint Online サイトを除外する", "retrievedAt": "2026-10-18T22:20:00Z" }] }
+        },
+        {
+          "question": "Microsoft Search だけ、または Copilot だけから除外できますか？",
+          "answer": { "text": "いいえ。SharePoint サイトの除外は Microsoft Search とセマンティック インデックスの両方に同時に適用され、片方だけの除外はできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/semantic-index-for-copilot", "locator": "SharePoint Online サイトを除外する", "retrievedAt": "2026-10-18T22:20:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570469",
         "learn": [
