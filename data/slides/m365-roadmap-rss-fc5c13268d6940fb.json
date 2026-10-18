@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fc5c13268d6940fb",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "SharePoint ライブラリ・フォルダーを対象にした質問で列メタデータを活用",
+        "subtitleJa": "添付または URL 指定したライブラリの列情報を回答に反映します",
+        "en": "Microsoft Copilot (Microsoft 365): Metadata understanding support for queries scoped to SharePoint document libraries or folders"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint のライブラリやフォルダーを Microsoft Copilot で参照するユーザー**と、その管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "選択したライブラリの列メタデータが使われ、より関連性の高い回答が得られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "追加の管理設定は案内されておらず、通常どおり質問するだけで利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "Copilot はライブラリやフォルダーの列メタデータを利用しておらず、文脈の理解に限界があった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] },
+        "after": { "text": "ライブラリやフォルダーを添付、または URL を指定すると、**列メタデータも使って回答**します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: SharePoint のライブラリまたはフォルダーを添付、または URL を指定した質問", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] },
+            { "text": "選択したライブラリの追加メタデータを活用し、回答の精度と関連性を高める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot で SharePoint のライブラリまたはフォルダーの URL を添付する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] },
+            { "text": "そのライブラリ内の文書について質問し、メタデータが反映された結果を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の提供範囲は Web、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "列を整備したライブラリで試すと、効果を確かめやすい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "column-metadata", "term": "列メタデータ", "type": "term", "oneLine": { "text": "SharePoint ライブラリの列に保存された、文書に関する追加情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "sharepoint-library", "term": "SharePoint ドキュメント ライブラリ", "type": "term", "oneLine": { "text": "SharePoint 上で文書を保管・管理する場所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "attach-url", "term": "添付／URL 指定", "type": "feature", "oneLine": { "text": "ライブラリまたはフォルダーを Copilot の質問の対象として指定する方法。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "以前との違いは何ですか？",
+          "answer": { "text": "以前は列メタデータを利用していませんでした。今回から、添付または URL 指定したライブラリ・フォルダーの質問で使われます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日 SharePoint", "retrievedAt": "2026-10-18T21:20:00Z" }] }
+        },
+        {
+          "question": "どの環境で利用できますか？",
+          "answer": { "text": "ロードマップ上は Web、Worldwide (Standard Multi-Tenant) が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=516044",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
