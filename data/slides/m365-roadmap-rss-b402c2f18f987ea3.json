@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b402c2f18f987ea3",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot の回答で参照元の該当箇所へ直接リンクするディープ引用（開発中）",
+        "subtitleJa": "回答の根拠を、参照元の該当部分で素早く確かめられるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Deep citations in Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot の回答を根拠まで確認したいユーザー**と、その展開を担う管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "参照元の該当部分へ直接リンクされ、回答の確認がしやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "ロードマップ上は開発中の段階で、現時点で公表されている管理者向けの対応は確認できない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot の結果から、**参照元の該当部分へ直接移動して根拠を確認**でき、信頼性の向上につながります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ディープ引用は、参照元の該当部分へ直接リンクして結果を検証しやすくする機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "最初は Word と PowerPoint のファイルが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "その後、会議・Web・PDF の参照へ対象を広げる計画", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）の Desktop・Mac・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず Word・PowerPoint の資料を参照する場面を想定し、利用部門へ周知の準備をしておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "提供開始の最新情報は Microsoft 365 ロードマップで確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "deep-citation", "term": "ディープ引用", "type": "feature", "oneLine": { "text": "Copilot の結果から、参照元の該当部分へ直接リンクする機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "citation", "term": "引用（参照元）", "type": "term", "oneLine": { "text": "Copilot の回答がどの資料に基づくかを示す参照情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の開発中・提供中の機能を公開している一覧。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=523223",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
