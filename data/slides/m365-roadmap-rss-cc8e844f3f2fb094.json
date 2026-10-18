@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-cc8e844f3f2fb094",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "新規作成の宣言型エージェントがスキャン PDF の参照に対応",
+        "subtitleJa": "SharePoint 上のスキャン PDF や画像ベースの文書を根拠に回答できます",
+        "en": "Microsoft Copilot (Microsoft 365): Newly created Declarative Agents now understand referenced scanned PDFs"
+      },
+      "meta": {
+        "publishedJst": "2026-08-26",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**宣言型エージェントの作成者**と、SharePoint にスキャン文書を持つ組織", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "スキャン PDF や画像ベースの社内文書を、エージェントの回答の根拠にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "新しく作成する宣言型エージェントで利用できる。管理者の設定変更は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "新しく作成した宣言型エージェントは、SharePoint から参照する**スキャン PDF や画像ベースの文書を根拠に回答**できます。エージェントで扱いにくかった社内コンテンツが使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "宣言型エージェントは、SharePoint サイト・フォルダー・ファイルをナレッジ ソースにできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-best-practices", "locator": "宣言型エージェント コンポーネント", "retrievedAt": "2026-10-18T23:30:00Z" }] },
+            { "text": "SharePoint の OCR は、画像やドキュメントから印刷・手書きのテキストを抽出する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "概要", "retrievedAt": "2026-10-18T23:30:00Z" }] },
+            { "text": "抽出されたテキストは検索でインデックスされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "概要", "retrievedAt": "2026-10-18T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "新しく作成する宣言型エージェントで、SharePoint 上のスキャン PDF を参照させる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "PDF や Office ドキュメントは SharePoint サイトに置き、そのサイトをソースに追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-best-practices", "locator": "ナレッジ ソースの選択", "retrievedAt": "2026-10-18T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "SharePoint OCR は画像ベース PDF とハイブリッド PDF に対応。画像は 50 MB 未満", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "要件と制限事項", "retrievedAt": "2026-10-18T23:30:00Z" }] },
+            { "text": "OCR が有効になった後にアップロードされた画像だけがスキャン対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "ファイルの制限事項", "retrievedAt": "2026-10-18T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "OCR は 150 以上の言語に対応し、DLP などのコンプライアンス機能でも使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "サポートされている言語", "retrievedAt": "2026-10-18T23:30:00Z" }] },
+            { "text": "画像ファイルのテキストは「抽出されたテキスト」列に格納される（PDF は検索インデックスのみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "サポートされているファイルの種類", "retrievedAt": "2026-10-18T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "スキャンした契約書・申請書・図面が多い部署のエージェントで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ファイルは少数で内容を絞ったほうが Copilot は最適に動作する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-best-practices", "locator": "ナレッジ ソース", "retrievedAt": "2026-10-18T23:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "カスタム命令・ナレッジ・アクションで Microsoft 365 Copilot をカスタマイズする AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-best-practices", "locator": "冒頭", "retrievedAt": "2026-10-18T23:30:00Z" }] } },
+        { "termKey": "knowledge-source", "term": "ナレッジ ソース", "type": "term", "oneLine": { "text": "エージェントが回答の根拠として使う社内コンテンツや外部データ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-best-practices", "locator": "宣言型エージェント コンポーネント", "retrievedAt": "2026-10-18T23:30:00Z" }] } },
+        { "termKey": "ocr", "term": "光学式文字認識（OCR）", "type": "term", "oneLine": { "text": "画像やドキュメントから印刷・手書きのテキストを抽出する SharePoint のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "概要", "retrievedAt": "2026-10-18T23:30:00Z" }] } },
+        { "termKey": "hybrid-pdf", "term": "ハイブリッド PDF", "type": "term", "oneLine": { "text": "テキストと画像が混在する PDF。SharePoint OCR の対象。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "要件と制限事項", "retrievedAt": "2026-10-18T23:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "既存の宣言型エージェントでも使えますか？",
+          "answer": { "text": "ロードマップでは「新しく作成された宣言型エージェント」が対象と記載されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "SharePoint OCR の制限はありますか？",
+          "answer": { "text": "画像は 50 MB 未満、50×50 ～ 16,000×16,000 ピクセルが条件で、OCR 有効化後にアップロードされた画像のみがスキャンされます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locator": "ファイルの制限事項", "retrievedAt": "2026-10-18T23:30:00Z" }] }
+        },
+        {
+          "question": "どのクラウドで提供されますか？",
+          "answer": { "text": "ロードマップ上の提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Desktop です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=550514",
+        "learn": [
+          { "title": "宣言型エージェントを構築するためのベスト プラクティス", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-best-practices", "locale": "ja-jp" },
+          { "title": "光学式文字認識の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/ocr-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
