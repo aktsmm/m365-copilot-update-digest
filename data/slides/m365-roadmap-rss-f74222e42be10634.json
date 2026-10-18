@@ -107,6 +107,38 @@
         { "termKey": "alcpuprofile", "term": ".alcpuprofile", "type": "term", "oneLine": { "text": "AL コードの CPU サンプリング結果を記録したプロファイルのファイル形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "ツール一覧", "retrievedAt": "2026-10-15T22:45:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "エージェントはどの権限でプロファイルを実行しますか？",
+          "answer": {
+            "text": "エージェントは利用者本人の Business Central ID で接続し、本人の権限の範囲内で動作します。すべての操作は手動の場合と同様に、本人のユーザーとして監査されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Permissions and limitations", "retrievedAt": "2026-10-18T21:50:00Z" }]
+          }
+        },
+        {
+          "question": "保存されたローカル ファイルはいつ削除されますか？",
+          "answer": {
+            "text": "自動取得されたプロファイルは、既定で 1 日の保持期間を過ぎると削除されます。期間は --profileretentiondays で変更でき、削除は起動時と次回の取得時に実行されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Profiling with an AI agent (MCP server)", "retrievedAt": "2026-10-18T21:50:00Z" }]
+          }
+        },
+        {
+          "question": "プロファイル中のセッションにデバッガーを接続できますか？",
+          "answer": {
+            "text": "できません。スケジュールされたプロファイリングが有効な間は、VS Code からの起動時デバッグ、アタッチ、スナップショット デバッグを含め、そのセッションにデバッガーを接続できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview", "locator": "Scheduled Profiling and Debugging", "retrievedAt": "2026-10-18T21:50:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573335",
         "learn": [{ "title": "Scheduled performance profiler overview", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/scheduled-performance-profiler-overview#profiling-with-an-ai-agent-mcp-server", "locale": "en-us" }]
