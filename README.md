@@ -189,6 +189,8 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 | 自動マージ | `auto-merge-slides.yml` / `auto-merge-summaries.yml` | 3 時間ごと＋実行完了時 | 検証・描画確認を通った PR だけマージ。通らない PR はクローズし、次回の生成で作り直す |
 | 見張り（AI なし） | `watchdog.yml` | 毎日 05:41 JST | 40 分を超えて動くエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 |
 | 保守エージェント | `maintenance.md`（gh-aw） | 約 2 週間ごと | パイプライン全体を点検し、再起動・小修正・Issue で知らせる（下記） |
+| 失敗時の自動起動（AI なし） | `heal-on-failure.yml` | 収集・デプロイ・自動マージ・生成ディスパッチが失敗したとき | 保守エージェントを前倒しで起動する（6 時間以内に動いていれば何もしない） |
+| 状況レポート（AI なし） | `pipeline-status.yml` / `npm run health` | 毎日 06:10 JST | 「Pipeline status」Issue を 1 つだけ保ち、件数・未作成・各ワークフローの成否・開いている PR/Issue を毎日更新する |
 | トークン期限チェック | `token-expiry.yml` | 毎週月曜 | `COPILOT_GITHUB_TOKEN` の期限が 14 日以内なら Issue を作る（期限なしのトークンなら何もしない） |
 
 gh-aw のモデルは、日本語要約・スライド生成・想定問答・保守のすべて `claude-sonnet-5.5` です。変えるときは各 `.md` の `model:` を書き換えて `gh aw compile` を実行します。
