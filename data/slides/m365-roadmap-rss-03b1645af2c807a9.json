@@ -92,6 +92,20 @@
         { "termKey": "auto-recording", "term": "自動レコーディング テンプレート", "type": "feature", "oneLine": { "text": "録音・文字起こしの保存先や、アクセスできるユーザーを定義する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locator": "通話キューの自動レコーディング テンプレート", "retrievedAt": "2026-10-15T22:50:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "ライセンスを付与した直後からキュー アプリを使えますか？",
+          "answer": { "text": "いいえ。Teams Premium のライセンス付与後、Teams クライアントで使えるようになるまで最大 48 時間かかる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-18T21:55:00Z" }] }
+        },
+        {
+          "question": "キュー アプリを使う際の主な制限は？",
+          "answer": { "text": "通話キューあたりのエージェントは 200 人までで、ユーザーごとの通話キュー割り当ては 200 個がハード制限です（推奨は 100 個以下）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-18T21:55:00Z" }] }
+        },
+        {
+          "question": "録音・文字起こしの保存先は管理者が設定しますか？",
+          "answer": { "text": "はい。自動レコーディング テンプレートで SharePoint のホスト名とサイト名を指定します。これらはテンプレート作成後に変更できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/aa-cq-setup-call-queue-template-recording-automatic", "locator": "通話キューの自動録音テンプレートを作成する", "retrievedAt": "2026-10-18T21:55:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568933",
         "learn": [
