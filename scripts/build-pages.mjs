@@ -71,9 +71,7 @@ const TEXT = {
     demoNavLabel: "デモ一覧",
     unofficialBadge: "Unofficial update digest",
     headerLead: "非公式アップデートダイジェスト",
-    heroTitle: "Copilot、今日なにが変わった？",
-    heroCopy:
-      "Microsoft 365 Copilot・Copilot Studio・Agent Builder の公開アップデートを毎日自動で集めて、日本語の要約と解説スライドにしています。気になる更新だけ選んで、JSON / PDF / PPTX で持ち帰れます。",
+    siteName: "Microsoft Copilot Update Digest",
     statsUpdates: "追跡中の更新",
     statsUpdatesDetail: "重複除去後の累計件数",
     statsSources: "監視ソース",
@@ -168,9 +166,7 @@ const TEXT = {
     demoNavLabel: "Demo sites",
     unofficialBadge: "Unofficial update digest",
     headerLead: "Unofficial update digest",
-    heroTitle: "What changed in Copilot today?",
-    heroCopy:
-      "Public Microsoft 365 Copilot, Copilot Studio, and Agent Builder updates, collected every day and turned into summaries and explainer slides. Pick the updates you care about and take them home as JSON, PDF, or PPTX.",
+    siteName: "Microsoft Copilot Update Digest",
     statsUpdates: "Tracked updates",
     statsUpdatesDetail: "Deduplicated cumulative count",
     statsSources: "Sources",
@@ -886,23 +882,14 @@ function renderIndexPage(
       .entries(),
   ].sort((left, right) => right[1] - left[1]);
   const content = `
-    <section class="hero">
-      <div class="hero-copy-block">
-        <span class="eyebrow">${escapeHtml(text.unofficialBadge)}</span>
-        <h1>${escapeHtml(text.heroTitle)}</h1>
-        <p class="hero-copy">${escapeHtml(text.heroCopy)}</p>
-        ${renderHeroMeta(
-          renderLastUpdated(locale, siteMeta),
-          renderLastChecked(locale, siteMeta),
-          renderSourceCount(
-            locale,
-            runSummary.sourceCount ?? sourceCounts.length,
-          ),
-        )}
-      </div>
-      <div class="metric-grid">
-        <article class="metric-card"><span>${escapeHtml(text.statsUpdates)}</span><strong>${escapeHtml(String(sorted.length))}</strong><small>${escapeHtml(text.statsUpdatesDetail)}</small></article>
-        <article class="metric-card"><span>${escapeHtml(text.statsRun)}</span><strong>${escapeHtml(`${newCounts.day} / ${newCounts.week}`)}</strong><small>${escapeHtml(text.statsRunDetail)}</small></article>
+    <section class="status-bar" aria-label="${escapeHtml(text.statsUpdates)}">
+      <h1 class="status-title">${escapeHtml(text.siteName)}</h1>
+      <div class="status-chips">
+        <p class="status-chip"><span>${escapeHtml(text.statsUpdates)}</span><strong>${escapeHtml(sorted.length.toLocaleString("en-US"))}</strong></p>
+        <p class="status-chip"><span>${escapeHtml(text.statsRun)}</span><strong>${escapeHtml(locale === "en" ? `${newCounts.day} today / ${newCounts.week} in 7 days` : `今日 ${newCounts.day} ／ 7日 ${newCounts.week}`)}</strong></p>
+        ${renderLastUpdated(locale, siteMeta, "status-chip")}
+        ${renderLastChecked(locale, siteMeta, "status-chip")}
+        ${renderSourceCount(locale, runSummary.sourceCount ?? sourceCounts.length, "status-chip")}
       </div>
     </section>
 
