@@ -102,6 +102,20 @@
         { "termKey": "multi-turn", "term": "マルチターン チャット", "type": "term", "oneLine": { "text": "やり取りを重ねながら、出力を調整していく対話形式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "エージェントがユーザーに表示されない場合の原因は何ですか？",
+          "answer": { "text": "テナントで Anthropic モデルが無効だと、ライセンスのあるユーザーにも使えません。エージェント ストアに表示されていても、有効化されている証拠にはなりません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "管理の有効化と制御", "retrievedAt": "2026-10-18T22:00:00Z" }] }
+        },
+        {
+          "question": "管理者はこのエージェントを個別に管理できますか？",
+          "answer": { "text": "Microsoft がインストールするエージェントとして、他の Microsoft インストール型エージェントと同様に管理できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "管理の有効化と制御", "retrievedAt": "2026-10-18T22:00:00Z" }] }
+        },
+        {
+          "question": "Copilot Chat のみのユーザーは使えますか？",
+          "answer": { "text": "使えません。有料の Microsoft 365 Copilot ライセンスが必要で、言語は公式にサポートされている Microsoft Copilot の言語で利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "制限事項とサポート", "retrievedAt": "2026-10-18T22:00:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=543422",
         "learn": [{ "title": "Microsoft Copilot で Word、Excel、PowerPoint エージェントの使用を開始する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locale": "ja-jp" }]
