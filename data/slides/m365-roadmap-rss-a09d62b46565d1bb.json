@@ -103,6 +103,20 @@
         { "termKey": "teams-premium", "term": "Teams Premium", "type": "product", "oneLine": { "text": "Queues アプリの利用に必要な Teams のアドオン ライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-15T22:20:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "通話ポリシーの Copilot 設定の既定値は何ですか？",
+          "answer": { "text": "既定値は「オン」（Enabled）で、文字起こしなしでも通話中に Copilot を使えます。ただし通話中に文字起こしを開始しないと、通話後は文字起こしにアクセスできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "Teams 通話用の Copilot を構成する", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        },
+        {
+          "question": "通話中だけ Copilot を使わせ、通話後は残さないようにできますか？",
+          "answer": { "text": "はい。通話の Copilot をオンにし、通話の文字起こしをオフにすると通話中のみの利用になり、通話後に文字起こしや Copilot のコンテンツは保持されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "通話中のみ", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        },
+        {
+          "question": "通話後に Copilot を使うために文字起こしは必要ですか？",
+          "answer": { "text": "はい。通話後に使うには Teams 通話ポリシーで文字起こしを有効にする必要があり、そうしない場合 Copilot は通話中にのみ利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "前提条件 - 文字起こし", "retrievedAt": "2026-10-18T21:40:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568933",
         "learn": [
