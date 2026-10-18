@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-edea812999369145",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Edge の Google 向け仕事用検索バナー（廃止・終了区分）",
+        "subtitleJa": "google.com 検索時に職場の検索結果を案内するバナーが Retirement になっています",
+        "en": "Microsoft Edge: Work Search Banner for Google"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Edge"],
+        "categories": ["copilot-chat", "edge-windows"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "職場プロファイルの Edge で google.com を検索する**エンドユーザー**と、Edge を管理する IT 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ロードマップ上のステージが Retirement になっている", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "終了日や代替手段は確認できないため、ロードマップの項目を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "職場プロファイルで google.com を検索すると、Edge が組織固有の結果の有無を判定し、該当があれば **Microsoft Copilot で職場の結果を確認できるバナー**を表示します",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Web、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステージは Retirement", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は職場プロファイルでの google.com 検索時に表示されるバナー", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの項目で終了時期と影響範囲を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "必要に応じて、職場の検索結果の入口をユーザーへ案内する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edge-work-profile", "term": "職場プロファイル", "type": "feature", "oneLine": { "text": "職場アカウントで Edge にサインインして使うプロファイル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "work-search-banner", "term": "仕事用検索バナー", "type": "feature", "oneLine": { "text": "組織固有の結果がある場合に、職場の結果へのリンクを示すバナー。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "職場や学校の組織データを横断して検索・活用できる Microsoft の AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locator": "仕事と教育機関向けの Microsoft Copilot 検索", "retrievedAt": "2026-10-18T23:00:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "終了日や代替機能はありますか？",
+          "answer": { "text": "ロードマップの情報からは確認できません。元の発表で最新の状況を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Bing の Microsoft Search 廃止と関係がありますか？",
+          "answer": {
+            "text": "関連は確認できません。Bing の職場検索は 2025 年 3 月 31 日に廃止済みで、職場の結果は M365.cloud.microsoft や SharePoint Online などから利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locator": "何が変更ですか?", "retrievedAt": "2026-10-18T23:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560823",
+        "learn": [
+          { "title": "Bing for your organization の Microsoft Search を廃止するためのガイダンス", "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
