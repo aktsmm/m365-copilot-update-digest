@@ -98,6 +98,38 @@
         { "termKey": "process-returns-as", "term": "Process Returns as", "type": "feature", "oneLine": { "text": "返品から作成する文書を、クレジットメモか返品注文から選ぶ設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Shopify の注文番号が既存の番号と重複したらどうなりますか？",
+          "answer": {
+            "text": "既存の販売ドキュメント番号と競合する場合、コネクタはその注文番号を使えません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          }
+        },
+        {
+          "question": "注文番号の設定をショップ全体ではなく注文ごとに変えられますか？",
+          "answer": {
+            "text": "はい。販売ドキュメントを作成する前に、個別の Shopify 注文で Use Shopify Order No. を上書きできます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up the import of orders on the Shopify Shop Card", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          }
+        },
+        {
+          "question": "返品から作成された文書は、自動でリリースされますか？",
+          "answer": {
+            "text": "Auto Create Sales Document の場合、明細の入力後に自動でリリースされます。これはショップカードの Auto Release Sales Orders の設定に関係ありません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locator": "Set up returns and refunds", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573340",
         "learn": [{ "title": "Synchronize and fulfill sales orders", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/shopify/synchronize-orders", "locale": "en-us" }]
