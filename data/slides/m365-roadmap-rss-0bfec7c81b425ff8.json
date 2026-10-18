@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0bfec7c81b425ff8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot ノートブックで Power BI レポートを参照として追加可能に（開発中）",
+        "subtitleJa": "ファイルと並べて、レポートのデータを Copilot の根拠にできます",
+        "en": "Microsoft Copilot (Microsoft 365): Power BI reports as references in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "OneNote"],
+        "categories": ["office-apps", "admin"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot ノートブックでレポートや資料を作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Power BI レポートのデータを根拠に、要約・プレゼン・ブリーフを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Power BI レポートを**参照として追加**し、ファイルと並べて組織のデータに基づく要約やプレゼン、ブリーフを作れます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot ノートブックに Power BI レポートを参照として追加できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "レポートのデータがノートブックにファイルと並んで取り込まれる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot がその情報を使い、要約・プレゼン・ブリーフを生成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象のクラウド環境は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象のプラットフォームはデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供開始まで、ロードマップ ID 569928 の更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ノートブックで使いたい Power BI レポートの候補を洗い出しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "ファイルなどを参照として集め、Copilot の回答の根拠にできるノートブック機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "reference", "term": "参照（リファレンス）", "type": "term", "oneLine": { "text": "ノートブックに追加して、Copilot が回答の根拠として使う情報源。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "power-bi-report", "term": "Power BI レポート", "type": "term", "oneLine": { "text": "組織のデータを可視化したレポート。この更新で参照として追加できるようになる。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり提供が始まっていない状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は「開発中」で、提供時期の月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境・端末が対象ですか？",
+          "answer": { "text": "Worldwide（Standard Multi-Tenant）で、デスクトップと Web が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569928",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
