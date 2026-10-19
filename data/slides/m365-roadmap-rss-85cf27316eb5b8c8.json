@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-85cf27316eb5b8c8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Planner のキャパシティビューを開発中",
+        "subtitleJa": "誰が何に取り組んでいるかを、タイムラインで把握できます",
+        "en": "Planner: Capacity view"
+      },
+      "meta": {
+        "publishedJst": "2026-08-22",
+        "availability": [],
+        "status": "In development",
+        "products": ["Planner"],
+        "categories": ["office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Planner",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Planner でチームの作業を割り当てる**チームリーダー・プロジェクト管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チーム内の作業配分、過負荷、空き容量をひと目で把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "derived", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**誰が何に取り組んでいるか**のタイムラインで、作業の偏りや空き容量を確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "機能の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "誰が何に取り組んでいるかをタイムラインで表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "チーム内の作業の配分状況を把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "過負荷のメンバーと、空き容量を一目で見つけられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」。提供対象は Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームはデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プレミアム プランの高度な機能（チーム ワークロードなど）には、Planner and Project Plan 3 / 5 などのライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/planner-for-admins", "locator": "Microsoft Planner ユーザーとしてユーザーがアクセスできるもの", "retrievedAt": "2026-10-18T23:30:00Z" }] },
+            { "text": "提供開始に備え、チームの作業割り当てを Planner に集約しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "capacity-view", "term": "キャパシティビュー", "type": "feature", "oneLine": { "text": "誰が何に取り組んでいるかをタイムラインで示し、過負荷や空き容量を把握できるビュー。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "planner", "term": "Planner", "type": "product", "oneLine": { "text": "タスク、To Do リスト、プラン、プロジェクトを 1 つのエクスペリエンスで管理する作業管理ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/planner-for-admins", "locator": "Microsoft Planner が、organization の順調な進捗を維持し…", "retrievedAt": "2026-10-18T23:30:00Z" }] } },
+        { "termKey": "premium-plan", "term": "プレミアム プラン", "type": "feature", "oneLine": { "text": "タイムライン、People、目標などの追加ビューを使える Planner のプラン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/planner-for-admins", "locator": "Microsoft Planner ユーザーとしてユーザーがアクセスできるもの", "retrievedAt": "2026-10-18T23:30:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "キャパシティビューはいつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。最新状況はロードマップの項目で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存の「チーム ワークロード」との関係は？",
+          "answer": { "text": "関係は公開情報から確認できていません。なお、チーム ワークロードは Planner and Project Plan 3 / 5 のプレミアム プランの高度な機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/planner-for-admins", "locator": "Microsoft Planner ユーザーとしてユーザーがアクセスできるもの", "retrievedAt": "2026-10-18T23:30:00Z" }] }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "ロードマップ上は Worldwide（標準マルチテナント）で、デスクトップと Web が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569733",
+        "learn": [
+          { "title": "管理者向け Microsoft Planner", "url": "https://learn.microsoft.com/ja-jp/planner/planner-for-admins", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
