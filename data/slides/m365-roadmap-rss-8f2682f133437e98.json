@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8f2682f133437e98",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Android の Copilot ノートブックで音声・画像・メモをまとめて取り込み",
+        "subtitleJa": "1 回のセッションで取り込み、Copilot ページに整理して保存します",
+        "en": "OneNote: Multimodal capture in Copilot Notebooks (Android)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Android の OneNote で Copilot ノートブックを使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対面の会話など、オフラインの作業の記録を 1 回のセッションでまとめられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "ロードマップ上、管理者に求められる対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "音声の文字起こし、画像の撮影、メモ入力を**1 回のセッションで実行**できます。Copilot が整理した Copilot ページを、選んだノートブックに保存します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "音声の文字起こし・画像の撮影・メモ入力を 1 回のセッションで行う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot がインサイトと取り込んだ内容を含む Copilot ページを作成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot ページは、ユーザーが選んだ Copilot ノートブックに保存される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Android の OneNote で、Copilot ノートブックのマルチモーダル キャプチャを使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "展開中のため、利用できるようになる時期はテナントやユーザーで異なる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭の展開モデルの説明", "retrievedAt": "2026-10-19T14:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象プラットフォームは Android。提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot の機能は、一部のユーザーに段階的に展開してから組織全体に拡大される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭の展開モデルの説明", "retrievedAt": "2026-10-19T14:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対面の会話など、オフラインの作業の場面での記録を想定している", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "まず少人数の Android ユーザーで試し、使い勝手を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebook", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "関連するチャット、出力の作成、参照を整理して、継続的に使える AI ワークスペース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブックの新しいデザイン", "retrievedAt": "2026-10-19T14:45:00Z" }] } },
+        { "termKey": "multimodal-capture", "term": "マルチモーダル キャプチャ", "type": "feature", "oneLine": { "text": "音声の文字起こし、画像の撮影、メモ入力を 1 回のセッションで行える機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-page", "term": "Copilot ページ", "type": "feature", "oneLine": { "text": "Copilot がインサイトと取り込んだ内容をまとめて作成するページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "すべてのユーザーがすぐに使えますか？",
+          "answer": { "text": "いいえ。展開中の段階で、Copilot の機能は一部のユーザーから段階的に広がります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭の展開モデルの説明", "retrievedAt": "2026-10-19T14:45:00Z" }] }
+        },
+        {
+          "question": "iPhone や PC でも使えますか？",
+          "answer": { "text": "この更新の対象プラットフォームは、ロードマップ上 Android のみです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567895",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
