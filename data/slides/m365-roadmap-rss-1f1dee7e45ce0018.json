@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1f1dee7e45ce0018",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Outlook のメール下書きを選択して Copilot でリライト可能に",
+        "subtitleJa": "下書きの一部を選び、長さ・トーン・構成を Copilot と整えられます",
+        "en": "Outlook: Co-Authoring Highlight and Rewrite"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook でメールを書く Microsoft Copilot ユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "下書きの一部だけを Copilot に直してもらい、共同で仕上げられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の作業は特になく、利用者が下書きで試せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "下書きの**一部を選択して Copilot に依頼**し、長さ・トーン・構成を変更できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "下書きの一部を選び、Copilot に変更を依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "変更の例: 長さ、トーン、構成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "詳細な指示の入力や、トーンと長さの調整もできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "2024 年 10 月 / Outlook", "retrievedAt": "2026-10-19T14:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "メールを下書きし、書き換えたい部分を選択して Copilot に依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "2024 年 10 月 / Outlook", "retrievedAt": "2026-10-19T14:00:00Z" }] },
+            { "text": "Roadmap 上の対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Roadmap の提供範囲は Worldwide（Standard Multi-Tenant）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "新しい Outlook では、プロンプトからの下書き作成や長さ・トーン調整にも Copilot を使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "2023 年 11 月 / Outlook", "retrievedAt": "2026-10-19T14:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "not-stated",
+          "priority": "detail"
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-outlook", "term": "Outlook の Copilot", "type": "feature", "oneLine": { "text": "新しい Outlook で、メールの下書き作成や書き換えを支援する Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "2023 年 11 月 / Outlook", "retrievedAt": "2026-10-19T14:00:00Z" }] } },
+        { "termKey": "rewrite", "term": "リライト", "type": "term", "oneLine": { "text": "下書きの選択範囲を、指示やトーン・長さに合わせて Copilot が書き換えること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "2024 年 10 月 / Outlook", "retrievedAt": "2026-10-19T14:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "以前にも似た機能の案内がありましたか？",
+          "answer": { "text": "はい。選択部分を Copilot で書き換える機能は、リリース ノート（アーカイブ）の 2023 年 11 月と 2024 年 10 月にも掲載されています。今回の Roadmap 項目は Web 向けの提供開始です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "2023 年 11 月 / 2024 年 10 月", "retrievedAt": "2026-10-19T14:00:00Z" }] }
+        },
+        {
+          "question": "どのクラウド環境で使えますか？",
+          "answer": { "text": "Roadmap の提供範囲は Worldwide (Standard Multi-Tenant) です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=564605",
+        "learn": [
+          { "title": "アーカイブされた Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
