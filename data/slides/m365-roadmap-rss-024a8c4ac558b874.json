@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-024a8c4ac558b874",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Notebooks に Outlook メールを参照として追加可能に",
+        "subtitleJa": "メールの会話や決定事項を、ノートブックの根拠として使えます",
+        "en": "Microsoft Copilot (Microsoft 365): Outlook Emails in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["outlook"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Notebooks でプロジェクトの資料をまとめる人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メールの会話や決定事項を根拠に、プレゼンテーションやブリーフなどの成果物を作れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 Outlook Emails in Copilot Notebooks", "retrievedAt": "2026-10-19T00:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者がノートブックの「Add content」からメールを選ぶだけで使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 Try this", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "ノートブックに含められるのは、ファイルなどのドキュメントのみでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 What changed", "retrievedAt": "2026-10-19T00:30:00Z" }] },
+        "after": { "text": "Outlook のメールを**ナレッジ ソースとして追加**でき、Copilot がメールの文脈を踏まえて回答・生成します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 What changed", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook メールをノートブックの参照（ナレッジ ソース）として追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook Emails in Copilot Notebooks", "retrievedAt": "2026-10-19T00:30:00Z" }] },
+            { "text": "会話・決定事項・文脈に Copilot を根ざさせ、プレゼンテーションやブリーフの質を高める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook Emails in Copilot Notebooks", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 で Copilot Notebooks のノートブックを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-19T00:30:00Z" }] },
+            { "text": "「Add content」から Outlook emails を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-19T00:30:00Z" }] },
+            { "text": "含めたいメールを選び、ノートブックの参照として追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "リリース ノートの対象プラットフォームは Windows と Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook Emails in Copilot Notebooks [Windows, Web]", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Chat ではメールの参照をクリックすると、Chat の横でメールを開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Open Outlook emails within Copilot Chat", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロジェクト関連のメールを集め、進捗報告のブリーフや説明資料の下書きに使う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "プロジェクトの参照資料を集め、Copilot の成果物の根拠にできる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook Emails in Copilot Notebooks", "retrievedAt": "2026-10-19T00:30:00Z" }] } },
+        { "termKey": "reference", "term": "参照（ナレッジ ソース）", "type": "term", "oneLine": { "text": "ノートブックに追加し、Copilot が根拠として使うコンテンツ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-19T00:30:00Z" }] } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "Copilot の回答を、仕事の会話や決定事項などの文脈に根ざさせること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-19T00:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "リリース ノートでは Windows と Web が対象とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook Emails in Copilot Notebooks [Windows, Web]", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+        },
+        {
+          "question": "従来の参照との違いは何ですか？",
+          "answer": { "text": "これまでノートブックにはファイルなどのドキュメントのみ含められましたが、今回メールも参照に加わりました。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-19T00:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=564910",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-25,-2026", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
