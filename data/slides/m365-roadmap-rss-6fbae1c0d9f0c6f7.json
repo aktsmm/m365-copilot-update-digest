@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6fbae1c0d9f0c6f7",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Chat で Office ファイル内の画像中の文字も検索対象に（開発中）",
+        "subtitleJa": "Word・Excel・PowerPoint に埋め込まれた画像の文字も、検索結果に反映されます",
+        "en": "Microsoft Copilot (Microsoft M365): Copilot Chat can now better match search results from text that appears inside images embedded in Word, Excel, and PowerPoint file"
+      },
+      "meta": {
+        "publishedJst": "2026-09-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Chat で Word・Excel・PowerPoint の自分のファイルを探す人**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "スキャンした契約書や表のスクリーンショットなど、画像内の文字も見つけやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は開発中の段階で、現時点で必要な対応は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word の**スキャン契約書**、Excel の**表のスクリーンショット**、PowerPoint の**ホワイトボード写真**にある文字も、Copilot Chat の検索結果に一致しやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Chat が、Word・Excel・PowerPoint ファイルに埋め込まれた画像内の文字を検索結果に反映", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "例：Word のスキャン契約書、Excel の表のスクリーンショット、PowerPoint のホワイトボード写真", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "これまで検索しにくかった、ユーザー自身の作業ファイルの内容が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象のクラウドは Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Chat は既存の Microsoft 365 アクセス許可を尊重し、アクセス権のあるコンテンツにのみアクセスする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "セキュリティとアクセス許可", "retrievedAt": "2026-10-19T14:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "画像を多用する契約書・会議資料を、提供開始後の検索で試す候補として洗い出す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Copilot Chat の利用に Microsoft 365 Copilot ライセンスは必須ではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "Copilot Chat の資格要件", "retrievedAt": "2026-10-19T14:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "対象の Microsoft 365 ユーザーが使える、LLM とエンタープライズ レベルの保護を備えた安全な AI チャット エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "冒頭", "retrievedAt": "2026-10-19T14:20:00Z" }] } },
+        { "termKey": "work-files", "term": "Office ファイル", "type": "term", "oneLine": { "text": "Word・Excel・PowerPoint などの、ユーザーが日常的に扱う作業ファイル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能が開発中でまだ提供されていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        { "question": "いつから使えるようになりますか？", "answer": { "text": "ロードマップ上は「開発中」で、提供時期は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "question": "どのプラットフォームが対象ですか？", "answer": { "text": "ロードマップでは Web が対象で、クラウドは Worldwide（Standard Multi-Tenant）とされています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570469",
+        "learn": [{ "title": "Microsoft Copilot Chat の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
