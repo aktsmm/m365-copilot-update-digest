@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c136642f943a7b1a",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Excel に Copilot 生成の Excel canvas を提供予定（開発中）",
+        "subtitleJa": "ブックのデータを、対話型のビューに変えられます",
+        "en": "Excel: Excel canvas"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Excel"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Excel",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Excel で Copilot を使う作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ブックのデータを、主要なビジュアル・指標・洞察を含む対話型のビューにできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot が生成する**Excel canvas**が、ブックのデータを主要なビジュアル・指標・洞察の対話型ビューにします", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot がブックのデータから対話型のビューを生成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ブックのデータが変わると、最新の情報に自動で更新", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot とチャットして canvas を編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Excel の Copilot の利用範囲は、ライセンス（Basic / Premium）で異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリの Copilot 機能", "retrievedAt": "2026-10-19T23:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えるには",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Excel の Copilot は、データ分析・分析情報の生成・数式やビジュアルの作成に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 Copilot (Basic) のライセンスとエクスペリエンス", "retrievedAt": "2026-10-19T23:50:00Z" }] },
+            { "text": "提供開始に備え、対象ブックのデータ構造を整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "excel-canvas", "term": "Excel canvas", "type": "feature", "oneLine": { "text": "ブックのデータを、ビジュアル・指標・洞察を含む対話型のビューにする Copilot 生成のキャンバス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "m365-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "Word・Excel・PowerPoint などのアプリで、仕事のデータを使って Copilot と対話できる製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリの Copilot 機能", "retrievedAt": "2026-10-19T23:50:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、開発中の段階です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "Worldwide（Standard Multi-Tenant）の Desktop と Web が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569424",
+        "learn": [{ "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
