@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-eedcfa40d6dc6ba1",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot 生成のビデオ下書きにテキストアニメーションと新レイアウト",
+        "subtitleJa": "Clipchamp で作る AI ビデオの見栄えを、そのまま整えられます",
+        "en": "Microsoft Copilot (Microsoft 365): AI Generated video drafts include text animations and new layout options"
+      },
+      "meta": {
+        "publishedJst": "2026-09-09",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Clipchamp", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Clipchamp でビデオを作成する Microsoft Copilot ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot が生成したビデオ プロジェクトに、更新されたレイアウトとテキスト アニメーションが加わる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザー側で必要な設定変更は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot で生成したビデオ プロジェクトで、**更新されたレイアウトとテキスト アニメーション**が使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Clipchamp Copilot ビデオ作成: プロンプトから下書きを生成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 6 月 24 日 Microsoft Clipchamp", "retrievedAt": "2026-10-19T15:30:00Z" }] },
+            { "text": "スクリプト、ストック映像、音楽、AI ナレーション、テキスト、切り替えを含む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 6 月 24 日 Microsoft Clipchamp", "retrievedAt": "2026-10-19T15:30:00Z" }] },
+            { "text": "今回、生成プロジェクトのレイアウトとテキスト アニメーションが更新", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "下書きは編集可能なプロジェクトとして作られ、OneDrive にエクスポートできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 6 月 24 日 Microsoft Clipchamp", "retrievedAt": "2026-10-19T15:30:00Z" }] },
+            { "text": "Clipchamp Standard は Microsoft 365 E3 / E5 / Business Standard などに含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/windows-365-service-description/microsoft-clipchamp-service-description", "locator": "使用できるプラン", "retrievedAt": "2026-10-19T15:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Clipchamp は Microsoft Edge と Google Chrome からアクセスできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/windows-365-service-description/microsoft-clipchamp-service-description", "locator": "冒頭", "retrievedAt": "2026-10-19T15:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する AI 機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Clipchamp には自動カット、自動キャプション、テキスト読み上げなどの AI 機能がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/windows-365-service-description/microsoft-clipchamp-service-description", "locator": "機能の可用性", "retrievedAt": "2026-10-19T15:30:00Z" }] },
+            { "text": "独自の映像からのビデオ自動作成も Standard と Premium で使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/windows-365-service-description/microsoft-clipchamp-service-description", "locator": "機能の可用性", "retrievedAt": "2026-10-19T15:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず社内向けの短い紹介動画など、小さな題材で下書きを作って試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "clipchamp", "term": "Microsoft Clipchamp", "type": "product", "oneLine": { "text": "クリップの結合やテキスト、音楽の追加ができるビデオ エディター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/windows-365-service-description/microsoft-clipchamp-service-description", "locator": "冒頭", "retrievedAt": "2026-10-19T15:30:00Z" }] } },
+        { "termKey": "copilot-video-creator", "term": "Clipchamp Copilot ビデオ作成", "type": "feature", "oneLine": { "text": "プロンプトから、スクリプトや素材を含む編集可能なビデオ下書きを生成する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 6 月 24 日 Microsoft Clipchamp", "retrievedAt": "2026-10-19T15:30:00Z" }] } },
+        { "termKey": "ai-voice-over", "term": "AI ナレーション", "type": "term", "oneLine": { "text": "生成された下書きに含まれる、AI による音声のナレーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 6 月 24 日 Microsoft Clipchamp", "retrievedAt": "2026-10-19T15:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Clipchamp のライセンスは別途必要ですか？",
+          "answer": { "text": "Clipchamp Standard は Microsoft 365 E3 / E5 / Business Premium / Business Standard などに含まれ、Premium アドオンも選べます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/windows-365-service-description/microsoft-clipchamp-service-description", "locator": "使用できるプラン", "retrievedAt": "2026-10-19T15:30:00Z" }] }
+        },
+        {
+          "question": "生成したビデオはどこに保存できますか？",
+          "answer": { "text": "下書きは編集可能なプロジェクトとして生成され、OneDrive にエクスポートできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 6 月 24 日 Microsoft Clipchamp", "retrievedAt": "2026-10-19T15:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=557560",
+        "learn": [
+          { "title": "2025 Microsoft Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locale": "ja-jp" },
+          { "title": "Microsoft Clipchamp サービスの説明", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/windows-365-service-description/microsoft-clipchamp-service-description", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
