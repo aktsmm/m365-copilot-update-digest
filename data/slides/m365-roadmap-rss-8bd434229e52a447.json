@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8bd434229e52a447",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Microsoft Copilot が Power BI のデータに対応（展開中）",
+        "subtitleJa": "レポートやセマンティック モデルに基づく回答を、自然言語で得られます",
+        "en": "Microsoft Copilot (Microsoft 365): Power BI integration in M365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["admin"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Power BI のデータを使う Microsoft Copilot ユーザー**と、Microsoft 365 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Power BI のレポートとセマンティック モデルに基づく回答を、Copilot で得られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "冒頭", "retrievedAt": "2026-10-19T23:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既定で有効。対象ユーザーを絞る場合は管理センターで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "Microsoft Copilot で Fabric データを管理する", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot が**Power BI エンタープライズ データに接続**し、レポートとセマンティック モデルに基づく根拠のある回答を返します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "Microsoft Copilot で Fabric データを管理する", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザーがレポートを共有しても、Copilot が適切なレポートを自動検出しても回答できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "冒頭", "retrievedAt": "2026-10-19T23:30:00Z" }] },
+            { "text": "MCP ベースの Fabric IQ 連携で、自然言語の質問に Copilot Chat 上で回答", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "注", "retrievedAt": "2026-10-19T23:30:00Z" }] },
+            { "text": "既存の Power BI のアクセス許可とセキュリティ制御が優先される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "注", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "この機能は既定で有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "冒頭", "retrievedAt": "2026-10-19T23:30:00Z" }] },
+            { "text": "管理センター → Copilot → 設定 →「Microsoft Copilot で Fabric データ」で対象を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "Microsoft Copilot で Fabric データを管理する", "retrievedAt": "2026-10-19T23:30:00Z" }] },
+            { "text": "対象は「ユーザーなし」「すべてのユーザー」「特定のグループ」から選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "Microsoft Copilot で Fabric データを管理する", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Fabric データの検索には、Fabric 管理者が「Microsoft 365 サービスと Fabric データの共有」を有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "Microsoft Copilot で Fabric データを有効にする", "retrievedAt": "2026-10-19T23:30:00Z" }] },
+            { "text": "Fabric は Copilot とは別に動作し、処理データには Fabric 製品条項が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "重要", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供先: Worldwide、GCC、GCC High、DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象: Android、Desktop、iOS、Mac、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず特定のセキュリティ グループだけに許可して、回答の質を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Copilot からのクエリ データが Fabric と共有される点を事前に周知する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "重要", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "power-bi", "term": "Power BI", "type": "product", "oneLine": { "text": "レポートやセマンティック モデルでビジネス データを分析・共有する Microsoft のサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "semantic-model", "term": "セマンティック モデル", "type": "term", "oneLine": { "text": "Power BI のデータ モデルで、Copilot が根拠ある回答を返すための情報源の 1 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "冒頭", "retrievedAt": "2026-10-19T23:30:00Z" }] } },
+        { "termKey": "fabric-iq", "term": "Fabric IQ", "type": "feature", "oneLine": { "text": "Power BI の信頼できるビジネス データを Copilot Chat の会話に取り込む仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "注", "retrievedAt": "2026-10-19T23:30:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Fabric IQ と Copilot Chat の連携で使われる、データへ接続するための仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "注", "retrievedAt": "2026-10-19T23:30:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進行している段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は利用するユーザーを制限できますか？",
+          "answer": { "text": "はい。管理センターの「Microsoft Copilot で Fabric データ」で、ユーザーなし・すべてのユーザー・特定のグループから選べます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "Microsoft Copilot で Fabric データを管理する", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+        },
+        {
+          "question": "Power BI のアクセス権がないデータも見えてしまいますか？",
+          "answer": { "text": "既存の Power BI のアクセス許可とセキュリティ制御が優先される、と説明されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "注", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+        },
+        {
+          "question": "データの取り扱いで注意することは？",
+          "answer": { "text": "Copilot からのクエリ データが Fabric と共有され、Fabric 製品条項が適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locator": "重要", "retrievedAt": "2026-10-19T23:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567891",
+        "learn": [
+          { "title": "Microsoft Copilot で Power BI データを使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-powerbi-copilot-chat", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
