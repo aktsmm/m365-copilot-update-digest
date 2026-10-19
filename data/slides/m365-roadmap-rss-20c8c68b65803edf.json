@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-20c8c68b65803edf",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint のフォームによる構造化ドキュメント生成（開発中）",
+        "subtitleJa": "Word テンプレートをフォーム化し、統一された文書を大規模に生成します",
+        "en": "Microsoft Copilot (Microsoft 365): Structured Document Generation with Forms"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot"],
+        "categories": ["office-apps", "sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "契約書や提案書などを定期的に作る部門と、**テンプレートを整備する業務プロセスの担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=545896", "locator": "Description", "retrievedAt": "2026-10-19T22:45:00Z" }] },
+        "change": { "text": "ガバナンスとコンプライアンスを保った標準化文書を、フォームから大規模に生成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=545896", "locator": "Description", "retrievedAt": "2026-10-19T22:45:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため対応は不要。提供開始に備えて対象文書の洗い出しから始められる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word テンプレートから**フォームを作成**し、送信された値を差し込んだ文書を毎回自動で生成できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "冒頭", "retrievedAt": "2026-10-19T22:45:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Word 文書をテンプレートに、AI を使ったフォームへ変換できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "冒頭", "retrievedAt": "2026-10-19T22:45:00Z" }] },
+            { "text": "SharePoint の Copilot が文書を分析し、名前や日付などのフィールドを提案", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "ドキュメントからフォームを作成する", "retrievedAt": "2026-10-19T22:45:00Z" }] },
+            { "text": "コンテンツ マネージャーが整備し、フォーム送信者が文書を生成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "構造化ドキュメント生成のしくみ", "retrievedAt": "2026-10-19T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "前提・制約",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "フォームを作る人には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "前提条件", "retrievedAt": "2026-10-19T22:45:00Z" }] },
+            { "text": "フォーム作成にはライブラリの編集アクセス許可が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "前提条件", "retrievedAt": "2026-10-19T22:45:00Z" }] },
+            { "text": "元文書は Word（.docx）形式である必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "前提条件", "retrievedAt": "2026-10-19T22:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "{} や [] などのプレースホルダー入りの Word 文書だと最良の結果になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "ヒント", "retrievedAt": "2026-10-19T22:45:00Z" }] },
+            { "text": "契約・提案など定型文書のテンプレートを事前に棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sdg", "term": "構造化ドキュメント生成", "type": "feature", "oneLine": { "text": "Word テンプレートを AI 搭載のフォームに変換し、送信値を差し込んだ文書を自動生成する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "冒頭", "retrievedAt": "2026-10-19T22:45:00Z" }] } },
+        { "termKey": "cm", "term": "コンテンツ マネージャー", "type": "term", "oneLine": { "text": "テンプレートとフォームを作成・管理し、必須フィールドや条件付きルールを定義する役割。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "しくみ", "retrievedAt": "2026-10-19T22:45:00Z" }] } },
+        { "termKey": "cc", "term": "コンテンツ コンシューマー", "type": "term", "oneLine": { "text": "フォームを送信して文書を生成する役割。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "しくみ", "retrievedAt": "2026-10-19T22:45:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能が開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=545896", "locator": "Stage", "retrievedAt": "2026-10-19T22:45:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "フォーム送信者にも Copilot ライセンスは必要ですか？",
+          "answer": { "text": "Learn が前提として挙げているのは、フォームを作成・構成するユーザーへの Microsoft Copilot ライセンスです。送信者の要件は Learn では確認できていません。", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "前提条件", "retrievedAt": "2026-10-19T22:45:00Z" }] }
+        },
+        {
+          "question": "生成できる文書の形式は？",
+          "answer": { "text": "フォームの設定で、Word（.docx）または PDF（.pdf）から選べます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "ファイルタイプの選択", "retrievedAt": "2026-10-19T22:45:00Z" }] }
+        },
+        {
+          "question": "Word for the web で条件付きセクションは更新されますか？",
+          "answer": { "text": "生成後にフィールド値を変えても更新されません。再生成するか、Word for Windows で開く必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locator": "条件付きセクションの設定", "retrievedAt": "2026-10-19T22:45:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=545896",
+        "learn": [
+          { "title": "SharePoint ドキュメント ライブラリで構造化ドキュメントを生成する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/structured-document-generation", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
