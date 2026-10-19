@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ab7cfadb41ce5999",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "GCC 向け Excel の Edit with Copilot（Web・Win32・Mac）を提供予定",
+        "subtitleJa": "政府機関向けクラウドでも、Copilot と並んでブックを作成・編集できるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Edit with Copilot in Excel (Web, Win32, Mac) - GCC"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Excel"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC・GCC High・DoD で Excel と Microsoft Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "テーブル・グラフ・ピボットテーブル・数式を使い、Copilot と並んでブックを作成・編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない。政府機関向けクラウドでの提供を待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "予算の更新や財務モデルの作成、データ分析で、Copilot が Excel の強力なツールを使って**ブックの作成・編集を支援**します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象クラウドは GCC・GCC High・DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Web・Win32（デスクトップ）・Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "テーブル、グラフ、ピボットテーブル、数式などの Excel の機能を活用", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Edit with Copilot が GCC・GCC High・DoD でリリースされるまで、構造化された Excel データを分析する Copilot の機能は影響を受ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性（注 6）", "retrievedAt": "2026-10-19T14:00:00Z" }] },
+            { "text": "Word・Excel・PowerPoint・OneNote での Edit with Copilot は、GCC・GCCH・DoD では現在利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-19T14:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供時期はロードマップで確認し、リリース後に小規模なブックで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "クラウド別の提供状況は、サービスの説明の一覧で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-19T14:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edit-with-copilot", "term": "Edit with Copilot", "type": "feature", "oneLine": { "text": "Copilot と並んでブックを作成・編集し、Excel のテーブル・グラフ・数式などを使ってデータ作業を進める機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "gcc", "term": "GCC / GCC High / DoD", "type": "term", "oneLine": { "text": "Microsoft 365 の政府機関向けクラウド環境。ワールドワイドとは機能の提供状況が異なる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-19T14:00:00Z" }] } },
+        { "termKey": "pivot", "term": "ピボットテーブル", "type": "term", "oneLine": { "text": "Excel でデータを集計・分析するためのテーブル機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ワールドワイド環境ではすでに使えますか？",
+          "answer": { "text": "はい。サービスの説明では、Edit with Copilot はワールドワイドで利用可、GCC・GCCH・DoD では現在利用不可と示されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-19T14:00:00Z" }] }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、開発中の段階です。時期はロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=542181",
+        "learn": [
+          { "title": "Microsoft Copilot（サービスの説明）", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
