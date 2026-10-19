@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-67bef06ed074ca5c",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot アプリの Copilot Notebooks が新デザインに",
+        "subtitleJa": "関連するチャットや成果物、参照を永続的な AI ワークスペースにまとめられます",
+        "en": "Microsoft 365 app: New Copilot Notebooks design in the Microsoft 365 Copilot App"
+      },
+      "meta": {
+        "publishedJst": "2026-08-18",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365"],
+        "categories": ["copilot-chat"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot アプリで Copilot Notebooks を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "蓄積した文脈を回答の根拠にでき、セッションをまたいで作業を続けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は、Copilot ページと Copilot ノートブックの作成・表示ポリシーで利用を制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "Container の名前", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "関連する**チャット・成果物・参照を 1 つの永続的な AI ワークスペース**に整理できます。Copilot は Notebook に蓄積された文脈を回答の根拠にします", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "チャット・成果物・参照を Notebook に整理し、永続的な AI ワークスペースとして使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot が Notebook に蓄積された文脈を回答の根拠にする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "毎回やり直さず、セッションをまたいで作業を続けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot アプリの Copilot Notebooks から利用する（提供プラットフォームは Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理者は「Copilot ページと Copilot ノートブックの作成と表示」ポリシーで制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "Container の名前", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Notebook は各ユーザーの SharePoint Embedded コンテナーに保存され、組織のストレージ クォータに含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ストレージ クォータ", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Copilot ノートブックにはエンド ユーザーのごみ箱がなく、削除したものは復元できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ユーザー退職後のストレージ管理", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ページ・Loop マイ ワークスペースと同じユーザー所有コンテナーを共有する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "Container の名前", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "チャットの会話はコンテナーに保存されず、参照は元の場所のファイルを指す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/grant-access", "locator": "Copilot Notebook のコンテンツを保持する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "管理者の留意点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザー退職時は自動の引き継ぎがなく、管理者が所有者追加などを手動で行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/grant-access", "locator": "ユーザーが組織を辞めるときのオプション", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "退職者のオフボード手順に Notebook の引き継ぎを加えておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "関連するチャット・成果物・参照を整理する、永続的な AI ワークスペース。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "sharepoint-embedded", "term": "SharePoint Embedded", "type": "product", "oneLine": { "text": "Copilot ページと Notebook の保存先となる基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ストレージ", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "container", "term": "コンテナー", "type": "term", "oneLine": { "text": "ユーザーごとに 1 つ作られ、Notebook やページ、Loop マイ ワークスペースを保持する保存単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ストレージ", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Notebook のデータはどこに保存されますか？",
+          "answer": { "text": "各ユーザーの SharePoint Embedded のユーザー所有コンテナーに保存され、組織の SharePoint ストレージ クォータに含まれます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "概要", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "削除した Notebook は復元できますか？",
+          "answer": { "text": "エンド ユーザーのごみ箱はなく、管理者もエンド ユーザーも個別に削除した Notebook を復元できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ユーザー退職後のストレージ管理", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "ユーザーが退職した場合、Notebook はどうなりますか？",
+          "answer": { "text": "OneDrive と同じ削除ライフサイクルに従います。自動の引き継ぎはないため、保持期間内に管理者が所有者追加などを手動で行う必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/grant-access", "locator": "ユーザーが組織を辞めるときのオプション", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562662",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブック ストレージの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locale": "ja-jp" },
+          { "title": "Copilot ページ、Copilot ノートブック、Loop コンテナーへのアクセスを許可する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/grant-access", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
