@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3740ec8e14c8c31f",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Teams Rooms on Android コンソールから会議室の即時予約が可能に",
+        "subtitleJa": "空いている会議室を、その場のコンソールですぐ予約できます",
+        "en": "Microsoft Teams: Ad-hoc room reservation from Teams Rooms on Android console"
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Teams"],
+        "categories": ["teams"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High"],
+        "platforms": ["Android"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams Rooms on Android を導入している組織の会議室利用者**と、Teams Rooms の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "空き会議室をその場で予約でき、スケジュールの競合を避けて突発的な会議を続けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "不要な場合、管理者は「アドホック会議室の予約を許可」で機能を切り替えられる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "会議室が使用可能なとき、コンソールの予定表に**予約ボタン**が表示され、すぐに使う会議室を素早く予約できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議室が使用可能な場合、コンソールの予定表に「予約」ボタンが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }] },
+            { "text": "すぐ使う会議室を予約し、スケジュールの競合を避けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams Rooms Pro ライセンスを持つ会議室で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理者は Android の Teams 管理設定 > 会議で「アドホック会議室の予約を許可」を切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }] },
+            { "text": "Teams 管理センターの構成プロファイルからも制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams Rooms Pro ライセンスの会議室が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide、GCC、GCC High（Android デバイス）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "「今すぐ会議」でもアドホックな Teams 会議を即座に開始できる（ポリシーで制御）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "ミーティング", "retrievedAt": "2026-10-19T13:20:00Z" }] },
+            { "text": "Windows 版では Pro 管理ポータルの会議室設定 > 会議のトグルで制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "突発的な打ち合わせが多いフロアの会議室から運用を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "teams-rooms-android", "term": "Teams Rooms on Android", "type": "product", "oneLine": { "text": "Android デバイスで動作する Microsoft Teams Rooms で、タッチ コンソールで会議室を操作する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "概要", "retrievedAt": "2026-10-19T13:20:00Z" }] } },
+        { "termKey": "teams-rooms-pro", "term": "Teams Rooms Pro ライセンス", "type": "term", "oneLine": { "text": "Teams Rooms の高度な機能や管理ポータルを使うためのライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "ライセンス", "retrievedAt": "2026-10-19T13:20:00Z" }] } },
+        { "termKey": "ad-hoc-reservation", "term": "アドホックな会議室予約", "type": "feature", "oneLine": { "text": "予約なしで、空いている会議室をその場で素早く予約する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者はこの機能を無効にできますか？",
+          "answer": {
+            "text": "はい。Android では Teams 管理の設定 > 会議の「アドホック会議室の予約を許可」で切り替えられ、Teams 管理センターの構成プロファイルも使えます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh", "locator": "アドホックな部屋の予約", "retrievedAt": "2026-10-19T13:20:00Z" }]
+          }
+        },
+        {
+          "question": "どのライセンスの会議室で使えますか？",
+          "answer": {
+            "text": "ロードマップでは、Teams Rooms Pro ライセンスの会議室で利用できるとされています。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=548652",
+        "learn": [{ "title": "Teams Rooms (Windows および Android) のホーム画面と管理コントロール", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/mtr-home-refresh#calendar", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
