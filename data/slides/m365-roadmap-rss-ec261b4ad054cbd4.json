@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ec261b4ad054cbd4",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Work IQ API にエージェントとワークフロー用の統合 REST エンドポイントが登場",
+        "subtitleJa": "エージェントやワークフローを呼び出す入口を、1 つの REST エンドポイントに集約します",
+        "en": "Microsoft Copilot (Microsoft 365): Work IQ APIs – Unified REST Endpoint for Agents and Workflows"
+      },
+      "meta": {
+        "publishedJst": "2026-08-22",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "work-iq"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Work IQ を使ってエージェントやアプリを作る**開発者・作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "従来の Copilot Chat エンドポイントに代わる、一貫性があり拡張しやすい入口を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "従来の Copilot Chat エンドポイントを使う開発者は、新エンドポイントへの移行を検討する",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エージェントやワークフローを呼び出す**統合された入口**として、新しい Work IQ の REST エンドポイントが使えます。従来の Copilot Chat エンドポイントに代わる、一貫性があり拡張しやすい選択肢です",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ は、エージェントが組織データやツールにアクセスして推論するための基盤", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Work IQ API のエンドポイントは A2A、リモート MCP サーバー、REST API で構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "REST は Web アプリケーションとのやり取りに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "チャット", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ API は Microsoft 365 Copilot ライセンスとは無関係で、使用量ベースの課金で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "ガバナンスとコスト管理は Microsoft 365 管理センターで行える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "すべての要求は特定ユーザーのコンテキストで実行され、そのユーザーが見られる範囲にのみアクセスする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "セキュリティ、承認、ガバナンス", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "カスタムおよびサードパーティ エージェントは、使用量ベースの課金の対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する入口",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "A2A はエージェント間のコラボレーション用、MCP は Microsoft 365 データへのツール アクセス用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "チャット / ツール", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "すべてのツール呼び出しがログに記録され、監査や使用状況分析に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "セキュリティ、承認、ガバナンス", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "既存の Copilot Chat エンドポイント利用箇所から順に置き換えを検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "product", "oneLine": { "text": "エージェントが組織データ、コンテキスト、ツールにアクセスして推論できるようにするワークプレイス インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "rest-api", "term": "REST API", "type": "term", "oneLine": { "text": "Work IQ が Web アプリケーションとのやり取り用に提供するエンドポイント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "チャット", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "a2a", "term": "A2A", "type": "term", "oneLine": { "text": "エージェント間のコラボレーションに使われるプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "チャット", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "work-iq-mcp", "term": "Work IQ MCP", "type": "feature", "oneLine": { "text": "数百の操作を 10 個の汎用ツールに統合し、Microsoft 365 データへアクセスする MCP サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "ツール", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot のライセンスがないと使えませんか？",
+          "answer": {
+            "text": "いいえ。Work IQ API へのアクセスはライセンスとは無関係で、使用量ベースの課金で利用できます。ライセンス保有ユーザーは Microsoft Copilot の各体験とエージェントで Work IQ を利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "コストはどこで管理できますか？",
+          "answer": {
+            "text": "Work IQ のコストは使用状況に基づいて変わり、Microsoft 365 管理センターで管理できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559021",
+        "learn": [{ "title": "Work IQ の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
