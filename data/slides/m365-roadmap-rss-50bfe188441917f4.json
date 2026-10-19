@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-50bfe188441917f4",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Viva Glint のトピック割り当てが Copilot で高精度化",
+        "subtitleJa": "アンケートのコメントを、より適切なトピックに分類できます",
+        "en": "Microsoft Viva: Copilot Enhanced Topic Assignment"
+      },
+      "meta": {
+        "publishedJst": "2026-09-11",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Viva"],
+        "categories": ["viva"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Viva Glint のコメント レポートを使う管理者・マネージャー**と、アンケート作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コメントがその意味に合ったトピックへより正確に分類される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "個別のトグルや事前のトピック設定は不要で、Copilot in Viva Glint がオンなら自動で使われる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "トピック割り当てが Copilot で強化され、**コメントが意味に最も合うトピックに、より正確に分類**されます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "大規模言語モデルで、コメントを Viva Glint の標準トピックへ割り当てる精度を改善", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }] },
+            { "text": "コメントと、元の質問などのアンケート コンテキストを利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "データを処理する方法", "retrievedAt": "2026-10-19T14:20:00Z" }] },
+            { "text": "結果は既存のトピック エクスペリエンスとしてコメント レポートに表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "組織全体で Copilot in Viva Glint をオンにすると自動で利用可能になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }] },
+            { "text": "管理者によるトピックの事前構成は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot in Viva Glint がオフの組織は、標準のトピック割り当てを使い続ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "別のトピック割り当てアプローチが表示される理由", "retrievedAt": "2026-10-19T14:20:00Z" }] },
+            { "text": "カスタム Glint ポリシーには適用されず、履歴レポートにも影響しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "Copilot で強化されたトピックの割り当て", "retrievedAt": "2026-10-19T14:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "標準のトピック割り当てとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "標準は Viva Glint の自然言語処理パイプライン、強化版は Copilot を利用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "概要", "retrievedAt": "2026-10-19T14:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "運用上の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "有効化の前後でトピック結果を比べると、マッピング方法の違いによる変化が混ざりうる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "よくある質問", "retrievedAt": "2026-10-19T14:20:00Z" }] },
+            { "text": "外部データ ソースは使わず、Viva Glint の機密性しきい値と抑制ルールを守る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "データを処理する方法", "retrievedAt": "2026-10-19T14:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "viva-glint", "term": "Viva Glint", "type": "product", "oneLine": { "text": "従業員アンケートのコメントを分析し、レポートとして提供する Viva のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "概要", "retrievedAt": "2026-10-19T14:20:00Z" }] } },
+        { "termKey": "comments-report", "term": "コメント レポート", "type": "feature", "oneLine": { "text": "トピック領域、感情分析、キーワード、代表的なコメントを表示するレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "概要", "retrievedAt": "2026-10-19T14:20:00Z" }] } },
+        { "termKey": "topic-assignment", "term": "トピックの割り当て", "type": "term", "oneLine": { "text": "コメントを、わかりやすいテーマ（トピック）に分類する処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "概要", "retrievedAt": "2026-10-19T14:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot で強化されたトピック割り当てを個別に切り替えられますか？",
+          "answer": {
+            "text": "いいえ。個別のトグルはなく、Copilot in Viva Glint の組織全体の設定がオンの場合に自動で使われます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report", "locator": "よくある質問", "retrievedAt": "2026-10-19T14:20:00Z" }]
+          }
+        },
+        {
+          "question": "展開時期はいつですか？",
+          "answer": {
+            "text": "ロードマップの 2026 年 8 月 18 日付の更新では、8 月末から 9 月上旬に展開予定とされています。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=553224",
+        "learn": [{ "title": "Viva Glint のコメント レポートを使用する", "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report#how-viva-glint-assigns-topics-to-comments", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
