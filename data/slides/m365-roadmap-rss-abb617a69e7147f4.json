@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-abb617a69e7147f4",
+      "kind": "in-development",
+      "kindSource": "manual",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Chat でスキャン PDF と埋め込み画像内文字の検索精度向上（開発中）",
+        "subtitleJa": "スキャン契約書や表のスクリーンショットも検索結果に一致しやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat can now better match search results from Scanned PDFs and from text inside images embedded in Word, Excel, and PowerPoint"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Chat で社内文書を検索する人**と、スキャン資料を多く保管する組織の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "説明文", "retrievedAt": "2026-10-19T23:40:00Z" }] },
+        "change": { "text": "従来検索しにくかったスキャン PDF や画像内の文字が、検索結果に一致しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "説明文", "retrievedAt": "2026-10-19T23:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階。現時点で必要な対応は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "ステージ", "retrievedAt": "2026-10-19T23:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**スキャン PDF**と、Word・Excel・PowerPoint の**埋め込み画像内の文字**が、Copilot Chat の検索結果により適切に一致します", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "説明文", "retrievedAt": "2026-10-19T23:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "スキャンした PDF の内容が検索結果に一致しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "説明文", "retrievedAt": "2026-10-19T23:40:00Z" }] },
+            { "text": "Word・Excel・PowerPoint ファイル内の画像の文字も対象", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "説明文", "retrievedAt": "2026-10-19T23:40:00Z" }] },
+            { "text": "例: Word のスキャン契約書、Excel の表の画像、PowerPoint のホワイトボード写真", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "説明文", "retrievedAt": "2026-10-19T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "提供範囲・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ステージは開発中。提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "ステージ", "retrievedAt": "2026-10-19T23:40:00Z" }] },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "クラウド インスタンス", "retrievedAt": "2026-10-19T23:40:00Z" }] },
+            { "text": "対象プラットフォームは Android・デスクトップ・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "プラットフォーム", "retrievedAt": "2026-10-19T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供開始後、スキャン資料や画像が多い文書で検索結果を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ライセンスごとの Copilot の利用範囲を、Learn の概要で確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "大規模言語モデルなどを基盤とする、Microsoft 365 の各アプリや Web で使える AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T23:40:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "対象の Microsoft 365 ライセンスに含まれ、主に Web データを使う安全な AI チャット体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Copilot Chat (Basic) のライセンスとエクスペリエンス", "retrievedAt": "2026-10-19T23:40:00Z" }] } },
+        { "termKey": "scanned-pdf", "term": "スキャン PDF", "type": "term", "oneLine": { "text": "紙の文書などを画像としてスキャンした PDF。従来は中の文字を検索しにくい内容だった。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "説明文", "retrievedAt": "2026-10-19T23:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Roadmap 上で、機能がまだ開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "ステージ", "retrievedAt": "2026-10-19T23:40:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "Roadmap のステージは開発中で、提供月は示されていません。最新の予定は Roadmap で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "ステージ", "retrievedAt": "2026-10-19T23:40:00Z" }] }
+        },
+        {
+          "question": "どのクラウドやデバイスが対象ですか？",
+          "answer": { "text": "Worldwide（標準マルチテナント）で、Android・デスクトップ・Web が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=559613", "locator": "クラウド インスタンス・プラットフォーム", "retrievedAt": "2026-10-19T23:40:00Z" }] }
+        },
+        {
+          "question": "管理者の設定変更は必要ですか？",
+          "answer": { "text": "Roadmap には管理者向けの設定や対応は示されておらず、追加の設定は不要な見込みです。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559613",
+        "learn": [
+          { "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
