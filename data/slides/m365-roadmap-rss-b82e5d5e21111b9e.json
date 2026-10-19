@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b82e5d5e21111b9e",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Word の音声読み上げ中に、音声で Copilot へ質問可能に",
+        "subtitleJa": "読み上げを止めずに「これはどういう意味？」と声で聞けます",
+        "en": "Microsoft Copilot (Microsoft 365): Use voice for Q&A during Read Aloud in Word"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)", "Word"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Word で文書の読み上げを使う Microsoft Copilot ユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "読み上げを止めて検索する必要がなく、文脈を保ったまま内容を理解できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の対応は不要。利用者は Word の［校閲］タブから読み上げを開始して試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A（Try this）", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前は、内容を調べるために読み上げを一時停止して、手動で検索や編集をする必要があった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A（What changed）", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+        "after": { "text": "読み上げを止めずに、**音声で質問して Copilot の回答をすぐに得られる**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A（What changed）", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Word の読み上げが、Copilot Q&A によるリアルタイムの音声対話に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "「この段落を説明して」「このセクションを要約して」などと声で質問できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "読み上げを止めずに、Copilot の回答を音声で聞ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A（Try this）", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Word で文書を開き、［校閲］タブから読み上げを開始する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A（Try this）", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "読み上げ中に「この段落を説明して」のように話しかける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A（Try this）", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "リリース ノート上の対象プラットフォームは Windows", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "Copilot 機能は安全な展開モデルで、一部のユーザーから段階的に提供される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭の説明", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Word の音声概要（Audio Overview）も、Web でリアルタイム音声対話に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "Copilot の回答を Read Aloud で聞ける機能は、2025 年 1 月から提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/previous-year-release-notes", "locator": "January 23, 2025", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "長い文書の確認中に、分からない箇所をその場で声で質問する使い方が向く", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "read-aloud", "term": "読み上げ（Read Aloud）", "type": "feature", "oneLine": { "text": "Word で文書の内容を音声で読み上げる機能。［校閲］タブから開始する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A（Try this）", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "copilot-qa", "term": "Copilot Q&A", "type": "feature", "oneLine": { "text": "文書の内容について質問し、Copilot から回答を得る機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "audio-overview", "term": "音声概要（Audio Overview）", "type": "feature", "oneLine": { "text": "Word の文書を、音声の要約として聞ける機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "リリース ノートでは Windows 向けと記載されています。ロードマップ上の対象は Desktop です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Word: Read Aloud 中の音声 Q&A", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+        },
+        {
+          "question": "音声概要のリアルタイム音声対話とは別の機能ですか？",
+          "answer": { "text": "別の機能です。音声概要の対話は Web の Word 向けで、今回は読み上げ中の Q&A です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=523205",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
