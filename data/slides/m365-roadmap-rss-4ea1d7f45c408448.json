@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-4ea1d7f45c408448",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Notebooks に Teams 会議を参照として追加可能に",
+        "subtitleJa": "会議の議論や決定事項を、Copilot の回答の根拠にできます",
+        "en": "Teams Meetings in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-08-12",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "OneNote"],
+        "categories": ["teams", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Copilot Notebooks でプロジェクトを進める**作成者・チームメンバー**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+        "change": { "text": "会議の内容を手作業で集めずに、ノートブックの文脈として Copilot に使わせられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の対応は不要。作成の可否はクラウド ポリシーで制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "ノートブックの参照として使えるのはファイルのみだった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+        "after": { "text": "Teams 会議を**ノートブックの参照**に追加し、文字起こし・メモ・チャット・共有ファイルを Copilot の根拠にできます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議を知識ソースとして追加し、議論・決定事項・文脈で Copilot を根拠づけ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "文字起こし、メモ、チャット、共有ファイルをノートブックにつなげられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "プレゼンテーションやブリーフなどの出力の質を高められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 で Copilot ノートブックを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "［参照を追加］を選び、最近の会議から Teams 会議を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "リンクされた文字起こし・メモ・共有コンテンツをノートブックで確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対応プラットフォームは Android、Windows、iOS、Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "OneDrive の作成が無効なユーザーは、ノートブックを作成できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する管理設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "クラウド ポリシー「Copilot ページと Copilot ノートブックを作成して表示する」の既定値は有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "設定変更の反映は、既存ポリシーがある場合で最大 90 分", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "定例会議の内容をノートブックに集約し、報告資料の下書きに活用する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ノートブックに追加したファイルは、元の OneDrive / SharePoint にも残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "ユーザー所有の SharePoint Embedded コンテナーに保存される、Copilot 用のノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "reference", "term": "参照（リファレンス）", "type": "term", "oneLine": { "text": "ノートブックで Copilot の回答の根拠となる知識ソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "管理者が Microsoft 365 アプリの設定をユーザーやグループ単位で制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（Launched）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "これまでのノートブックの参照との違いは何ですか？",
+          "answer": { "text": "これまではファイルのみが参照でした。今回、Teams 会議の文字起こし・メモ・チャットなども参照にできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年8月25日 OneNote", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "管理者が Copilot Notebooks を無効にできますか？",
+          "answer": { "text": "はい。クラウド ポリシーで作成と表示を無効にできます。無効時は、ノートブックへのリンク共有が機能しません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "重要", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560706",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
