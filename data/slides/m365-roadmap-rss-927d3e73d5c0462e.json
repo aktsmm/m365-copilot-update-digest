@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-927d3e73d5c0462e",
+      "kind": "retirement",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Microsoft 管理センターでの Purview 機能（提供終了区分の更新あり）",
+        "subtitleJa": "オーバーシェアリングの把握と Copilot 向け DLP 有効化を管理センターから行う機能",
+        "en": "Microsoft Purview: Purview in Microsoft Admin Center"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance", "admin"],
+        "importance": "notable",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "GCC / GCC High / DoD 環境の **Microsoft Copilot 管理者・AI 管理者**",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "ロードマップ上のステージが Retirement に更新された。詳細は元の発表で確認する",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": {
+          "text": "該当クラウドの管理者は、元の発表で更新内容を確認する",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "管理センターで過剰共有のリスクを把握し、是正につなげる機能が対象",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "機密性の高い Copilot のやり取りの保護状況を確認し、Purview DLP を有効化できる機能",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "対象クラウドは GCC、GCC High、DoD。プラットフォームは Web",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "代替・移行先",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Microsoft 365 管理センターの Copilot セキュリティ ダッシュボードで、DLP・過剰共有・コンプライアンスの分析情報を確認できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                  "locator": "Microsoft 365 管理センターの Copilot セキュリティ ダッシュボード",
+                  "retrievedAt": "2026-10-19T22:57:00Z"
+                }
+              ]
+            },
+            {
+              "text": "ダッシュボードは [Copilot] > [概要] > [セキュリティ] から開く",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                  "locator": "Microsoft 365 管理センターの Copilot セキュリティ ダッシュボード",
+                  "retrievedAt": "2026-10-19T22:57:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応の進め方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "表示には グローバル閲覧者、変更には AI 管理者ロールが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                  "locator": "Microsoft 365 管理センターの Copilot セキュリティ ダッシュボード",
+                  "retrievedAt": "2026-10-19T22:57:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Copilot 向け DLP ポリシーは Purview 側の設定ガイドで確認する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-10-19T22:57:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "purview",
+          "term": "Microsoft Purview",
+          "type": "product",
+          "oneLine": {
+            "text": "Microsoft Copilot に組み込まれているセキュリティ制御を提供する、データ保護・ガバナンスの製品群。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                "locator": "セキュリティ ダッシュボード",
+                "retrievedAt": "2026-10-19T22:57:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "dlp",
+          "term": "DLP",
+          "type": "term",
+          "oneLine": {
+            "text": "データ損失防止。ポリシーで機密データの漏洩を防ぐ仕組み。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                "locator": "Copilot セキュリティ ダッシュボード",
+                "retrievedAt": "2026-10-19T22:57:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "oversharing",
+          "term": "過剰共有（オーバーシェアリング）",
+          "type": "term",
+          "oneLine": {
+            "text": "コンテンツが共有されすぎ、管理が不十分な状態。Copilot の結果に影響しリスクが高まる。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                "locator": "過剰共有の防止",
+                "retrievedAt": "2026-10-19T22:57:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-retirement",
+          "term": "Retirement",
+          "type": "label",
+          "oneLine": {
+            "text": "ロードマップ上で、機能の提供終了に関する区分を示すステージ。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "代わりに使える画面はありますか。",
+          "answer": {
+            "text": "Microsoft 365 管理センターの Copilot セキュリティ ダッシュボードで、DLP や過剰共有の分析情報を確認できます。この機能の正式な後継かどうかは元の発表では確認できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                "locator": "2 つのダッシュボードを比較する",
+                "retrievedAt": "2026-10-19T22:57:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "必要な管理者ロールは何ですか。",
+          "answer": {
+            "text": "Copilot セキュリティ ダッシュボードの表示にはグローバル閲覧者、変更には AI 管理者ロールが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+                "locator": "Microsoft 365 管理センターの Copilot セキュリティ ダッシュボード",
+                "retrievedAt": "2026-10-19T22:57:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559617",
+        "learn": [
+          {
+            "title": "Microsoft Copilot のセキュリティ",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/security-microsoft-365-copilot",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Copilot 向けデータ損失防止（DLP）",
+            "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
