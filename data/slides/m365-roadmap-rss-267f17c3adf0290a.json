@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-267f17c3adf0290a",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot アプリ（iOS）の Copilot ノートブックを刷新（開発中）",
+        "subtitleJa": "チャット・成果物・参照を、永続的な AI ワークスペースにまとめます",
+        "en": "Microsoft 365 app: New Copilot Notebooks design in the Microsoft 365 Copilot App (iOS)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-15",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["iOS"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**iOS の Microsoft Copilot アプリで Copilot ノートブックを使う人**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "関連するチャットや参照を 1 か所にまとめ、毎回やり直さず作業を続けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はなし。提供開始時に利用者へ案内するとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "関連するチャット、成果物、参照を**永続的な AI ワークスペース**に整理し、蓄積した文脈で Copilot の回答を根拠づけられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は iOS 版の Microsoft Copilot アプリ（ロードマップ ID 566318）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ノートブックの蓄積した文脈が、Copilot の回答の根拠になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在は開発中の段階で、提供時期は公開されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Web 版の新デザインは軽量・高速な体験で、フル機能は OneNote で利用する構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブックの新しいデザイン Microsoft 365 Copilot アプリ [Web]", "retrievedAt": "2026-10-19T22:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Web 版の新デザインの使い方を先に試し、社内向けの案内を準備する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "関連するチャット、成果物、参照を永続的な AI ワークスペースに整理できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブックの新しいデザイン Microsoft 365 Copilot アプリ [Web]", "retrievedAt": "2026-10-19T22:15:00Z" }] } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "蓄積した文脈を使って、Copilot の回答に根拠を与えること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップ上で、まだ提供が始まっていない開発段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "iOS 版はいつ使えるようになりますか。",
+          "answer": { "text": "ロードマップは開発中の段階で、提供月は示されていません。開始時期は今後のロードマップ更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "OneNote のノートブックとの関係は。",
+          "answer": { "text": "Web 版の新デザインでは、アプリは軽量・高速な体験で、フル機能のノートブックは OneNote で引き続き利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブックの新しいデザイン Microsoft 365 Copilot アプリ [Web]", "retrievedAt": "2026-10-19T22:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566318",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
