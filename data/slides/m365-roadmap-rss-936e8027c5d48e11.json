@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-936e8027c5d48e11",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Copilot に天気・スポーツなど主要分野の新しいリッチ アンサー カードを追加（展開中）",
+        "subtitleJa": "天気・金融などの回答を、視覚的なカードで確認できます",
+        "en": "Microsoft Copilot (Microsoft 365): New Rich Answer Cards"
+      },
+      "meta": {
+        "publishedJst": "2026-09-11",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mobile", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot で天気・スポーツ・金融などを調べる人**（Entra と MSA のユーザー）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "モデル駆動で配置されるカードで、7 分野の情報をひと目で確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上、管理者・利用者の操作は求められていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "天気・スポーツ・金融・画像・動画・場所・ニュースの **7 分野**で、モデル駆動かつ動的に配置される新しいアンサー カードを表示します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "モデル駆動で、回答に合うカードを動的に配置する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は天気・スポーツ・金融・画像・動画・場所・ニュースの 7 分野", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "先行する Bing のカードは、天気や株価などをチャット内に表示する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 4 月 21 日 Rich Bing web answer cards", "retrievedAt": "2026-10-19T14:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "展開が届いたユーザーは、対象分野の質問をするだけで使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "例: 現在地の天気、企業の株価、日の出・日の入り時刻を尋ねる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 4 月 21 日 Try this", "retrievedAt": "2026-10-19T14:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象は Entra と MSA のユーザー。すべてのサーフェスで展開", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "展開の範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プラットフォームはデスクトップ・モバイル・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot 機能は、一部のユーザーから段階的に組織全体へ展開される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-19T14:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "天気や株価の確認など、別のタブへ移りたくない場面で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "answer-card", "term": "アンサー カード", "type": "feature", "oneLine": { "text": "チャットの回答として、天気や株価などの情報を視覚的に示すカード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 4 月 21 日 What changed", "retrievedAt": "2026-10-19T14:30:00Z" }] } },
+        { "termKey": "entra", "term": "Entra ユーザー", "type": "term", "oneLine": { "text": "Microsoft Entra ID の職場・学校アカウントで利用するユーザー。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "msa", "term": "MSA", "type": "term", "oneLine": { "text": "個人用の Microsoft アカウント（Microsoft Account）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "先行する Bing 回答カードとの違いは何ですか？",
+          "answer": { "text": "先行機能は Bing の天気・株価などのカードを表示します。今回はモデル駆動で動的に配置される新しいカードを 7 分野に広げます。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 4 月 21 日 Rich Bing web answer cards", "retrievedAt": "2026-10-19T14:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567008",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
