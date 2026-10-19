@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f712a1bfc7655390",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio エージェントで MCP Apps によるリッチな UI を表示（開発中）",
+        "subtitleJa": "会話の中で、表の並べ替えやドリルダウンを直接操作できます",
+        "en": "Microsoft Copilot Studio: Deliver rich interactive app experiences in Copilot Studio agents"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**（作成者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントの回答を、操作できる UI として会話内に表示できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必須の対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "UI 対応ツールを呼び出すと、**並べ替え可能な表やドリルダウン**が会話内にそのまま表示されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MCP Apps（Model Context Protocol の拡張）で、会話内に対話型 UI を表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "互換性のある MCP サーバーの UI 対応ツールを呼び出したときに表示される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Web、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、利用はまだ始まっていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "UI 対応ツールを提供する互換 MCP サーバーが前提", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "参考: Microsoft 365 Copilot の MCP アプリは、UI ウィジェットを返すリモート MCP サーバーが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP アプリの前提条件", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "参考: 本番運用前に認証（OAuth 2.1 または Microsoft Entra SSO）の追加が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP アプリの MCP サーバー要件", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp-apps", "term": "MCP Apps", "type": "feature", "oneLine": { "text": "MCP サーバーが対話型ユーザー インターフェイスをホストに提供できるようにする、MCP の拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "冒頭", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながる共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "冒頭", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "drilldown", "term": "ドリルダウン", "type": "term", "oneLine": { "text": "表などの集計データから、より詳細な内容へ掘り下げて確認する操作。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft 365 Copilot の MCP アプリとは別のものですか？",
+          "answer": { "text": "Microsoft 365 Copilot の宣言型エージェントでも、MCP サーバーが返す対話型 UI ウィジェットを Copilot チャット内に表示できます。今回の更新は Copilot Studio のエージェント向けです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP アプリとは", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップに提供時期の月が示されていないため、時期は未確定です。最新状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570433",
+        "learn": [
+          { "title": "Microsoft 365 Copilot の宣言型エージェントに MCP アプリを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locale": "ja-jp" },
+          { "title": "Copilot Studioの新機能", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/whats-new", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
