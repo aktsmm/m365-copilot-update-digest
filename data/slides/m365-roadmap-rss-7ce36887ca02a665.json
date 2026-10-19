@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7ce36887ca02a665",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Chat でスキャンした PDF の検索結果の一致精度が向上（開発中）",
+        "subtitleJa": "検索しにくかったスキャン PDF の内容も、Copilot Chat が拾いやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat can now better match search results from Scanned PDFs"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**作業中のファイルにスキャン PDF を持つ Copilot Chat ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "これまで検索しにくかったスキャン PDF の内容が、検索結果に一致しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の機能で、ロードマップ上は利用者・管理者側の設定作業は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat が、作業中のファイルにある**スキャン PDF の内容**を、検索結果とより適切に一致させられるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Copilot Chat での、スキャン PDF からの検索結果の一致", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Android・デスクトップ・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "新規または更新された作業中のファイルから、今後に向けて適用される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供時期はロードマップ上でまだ示されていない（開発中）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "スキャン PDF を使う業務で、現在の検索の困りごとを整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップの更新を確認し、提供開始時に新規・更新ファイルで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot で、ファイルなどを参照しながら対話できるチャット機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "scanned-pdf", "term": "スキャン PDF", "type": "term", "oneLine": { "text": "紙の文書などをスキャンして作られた PDF で、これまで検索しにくかった内容を含む。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、開発中の段階です。最新の状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存のスキャン PDF も対象になりますか？",
+          "answer": { "text": "ロードマップでは、新規または更新された作業中のファイルに対して今後適用されると説明されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559613",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
