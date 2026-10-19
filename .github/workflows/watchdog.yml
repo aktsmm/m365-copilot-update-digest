@@ -3,15 +3,18 @@ name: Watchdog
 # AI を使わず、GitHub 側で詰まったときにパイプラインを前に進める。
 #  - 40 分を超えて動き続けているエージェント実行を取り消す（直列キューが何時間も止まるのを防ぐ）
 #  - 直近の Pages デプロイが失敗していたら 1 回だけ再実行する（デプロイが同時に終わると衝突することがある）
+#  - 1 時間以上たっても開いたままの [slides] / [summaries] の PR があれば、自動マージを起動する（定期実行が間引かれて PR が滞るのを防ぐ）
 on:
   schedule:
-    # 毎日 05:41 JST（= 20:41 UTC）。GitHub の定期実行は遅れることがあるので時刻は厳密ではない
+    # 毎日 05:41 / 17:41 JST（= 20:41 / 08:41 UTC）。GitHub の定期実行は遅れることがあるので時刻は厳密ではない
     - cron: "41 20 * * *"
+    - cron: "41 8 * * *"
   workflow_dispatch:
 
 permissions:
   actions: write
   contents: read
+  pull-requests: read
 
 concurrency:
   group: watchdog
@@ -50,3 +53,13 @@ jobs:
           else
             echo "deploy ok or already retried ($concl, attempt $attempt)"
           fi
+      - name: Start auto-merge when generated PRs are waiting
+        run: |
+          cutoff=$(date -u -d '1 hour ago' +%Y-%m-%dT%H:%M:%SZ)
+          for kind in slides summaries; do
+            old=$(gh pr list --state open --limit 100 --json title,createdAt -q "[.[] | select((.title | startswith(\"[$kind] \")) and .createdAt < \"$cutoff\")] | length")
+            if [ "$old" -gt 0 ]; then
+              echo "$old [$kind] PR(s) waiting for over 1 hour; starting auto-merge-$kind"
+              gh workflow run "auto-merge-$kind.yml" || true
+            fi
+          done
