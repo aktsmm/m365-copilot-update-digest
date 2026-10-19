@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-626b5c6f79b27aa8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot の回答内の選択範囲だけを指定して質問可能に（開発中）",
+        "subtitleJa": "回答の一部を選んで、その部分だけを Copilot に依頼できます",
+        "en": "Microsoft Copilot (Microsoft 365): Ask Copilot about highlighted response content"
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Chat の回答を読み込んで使う人**（Web 版）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "確認中の文・段落・表だけを対象に、的を絞った依頼ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "回答内の**文・段落・表を選択**して、その部分だけを対象に説明・要約・翻訳・次のステップを依頼できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "予定されている機能",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "回答内の文・段落・表を選択し、その部分だけを Copilot に依頼", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "選択部分の説明、要約、翻訳、次のステップを求められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "選択内容はプロンプトにプレビューされ、送信前に編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "提供範囲・制約",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象クラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステータスは開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの項目を確認し、提供時期の更新を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot と対話して回答を得るチャット機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中（In development）", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには開発中と記載されており、提供時期は示されていません。更新があればロードマップで確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "ロードマップ上の対象は、Web と Worldwide (Standard Multi-Tenant) です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=522616"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
