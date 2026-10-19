@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-47174297dafe7962",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Outlook モバイルの Up Next から会議準備が可能に（提供開始）",
+        "subtitleJa": "Up Next カードの Prepare で、ワンタップで会議準備を始められます",
+        "en": "Microsoft Copilot (Microsoft 365): Meeting Prepare from Up Next"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Outlook", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams", "outlook"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Android", "iOS"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook モバイル（Android / iOS）で Microsoft Copilot を使うユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会議前のリマインダーから、すぐに Copilot で準備を始められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の設定作業は不要。利用者は Up Next カードの Prepare から使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook モバイルで会議前にリマインダーが届き、**Up Next カードの Prepare からワンタップで Copilot の会議準備**を始められます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook モバイルが、会議に向けた準備のリマインダーを通知する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Up Next カードに Prepare オプションが追加され、ワンタップで準備を開始", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot の会議準備は、関連する背景情報・タスク・資料を要約し、チャットで深掘りもできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook: Copilot を使用した会議の準備", "retrievedAt": "2026-10-19T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Android / iOS の Outlook モバイルで、Up Next カードの Prepare を選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot の会議準備は Microsoft Copilot ライセンスを持つユーザーが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook: Copilot を使用した会議の準備", "retrievedAt": "2026-10-19T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供先は Worldwide、GCC、GCC High、DoD の各クラウド", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Android と iOS", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "会議準備は新しい Outlook for Windows、Web、Mac でも利用でき、従来の Outlook for Windows にも追加された", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook: 従来の Outlook for Windows で Copilot を使用して会議の準備をする", "retrievedAt": "2026-10-19T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "移動中に次の会議の要点を確認したい場面で、まず試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "up-next", "term": "Up Next カード", "type": "feature", "oneLine": { "text": "Outlook モバイルで次の会議を知らせるカード。Prepare オプションが追加された。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "meeting-prepare", "term": "会議の準備（Prepare）", "type": "feature", "oneLine": { "text": "Copilot が会議の背景情報・タスク・資料を要約して準備を支援する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook: Copilot を使用した会議の準備", "retrievedAt": "2026-10-19T23:00:00Z" }] } },
+        { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "Microsoft 365 アプリで使える AI アシスタント（旧称 Microsoft 365 Copilot）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "会議準備を使うには何が必要ですか？",
+          "answer": { "text": "Microsoft Copilot ライセンスを持つユーザーが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook: Copilot を使用した会議の準備", "retrievedAt": "2026-10-19T23:00:00Z" }] }
+        },
+        {
+          "question": "モバイル以外でも会議準備は使えますか？",
+          "answer": { "text": "新しい Outlook for Windows、Web、Mac では既に利用でき、従来の Outlook for Windows にも追加されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Outlook: 従来の Outlook for Windows で Copilot を使用して会議の準備をする", "retrievedAt": "2026-10-19T23:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=529850",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
