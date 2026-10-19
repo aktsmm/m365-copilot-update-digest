@@ -149,9 +149,13 @@
   }
 
   async function mergeVisible(button, status) {
-    const keys = [...new Set(window.digestVisibleSlideKeys ? window.digestVisibleSlideKeys() : [])].slice(0, MERGE_LIMIT);
+    const all = [...new Set(window.digestVisibleSlideKeys ? window.digestVisibleSlideKeys() : [])];
+    const keys = all.slice(0, MERGE_LIMIT);
     if (keys.length === 0) {
       window.alert("表示中のスライドがありません");
+      return;
+    }
+    if (all.length > MERGE_LIMIT && !window.confirm(`PDF にまとめられるのは ${MERGE_LIMIT} 枚までです。先頭の ${MERGE_LIMIT} 枚（全 ${all.length} 枚）で作成します。続けますか？`)) {
       return;
     }
     button.disabled = true;
