@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5d05b6729d4dcb8c",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft 365 管理センターにエージェント使用状況レポートが追加",
+        "subtitleJa": "Microsoft Copilot のエージェントの利用状況を、管理者が一目で把握できます",
+        "en": "Microsoft 365 admin center: Agents usage report"
+      },
+      "meta": {
+        "publishedJst": "2026-08-12",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft 365 admin center"],
+        "categories": ["agents", "admin"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft 365 管理者**と、エージェントを作成・展開する担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ライセンスの有無を問わず、組織内のエージェントの利用状況を把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "レポートを見るだけで使える。表示には使用状況レポートを閲覧できる管理者ロールが必要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "Microsoft 365 管理センターで Microsoft Copilot エージェントの使用状況レポートを表示する", "retrievedAt": "2026-10-19T13:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "ライセンスありとなしのユーザーによる**エージェントの利用状況を、管理センターのレポートで確認**できます。利用後 1 時間以内に反映されます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "概要", "retrievedAt": "2026-10-19T13:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "アクティブなユーザー数とエージェント数の合計を、7 日間または 30 日間で表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "レポートを解釈する", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "ライセンス種類別・作成者種類別に、概要と傾向のビューを切り替え可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "ライセンスの種類別のユーザー", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "ユーザー別・エージェント別の詳細テーブルで、応答数などを確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "ユーザー詳細テーブル / エージェント詳細テーブル", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理センターで［レポート］→［使用状況］を開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "レポートを表示する", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "［Microsoft Copilot］→［エージェント］の順に選択する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "レポートを表示する", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザー名や表示名などは、既定では使用状況レポートで非表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "ユーザー詳細テーブルの注", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "最終アクティビティ日は、選択した期間に関係なく最新の日付を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "ユーザー詳細テーブル", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "対象のエージェント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "組織・Microsoft・サード パーティ製と、ユーザー作成のエージェントが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "作成者の種類別のユーザー", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "Copilot Chat と Word・Excel・PowerPoint での利用を追跡", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "概要", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ライセンスなしユーザーの利用状況を、ライセンス展開の検討材料にする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "エージェントごとの利用者数で、活用が進んでいるものを把握する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agents-usage-report", "term": "エージェントの使用状況レポート", "type": "feature", "oneLine": { "text": "Copilot Chat や Office アプリでのエージェントの使われ方を追跡するレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "概要", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "active-user", "term": "エージェントのアクティブ ユーザー", "type": "term", "oneLine": { "text": "エージェントに質問し、応答を受け取ったユーザー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "レポートを解釈する", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "creator-type", "term": "作成者タイプ", "type": "term", "oneLine": { "text": "エージェントを作成したのが、ユーザー・組織・Microsoft・サード パーティのどれかを示す区分。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "作成者の種類別のユーザー", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用状況はどのくらいの間隔で反映されますか？",
+          "answer": {
+            "text": "ユーザーがエージェントと対話してから 1 時間以内に使用状況を表示できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "概要", "retrievedAt": "2026-10-19T13:30:00Z" }]
+          }
+        },
+        {
+          "question": "ユーザー名が表示されないのはなぜですか？",
+          "answer": {
+            "text": "ユーザー固有の情報は既定で非表示です。表示する方法は、使用状況レポートの概要ページに記載されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locator": "ユーザー詳細テーブルの注", "retrievedAt": "2026-10-19T13:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=497999",
+        "learn": [{ "title": "Microsoft Copilot エージェントの使用状況レポート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-agents-new", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
