@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2595ac9245147b44",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Purview DSPM に Data Security Posture Agent が登場",
+        "subtitleJa": "自然言語で、組織内の機密データを探し出せます",
+        "en": "Microsoft Purview: Data Security Posture Management-Data Security Posture Agent in DSPM"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Purview"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Purview を使う**データ セキュリティ管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "変化するデータとリスクの状況を先回りして把握し、機密データの発見を効率化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用するには、Purview ポータルでエージェントを有効化・構成する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-posture-agent-get-started", "locator": "エージェントの有効化", "retrievedAt": "2026-10-19T00:40:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Data Security Posture Agent が、**データ資産全体の機密データの発見**を支援します。管理者の対応能力を広げます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "自然言語の検索で、機密データを意図ベースで探す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] },
+            { "text": "SharePoint・OneDrive のファイル、Teams のメッセージ、Exchange のメールなどが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] },
+            { "text": "結果には秘密度ラベルとリスク レベル、一致件数が表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Purview ポータルの [エージェント] > [エージェントを探す] から追加してセットアップ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-posture-agent-get-started", "locator": "エージェントの有効化", "retrievedAt": "2026-10-19T00:40:00Z" }] },
+            { "text": "検索は DSPM > Discover > Asset explorer > Agent タブから実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Security Copilot へのオンボードと SCU のプロビジョニングが必要。実行ごとに SCU を消費", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-posture-agent-get-started", "locator": "SKU/サブスクリプションとライセンス", "retrievedAt": "2026-10-19T00:40:00Z" }] },
+            { "text": "検索は最大 1 GB まで。期間未指定なら過去 7 日間。同時に実行できるプロンプトは 2 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "調査前のチェック用。電子情報開示や監査など正式なケースには他の Purview ソリューションを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] },
+            { "text": "現行の DSPM のみ対象で、DSPM（クラシック）では使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "分析情報の表示で、概要やリスク評価のレポートを Word でダウンロードして共有できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }] },
+            { "text": "まず特定のユーザーやサイトに絞った制限付き検索で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dspm", "term": "データ セキュリティ態勢管理（DSPM）", "type": "product", "oneLine": { "text": "Microsoft Purview で、データのセキュリティ保護と管理をガイドするソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "冒頭", "retrievedAt": "2026-10-19T00:40:00Z" }] } },
+        { "termKey": "data-security-posture-agent", "term": "Data Security Posture Agent", "type": "feature", "oneLine": { "text": "自然言語プロンプトで組織全体の機密情報を見つけるエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-posture-agent-get-started", "locator": "冒頭", "retrievedAt": "2026-10-19T00:40:00Z" }] } },
+        { "termKey": "scu", "term": "セキュリティ コンピューティング ユニット（SCU）", "type": "term", "oneLine": { "text": "エージェントが実行時に消費する、Security Copilot の処理単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-posture-agent-get-started", "locator": "SKU/サブスクリプションとライセンス", "retrievedAt": "2026-10-19T00:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用に必要なライセンスは何ですか？",
+          "answer": {
+            "text": "Learn では、Microsoft 365 E5 と、Security Copilot 用に SCU のプロビジョニングが必要と案内されています。シートごとの標準ライセンスと従量課金の両モデルが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-posture-agent-get-started", "locator": "SKU/サブスクリプションとライセンス", "retrievedAt": "2026-10-19T00:40:00Z" }]
+          }
+        },
+        {
+          "question": "エージェントの利用は監査できますか？",
+          "answer": {
+            "text": "はい。エージェント実行によるイベントは、監査ドキュメントの「Data Security Posture Agent アクティビティ」に記載されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locator": "データ セキュリティ体制エージェントの使用", "retrievedAt": "2026-10-19T00:40:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=542790",
+        "learn": [
+          { "title": "データ セキュリティ体制エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-posture-agent-get-started", "locale": "ja-jp" },
+          { "title": "Microsoft Purview データ セキュリティ態勢管理に関する考慮事項", "url": "https://learn.microsoft.com/ja-jp/purview/data-security-posture-management-considerations", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
