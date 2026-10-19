@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-20a94fb86ce1c161",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams モバイルの検索から Copilot に質問できる Ask Copilot（開発中）",
+        "subtitleJa": "検索結果を見ながら、そのまま Copilot との会話に切り替えられます",
+        "en": "Microsoft Teams: Ask Copilot from Search on Mobile"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Teams モバイル（Android / iOS）で情報を探す人**と、その管理者",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "検索画面を離れずに、答えやフォローアップの質問を Copilot で得られる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発中の段階のため、現時点で必要な対応はない",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Teams の検索バーに入力すると、検索結果と並んで**Copilot に質問する選択肢**が表示されます。検索結果ページの Ask Copilot から、クエリを会話に切り替えられます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "機能の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "検索バーに入力すると、検索結果と並べて Copilot への質問を提示",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "検索結果ページの Ask Copilot で、クエリを Copilot との会話に切り替え",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "情報探し・回答の取得・フォローアップの質問をその場で行える",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "ロードマップ上の段階は「開発中」で、仕様や時期は変わる可能性がある",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "対象は Android / iOS の Teams モバイル。クラウドは Worldwide（標準マルチテナント）",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "関連する Copilot 検索は、対象の Microsoft Copilot ライセンスで追加料金なしに使える",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
+                  "locator": "アクセスと適格性",
+                  "retrievedAt": "2026-10-19T00:50:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "関連する Copilot 検索は、検索から Chat に移って深掘りする設計",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
+                  "locator": "Copilot 検索と Microsoft Copilot のしくみ",
+                  "retrievedAt": "2026-10-19T00:50:00Z"
+                }
+              ]
+            },
+            {
+              "text": "提供が近づいたら、モバイルでの検索から Copilot への流れを社内に案内する",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "ask-copilot",
+          "term": "Ask Copilot",
+          "type": "feature",
+          "oneLine": {
+            "text": "Teams の検索結果ページから、クエリを Copilot との会話に切り替える入口。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "copilot-search",
+          "term": "Microsoft Copilot 検索",
+          "type": "feature",
+          "oneLine": {
+            "text": "組織向けに最適化された、AI 搭載のユニバーサル検索エクスペリエンス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-19T00:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "copilot-chat",
+          "term": "Microsoft Copilot Chat",
+          "type": "product",
+          "oneLine": {
+            "text": "より深い回答の生成、コンテンツ作成、タスク完了に向く会話型の体験。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
+                "locator": "Copilot 検索と Copilot Chat の違い",
+                "retrievedAt": "2026-10-19T00:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-in-development",
+          "term": "開発中",
+          "type": "label",
+          "oneLine": {
+            "text": "ロードマップ上で、まだ提供前の開発段階にある更新。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "提供はいつ始まりますか？",
+          "answer": {
+            "text": "ロードマップは「開発中」の段階で、提供月は示されていません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "question": "Copilot 検索とどう違いますか？",
+          "answer": {
+            "text": "Copilot 検索は検索から Chat に移って深掘りする体験です。この更新は Teams モバイルの検索に Copilot への入口を加えるものです。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
+                "locator": "Copilot 検索と Microsoft Copilot のしくみ",
+                "retrievedAt": "2026-10-19T00:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "管理者が対応する必要はありますか？",
+          "answer": {
+            "text": "開発中の段階であり、現時点でソースに管理者の設定手順はありません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571299",
+        "learn": [
+          {
+            "title": "Microsoft Copilot 検索",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
