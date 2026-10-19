@@ -834,3 +834,46 @@ h3 {
 .check-chip[class*="chip-imp-"] { border-color: var(--imp-color); color: var(--imp-color); font-weight: 700; }
 .check-chip[class*="chip-imp-"]:has(input:checked) { background: var(--imp-color); color: #fff; }
 .check-chip[class*="chip-imp-"] input { accent-color: var(--imp-color); }
+
+/* ダークモード（ヘッダーの切り替えボタン、または OS の設定。選択は localStorage に保存） */
+.theme-toggle { font: inherit; cursor: pointer; border: 1px solid var(--line); background: transparent; color: inherit; border-radius: 999px; width: 2rem; height: 2rem; line-height: 1; }
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d1b26;
+  --bg-soft: #112331;
+  --panel: rgba(22, 40, 54, 0.82);
+  --panel-strong: rgba(26, 46, 62, 0.95);
+  --line: rgba(160, 200, 230, 0.18);
+  --text: #e3eef6;
+  --muted: #9db5c6;
+  --accent: #3fc8e8;
+  --accent-strong: #7aa7ff;
+  --glow: rgba(122, 167, 255, 0.12);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+html[data-theme="dark"] body { background: var(--bg); color: var(--text); }
+html[data-theme="dark"] .page-shell { background: transparent; }
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .demo-nav,
+html[data-theme="dark"] .status-bar,
+html[data-theme="dark"] .filter-panel,
+html[data-theme="dark"] .update-card,
+html[data-theme="dark"] .column-card,
+html[data-theme="dark"] .search-shell { background: var(--panel); }
+html[data-theme="dark"] .badge-cat,
+html[data-theme="dark"] .check-chip,
+html[data-theme="dark"] .btn-outline,
+html[data-theme="dark"] .search-input,
+html[data-theme="dark"] input,
+html[data-theme="dark"] select { background: rgba(255, 255, 255, 0.06); color: var(--text); }
+html[data-theme="dark"] .check-chip[class*="chip-"]:has(input:checked) { color: #fff; }
+html[data-theme="dark"] .badge-role { background: rgba(255, 255, 255, 0.08); color: var(--muted); }
+html[data-theme="dark"] .badge-slide { background: rgba(27, 127, 59, 0.25); color: #9fe0b4; }
+html[data-theme="dark"] .status-chip { background: rgba(122, 167, 255, 0.14); }
+html[data-theme="dark"] a { color: var(--accent-strong); }
+html[data-theme="dark"] .demo-nav a { background: rgba(255, 255, 255, 0.07); border-color: var(--line); color: var(--accent-strong); }
+html[data-theme="dark"] .demo-nav a:hover { background: rgba(122, 167, 255, 0.18); }
+html[data-theme="dark"] .filter-row input[type="date"],
+html[data-theme="dark"] .filter-row select,
+html[data-theme="dark"] .filter-row .search-input { background: rgba(255, 255, 255, 0.06); color: var(--text); border-color: var(--line); }
+html[data-theme="dark"] .demo-nav-current { background: rgba(122, 167, 255, 0.22); color: #fff; }
