@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-92e52130c6e20b84",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview データ ライフサイクル管理の課金メーター変更（開発中）",
+        "subtitleJa": "保持されるデータ量に基づく課金方式に変わります",
+        "en": "Microsoft Purview: Data Lifecycle Management - DLM Meter Change"
+      },
+      "meta": {
+        "publishedJst": "2026-09-09",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Purview の課金とコストを管理する**テナント管理者**", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=560324", "locator": "Roadmap の説明", "retrievedAt": "2026-10-19T15:10:00Z" }] },
+        "change": { "text": "DLM の課金が、保持されるデータ量（GB）に基づく方式に変わる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=560324", "locator": "Roadmap の説明", "retrievedAt": "2026-10-19T15:10:00Z" }] },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "開発中の段階。まず現在の課金対象とコスト見積もりを確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "DLM の課金は**保持されるデータ量**に基づきます。例：Microsoft 365 以外の生成 AI のプロンプトと応答が合計 1 GB なら、1 GB あたり月額 $0.25 で課金されます", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=560324", "locator": "Roadmap の説明", "retrievedAt": "2026-10-19T15:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "課金は、保持されるデータ量に基づく方式になる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=560324", "locator": "Roadmap の説明", "retrievedAt": "2026-10-19T15:10:00Z" }] },
+            { "text": "例：合計 1 GB の保持データは月額 $0.25／GB（日額 約 $0.0082／GB）", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=560324", "locator": "Roadmap の説明", "retrievedAt": "2026-10-19T15:10:00Z" }] },
+            { "text": "対象の例は、Microsoft 365 以外の生成 AI のプロンプトと応答の保持", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=560324", "locator": "Roadmap の説明", "retrievedAt": "2026-10-19T15:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 Copilot のエクスペリエンスは従量課金の対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-billing-models", "locator": "データ リスクおよびコンプライアンス機能", "retrievedAt": "2026-10-19T15:10:00Z" }] },
+            { "text": "現行の DLM 従量課金は、Microsoft 365 以外の AI 操作の保持ポリシーが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-billing-models", "locator": "データ ライフサイクル管理", "retrievedAt": "2026-10-19T15:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "従量課金の価格は Azure の価格ページや見積もりツールで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-billing-models", "locator": "コスト見積もりツール", "retrievedAt": "2026-10-19T15:10:00Z" }] },
+            { "text": "保持ポリシーの対象範囲とデータ量を確認し、コスト影響を把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dlm", "term": "データ ライフサイクル管理（DLM）", "type": "feature", "oneLine": { "text": "Purview で構成した保持ポリシーに従い、AI 操作のプロンプトと応答を保持・削除する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-billing-models", "locator": "データ ライフサイクル管理", "retrievedAt": "2026-10-19T15:10:00Z" }] } },
+        { "termKey": "payg", "term": "従量課金制モデル", "type": "term", "oneLine": { "text": "Microsoft 365 以外のデータ ソースと一部の機能に適用される、Purview の課金モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-billing-models", "locator": "冒頭", "retrievedAt": "2026-10-19T15:10:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "今回の変更で Microsoft 365 Copilot の利用にも課金されますか？",
+          "answer": { "text": "Learn では、Microsoft 365 Copilot のエクスペリエンスは従量課金の対象外とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-billing-models", "locator": "データ リスクおよびコンプライアンス機能", "retrievedAt": "2026-10-19T15:10:00Z" }] }
+        },
+        {
+          "question": "料金の目安はいくらですか？",
+          "answer": { "text": "ロードマップの例では、保持データ 1 GB あたり月額 $0.25（日額 約 $0.0082）です。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=560324", "locator": "Roadmap の説明", "retrievedAt": "2026-10-19T15:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560324",
+        "learn": [{ "title": "Microsoft Purview の課金モデルについて", "url": "https://learn.microsoft.com/ja-jp/purview/purview-billing-models", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
