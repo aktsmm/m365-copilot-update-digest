@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-44e20a02ae5997c3",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot ダッシュボードにパワーユーザーのインサイトが追加（Viva Copilot Analytics）",
+        "subtitleJa": "Copilot の利用を習慣化しているユーザーを把握できます",
+        "en": "Microsoft Viva: Copilot Analytics - Power user insights in Copilot dashboard"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Viva", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["viva"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Copilot の導入を推進する**管理者・IT 部門**と、Copilot ダッシュボードの閲覧者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "習慣的に Copilot を使うユーザーの規模を把握し、育成や展開の判断に活かせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "対応は不要。ダッシュボードの「使用レベル」で結果を確認できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "分析情報 #2: 使用レベル", "retrievedAt": "2026-10-19T13:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Copilot ダッシュボードで、**パワーユーザー・習慣的なユーザー・初心者ユーザー**の分布を確認できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "分析情報 #2: 使用レベル", "retrievedAt": "2026-10-19T13:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "12 週間の利用頻度と一貫性で、ユーザーをレベル別に分類", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用レベル カード", "retrievedAt": "2026-10-19T13:00:00Z" }] },
+            { "text": "パワー ユーザー: 週平均 15 回以上のアクションで、12 週中 9 週以上使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用レベル カード", "retrievedAt": "2026-10-19T13:00:00Z" }] },
+            { "text": "週ごとの推移と、組織グループ別の人数・割合も確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用状況レベルの傾向 / グループ別の使用レベル", "retrievedAt": "2026-10-19T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI 管理者が Copilot ダッシュボードを有効にし、必要なユーザーへアクセスを委任する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "Copilot ダッシュボードを開く", "retrievedAt": "2026-10-19T13:00:00Z" }] },
+            { "text": "Teams の Viva インサイト アプリ、または Viva Insights の Copilot ダッシュボードから開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "Copilot ダッシュボードを開く", "retrievedAt": "2026-10-19T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Exchange Online アカウントを持つ Microsoft 365 の商用顧客が対象。有料の Viva Insights ライセンスは不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "冒頭の注", "retrievedAt": "2026-10-19T13:00:00Z" }] },
+            { "text": "分類の対象は、Copilot ライセンスが割り当てられたユーザー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用レベル カード", "retrievedAt": "2026-10-19T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他のレベルとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "習慣的なユーザー: 週平均 1〜14 回で、12 週中 9 週以上使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用レベル カード", "retrievedAt": "2026-10-19T13:00:00Z" }] },
+            { "text": "初心者ユーザー: 12 週中 9 週以上は使用していないユーザー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用レベル カード", "retrievedAt": "2026-10-19T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "パワー ユーザーが多いグループの使い方を、他のチームへの展開の参考にする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "初心者ユーザーが多いグループを、トレーニングの優先対象にする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-dashboard", "term": "Copilot ダッシュボード", "type": "feature", "oneLine": { "text": "Viva Insights で Copilot の導入メトリックや使用パターンを確認できる画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "Copilot ダッシュボード", "retrievedAt": "2026-10-19T13:00:00Z" }] } },
+        { "termKey": "viva-insights", "term": "Viva Insights", "type": "product", "oneLine": { "text": "Copilot ダッシュボードと高度なインサイト分析ツールを提供する分析サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "Viva Insights Copilot 分析", "retrievedAt": "2026-10-19T13:00:00Z" }] } },
+        { "termKey": "power-user", "term": "パワー ユーザー", "type": "term", "oneLine": { "text": "週平均 15 回以上の Copilot アクションを行い、12 週中 9 週以上使用したユーザー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用レベル カード", "retrievedAt": "2026-10-19T13:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ダッシュボードの利用に Viva Insights の有料ライセンスは必要ですか？",
+          "answer": {
+            "text": "いいえ。有料の Viva Insights ライセンスも Copilot ライセンスも、ダッシュボードの表示には不要です。ただし分析対象は Copilot ライセンスを割り当てられたユーザーです。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "冒頭の注", "retrievedAt": "2026-10-19T13:00:00Z" }]
+          }
+        },
+        {
+          "question": "「習慣的なユーザー」と「パワー ユーザー」の違いは何ですか？",
+          "answer": {
+            "text": "どちらも 12 週中 9 週以上 Copilot を使いますが、週平均のアクション数が 1〜14 回なら習慣的なユーザー、15 回以上ならパワー ユーザーです。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "使用レベル カード", "retrievedAt": "2026-10-19T13:00:00Z" }]
+          }
+        },
+        {
+          "question": "グループ別の表示に人数の制限はありますか？",
+          "answer": {
+            "text": "ダッシュボードのデータはプライバシーの最小しきい値を満たすように集計されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locator": "プライバシーのしきい値", "retrievedAt": "2026-10-19T13:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560705",
+        "learn": [
+          { "title": "Microsoft 365 の顧客向けの Microsoft Copilot ダッシュボードに接続する", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard", "locale": "ja-jp" },
+          { "title": "管理者向けの Microsoft Copilot レポート オプション", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins#viva-insights-copilot-analytics", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
