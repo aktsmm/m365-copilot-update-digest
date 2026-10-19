@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-32463babaa9c3b94",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint の FAQ Web パーツの作成体験を変更、AI 作成は Copilot へ移行",
+        "en": "SharePoint: Changes to the FAQ web part authoring experience"
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "availability": [],
+        "status": "In development",
+        "products": ["SharePoint"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "SharePoint ページの**コンテンツ作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "FAQ Web パーツは手動作成に専念し、AI での FAQ 生成は Copilot in SharePoint に集約される。", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で必須の対応はない。提供時に AI での FAQ 作成手順が変わる点を周知しておく。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "FAQ Web パーツは AI なしの標準体験で手動作成・編集・管理を行い、AI での作成とインポートは Copilot in SharePoint の作成体験で行う。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "FAQ Web パーツは、FAQ を手動で作成・編集・管理する標準的な AI なしの体験になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AI による FAQ の作成とインポートは Copilot in SharePoint の作成体験へ移る", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "作成者は自然言語のプロンプトと選択した情報源で FAQ を生成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "提供範囲と状況",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供状況は開発中（In development）で、提供月はロードマップに記載されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象クラウドは Worldwide（標準マルチテナント）と GCC、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot in SharePoint の利用には Microsoft 365 Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-19T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI で FAQ を作成している作成者に、Copilot in SharePoint 側へ移ることを事前に共有する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "利用ユーザーに Microsoft 365 Copilot ライセンスが割り当て済みか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "faq-web-part", "term": "FAQ Web パーツ", "type": "feature", "oneLine": { "text": "SharePoint ページに FAQ を表示・管理するための Web パーツ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-in-sharepoint", "term": "Copilot in SharePoint", "type": "product", "oneLine": { "text": "自然言語で SharePoint のコンテンツに質問したり、サイトやページなどを作成したりできる Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-19T22:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で開発が進行中で、まだ提供が始まっていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから変更されますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。ロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "AI で FAQ を作るには何が必要ですか？",
+          "answer": { "text": "Copilot in SharePoint を使うには Microsoft 365 Copilot ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-19T22:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570647",
+        "learn": [
+          { "title": "Copilot in SharePoint の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
