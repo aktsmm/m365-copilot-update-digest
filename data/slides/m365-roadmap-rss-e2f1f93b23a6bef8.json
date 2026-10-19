@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e2f1f93b23a6bef8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Field Service で追加ライセンスなしの下請け業者対応を開発中",
+        "subtitleJa": "外部作業者ごとのライセンス購入・管理の負担を減らすことを目指します",
+        "en": "Dynamics 365 Field Service: Work with Subcontractors without additional licenses"
+      },
+      "meta": {
+        "publishedJst": "2026-09-25",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Field Service"],
+        "categories": ["admin", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Dynamics 365 Field Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Field Service で下請け業者・外部サービス事業者と連携する組織**の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "外部作業者ごとに追加ライセンスを購入・管理するコストと手間を減らすことを目指す", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供開始まで現行のライセンス運用を継続", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "現状は Field Service を使うユーザーにライセンスの割り当てが必要（請負業者向けライセンスもある）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/users-licenses-permissions", "locator": "ライセンスを割り当てる", "retrievedAt": "2026-10-19T13:00:00Z" }] },
+        "after": { "text": "Dynamics 365 環境で作業しない下請け業者を、追加ライセンスなしで扱えるようにすることを目指す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Dynamics 365 Field Service の下請け業者・外部サービス事業者との連携", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "外部作業者ごとの追加ライセンス購入と、アクセス管理の負荷軽減が狙い", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは開発中。内容や時期は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現行の運用（参考）",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "外部ユーザーは Entra の B2B コラボレーション ユーザーとして追加し、Field Service ライセンスを割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/users-licenses-permissions", "locator": "B2B Collaboration ユーザー / ライセンスを割り当てる", "retrievedAt": "2026-10-19T13:00:00Z" }] },
+            { "text": "ライセンスは標準版と、サードパーティ技術者向けにコア機能のサブセットを含む請負業者版の 2 種類", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/buy-fs", "locator": "利用可能な Field Service のライセンス タイプ", "retrievedAt": "2026-10-19T13:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "field-service", "term": "Dynamics 365 Field Service", "type": "product", "oneLine": { "text": "作業指示書を完成させる現場サービス管理を支える Dynamics 365 のアプリケーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/users-licenses-permissions", "locator": "冒頭", "retrievedAt": "2026-10-19T13:00:00Z" }] } },
+        { "termKey": "contractor-license", "term": "請負業者ライセンス", "type": "feature", "oneLine": { "text": "サードパーティの技術者向けに、コア機能のサブセットを含む Field Service のライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/buy-fs", "locator": "利用可能な Field Service のライセンス タイプ", "retrievedAt": "2026-10-19T13:00:00Z" }] } },
+        { "termKey": "b2b", "term": "B2B コラボレーション ユーザー", "type": "term", "oneLine": { "text": "請負業者やベンダーを Field Service に追加する際に、Microsoft Entra 管理センターで管理するユーザー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/users-licenses-permissions", "locator": "B2B Collaboration ユーザー", "retrievedAt": "2026-10-19T13:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "今すぐ請負業者を Field Service で使うにはどうすればよいですか？",
+          "answer": { "text": "Entra の B2B コラボレーション ユーザーを作成し、Field Service ライセンス（請負業者ライセンスを含む）を割り当てます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/users-licenses-permissions", "locator": "ライセンスを割り当てる", "retrievedAt": "2026-10-19T13:00:00Z" }] }
+        },
+        {
+          "question": "請負業者ライセンスと標準ライセンスの違いは？",
+          "answer": { "text": "標準版はすべてのコア機能を含み、請負業者版はサードパーティ技術者向けにコア機能のサブセットを含みます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/buy-fs", "locator": "利用可能な Field Service のライセンス タイプ", "retrievedAt": "2026-10-19T13:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571672",
+        "learn": [
+          { "title": "ユーザー、ライセンス、セキュリティ ロールの設定", "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/users-licenses-permissions", "locale": "ja-jp" },
+          { "title": "Dynamics 365 Field Service ライセンスを購入する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/buy-fs", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
