@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0201f3204460268b",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Outlook で Planner が利用可能に",
+        "subtitleJa": "タスクやプラン、Planner Agent を受信トレイから直接扱えます",
+        "en": "Planner: Available in Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Planner"],
+        "categories": ["outlook", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Planner",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook と Planner を日常的に使うユーザー**と、Planner の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メールを開いたまま、タスクやプランを確認・管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は、Planner エージェントの利用範囲を PowerShell で制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-18T23:58:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Outlook の受信トレイの中で、**タスク・プラン・Planner Agent を直接扱え**、普段の作業場所から仕事を管理できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook 内で、タスク・プラン・新しい Planner Agent を利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Planner エージェントは、チームの計画の作成とタスクの実行を自動化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-18T23:58:00Z" }] },
+            { "text": "提供対象のプラットフォームは Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Planner エージェントの利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-18T23:58:00Z" }] },
+            { "text": "管理者は Set-PlannerConfiguration の -AllowPlannerCopilot で有効・無効を切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-18T23:58:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ポリシーの変更が反映されるまで最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-18T23:58:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する既存機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner のタスクを Outlook カレンダーで表示する機能は、Enterprise プランなどで提供済み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locator": "機能の可用性", "retrievedAt": "2026-10-18T23:58:00Z" }] },
+            { "text": "Outlook カレンダー同期は Planner で自動的にオン。組織単位でオフにできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/faq-for-planner-admins", "locator": "Outlook カレンダー同期", "retrievedAt": "2026-10-18T23:58:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず特定のセキュリティ グループだけに Planner エージェントを有効化して試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner", "term": "Planner", "type": "product", "oneLine": { "text": "タスクの計画・管理・完了を支援する、共同作業向けのタスク管理ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locator": "冒頭", "retrievedAt": "2026-10-18T23:58:00Z" }] } },
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-18T23:58:00Z" }] } },
+        { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Planner エージェントの利用者を絞り込むときに指定する Microsoft Entra ID のグループ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-18T23:58:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（Launched）", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は Planner エージェントを制限できますか？",
+          "answer": { "text": "はい。-AllowPlannerCopilot で全体のオン・オフを切り替え、特定のセキュリティ グループに限定することもできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "動作マトリックス", "retrievedAt": "2026-10-18T23:58:00Z" }] }
+        },
+        {
+          "question": "Planner エージェントの利用にライセンスは必要ですか？",
+          "answer": { "text": "はい。Planner で Planner エージェントを使うには、Microsoft Copilot ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-18T23:58:00Z" }] }
+        },
+        {
+          "question": "GCC などの政府機関向けクラウドでも使えますか？",
+          "answer": { "text": "ロードマップ上の提供範囲は Worldwide (Standard Multi-Tenant) のみです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=513278",
+        "learn": [
+          { "title": "Microsoft Planner サービスの説明", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locale": "ja-jp" },
+          { "title": "Planner エージェントへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }
+        ]
+      }
+    }
+  ]
+}
