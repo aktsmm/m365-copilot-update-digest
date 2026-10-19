@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c9e3076c15578f4d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "OneDrive の追加ストレージ向け従量課金を開発中",
+        "subtitleJa": "ライセンス上限を超える容量を、使った分だけ支払えるようになります",
+        "en": "Microsoft 365: Pay-as-you-go storage for OneDrive"
+      },
+      "meta": {
+        "publishedJst": "2026-08-21",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365"],
+        "categories": ["sharepoint", "admin"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**OneDrive の容量が不足しがちな組織の管理者**（SharePoint 管理者・グローバル管理者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ライセンス上限を超えて使える OneDrive アカウントを管理者が制御し、必要なユーザーに容量を追加できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため対応は不要。導入時は Azure サブスクリプションと管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージを追加するための前提条件", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "OneDrive アカウントの**ライセンス クォータを超えた分だけ**を従量課金で支払い、選んだユーザーに多くの容量を割り当てられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージを追加する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "OneDrive の追加ストレージ向けに、従量課金（消費ベース）の新しいメーターを提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ライセンス上限を超えて拡張できる OneDrive アカウントを管理者が制御", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "選択したユーザーに、必要に応じて多くの容量を付与できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階の機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ライセンス クォータを超えたストレージ使用量のみが請求される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "選択したユーザーのストレージ制限を更新する", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "容量制限の最大値は 25,600 GB のまま", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "選択したユーザーのストレージ制限を更新する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Azure サブスクリプション、リソース グループ、所有者または共同作成者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージを追加するための前提条件", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "管理センターで SharePoint 管理者またはグローバル管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージを追加するための前提条件", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "payg", "term": "従量課金制", "type": "term", "oneLine": { "text": "ライセンス クォータを超えるストレージを、使用した分だけ支払う請求方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージを追加する", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "onedrive-storage", "term": "Microsoft 365 OneDrive ストレージ", "type": "feature", "oneLine": { "text": "OneDrive アカウントにストレージを追加するための、柔軟な請求を提供する従量課金制サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージを追加する", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "quota", "term": "ライセンス クォータ", "type": "term", "oneLine": { "text": "ライセンスで割り当てられた OneDrive の容量。従量課金ではこれを超えた分が請求対象。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "選択したユーザーのストレージ制限を更新する", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "追加容量の請求はどのように設定しますか？",
+          "answer": { "text": "管理センターの課金ノードで従量課金を設定し、サービスに Microsoft 365 OneDrive ストレージを選びます。その後、対象ユーザーの容量上限を変更します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージの従量課金を設定する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "従量課金をやめるにはどうしますか？",
+          "answer": { "text": "従量課金の接続を切断します。アカウントがクォータを超えている間に切断すると、クォータの適用が再開されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space", "locator": "Microsoft 365 OneDrive ストレージを切断する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562352",
+        "learn": [
+          { "title": "Microsoft 365 サブスクリプションに OneDrive と SharePoint のストレージを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/commerce/add-storage-space#add-microsoft-365-onedrive-storage", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
