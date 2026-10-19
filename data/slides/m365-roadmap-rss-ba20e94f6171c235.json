@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ba20e94f6171c235",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Analytics で Cowork の導入状況と効果のインサイトが提供開始",
+        "subtitleJa": "消費ダッシュボードと Copilot ダッシュボードで Cowork の利用を把握できます",
+        "en": "Microsoft Copilot (Microsoft 365): Insights: Copilot Analytics - Cowork adoption and impact"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Microsoft Viva"],
+        "categories": ["agents", "viva"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Cowork の導入・コストを把握したい管理者とアナリスト**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Cowork の導入状況・効果・クレジット使用量を、ダッシュボードとエクスポートで確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "閲覧にはロールが必要。対象ユーザーは Insights のアクセス設定を確認する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-19T13:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Cowork の導入状況と効果を**ダッシュボードで確認し、エクスポートや高度なインサイトのクエリでも分析**できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "消費ダッシュボードの Cowork ページに、アクティブ ユーザーやクレジット使用状況などのカードを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork ページ", "retrievedAt": "2026-10-19T13:10:00Z" }] },
+            { "text": "タスク カテゴリ別の使用状況や、スケジュール済みタスクの割合も確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "タスク別の Cowork 使用状況の内訳", "retrievedAt": "2026-10-19T13:10:00Z" }] },
+            { "text": "全指標を、高度なインサイトの AI コストクエリで照会できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Viva Insights の消費ダッシュボードを開き、Cowork の指標を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork ページ", "retrievedAt": "2026-10-19T13:10:00Z" }] },
+            { "text": "オフライン分析用にメトリックをエクスポートできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "関連コンテンツ", "retrievedAt": "2026-10-19T13:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象は、グローバル パーティション アクセスを持つアナリスト、マネージャー、Microsoft 365 グローバル管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-19T13:10:00Z" }] },
+            { "text": "クレジット使用状況は参考情報で、正式な請求は管理センターで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭の注", "retrievedAt": "2026-10-19T13:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "消費データは現在、Copilot Cowork と Work IQ API で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Microsoft 365 サービス", "retrievedAt": "2026-10-19T13:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "導入状況とクレジット使用量を併せて見て、投資判断の材料にする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "タスクを実行するエージェントで、消費ダッシュボードにセッションやタスク数が表示される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork ページ", "retrievedAt": "2026-10-19T13:10:00Z" }] } },
+        { "termKey": "consumption-dashboard", "term": "消費ダッシュボード", "type": "feature", "oneLine": { "text": "Copilot クレジットの使用状況をエージェントやサービス別に把握するための Insights のダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-19T13:10:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "Copilot の利用量を測る単位で、消費ダッシュボードで使用状況を確認できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-19T13:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "誰がこのダッシュボードを見られますか？",
+          "answer": { "text": "グローバル パーティション アクセスを持つ分析情報アナリスト、マネージャー、Microsoft 365 グローバル管理者が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-19T13:10:00Z" }] }
+        },
+        {
+          "question": "ダッシュボードのクレジット金額は請求額と同じですか？",
+          "answer": { "text": "参考情報です。公式の請求と料金は Microsoft 365 管理センターで確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭の注", "retrievedAt": "2026-10-19T13:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567005",
+        "learn": [
+          { "title": "インサイトでコンサンプション ダッシュボードを使用する方法", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locale": "ja-jp" },
+          { "title": "管理者向けの Microsoft Copilot レポート オプション", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
