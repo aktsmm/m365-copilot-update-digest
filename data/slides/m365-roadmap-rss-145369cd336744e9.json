@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-145369cd336744e9",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Work IQ API で宣言型エージェントへのアクセスが可能に",
+        "subtitleJa": "アプリから、既存の宣言型エージェントをプログラムで呼び出せます",
+        "en": "Microsoft Copilot (Microsoft 365): Work IQ APIs - Endpoints: Declarative Agent Access"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "work-iq"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントを呼び出すアプリの開発者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "専門エージェントを、アプリの業務フローの中から呼び出せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用するアプリは、Entra への登録と管理者の同意が必要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "Microsoft Entra にアプリケーションを登録する", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "Work IQ エンドポイント経由で、**ファーストパーティとテナント定義の宣言型エージェントをプログラムから呼び出せます**。アプリは専門エージェントに処理を任せられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ API のエンドポイントは A2A、リモート MCP サーバー、REST API", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "Work IQ の概要", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "A2A では SendMessage でメッセージを送り、contextId で複数ターンを継続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "同期 SendMessage / マルチターンの会話", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "エージェント ID を指定して、特定のエージェントを呼び出す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "エージェントの検出", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "テナントで Work IQ を有効にし、Microsoft Entra にアプリを登録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "前提条件", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "委任されたアクセス許可 WorkIQAgent.Ask に管理者の同意を付与する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "Microsoft Entra にアプリケーションを登録する", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "サンプルコードは microsoft/work-iq-samples リポジトリで入手できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "サンプル コードを入手する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ API は使用量ベースの課金で、Microsoft Copilot ライセンスとは無関係", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "Word・Excel・PowerPoint のエージェントは、A2A のヘッドレス呼び出しでは有用な応答を返さない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "エージェントの検出", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ MCP は、数百の操作を 10 個の汎用ツールに統合している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "ツール", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "エージェント間の連携は A2A、Web アプリとのやり取りは REST に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "チャット", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず小規模なテスト アプリで、呼び出すエージェントの応答を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "コストは Microsoft 365 管理センターで管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "product", "oneLine": { "text": "エージェントが組織データやツールにアクセスして推論するための、ワークプレイス インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "Work IQ の概要", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "ドメイン固有のタスクを担う専門的なエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "a2a", "term": "A2A", "type": "term", "oneLine": { "text": "エージェント間通信のオープン スタンダードなプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "クイック スタート: A2A プロトコル", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Work IQ API の利用に Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "Work IQ API は使用量ベースの課金で利用でき、Microsoft Copilot ライセンスとは無関係です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        },
+        {
+          "question": "アプリ側で必要な認証設定は何ですか？",
+          "answer": { "text": "Entra にアプリを登録し、委任されたアクセス許可 WorkIQAgent.Ask へ管理者の同意を付与します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locator": "Microsoft Entra にアプリケーションを登録する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559019",
+        "learn": [
+          { "title": "Work IQ の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locale": "ja-jp" },
+          { "title": "Work IQ A2A クイックスタート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/a2a/quickstart", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
