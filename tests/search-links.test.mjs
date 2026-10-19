@@ -3,6 +3,8 @@ import fs from "node:fs/promises";
 import test from "node:test";
 import vm from "node:vm";
 import { execFileSync } from "node:child_process";
+import nodeFs from "node:fs";
+import path from "node:path";
 import * as cheerio from "cheerio";
 
 const script = await fs.readFile(new URL("../public/assets/search.js", import.meta.url), "utf8");
@@ -139,4 +141,47 @@ test("generated search data resolves to exactly one card on each locale's daily 
     const ids = $("[id]").map((_, element) => $(element).attr("id")).get();
     assert.equal(new Set(ids).size, ids.length);
   }
+});
+
+// 直前のテストがビルドした site/ を使う（同じファイル内のテストは順番に実行される）。
+// 内部リンク・アセット（href / src）が実ファイルに解決することを、全ページで確認する。欠けたアセットは本番でコンソールの 404 になる。
+function htmlFiles(dir) {
+  const out = [];
+  for (const entry of nodeFs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name !== "raw") out.push(...htmlFiles(full));
+    } else if (entry.name.endsWith(".html")) out.push(full);
+  }
+  return out;
+}
+
+function resolves(site, from, ref) {
+  const clean = decodeURIComponent(ref.split("#")[0].split("?")[0]);
+  if (!clean) return true;
+  const target = path.resolve(path.dirname(from), clean);
+  if (!target.startsWith(path.resolve(site))) return false;
+  if (!nodeFs.existsSync(target)) return false;
+  return !nodeFs.statSync(target).isDirectory() || nodeFs.existsSync(path.join(target, "index.html"));
+}
+
+test("built site has no broken internal links or assets", () => {
+  const site = "site";
+  const broken = [];
+  let checked = 0;
+  for (const file of htmlFiles(site)) {
+    const html = nodeFs.readFileSync(file, "utf8");
+    for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
+      const ref = match[1];
+      if (/^(https?:|mailto:|data:|#|\/\/|javascript:)/.test(ref)) continue;
+      checked += 1;
+      if (!resolves(site, file, ref)) broken.push(`${path.relative(site, file)} -> ${ref}`);
+    }
+  }
+  assert.ok(checked > 0, "no internal references were found");
+  assert.deepEqual([...new Set(broken)].slice(0, 20), []);
+});
+
+test("the page icon is inline, so no /favicon.ico request is made", () => {
+  assert.match(nodeFs.readFileSync("site/index.html", "utf8"), /<link rel="icon" href="data:/);
 });
