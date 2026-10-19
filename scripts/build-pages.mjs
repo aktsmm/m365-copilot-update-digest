@@ -71,6 +71,7 @@ const TEXT = {
     demoNavLabel: "デモ一覧",
     unofficialBadge: "Unofficial update digest",
     headerLead: "非公式アップデートダイジェスト",
+    themeToggle: "ダークモード切り替え",
     siteName: "Microsoft Copilot Update Digest",
     statsUpdates: "追跡中の更新",
     statsUpdatesDetail: "重複除去後の累計件数",
@@ -166,6 +167,7 @@ const TEXT = {
     demoNavLabel: "Demo sites",
     unofficialBadge: "Unofficial update digest",
     headerLead: "Unofficial update digest",
+    themeToggle: "Toggle dark mode",
     siteName: "Microsoft Copilot Update Digest",
     statsUpdates: "Tracked updates",
     statsUpdatesDetail: "Deduplicated cumulative count",
@@ -678,7 +680,7 @@ function renderNav(locale, depth, activeNav, siteMeta, alternatePath) {
     ? `<a class="lang-switch" href="${escapeHtml(relativeHref(depth, alternatePath))}">${escapeHtml(text.switchLabel)}</a>`
     : "";
 
-  return `<header class="site-header"><div class="site-header-copy"><a class="site-brand" href="${escapeHtml(relativeHref(depth, localePath(locale, "")))}">${escapeHtml(siteMeta.siteName)}</a><p class="site-lead">${escapeHtml(text.headerLead)}</p></div><nav class="site-nav">${navHtml}${repoHtml}${switchHtml}</nav></header>`;
+  return `<header class="site-header"><div class="site-header-copy"><a class="site-brand" href="${escapeHtml(relativeHref(depth, localePath(locale, "")))}">${escapeHtml(siteMeta.siteName)}</a><p class="site-lead">${escapeHtml(text.headerLead)}</p></div><nav class="site-nav">${navHtml}${repoHtml}${switchHtml}<button type="button" class="theme-toggle" data-theme-toggle aria-label="${escapeHtml(text.themeToggle)}" title="${escapeHtml(text.themeToggle)}">◐</button></nav></header>`;
 }
 
 function renderDemoNav(locale) {
@@ -720,6 +722,8 @@ function renderLayout({
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(siteMeta[`tagline${locale === "en" ? "En" : "Ja"}`] || siteMeta.taglineJa)}" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232569f6'/%3E%3Ctext x='16' y='22' font-size='18' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E" />
+    <script>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.dataset.theme="dark"}catch(e){}document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-theme-toggle]");if(!b)return;var d=document.documentElement.dataset.theme==="dark"?"light":"dark";document.documentElement.dataset.theme=d;try{localStorage.setItem("theme",d)}catch(x){}})</script>
     <link rel="stylesheet" href="${escapeHtml(assetHref)}" />
   </head>
   <body class="${escapeHtml(bodyClass)}" ${bodyAttributes}>
