@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f4ed798b886cce69",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot アプリがシンプルなデザインに刷新",
+        "subtitleJa": "チャットのホーム画面・回答レイアウト・ナビゲーションが一新されます",
+        "en": "Microsoft Copilot (Microsoft 365): Simplified design for the Microsoft 365 Copilot app"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Web・デスクトップで Copilot アプリを使う**全ユーザー**と、展開を担う管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "画面が整理され、機能を探す時間が減り、使いやすくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 Simplified design", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "画面デザインの更新のため、ユーザーの操作は不要。新しい画面を確認しておくとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**チャットのホーム画面、回答レイアウト、ナビゲーションウィンドウ**が更新され、Web とデスクトップで迷わず操作できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 Simplified design", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "チャットのホーム画面を更新し、最近の会話へすばやくアクセスできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "チャットの回答レイアウトを合理化し、画面に集中しやすくする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "ナビゲーションウィンドウを再設計し、チャットとツールの切り替えが効率的に", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web またはデスクトップの Copilot アプリを開き、新しいホーム画面を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "左のナビゲーションは開閉でき、エージェント・会話・履歴を整理して表示する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/", "locator": "The Copilot app: Design and performance that move together", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象プラットフォームは Windows、Mac、Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Simplified design [Windows, Mac, Web]", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "Copilot 機能は、テナント内の一部ユーザーへ段階的に展開される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭の説明", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する変更",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロンプト入力欄が広がり、貼り付けやインライン書式設定にも対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/", "locator": "The Copilot app", "retrievedAt": "2026-10-19T13:30:00Z" }] },
+            { "text": "Work IQ は有効時に画面に表示され、ユーザーが直接制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/", "locator": "The Copilot app", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザー向けに、新しい画面構成と操作手順を事前に共有しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Microsoft の検証では、読み込み時間が 50% 以上短縮、複雑なチャットの応答が 10% 改善", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/", "locator": "The Copilot app", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-app", "term": "Microsoft Copilot アプリ", "type": "product", "oneLine": { "text": "Web とデスクトップで使う Copilot のアプリ。チャットやツールにアクセスできる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Simplified design", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "nav-pane", "term": "ナビゲーションウィンドウ", "type": "feature", "oneLine": { "text": "エージェント、会話、履歴を表示する左側のペイン。開閉できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/", "locator": "The Copilot app", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "メール・ファイル・チャット・会議を踏まえて Copilot を支えるインテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/", "locator": "The Copilot app", "retrievedAt": "2026-10-19T13:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この刷新はいつ提供されましたか？",
+          "answer": { "text": "ロードマップの状態は提供開始（Launched）で、リリース ノートでは 2026 年 8 月 25 日の項目に掲載されています。展開は段階的です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+        },
+        {
+          "question": "どのプラットフォームが対象ですか？",
+          "answer": { "text": "Windows、Mac、Web の Copilot アプリが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Simplified design [Windows, Mac, Web]", "retrievedAt": "2026-10-19T13:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561488",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
