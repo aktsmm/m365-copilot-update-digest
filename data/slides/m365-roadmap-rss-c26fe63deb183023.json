@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c26fe63deb183023",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio がアプリ起点のエージェント作成体験に（開発中）",
+        "subtitleJa": "連携するアプリから始め、ツールとナレッジをまとめて構成できるようになります",
+        "en": "Microsoft Copilot Studio: Introducing an App- and Intent-First Agent Creation Experience"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Copilot Studio でエージェントを作る人**（作成者）",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "エージェントの作成と構成が簡素化される",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発中の段階のため、今すぐの対応は不要",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "作成者は、エージェントが連携する**アプリから作成を始め**、必要な機能を構成します。ツールとナレッジがより統合された体験になります",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "アプリ起点: 最初にエージェントが連携するアプリを選ぶ",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "アプリに必要な機能を、作成者が構成する",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "ツールとナレッジを統合し、作成・構成を簡素化",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "提供段階は開発中で、提供月は公開されていない",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "対象は Web、クラウドは Worldwide（Standard Multi-Tenant）",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "現行では、説明を入力するとツールやナレッジ ソースが提案され、追加や無視を選べる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-first-bot",
+                  "locator": "エージェントを作成する",
+                  "retrievedAt": "2026-10-20T00:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "現行のツールは、エージェントが外部システムとやり取りするための構成要素",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-plugin-actions",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-10-20T00:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "既存エージェントのツールとナレッジの構成を棚卸ししておく",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-studio",
+          "term": "Copilot Studio",
+          "type": "product",
+          "oneLine": {
+            "text": "自分の言葉で説明するだけで、エージェントを作成できる Microsoft のサービス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-first-bot",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-20T00:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "tool",
+          "term": "ツール",
+          "type": "feature",
+          "oneLine": {
+            "text": "エージェントが外部システムとやり取りして、さまざまなアクションを実行するための構成要素。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-plugin-actions",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-20T00:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "knowledge",
+          "term": "ナレッジ ソース",
+          "type": "feature",
+          "oneLine": {
+            "text": "エージェントを作成するときに、AI が提案し追加できる情報源。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-first-bot",
+                "locator": "エージェントを作成する",
+                "retrievedAt": "2026-10-20T00:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-in-development",
+          "term": "開発中",
+          "type": "label",
+          "oneLine": {
+            "text": "Microsoft 365 ロードマップで、機能がまだ開発段階にあることを示す状態。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか。",
+          "answer": {
+            "text": "ロードマップの段階は開発中で、提供月は公開されていません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "question": "現在のエージェント作成はどうなっていますか。",
+          "answer": {
+            "text": "説明を入力すると AI が名前・指示を生成し、トリガーやツール、ナレッジ ソースを提案します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-first-bot",
+                "locator": "エージェントを作成する",
+                "retrievedAt": "2026-10-20T00:00:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569474",
+        "learn": [
+          {
+            "title": "エージェントの作成と削除",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-first-bot",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "カスタム エージェントにツールを追加する",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-plugin-actions",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
