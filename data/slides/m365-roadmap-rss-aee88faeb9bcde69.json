@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-aee88faeb9bcde69",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Windows 版の従来の Outlook で Copilot の各種設定にアクセス可能に",
+        "subtitleJa": "Copilot の設定を、Outlook の中から直接開けるようになります",
+        "en": "Outlook: Copilot Settings in classic Outlook for Windows"
+      },
+      "meta": {
+        "publishedJst": "2026-09-15",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Outlook"],
+        "categories": ["outlook", "edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Windows 版の従来の Outlook で Microsoft Copilot を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot の各種設定へ、Outlook を離れずに直接アクセスできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "提供開始済みの機能強化で、ロードマップ上は特別な対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Windows 版の従来の Outlook 内で、**Copilot のさまざまな設定へ直接アクセス**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Windows 版の従来の Outlook（デスクトップ）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot の各種設定に Outlook 内から直接アクセスできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステータスは「Launched（提供開始）」", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) のデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated"
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "not-stated"
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "not-stated"
+        }
+      ],
+      "glossary": [
+        { "termKey": "classic-outlook", "term": "従来の Outlook", "type": "product", "oneLine": { "text": "Windows 向けのデスクトップ版 Outlook（新しい Outlook と区別して呼ばれる）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-settings", "term": "Copilot の設定", "type": "feature", "oneLine": { "text": "Outlook 内から直接開けるようになる、Copilot に関するさまざまな設定。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "worldwide-tenant", "term": "Worldwide (Standard Multi-Tenant)", "type": "term", "oneLine": { "text": "ロードマップで示される提供対象のクラウド インスタンス（標準のマルチテナント環境）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者側で何か対応が必要ですか？",
+          "answer": { "text": "ロードマップには管理者向けの対応事項は示されていません。詳細は Microsoft Copilot のリリース ノートで確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境が対象ですか？",
+          "answer": { "text": "ロードマップでは、Worldwide (Standard Multi-Tenant) の Windows 版の従来の Outlook（デスクトップ）が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561491",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#september-23,-2026", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
