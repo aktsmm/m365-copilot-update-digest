@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-95e99561e7ef821a",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Windows の Copilot Notebooks でマルチモーダル キャプチャ（開発中）",
+        "subtitleJa": "音声・画像・メモを集めて、構造化ノートにまとめられるようになります",
+        "en": "OneNote: Multimodal capture in Copilot Notebooks (Windows)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps", "edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Windows で Copilot Notebooks を使う人**と、Microsoft Copilot を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会議やブレインストーミングの内容を、1 か所で取り込んで整理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Windows の Capture で、**音声・画像・メモを 1 つの操作画面で取り込み**、Copilot が重要な洞察・決定事項・アクション アイテムを含む構造化ノートに整理します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Windows の Capture から、会議・ブレインストーミング・日々の作業の内容を取り込む", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "音声・画像・メモを 1 つのエクスペリエンスでキャプチャ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot が洞察・決定事項・アクション アイテムを含む構造化ノートを作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) のデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Notebooks の利用には Microsoft Copilot または Copilot Chat ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "ライセンス要件", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者はクラウド ポリシー「Copilot ページと Copilot ノートブックを作成して表示する」で作成を制御できる（既定は有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "概要", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "ポリシー変更の反映は、既存設定の変更で最大 90 分、新規設定で最大 24 時間", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "Copilot ノートブックは .pod ファイルとして、ユーザー所有の SharePoint Embedded コンテナーに保存される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "概要", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "capture", "term": "Capture", "type": "feature", "oneLine": { "text": "Windows 上で音声・画像・メモを取り込み、Copilot Notebooks にまとめる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "管理者が Microsoft 365 管理センターの構成ポータルから設定を制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用にはどのライセンスが必要ですか？",
+          "answer": { "text": "Copilot Notebooks には Microsoft Copilot または Copilot Chat ライセンスが必要です。この機能固有の条件は、ロードマップでは示されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locator": "ライセンス要件", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        },
+        {
+          "question": "管理者は Copilot Notebooks を止められますか？",
+          "answer": { "text": "はい。クラウド ポリシーで作成と表示を無効にできます。既存のノートブックは削除されませんが、ノートブックへのリンク共有は機能しなくなります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップでは「開発中」とされ、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566322",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブックの要件", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements?view=o365-worldwide", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration?view=o365-worldwide", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
