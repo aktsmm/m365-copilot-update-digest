@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-92ce0c4e2ae2fa14",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Word・Excel・PowerPoint の Copilot Chat 入口がキャンバスに移動",
+        "subtitleJa": "入口ボタンがリボンからファイルの画面上へ移ります",
+        "en": "Microsoft Copilot (Microsoft 365): Updated UI for Copilot Chat entry point in Word, Excel and PowerPoint apps"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Excel", "PowerPoint", "Word"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "対象ライセンスを持つ **Word・Excel・PowerPoint のユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ファイルの文脈の中で Copilot Chat を見つけやすく、使いやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "入口ボタンの位置が変わる UI 更新。ユーザーへの周知があるとよい", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat の入口ボタンが**リボンからアプリのキャンバスへ移動**し、ファイルの文脈内で見つけやすく使いやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Chat の入口ボタンを、アプリのリボンからキャンバスへ移動", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Chat はファイルを開いたまま使え、内容のコピー＆貼り付けが不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Copilot features in Microsoft 365 apps", "retrievedAt": "2026-10-19T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Word・Excel・PowerPoint の Microsoft 365 ユーザー（対象ライセンス保有者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Chat は Word・Excel・PowerPoint などの Microsoft 365 アプリから利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Copilot features in Microsoft 365 apps", "retrievedAt": "2026-10-19T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Desktop・Mac・Web・iOS が対象。クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Word は下書き・書き換え・要約、Excel はデータ分析と数式作成に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "使用できるアプリ内機能", "retrievedAt": "2026-10-19T00:10:00Z" }] },
+            { "text": "PowerPoint はプレゼンテーションの作成・要約・編集に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "使用できるアプリ内機能", "retrievedAt": "2026-10-19T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "社内ヘルプや研修資料のスクリーンショットを、新しい入口位置に差し替える", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "Microsoft 365 アプリで、開いているコンテンツを認識して使える Copilot のチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Copilot features in Microsoft 365 apps", "retrievedAt": "2026-10-19T00:10:00Z" }] } },
+        { "termKey": "canvas", "term": "キャンバス", "type": "term", "oneLine": { "text": "ファイルの内容を編集するアプリの作業領域（リボンの外側）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "ribbon", "term": "リボン", "type": "term", "oneLine": { "text": "アプリ上部にあるコマンドのタブ群。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "対象ユーザーは誰ですか？",
+          "answer": { "text": "Word・Excel・PowerPoint を使い、Copilot Chat を利用できる対象ライセンスを持つ Microsoft 365 ユーザーです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者の対応は必要ですか？",
+          "answer": { "text": "ロードマップ上は入口ボタンの位置変更で、管理者の設定作業は示されていません。ユーザーへの案内が中心です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=533043",
+        "learn": [{ "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
