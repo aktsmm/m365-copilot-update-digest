@@ -119,6 +119,7 @@ const MERGE_LIMIT = 1000;
     const totalToc = Math.max(1, Math.ceil(entries.length / TOC_PER_PAGE));
     let pageNo = 2 + totalToc;
     const starts = entries.map((entry) => {
+      if (entry.sectionBefore) pageNo += 1;
       const start = pageNo;
       pageNo += entry.pages || 1;
       return start;
@@ -138,7 +139,7 @@ const MERGE_LIMIT = 1000;
       ctx.fillText(totalToc > 1 ? `目次・概要（${p + 1}/${totalToc}）` : "目次・概要", 70, 80);
       ctx.fillStyle = "#3d4a5c";
       ctx.font = font(16, 400);
-      ctx.fillText(`${entries.length} 件（種類順、同じ種類は新しい順）`, 70, 112);
+      ctx.fillText(`${entries.length} 件（種類ごとのセクション、同じ種類は新しい順）`, 70, 112);
       entries.slice(p * TOC_PER_PAGE, (p + 1) * TOC_PER_PAGE).forEach((entry, i) => {
         const y = 160 + i * 36;
         const n = p * TOC_PER_PAGE + i;
@@ -279,6 +280,23 @@ const MERGE_LIMIT = 1000;
     page.node.addAnnot(doc.context.register(annotation));
   }
 
+  // 種類ごとのセクション区切りページ（PPTX と同じ構成）
+  async function sectionPage(label, count, color) {
+    const canvas = document.createElement("canvas");
+    canvas.width = 1920;
+    canvas.height = 1080;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = color;
+    ctx.fillRect(0, 0, 1920, 1080);
+    ctx.fillStyle = "#fff";
+    ctx.font = '700 96px "Noto Sans JP","Yu Gothic UI","Meiryo","Hiragino Sans",sans-serif';
+    ctx.fillText(label, 150, 520);
+    ctx.font = '400 44px "Noto Sans JP","Yu Gothic UI","Meiryo","Hiragino Sans",sans-serif';
+    ctx.fillText(`${count} 件`, 150, 610);
+    const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+    return new Uint8Array(await blob.arrayBuffer());
+  }
+
   // PDF のしおり（アウトライン）。目次ページに加えて、ビューアーの左ペインからも各アップデートへ飛べる
   function addOutline(PDFLib, doc, items) {
     if (items.length === 0) return;
@@ -302,7 +320,6 @@ const MERGE_LIMIT = 1000;
     const seen = new Set();
     const visible = (window.digestVisibleEntries ? window.digestVisibleEntries() : []).filter((entry) => (seen.has(entry.key) ? false : seen.add(entry.key)));
     const all = visible.slice(0, MERGE_LIMIT);
-    const keys = all.filter((entry) => entry.hasSlide).map((entry) => entry.slideKey);
     if (all.length === 0) {
       window.alert("表示中のスライドがありません");
       return;
@@ -318,33 +335,43 @@ const MERGE_LIMIT = 1000;
       const merged = await PDFLib.PDFDocument.create();
       await appendPdf(merged, "pdf/cover.pdf");
       const outline = [{ title: "表紙", page: 0 }, { title: "目次・概要", page: merged.getPageCount() }];
-      const keySet = new Set(keys);
-      const entries = index.slides.filter((slide) => keySet.has(slide.key));
-      const fallbacks = all
-        .filter((entry) => !entry.hasSlide)
-        .sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || b.publishedJst.localeCompare(a.publishedJst));
-      const tocEntries = [...entries, ...fallbacks.map((entry) => ({ label: entry.kindLabel || "更新", title: `（簡易）${entry.title}`, pages: 1 }))];
+      const slideByKey = new Map(index.slides.map((slide) => [slide.key, slide]));
+      const items = [
+        ...all.filter((entry) => entry.hasSlide && slideByKey.has(entry.slideKey)).map((entry) => ({ real: slideByKey.get(entry.slideKey), kind: slideByKey.get(entry.slideKey).kind, label: slideByKey.get(entry.slideKey).label, title: slideByKey.get(entry.slideKey).title, date: slideByKey.get(entry.slideKey).publishedJst || entry.publishedJst || "", pages: slideByKey.get(entry.slideKey).pages })),
+        ...all.filter((entry) => !entry.hasSlide).map((entry) => ({ fallback: entry, kind: entry.kind, label: entry.kindLabel || "更新", title: `（簡易）${entry.title}`, date: entry.publishedJst || "", pages: 1 })),
+      ].sort((x, y) => KIND_ORDER.indexOf(x.kind) - KIND_ORDER.indexOf(y.kind) || y.date.localeCompare(x.date));
+      const counts = new Map();
+      items.forEach((item, i) => {
+        counts.set(item.kind, (counts.get(item.kind) || 0) + 1);
+        if (i === 0 || items[i - 1].kind !== item.kind) item.sectionBefore = true;
+      });
+      const tocEntries = items;
       for (const png of await tocPages(tocEntries)) {
         const image = await merged.embedPng(png);
         const page = merged.addPage([960, 540]);
         page.drawImage(image, { x: 0, y: 0, width: 960, height: 540 });
       }
-      for (let i = 0; i < entries.length; i += 1) {
-        status.textContent = `${i + 1} / ${entries.length}`;
-        const entry = entries[i];
-        outline.push({ title: `【${entry.label}】${entry.title}`, page: merged.getPageCount() });
-        const source = await PDFLib.PDFDocument.load(await fetchPdf(entry));
-        const pages = await merged.copyPages(source, source.getPageIndices());
-        pages.forEach((page) => merged.addPage(page));
-      }
-      for (let i = 0; i < fallbacks.length; i += 1) {
-        status.textContent = `${entries.length + i + 1} / ${tocEntries.length}`;
-        outline.push({ title: `【${fallbacks[i].kindLabel || "更新"}】（簡易）${fallbacks[i].title}`, page: merged.getPageCount() });
-        const made = await fallbackPage(fallbacks[i]);
-        const image = await merged.embedPng(made.png);
-        const page = merged.addPage([960, 540]);
-        page.drawImage(image, { x: 0, y: 0, width: 960, height: 540 });
-        if (made.link) addLinkAnnotation(PDFLib, merged, page, made.link, made.scale, made.height);
+      for (let i = 0; i < items.length; i += 1) {
+        const item = items[i];
+        status.textContent = `${i + 1} / ${items.length}`;
+        if (item.sectionBefore) {
+          outline.push({ title: `■ ${item.label}（${counts.get(item.kind)} 件）`, page: merged.getPageCount() });
+          const image = await merged.embedPng(await sectionPage(item.label, counts.get(item.kind), KIND_COLOR[item.kind] || "#5b6777"));
+          const section = merged.addPage([960, 540]);
+          section.drawImage(image, { x: 0, y: 0, width: 960, height: 540 });
+        }
+        outline.push({ title: `【${item.label}】${item.title}`, page: merged.getPageCount() });
+        if (item.real) {
+          const source = await PDFLib.PDFDocument.load(await fetchPdf(item.real));
+          const pages = await merged.copyPages(source, source.getPageIndices());
+          pages.forEach((page) => merged.addPage(page));
+        } else {
+          const made = await fallbackPage(item.fallback);
+          const image = await merged.embedPng(made.png);
+          const page = merged.addPage([960, 540]);
+          page.drawImage(image, { x: 0, y: 0, width: 960, height: 540 });
+          if (made.link) addLinkAnnotation(PDFLib, merged, page, made.link, made.scale, made.height);
+        }
       }
       await appendPdf(merged, "pdf/end.pdf");
       addOutline(PDFLib, merged, outline);
