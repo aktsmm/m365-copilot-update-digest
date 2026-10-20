@@ -74,6 +74,40 @@
         { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の開発中・提供中の機能を公開している一覧。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "提供が始まったら、全ユーザーに同時に使えるようになりますか？",
+          "answer": {
+            "text": "リリース ノートでは、Copilot 機能は安全な展開モデルで、まずテナント内の一部のユーザーに段階的にロールアウトされ、その後 organization 全体に拡大されると説明されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                "locator": "冒頭の説明（安全な展開モデル）",
+                "retrievedAt": "2026-10-20T05:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "引用されたファイルを開く既存の動作とは何が違いますか？",
+          "answer": {
+            "text": "既存の機能として、引用された Word・Excel・PowerPoint・PDF を Copilot Chat 内で開けますが、モバイル アプリや Edge、Word などの Copilot 内は対象外です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes#july-01,-2026",
+                "locator": "2026 年 7 月 1 日「Open Word, Excel, and PowerPoint, and PDF files in Copilot Chat」",
+                "retrievedAt": "2026-10-20T05:50:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=523223",
         "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
