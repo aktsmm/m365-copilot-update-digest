@@ -26,10 +26,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Validate workflows, data and slides
+      - name: Validate workflows, data and slides, and check slide coverage
         run: |
           npm run validate:workflows
           npm run validate:data
           npm run validate:slides
+          node scripts/slide-coverage.mjs --check
       - name: Run the full test suite (builds the site and checks links)
         run: npm test

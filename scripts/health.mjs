@@ -41,6 +41,15 @@ const pendingSlides = nodeCount("scripts/pending-slides.mjs", ["--limit", "5000"
 const pendingQa = nodeCount("scripts/pending-qa.mjs", ["--limit", "5000"]);
 const pendingSummaries = nodeCount("scripts/pending.mjs", ["--limit", "5000"]);
 
+const coverage = (() => {
+  try {
+    return JSON.parse(execFileSync("node", ["scripts/slide-coverage.mjs"], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }));
+  } catch {
+    return null;
+  }
+})();
+const pct = (entry) => `${entry.withSlide} / ${entry.total}（${Math.round(entry.ratio * 100)}%）`;
+
 const runSummary = (() => {
   try {
     return JSON.parse(fs.readFileSync(path.join(root, "data/run-summary.json"), "utf8"));
@@ -85,6 +94,10 @@ lines.push("");
 lines.push("## データ");
 lines.push("");
 lines.push(`- スライド: ${slides} 件（未作成 ${pendingSlides < 0 ? "?" : pendingSlides} 件、想定問答の未追加 ${pendingQa < 0 ? "?" : pendingQa} 件）`);
+if (coverage) {
+  lines.push(`- 本物のスライドがある割合: 直近 30 日 ${pct(coverage.coverage.d30)}、90 日 ${pct(coverage.coverage.d90)}（スライドがない更新は、PDF・PPTX では簡易ページで出るので件数は揃います）`);
+  lines.push(`- 48 時間より前に出たのに本物のスライドがない: ${coverage.coverage.overdue} 件、失敗が続いて保留中: ${coverage.coverage.held} 件${coverage.problems.length ? `（${coverage.enforced ? "上限超過" : "追いつき中のため警告のみ"}）` : ""}`);
+}
 lines.push(`- 日本語要約: ${summaries} 件（未生成・要再生成 ${pendingSummaries < 0 ? "?" : pendingSummaries} 件）`);
 if (runSummary.sourceCount != null) lines.push(`- 監視ソース: ${runSummary.sourceCount}（取得状態: ${runSummary.coverage?.status ?? "不明"}、エラー ${runSummary.errorCount ?? 0} 件）`);
 lines.push("");
