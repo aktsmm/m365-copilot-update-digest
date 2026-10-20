@@ -122,3 +122,17 @@ jobs:
               ref: 'main',
             });
             core.info('Dispatched Deploy GitHub Pages for the latest collected content.');
+
+      - name: Dispatch slide generation for new updates
+        if: steps.commit.outputs.changed == 'true' && steps.commit.outputs.pages_changed == 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'slide-dispatch.yml',
+              ref: 'main',
+              inputs: { limit: '10' },
+            });
+            core.info('Dispatched slide generation so that new updates get slides without waiting for the schedule.');
