@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6d5d77395f72c676",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Copilot ダッシュボードにインテリジェント サマリーを追加",
+        "subtitleJa": "導入傾向の要点と、深掘り用の推奨プロンプトを確認できます",
+        "en": "Microsoft Copilot (Microsoft 365): Intelligent Summaries in Copilot Dashboard"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft 365 Copilot", "Microsoft Viva", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["viva"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "Copilot の導入を推進する**管理者・導入担当者**",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "うまくいっている点や重点対応すべき点を、傾向の要約ですばやく把握できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "対応は不要。展開後に Copilot ダッシュボードで表示を確認できる",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Copilot ダッシュボードに**導入傾向の要約（インテリジェント サマリー）**が表示されます。推奨プロンプトで傾向や要因を深掘りできます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "インテリジェント サマリーが、成果の出ている領域など主要な導入傾向を強調表示",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "推奨プロンプトで、背景にある傾向や要因をさらに探索できる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "重点的に対応すべき領域を見つけ、導入の加速につなげられる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Viva Insights Web アプリの左側にある [Copilot ダッシュボード] から開く",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                  "locator": "Viva Insights Web アプリのダッシュボードにアクセスする",
+                  "retrievedAt": "2026-10-20T12:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "管理者は PowerShell を使ってダッシュボードへの自動アクセスを有効・無効にできる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                  "locator": "Copilot ダッシュボードへの自動アクセスの決定方法",
+                  "retrievedAt": "2026-10-20T12:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "インテリジェントな要約は、Copilot または Viva Insights のライセンスが 50 以上のテナントが対象",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                  "locator": "ライセンスに基づく機能の可用性",
+                  "retrievedAt": "2026-10-20T12:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Copilot ライセンスが 1～49 のテナントには、インテリジェントな要約は含まれない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                  "locator": "ライセンスに基づく機能の可用性",
+                  "retrievedAt": "2026-10-20T12:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "クラウドは Worldwide (Standard Multi-Tenant)、プラットフォームは Web",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "ロードマップ上のステータスは「展開中」",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "要約で目立った領域を起点に、推奨プロンプトで要因を確認する",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            },
+            {
+              "text": "ライセンス割り当て後、データ処理に最大 7 日かかることがある",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                  "locator": "ライセンスに基づく機能の可用性",
+                  "retrievedAt": "2026-10-20T12:30:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-dashboard",
+          "term": "Copilot ダッシュボード",
+          "type": "product",
+          "oneLine": {
+            "text": "準備、導入、影響、センチメントの指標カテゴリを確認できる Viva Insights のダッシュボード。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                "locator": "メトリックのカテゴリ",
+                "retrievedAt": "2026-10-20T12:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "intelligent-summaries",
+          "term": "インテリジェント サマリー",
+          "type": "feature",
+          "oneLine": {
+            "text": "主要な導入傾向を強調表示し、成果の出ている領域を示す要約機能。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "suggested-prompts",
+          "term": "推奨プロンプト",
+          "type": "feature",
+          "oneLine": {
+            "text": "傾向や要因を掘り下げて調べるために提示されるプロンプト。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "rolling-out",
+          "term": "展開中",
+          "type": "label",
+          "oneLine": {
+            "text": "ロードマップ上で、機能の提供が順次進められている段階。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "どのテナントで使えますか？",
+          "answer": {
+            "text": "インテリジェントな要約は、Copilot ライセンスまたは Viva Insights ライセンスが 50 以上のテナントで利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                "locator": "ライセンスに基づく機能の可用性",
+                "retrievedAt": "2026-10-20T12:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "Copilot ライセンスがなくてもダッシュボードは見られますか？",
+          "answer": {
+            "text": "ダッシュボードの表示に有料の Viva Insights ライセンスも Copilot ライセンスも必須ではありませんが、使える機能は割り当てライセンス数で異なります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+                "locator": "冒頭の注",
+                "retrievedAt": "2026-10-20T12:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "全体への提供はいつですか？",
+          "answer": {
+            "text": "ロードマップ上のステータスは展開中で、具体的な提供月は公開情報に含まれていません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=557681",
+        "learn": [
+          {
+            "title": "Microsoft 365 の顧客向けの Microsoft Copilot ダッシュボードに接続する",
+            "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/copilot-dashboard",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Copilot ダッシュボードなどの設定を管理する",
+            "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/manage-settings-copilot-dashboard",
+            "locale": "ja-jp"
+          }
+        ]
+      }
+    }
+  ]
+}
