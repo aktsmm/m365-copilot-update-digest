@@ -96,7 +96,7 @@ The product is called **Microsoft Copilot** (formerly "Microsoft 365 Copilot" / 
 
 ## Procedure
 
-1. Read the schema, the sample slide of the closest kind, and `.work/slide-input.json`.
+1. Read the schema, the sample slide of the closest kind, `.work/slide-input.json`, and `config/slide-learned-rules.md` (rules learned from earlier failures; follow every rule listed there).
 2. Research with `microsoft_docs_search` / `microsoft_docs_fetch`. Fetch the actual pages (not just search snippets) for: the feature itself, prerequisites and limits, licensing, admin controls, and comparable features. Prefer the `ja-jp` locale only when the page exists.
 3. Write the file `data/slides/<id>.json` as `{ "schemaVersion": 1, "slides": [ <one slide> ] }`, with `slides[0].key` equal to `<id>`. Follow the envelope exactly as in the sample.
 
@@ -107,6 +107,7 @@ The product is called **Microsoft Copilot** (formerly "Microsoft 365 Copilot" / 
 - Dates: use `source.publishedJst` as `meta.publishedJst`. Month-granularity timing stays a month (`availability`); never invent a day. If the source gives no availability months, use `"availability": []`.
 - **meta**: copy `products`/`categories`/`importance`/`status` from the input; set `cloudInstances` and `platforms` from the input (they render as the 提供範囲 stamp); set `productArea` and `sourceName`.
 - **Before / After**: include `before` only with a first-party source describing the previous behavior; otherwise only `after` (the slide shows 何が嬉しいのか).
+- **Previous failures**: if `.work/slide-input.json` has a non-empty `previousFailures`, earlier attempts for this update were rejected by validation or the render check for those reasons. Read them first and make sure this file avoids each one (for example shorten a panel that overflowed, add the missing `priority`, remove a forbidden phrase, or drop a claim you cannot support). Do not repeat the same mistake.
 - **Glossary**: 3–6 terms that appear in the slide (product, feature, jargon, the stage label). Definitions must come from Learn or the source, in one short Japanese sentence. No "（初心者向け）" suffix.
 - **Expected Q&A (`qa`, optional)**: 2–4 questions a presenter is likely to be asked about this update (availability timing, who needs to act, licensing/prerequisites, limits, how it differs from a related feature). Each `answer` is a claim in Japanese, 1–2 sentences. Answer from Learn or the source; if you cannot confirm it, either skip the question or mark it `assertion: "inference"` / `verification: "unverified"` (it is shown as （推測）/（未確認） in the notes). The Q&A is **not drawn on the slide**; it goes to the PowerPoint speaker notes only. Do not repeat what the slide already says; add what the slide cannot fit.
 - **Audience strip**: 誰に関係するか (concrete, mark the relevant group with `**bold**`), 嬉しい点 (or what changes if not a benefit), 対応の要否 (yes / optional / no / unknown with one short reason).

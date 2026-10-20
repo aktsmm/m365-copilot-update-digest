@@ -188,6 +188,8 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 | 想定問答の追加 | `slide-qa-dispatch.yml` → `slide-qa.md`（gh-aw） | 毎日 04:00 / 16:00 JST（各最大 20 件） | 既存スライドへ `qa` を追加する。`qa` 以外が変わったら失敗にする |
 | 自動マージ | `auto-merge-slides.yml` / `auto-merge-summaries.yml` | 3 時間ごと＋実行完了時 | 検証・描画確認を通った PR だけマージ。通らない PR はクローズし、次回の生成で作り直す |
 | 見張り（AI なし） | `watchdog.yml` | 毎日 05:41 JST | 40 分を超えて動くエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 |
+| 失敗の自動修復 | `auto-merge-slides.yml` / `data/slide-retry.json` / `scripts/slide-retry.mjs` | スライド生成の失敗のたび | 検証・描画確認に落ちた理由を更新ごとに記録し、次の再試行でエージェントに渡す。3 回続けて失敗したら保留にして保守エージェントを起動する |
+| 保守 PR の自動マージ | `auto-merge-maintenance.yml` | 3 時間ごと＋保守の完了時 | 保守エージェントの [maintenance] PR を、許可したファイルだけの変更で、危ない書き方がなく、書き込み権限のない別ジョブでテスト一式を通ったときだけマージする |
 | 保守エージェント | `maintenance.md`（gh-aw） | 約 2 週間ごと | パイプライン全体を点検し、再起動・小修正・Issue で知らせる（下記） |
 | 失敗時の自動起動（AI なし） | `heal-on-failure.yml` | 収集・デプロイ・自動マージ・生成ディスパッチが失敗したとき | 保守エージェントを前倒しで起動する（6 時間以内に動いていれば何もしない） |
 | 毎日のフルテスト（AI なし） | `full-tests.yml` | 毎日 06:30 JST | main で検証とテスト一式（サイトのビルド・内部リンク検査を含む）を実行する。コードを変えなくても、データの更新だけで起きる不具合を見つける。失敗すると保守エージェントを前倒しで起動する |
@@ -240,6 +242,8 @@ workflow / validator 変更は **Validate automation workflows** が GitHub 上�
 ### 保守エージェント（pipeline doctor）
 
 `maintenance.md`（gh-aw）が約 2 週間ごと（15 日と 29 日の 03:30 JST）に、収集・要約・スライド・自動マージ・デプロイが回り続けているかを点検します。一時的な失敗は該当 workflow を再起動し、検証ルールの行き過ぎなど小さな不具合は `[maintenance]` PR で直し、トークン失効などは Issue で知らせます。問題がなければ `Pipeline healthy` の Issue を作り、本家（azure-update-digest）の新しい更新も一覧にします。モデルは `claude-sonnet-5.5` です。
+
+**スライド生成の失敗は、自動で直して再発を防ぎます。** 同じ更新が 3 回続けて失敗（保留）すると、保守エージェントがすぐ起動して、`data/slide-retry.json` の失敗理由を読みます。検証ルールが厳しすぎれば `scripts/lib/slides.mjs` を、エージェントが同じ間違いを繰り返すなら `config/slide-learned-rules.md`（スライド生成エージェントが毎回最初に読む学習ルール）に 1 行足す PR を出し、直した更新の保留を解除します。この PR は、変更が許可したファイルだけで、危ない書き方がなく、別ジョブでテスト一式を通ったときに、`auto-merge-maintenance.yml` が自動でマージします。それ以外（資料がなくて作れないなど）は Issue で知らせます。
 
 ### 必要な設定
 

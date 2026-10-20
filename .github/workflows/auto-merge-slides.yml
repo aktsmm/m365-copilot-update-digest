@@ -42,6 +42,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           merged=false
+          failures="$RUNNER_TEMP/slide-failures.tsv"; : > "$failures"
           while read -r n sha; do
             echo "== PR #$n @ $sha"
             files=$(gh pr view "$n" --json files -q '.files[].path')
@@ -53,14 +54,18 @@ jobs:
             if [ "$(git rev-parse FETCH_HEAD)" != "$sha" ]; then echo "skip: head moved while checking"; continue; fi
             git reset -q --hard origin/main
             git checkout -q FETCH_HEAD -- "$f"
-            if ! npm run -s validate:slides; then
+            if ! vout=$(npm run -s validate:slides 2>&1); then
               echo "skip: validation failed"; git reset -q --hard origin/main
-              gh pr close "$n" -c "検証に失敗したためクローズします。次回のスライド生成で作り直されます。" || true
+              msg=$(printf '%s\n' "$vout" | grep -E '^\s+\[' | head -5 | tr '\n' ' ')
+              printf '%s\t%s\n' "$id" "${msg:-validation failed}" >> "$failures"
+              gh pr close "$n" -c "検証に失敗したためクローズします。理由は記録され、次回のスライド生成で作り直されます: ${msg}" || true
               continue
             fi
-            if ! npm run -s pdf -- --ids "$id" --out .slide-check; then
+            if ! rout=$(npm run -s pdf -- --ids "$id" --out .slide-check 2>&1); then
               echo "skip: render check failed"; git reset -q --hard origin/main; rm -rf .slide-check
-              gh pr close "$n" -c "描画確認に失敗したためクローズします。次回のスライド生成で作り直されます。" || true
+              msg="描画確認に失敗: $(printf '%s\n' "$rout" | tail -3 | tr '\n' ' ')"
+              printf '%s\t%s\n' "$id" "$msg" >> "$failures"
+              gh pr close "$n" -c "描画確認に失敗したためクローズします。理由は記録され、次回のスライド生成で作り直されます: ${msg}" || true
               continue
             fi
             git reset -q --hard origin/main
@@ -69,6 +74,33 @@ jobs:
             gh pr merge "$n" --squash --match-head-commit "$sha" && merged=true
           done < <(gh pr list --state open --limit 100 --base "${{ github.event.repository.default_branch }}" --json number,title,headRefOid,labels \
               -q '.[] | select((.title | startswith("[slides] ")) and (.labels | map(.name) | index("data"))) | "\(.number) \(.headRefOid)"')
+          # 失敗の理由を記録する（次の再試行でエージェントに渡す）。3 回続けて失敗したら保留にし、保守エージェントを起動する
+          git fetch -q origin "${{ github.event.repository.default_branch }}"
+          git reset -q --hard "origin/${{ github.event.repository.default_branch }}"
+          while IFS=$'\t' read -r fid fmsg; do
+            [ -n "$fid" ] && RETRY_MESSAGE="$fmsg" node scripts/slide-retry.mjs record "$fid"
+          done < "$failures"
+          node scripts/slide-retry.mjs prune
+          if [ -n "$(git status --porcelain data/slide-retry.json)" ]; then
+            git add data/slide-retry.json
+            git commit -q -m "chore: record slide generation failures"
+            for attempt in 1 2 3; do
+              if git push; then break; fi
+              if [ "$attempt" = "3" ]; then echo "push failed after retries"; break; fi
+              git pull -q --rebase origin "${{ github.event.repository.default_branch }}" || { git rebase --abort || true; break; }
+            done
+          fi
+          held=$(node scripts/slide-retry.mjs escalated)
+          if [ -n "$held" ]; then
+            echo "held after repeated failures: $(echo "$held" | tr '\n' ' ')"
+            read -r mstatus mcreated < <(gh run list --workflow maintenance.lock.yml --limit 1 --json status,createdAt -q '.[0] | "\(.status) \(.createdAt)"' || echo "none 1970-01-01T00:00:00Z")
+            mage=$(( $(date +%s) - $(date -d "$mcreated" +%s) ))
+            if [ "$mstatus" = "in_progress" ] || [ "$mstatus" = "queued" ] || [ "$mstatus" = "pending" ] || [ "$mage" -lt 21600 ]; then
+              echo "maintenance ran recently or is running; not starting another"
+            else
+              gh workflow run maintenance.lock.yml
+            fi
+          fi
           if [ "$merged" = "true" ]; then
             gh workflow run deploy-pages.yml --ref "${{ github.event.repository.default_branch }}"
           fi

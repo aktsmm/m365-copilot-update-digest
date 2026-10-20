@@ -59,6 +59,7 @@ const WORKFLOWS = [
   "slide-qa.lock.yml",
   "auto-merge-slides.yml",
   "auto-merge-summaries.yml",
+  "auto-merge-maintenance.yml",
   "watchdog.yml",
   "full-tests.yml",
   "maintenance.lock.yml",

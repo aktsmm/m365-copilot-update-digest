@@ -1,0 +1,99 @@
+name: Auto-merge maintenance
+
+# 保守エージェントが出した [maintenance] の PR を、次の条件をすべて満たしたときだけ自動でマージする。
+#  1. 同じリポジトリのブランチで、変更したファイルが許可リスト（スライド生成の検証・入力・学習ルール・テスト）だけ
+#  2. ファイルの削除がなく、追加した行に危ない書き方（child_process / process.env / fetch / eval など）がない
+#  3. PR のコードを、書き込み権限のない別ジョブで検証・テスト一式まで通した
+#  4. マージの直前に、テストした commit と PR の先頭が同じ
+# 条件を満たさない PR はそのまま残り、人が見る。
+on:
+  workflow_run:
+    workflows: ["Microsoft Copilot Update Digest — pipeline doctor"]
+    types: [completed]
+  schedule:
+    - cron: "43 */3 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: maintenance-merge
+  cancel-in-progress: false
+
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      number: ${{ steps.pick.outputs.number }}
+      sha: ${{ steps.pick.outputs.sha }}
+    steps:
+      - name: Pick one eligible pull request
+        id: pick
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          allow='^(scripts/lib/(slides|slide-html|slide-retry|agent-summaries)\.mjs|scripts/(validate-slides|slide-input|pending-slides|slide-retry|pending-qa|check-qa-only)\.mjs|schema/slide\.schema\.json|config/slide-learned-rules\.md|data/slide-retry\.json|docs/slide-schema\.md|tests/[A-Za-z0-9._-]+\.mjs)$'
+          while read -r n sha; do
+            echo "== PR #$n @ $sha"
+            files=$(gh api "repos/$GH_REPO/pulls/$n/files" --paginate --jq '.[] | "\(.status) \(.filename)"')
+            [ -z "$files" ] && { echo "skip: no files"; continue; }
+            if echo "$files" | grep -q '^removed '; then echo "skip: deletes files"; continue; fi
+            outside=$(echo "$files" | cut -d' ' -f2- | grep -Ev "$allow" || true)
+            if [ -n "$outside" ]; then echo "skip: touches files outside the allowlist:"; echo "$outside"; continue; fi
+            if gh pr diff "$n" | grep -E '^\+[^+]' | grep -Eq 'child_process|process\.env|fetch\(|\beval\(|new Function|require\(|https?://'; then echo "skip: added lines contain a risky pattern"; continue; fi
+            echo "number=$n" >> "$GITHUB_OUTPUT"; echo "sha=$sha" >> "$GITHUB_OUTPUT"
+            exit 0
+          done < <(gh pr list --state open --limit 20 --base main --json number,title,headRefOid,isCrossRepository \
+              -q '.[] | select((.title | startswith("[maintenance] ")) and (.isCrossRepository | not)) | "\(.number) \(.headRefOid)"')
+          echo "no eligible pull request"
+
+  test:
+    needs: select
+    if: needs.select.outputs.number != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.select.outputs.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate and run the full test suite
+        run: |
+          npm run validate:workflows
+          npm run validate:data
+          npm run validate:slides
+          npm test
+
+  merge:
+    needs: [select, test]
+    if: needs.select.outputs.number != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    steps:
+      - name: Merge when the tested commit is still the head
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ needs.select.outputs.number }}
+          SHA: ${{ needs.select.outputs.sha }}
+        run: |
+          head=$(gh pr view "$NUMBER" --json headRefOid -q .headRefOid)
+          if [ "$head" != "$SHA" ]; then echo "head moved after testing; not merging"; exit 0; fi
+          gh pr merge "$NUMBER" --squash --match-head-commit "$SHA"
+          gh workflow run deploy-pages.yml --ref main
