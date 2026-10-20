@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-19a5c8bb01d02864",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Studio の新しいハーネスが一般提供（GA）に",
+        "subtitleJa": "複雑な業務プロセスを担うエージェントを、本番で使えます",
+        "en": "More powerful agents and workflows for autonomous business processes: Introducing a new harness for Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-08-04",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントやワークフローを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "複雑で多段階の業務プロセスを、目標から自律的に進めるエージェントを作れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うエージェントやワークフローは Copilot クレジットを消費するため、課金の確認が先", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**目標をステップに分け、適切なツールを呼び出して進める**エージェントやワークフローを構築できます。失敗時も調整して進みます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "GitHub Copilot ハーネス: 推論を重ねる多段階作業向けのランタイム", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "ハーネス上で動作するもの", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+            { "text": "目標をステップに分け、コネクター・MCP・接続エージェントのツールを呼び出す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+            { "text": "Word・Excel・PowerPoint・PDF の作成・編集、スキル、メモリに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "「ワークフロー」から対象を選び、「ビルド」タブのデザイナーで編集", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/flow-designer", "locator": "デザイナーでワークフローを表示する", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+            { "text": "エラーをすべて解消すれば、デザイナー上から公開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/flow-designer", "locator": "ワークフローを発行する", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+            { "text": "「このノードをテストする」や「フロー テストの実行」で動作を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/flow-designer", "locator": "ワークフローのテスト", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントの使用・構築・テスト・評価は Copilot クレジットを消費することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/flow-designer", "locator": "冒頭の Note", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+            { "text": "各タスクは Copilot Studio が管理する安全なサンドボックスで実行される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他のハーネスとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "標準ハーネスは、ルールベースのエージェントや構造化された会話向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "標準ハーネス", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+            { "text": "Copilot チャット ハーネスは、Microsoft Copilot Chat を組織の知識で拡張する用途", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "Copilot チャットハーネス", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "請求書を読み取り発注書と照合し、例外を承認へ回す買掛金プロセス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] },
+            { "text": "まず小さな業務プロセスで試し、クレジットの消費量を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "harness", "term": "ハーネス", "type": "term", "oneLine": { "text": "エージェントとモデルの間にあり、モデルの呼び出しやツール実行を担うランタイム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "冒頭", "retrievedAt": "2026-10-20T21:50:00Z" }] } },
+        { "termKey": "github-copilot-harness", "term": "GitHub Copilot ハーネス", "type": "feature", "oneLine": { "text": "複雑なビジネスプロセス向けの、最も高性能なハーネス。GitHub Copilot サービスそのものではない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T21:50:00Z" }] } },
+        { "termKey": "copilot-credit", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "GitHub Copilot ハーネスのエージェントやワークフローが消費する、使用量ベースの課金単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/flow-designer", "locator": "冒頭の Note", "retrievedAt": "2026-10-20T21:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "プレビューを経て、本番利用向けに一般提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "GitHub Copilot ハーネスを使うと、顧客データは GitHub Copilot サービスに送られますか？",
+          "answer": { "text": "いいえ。Copilot Studio で動作する場合、顧客データは GitHub Copilot サービスに送信・処理されません。既存のプライバシーやコンプライアンスの義務が適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "Important", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+        },
+        {
+          "question": "標準ハーネスとどう使い分けますか？",
+          "answer": { "text": "シナリオが明確で予測可能な回答が必要なら標準ハーネス、長い多段階のプロセスを自動化するなら GitHub Copilot ハーネスです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "ハーネスの比較", "retrievedAt": "2026-10-20T21:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/more-powerful-agents-and-workflows-for-autonomous-business/ba-p/4542969",
+        "learn": [
+          { "title": "Copilot Studio のハーネス", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locale": "ja-jp" },
+          { "title": "デザイナー(GitHub Copilot)でワークフローを編集・管理します。", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/flow-designer", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
