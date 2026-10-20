@@ -799,6 +799,14 @@ function knownJapaneseRoadmapTitle(event) {
     return "Work IQ: アップロード";
   }
 
+  if (/work iq: human in the loop/.test(text)) {
+    return "Work IQ: 人間の入力や承認に対応";
+  }
+
+  if (/microsoft viva: agent metrics for custom reporting in insights analyst workbench/.test(text)) {
+    return "Microsoft Viva: Insights アナリスト ワークベンチでのカスタム レポート用のエージェント メトリック";
+  }
+
   if (/copilot response personalization - memory citations/.test(text)) {
     return "Copilot の応答のパーソナライゼーション - メモリの引用";
   }
