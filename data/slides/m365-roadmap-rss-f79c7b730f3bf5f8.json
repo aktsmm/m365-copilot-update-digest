@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f79c7b730f3bf5f8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio でツール呼び出しに人間の承認を要求可能に（開発中）",
+        "subtitleJa": "エージェントがツールを実行する前に、人が承認・拒否できます",
+        "en": "Microsoft Copilot Studio: Enabling makers to require human approval for tool calls"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio", "Microsoft Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人（作成者）**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "重要なツールの実行前に人の確認を挟め、エージェントの動作を安全に統制できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供開始後に必要なツールで設定を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ツールの設定で「実行する前にエンド ユーザーに質問する」を選べます（既定は「いいえ」）",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-tools-custom-agent", "locator": "ツール設定", "retrievedAt": "2026-10-20T00:00:00Z" }]
+        },
+        "after": { "text": "ツールごと・エージェントごとの設定で、**実行前に承認リクエストを表示**し、承認・セッション中の承認・拒否を選べます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供予定の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ツール単位・エージェント単位のトグルで、承認を必須にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象のツール呼び出しは一時停止し、エージェントが行おうとする内容を承認リクエストで表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "人は承認、セッション中は承認、拒否のいずれかを実行前に選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "提供範囲・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステータスは開発中（In development）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "開発中のため、仕様や提供時期は今後変わる可能性がある", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現行の「実行する前にエンド ユーザーに質問する」設定で、確認が必要なツールを洗い出す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "メール送信やデータ書き込みなど、影響の大きいツールを優先して検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "エージェントを作成・管理するための Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/ai-capabilities", "locator": "冒頭", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "tool", "term": "ツール", "type": "feature", "oneLine": { "text": "エージェントが外部システムとやり取りして特定のアクションを実行するための構成要素。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-tools-custom-agent", "locator": "冒頭", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "human-approval", "term": "人間の承認", "type": "feature", "oneLine": { "text": "エージェントがツールを実行する前に、人が内容を確認して可否を判断すること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進行中でまだ提供が始まっていない段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現在でもツール実行前にユーザーへ確認させられますか？",
+          "answer": {
+            "text": "はい。ツール設定の「実行する前にエンド ユーザーに質問する」を使うと、チャットで確認を求められます。既定は「いいえ」です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-tools-custom-agent", "locator": "ツール設定", "retrievedAt": "2026-10-20T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "いつ提供されますか？",
+          "answer": {
+            "text": "ロードマップに提供月の記載はなく、開発中の段階です。最新状況はロードマップで確認してください。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570434",
+        "learn": [
+          { "title": "カスタム エージェントにツールを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-tools-custom-agent", "locale": "ja-jp" },
+          { "title": "Copilot Studio の AI 機能を探索する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/ai-capabilities", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
