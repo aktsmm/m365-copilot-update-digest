@@ -7,7 +7,10 @@
 
   const scriptSrc = document.currentScript ? document.currentScript.src : location.href;
   const root = new URL("../", scriptSrc);
-  const LIMIT = 80;
+  // 300 枚までは確認なしで作る。超えると時間がかかりブラウザが重くなるので警告し、1000 枚を上限にする。
+  const WARN_AT = 300;
+  const LIMIT = 1000;
+  const KIND_ORDER = ["preview", "ga", "rolling-out", "in-development", "retirement", "update"];
   const FONT = "Yu Gothic";
   const KIND_COLOR = { ga: "1B7F3B", preview: "7A4FD0", "rolling-out": "0B6BCB", "in-development": "D98B00", retirement: "C62828", update: "5B6777" };
   const ACT = { yes: "要対応", optional: "任意", no: "対応不要", unknown: "情報" };
@@ -116,6 +119,22 @@
   }
 
   // 先頭の概要表（15 件ごとに分割）。ページ番号は概要スライドの枚数を含めて数える。
+  // スライドがない更新の簡易スライド。要約だけを 1 枚に載せる。
+  function addFallbackSlide(pptx, entry) {
+    const s = pptx.addSlide();
+    const color = KIND_COLOR[entry.kind] || "5B6777";
+    s.addText(entry.title, { x: 0.4, y: 0.2, w: 10.8, h: 1.1, fontFace: FONT, fontSize: 22, bold: true, color: "0B2A4A", valign: "top", fit: "shrink" });
+    s.addText(entry.kindLabel || "更新", { x: 11.5, y: 0.25, w: 1.5, h: 0.42, fontFace: FONT, fontSize: 14, bold: true, color: "FFFFFF", align: "center", fill: { color }, shape: pptx.ShapeType.roundRect, rectRadius: 0.2 });
+    s.addText("簡易版（要約のみ）", { x: 11.0, y: 0.75, w: 2.0, h: 0.3, fontFace: FONT, fontSize: 10, color: "51607A", align: "center", fill: { color: "EEF2F7" } });
+    const meta = ["発行 " + entry.publishedJst, entry.source, entry.product, entry.ids.length ? "ID " + entry.ids.join(", ") : ""].filter(Boolean).join("　／　");
+    s.addText(meta, { x: 0.4, y: 1.4, w: 12.5, h: 0.3, fontFace: FONT, fontSize: 10, color: "3D4A5C", fit: "shrink" });
+    if (entry.categories.length) s.addText("カテゴリ: " + entry.categories.join(" ・ "), { x: 0.4, y: 1.72, w: 12.5, h: 0.3, fontFace: FONT, fontSize: 10, color: "51607A", fit: "shrink" });
+    s.addText(entry.summary, { x: 0.4, y: 2.2, w: 12.5, h: 3.4, fontFace: FONT, fontSize: 18, color: "1B2430", valign: "top", fit: "shrink" });
+    if (entry.reason) s.addText("注目理由: " + entry.reason, { x: 0.4, y: 5.7, w: 12.5, h: 0.6, fontFace: FONT, fontSize: 11, color: "6B778A", valign: "top", fit: "shrink" });
+    s.addText("この更新には、まだ解説スライドがありません。", { x: 0.4, y: 6.55, w: 8, h: 0.3, fontFace: FONT, fontSize: 10, color: "6B778A" });
+    if (entry.url) s.addText([{ text: "原文: ", options: { bold: true, color: "3D4A5C" } }, { text: entry.url, options: { hyperlink: { url: entry.url }, color: "0B5CAD" } }], { x: 0.4, y: 6.95, w: 12.5, h: 0.3, fontFace: FONT, fontSize: 10, fit: "shrink" });
+  }
+
   function addSummary(pptx, slides) {
     const PER = 15;
     const pages = Math.max(1, Math.ceil(slides.length / PER));
@@ -134,10 +153,21 @@
     }
   }
   async function run(button, status) {
-    const keys = window.digestVisibleSlideJsonKeys ? window.digestVisibleSlideJsonKeys() : [];
-    const unique = [...new Set(keys)].slice(0, LIMIT);
-    if (unique.length === 0) {
+    const seen = new Set();
+    const visible = (window.digestVisibleEntries ? window.digestVisibleEntries() : []).filter((entry) => (seen.has(entry.key) ? false : seen.add(entry.key)));
+    const picked = visible.slice(0, LIMIT);
+    const withSlide = picked.filter((entry) => entry.slideKey);
+    const fallbacks = picked
+      .filter((entry) => !entry.slideKey)
+      .sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind) || b.publishedJst.localeCompare(a.publishedJst));
+    const unique = withSlide.map((entry) => entry.slideKey);
+    if (picked.length === 0) {
       window.alert("表示中のスライドがありません");
+      return;
+    }
+    if (visible.length > LIMIT) {
+      if (!window.confirm(`PowerPoint にまとめられるのは ${LIMIT} 枚までです。先頭の ${LIMIT} 枚（全 ${visible.length} 枚）で作成します。続けますか？`)) return;
+    } else if (picked.length > WARN_AT && !window.confirm(`${picked.length} 枚をまとめます。${WARN_AT} 枚を超えるため、時間がかかり、ブラウザが重くなることがあります。続けますか？`)) {
       return;
     }
     button.disabled = true;
@@ -155,9 +185,11 @@
         }
         slides.push((await response.json()).slides[0]);
       }
-      addSummary(pptx, slides);
-      slides.forEach((slide) => addSlide(pptx, slide));      await pptx.writeFile({ fileName: "m365-copilot-update-digest.pptx" });
-      status.textContent = `${unique.length} 件を保存しました`;
+      const listed = [...slides, ...fallbacks.map((entry) => ({ label: entry.kindLabel || "更新", title: { ja: `（簡易）${entry.title}` }, meta: { publishedJst: entry.publishedJst } }))];
+      addSummary(pptx, listed);
+      slides.forEach((slide) => addSlide(pptx, slide));
+      fallbacks.forEach((entry) => addFallbackSlide(pptx, entry));      await pptx.writeFile({ fileName: "m365-copilot-update-digest.pptx" });
+      status.textContent = `${picked.length} 件を保存しました`;
     } catch (error) {
       status.textContent = "";
       window.alert(error.message);
