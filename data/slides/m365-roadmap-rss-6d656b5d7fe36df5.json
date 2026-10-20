@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6d656b5d7fe36df5",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Queues アプリで通話後に Copilot Chat を利用可能に（GA 予定）",
+        "subtitleJa": "録音された通話の要点把握や顧客課題の解決を素早く進められます",
+        "en": "Microsoft Teams: Use Copilot Chat after a call in Queues app"
+      },
+      "meta": {
+        "publishedJst": "2026-08-07",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Queues アプリで通話を扱うエージェントやリード**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "文字起こしの検索や録音の聞き直しをせずに、通話後の要点を把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "提供時期の詳細は公開されていないため、ロードマップの更新を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "録音された通話の終了後、統合通話履歴から Copilot で**要点の把握・洞察の発見・顧客課題の解決**を進められます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲の概要",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Queues アプリの統合通話履歴で、録音済みの通話を選んで Copilot を利用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide (Standard Multi-Tenant)、Desktop と Mac のクライアント", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Queues アプリは Teams の通話キューと自動応答向けの Teams ネイティブ ソリューション", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "前提・制約",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Queues アプリの利用には Teams 電話と Teams Premium ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "Teams Premium 付与後、アプリが使えるまで最大 48 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "Web クライアントは Queues アプリの対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Queues アプリをオフにすると Insights や Tasks など他の Microsoft アプリも無効になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリのセットアップ", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "提供前に、Teams 電話と Teams Premium のライセンス割り当てを見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "queues-app", "term": "Queues アプリ", "type": "feature", "oneLine": { "text": "Teams の通話キューと自動応答向けの高度な通話機能を提供する Teams ネイティブ ソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "call-queue", "term": "通話キュー", "type": "term", "oneLine": { "text": "Teams 電話の着信を扱う機能で、Queues アプリから管理や監視ができる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "teams-premium", "term": "Teams Premium", "type": "term", "oneLine": { "text": "Queues アプリの利用に Teams 電話とともに必要なライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている提供前の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Queues アプリを使うのに必要なライセンスは？",
+          "answer": { "text": "Teams 電話と Teams Premium のライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は GA 予定ですが、月などの具体的な時期は公開されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568933",
+        "learn": [{ "title": "organization の Microsoft Teams 用キュー アプリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
