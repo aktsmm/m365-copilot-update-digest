@@ -135,23 +135,51 @@
     if (entry.url) s.addText([{ text: "原文: ", options: { bold: true, color: "3D4A5C" } }, { text: entry.url, options: { hyperlink: { url: entry.url }, color: "0B5CAD" } }], { x: 0.4, y: 6.95, w: 12.5, h: 0.3, fontFace: FONT, fontSize: 10, fit: "shrink" });
   }
 
-  function addSummary(pptx, slides) {
+  function addCover(pptx, count) {
+    const s = pptx.addSlide();
+    s.background = { color: "0B2A4A" };
+    s.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 0.35, h: 7.5, fill: { color: "0B6BCB" }, line: { color: "0B6BCB" } });
+    s.addText("Microsoft 365", { x: 1.0, y: 2.0, w: 11, h: 0.5, fontFace: FONT, fontSize: 20, color: "9CC3EE" });
+    s.addText("Microsoft Copilot\nUpdate Digest", { x: 1.0, y: 2.6, w: 11, h: 1.9, fontFace: FONT, fontSize: 44, bold: true, color: "FFFFFF", valign: "top" });
+    s.addText(`${new Date().toLocaleDateString("ja-JP")} 時点 ／ ${count} 件`, { x: 1.0, y: 4.7, w: 11, h: 0.5, fontFace: FONT, fontSize: 18, color: "DCE8F7" });
+    s.addText("非公式ダイジェスト ／ 出典: Microsoft Learn ／ Tech Community ／ Microsoft 365 Roadmap", { x: 1.0, y: 6.7, w: 11.5, h: 0.4, fontFace: FONT, fontSize: 11, color: "9CC3EE" });
+  }
+
+  function addEnd(pptx) {
+    const s = pptx.addSlide();
+    s.background = { color: "0B2A4A" };
+    s.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 0.35, h: 7.5, fill: { color: "0B6BCB" }, line: { color: "0B6BCB" } });
+    s.addText("Microsoft Copilot Update Digest", { x: 1.0, y: 2.4, w: 11, h: 0.8, fontFace: FONT, fontSize: 30, bold: true, color: "FFFFFF" });
+    s.addText("非公式ダイジェストです。内容は必ず Microsoft の公式情報で確認してください。", { x: 1.0, y: 3.4, w: 11.5, h: 0.5, fontFace: FONT, fontSize: 16, color: "DCE8F7" });
+    s.addText("Copyright (c) 2026 yamapan (@aktsmm) ／ CC BY-NC-SA 4.0", { x: 1.0, y: 4.3, w: 11.5, h: 0.4, fontFace: FONT, fontSize: 13, color: "9CC3EE" });
+    s.addText("github.com/aktsmm/m365-copilot-update-digest", { x: 1.0, y: 4.8, w: 11.5, h: 0.4, fontFace: FONT, fontSize: 13, color: "9CC3EE", hyperlink: { url: "https://github.com/aktsmm/m365-copilot-update-digest" } });
+  }
+
+  function addSection(pptx, group) {
+    const s = pptx.addSlide();
+    const color = KIND_COLOR[group.kind] || "5B6777";
+    s.background = { color };
+    s.addText(group.label, { x: 1.0, y: 2.6, w: 11, h: 1.2, fontFace: FONT, fontSize: 48, bold: true, color: "FFFFFF" });
+    s.addText(`${group.count} 件`, { x: 1.0, y: 3.9, w: 11, h: 0.6, fontFace: FONT, fontSize: 22, color: "FFFFFF" });
+  }
+
+  // 概要表（15 件ごとに分割）。rows の page は、呼び出し側で表紙・概要・セクションの枚数を含めて数えた値。
+  function addSummary(pptx, rows, pages) {
     const PER = 15;
-    const pages = Math.max(1, Math.ceil(slides.length / PER));
     const head = (text, align) => ({ text, options: { bold: true, color: "FFFFFF", fill: { color: "0B2A4A" }, align: align || "left", fontFace: FONT, fontSize: 11 } });
     for (let p = 0; p < pages; p += 1) {
       const s = pptx.addSlide();
       s.addText(pages > 1 ? `目次・概要（${p + 1}/${pages}）` : "目次・概要", { x: 0.4, y: 0.25, w: 9, h: 0.6, fontFace: FONT, fontSize: 24, bold: true, color: "0B2A4A" });
-      s.addText(`${slides.length} 件（表示中の更新）`, { x: 0.4, y: 0.85, w: 9, h: 0.3, fontFace: FONT, fontSize: 11, color: "3D4A5C" });
-      const rows = [[head("#", "right"), head("種類"), head("タイトル"), head("掲載日"), head("ページ", "right")]];
-      slides.slice(p * PER, (p + 1) * PER).forEach((slide, i) => {
-        const n = p * PER + i;
+      s.addText(`${rows.length} 件（種類ごとのセクション、同じ種類は新しい順）`, { x: 0.4, y: 0.85, w: 9, h: 0.3, fontFace: FONT, fontSize: 11, color: "3D4A5C" });
+      const out = [[head("#", "right"), head("種類"), head("タイトル"), head("掲載日"), head("ページ", "right")]];
+      rows.slice(p * PER, (p + 1) * PER).forEach((row, i) => {
         const cell = (text, align) => ({ text, options: { fontFace: FONT, fontSize: 10.5, color: "1B2430", align: align || "left" } });
-        rows.push([cell(String(n + 1), "right"), cell(slide.label), cell(slide.title.ja), cell(slide.meta.publishedJst), cell(String(pages + 1 + n), "right")]);
+        out.push([cell(String(p * PER + i + 1), "right"), cell(row.label), cell(row.title), cell(row.date), cell(String(row.page), "right")]);
       });
-      s.addTable(rows, { x: 0.4, y: 1.3, w: 12.5, colW: [0.5, 1.4, 8.2, 1.4, 1.0], border: { type: "solid", color: "C9D4E6", pt: 0.75 }, valign: "middle", rowH: 0.36 });
+      s.addTable(out, { x: 0.4, y: 1.3, w: 12.5, colW: [0.5, 1.4, 8.2, 1.4, 1.0], border: { type: "solid", color: "C9D4E6", pt: 0.75 }, valign: "middle", rowH: 0.36 });
     }
   }
+
   async function run(button, status) {
     const seen = new Set();
     const visible = (window.digestVisibleEntries ? window.digestVisibleEntries() : []).filter((entry) => (seen.has(entry.key) ? false : seen.add(entry.key)));
@@ -185,10 +213,37 @@
         }
         slides.push((await response.json()).slides[0]);
       }
-      const listed = [...slides, ...fallbacks.map((entry) => ({ label: entry.kindLabel || "更新", title: { ja: `（簡易）${entry.title}` }, meta: { publishedJst: entry.publishedJst } }))];
-      addSummary(pptx, listed);
-      slides.forEach((slide) => addSlide(pptx, slide));
-      fallbacks.forEach((entry) => addFallbackSlide(pptx, entry));      await pptx.writeFile({ fileName: "m365-copilot-update-digest.pptx" });
+      const items = [
+        ...slides.map((slide) => ({ kind: slide.kind, label: slide.label, title: slide.title.ja, date: slide.meta.publishedJst, add: () => addSlide(pptx, slide) })),
+        ...fallbacks.map((entry) => ({ kind: entry.kind, label: entry.kindLabel || "更新", title: `（簡易）${entry.title}`, date: entry.publishedJst, add: () => addFallbackSlide(pptx, entry) })),
+      ].sort((x, y) => KIND_ORDER.indexOf(x.kind) - KIND_ORDER.indexOf(y.kind) || y.date.localeCompare(x.date));
+      const groups = [];
+      items.forEach((item) => {
+        let group = groups[groups.length - 1];
+        if (!group || group.kind !== item.kind) {
+          group = { kind: item.kind, label: item.label, count: 0, items: [] };
+          groups.push(group);
+        }
+        group.count += 1;
+        group.items.push(item);
+      });
+      const tocPages = Math.max(1, Math.ceil(items.length / 15));
+      let page = 2 + tocPages;
+      groups.forEach((group) => {
+        page += 1;
+        group.items.forEach((item) => {
+          item.page = page;
+          page += 1;
+        });
+      });
+      addCover(pptx, items.length);
+      addSummary(pptx, items, tocPages);
+      groups.forEach((group) => {
+        addSection(pptx, group);
+        group.items.forEach((item) => item.add());
+      });
+      addEnd(pptx);
+      await pptx.writeFile({ fileName: "m365-copilot-update-digest.pptx" });
       status.textContent = `${picked.length} 件を保存しました`;
     } catch (error) {
       status.textContent = "";
