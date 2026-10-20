@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-584913e3f1a7ea32",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Notebooks で Power BI レポートを参照として追加可能に（開発中）",
+        "subtitleJa": "レポートのデータをファイルと並べてノートブックに取り込めます",
+        "en": "Microsoft Copilot (Microsoft 365): Power BI reports as references in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-08-26",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["office-apps", "admin"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Notebooks でレポートを使って資料を作る人**と、Microsoft Copilot の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Power BI レポートのデータに基づく要約・プレゼンテーション・ブリーフを作れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点は開発中のため、提供開始を待ってから利用可否を確認すればよい", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ファイルに加えて **Power BI レポート**も参照として追加でき、Copilot が組織のデータに基づく内容を生成します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Power BI レポートのデータをノートブックに直接取り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot は取り込んだ情報から要約・プレゼンテーション・ブリーフを生成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は Worldwide（Standard Multi-Tenant）、デスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「In development」で、提供開始日は未提示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams 会議の参照追加など、参照の種類は段階的に拡大している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T12:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前の備え",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "参照先のファイルは元の場所に保存され、ノートブックにはリンクのみが残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/grant-access", "locator": "Copilot Notebook のコンテンツを保持する", "retrievedAt": "2026-10-20T12:40:00Z" }] },
+            { "text": "どのレポートを参照させるかは、提供開始後に小規模なテストで確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "プロジェクトの資料を参照として集め、Copilot に要約やプレゼンテーション、ブリーフを作らせるノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T12:40:00Z" }] } },
+        { "termKey": "reference", "term": "参照（リファレンス）", "type": "term", "oneLine": { "text": "ノートブックに追加し、Copilot の回答の根拠として使うファイルなどの情報源。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/grant-access", "locator": "コンテンツ タイプの表", "retrievedAt": "2026-10-20T12:40:00Z" }] } },
+        { "termKey": "power-bi-report", "term": "Power BI レポート", "type": "product", "oneLine": { "text": "組織のデータを可視化した Power BI のレポート。今回、ノートブックの参照に追加できるようになる。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能が開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "これまでノートブックにはどんな参照を追加できましたか？",
+          "answer": { "text": "リリース ノートによると、以前はファイルのみが参照として使え、その後 Teams 会議も参照に追加できるようになりました。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T12:40:00Z" }] }
+        },
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期は示されていません。更新があればロードマップで確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569928",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" },
+          { "title": "Copilot ページ、Copilot ノートブック、Loop コンテナーへのアクセスを許可する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/grant-access", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
