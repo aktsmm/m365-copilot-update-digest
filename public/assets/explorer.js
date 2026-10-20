@@ -202,7 +202,7 @@
 
   Promise.all([
     fetch(indexUrl).then((r) => r.json()),
-    fetch(`${base}data/slides.json`).then((r) => (r.ok ? r.json() : { slides: [] })).catch(() => ({ slides: [] })),
+    fetch(`${base}data/slides.json`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : { slides: [] })).catch(() => ({ slides: [] })),
   ])
     .then(([payload, slides]) => {
       entries = (payload.entries || []).slice().sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.importanceScore - a.importanceScore);

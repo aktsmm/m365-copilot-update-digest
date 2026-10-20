@@ -192,7 +192,7 @@
       status.textContent = `${picked.length} 件を保存しました`;
     } catch (error) {
       status.textContent = "";
-      window.alert(error.message);
+      window.alert((error && error.message) || "PowerPoint の作成に失敗しました。ページを再読み込みして、もう一度お試しください。");
     } finally {
       button.disabled = false;
     }

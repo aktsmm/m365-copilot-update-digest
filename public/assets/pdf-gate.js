@@ -56,6 +56,9 @@ const MERGE_LIMIT = 1000;
     return keyPromise;
   }
 
+  // 暗号化 PDF の URL。鍵（ソルト）が変わったら URL も変わるので、古いキャッシュを使い回さない。
+  const encUrl = (entry) => `pdf/${entry.key}.pdf.enc?v=${encodeURIComponent((gate.salt || "").slice(0, 12))}`;
+
   async function fetchPdf(entry) {
     if (entry.free) {
       const response = await fetch(new URL(`pdf/${entry.key}.pdf`, root));
@@ -65,17 +68,27 @@ const MERGE_LIMIT = 1000;
       return new Uint8Array(await response.arrayBuffer());
     }
     const key = await unlock();
-    const response = await fetch(new URL(`pdf/${entry.key}.pdf.enc`, root));
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+    // 復号に失敗したら、キャッシュを使わずにもう一度取得する（デプロイ直後は、古い暗号化 PDF が残っていることがある）
+    for (const cache of ["default", "reload"]) {
+      const response = await fetch(new URL(encUrl(entry), root), { cache });
+      if (!response.ok) {
+        throw new Error(`PDF を取得できませんでした（HTTP ${response.status}）`);
+      }
+      try {
+        return new Uint8Array(await decrypt(key, new Uint8Array(await response.arrayBuffer())));
+      } catch {
+        // 次の試行へ
+      }
     }
-    return new Uint8Array(await decrypt(key, new Uint8Array(await response.arrayBuffer())));
+    throw new Error("PDF を復号できませんでした。ページを再読み込みして、もう一度お試しください（公開の更新直後は、古いデータが残っていることがあります）。");
   }
 
+  // メッセージのないエラー（復号の失敗など）でも、空のダイアログを出さない
   function report(error) {
-    if (error.message !== "cancelled") {
-      window.alert(error.message);
+    if (error && error.message === "cancelled") {
+      return;
     }
+    window.alert((error && error.message) || "PDF の作成に失敗しました。ページを再読み込みして、もう一度お試しください。");
   }
 
   function loadPdfLib() {
@@ -341,7 +354,7 @@ const MERGE_LIMIT = 1000;
       .catch(report);
   });
 
-  fetch(new URL("data/slides.json", root))
+  fetch(new URL("data/slides.json", root), { cache: "no-store" })
     .then((response) => (response.ok ? response.json() : null))
     .then((data) => {
       if (!data || !data.slides || data.slides.length === 0) {
