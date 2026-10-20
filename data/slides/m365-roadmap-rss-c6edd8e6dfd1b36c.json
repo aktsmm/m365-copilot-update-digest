@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c6edd8e6dfd1b36c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook で Planner が利用可能に（開発中）",
+        "subtitleJa": "受信トレイの中で、タスク・プラン・Planner エージェントを扱えるようになります",
+        "en": "Planner: Available in Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-08-04",
+        "availability": [],
+        "status": "In development",
+        "products": ["Planner"],
+        "categories": ["outlook", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Planner",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook と Planner でタスクを管理する人**と、Planner の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Outlook を離れずに、タスクやプランを確認・管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook の受信トレイ内で、**タスク、プラン、新しい Planner エージェント**をまとめて扱えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook の受信トレイに、Planner のタスクとプランを表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新しい Planner エージェントも受信トレイから利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供範囲は Worldwide（標準マルチテナント）の Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "Planner のタスクを Outlook カレンダーで表示する機能は、すでに提供されている",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locator": "機能の可用性", "retrievedAt": "2026-10-21T07:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供前に、Planner を使うチームと Outlook での運用イメージを整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "planner",
+          "term": "Microsoft Planner",
+          "type": "product",
+          "oneLine": {
+            "text": "タスク カードとかんばんボードで、チームのタスクを計画・管理する共同作業ツール。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locator": "冒頭", "retrievedAt": "2026-10-21T07:30:00Z" }]
+          }
+        },
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "ロードマップで「新しい Planner Agent」として示されている、Planner の AI エージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "worldwide", "term": "Worldwide（標準マルチテナント）", "type": "term", "oneLine": { "text": "ロードマップで示される、一般的な商用クラウド環境の提供範囲。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=513278",
+        "learn": [
+          { "title": "Microsoft Planner サービスの説明", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
