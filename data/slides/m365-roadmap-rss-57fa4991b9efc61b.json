@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-57fa4991b9efc61b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Field Service のスケジューリング オペレーション エージェントが複数リソースの最適化に対応",
+        "subtitleJa": "複数の技術者のスケジュールを、制約を守りながらまとめて最適化できます",
+        "en": "Dynamics 365 Field Service: Optimize resource scheduling - Optimize multiple resources with Scheduling Operations Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Field Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Field Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Field Service のディスパッチャー**と作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "1 人ずつではなく、複数の技術者のスケジュールを同時に最適化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが技術者の**空き状況・現在の予約・未スケジュールの要件**を考慮し、制約を守る最適なスケジュールを提案します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "エージェントのしくみ", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "スケジューリング オペレーション エージェントは、1 人以上の技術者のスケジュールを同時に最適化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "インタラクティブ最適化は最大 5 つのリソースを選び、提案を確認してから適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "スケジュールの最適化方法", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "バッチ最適化は、スコープ・目標・プランで大規模かつ非同期に実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "スケジュールの最適化方法", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在のドキュメントはプレビュー機能で、運用環境での使用は想定されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "Important", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "「移動禁止」の予約は動かさず、勤務時間と休憩時間も守る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "エージェントのしくみ", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "Azure Government と China を除く、Field Service と同じ Azure リージョンで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "地域での可用性とロールアウト", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "目標（目的と制約）は組み込みを使うか、カスタムで作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "エージェントのしくみ", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "当日キャンセルや遅延が多い現場で、提案の質を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "soa", "term": "スケジューリング オペレーション エージェント", "type": "feature", "oneLine": { "text": "Field Service で 1 人以上の技術者のスケジュールを同時に最適化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "goal", "term": "目標", "type": "feature", "oneLine": { "text": "エージェントが何を最適化するかを示す、目的と制約の組み合わせ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "エージェントのしくみ", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "batch", "term": "バッチ最適化", "type": "feature", "oneLine": { "text": "定義したリソース・要件・予約に対して、大規模に非同期で行う最適化。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "スケジュールの最適化方法", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "最適化の方法は何がありますか？",
+          "answer": { "text": "インタラクティブ最適化（最大 5 リソース）とバッチ最適化の 2 種類です。バッチはオンデマンドまたは定期スケジュールで実行できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "スケジュールの最適化方法", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "提案は自動で適用されますか？",
+          "answer": { "text": "インタラクティブでは確認後に適用します。バッチではプランを自動適用に設定することもできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locator": "スケジュールの最適化方法", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576884",
+        "learn": [{ "title": "Operations Agent のスケジュール設定の概要 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/field-service/soa-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
