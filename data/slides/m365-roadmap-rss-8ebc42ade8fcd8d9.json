@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8ebc42ade8fcd8d9",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ: エージェントが人の入力・承認を待てる「Human in the loop」",
+        "subtitleJa": "エージェントとエージェント フローを一時停止し、人の判断を挟めるようになります",
+        "en": "Work IQ: Human in the loop"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントやエージェント フローを作成する人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントが人の入力や承認を待ってから処理を続けられるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントとエージェント フローが、**人の入力や承認を待って一時停止**し、その後に処理を続行できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: エージェントとエージェント フロー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "人の入力または承認を得るまで一時停止し、その後に続行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲: Worldwide（標準マルチテナント）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "詳細な仕様や制限は、現時点で公式ページに掲載されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連する既存機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント フローには、実行を一時停止して人から入力を集める「情報の要求」アクションがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-request-for-information", "locator": "要求情報アクションとは", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "要求は Outlook 経由で送られ、最初に応答した人の回答が後続の処理で使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-request-for-information", "locator": "Important", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "人の確認が必要な業務を洗い出し、既存の「情報の要求」で先に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "hitl", "term": "Human in the loop", "type": "term", "oneLine": { "text": "自動化プロセスの途中に、人の入力・レビュー・アクションを組み込む考え方。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-request-for-information", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "agent-flow", "term": "エージェント フロー", "type": "feature", "oneLine": { "text": "トリガーと 1 つ以上のアクションで構成される、Copilot Studio の自動化フロー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-copilot-studio/flows-overview", "locator": "Triggers and actions in agent flows", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "rfi", "term": "情報の要求（RFI）", "type": "feature", "oneLine": { "text": "フローを一時停止し、指定した人から入力を集めて次の手順に使うアクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-request-for-information", "locator": "要求情報アクションとは", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップには提供時期が示されていません。提供が近づいた段階で更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "今すぐ人の入力を待つフローは作れますか？",
+          "answer": { "text": "Copilot Studio のエージェント フローでは「情報の要求」アクションで、実行を一時停止して人から入力を集められます。今回の機能との関係は、公式情報では示されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-request-for-information", "locator": "要求情報アクションとは", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570672",
+        "learn": [
+          { "title": "エージェント フローで人によるレビューに情報を求める", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/flows-request-for-information", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
