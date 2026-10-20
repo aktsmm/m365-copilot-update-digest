@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-10204d5d164fa4e2",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Android 版 Teams Rooms で Interpreter エージェントに対応（展開中）",
+        "subtitleJa": "会議室デバイスでも、選んだ言語でリアルタイム翻訳を聞けます",
+        "en": "Microsoft Teams: Interpreter agent support in Teams Rooms on Android"
+      },
+      "meta": {
+        "publishedJst": "2026-08-21",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Teams"],
+        "categories": ["agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": [],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams Rooms on Android を使う会議室の利用者**と、Teams Rooms の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "異なる言語の参加者が、選んだ言語で会議をリアルタイムに聞ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には Teams Rooms Pro ライセンスが必要。管理者は会議ポリシーで制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Android 版 Teams Rooms でも、**Interpreter エージェントが会議の翻訳者として働き**、参加者が選んだ言語で会議を聞けます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/rooms-release-note", "locator": "Teams Rooms on Android の機能紹介", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議で話された言語を聞き取り、リアルタイムで別の言語に翻訳する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "冒頭", "retrievedAt": "2026-10-20T13:00:00Z" }] },
+            { "text": "音声認識・機械翻訳・テキスト読み上げの流れで翻訳音声を生成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "インタープリターのしくみ", "retrievedAt": "2026-10-20T13:00:00Z" }] },
+            { "text": "自分の声をシミュレートするか、プリセットの自動音声を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "冒頭", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams Rooms Pro ライセンスが必要（Microsoft Copilot ライセンスの代わり）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-20T13:00:00Z" }] },
+            { "text": "Teams 会議ポリシーの -AIInterpreter で有効・無効を制御（既定は有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "会議でのインタープリターの管理", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams Rooms Pro ライセンスで月 20 時間の通訳が含まれ、超過分は利用可能な容量による", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/rooms-release-note", "locator": "Interpreter agent support during meetings", "retrievedAt": "2026-10-20T13:00:00Z" }] },
+            { "text": "対応言語は中国語（北京語）・英語・フランス語・ドイツ語・イタリア語・日本語・韓国語・ポルトガル語・スペイン語", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "サポートされている言語", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供先: Worldwide、GCC、GCC High、DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "デバイスへの反映時期は、機器メーカーの提供状況により遅れることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/rooms-release-note", "locator": "Teams Rooms on Android の注記", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "多言語の参加者がいる会議室から、まず試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "音声シミュレーションでは音声サンプルや生体認証データは保存されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "データ、セキュリティ、プライバシー", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "interpreter-agent", "term": "Interpreter エージェント", "type": "feature", "oneLine": { "text": "Teams 会議の翻訳者として、選んだ言語でリアルタイムに通訳するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "冒頭", "retrievedAt": "2026-10-20T13:00:00Z" }] } },
+        { "termKey": "teams-rooms-android", "term": "Teams Rooms on Android", "type": "product", "oneLine": { "text": "Android ベースのデバイスで動く Microsoft Teams Rooms。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/rooms-release-note", "locator": "Teams Rooms on Android", "retrievedAt": "2026-10-20T13:00:00Z" }] } },
+        { "termKey": "teams-rooms-pro", "term": "Teams Rooms Pro", "type": "term", "oneLine": { "text": "会議室デバイスで Interpreter を使うために必要なライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-20T13:00:00Z" }] } },
+        { "termKey": "meeting-policy", "term": "Teams 会議ポリシー", "type": "term", "oneLine": { "text": "Interpreter のオン・オフなどを PowerShell で制御する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "会議でのインタープリターの管理", "retrievedAt": "2026-10-20T13:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "会議室での利用に Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "Teams Rooms デバイスでは、Microsoft Copilot ライセンスの代わりに Teams Rooms Pro ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+        },
+        {
+          "question": "管理者は無効にできますか？",
+          "answer": { "text": "はい。Teams 会議ポリシーの -AIInterpreter を Disabled にすると、組織全体で無効にできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locator": "インタープリターのオンとオフを切り替える", "retrievedAt": "2026-10-20T13:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562665",
+        "learn": [
+          { "title": "Manage Interpreter Agent for your organization", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/interpreter-agent-teams", "locale": "ja-jp" },
+          { "title": "Microsoft Teams Rooms のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/rooms-release-note", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
