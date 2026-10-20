@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-bb1888d555ed2cf2",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams のチャットで Copilot による要約が強化（開発中）",
+        "subtitleJa": "見逃した新着メッセージを、読まずに素早く把握できます",
+        "en": "Microsoft Teams: Enhanced Copilot chat summary"
+      },
+      "meta": {
+        "publishedJst": "2026-08-19",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams のチャットを日常的に使うユーザー**と、Copilot を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "多くのメッセージを見逃しても、すべて読まずに内容を素早く把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供開始に向けて開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "チャット会話の**新着メッセージの要約を Copilot が自動で生成**し、追いつくまでの時間を短縮します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams のチャット会話の新着メッセージを、Copilot が自動で要約", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象: Android・デスクトップ・iOS・Mac・Web（Worldwide マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams のチャットとチャネルの Copilot は、会話をすばやく把握するのに役立つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot", "retrievedAt": "2026-10-20T13:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams の Copilot 機能は Microsoft Copilot ライセンスが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot の機能", "retrievedAt": "2026-10-20T13:50:00Z" }] },
+            { "text": "Teams のチャットとチャネルの Copilot には、管理者向けの専用記事はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot（機能表）", "retrievedAt": "2026-10-20T13:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot ライセンスに加え、Teams Enterprise などの対象ライセンスが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot の機能", "retrievedAt": "2026-10-20T13:50:00Z" }] },
+            { "text": "Copilot のプロンプトと応答は、組織の Microsoft 365 サービス境界の外に出ない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "重要", "retrievedAt": "2026-10-20T13:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-teams", "term": "Copilot in Teams", "type": "feature", "oneLine": { "text": "ファイルやチャットの要約などで、ユーザーのワークフローを支援する個人用 Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot", "retrievedAt": "2026-10-20T13:50:00Z" }] } },
+        { "termKey": "teams-chat-copilot", "term": "Teams のチャットとチャネルの Copilot", "type": "feature", "oneLine": { "text": "会話をすばやく把握し、的確に貢献するのを助ける機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot", "retrievedAt": "2026-10-20T13:50:00Z" }] } },
+        { "termKey": "copilot-license", "term": "Microsoft Copilot ライセンス", "type": "term", "oneLine": { "text": "Copilot in Teams など、Teams の多くの AI 機能の基盤となるライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot の機能", "retrievedAt": "2026-10-20T13:50:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能を使うのにライセンスは必要ですか？",
+          "answer": { "text": "Teams の Copilot 機能全般は Microsoft Copilot ライセンスが前提です。この機能個別の要件は、ロードマップでは示されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot の機能", "retrievedAt": "2026-10-20T13:50:00Z" }] }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップ上は開発中の段階で、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=501201",
+        "learn": [{ "title": "IT 管理者向け Microsoft Teams の AI の概要", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
