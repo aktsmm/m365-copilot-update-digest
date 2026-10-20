@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-b388d307ec719e19",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "エージェントを Fabric IQ に接続可能に（プレビュー）",
+        "subtitleJa": "Microsoft Fabric のビジネス データを、エージェントの回答の根拠にできます",
+        "en": "(Preview) Connect your agent to Fabric IQ to ground responses in business data and analytics from Microsoft Fabric,..."
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-chat", "copilot-studio", "agents", "work-iq"],
+        "importance": "notable",
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Fabric のデータを扱う担当者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] },
+        "change": { "text": "組織のセマンティック モデルに基づく分析を、エージェントの回答に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試す場合は、新しい体験のエージェントと Fabric 側のアクセス権が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "Prerequisites", "retrievedAt": "2026-10-20T22:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**ビルド**ページの**ツール**に Fabric IQ を追加するだけで、Fabric のビジネス データや分析に基づく洞察をエージェントが生成できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントを Microsoft Fabric のビジネス データと分析に接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] },
+            { "text": "回答は組織のセマンティック モデルに基づく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] },
+            { "text": "ビルド → ツールを追加 → Fabric IQ → 保存で接続できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "エージェントにFabric IQを追加しましょう", "retrievedAt": "2026-10-20T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレリリースのドキュメントで、内容は変更されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] },
+            { "text": "新しい体験で作成したエージェントが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "Prerequisites", "retrievedAt": "2026-10-20T22:50:00Z" }] },
+            { "text": "使用率ベースの課金で、Copilot クレジットを消費することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "Note", "retrievedAt": "2026-10-20T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ピッカーにはアクセス権のあるワークスペースとセマンティック モデルだけが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "Prerequisites", "retrievedAt": "2026-10-20T22:50:00Z" }] },
+            { "text": "接続を解除しても、Microsoft Fabric 側は削除も変更もされない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "Fabric IQ接続を取り外してください", "retrievedAt": "2026-10-20T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テスト用のセマンティック モデルで接続し、回答の根拠を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "fabric-iq", "term": "Fabric IQ", "type": "feature", "oneLine": { "text": "エージェントを Microsoft Fabric のビジネス データや分析につなぐツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] } },
+        { "termKey": "semantic-model", "term": "セマンティック モデル", "type": "term", "oneLine": { "text": "組織のビジネス データを表すモデルで、Fabric IQ の回答の根拠になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] } },
+        { "termKey": "microsoft-fabric", "term": "Microsoft Fabric", "type": "product", "oneLine": { "text": "ビジネス データと分析を扱う Microsoft のデータ プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "先行提供の段階で、ドキュメントの内容も変更されることがある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "冒頭", "retrievedAt": "2026-10-20T22:50:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "Fabric IQ を使うのに必要なものは何ですか？",
+          "answer": { "text": "新しい体験で作成したエージェントと、対象の Fabric ワークスペースおよびセマンティック モデルへのアクセス権です。Fabric の設定で必要な認証情報も要ります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "Prerequisites", "retrievedAt": "2026-10-20T22:50:00Z" }] }
+        },
+        {
+          "question": "利用にコストはかかりますか？",
+          "answer": { "text": "エージェントの使用・構築・テスト・評価には使用率ベースの課金が適用され、Copilot クレジットを消費することがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locator": "Note", "retrievedAt": "2026-10-20T22:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/fabric-iq-connect",
+        "learn": [
+          { "title": "エージェントから Fabric IQ に接続（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/fabric-iq-connect", "locale": "ja-jp" },
+          { "title": "構築を開始する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-first-bot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
