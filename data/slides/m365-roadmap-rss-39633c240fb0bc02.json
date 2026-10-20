@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-39633c240fb0bc02",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot Cowork で Dynamics 365 Sales のスキルが利用可能に",
+        "subtitleJa": "営業データと Microsoft 365 の文脈を組み合わせ、Cowork に営業業務を任せられます",
+        "en": "Dynamics 365 Sales: Copilot and AI innovation - Use Dynamics 365 Sales skills in Microsoft 365 Copilot Cowork"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Sales", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Sales",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Cowork を使う**営業担当者・営業マネージャー**と、Cowork の**管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "パイプライン把握や会議準備などを、Cowork への自然言語の依頼で進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は、Cowork へのアクセス範囲を制御できる。Sales プラグインは既定でインストールされる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Cowork が意図を読み取って計画を立て、**Dynamics 365 Sales のデータと Microsoft 365 の文脈**を使って営業スキルを自動で選び実行します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Cowork で営業スキルを使用する", "retrievedAt": "2026-10-21T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cowork が意図を特定し、必要なデータとスキル・ツールを選んで実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Cowork で営業スキルを使用する", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "営業プロンプトなら、プラグインを明示せず自動でスキルが使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Cowork で営業スキルを使用する", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "記録更新・メール送信・タスク作成の前に、確認を求められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Cowork で営業スキルを使用する", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cowork の［カスタマイズ］で Sales のトグルをオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Cowork で Sales プラグインを有効にする", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "初回の営業プロンプトで、データ元の Dynamics 365 環境を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Cowork で環境を選択する", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Sales Enterprise / Premium ライセンスと Dataverse MCP サーバーの有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "Cowork は利用量に基づく課金で、トークン使用状況により変動する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Important", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "CRM 不要の「Sales for Cowork」プラグインでは、一部スキルのみ使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "利用可能な営業スキル", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "管理者は Dataverse でビジネススキルを作成でき、販売者は OneDrive にカスタムスキルを保存できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "ビジネススキルとカスタムスキル", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "競争戦略、顧客エンゲージメント戦略、リードの評価などのプロンプト例が提供されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Copilot Cowork の例示プロンプト", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "まず会議の準備や案件の状況確認など、身近なスキルから試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "メールや会議など複数ソースにまたがる多段階タスクを計画して実行する Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Copilot Cowork", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "sales-plugin", "term": "Sales プラグイン", "type": "feature", "oneLine": { "text": "Dynamics 365 Sales のスキルをすべて含む、Cowork 用のプラグイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "dataverse-mcp", "term": "Dataverse MCP サーバー", "type": "term", "oneLine": { "text": "Sales プラグインが Dynamics 365 Sales のデータへアクセスするために使うサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "CRM ライセンスがなくても使えますか？",
+          "answer": {
+            "text": "一部は使えます。「Sales for Cowork」プラグインをオンにすると、CRM に依存しない営業スキルを利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Cowork で Sales プラグインを有効にする", "retrievedAt": "2026-10-21T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "料金体系はどうなりますか？",
+          "answer": {
+            "text": "Cowork は固定ライセンスではなく利用量に基づいて課金され、ユーザーのプロンプトやタスクの長さ、基盤モデルで変動します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locator": "Important", "retrievedAt": "2026-10-21T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576850",
+        "learn": [
+          { "title": "Copilot Cowork で営業スキルを活用しましょう", "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/use-copilot-cowork-sales-skills", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
