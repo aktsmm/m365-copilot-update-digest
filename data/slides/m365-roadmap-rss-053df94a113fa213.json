@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-053df94a113fa213",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "GCC High と DoD 向けに Microsoft Copilot 使用状況レポートを追加",
+        "subtitleJa": "有効・アクティブ ユーザー数とアプリ別の利用状況を管理センターで確認できます",
+        "en": "Microsoft Copilot (Microsoft 365): Microsoft 365 admin center – New Microsoft 365 Copilot usage report for GCC High & DoD"
+      },
+      "meta": {
+        "publishedJst": "2026-08-22",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["admin"],
+        "importance": "notable",
+        "cloudInstances": ["GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC High / DoD 環境で Microsoft Copilot を導入する管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "有効ユーザー数・アクティブ ユーザー数やアプリ別の利用状況を、管理センターで把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "対応は不要。レポートは AI 管理者ロールで Microsoft 365 管理センターから確認できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "Access requirements", "retrievedAt": "2026-10-20T12:50:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Microsoft Copilot の**使用状況レポート**が追加され、有効・アクティブ ユーザー数、アプリ別の利用状況、ユーザー単位のアクティビティ（既定で匿名化）を確認できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "有効ユーザーは期間内に Copilot ライセンスを持つユーザー数、アクティブ ユーザーは機能を使ったユーザー数", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "使用状況レポートを解釈する", "retrievedAt": "2026-10-20T12:50:00Z" }] },
+            { "text": "アプリ別の導入状況を、概要ビューと傾向ビューで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "使用状況レポートを解釈する", "retrievedAt": "2026-10-20T12:50:00Z" }] },
+            { "text": "ユーザー名などの個人情報は、既定でレポートに非表示になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "ユーザーの最終アクティビティ テーブル", "retrievedAt": "2026-10-20T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI 管理者として Microsoft 365 管理センターにサインインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "View the reports", "retrievedAt": "2026-10-20T12:50:00Z" }] },
+            { "text": "［レポート］＞［使用状況］から Microsoft Copilot を選び、［使用状況］タブを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "使用状況レポートを表示する", "retrievedAt": "2026-10-20T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象日のレポートは、通常その日の終了から 48 時間以内に利用可能になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "冒頭", "retrievedAt": "2026-10-20T12:50:00Z" }] },
+            { "text": "期間は過去 7・28・90・180 日から選べ、データは .csv にエクスポートできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "使用状況レポートを解釈する", "retrievedAt": "2026-10-20T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Viva Insights の Copilot ダッシュボードは、導入や影響をより詳しく分析する別のレポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "Viva Insights Copilot Analytics", "retrievedAt": "2026-10-20T12:50:00Z" }] },
+            { "text": "Purview の監査ログはコンプライアンス用で、使用状況レポートの基礎には使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "よくあるご質問", "retrievedAt": "2026-10-20T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "アクティブ ユーザー率を定期的に確認し、利用の少ないアプリへの展開支援を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "アクティブ ユーザー率は、アクティブ ユーザー数を有効ユーザー数で割った値", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "使用状況レポートを解釈する", "retrievedAt": "2026-10-20T12:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "usage-report", "term": "使用状況レポート", "type": "feature", "oneLine": { "text": "Copilot の導入・保持・関与の状況を管理センターで確認できるレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "冒頭", "retrievedAt": "2026-10-20T12:50:00Z" }] } },
+        { "termKey": "active-user", "term": "アクティブ ユーザー", "type": "term", "oneLine": { "text": "期間内に Microsoft 365 アプリで Copilot 機能を試した有効ユーザー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "使用状況レポートを解釈する", "retrievedAt": "2026-10-20T12:50:00Z" }] } },
+        { "termKey": "ai-admin", "term": "AI 管理者", "type": "term", "oneLine": { "text": "管理センターで Copilot レポートを確認できる管理者ロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locator": "Access requirements", "retrievedAt": "2026-10-20T12:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ユーザー単位のアクティビティで個人名は見えますか？",
+          "answer": {
+            "text": "既定ではユーザー名や表示名は非表示です。表示するには管理センターの使用状況レポートの設定で変更します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "ユーザーの最終アクティビティ テーブルの注", "retrievedAt": "2026-10-20T12:50:00Z" }]
+          }
+        },
+        {
+          "question": "どのユーザーが「アクティブ」と数えられますか？",
+          "answer": {
+            "text": "プロンプトの送信など意図的な操作をした場合に数えられ、Copilot アイコンを選んでウィンドウを開くだけでは数えられません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "よくあるご質問", "retrievedAt": "2026-10-20T12:50:00Z" }]
+          }
+        },
+        {
+          "question": "レポートのユーザー一覧の対象範囲は？",
+          "answer": {
+            "text": "過去 180 日間に Copilot ライセンスを取得したことがあるすべてのユーザーが対象で、後でライセンスを外したユーザーも含まれます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locator": "よくあるご質問", "retrievedAt": "2026-10-20T12:50:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567120",
+        "learn": [
+          { "title": "管理者向けの Microsoft Copilot レポート オプション", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-reports-for-admins", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot の使用状況レポート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
