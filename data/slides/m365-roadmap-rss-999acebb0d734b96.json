@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-999acebb0d734b96",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams 会議の共有ファイル機能（開発中）",
+        "subtitleJa": "会議にファイルやリンクを追加し、参加者全員へ自動で共有できます",
+        "en": "Microsoft Teams: Meeting Shared Files"
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議の主催者・参加者**と、会議で Facilitator を使う人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会議の資料を一か所に集め、参加者と会議内の AI の両方が同じファイルを参照できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応は公表されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議に**関連するファイルやリンクを追加**すると、参加者全員へ自動的に共有されます。会議内の AI もそれらを回答の根拠として使います", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議にファイルとリンクを追加し、参加者全員へ自動で共有する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Facilitator などの会議内 AI が、追加ファイルを使って質問に回答する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Desktop・Mac・Web、クラウドは Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期や仕様は変更される可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Facilitator を開始できるのは Microsoft Copilot ライセンスを持つユーザーのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "Facilitator の制限事項", "retrievedAt": "2026-10-20T11:50:00Z" }] },
+            { "text": "Facilitator は外部のチャットや会議では現在サポートされていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "Facilitator の制限事項", "retrievedAt": "2026-10-20T11:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Facilitator は既定で許可。Teams 管理センターで許可・ブロックを管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議にファシリテーターを許可する", "retrievedAt": "2026-10-20T11:50:00Z" }] },
+            { "text": "会議で Facilitator を使うには、Teams の Loop エクスペリエンスをオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議の Facilitator 用に Teams で Loop エクスペリエンスを有効にする", "retrievedAt": "2026-10-20T11:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "meeting-shared-files", "term": "Meeting Shared Files", "type": "feature", "oneLine": { "text": "会議にファイルやリンクを追加し、参加者全員へ自動的に共有する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "facilitator", "term": "Facilitator", "type": "product", "oneLine": { "text": "議題の提示や進行の追跡、要点のリアルタイム記録で会議を支援する AI 搭載エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "冒頭", "retrievedAt": "2026-10-20T11:50:00Z" }] } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "AI の回答を、指定した情報源に基づかせること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供時期の月が示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Facilitator を使うのに必要なライセンスは？",
+          "answer": { "text": "Facilitator は Microsoft Copilot ライセンスに含まれ、対象の Microsoft 365 基本ライセンスと Teams ライセンスも必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "Facilitator のライセンスとアクセス許可の要件", "retrievedAt": "2026-10-20T11:50:00Z" }] }
+        },
+        {
+          "question": "ライセンスのない参加者は Facilitator を操作できますか？",
+          "answer": { "text": "プロンプトは入力できませんが、他のユーザーのプロンプトと Facilitator の応答は見られます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "Facilitator の制限事項", "retrievedAt": "2026-10-20T11:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570427",
+        "learn": [
+          { "title": "Microsoft Teams でファシリテーターを設定する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
