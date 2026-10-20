@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8f510c8e8af2ccf5",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot の Vision で共有画面とモバイル カメラを分析可能に",
+        "subtitleJa": "画面やカメラの映像を見ながら、音声で質問できます",
+        "en": "Microsoft Copilot (Microsoft 365): Vision in Microsoft 365 Copilot can analyze content shared on desktop screen and through mobile camera"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mobile", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot を使うユーザー**（デスクトップ、モバイル、Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "画面やカメラの映像を共有して、見えている内容について質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザーが使い始めるための管理者作業は、確認できた範囲ではない", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "デスクトップ画面やモバイル カメラの**ライブ映像をリアルタイムで解析**し、仕事データと Web に基づく音声回答を返します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デスクトップ画面を共有すると、見えている内容を Copilot が解析する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "モバイルの音声セッション中に、前面・背面どちらのカメラも共有できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ライブ映像を解析し、仕事データと Web に基づく音声回答を返す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デスクトップ: Copilot のセッションで画面を共有し、内容について質問する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "モバイル: 音声セッション中にカメラを有効にして、対象に向ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象プラットフォームは Android、Windows、iOS、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "従来との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "従来の Copilot はテキストと静的なデータの入力が中心だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "資料や画面の内容を見せながら、要点の確認を依頼する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "vision", "term": "Vision", "type": "feature", "oneLine": { "text": "共有した画面やカメラの映像から文脈を理解する Copilot の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "realtime-voice", "term": "リアルタイム音声セッション", "type": "term", "oneLine": { "text": "Copilot と音声で会話するセッション。モバイルではカメラ共有も使える。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "grounding", "term": "仕事データと Web に基づく回答", "type": "term", "oneLine": { "text": "映像の内容に加え、仕事データと Web を根拠にした回答のこと。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "Android、Windows、iOS、Web が対象です。モバイルではカメラ、デスクトップでは画面共有を使います。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者の対応は必要ですか？",
+          "answer": { "text": "確認できた資料に、管理者の必須作業の説明はありません。管理設定の有無は管理者向けドキュメントでご確認ください。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561037",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
