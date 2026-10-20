@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-47442a469418d67c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams の AI 生成会議アーカイブで知見を保持（開発中）",
+        "subtitleJa": "文字起こしの期限後も、過去の会議について Copilot に質問できます",
+        "en": "Microsoft Teams: AI-generated meeting archive for knowledge retention"
+      },
+      "meta": {
+        "publishedJst": "2026-08-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams の管理者**と、Copilot で過去の会議について質問するユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "文字起こしの保持期間が過ぎた後も、Copilot やファシリテーターが過去の会議の質問に答え続けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "組織の AI アーカイブ生成の管理", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Learn では AI アーカイブ生成は既定でオン。有効期限は Teams 管理センターで調整できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "組織の AI アーカイブ生成の管理", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議の要点を凝縮した **AI アーカイブ**が残るため、文字起こしが期限切れでも会議に関する質問に回答できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲と仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者がテナント全体のポリシーを有効にすると、会議の要点を保持できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AI アーカイブは .meeting ファイルで、要約と重要な分析情報を含む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブには何が含まれていますか?", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "文字起こしの抜粋など生のユーザー データは格納されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブには何が含まれていますか?", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "暗号化会議や、コピー・転送を制限する秘密度ラベルの会議は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはいつ作成されますか?", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "アーカイブ ファイルをユーザーが直接開いたり変更したりはできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはどのように使用されますか?", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "一部のユーザーだけに生成を有効にすることはできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ生成をオフにする", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定の有効期限は 5 年（1,825 日）で、管理者が変更できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議アーカイブ Filesの既定の有効期限の設定", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "Purview のアイテム保持ポリシーは管理センターの設定より優先される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "アイテム保持ポリシーの設定", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ai-archive", "term": "AI アーカイブ", "type": "feature", "oneLine": { "text": "会議の議論とメタデータから重要な知識を凝縮した、AI 生成の成果物。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "facilitator", "term": "ファシリテーター", "type": "feature", "oneLine": { "text": "Copilot と並んで AI アーカイブを使い、会議に関する質問に回答する Microsoft の AI ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "冒頭", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "spe", "term": "SharePoint Embedded", "type": "term", "oneLine": { "text": "API 専用のファイルおよびドキュメント管理システム。AI アーカイブの保存先に使われる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ Storage", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "purview-retention", "term": "Purview アイテム保持ポリシー", "type": "term", "oneLine": { "text": "AI アーカイブの保持と削除を管理でき、Teams 管理センターの有効期限設定より優先される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "アイテム保持ポリシーの設定", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "AI アーカイブは誰でも直接開けますか？",
+          "answer": { "text": "いいえ。Copilot などの AI ツール経由でのみ使われ、ユーザーはファイルを直接開けません。会議にアクセスできないユーザーとは分析情報を共有しません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブはどのように使用されますか?", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        },
+        {
+          "question": "生成を止めたい場合はどうしますか？",
+          "answer": { "text": "Teams 管理センターでテナント単位でオフにできます。特定の会議は、会議オプションで Copilot とファシリテーターを「会議中のみ」にします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "AI アーカイブ生成をオフにする", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        },
+        {
+          "question": "会議の文字起こしを削除すると AI アーカイブも消えますか？",
+          "answer": { "text": "自動では削除されません。開催者は会議の要約から削除でき、管理者は PowerShell でも削除できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locator": "会議の AI アーカイブを削除する方法", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558933",
+        "learn": [{ "title": "Microsoft Teams会議のための AI アーカイブ", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/ai-archive-teams-meetings", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
