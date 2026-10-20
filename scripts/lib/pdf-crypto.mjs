@@ -27,7 +27,13 @@ export function decryptBuffer(key, blob) {
 }
 
 /** ブラウザがパスワードの正否を先に確認するための検証値（鍵が合うときだけ復号できる）。 */
-export function createGate(password, salt = crypto.randomBytes(16)) {
+// ソルトはパスワードから決まる固定値にする。デプロイのたびに鍵が変わると、ブラウザに古い slides.json や暗号化 PDF が残っているときに復号できなくなる。
+// ソルトは秘密ではない（パスワードを変えれば、ソルトも鍵も変わる）。
+export function deterministicSalt(password) {
+  return crypto.createHash("sha256").update(`m365-copilot-update-digest:pdf-gate:${password}`).digest().subarray(0, 16);
+}
+
+export function createGate(password, salt = deterministicSalt(password)) {
   const key = deriveKey(password, salt);
   const verifier = encryptBuffer(key, Buffer.from(VERIFIER_PLAINTEXT, "utf8"));
   return {

@@ -3,7 +3,7 @@ import test from "node:test";
 import { buildApi } from "../scripts/lib/api.mjs";
 import { loadCategoryConfig, annotateEvent } from "../scripts/lib/classify.mjs";
 import { coverageStatusKey, summarizeCoverage } from "../scripts/lib/coverage.mjs";
-import { createGate, decryptBuffer, deriveKey, encryptBuffer } from "../scripts/lib/pdf-crypto.mjs";
+import { createGate, decryptBuffer, deriveKey, deterministicSalt, encryptBuffer } from "../scripts/lib/pdf-crypto.mjs";
 import fs from "node:fs";
 import { loadSlides, retentionStart, selectSlideEvents, slideKind, validateDeck } from "../scripts/lib/slides.mjs";
 
@@ -102,6 +102,12 @@ test("selection keeps recent updates of every importance, important first then n
     { now },
   );
   assert.deepEqual(selected.map((item) => item.id), ["ga", "pre", "low"]);
+});
+
+test("the pdf gate salt is stable per password, so deploys do not invalidate cached files", () => {
+  assert.equal(createGate("secret").gate.salt, createGate("secret").gate.salt);
+  assert.notEqual(createGate("secret").gate.salt, createGate("other").gate.salt);
+  assert.equal(deterministicSalt("secret").length, 16);
 });
 
 test("pdf encryption round-trips and rejects a wrong key", () => {
