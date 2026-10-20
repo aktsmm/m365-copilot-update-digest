@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-692e3f79dc7d6384",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview で Copilot Memory の保持を構成可能に（開発中）",
+        "subtitleJa": "メモリの過去バージョンを、セキュリティ・コンプライアンス・調査のために保存できます",
+        "en": "Microsoft Purview: Data Lifecycle Management – Retention for Copilot Memory"
+      },
+      "meta": {
+        "publishedJst": "2026-08-22",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview でコンプライアンスを管理する管理者**と、Microsoft Copilot のメモリを使うユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メモリの過去バージョンを保持し、セキュリティ・コンプライアンス・調査に使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "現行ドキュメントでは、Purview の保持ポリシー・保持ラベルは Copilot メモリに適用されず、メモリ専用の保持制御もない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "メモリのアイテム保持ポリシー", "retrievedAt": "2026-10-20T19:40:00Z" }] },
+        "after": { "text": "Copilot メモリの保持を構成でき、**メモリ項目の過去バージョンを保存**できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は保存されたメモリと、チャット履歴から推測された情報", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "メモリは、ユーザーの Exchange メールボックスの隠しフォルダーに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }] },
+            { "text": "Copilot メモリは、Copilot ライセンスの有無にかかわらず Copilot Chat ユーザーが利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行では、管理者がメモリに追加される情報の種類を制限することはできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "テナント管理者は、メモリに追加される情報を制限できますか?", "retrievedAt": "2026-10-20T19:40:00Z" }] },
+            { "text": "メモリと個人用設定の操作は、Purview の監査ログに記録されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "Copilot メモリの監査ログはありますか?", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は eDiscovery やコンテンツ検索でユーザーのメモリを検索できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "管理者はユーザーのメモリを検出して削除できますか?", "retrievedAt": "2026-10-20T19:40:00Z" }] },
+            { "text": "保持要件がある場合は、今のうちに社内の保持方針を整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "current-retention",
+          "heading": "現行の保持の扱い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "保存されたメモリは、ユーザーが設定から明示的に削除するまで保持される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "保存されたメモリー", "retrievedAt": "2026-10-20T19:40:00Z" }] },
+            { "text": "チャット履歴の詳細は、元のチャットをすべて削除すると 7 日以内に消える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "Chat 履歴", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-memory", "term": "Copilot メモリ", "type": "feature", "oneLine": { "text": "保存されたメモリ、チャット履歴から推測された詳細、カスタム指示で、個人に合わせた支援をする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }] } },
+        { "termKey": "purview-dlm", "term": "データ ライフサイクル管理", "type": "product", "oneLine": { "text": "必要なコンテンツを保持し、不要なコンテンツを削除して、組織データのライフサイクルを管理する Purview の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/ai-microsoft-purview", "locator": "データ ライフサイクル管理と AI の相互作用", "retrievedAt": "2026-10-20T19:40:00Z" }] } },
+        { "termKey": "retention-policy", "term": "アイテム保持ポリシー", "type": "term", "oneLine": { "text": "AI アプリのユーザー プロンプトと応答などを、自動的に保持または削除するためのポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/ai-microsoft-purview", "locator": "データ ライフサイクル管理と AI の相互作用", "retrievedAt": "2026-10-20T19:40:00Z" }] } },
+        { "termKey": "ediscovery", "term": "電子情報開示（eDiscovery）", "type": "term", "oneLine": { "text": "Purview でユーザーのメモリ データなどを検索・エクスポートできる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "管理者はユーザーのメモリを検出して削除できますか?", "retrievedAt": "2026-10-20T19:40:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "今の Copilot メモリに保持ポリシーは使えますか？",
+          "answer": { "text": "現行ドキュメントでは、Purview の保持ポリシーと保持ラベルは Copilot メモリに適用されず、メモリ専用の保持制御もないとされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "メモリのアイテム保持ポリシー", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+        },
+        {
+          "question": "メモリはどこに保存されますか？",
+          "answer": { "text": "ユーザーの Exchange メールボックスの隠しフォルダーに保存され、他のメールボックス データと同じセキュリティ・コンプライアンス ポリシーに従います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+        },
+        {
+          "question": "管理者は今、ユーザーのメモリを調査できますか？",
+          "answer": { "text": "はい。Purview eDiscovery やコンテンツ検索で保存されたメモリと推測されたメモリを検索でき、Graph エクスプローラーと組み合わせて削除もできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "管理者はユーザーのメモリを検出して削除できますか?", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569612",
+        "learn": [
+          { "title": "Copilot の個人用設定とメモリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locale": "ja-jp" },
+          { "title": "生成 AI アプリ向け、Microsoft Purview のデータセキュリティおよびコンプライアンス保護", "url": "https://learn.microsoft.com/ja-jp/purview/ai-microsoft-purview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
