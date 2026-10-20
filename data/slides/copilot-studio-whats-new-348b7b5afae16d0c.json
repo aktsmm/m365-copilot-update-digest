@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-348b7b5afae16d0c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "GitHub Copilot ハーネス搭載エージェントの従量課金（Copilot クレジット）",
+        "subtitleJa": "作成・テストの時点から、使った分だけクレジットが消費されます",
+        "en": "Learn about usage-based billing for agents, workflows, and apps powered by the GitHub Copilot harness, measured in..."
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": {
+          "text": "**Copilot Studio の管理者**と、GitHub Copilot ハーネスでエージェントを作る人",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "Copilotクレジットの購入と管理方法", "retrievedAt": "2026-10-20T22:40:00Z" }]
+        },
+        "change": {
+          "text": "エージェント・ワークフロー・アプリの利用が、Copilot クレジットの消費量で課金される",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "新着情報", "retrievedAt": "2026-10-20T22:40:00Z" }]
+        },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": {
+          "text": "環境へのクレジット割り当ては管理者が行う。作成者は管理者に依頼する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "Copilotクレジットの購入と管理方法", "retrievedAt": "2026-10-20T22:40:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "標準ハーネスでは、公開後に請求が始まる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "新着情報", "retrievedAt": "2026-10-20T22:40:00Z" }]
+        },
+        "after": {
+          "text": "GitHub Copilot ハーネスでは、**ビルド開始時**からクレジットを消費します。テストや評価の作成も対象です",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "新着情報", "retrievedAt": "2026-10-20T22:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "課金の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "対象は GitHub Copilot ハーネスで動くエージェント・ワークフロー・アプリのみ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "範囲", "retrievedAt": "2026-10-20T22:40:00Z" }]
+            },
+            {
+              "text": "LLM トークン、ツール（ナレッジや MCP を含む）、ハーネス本体にクレジットが課金される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "クレジットは体験全体をカバー", "retrievedAt": "2026-10-20T22:40:00Z" }]
+            },
+            {
+              "text": "消費量は設計、実行頻度、使う機能によって変わる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "Copilotクレジットの計測方法", "retrievedAt": "2026-10-20T22:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "購入・確認の方法",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "購入は従量課金制、または 1 年間の事前購入プラン。どちらも Azure サブスクリプションが前提",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits", "locator": "Copilotクレジットの購入方法", "retrievedAt": "2026-10-20T22:40:00Z" }]
+            },
+            {
+              "text": "エージェントの消費は Monitor ページ、環境・テナント全体は Power Platform 管理センターで確認",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "消費されたクレジットを見る", "retrievedAt": "2026-10-20T22:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-credits",
+          "term": "Copilot クレジット",
+          "type": "term",
+          "oneLine": {
+            "text": "エージェント、ワークフロー、アプリの利用状況を測定する単位。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "Copilotクレジットの計測方法", "retrievedAt": "2026-10-20T22:40:00Z" }]
+          }
+        },
+        {
+          "termKey": "github-copilot-harness",
+          "term": "GitHub Copilot ハーネス",
+          "type": "feature",
+          "oneLine": {
+            "text": "この従量課金の対象となるエージェント、ワークフロー、アプリを動かす基盤。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "範囲", "retrievedAt": "2026-10-20T22:40:00Z" }]
+          }
+        },
+        {
+          "termKey": "payg",
+          "term": "従量課金制",
+          "type": "term",
+          "oneLine": {
+            "text": "Azure サブスクリプションで支払い、実際に使った Copilot クレジット分だけを月末に支払う方法。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits", "locator": "Copilot Studio 従量課金制", "retrievedAt": "2026-10-20T22:40:00Z" }]
+          }
+        },
+        {
+          "termKey": "ppac",
+          "term": "Power Platform 管理センター",
+          "type": "product",
+          "oneLine": {
+            "text": "管理者が環境にクレジットを割り当て、使用状況を監視する管理画面。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "Copilotクレジットの購入と管理方法", "retrievedAt": "2026-10-20T22:40:00Z" }]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "請求はいつから始まりますか？",
+          "answer": {
+            "text": "公開後ではなく、ビルド開始時からです。自然言語での作成、プレビューとテスト、エージェント評価の作成もクレジットを消費します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "ビルディング開始時から請求は始まります", "retrievedAt": "2026-10-20T22:40:00Z" }]
+          }
+        },
+        {
+          "question": "事前にコストを見積もれますか？",
+          "answer": {
+            "text": "Copilot Credits 見積もりツールで、エージェントの消費量を見積もれます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locator": "Copilotクレジットの計測方法", "retrievedAt": "2026-10-20T22:40:00Z" }]
+          }
+        },
+        {
+          "question": "事前購入プランはどう購入しますか？",
+          "answer": {
+            "text": "Azure ポータルで購入します。あわせて Power Platform 管理センターで、Azure サブスクリプションに関連付けた請求ポリシーの作成が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits", "locator": "Copilotクレジットの購入前プラン", "retrievedAt": "2026-10-20T22:40:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+        "learn": [
+          { "title": "使用率に基づく請求の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locale": "ja-jp" },
+          { "title": "Copilotクレジットの購入と管理", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits", "locale": "ja-jp" },
+          { "title": "Power Platform 管理センターの概要", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/admin-documentation", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
