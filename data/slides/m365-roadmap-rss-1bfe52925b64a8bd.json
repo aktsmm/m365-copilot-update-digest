@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1bfe52925b64a8bd",
+      "kind": "in-development",
+      "label": "開発中",
+      "title": {
+        "ja": "Edge の自動入力が拡張、パスポートなども対象に（開発中）",
+        "subtitleJa": "保存済みの住所に加え、特殊なフォームの書類情報も自動入力できます",
+        "en": "Microsoft Edge: Enhanced Autofill"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge"],
+        "categories": ["edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**デスクトップ版 Microsoft Edge のユーザー**と、ブラウザーを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "住所に加え、パスポートや運転免許証などの情報も自動入力できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者側の操作は不要。管理者は動作を把握しておくとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "デスクトップ版 Edge で、保存した住所に加えて**パスポート・運転免許証・その他の特殊なフォーム**の書類情報も自動入力できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "機能更新プログラム: 拡張オートフィル", "retrievedAt": "2026-10-21T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象はデスクトップ版の Microsoft Edge", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "機能更新プログラム: 拡張オートフィル", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "パスポート、運転免許証など、住所以外の書類の種類を自動入力できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "機能更新プログラム: 拡張オートフィル", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "ロードマップ上の提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは開発中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Edge のリリースノートでは、制御された機能ロールアウトとして案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "機能更新プログラム: 拡張オートフィル", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は、Edge のオートフィル関連ポリシーの設定を事前に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "autofill", "term": "自動入力（オートフィル）", "type": "feature", "oneLine": { "text": "Edge が保存した情報をフォームに自動で入力する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "機能更新プログラム: 拡張オートフィル", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "edge-beta", "term": "Edge Beta チャネル", "type": "term", "oneLine": { "text": "Edge の新機能を先行して確認できるリリース チャネル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発中の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どの書類が自動入力の対象になりますか？",
+          "answer": { "text": "保存した住所に加えて、パスポート、運転免許証、その他の特殊なフォームです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "機能更新プログラム: 拡張オートフィル", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップに提供月は示されていません。Edge Beta のリリースノートでは、制御された機能ロールアウトとして案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locator": "機能更新プログラム: 拡張オートフィル", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=554938",
+        "learn": [
+          { "title": "Microsoft Edge Beta チャネルのリリースノート", "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-relnote-beta-channel", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
