@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-62918f5e775c997e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "OneDrive iOS で Copilot のコンテキスト メニューから PDF をレビュー（開発中）",
+        "subtitleJa": "PDF のテキストを選んで、Ask Copilot で説明・要約・翻訳ができます",
+        "en": "Microsoft Copilot (Microsoft 365): Review PDFs using the Copilot context menu on OneDrive iOS"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "OneDrive", "SharePoint"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["iOS"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**OneDrive iOS アプリで PDF を読む人**と、Microsoft Copilot を展開する管理者",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only",
+          "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]
+        },
+        "change": {
+          "text": "PDF 内の選択テキストについて、モバイルでも Copilot に説明・要約・翻訳・質問ができる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only",
+          "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発中の段階のため、現時点で必須の対応はありません",
+          "origin": "editorial", "assertion": "inference", "verification": "unverified"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "PDF のテキストを選択して **Ask Copilot** をタップするだけで、説明・要約・翻訳・任意の質問ができます",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only",
+          "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {"text": "OneDrive iOS で PDF 内のテキストを選択し、Ask Copilot を呼び出せる", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]},
+            {"text": "説明・要約・翻訳・選択範囲についての任意の質問に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]},
+            {"text": "デスクトップで一般提供済みの文脈内 Copilot 体験をモバイルへ拡大", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]}
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {"text": "対象プラットフォームは iOS。提供月はロードマップで示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "プラットフォーム", "retrievedAt": "2026-10-21T00:00:00Z"}]},
+            {"text": "Microsoft Copilot は E7 に含まれるか、対象プランのアドオンとして利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{"url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z"}]},
+            {"text": "対象クラウドは Worldwide・GCC・GCC High・DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "クラウド", "retrievedAt": "2026-10-21T00:00:00Z"}]}
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちの準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {"text": "対象プランと Copilot ライセンスの割り当てを管理センターで確認しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{"url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing", "locator": "Microsoft Copilot ライセンス", "retrievedAt": "2026-10-21T00:00:00Z"}]},
+            {"text": "提供開始に備え、iOS ユーザーの PDF 利用シーンを洗い出しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified"}
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "ask-copilot",
+          "term": "Ask Copilot",
+          "type": "feature",
+          "oneLine": {
+            "text": "選択したテキストについて説明・要約・翻訳・質問ができる、コンテキスト メニューの Copilot 機能。",
+            "origin": "mrc", "assertion": "fact", "verification": "source-only",
+            "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]
+          }
+        },
+        {
+          "termKey": "onedrive",
+          "term": "OneDrive",
+          "type": "term",
+          "oneLine": {
+            "text": "職場・学校向けプランが、Microsoft Copilot の前提ライセンスの対象に含まれるファイル サービス。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{"url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing", "locator": "商用の表", "retrievedAt": "2026-10-21T00:00:00Z"}]
+          }
+        },
+        {
+          "termKey": "label-in-development",
+          "term": "開発中",
+          "type": "label",
+          "oneLine": {
+            "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。",
+            "origin": "mrc", "assertion": "fact", "verification": "source-only",
+            "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "段階", "retrievedAt": "2026-10-21T00:00:00Z"}]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": {
+            "text": "ロードマップには提供月が示されていません。最新の時期はロードマップで確認してください。",
+            "origin": "mrc", "assertion": "fact", "verification": "source-only",
+            "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "段階", "retrievedAt": "2026-10-21T00:00:00Z"}]
+          }
+        },
+        {
+          "question": "必要なライセンスは？",
+          "answer": {
+            "text": "Microsoft Copilot は Microsoft 365 E7 に含まれるか、対象の商用・政府機関・教育機関プランのアドオンとして利用します。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{"url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z"}]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568790",
+        "learn": [
+          {"title": "Microsoft Copilot のライセンス オプション", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing", "locale": "ja-jp"}
+        ]
+      },
+      "render": {"continuationRequired": false}
+    }
+  ]
+}
