@@ -1,0 +1,6 @@
+{
+  "$comment": "スライド充足率の見張り。enforceFrom より前（追いつき中）は警告だけで失敗にしない。maxOverdue: 48 時間より前に出たのに本物のスライドがない更新の上限。maxHeld: 失敗が続いて保留中の更新の上限。",
+  "enforceFrom": "2026-10-25",
+  "maxOverdue": 10,
+  "maxHeld": 5
+}
