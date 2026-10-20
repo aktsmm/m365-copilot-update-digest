@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8a80b0e62a4567eb",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot でセッションと応答をリンクで共有可能に（提供開始）",
+        "subtitleJa": "チャット全体も単一の応答も、リンクで同僚に渡せます",
+        "en": "Microsoft Copilot (Microsoft 365): Session and Response Sharing in M365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot を使うユーザー**と、共有設定を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot でのやり取りを、リンクひとつで他のユーザーに共有できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "共有は既定でオン。止めたい場合は管理センターで設定をオフにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "概要", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot のチャット全体（セッション）または**単一の応答**をリンクで共有でき、受信者は共有内容から自分のチャットで作業を続けられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "セッションと応答の共有について", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "セッション共有: すべてのプロンプトと応答を含む会話全体を共有", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "セッションと応答の共有について", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "応答共有: 1 つの応答を、生成したプロンプトと共に共有", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "セッションと応答の共有について", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "受信者にはセッション共有時点のスナップショットが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "セッションと応答の共有について", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot 共有は既定でオン。ユーザーは共有リンクを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "概要", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "受信者が続行すると、受信者のチャット履歴に別のコピーが作成される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "セッションと応答の共有について", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "管理者は管理センターの [Copilot] > [設定] > [Copilot 共有] で切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "Copilot 共有をオンまたはオフにする", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "設定の表示は AI リーダー、編集は AI 管理者のロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "前提条件", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "オフにすると新しい共有リンクを作成できず、[共有] も表示されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "Copilot 共有をオンまたはオフにする", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "アクセス権との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "受信者は、会話内で参照されたファイルやメールなどにはアクセスできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "概要", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "既存の Microsoft 365 アクセス許可は引き続き適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "概要", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "監視と変更の反映",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Purview が共有イベントやリンク アクセスを記録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "共有アクティビティの監視", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "設定変更は新しい共有の試行に適用され、既存の受信者のコピーは影響を受けない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "共有設定がユーザーに与える影響", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "session-sharing", "term": "セッション共有", "type": "feature", "oneLine": { "text": "すべてのプロンプトと応答を含む Copilot 会話全体を共有する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "セッションと応答の共有について", "retrievedAt": "2026-10-20T11:30:00Z" }] } },
+        { "termKey": "response-sharing", "term": "応答共有", "type": "feature", "oneLine": { "text": "1 つの Copilot 応答を、それを生成したプロンプトと共に共有する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "セッションと応答の共有について", "retrievedAt": "2026-10-20T11:30:00Z" }] } },
+        { "termKey": "purview", "term": "Microsoft Purview", "type": "product", "oneLine": { "text": "共有イベント、リンク アクセス、共有試行のブロックなどの監査ログを記録するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "共有アクティビティの監視", "retrievedAt": "2026-10-20T11:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "共有リンクを受け取った人は、会話中のファイルも開けますか？",
+          "answer": { "text": "いいえ。受信者は参照されたファイルやメールなどにはアクセスできず、既存の Microsoft 365 アクセス許可が適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "概要", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+        },
+        {
+          "question": "共有をオフにすると、既に共有したコピーはどうなりますか？",
+          "answer": { "text": "設定は新しい共有の試行に適用され、既存の受信者のコピーは影響を受けません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "共有設定がユーザーに与える影響", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+        },
+        {
+          "question": "共有の利用状況は確認できますか？",
+          "answer": { "text": "Microsoft Purview の監査ログで、共有したユーザーやリンクが開かれた時期などを確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing", "locator": "共有アクティビティの監視", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562353",
+        "learn": [{ "title": "Microsoft Copilot のコンテンツ共有を管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-manage-content-sharing#understand-session-and-response-sharing", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
