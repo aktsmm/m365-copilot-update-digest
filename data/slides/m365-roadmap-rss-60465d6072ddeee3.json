@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-60465d6072ddeee3",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のエージェント評価体験を改善（開発中）",
+        "subtitleJa": "評価結果の理由や根拠が見えて、エージェントの品質を把握しやすくなります",
+        "en": "Microsoft Copilot Studio: Improvements to agent evaluations experience"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人（作成者）**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "評価の説明・推論トレース・引用ナレッジを見て、エージェントの品質と挙動を把握しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "評価の**説明の充実**、推論トレース、引用ナレッジ ソース、評価実行の比較、大規模データセット対応などが加わります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象となる強化内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "評価結果のより詳しい説明と、エージェントの推論トレースを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "回答で引用されたナレッジ ソースを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "評価実行の比較と、大規模データセットに対応する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "現行の評価の制約",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "認証なしまたは Microsoft 認証のエージェントのみ対応。手動認証は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "Limitations", "retrievedAt": "2026-10-20T13:30:00Z" }] },
+            { "text": "Fabric のデータ エージェントは、エージェント評価の対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "Limitations", "retrievedAt": "2026-10-20T13:30:00Z" }] },
+            { "text": "テスト結果は 89 日間閲覧でき、長期保存は CSV エクスポートで行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-results", "locator": "冒頭", "retrievedAt": "2026-10-20T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えるには",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "同じテスト セットを再実行すれば、変更前後の結果を比較できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-results", "locator": "検査結果を比較する", "retrievedAt": "2026-10-20T13:30:00Z" }] },
+            { "text": "現行の評価でテスト セットを整備しておくと、新機能を試しやすい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-evaluation", "term": "エージェント評価", "type": "feature", "oneLine": { "text": "テストを生成して実行し、エージェントの回答の精度・関連性・品質を測定する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "冒頭", "retrievedAt": "2026-10-20T13:30:00Z" }] } },
+        { "termKey": "test-set", "term": "テスト セット", "type": "term", "oneLine": { "text": "エージェントを評価するためのテスト ケースの集まり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "エージェント評価の仕組み", "retrievedAt": "2026-10-20T13:30:00Z" }] } },
+        { "termKey": "test-case", "term": "テスト ケース", "type": "term", "oneLine": { "text": "ユーザーがエージェントと対話する方法をシミュレートする 1 つの操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "エージェント評価の仕組み", "retrievedAt": "2026-10-20T13:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供に向けて開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中で、提供時期の月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在のエージェント評価ではどのエージェントが対象ですか？",
+          "answer": { "text": "認証なしまたは Microsoft 認証のエージェントが対象で、手動認証のエージェントと Fabric のデータ エージェントは対象外です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locator": "Limitations", "retrievedAt": "2026-10-20T13:30:00Z" }] }
+        },
+        {
+          "question": "評価実行の比較は今でもできますか？",
+          "answer": { "text": "現行でも、同じテスト セットを 2 回以上実行すれば、比較ツールで結果を比べられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-results", "locator": "検査結果を比較する", "retrievedAt": "2026-10-20T13:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569607",
+        "learn": [
+          { "title": "エージェント評価について", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-intro", "locale": "ja-jp" },
+          { "title": "評価を実行して結果を表示する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-results", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
