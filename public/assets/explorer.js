@@ -155,9 +155,8 @@
     });
     const jsonButton = $("[data-ex-json]");
     jsonButton.textContent = `JSON（${picked.length}）`;
-    const slideCount = picked.filter((entry) => entry.slideKey && slideIndex.has(entry.slideKey)).length;
-    const jsonCount = picked.filter((entry) => entry.slideKey).length;
-    const counts = { "data-download-merged": slideCount, "data-download-pptx": jsonCount };
+    // スライドがない更新も、要約だけの簡易ページとして PDF・PPTX に入るので、件数は JSON と常に一致する
+    const counts = { "data-download-merged": picked.length, "data-download-pptx": picked.length };
     Object.entries(counts).forEach(([attr, n]) => {
       root.querySelectorAll(`[${attr}]`).forEach((b) => {
         b.dataset.label = b.dataset.label || b.textContent;
@@ -173,6 +172,31 @@
     apply();
   }
 
+  // PDF・PPTX の出力用。スライドがある更新も、ない更新（簡易ページになる）も含む。日本語で出す。
+  window.digestVisibleEntries = () =>
+    chosen().map((entry) => {
+      const kind = facets.kinds.find((item) => item.id === entry.kind);
+      const level = facets.importanceLevels.find((item) => item.id === entry.importance);
+      const cats = (entry.categories || []).map((id) => facets.categories.find((item) => item.id === id)).filter(Boolean);
+      return {
+        key: entry.id,
+        hasSlide: Boolean(entry.slideKey && slideIndex.has(entry.slideKey)),
+        slideKey: entry.slideKey || null,
+        title: entry.titleJa || entry.titleEn || "",
+        titleEn: entry.titleEn || "",
+        summary: entry.summaryJa || entry.summaryEn || "",
+        publishedJst: entry.publishedAt.slice(0, 10),
+        source: entry.sourceName || "",
+        product: entry.productArea || "",
+        kind: entry.kind,
+        kindLabel: kind ? kind.label : "",
+        importanceLabel: level && entry.importance !== "normal" ? level.label : "",
+        categories: cats.map((item) => item.label),
+        reason: entry.importanceReason || "",
+        url: safeUrl(entry.url),
+        ids: entry.roadmapIds || [],
+      };
+    });
   window.digestVisibleSlideKeys = () => chosen().map((entry) => entry.slideKey).filter((key) => key && slideIndex.has(key));
   window.digestVisibleSlideJsonKeys = () => chosen().map((entry) => entry.slideKey).filter(Boolean);
 
