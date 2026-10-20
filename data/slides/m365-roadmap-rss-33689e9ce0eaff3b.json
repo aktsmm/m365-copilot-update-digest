@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-33689e9ce0eaff3b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Chat でスキャン PDF の検索一致精度が向上（開発中）",
+        "subtitleJa": "検索しにくかったスキャン PDF の内容も、検索結果に一致しやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat can now better match search results from Scanned PDFs"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "作業中のファイルにスキャン PDF を含めて **Copilot Chat を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "従来は検索しにくかったスキャン PDF の内容が、検索結果に一致しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は開発中の段階で、現時点で必要な対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat が、作業中のファイルにある**スキャン PDF** の内容を、より適切に検索結果へ一致させられるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Copilot Chat での、スキャン PDF の検索結果の一致", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザーが作業中のファイルに含まれるスキャン PDF が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先: Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は「開発中」で、提供時期の月はまだ示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応プラットフォームは Android・Desktop・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "スキャン PDF が多い部署では、提供後に検索結果が改善するか試して確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot のチャット体験。ユーザーが作業中のファイルを踏まえた検索や回答に使う。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "scanned-pdf", "term": "スキャン PDF", "type": "term", "oneLine": { "text": "紙の文書などをスキャンして作られた PDF。内容が従来は検索しにくかった。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供時期の月が示されておらず、現時点では開発中の段階です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者が事前に設定する必要はありますか？",
+          "answer": { "text": "ロードマップには必要な設定は記載されていないため、現時点で確認できる事前対応はありません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559613"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
