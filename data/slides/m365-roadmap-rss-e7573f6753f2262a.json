@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e7573f6753f2262a",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint でブランド フォント削除用の PowerShell サポート（開発中）",
+        "subtitleJa": "Remove-SPOFontFile で、不要なブランド フォント ファイルを削除できます",
+        "en": "SharePoint: PowerShell support for brand fonts deletion"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["SharePoint"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint 管理者**（ブランド センターのフォントを管理する人）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "承認やライセンスが不要になったフォント ファイルを、組織全体からまとめて整理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**Remove-SPOFontFile** コマンドレットで、ブランド フォント ライブラリのフォント ファイルを PowerShell から削除できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "SharePoint ブランド センターのブランド フォント ライブラリが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "テナントのライブラリから、プライマリ geo とすべてのサテライト geo のファイルを削除", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "説明", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "削除は、プライマリ geo でのみ実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "説明", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "削除後、そのフォントは SharePoint で使用できなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "説明", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "ロードマップ上は開発中の段階で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "削除前の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "使用済みのページは読み取り可能のまま、フォントは Microsoft 定義のフォントに自動で切り替わる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "説明の注", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "削除したファイルを使うフォント パッケージは、自動更新・削除されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "説明の注", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "brand-fonts", "term": "ブランド フォント", "type": "feature", "oneLine": { "text": "SharePoint ブランド センター内でアップロードおよび管理される、組織のフォント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/brand-fonts", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "remove-spofontfile", "term": "Remove-SPOFontFile", "type": "feature", "oneLine": { "text": "テナントのブランド フォント ライブラリからフォント ファイルを削除する PowerShell コマンドレット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "geo", "term": "サテライト geo", "type": "term", "oneLine": { "text": "プライマリ geo 以外の地理的な場所。フォント ファイルの削除はプライマリ geo でのみ許可される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "説明の注", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現在も、フォント ファイルを削除する方法はありますか？",
+          "answer": {
+            "text": "Microsoft Learn の「ブランド フォント」には、Remove-SPOFontFile を使った削除手順が記載されています。ロードマップ上では本機能は開発中です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/brand-fonts", "locator": "カスタム ブランド フォントを管理する", "retrievedAt": "2026-10-20T12:00:00Z" }]
+          }
+        },
+        {
+          "question": "削除したフォントを使っているページはどうなりますか？",
+          "answer": {
+            "text": "ページは読み取り可能なままで、フォントは Microsoft 定義のフォントに自動的に切り替わります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locator": "説明の注", "retrievedAt": "2026-10-20T12:00:00Z" }]
+          }
+        },
+        {
+          "question": "ブランド フォントのファイル形式やサイズの制限は？",
+          "answer": {
+            "text": ".ttf、.otf、.woff、.woff2 に対応し、ファイル サイズの上限は 10 MB です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/brand-fonts", "locator": "サポートされているフォント ファイルの種類", "retrievedAt": "2026-10-20T12:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569720",
+        "learn": [
+          { "title": "ブランド フォント", "url": "https://learn.microsoft.com/ja-jp/sharepoint/brand-fonts", "locale": "ja-jp" },
+          { "title": "Remove-SPOFontFile", "url": "https://learn.microsoft.com/ja-jp/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontfile", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
