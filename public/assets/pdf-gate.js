@@ -4,7 +4,9 @@
   const scriptSrc = document.currentScript ? document.currentScript.src : location.href;
   const root = new URL("../", scriptSrc);
   const MAGIC = "M365PDF1";
-  const MERGE_LIMIT = 80;
+  // 300 枚までは確認なしでまとめる。超えると時間がかかりブラウザが重くなるので警告し、1000 枚を上限にする。
+const WARN_AT = 300;
+const MERGE_LIMIT = 1000;
   const b64 = (value) => Uint8Array.from(atob(value), (c) => c.charCodeAt(0));
   let keyPromise = null;
   let gate = null;
@@ -155,7 +157,9 @@
       window.alert("表示中のスライドがありません");
       return;
     }
-    if (all.length > MERGE_LIMIT && !window.confirm(`PDF にまとめられるのは ${MERGE_LIMIT} 枚までです。先頭の ${MERGE_LIMIT} 枚（全 ${all.length} 枚）で作成します。続けますか？`)) {
+    if (all.length > MERGE_LIMIT) {
+      if (!window.confirm(`PDF にまとめられるのは ${MERGE_LIMIT} 枚までです。先頭の ${MERGE_LIMIT} 枚（全 ${all.length} 枚）で作成します。続けますか？`)) return;
+    } else if (all.length > WARN_AT && !window.confirm(`${all.length} 枚をまとめます。${WARN_AT} 枚を超えるため、時間がかかり、ブラウザが重くなることがあります。続けますか？`)) {
       return;
     }
     button.disabled = true;
