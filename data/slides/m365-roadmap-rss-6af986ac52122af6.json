@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6af986ac52122af6",
+      "kind": "in-development",
+      "kindSource": "manual",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ：エージェント ポリシー ガバナンス",
+        "subtitleJa": "エージェントとその機能を、ポリシーベースで大規模に管理できるようになります",
+        "en": "Work IQ: Agent Policy Governance"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents", "work-iq", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントを管理する管理者**と、エージェントの作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ポリシーに基づいて、エージェントとその機能を大規模に統制できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません。提供開始を待ちます", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が**ポリシーベースの制御**で、エージェントとその機能を大規模にガバナンスできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントとその機能を、ポリシーで大規模に管理する機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Web、Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在は開発中の段階で、提供開始日はロードマップに示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は管理者向け・作成者向けのガバナンス機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連する既存の仕組み",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ MCP では、Rego ベースのポリシー レイヤーで要求ごとの許可・拒否を制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "ポリシーは Entra 認証・OAuth・ユーザーのアクセス許可を置き換えず、補完する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locator": "ポリシーとアクセス許可の適合性", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "product", "oneLine": { "text": "エージェントが Microsoft 365 リソースにアクセスして処理する際に、ポリシー レイヤーで管理できる基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "policy-layer", "term": "ポリシー レイヤー", "type": "feature", "oneLine": { "text": "Rego で承認ルールを表現し、Work IQ MCP の要求ごとに適用するガバナンスの層。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "rego", "term": "Rego", "type": "term", "oneLine": { "text": "Open Policy Agent のポリシー言語で、読み取り可能でテスト可能なルールを書ける。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "今の Work IQ MCP にポリシー制御はありますか？",
+          "answer": { "text": "Work IQ MCP の初期リリースでは、管理センターでテナント レベルのポリシーのオンとオフを切り替えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locator": "初期リリースでのポリシー制御", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "ポリシーで許可すればユーザーの権限を超えて使えますか？",
+          "answer": { "text": "いいえ。ポリシーが許可しても、基になるアクセスはサインイン ユーザーの Microsoft 365 アクセス許可で確認されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locator": "ポリシーとアクセス許可の適合性", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570652",
+        "learn": [
+          { "title": "Work IQ MCP のポリシー ガバナンス", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
