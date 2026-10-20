@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b17685b70495259f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot チャットで Planner のタスクとプランを操作可能に（開発中）",
+        "subtitleJa": "Copilot と Planner を行き来せず、タスクやプランを管理できます",
+        "en": "Microsoft Copilot (Microsoft 365): Planner capabilities in Copilot chat (M365 Copilot)"
+      },
+      "meta": {
+        "publishedJst": "2026-08-07",
+        "availability": [],
+        "status": "In development",
+        "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Planner と Microsoft Copilot のチャットを使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャットから Planner のタスクやプランを作成・照会でき、管理がスムーズになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必須の対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot チャットで**Planner のタスクやプランの作成と、Planner 情報の照会**ができるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対応予定の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot チャットで Planner のタスクとプランを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot チャットで Planner の情報を照会できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Desktop", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner の Copilot 機能は、PowerShell の Set-PlannerConfiguration で有効・無効を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "Planner エージェントおよび Planner エージェント チャットへのアクセスを管理する", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "提供前に、利用対象のチームと Copilot ライセンスの状況を整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner", "term": "Planner", "type": "product", "oneLine": { "text": "チームの計画とタスクを管理する Microsoft 365 のアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップは「開発中」で、提供開始の月は示されていません。最新の状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者は Planner の Copilot 機能を制御できますか？",
+          "answer": {
+            "text": "Planner エージェントと Planner エージェント チャットは、PowerShell でオン・オフや特定のセキュリティ グループへの制限ができます。今回の Copilot チャット連携の管理方法は、提供が近づいた時点で公式情報を確認してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "source-only",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-21T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=516577",
+        "learn": [
+          { "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
