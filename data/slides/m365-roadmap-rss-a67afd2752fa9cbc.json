@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-a67afd2752fa9cbc",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio でコネクタを会話形式で構成可能に（開発中）",
+        "subtitleJa": "チャット内の簡単なサインインで、エージェントに必要なコネクタを設定できます",
+        "en": "Microsoft Copilot Studio: Conversational configuration of connectors in Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "完全な設定画面を使わず、チャット内のサインインでコネクタを構成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントに必要なコネクタを、**チャット内の簡単なサインイン**で構成できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象はコネクタの構成。チャット内のサインインで設定する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応プラットフォームは Desktop・Mac・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行のコネクタ ツールは、ユーザー認証情報を使う接続が既定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "既製コネクターからツールを追加してください", "retrievedAt": "2026-10-20T12:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現在の構成手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント → ツール → ツールの追加 → コネクタ → 新しい接続の作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "既製コネクターからツールを追加してください", "retrievedAt": "2026-10-20T12:40:00Z" }] },
+            { "text": "作成者の資格情報を使う設定も選べる（認証されたチャネルが前提）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "作成者が指定した資格情報でコネクタを使用する", "retrievedAt": "2026-10-20T12:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "connector", "term": "コネクタ", "type": "term", "oneLine": { "text": "API のラッパーとして、Copilot Studio などが他のアプリやサービスと通信できるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "冒頭", "retrievedAt": "2026-10-20T12:40:00Z" }] } },
+        { "termKey": "custom-connector", "term": "カスタム コネクタ", "type": "feature", "oneLine": { "text": "既存のコネクタでカバーされないサービスの公開 API に接続するためのコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "冒頭", "retrievedAt": "2026-10-20T12:40:00Z" }] } },
+        { "termKey": "tool", "term": "ツール", "type": "feature", "oneLine": { "text": "エージェントがコネクタを使って実行する特定の操作を表すもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "事前構築済みコネクタからエージェントにツールを追加する", "retrievedAt": "2026-10-20T12:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進行中の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供はいつ頃ですか？",
+          "answer": { "text": "ロードマップには開発中とだけ示されており、提供時期の月は公開されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在はコネクタをどう追加しますか？",
+          "answer": {
+            "text": "エージェントのツール ページで「ツールの追加」からコネクタを選び、必要に応じて新しい接続を作成します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locator": "既製コネクターからツールを追加してください", "retrievedAt": "2026-10-20T12:40:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569930",
+        "learn": [
+          { "title": "Power Platform コネクタを Copilot Studio エージェントのツールとして活用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/advanced-connectors", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
