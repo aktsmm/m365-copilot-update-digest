@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-f88f7a8fa9f7007d",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Dataverse テーブルをナレッジ ソースとして追加可能に（プレビュー含む）",
+        "subtitleJa": "組織の Dataverse データに基づいて、エージェントが回答できます",
+        "en": "Add Dataverse tables as a knowledge source to ground your agent in your organization's Dataverse data, including..."
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents", "work-iq"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Dataverse 環境の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Note / 複数行テキストおよびファイルの列を検索", "retrievedAt": "2026-10-20T00:10:00Z" }] },
+        "change": { "text": "メモ・説明・添付文書の内容にも、エージェントが答えられるようになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "複数行テキストおよびファイルの列を検索", "retrievedAt": "2026-10-20T00:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、Dataverse 検索の有効化と列の検索可能設定が先に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Note / Power Apps で Dataverse テーブルを構成する", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Dataverse テーブルを**ナレッジ**として追加でき、複数行テキストやファイル列の内容も回答の根拠にできます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "冒頭 / 複数行テキストおよびファイルの列を検索", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ナレッジ ソース 1 件につき、最大 15 個の Dataverse テーブルを追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "手順 5", "retrievedAt": "2026-10-20T00:10:00Z" }] },
+            { "text": "プレビューで、複数行テキストとファイル列の非構造化推論に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "複数行テキストおよびファイルの列を検索", "retrievedAt": "2026-10-20T00:10:00Z" }] },
+            { "text": "既定の検索対象は、テーブルの構造化された列", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "複数行テキストおよびファイルの列を検索", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントの認証は「Microsoft で認証」のみ。認証なし・手動認証は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "既知の制限", "retrievedAt": "2026-10-20T00:10:00Z" }] },
+            { "text": "Dataverse 検索が必須。検索インデックスの作成で追加の容量コストが発生", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Important", "retrievedAt": "2026-10-20T00:10:00Z" }] },
+            { "text": "添付ファイル（プレビュー）は、表・画像・組織の言語以外のテキストが非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "既知の制限", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "クイック検索ビューで、対象の列を「検索可能」にして発行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Power Apps で Dataverse テーブルを構成する", "retrievedAt": "2026-10-20T00:10:00Z" }] },
+            { "text": "列を設定する前に追加すると、反映に最大 2 日かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Note", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "絞り込みが必要な質問でテストし、回答が薄ければナレッジの説明を見直す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Tip", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dataverse", "term": "Dataverse", "type": "product", "oneLine": { "text": "Power Platform のデータ基盤で、テーブルにデータを格納し、エージェントのナレッジに使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "冒頭", "retrievedAt": "2026-10-20T00:10:00Z" }] } },
+        { "termKey": "knowledge-source", "term": "ナレッジ ソース", "type": "feature", "oneLine": { "text": "エージェントの回答の根拠となるデータの接続先です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "冒頭", "retrievedAt": "2026-10-20T00:10:00Z" }] } },
+        { "termKey": "dataverse-search", "term": "Dataverse 検索", "type": "feature", "oneLine": { "text": "このナレッジ ソースの利用に必要な、環境単位の検索機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Note", "retrievedAt": "2026-10-20T00:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "利用可能性がテナントやロールアウト グループによって異なる先行提供の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "末尾の注記", "retrievedAt": "2026-10-20T00:10:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "テーブルがリストに表示されないときは、何を確認しますか？",
+          "answer": { "text": "基になるデータへのアクセス権限が十分かを確認します。権限が不足していると、セットアップ時にテーブルが表示・選択できないことがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Troubleshooting", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+        },
+        {
+          "question": "Dataverse をナレッジに追加できないときは、誰が対応しますか？",
+          "answer": { "text": "環境の Dataverse 検索が有効かを管理者に確認してもらいます。検索・インデックスの設定は作成者自身では変更できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Note / Dataverse、Dynamics 365、アップロードされたファイルソースが利用できない場合", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+        },
+        {
+          "question": "同義語や用語集は設定できますか？",
+          "answer": { "text": "Dataverse ソースでは Copilot Studio 側の設定は不要です。Dataverse のテーブル メタデータと列の説明が検索時の照合に使われます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locator": "Dataverse ソースの同義語および用語集", "retrievedAt": "2026-10-20T00:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables",
+        "learn": [
+          { "title": "Dataverse テーブルをナレッジ ソースとして追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-dataverse-tables", "locale": "ja-jp" },
+          { "title": "Microsoft Dataverse からのコパイロットの応答を改善する", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-copilot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
