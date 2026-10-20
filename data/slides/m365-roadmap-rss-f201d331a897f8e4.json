@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f201d331a897f8e4",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "政府機関向けクラウドで PowerPoint の Copilot によるドキュメント編集が展開中",
+        "subtitleJa": "自然言語で、スライドの作成・編集・デザイン改善ができます",
+        "en": "Microsoft Copilot (Microsoft 365): Edit your document with Copilot in PowerPoint in Government Clouds"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["GCC High"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC High 環境で PowerPoint と Microsoft Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存のデッキの書式や構成を保ったまま、Copilot に編集を任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "管理者向けの必須作業は、ロードマップ上では示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "PowerPoint の中で Copilot に頼み、**スライド生成・内容更新・レイアウト改善・デザイン仕上げ**ができます。書式や構成は保たれます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "自然言語の指示で、デッキ内からスライドを生成・内容を更新できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "レイアウトの改善やデザインの仕上げも Copilot に依頼できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新規作成も、既存のプレゼンテーションへの追加もできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "GCC High 環境のテナントで、PowerPoint（デスクトップ / Web）を使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft Copilot は GCC High のテナント内で動作し、プロンプトや応答は政府機関向けクラウドに残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "政府機関向けクラウドでは、機能の可用性が商用環境と異なる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 365 と米国政府のクラウド環境の違い", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+            { "text": "リリースのタイミングは、通常、商用環境より遅れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 365 と米国政府のクラウド環境の違い", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象クラウドは GCC High、対応プラットフォームはデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "GCC High は、管理された非機密情報（CUI）を扱う米国国防機関や請負業者向けの環境", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境の概要", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存のデッキを下地に、構成や書式を保ったまま内容を磨く用途で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-powerpoint", "term": "Copilot in PowerPoint", "type": "feature", "oneLine": { "text": "自然言語で、スライドの作成・編集・デザイン改善を支援する PowerPoint 内の Copilot。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "gcc-high", "term": "GCC High", "type": "term", "oneLine": { "text": "コンプライアンスと主権の要件に対応する、より分離された米国政府向けクラウド環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境の概要", "retrievedAt": "2026-10-20T23:40:00Z" }] } },
+        { "termKey": "cui", "term": "CUI", "type": "term", "oneLine": { "text": "管理された非機密情報（Controlled Unclassified Information）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "GCC High を使用する場合", "retrievedAt": "2026-10-20T23:40:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "GCC High で Microsoft Copilot のデータはどこに残りますか？",
+          "answer": { "text": "プロンプト、応答、生成されたコンテンツは政府機関向けクラウドに残り、Copilot は基盤環境のセキュリティとコンプライアンス制御を継承します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+        },
+        {
+          "question": "商用環境と同じタイミングで使えますか？",
+          "answer": { "text": "政府機関向けクラウドの Copilot 機能は、商用環境とは異なるタイムラインで導入される場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566701",
+        "learn": [
+          { "title": "Microsoft 365 および Microsoft Copilot のための米国政府クラウド環境について", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
