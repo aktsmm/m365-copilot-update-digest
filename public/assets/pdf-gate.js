@@ -279,6 +279,25 @@ const MERGE_LIMIT = 1000;
     page.node.addAnnot(doc.context.register(annotation));
   }
 
+  // PDF のしおり（アウトライン）。目次ページに加えて、ビューアーの左ペインからも各アップデートへ飛べる
+  function addOutline(PDFLib, doc, items) {
+    if (items.length === 0) return;
+    const { PDFName, PDFHexString } = PDFLib;
+    const ctx = doc.context;
+    const pages = doc.getPages();
+    const rootRef = ctx.nextRef();
+    const refs = items.map(() => ctx.nextRef());
+    items.forEach((item, i) => {
+      const dict = ctx.obj({ Title: PDFHexString.fromText(item.title), Parent: rootRef, Dest: [pages[item.page].ref, PDFName.of("Fit")] });
+      if (i > 0) dict.set(PDFName.of("Prev"), refs[i - 1]);
+      if (i < items.length - 1) dict.set(PDFName.of("Next"), refs[i + 1]);
+      ctx.assign(refs[i], dict);
+    });
+    ctx.assign(rootRef, ctx.obj({ Type: "Outlines", First: refs[0], Last: refs[refs.length - 1], Count: items.length }));
+    doc.catalog.set(PDFName.of("Outlines"), rootRef);
+    doc.catalog.set(PDFName.of("PageMode"), PDFName.of("UseOutlines"));
+  }
+
   async function mergeVisible(button, status) {
     const seen = new Set();
     const visible = (window.digestVisibleEntries ? window.digestVisibleEntries() : []).filter((entry) => (seen.has(entry.key) ? false : seen.add(entry.key)));
@@ -298,6 +317,7 @@ const MERGE_LIMIT = 1000;
       const PDFLib = await loadPdfLib();
       const merged = await PDFLib.PDFDocument.create();
       await appendPdf(merged, "pdf/cover.pdf");
+      const outline = [{ title: "表紙", page: 0 }, { title: "目次・概要", page: merged.getPageCount() }];
       const keySet = new Set(keys);
       const entries = index.slides.filter((slide) => keySet.has(slide.key));
       const fallbacks = all
@@ -312,12 +332,14 @@ const MERGE_LIMIT = 1000;
       for (let i = 0; i < entries.length; i += 1) {
         status.textContent = `${i + 1} / ${entries.length}`;
         const entry = entries[i];
+        outline.push({ title: `【${entry.label}】${entry.title}`, page: merged.getPageCount() });
         const source = await PDFLib.PDFDocument.load(await fetchPdf(entry));
         const pages = await merged.copyPages(source, source.getPageIndices());
         pages.forEach((page) => merged.addPage(page));
       }
       for (let i = 0; i < fallbacks.length; i += 1) {
         status.textContent = `${entries.length + i + 1} / ${tocEntries.length}`;
+        outline.push({ title: `【${fallbacks[i].kindLabel || "更新"}】（簡易）${fallbacks[i].title}`, page: merged.getPageCount() });
         const made = await fallbackPage(fallbacks[i]);
         const image = await merged.embedPng(made.png);
         const page = merged.addPage([960, 540]);
@@ -325,6 +347,7 @@ const MERGE_LIMIT = 1000;
         if (made.link) addLinkAnnotation(PDFLib, merged, page, made.link, made.scale, made.height);
       }
       await appendPdf(merged, "pdf/end.pdf");
+      addOutline(PDFLib, merged, outline);
       const blob = new Blob([await merged.save()], { type: "application/pdf" });
       const anchor = document.createElement("a");
       anchor.href = URL.createObjectURL(blob);
