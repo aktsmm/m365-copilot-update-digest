@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6e774967267880ff",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "PowerPoint のエージェント モードで添付デッキのスタイルを参照可能に（Web）",
+        "subtitleJa": "既存デッキのテーマとスタイルを、新しいプレゼンテーションに引き継げます",
+        "en": "Microsoft Copilot (Microsoft 365): Reference an attached PowerPoint deck’s style when creating a new presentation with Agent Mode in PowerPoint"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "categories": ["agents", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint でプレゼンテーションを作成する Microsoft Copilot ユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存デッキのテーマとスタイルを新しいデッキに適用し、書式の一貫性を保てる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の対応は案内されていない。利用者は Web 版 PowerPoint で試せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェント モードで新規作成する際に**既存の PowerPoint ファイルを参照**でき、そのテーマとスタイルが新しいデッキに適用されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint の Copilot エージェント モードで新規作成時に、既存ファイルを参照する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "参照したファイルのテーマとスタイルが、新しいデッキに適用される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web 版 PowerPoint の Copilot エージェント モードで、新しいプレゼンテーションを依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スタイルを引き継ぎたい既存デッキを参照として指定する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "今回の提供プラットフォームは Web。提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "既存デッキのテキストやスタイル、テーマを再利用して作成・編集する機能もある（Windows、Web、Mac）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: 既存の PowerPoint プレゼンテーションからコンテンツとスタイルを再利用", "retrievedAt": "2026-10-20T21:10:00Z" }]
+            },
+            {
+              "text": "エージェント モードでは Teams の会議やチャットを参照してデッキを作成することもできる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: Teams の会議またはチャットを参照", "retrievedAt": "2026-10-20T21:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "社内テンプレートや過去の提案書を参照元にして、見た目の統一を保つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "agent-mode", "term": "エージェント モード", "type": "feature",
+          "oneLine": {
+            "text": "PowerPoint の Copilot でプレゼンテーションを作成する機能。Teams の会議やチャットも参照できる。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: Teams の会議またはチャットを参照", "retrievedAt": "2026-10-20T21:10:00Z" }]
+          }
+        },
+        {
+          "termKey": "copilot-in-powerpoint", "term": "Copilot in PowerPoint", "type": "product",
+          "oneLine": {
+            "text": "PowerPoint 内でプレゼンテーションの作成や編集を支援する Copilot。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: 既存の PowerPoint プレゼンテーションからコンテンツとスタイルを再利用", "retrievedAt": "2026-10-20T21:10:00Z" }]
+          }
+        },
+        { "termKey": "theme", "term": "テーマ", "type": "term", "oneLine": { "text": "デッキ全体の配色やフォントなど、見た目の書式をまとめたもの。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "同様の機能は Web 以外でも使えますか？",
+          "answer": {
+            "text": "リリース ノートでは、既存デッキの参照と再利用は Windows、Web、Mac 向けの機能として案内されています。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: 既存の PowerPoint プレゼンテーションからコンテンツとスタイルを再利用", "retrievedAt": "2026-10-20T21:10:00Z" }]
+          }
+        },
+        {
+          "question": "Teams の会議を参照する機能との違いは？",
+          "answer": {
+            "text": "Teams の機能は会議やチャットの内容を元にデッキを作ります。今回は既存デッキのスタイルを新しいデッキに引き継ぎます。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: Teams の会議またはチャットを参照", "retrievedAt": "2026-10-20T21:10:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555879",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
