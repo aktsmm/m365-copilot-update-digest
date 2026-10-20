@@ -73,6 +73,40 @@
         { "termKey": "streaming", "term": "ストリーミング", "type": "term", "oneLine": { "text": "応答を生成しながら順次表示する方式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot のライセンスがあれば、エージェント利用で追加課金されますか？",
+          "answer": {
+            "text": "Microsoft Copilot ライセンスのユーザーが Copilot Chat・Teams・SharePoint でエージェントを使う場合、クラシックの回答、生成回答、Microsoft Graph テナントの基礎づけは Copilot Studio のメッセージ パックやメーターにカウントされません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing",
+                "locator": "Microsoft Copilot の Copilot Studio",
+                "retrievedAt": "2026-10-20T22:25:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "エージェントの作成者には何のライセンスが必要ですか？",
+          "answer": {
+            "text": "Copilot Studio ユーザー ライセンス、Power Platform 管理センターの Copilot Studio 作成者ロール、Microsoft Copilot ライセンス、試用版ライセンスのいずれかが必要です。試用版では公開はできません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/billing-licensing",
+                "locator": "Copilot Studio で始める方法",
+                "retrievedAt": "2026-10-20T22:25:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570435",
         "learn": [{ "title": "Copilot Studioの新機能", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/whats-new", "locale": "ja-jp" }]
