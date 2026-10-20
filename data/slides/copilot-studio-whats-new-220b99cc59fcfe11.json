@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-220b99cc59fcfe11",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "ワークフローに Copilot ノードを追加可能に（プレビュー）",
+        "subtitleJa": "Copilot Chat や Cowork のタスクを、ワークフローの 1 ステップとして実行できます",
+        "en": "(Preview) Add a Copilot node to a workflow to run Copilot Chat or a Cowork task, grounded in the connected user's mail,..."
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-chat", "copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でワークフローを作る人**と、Microsoft Copilot を業務の自動化に使いたいチーム", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+        "change": { "text": "メール・ファイル・予定表・チャットに基づく Copilot の処理を、自動化に組み込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試す場合は、使用するアカウントの接続を選び、Copilot クレジットの消費に留意する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "Microsoft 365 アカウントでサインインする", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "ワークフローに **Copilot ノード**を追加し、Copilot Chat や Cowork のタスクを実行して、その応答を後続のステップで使えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Chat: 簡単な回答・要約・下書き。Researcher や Analyst などのエージェントも呼べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "チャットかコワークを選んでください", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "Cowork: アプリやデータにまたがる複雑な作業を委任。新規開始も再開も可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "チャットかコワークを選んでください", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "Chat・Cowork の応答は動的コンテンツとして後続ステップで利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "ワークフローにCopilotの応答を活用してください", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ノードは接続したユーザーとして動作し、そのユーザーが見られる Microsoft 365 の内容を使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "Cowork タスクは Copilot クレジットを使用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "チャットかコワークを選んでください", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "使用量ベースの課金が適用され、構築・テストでもクレジットを消費することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "冒頭の注記", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Chat の Agent 欄には、Researcher・Analyst・Agent Builder のエージェントが並ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "エージェントメニューにはどんなエージェントが表示されますか?", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "接続アカウントの権限範囲を確認してから、小さなワークフローで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "vs-agent-node",
+          "heading": "エージェント ノードとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ノードは Microsoft 365 の根拠付けが組み込み。エージェント ノードは Work IQ 経由で任意", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "Copilotノードとエージェントノードはいつ使うべきですか?", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "ワークフロー専用の指示・ツール・知識が必要なら、エージェント ノードを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "Copilotノードとエージェントノードはいつ使うべきですか?", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-node", "term": "Copilot ノード", "type": "feature", "oneLine": { "text": "ワークフローから Copilot Chat や Cowork のタスクを実行するためのノード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "cowork", "term": "Cowork", "type": "feature", "oneLine": { "text": "アプリ、データ、成果物にまたがる複雑な作業を委任するための機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "チャットかコワークを選んでください", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "agent-builder", "term": "Agent Builder", "type": "feature", "oneLine": { "text": "チームがカスタム エージェントを作成する場所。作成したエージェントは Chat から呼び出せる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "エージェントメニューにはどんなエージェントが表示されますか?", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "dynamic-content", "term": "動的コンテンツ", "type": "term", "oneLine": { "text": "前のステップの値を、メッセージやタスク指示に挿入するためのトークン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "メッセージを書き込む", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "ノードの記事に「プレビュー版」と明記された、正式提供前に試せる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "タイトル", "retrievedAt": "2026-10-20T12:00:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "ノードはどのユーザーの権限で動きますか？",
+          "answer": { "text": "接続で選んだ Microsoft 365 アカウントのユーザーとして動作します。そのユーザーが見られる内容はワークフローから使えるため、接続アカウントは慎重に選びます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "ノードは自分のMicrosoft 365コンテンツにアクセスできますか?", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+        },
+        {
+          "question": "応答は後続の処理にどう渡しますか？",
+          "answer": { "text": "動的コンテンツのピッカーで Copilot ステップの応答を選び、メール本文や Teams メッセージなどに挿入します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locator": "ワークフローにCopilotの応答を活用してください", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow",
+        "learn": [
+          { "title": "ワークフローに Copilot ノードを追加する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/microsoft-365-copilot-node-workflow", "locale": "ja-jp" },
+          { "title": "ワークフローにエージェントノードを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locale": "ja-jp" },
+          { "title": "デザイナーでワークフローを編集・管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/flow-designer", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
