@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
 import { escalatedIds, loadRetry } from "./lib/slide-retry.mjs";
+import { staleSlideIds } from "./lib/slide-stale.mjs";
 import { SLIDES_DIR, jstDate, selectSlideEvents, stableStringify } from "./lib/slides.mjs";
 
 // スライドがまだない更新の ID（直近 N か月・重要/注目・新しい順）を列挙する。標準出力に 1 行 1 ID。
@@ -26,12 +27,23 @@ const existing = new Set(
 );
 // 3 回続けて失敗した更新は保留にする（毎回先頭で再試行して枠を使い続けないため）。保守エージェントが直したら記録を消す。
 const held = new Set(escalatedIds(loadRetry(root)));
-const todo = selectSlideEvents(events, { months })
-  .filter((event) => !existing.has(event.id) && !held.has(event.id))
+// 公開中のスライドが、原文の変更（段階が進んだ、タイトルが変わった）で古くなった更新は、作り直す対象にする（先頭に並べる）
+const slides = new Map();
+for (const id of existing) {
+  try {
+    slides.set(id, JSON.parse(await fs.readFile(path.join(root, SLIDES_DIR, `${id}.json`), "utf8")).slides[0]);
+  } catch {
+    // 読めないファイルは検証が拾う
+  }
+}
+const stale = new Set(staleSlideIds(events, slides));
+const selected = selectSlideEvents(events, { months });
+const todo = [...selected.filter((event) => stale.has(event.id)), ...selected.filter((event) => !existing.has(event.id))]
+  .filter((event) => !held.has(event.id))
   .slice(0, limit)
   .map((event) => ({ id: event.id, publishedJst: jstDate(event.publishedAt), title: event.titleEn || event.title }));
 
 await fs.mkdir(path.dirname(out), { recursive: true });
 await fs.writeFile(out, stableStringify({ count: todo.length, items: todo }), "utf8");
 for (const item of todo) console.log(item.id);
-console.error(`slides pending: ${todo.length} (limit ${limit}, last ${months} months, ${held.size} held after repeated failures)`);
+console.error(`slides pending: ${todo.length} (limit ${limit}, last ${months} months, ${stale.size} stale, ${held.size} held after repeated failures)`);

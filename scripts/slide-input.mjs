@@ -58,6 +58,8 @@ const input = {
   snapshotDateJst: jstDate(new Date().toISOString()),
   // 前回までの試行が検証・描画確認で落ちた理由。同じ失敗を繰り返さないための情報（空なら初回）。
   previousFailures: previousFailures(loadRetry(root), event.id),
+  // true のとき、data/slides/{id}.json はすでにある。原文が変わった（段階が進んだ、タイトルが変わった）ので、現在の入力から作り直す。
+  regenerating: await fs.access(path.join(root, "data", "slides", `${event.id}.json`)).then(() => true, () => false),
 };
 
 await fs.mkdir(path.dirname(out), { recursive: true });
