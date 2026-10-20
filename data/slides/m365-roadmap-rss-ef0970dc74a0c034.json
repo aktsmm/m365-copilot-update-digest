@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ef0970dc74a0c034",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Researcher に複数 AI モデルを並行比較する Council（開発中）",
+        "subtitleJa": "複数の提供元のモデルの出力を 1 か所で比べられます",
+        "en": "Microsoft Copilot (Microsoft 365): Researcher Council"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Researcher で調査やレポート作成をする人**と、Microsoft Copilot の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "複数モデルの出力を並べて、合意点と相違点を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Researcher の **Council** が、複数の提供元の主要な AI モデルを並行実行します。ツールを切り替えずに出力を比較し、重要な判断に自信を持てます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "ロードマップ上の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Researcher 内で複数の提供元のモデルを並行して実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "出力を比較し、合意点と相違点を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はデスクトップと Web、Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は開発中で、内容は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在の Researcher でも、モデル ピッカーでモデルとモードを選択できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "リサーチ ツール内で使用するモデルを選択できますか?", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "エージェントの外で @Researcher を追加した場合、モデル ピッカーは無効で既定は自動", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "リサーチ ツール内で使用するモデルを選択できますか?", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は Microsoft 365 管理センターでリサーチ エージェントをブロックできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "管理者はリサーチ ツール エージェントを無効にするにはどうすればよいですか?", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "比較したい調査テーマを整理し、現行の Researcher の出力を把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "researcher", "term": "Researcher", "type": "feature", "oneLine": { "text": "複雑な複数ステップの調査を処理し、出典付きのレポートを作る Microsoft Copilot のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/researcher-agent", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "council", "term": "Council", "type": "feature", "oneLine": { "text": "Researcher で複数の提供元のモデルを並行実行し、出力を比較できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "model-picker", "term": "モデル ピッカー", "type": "term", "oneLine": { "text": "リサーチ エージェントのページ右上で、モデルとモードを選ぶ操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "リサーチ ツール内で使用するモデルを選択できますか?", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている提供前の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Council はいつ使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中の段階で、提供時期は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在の Researcher でモデルは選べますか？",
+          "answer": { "text": "はい。エージェント内では、ページ右上のモデル ピッカーでモデルとモードを選べます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "リサーチ ツール内で使用するモデルを選択できますか?", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "管理者はリサーチ エージェントを制御できますか？",
+          "answer": { "text": "はい。管理者はリサーチ エージェントをブロックでき、Web 検索の可否はテナント設定に従います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "管理と制御", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=553213",
+        "learn": [
+          { "title": "Microsoft Copilot でリサーチ ツール エージェントの使用を開始する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/researcher-agent", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot リサーチ エージェントについてよく寄せられる質問", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
