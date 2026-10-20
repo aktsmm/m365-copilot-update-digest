@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ad2a8a8ad51ee69a",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Queues アプリで通話後に Copilot Chat を利用可能に（展開中）",
+        "subtitleJa": "録音済みの通話を、文字起こしを探さずに Copilot で振り返れます",
+        "en": "Microsoft Teams: Use Copilot Chat after a call in Queues app"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Queues アプリで顧客対応を行うエージェントやリード**と、Teams 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "通話後に文字起こしや録音を探し直さず、Copilot で要点や洞察を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は、通話の Copilot 設定を Teams 通話ポリシーで確認しておく",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "Teams 通話用の Copilot を構成する", "retrievedAt": "2026-10-20T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "録音された通話の終了後、Queues アプリの**統合通話履歴から Copilot を使って**要点の把握や洞察の取得ができます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Queues アプリの統合通話履歴で、録音された通話を選択する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot で要点や洞察を取得し、顧客の問題を解決しやすくする", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Queues アプリの利用には Teams 電話と Teams Premium のライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "通話後に Copilot を使うには、Teams 通話ポリシーで文字起こしを有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "ポリシー", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Queues アプリは Web クライアントでは利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-20T00:00:00Z" }] },
+            { "text": "エンドツーエンド暗号化された通話では、通話の Copilot は使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "通話中のみ", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide（Standard Multi-Tenant）で、Targeted Release として展開中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応プラットフォームは Desktop と Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "通話後に顧客の問題を確認し、解決を早める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "まず少人数のキューで通話ポリシーと文字起こし設定を確認してから広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "queues-app", "term": "Queues アプリ", "type": "feature", "oneLine": { "text": "通話キューと自動応答の高度な通話機能を提供する Teams ネイティブのアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "teams-premium", "term": "Teams Premium", "type": "term", "oneLine": { "text": "Queues アプリの利用に必要なライセンスのひとつ（Teams 電話と併せて必要）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "calling-policy", "term": "Teams 通話ポリシー", "type": "term", "oneLine": { "text": "1 対 1 およびグループ通話での Copilot の利用を制御するポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "通話中および通話後", "retrievedAt": "2026-10-20T00:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Queues アプリを使うのに必要なライセンスは？",
+          "answer": { "text": "Teams 電話と Teams Premium のライセンスが必要です。ライセンス付与後、利用可能になるまで最大 48 時間かかる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        },
+        {
+          "question": "通話後に Copilot を使えるようにする管理設定は？",
+          "answer": { "text": "Teams 通話ポリシーで Copilot を有効にし、通話の文字起こしを有効にします。文字起こしがない場合、通話後の利用はできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locator": "ポリシー", "retrievedAt": "2026-10-20T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568933",
+        "learn": [
+          { "title": "organization の Microsoft Teams 用キュー アプリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locale": "ja-jp" },
+          { "title": "Teams 通話で Microsoft Copilot を管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-teams-calling-transcription", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
