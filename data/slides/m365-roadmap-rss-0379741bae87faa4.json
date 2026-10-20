@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0379741bae87faa4",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Agent 365: エージェントのコントロール プレーン（提供開始）",
+        "subtitleJa": "組織内のエージェントを、観測・管理・保護できます",
+        "en": "Microsoft Agent 365: the control plane for agents"
+      },
+      "meta": {
+        "publishedJst": "2026-08-29",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Agent 365", "Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**IT 管理者・セキュリティ管理者**と、エージェントの作成者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/", "locator": "冒頭", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+        "change": { "text": "Microsoft 365 内外のエージェントを、一元的に把握して管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "概要", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "機能によっては Microsoft 365 E7 または Agent 365 のサブスクリプションが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "使用できるプラン", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft 365 管理センター、Entra、Purview、Defender、Intune と連携し、**エージェントの検出・管理・保護**を一元化します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "概要・機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェント レジストリで、組織全体のエージェントを一覧で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-registry", "locator": "エージェント レジストリの表示", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+            { "text": "ポリシー テンプレートや条件ベースのルールで、ライフサイクルを管理・自動化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-365-overview", "locator": "機能の概要", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+            { "text": "Entra・Purview・Defender・Intune と連携して、ID・データ・脅威を保護", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理センターの「エージェント」→「すべてのエージェント」→「レジストリ」を開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-registry", "locator": "エージェント レジストリの表示", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+            { "text": "対象プランは Microsoft 365 E7 に含まれるほか、スタンドアロンでも購入できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "使用できるプラン", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ポリシー テンプレートや可観測性などは、E7 / G7 または Agent 365 が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+            { "text": "基本的なガバナンス操作とレジストリは、既存の Microsoft 365 プランに含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "レジストリには Microsoft・パートナー製・組織発行・作成者共有の 4 種類が並ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-registry", "locator": "エージェントの種類", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+            { "text": "Graph API でレジストリやガバナンス操作を扱える（Agent 365 が必要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まずレジストリで現状のエージェントを棚卸しし、所有者不在のものを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ルールベースで、所有者のいないエージェントにフラグを付けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-365-overview", "locator": "継続的なエージェント ガバナンスの自動化", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365", "term": "Microsoft Agent 365", "type": "product", "oneLine": { "text": "エージェントを検出・管理・保護するための、一元化されたコントロール プレーン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "概要", "retrievedAt": "2026-10-20T00:20:00Z" }] } },
+        { "termKey": "agent-registry", "term": "エージェント レジストリ", "type": "feature", "oneLine": { "text": "組織で使えるすべてのエージェントを管理センターで一元表示する一覧。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-registry", "locator": "冒頭", "retrievedAt": "2026-10-20T00:20:00Z" }] } },
+        { "termKey": "control-plane", "term": "コントロール プレーン", "type": "term", "oneLine": { "text": "エージェントを一元的に監視・管理・保護するための管理基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/", "locator": "冒頭", "retrievedAt": "2026-10-20T00:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "E7 を持っていなくても使えますか？",
+          "answer": { "text": "はい。レジストリと基本的なガバナンス操作は既存プランに含まれますが、ポリシー テンプレートや可観測性などは E7 / G7 または Agent 365 が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+        },
+        {
+          "question": "GCC でも使えますか？",
+          "answer": { "text": "多くの機能は GCC で利用できますが、Purview や Defender の一部など、利用できない機能もあります。詳細は機能の可用性の表を確認してください。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+        },
+        {
+          "question": "外部プラットフォームのエージェントも対象ですか？",
+          "answer": { "text": "はい。Agent 365 が管理していない外部プラットフォームから、エージェントとメタデータをレジストリに同期できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locator": "機能の可用性", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558448",
+        "learn": [
+          { "title": "Microsoft Agent 365", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/microsoft-agent-365/microsoft-agent-365", "locale": "ja-jp" },
+          { "title": "Microsoft 365 管理センターでのエージェント管理", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-365-overview", "locale": "ja-jp" },
+          { "title": "エージェント レジストリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-registry", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
