@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5f001865a7b78ce6",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams 管理センターで既存アプリ対応のエージェントを有効化（開発中）",
+        "subtitleJa": "使用中のサードパーティ アプリに対応するエージェントを、管理者が見つけて有効化できます",
+        "en": "Microsoft Teams: Enable agents for existing applications in your organization"
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams"],
+        "categories": ["agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 管理者**と、組織でサードパーティ アプリを使っているチーム", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "使用中のアプリに対応するエージェントを、Teams 管理センターから探して有効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供時に有効化の流れを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "組織で使用中のサードパーティ アプリに対応する**エージェントを Teams 管理センターで見つけて有効化**できます。有効化の流れで、推奨エージェントと必要な構成変更も確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "既存のサードパーティ アプリに対応する Teams エージェントを探して有効化", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "有効化の際に、価値の高いエージェントの推奨が表示される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理操作は Teams 管理センターの「アプリの管理」ページが中心", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、内容や提供時期は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams 管理センターの利用には Teams 管理者の役割が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-20T00:20:00Z" }] },
+            { "text": "管理できるのはテナントと同じリリース チャネルのエージェントとアプリのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "注意", "retrievedAt": "2026-10-20T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在のアプリの許可状況を「アプリの管理」ページで棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "有効化の流れで、必要な構成変更も事前に確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "teams-admin-center", "term": "Teams 管理センター", "type": "product", "oneLine": { "text": "エージェントとアプリを管理する専用ページと UI を備えた管理ポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-20T00:20:00Z" }] } },
+        { "termKey": "manage-apps", "term": "アプリの管理ページ", "type": "feature", "oneLine": { "text": "エージェントとアプリを確認し、組織全体で可用性を制御するページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-20T00:20:00Z" }] } },
+        { "termKey": "third-party-app", "term": "サードパーティ アプリ", "type": "term", "oneLine": { "text": "ユーザーが Teams にインストールして使える、Microsoft 以外が提供するアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "組織全体のアプリ設定の管理", "retrievedAt": "2026-10-20T00:20:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。決まり次第ロードマップで確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境が対象ですか？",
+          "answer": { "text": "Worldwide（Standard Multi-Tenant）と GCC が対象で、プラットフォームは Web です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569608",
+        "learn": [
+          { "title": "Teams 管理センターでのエージェントとアプリの管理とガバナンスの概要", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps#agent-and-app-governance", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
