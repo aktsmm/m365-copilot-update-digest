@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-100768e927f52174",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Cowork の Customer Service プラグインが提供開始",
+        "subtitleJa": "ケース対応の調査・要約・返信案づくりを、Cowork に任せられます",
+        "en": "Dynamics 365 Customer Service: Copilot and AI innovation - Use Copilot Cowork to orchestrate insights and actions for representatives"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Customer Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service のサービス担当者**と、Cowork の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ケースの優先順位付けや要約、返信案の作成を、アプリを切り替えずに進められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "冒頭", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者が Cowork の設定でプラグインを有効にすると、担当者が使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Cowork が**ケース対応の多段階の作業を代行**し、Dynamics 365 のケース データと Microsoft 365 のメール・会議・チャットを根拠に動きます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "冒頭 / 主な機能", "retrievedAt": "2026-10-20T23:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cowork が依頼を小さなステップに分け、Workspace パネルに進行状況を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "Cowork でスキルを使用する", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+            { "text": "ケースの優先順位付け、受付時の要約、根本原因の整理、ナレッジ記事の照合に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "返信案の作成や、次の担当者へのエスカレーション資料の作成にも対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Service アプリがユーザー（または Entra グループ）に割り当て済みであること", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "前提条件", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+            { "text": "Cowork の［カスタマイズ］で「Service」を検索し、トグルをオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "プラグインの有効化", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+            { "text": "Service プラグインの設定で、接続する Customer Service 環境を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "環境を選択する", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Cowork の利用権、Customer Service のライセンス、対象環境・記録への権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "前提条件", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+            { "text": "アプリのインストールだけでは、Cowork の有効化やデータ アクセスは許可されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "プラグインの有効化", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能・統制",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "変更は、Dynamics 365 に反映する前にチェックポイントで確認・承認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "主な機能", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+            { "text": "OneDrive に置くカスタム スキルで、チーム独自のルールに合わせられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "Cowork が使用するスキル", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "「48 時間以上顧客の返信待ちのオープン ケースを一覧にして」と依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "Cowork でスキルを使用する", "retrievedAt": "2026-10-20T23:40:00Z" }] },
+            { "text": "まず少人数の担当者で有効化し、要約や返信案の品質を確かめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "依頼を複数ステップに分けて実行し、プラグインやスキルを呼び出す Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "Cowork でスキルを使用する", "retrievedAt": "2026-10-20T23:40:00Z" }] } },
+        { "termKey": "service-plugin", "term": "Customer Service プラグイン", "type": "feature", "oneLine": { "text": "Cowork から Dynamics 365 Customer Service のケース ワークフローを任せるためのプラグイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "冒頭", "retrievedAt": "2026-10-20T23:40:00Z" }] } },
+        { "termKey": "checkpoint", "term": "チェックポイント", "type": "term", "oneLine": { "text": "担当者が提案された更新やアクションを確認・承認する、反映前の確認ポイント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "主な機能", "retrievedAt": "2026-10-20T23:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Cowork は担当者の権限を超えてデータにアクセスしますか？",
+          "answer": { "text": "いいえ。Cowork は、ユーザーまたはグループごとに設定済みの Dynamics 365 と Microsoft 365 のアクセス許可の範囲内で動作します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "主な機能", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+        },
+        {
+          "question": "ツールの実行に承認は必要ですか？",
+          "answer": { "text": "サービス関連のツール呼び出しは、Cowork が適用する前にユーザーの承認が必要になる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locator": "Note", "retrievedAt": "2026-10-20T23:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576851",
+        "learn": [
+          { "title": "Copilot Cowork でカスタマー サービス スキルを使用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/use-copilot-cowork-service-skills", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
