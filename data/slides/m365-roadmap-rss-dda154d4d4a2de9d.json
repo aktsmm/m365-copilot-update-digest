@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-dda154d4d4a2de9d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Planner エージェント チャットで AI 生成フィルターを保存可能に（開発中）",
+        "subtitleJa": "生成したフィルターを、今後のプランで再利用できるようになります",
+        "en": "Planner: Save AI-generated filters in Planner Agent chat"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Planner",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Planner のプランを AI で絞り込んで使う作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Planner エージェントが生成したフィルターを保存し、今後のプランで再利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Planner エージェントが生成した **AI フィルターを保存**し、今後のプランで繰り返し使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Planner エージェント チャットで生成した AI フィルターが保存の対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供対象は Worldwide（Standard Multi-Tenant）、Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Planner エージェント チャットは Premium プランの自然言語チャット機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-20T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-20T13:30:00Z" }] },
+            { "text": "管理者は Set-PlannerConfiguration の -AllowPlannerCopilot で利用を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-20T13:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "設定変更の反映に最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-20T13:30:00Z" }] },
+            { "text": "提供前に、対象ユーザーのライセンスとアクセス設定を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner-agent-chat", "term": "Planner エージェント チャット", "type": "feature", "oneLine": { "text": "Premium プランで使える、アプリ内の自然言語チャット（以前の「Copilot in Planner」）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-20T13:30:00Z" }] } },
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-20T13:30:00Z" }] } },
+        { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-20T13:30:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている提供前の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は Planner エージェント チャットを制限できますか？",
+          "answer": { "text": "はい。PowerShell の Set-PlannerConfiguration で、全ユーザーまたは特定のセキュリティ グループに対して有効・無効を切り替えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-20T13:30:00Z" }] }
+        },
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップ上は開発中の段階で、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566314",
+        "learn": [
+          { "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
