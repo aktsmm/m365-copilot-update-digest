@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6bf9e94f5d3e6186",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Notebooks で CSV・TSV を参照可能に（開発中）",
+        "subtitleJa": "構造化されたリストや表を、ノートブックの参照資料として使えます",
+        "en": "Microsoft Copilot (Microsoft 365): CSV and TSV references in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-08-12",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Notebooks で資料をまとめて成果物を作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "リストや表のデータを文脈として渡し、資料・レポート・概要を作りやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発中のため対応は不要。Copilot Notebooks の作成ポリシーは既定で有効",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要（既定値：有効）", "retrievedAt": "2026-10-20T20:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "CSV・TSV ファイルを**ナレッジ ソース**として追加し、従来の文書と並べて Copilot に参照させられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "CSV・TSV を Copilot Notebooks のナレッジ ソースとして追加できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "構造化されたリストや表を、従来の文書と同じプロジェクトに取り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プレゼンテーション・レポート・概要の生成で、追加の文脈として使われる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）。Android・iOS・デスクトップ・Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Notebooks の利用には Microsoft Copilot または Copilot Chat のライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-20T20:00:00Z" }] },
+            { "text": "ノートブックを共有すると、参照している全ファイルへのアクセスも付与される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/loop/cpcn-permission?view=o365-worldwide", "locator": "Sharing Mechanism", "retrievedAt": "2026-10-20T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "作成は「Copilot ページと Copilot ノートブックを作成して表示する」ポリシーで制御（既定は有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-20T20:00:00Z" }] },
+            { "text": "ポリシー変更の反映は、既存設定がある場合で最大 90 分、ない場合は最大 24 時間", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-20T20:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "ファイルや Teams 会議などを参照として集め、Copilot に文脈として使わせるノートブック機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes#august-25,-2026", "locator": "Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T20:00:00Z" }] } },
+        { "termKey": "csv-tsv", "term": "CSV / TSV", "type": "term", "oneLine": { "text": "表形式のデータを、カンマ区切り（CSV）またはタブ区切り（TSV）で保存したテキスト ファイル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "knowledge-source", "term": "ナレッジ ソース", "type": "term", "oneLine": { "text": "Copilot が回答や成果物の生成で根拠として参照する情報源。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes#august-25,-2026", "locator": "Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T20:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot Notebooks の利用に必要なライセンスは？",
+          "answer": { "text": "Microsoft Copilot または Copilot Chat のライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-20T20:00:00Z" }] }
+        },
+        {
+          "question": "組織で Copilot Notebooks を止めたい場合は？",
+          "answer": { "text": "クラウド ポリシーの「Copilot ページと Copilot ノートブックを作成して表示する」を無効にします。既存の項目は削除されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-20T20:00:00Z" }] }
+        },
+        {
+          "question": "これまで参照として追加できたものは？",
+          "answer": { "text": "8 月のリリース ノートでは、Teams 会議もナレッジ ソースとして追加できるようになったと案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes#august-25,-2026", "locator": "Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T20:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569210",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブックの要件", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locale": "ja-jp" },
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
