@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b86e9690d0dc6ac5",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Researcher に Critique 機能（GPT と Claude が連携、開発中）",
+        "subtitleJa": "GPT が下書きし、Claude がレビューして回答の質を高めます",
+        "en": "Microsoft Copilot (Microsoft 365): Critique in Researcher"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Researcher で調査レポートを作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "回答の正確性・網羅性・引用の信頼性が高まる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "GPT が最初の回答を作成し、Claude がレビューすることで、**回答の正確性・網羅性・引用の信頼性**を高めます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Researcher の回答を GPT と Claude が協力して生成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "GPT が最初の回答を作成し、Claude がレビューする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Desktop と Web（Worldwide Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供開始はまだ始まっていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Researcher は Web と作業コンテンツ（ファイル・メール・会議・チャット）の両方から分析情報を導く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/researcher-agent", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Researcher は Copilot Chat の［エージェント］から利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/researcher-agent", "locator": "リサーチ ツール エージェントはどこにありますか?", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "プロンプトを具体的にし、検索範囲を定義すると、より関連性の高いレポートになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/researcher-agent", "locator": "最適な結果を得るには?", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "researcher", "term": "Researcher", "type": "feature", "oneLine": { "text": "複雑な複数ステップの調査タスクを処理し、ソース引用付きのレポートを提供する Microsoft Copilot のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/researcher-agent", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "critique", "term": "Critique", "type": "feature", "oneLine": { "text": "GPT が作成した回答を Claude がレビューする、Researcher の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "gpt-claude", "term": "GPT / Claude", "type": "term", "oneLine": { "text": "Researcher の回答生成で連携する 2 つの AI モデル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Researcher は通常の Copilot チャットと何が違いますか？",
+          "answer": { "text": "Researcher は深い推論が必要な Web と作業にまたがる調査向けで、引用付きのレポートを作成します。簡単な要約や短い返信は標準の Copilot チャットが向いています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/researcher-agent", "locator": "標準の Copilot エクスペリエンスとどのように違いますか?", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558538",
+        "learn": [
+          { "title": "Microsoft Copilot でリサーチ ツール エージェントの使用を開始する", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/researcher-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
