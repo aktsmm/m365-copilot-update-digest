@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-29adc3460613b3bb",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Contact Center: 以前対応したエキスパートへ会話を自動割り当て",
+        "subtitleJa": "統合ルーティングで、顧客を事情を知る担当者につなぎ直せます",
+        "en": "Dynamics 365 Contact Center: Unified routing - Assign conversation to expert who engaged with the customer previously"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Contact Center",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Contact Center のルーティング管理者・設定担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "顧客を、すでに経緯を知るエキスパートへ再接続しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため今すぐの対応は不要。関連機能は Learn で確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "過去の対応履歴・キュー所属・エキスパートの空き状況をもとに、**以前対応した（または優先の）エキスパートへ自動で割り当て**ます。不在時は通常の割り当てに戻ります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "想定される範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "以前に関与した担当者・優先担当者への割り当てを、履歴とキュー所属に基づいて行う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連する Learn の機能では、割り当て前にプレゼンス・キュー所属・直近期間を検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "該当者が不在のときは、キューの割り当て方法で次善の担当者へ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中。提供時期・仕様は今後変わることがある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連する Learn の機能は、プレイブックを使う方式がプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "優先担当者へのルーティングは、プッシュベースのワークストリームの会話で機能する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "優先代表へのルーティングのしくみ", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "割り当てる担当者は、ルーティング先キューのメンバーである必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "現行の優先担当者ルーティングの設定を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "preferred-expert", "term": "優先担当者", "type": "feature", "oneLine": { "text": "連絡先にマップされた担当者。1 つの連絡先に最大 3 人まで設定できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "連絡先の優先担当者を構成する", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "playbook", "term": "会話オーケストレーション プレイブック", "type": "feature", "oneLine": { "text": "自然言語で割り当てロジックを定義する仕組み。優先順位やルックバック期間を設定できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供開始前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのくらい前の対応まで遡れますか？",
+          "answer": { "text": "関連する Learn の説明では、直近期間は 7・10・30 日などで設定でき、上限は 30 日です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "優先担当者は何人まで設定できますか？",
+          "answer": { "text": "既存の優先代表ルーティングでは、1 つの連絡先に最大 3 人まで設定でき、上位から順に割り当てられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "連絡先の優先担当者を構成する", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576746",
+        "learn": [{ "title": "優先担当者または以前に関与した担当者へのルーティングを構成する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
