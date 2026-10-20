@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-42650e54e9a81d92",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio エージェントで MPIP 保護の機密ファイルに対応（開発中）",
+        "subtitleJa": "秘密度ラベル付きファイルを、M365 チャネルのエージェントへアップロードできるようになります",
+        "en": "Microsoft Copilot Studio: Support for sensitive documents protected with Microsoft Purview Information Protection (MPIP)"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Purview の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "秘密度ラベル付きファイルをアップロードでき、ラベルの保護がエンドツーエンドで適用される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で対応は不要。提供開始に備えてラベル運用を確認", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "M365 チャネルのエージェントに、MPIP の秘密度ラベル付きファイルをアップロードできます。エージェントはユーザーまたはエージェントのアカウント権限でコンテンツを処理します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対応の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MPIP の秘密度ラベル付きファイルのアップロードを、エージェントで可能にする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は M365 チャネルに展開した Copilot Studio エージェント", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ラベルによる保護がエンドツーエンドで適用される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中のステージ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ラベルが暗号化を適用する場合、ユーザーに EXTRACT 使用権と VIEW の両方が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio", "locator": "Microsoft Purview により、Copilot Studio の情報保護が強化されます", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存のナレッジ ソースでは、応答にシールド アイコンと最も機密性の高いラベルが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio", "locator": "Microsoft Purview により、Copilot Studio の情報保護が強化されます", "retrievedAt": "2026-10-20T11:30:00Z" }] },
+            { "text": "Purview で使っている秘密度ラベルと暗号化の設定を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mpip", "term": "MPIP", "type": "term", "oneLine": { "text": "Microsoft Purview Information Protection の略で、秘密度ラベルによる情報保護の仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "sensitivity-label", "term": "秘密度ラベル", "type": "feature", "oneLine": { "text": "組織のデータを分類・保護するためのラベルで、個人用・社外秘・極秘などを作成して適用できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio", "locator": "冒頭", "retrievedAt": "2026-10-20T11:30:00Z" }] } },
+        { "termKey": "extract", "term": "EXTRACT 使用権", "type": "term", "oneLine": { "text": "暗号化ラベル付きデータをエージェントが返すために、ユーザーが VIEW とともに必要とする権限。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio", "locator": "Microsoft Purview により、Copilot Studio の情報保護が強化されます", "retrievedAt": "2026-10-20T11:30:00Z" }] } },
+        { "termKey": "in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能が開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップのステージは開発中で、提供月は示されていません。時期はロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在の秘密度ラベル対応との違いは？",
+          "answer": { "text": "現行の Learn では、サポート対象ナレッジ ソースでの応答や引用のラベル表示が説明されています。今回の更新はファイルのアップロードを可能にするものです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio", "locator": "Microsoft Purview により、Copilot Studio の情報保護が強化されます", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+        },
+        {
+          "question": "暗号化ラベルでも使えますか？",
+          "answer": { "text": "暗号化を適用するラベルでは、エージェントがデータを返すためにユーザーに EXTRACT 使用権と VIEW が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio", "locator": "Microsoft Purview により、Copilot Studio の情報保護が強化されます", "retrievedAt": "2026-10-20T11:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571305",
+        "learn": [
+          { "title": "エージェントの応答で機密ラベルを確認する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio", "locale": "ja-jp" },
+          { "title": "Microsoft Purview で Copilot Studio のデータ セキュリティとコンプライアンスを管理する", "url": "https://learn.microsoft.com/ja-jp/purview/ai-copilot-studio", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
