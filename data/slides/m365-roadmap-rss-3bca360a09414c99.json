@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3bca360a09414c99",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio エージェントの Copilot Chat 上での体験を改善（開発中）",
+        "subtitleJa": "Microsoft Copilot で使うエージェントの応答が、Copilot Chat に近い見た目と操作感になります",
+        "en": "Microsoft Copilot Studio: Streamlining experiences from Copilot Studio Agents in Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot Studio", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot で Copilot Studio エージェントを使う**エンド ユーザーと、エージェントの作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントの応答が Copilot Chat と同様の見た目・操作感になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は開発中の段階で、現時点で必要な対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントの応答が **Copilot Chat と同様の書式・圧縮された思考の連鎖**で表示され、ストリーミングや再開・再試行、音声入力も滑らかになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "見た目：Copilot Chat に近い書式と、圧縮された思考の連鎖（chain of thought）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "操作感：より滑らかなストリーミング、再開・再試行、音声入力", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供状況は Microsoft 365 ロードマップで確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Studio の新機能ページで、リリース済みの変更を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/whats-new", "locator": "リリースされたバージョン", "retrievedAt": "2026-10-19T23:25:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "エージェントを作成・管理する Microsoft のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/whats-new", "locator": "概要", "retrievedAt": "2026-10-19T23:25:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "Microsoft Copilot で AI と対話するチャット体験。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "streaming", "term": "ストリーミング", "type": "term", "oneLine": { "text": "応答を生成しながら順次表示する方式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570435",
+        "learn": [{ "title": "Copilot Studioの新機能", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/whats-new", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
