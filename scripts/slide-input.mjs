@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { annotateEvent, loadCategoryConfig } from "./lib/classify.mjs";
 import { applyAgentSummaries, loadAgentSummaries } from "./lib/agent-summaries.mjs";
+import { loadRetry, previousFailures } from "./lib/slide-retry.mjs";
 import { KIND_LABEL, PANEL_TEMPLATE, jstDate, slideKind, stableStringify } from "./lib/slides.mjs";
 
 // gh-aw のスライド生成エージェントへの入力 .work/slide-input.json を作る。エージェントは data/events へ直接接続しない。
@@ -55,6 +56,8 @@ const input = {
   existingTitleJa: event.summaryBy === "agent" ? event.titleJa : null,
   verifiedLearnCandidates: (event.relatedDocuments || []).map((doc) => ({ title: doc.title, url: doc.url })),
   snapshotDateJst: jstDate(new Date().toISOString()),
+  // 前回までの試行が検証・描画確認で落ちた理由。同じ失敗を繰り返さないための情報（空なら初回）。
+  previousFailures: previousFailures(loadRetry(root), event.id),
 };
 
 await fs.mkdir(path.dirname(out), { recursive: true });
