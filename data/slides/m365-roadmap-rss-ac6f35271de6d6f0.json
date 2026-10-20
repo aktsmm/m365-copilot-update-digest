@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ac6f35271de6d6f0",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview Compliance Manager が Foundry エージェントの評価に対応（開発中）",
+        "subtitleJa": "Foundry で作成したエージェントのコンプライアンス状況を確認できます",
+        "en": "Microsoft Purview: Compliance Manager-Purview Compliance Manager integration with Microsoft Foundry for automated mapping of AI regulations and evaluation of Compliance controls for Foundry Agents"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview のコンプライアンス管理者**と、Foundry でエージェントを作る人", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "コンプライアンス マネージャーでの AI アプリとエージェントの自動評価", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+        "change": { "text": "Foundry エージェントを AI 規制や評価にマッピングし、状況を確認・改善できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "提供前のため対応は不要。利用時は Azure の RBAC ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "前提条件", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Foundry のエージェントを**規制や評価にマッピング**し、コンプライアンス状況を自動で把握できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Foundry で作成したエージェントのコンプライアンス状況に自動でアクセス", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "EU AI 法、NIST AI RMF などの AI 規制に対する組み込みの評価を利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "AI アプリとエージェントの自動評価", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "評価結果は AI Foundry から Compliance Manager に直接同期される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "AI アプリとエージェントの自動評価", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階の機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure AI Project Manager または Azure AI ユーザー RBAC ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "前提条件", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "対象は Worldwide (Standard Multi-Tenant)、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Foundry の 75 アクションのうち 15 の自動評価アクションを定期的に同期", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "主な機能", "retrievedAt": "2026-10-20T12:00:00Z" }] },
+            { "text": "自動アクションは設定で手動アクションに変換できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "主な機能", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "compliance-manager", "term": "コンプライアンス マネージャー", "type": "product", "oneLine": { "text": "評価を通じて、業界や地域の規制に対するコンプライアンスを評価できる Purview の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "foundry", "term": "Azure AI Foundry", "type": "product", "oneLine": { "text": "AI モデルとエージェントを扱う基盤で、Compliance Manager と統合して評価を自動化する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "AI アプリとエージェントの自動評価", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "assessment", "term": "評価", "type": "term", "oneLine": { "text": "規制テンプレートの制御と改善アクションを使い、コンプライアンスを評価する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "冒頭", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "自動評価を使うために必要な権限は？",
+          "answer": { "text": "関連する AI Foundry アカウントに対する Azure AI Project Manager または Azure AI ユーザーの RBAC ロールが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "前提条件", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+        },
+        {
+          "question": "Foundry にアクセスできない組織は使えませんか？",
+          "answer": { "text": "手動更新がサポートされており、AI Foundry にアクセスできない組織でも更新できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments", "locator": "主な機能", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=536576",
+        "learn": [
+          { "title": "コンプライアンス マネージャーで評価を構築および管理する", "url": "https://learn.microsoft.com/ja-jp/purview/compliance-manager-assessments#automatic-assessments-for-ai-apps-and-agents-in-compliance-manager", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
