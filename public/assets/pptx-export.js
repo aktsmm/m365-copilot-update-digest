@@ -38,11 +38,24 @@
     });
   }
 
+  // 全角を 1、半角を約 0.55 文字幅として、枠に収まる最大のフォントサイズ（pt）を見積もる。
+  // fit: "shrink" は PowerPoint が再計算するまで効かず、ビューアーでは枠からあふれるため、書き出し時に決める。
+  const emWidth = (text) => [...String(text)].reduce((sum, ch) => sum + (ch.charCodeAt(0) < 256 ? 0.55 : 1), 0);
+  function fitSize(texts, w, h, start, min, extraLines, indentPt) {
+    const avail = Math.max(10, (w - 0.2) * 72 - (indentPt || 0));
+    for (let size = start; size > min; size -= 0.5) {
+      const count = texts.reduce((sum, text) => sum + Math.max(1, Math.ceil((emWidth(text) * size * 1.06) / avail)), extraLines || 0);
+      if ((count * size * 1.3) / 72 + 0.14 <= h) return size;
+    }
+    return min;
+  }
+
   function card(s, x, y, w, h, heading, lines, color, dashed) {
+    const size = fitSize(lines.map(plain), w, h, 11, 7, 1.3, 14);
     const body = lines.flatMap((line, i) => [
-      ...runs(line, { fontSize: 11, color: "1B2430", bullet: { indent: 12 }, breakLine: i < lines.length - 1 }),
+      ...runs(line, { fontSize: size, color: "1B2430", bullet: { indent: 12 }, breakLine: i < lines.length - 1 }),
     ]);
-    s.addText([{ text: heading, options: { fontSize: 12, bold: true, color, breakLine: true } }, ...body], {
+    s.addText([{ text: heading, options: { fontSize: Math.min(12, size + 1), bold: true, color, breakLine: true } }, ...body], {
       x, y, w, h, fontFace: FONT, valign: "top", margin: 5, fit: "shrink",
       line: { color: dashed ? "D9A441" : "B8C7DC", width: 1.25, dashType: dashed ? "dash" : "solid" },
     });
@@ -51,7 +64,8 @@
   function addSlide(pptx, slide) {
     const s = pptx.addSlide();
     const color = KIND_COLOR[slide.kind] || "5B6777";
-    s.addText(slide.title.ja + (slide.title.subtitleJa ? `\n― ${slide.title.subtitleJa}` : ""), { x: 0.4, y: 0.2, w: 10.8, h: 0.95, fontFace: FONT, fontSize: 22, bold: true, color: "0B2A4A", valign: "top", fit: "shrink" });
+    const titleSize = fitSize([slide.title.ja, ...(slide.title.subtitleJa ? [`― ${slide.title.subtitleJa}`] : [])], 10.8, 0.95, 22, 12, 0);
+    s.addText(slide.title.ja + (slide.title.subtitleJa ? `\n― ${slide.title.subtitleJa}` : ""), { x: 0.4, y: 0.2, w: 10.8, h: 0.95, fontFace: FONT, fontSize: titleSize, bold: true, color: "0B2A4A", valign: "top", fit: "shrink" });
     s.addText(slide.label, { x: 11.5, y: 0.25, w: 1.5, h: 0.42, fontFace: FONT, fontSize: 14, bold: true, color: "FFFFFF", align: "center", fill: { color }, shape: pptx.ShapeType.roundRect, rectRadius: 0.2 });
     s.addText(`${slide.title.en}　掲載 ${slide.meta.publishedJst}`, { x: 0.4, y: 1.15, w: 12.5, h: 0.28, fontFace: FONT, fontSize: 9, color: "6B778A", fit: "shrink" });
 
@@ -61,7 +75,8 @@
       ["対応の要否", `${ACT[slide.action.required] || ""}　${slide.action.summary.text}`, ACT_LINE[slide.action.required] || "0B6BCB", false],
     ];
     imp.forEach(([label, text, line, bold], i) => {
-      s.addText([{ text: `${label}\n`, options: { fontSize: 9, color: "5B6777" } }, ...runs(text, { fontSize: 11, color: "0B2A4A", bold })], {
+      const size = fitSize([plain(text)], 4.1, 0.72, 11, 7, 1.1);
+      s.addText([{ text: `${label}\n`, options: { fontSize: Math.min(9, size), color: "5B6777" } }, ...runs(text, { fontSize: size, color: "0B2A4A", bold })], {
         x: 0.4 + i * 4.2, y: 1.48, w: 4.1, h: 0.72, fontFace: FONT, valign: "top", margin: 4, line: { color: line, width: 1.25 }, fit: "shrink",
       });
     });
@@ -74,7 +89,8 @@
     const ba = slide.beforeAfter && (slide.beforeAfter.before || slide.beforeAfter.after);
     if (ba) {
       const lines = [slide.beforeAfter.before && `Before: ${plain(slide.beforeAfter.before.text)}`, slide.beforeAfter.after && `${slide.beforeAfter.before ? "After" : "できるようになること"}: ${plain(slide.beforeAfter.after.text)}`].filter(Boolean);
-      s.addText([{ text: `${slide.beforeAfter.before ? "Before → After" : "何が嬉しいのか"}\n`, options: { fontSize: 12, bold: true, color: "0B6BCB" } }, ...lines.map((l, i) => ({ text: l, options: { fontSize: 11, color: "1B2430", breakLine: i < lines.length - 1 } }))], {
+      const baSize = fitSize(lines, 8.4, 0.85, 11, 7, 1.3);
+      s.addText([{ text: `${slide.beforeAfter.before ? "Before → After" : "何が嬉しいのか"}\n`, options: { fontSize: Math.min(12, baSize + 1), bold: true, color: "0B6BCB" } }, ...lines.map((l, i) => ({ text: l, options: { fontSize: baSize, color: "1B2430", breakLine: i < lines.length - 1 } }))], {
         x: 0.4, y, w: 8.4, h: 0.85, fontFace: FONT, valign: "top", margin: 5, fit: "shrink", fill: { color: "F3F8FF" }, line: { color: "0B6BCB", width: 1.25 },
       });
       y += 0.92;
@@ -94,7 +110,8 @@
 
     let sy = 2.3;
     if ((slide.glossary || []).length) {
-      const lines = slide.glossary.flatMap((g) => [{ text: `${g.term}　`, options: { bold: true, fontSize: 10, color: "0B2A4A" } }, { text: `${g.oneLine.text}\n`, options: { fontSize: 9.5, color: "1B2430" } }]);
+      const gs = fitSize(slide.glossary.map((g) => `${g.term}　${g.oneLine.text}`), 3.95, 3.4, 9.5, 6.5, 1.3);
+      const lines = slide.glossary.flatMap((g) => [{ text: `${g.term}　`, options: { bold: true, fontSize: gs + 0.5, color: "0B2A4A" } }, { text: `${g.oneLine.text}\n`, options: { fontSize: gs, color: "1B2430" } }]);
       s.addText([{ text: "用語ミニ解説\n", options: { fontSize: 12, bold: true, color: "0B6BCB" } }, ...lines], { x: 9.0, y: sy, w: 3.95, h: 3.4, fontFace: FONT, valign: "top", margin: 5, fit: "shrink", fill: { color: "F1F7FF" }, line: { color: "7AA7D9", width: 1.25 } });
       sy += 3.5;
     }
@@ -123,7 +140,7 @@
   function addFallbackSlide(pptx, entry) {
     const s = pptx.addSlide();
     const color = KIND_COLOR[entry.kind] || "5B6777";
-    s.addText(entry.title, { x: 0.4, y: 0.2, w: 10.8, h: 1.1, fontFace: FONT, fontSize: 22, bold: true, color: "0B2A4A", valign: "top", fit: "shrink" });
+    s.addText(entry.title, { x: 0.4, y: 0.2, w: 10.8, h: 1.1, fontFace: FONT, fontSize: fitSize([entry.title], 10.8, 1.1, 22, 12, 0), bold: true, color: "0B2A4A", valign: "top", fit: "shrink" });
     s.addText(entry.kindLabel || "更新", { x: 11.5, y: 0.25, w: 1.5, h: 0.42, fontFace: FONT, fontSize: 14, bold: true, color: "FFFFFF", align: "center", fill: { color }, shape: pptx.ShapeType.roundRect, rectRadius: 0.2 });
     s.addText("簡易版（要約のみ）", { x: 11.0, y: 0.75, w: 2.0, h: 0.3, fontFace: FONT, fontSize: 10, color: "51607A", align: "center", fill: { color: "EEF2F7" } });
     const meta = ["発行 " + entry.publishedJst, entry.source, entry.product, entry.ids.length ? "ID " + entry.ids.join(", ") : ""].filter(Boolean).join("　／　");
