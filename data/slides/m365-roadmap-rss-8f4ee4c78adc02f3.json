@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8f4ee4c78adc02f3",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Teams 会議・通話のインタラクティブ エージェントの展開を中止",
+        "subtitleJa": "再検討の結果、現時点では展開を継続できないと案内されています",
+        "en": "Microsoft Teams: Interactive Agents for Teams Meetings and Calls"
+      },
+      "meta": {
+        "publishedJst": "2026-08-18",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Teams"],
+        "categories": ["agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議や通話でエージェントの利用を想定していた作成者**と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "この機能は現時点では展開を継続できない、と案内されている", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "展開が行われないため、管理者側で必要な設定変更は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Teams の会議や 1 対 1 通話に**インタラクティブ エージェントを組み込む機能**は、再検討の結果、現時点では展開を継続できないと案内されています", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "グループまたは個別でエージェントを利用できる機能として予定されていた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "状態プロンプトなしの利用や履歴のサポートが想定されていた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象: デスクトップ版、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この機能を前提にした展開計画や案内がある場合は見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "会議や通話でボットを使うなら、Teams の通話・会議ボットの仕組みが参考になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/bots/calls-and-meetings/calls-meetings-bots-overview", "locator": "冒頭", "retrievedAt": "2026-10-20T19:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "interactive-agent", "term": "インタラクティブ エージェント", "type": "feature", "oneLine": { "text": "Teams の会議や 1 対 1 通話で、グループまたは個別に対話できるエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "teams-calls-meetings-bot", "term": "通話・会議ボット", "type": "term", "oneLine": { "text": "リアルタイムの音声、ビデオ、画面共有で Teams の通話や会議と対話できるボット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/bots/calls-and-meetings/calls-meetings-bots-overview", "locator": "冒頭", "retrievedAt": "2026-10-20T19:55:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了や中止を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "すでに利用している機能が使えなくなりますか？",
+          "answer": { "text": "ロードマップは、この機能の展開を現時点では継続できないと案内しています。既存機能の停止を示す記載はありません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Teams の会議や通話でボットを動かす方法はありますか？",
+          "answer": { "text": "Teams の通話・会議ボットは Microsoft Graph の通話と会議 API を使って通話や会議と対話します。今回の機能の代替として案内されたものではありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/bots/calls-and-meetings/calls-meetings-bots-overview", "locator": "冒頭", "retrievedAt": "2026-10-20T19:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=490564",
+        "learn": [
+          { "title": "通話とオンライン会議のボット", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/bots/calls-and-meetings/calls-meetings-bots-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
