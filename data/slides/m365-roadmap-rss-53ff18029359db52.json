@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-53ff18029359db52",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "PowerPoint の Copilot エージェント モードで画像を参照可能に（提供開始）",
+        "subtitleJa": "画像を添付して、プレゼンテーション作成の手がかりにできます",
+        "en": "Microsoft Copilot (Microsoft 365): Attach and reference an image when creating a presentation with Copilot in PowerPoint using Agent Mode."
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "PowerPoint", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "PowerPoint の Copilot エージェント モードを使う**資料の作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "画像を添付して参照させ、プレゼンテーションを作れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の作業は案内されていない。利用者は添付して使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot のエージェント モードでプレゼンテーションを作るとき、**画像を添付して参照**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint のエージェント モードで、画像を参照しながらプレゼンテーションを作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲はロードマップ上、Web 版・Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web 版 PowerPoint で Copilot のエージェント モードを開き、画像を添付して依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の提供範囲は Web のみ（Worldwide）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント モードでは Teams 会議やチャットを参照してプレゼンテーションを作成することも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: Teams 会議またはチャットを参照", "retrievedAt": "2026-10-20T13:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "手元の図やスクリーンショットを添付し、資料の素材として試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "エージェント モード", "type": "feature", "oneLine": { "text": "PowerPoint の Copilot で、Work IQ や Teams の会話などを使ってプレゼンテーションを作成できるモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint", "retrievedAt": "2026-10-20T13:20:00Z" }] } },
+        { "termKey": "powerpoint-copilot", "term": "Copilot in PowerPoint", "type": "product", "oneLine": { "text": "PowerPoint 内でプレゼンテーションの作成を支援する Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint", "retrievedAt": "2026-10-20T13:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "ロードマップ上の提供範囲は Web で、クラウドは Worldwide（標準マルチテナント）です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "画像以外も参照できますか？",
+          "answer": {
+            "text": "エージェント モードでは、Teams 会議やチャットを参照したプレゼンテーション作成も案内されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint", "retrievedAt": "2026-10-20T13:20:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555882",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
