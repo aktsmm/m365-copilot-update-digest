@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-64ef9ec2bed3e9c4",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot の回答内で選択した部分について質問可能に（開発中）",
+        "subtitleJa": "回答の一文・段落・表だけを対象に、Copilot へ依頼できます",
+        "en": "Microsoft Copilot (Microsoft 365): Ask Copilot about highlighted response content"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の回答を読み込んで使う人**（Web 版）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "長い回答の特定の箇所だけを深掘りでき、的外れに広い回答を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応は案内されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "回答内の**文・段落・表を選択**して、その部分だけを対象に Copilot へ依頼できます。選択内容はプロンプトにプレビューされます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "選択した文・段落・表だけを対象に Copilot へ依頼できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "説明、要約、翻訳、次のステップの提案を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "選択内容がプロンプトにプレビューされ、送信前に編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「開発中」で、提供時期は未定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Web、クラウドは Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備・次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの更新を確認し、提供開始時に利用者へ案内する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "selection-ask", "term": "選択部分への質問", "type": "feature", "oneLine": { "text": "回答内の文・段落・表を選び、その部分だけを対象に Copilot へ依頼する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "prompt-preview", "term": "プロンプトのプレビュー", "type": "feature", "oneLine": { "text": "選択した内容がプロンプトに表示され、送信前に編集できる仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示すステージ（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=522616",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
