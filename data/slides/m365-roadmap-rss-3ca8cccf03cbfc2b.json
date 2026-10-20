@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3ca8cccf03cbfc2b",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Teams パネルでデジタル サイネージに対応（展開中）",
+        "subtitleJa": "待機中のパネルに、会議室の前面ディスプレイと同じサイネージを表示できます",
+        "en": "Microsoft Teams: Digital signage support for Teams panels"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Teams"],
+        "categories": ["teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams パネルを会議室の外に設置している組織**の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "待機中のパネルに、社内ニュースやイベント情報などのサイネージを表示できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するなら、管理ポータルで表示設定とコンテンツの割り当てを行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "セットアップと管理", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議室の前面ディスプレイ向けのサイネージを、**Teams パネルでも表示**できます。表示の可否は管理ポータルの設定で選べます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "冒頭、基本設定", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "パネルが待機中のとき、サイネージ モードでコンテンツを全画面表示する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "コンテンツはサード パーティのコンテンツ管理システムから管理・更新する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "セットアップと管理", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デジタル サイネージの基本設定で「Teams パネルにサイネージを表示する」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "基本設定", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "既定は「いいえ」。「はい」でパネルと前面ディスプレイ、「パネルにのみ表示」でパネルだけに表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "基本設定", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "パネルの非アクティブ化タイマーは 0〜100 分（既定 5 分）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "基本設定", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams パネル 1449/1.0.97.2026286706 以降と Teams Rooms Pro ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "GCC・GCC-H・DoD・マルチテナント管理ポータルでは未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "サポートされていないクライアントと環境", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "展開中。対象クラウドは Worldwide、プラットフォームは Android", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "一部のデバイス モデルで、有効時にスリープ モードにならない既知の問題がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "既知の問題と制限事項", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "小さい画面向けのコンテンツを使い、画面上部 15% には文字や画像を置かない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "ヒント", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "まず少数のパネルで表示を確認してから、対象を広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "teams-panel", "term": "Teams パネル", "type": "product", "oneLine": { "text": "会議室の外などに設置し、会議室の情報を表示する Teams デバイス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "digital-signage", "term": "デジタル サイネージ", "type": "feature", "oneLine": { "text": "使われていない間に、ニュースやイベントなどの動的なコンテンツを表示する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "rooms-pro", "term": "Teams Rooms Pro", "type": "product", "oneLine": { "text": "デバイスの構成と管理に使う、Teams Rooms Pro ライセンスと管理ポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-rolling", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "サイネージのコンテンツはどこで管理しますか？",
+          "answer": { "text": "サード パーティのコンテンツ管理システムで管理・更新します。デバイス側の表示設定は Teams Rooms Pro 管理ポータルで行います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "セットアップと管理", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "政府機関向けクラウドでも使えますか？",
+          "answer": { "text": "現時点では、GCC、GCC-H、DoD では使用できないと記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locator": "サポートされていないクライアントと環境", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=558852",
+        "learn": [{ "title": "Teams Rooms でデジタル サイネージを構成する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/digital-signage", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
