@@ -100,5 +100,10 @@ Do not modify any file other than `data/summaries/*.json`.
 
 ## Finish
 
-1. Run `npm run validate:data`. If it reports problems in files you wrote, fix them and run it again.
-2. Do **not** run `git` yourself (it is not allowed). Instead call the `create_pull_request` safe-output tool **exactly once**, and pass a `branch` that is a **new** name such as `summaries/<UTC date>-<HHMM>` (for example `summaries/20261020-0514`). **Never** use `main` as the branch: the tool rejects it ("Branch 'main' equals base_branch 'main'"). The tool creates the branch and commits your file changes. Give the pull request a short body listing the number of summaries written and any items you skipped. Do not include source descriptions in the PR body.
+Run each command **on its own, exactly as written** (no `cd`, no pipes such as `| tail`, no `;` or `2>&1` chains, no `git branch --show-current`): commands that do not match the allowed list are denied, and a denial is not a reason to stop.
+
+1. `npm run validate:data`. If it reports problems in files you wrote, fix them and run it again.
+2. `git checkout -b summaries/<UTC date>-<HHMM>` (a **new** branch name such as `summaries/20261020-0514`; never `main`).
+3. `git add data/summaries`
+4. `git commit -m "Add Japanese summaries"`
+5. Call the `create_pull_request` safe-output tool **exactly once** with `branch` set to that same new branch name. Give it a short body listing the number of summaries written and any items you skipped. Do not include source descriptions in the PR body.
