@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-00ff906be0513fa9",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Contact Center のエージェント シミュレーションで構成を事前評価",
+        "subtitleJa": "本番前に、顧客対応の動きを自然言語のシナリオで試せます",
+        "en": "Dynamics 365 Contact Center: Copilot and AI innovation - Use agentic simulations to evaluate contact center setup"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Contact Center",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Contact Center の管理者とシナリオ作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "本番に出す前に、現実的な顧客条件での挙動を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が**自然言語のプロンプトでシミュレーション シナリオを定義**し、顧客対応の挙動を本番前に評価できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "現時点の位置づけ",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Service Operations Agent の AI 機能として、ロードマップで開発中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連する Learn のプレビュー版では、音声チャネルの受信ワークストリームのみ対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "プロンプトはプロンプト ライブラリ（推奨・保存・最近）からも選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "シミュレーションを実行する", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレビュー版は本番用途向けではなく、機能が制限されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "Important", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "プレビュー版は英語のみで、DTMF は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "考慮すべき事項", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "1 回の要求は最大 5 会話、同時 2 通話、1 組織で同時 1 シミュレーションまで", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "考慮すべき事項", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "システム管理者かつオムニチャネル管理者で、音声チャネルのプロビジョニングが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "Prerequisites", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "3 分のシミュレーションで約 40 の Copilot Studio AI クレジットを消費", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "Note", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agentic-simulation", "term": "エージェント シミュレーション", "type": "feature", "oneLine": { "text": "構成・AI エージェント・ルーティング フローを本番前にテストし検証する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "service-ops-agent", "term": "Service Operations Agent", "type": "feature", "oneLine": { "text": "エージェント シミュレーションを提供する、Contact Center の AI エージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "dtmf", "term": "DTMF", "type": "term", "oneLine": { "text": "デュアルトーン マルチ周波数。プレビュー版のシミュレーションでは未対応。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "考慮すべき事項", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "今すぐ使えますか？",
+          "answer": { "text": "ロードマップ上は開発中の段階です。Learn にはプレビュー版の手順が公開されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "利用にコストはかかりますか？",
+          "answer": { "text": "プレビュー版では、3 分のシミュレーションごとに約 40 の Copilot Studio AI クレジットを消費します。会話の複雑さで変わります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locator": "Note", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576636",
+        "learn": [
+          { "title": "AI によって生成された会話をエージェント シミュレーションに使用する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-simulation-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
