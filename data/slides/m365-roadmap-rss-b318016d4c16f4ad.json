@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b318016d4c16f4ad",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook 検索結果に Copilot の簡潔な要約を表示（開発中）",
+        "subtitleJa": "検索結果の上部で答えをすばやく得て、Copilot チャットで掘り下げられます",
+        "en": "Outlook: Copilot now provides concise summaries with Outlook search results"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS", "Mac", "Web"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook で検索を使う Microsoft Copilot ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索結果の上部で、問い合わせの答えをすばやく確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "現時点で公開されている対応事項はなく、提供時期も示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook の検索結果の上部に、**Copilot の簡潔な AI 要約**が表示されます。要約カードから Copilot チャットを開いて掘り下げることもできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook 検索結果の上部に Copilot の簡潔な AI 要約を表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "要約カードから Copilot チャットを直接開ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Android・iOS・Mac・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供開始に備え、ロードマップで状況を定期的に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "検索で答えを探す場面が多い部門に、活用イメージを共有しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-summary", "term": "Copilot の要約", "type": "feature", "oneLine": { "text": "Outlook の検索結果の上部に表示される、Copilot による簡潔な AI 要約。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "summary-card", "term": "要約カード", "type": "feature", "oneLine": { "text": "検索結果上部の要約を表示するカード。ここから Copilot チャットを開ける。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat", "term": "Copilot チャット", "type": "feature", "oneLine": { "text": "要約の内容をさらに掘り下げるために開ける、Copilot のチャット。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップには提供月が示されていません。最新の状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どのクラウドと端末が対象ですか？",
+          "answer": { "text": "ロードマップでは Worldwide（Standard Multi-Tenant）が対象で、Android・iOS・Mac・Web が挙げられています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559989",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
