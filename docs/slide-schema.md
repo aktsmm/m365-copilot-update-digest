@@ -10,10 +10,10 @@
 
 ## 運用の流れ
 
-1. **Dispatch slide generation**（毎日 03:00 / 15:00 JST）: スライドがない更新（直近 3 か月、重要な順、同じなら新しい順）を各最大 30 件、`slide.lock.yml` へ 1 件ずつ起動
+1. **Dispatch slide generation**（毎日 03:00 / 11:00 / 19:00 JST と、収集が新しい更新を見つけたとき）: スライドがない更新（直近 3 か月、重要な順、同じなら新しい順）を各最大 30 件、`slide.lock.yml` へ 1 件ずつ起動
 2. **slide（gh-aw）**: `.work/slide-input.json`（原文・段階・提供範囲・検証済み Learn 候補）を入力に、Learn の実ページを取得してスライド JSON を書き、検証と PDF 描画を行い PR を作成（タイトル `[slides] …`）
 3. **Auto-merge slides**: PR が `data/slides/{key}.json` 1 件だけで、スキーマ・意味検証・描画確認を main 側のコードで通ったものだけをマージし、Pages を再デプロイ。検証や描画確認に落ちた PR はコメントを付けてクローズし、次回の生成で作り直す
-4. **Dispatch slide Q&A backfill**（毎日 04:00 JST）: 想定問答（`qa`）がない既存スライドを最大 20 件、[`slide-qa.md`](../.github/workflows/slide-qa.md)（gh-aw）へ 1 件ずつ起動。`scripts/check-qa-only.mjs` で `qa` 以外が変わっていないことを確認し、同じ Auto-merge slides でマージ
+4. **Dispatch slide Q&A backfill**（毎日 04:00 / 16:00 JST）: 想定問答（`qa`）がない既存スライドを最大 20 件、[`slide-qa.md`](../.github/workflows/slide-qa.md)（gh-aw）へ 1 件ずつ起動。`scripts/check-qa-only.mjs` で `qa` 以外が変わっていないことを確認し、同じ Auto-merge slides でマージ
 5. **Watchdog**（毎日 05:41 JST、AI なし）: 40 分を超えて動くエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行
 
 ## 想定問答（`qa`、任意）

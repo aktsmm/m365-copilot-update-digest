@@ -5,6 +5,7 @@ name: Dispatch slide Q&A backfill
 on:
   schedule:
     - cron: "0 19 * * *"
+    - cron: "0 7 * * *"
   workflow_dispatch:
     inputs:
       limit:
