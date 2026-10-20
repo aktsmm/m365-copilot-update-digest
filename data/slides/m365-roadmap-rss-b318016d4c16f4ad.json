@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b318016d4c16f4ad",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook 検索結果に Copilot の簡潔な要約を表示（開発中）",
+        "subtitleJa": "検索結果の上部で、問い合わせの答えをすばやく確認できます",
+        "en": "Outlook: Copilot now provides concise summaries with Outlook search results"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS", "Mac", "Web"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook で検索を使う Microsoft Copilot ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索結果の上部に表示される Copilot の要約カードで、答えをすばやく得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook の検索結果の上部に、**Copilot の簡潔な AI 要約**が表示されます。要約カードから Copilot チャットを開いて、さらに掘り下げられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook の検索結果の上部に Copilot の要約カードを表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "要約カードから Copilot チャットを直接開ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Android・iOS・Mac・Web（Worldwide 標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供前に内容が変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "メールボックスを使う機能には、Exchange Online メールボックスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "メールボックスの要件", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "Microsoft Copilot の機能を使うには、Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は、ライセンスの割り当てとネットワーク要件を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "要件の概要", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "提供開始前に、対象ユーザーのライセンスとメールボックスの状況を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-summary-card", "term": "Copilot 要約カード", "type": "feature", "oneLine": { "text": "Outlook の検索結果の上部に表示される、Copilot の簡潔な AI 要約。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat", "term": "Copilot チャット", "type": "feature", "oneLine": { "text": "要約カードから開き、検索内容をさらに掘り下げられる Copilot の対話画面。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "exchange-online-mailbox", "term": "Exchange Online メールボックス", "type": "term", "oneLine": { "text": "メールや予定表などのメールボックス データを使う Copilot エクスペリエンスに必要なもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "メールボックスの要件", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用にライセンスは必要ですか？",
+          "answer": { "text": "Microsoft Copilot の機能を使うには、Microsoft Copilot ライセンスと対象の前提ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559989",
+        "learn": [
+          { "title": "Microsoft Copilot の要件", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
