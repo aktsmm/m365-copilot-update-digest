@@ -77,6 +77,40 @@
         { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "Microsoft 365 アプリ内で利用できる AI アシスタント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "この設定を使うのに Microsoft Copilot ライセンスは必要ですか？",
+          "answer": {
+            "text": "ライセンスされた Microsoft Copilot 機能の利用には、Microsoft Copilot ライセンスと資格のある前提条件ライセンスが必要です。なお、Microsoft 365 Apps for enterprise のデバイスベースのライセンスでは使用できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements",
+                "locator": "ライセンスの要件",
+                "retrievedAt": "2026-10-20T22:10:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "メールボックスなど、Outlook 側で必要な前提条件はありますか？",
+          "answer": {
+            "text": "メールやメールボックス データを使う機能には Exchange Online メールボックスが必要です。Copilot は、サポートされているバージョンの従来の Outlook と新しい Outlook で動作します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements",
+                "locator": "メールボックスの要件 / Microsoft 365 アプリとサービスの要件（Outlook）",
+                "retrievedAt": "2026-10-20T22:10:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561491",
         "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
