@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d4415e70933d88aa",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio で Azure SQL ナレッジ ソースに対応（開発中）",
+        "subtitleJa": "Azure SQL の業務データを、エージェントのナレッジとして使えるようになります",
+        "en": "Microsoft Copilot Studio: SQL server Support in Microsoft Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-08-08",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Copilot Studio でエージェントを作る人**（作成者）",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "Azure SQL に保存した業務情報を、他のナレッジと同じ方式でエージェントに取り込める",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発中のため、今すぐの対応は不要。提供開始に備えて Azure SQL 側の準備を確認できる",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Azure SQL のテーブルを**ナレッジ ソース**として追加し、構造化データに基づく回答をエージェントに任せられます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+              "locator": "冒頭",
+              "retrievedAt": "2026-10-20T20:50:00Z"
+            }
+          ]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対応の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Copilot Studio で使える企業データ ソースの範囲が広がる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "エージェントは選択したテーブルから、接続と権限の範囲で質問に回答",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-10-20T20:50:00Z"
+                }
+              ]
+            },
+            {
+              "text": "ビルド → ナレッジ → 追加 → Azure SQL の順で接続とテーブルを選択",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                  "locator": "Add Azure SQL tables to your agent",
+                  "retrievedAt": "2026-10-20T20:50:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "ロードマップ上は開発中で、提供時期は示されていない",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "データベースとテーブルへのアクセス権限が必要。不足するとテーブルを選べない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                  "locator": "Note",
+                  "retrievedAt": "2026-10-20T20:50:00Z"
+                }
+              ]
+            },
+            {
+              "text": "回答は、ユーザーが接続とデータベース権限で到達できるデータに限られる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                  "locator": "権限と認証",
+                  "retrievedAt": "2026-10-20T20:50:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Power Platform から到達できる Azure SQL Database / Managed Instance と、ネットワーク許可",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                  "locator": "Prerequisites",
+                  "retrievedAt": "2026-10-20T20:50:00Z"
+                }
+              ]
+            },
+            {
+              "text": "テーブルに主キーと分かりやすい列名を付け、ナレッジ名と説明も具体的に書く",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                  "locator": "Azure SQL データベースを準備してください",
+                  "retrievedAt": "2026-10-20T20:50:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "knowledge-source",
+          "term": "ナレッジ ソース",
+          "type": "feature",
+          "oneLine": {
+            "text": "エージェントが回答の根拠として参照するデータの取り込み元。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-20T20:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "azure-sql",
+          "term": "Azure SQL",
+          "type": "product",
+          "oneLine": {
+            "text": "Azure 上で提供されるリレーショナル データベースのサービス群。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                "locator": "Prerequisites",
+                "retrievedAt": "2026-10-20T20:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-in-development",
+          "term": "開発中",
+          "type": "label",
+          "oneLine": {
+            "text": "Microsoft 365 ロードマップ上で、機能が開発段階にあることを示す状態。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか。",
+          "answer": {
+            "text": "ロードマップ上は開発中で、提供時期の月は示されていません。最新の状況はロードマップで確認してください。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "question": "ユーザーごとにアクセス制御はされますか。",
+          "answer": {
+            "text": "Learn では、ユーザーは作成者が設定した接続とデータベース権限で到達できるデータに基づく回答のみを受け取ると説明されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+                "locator": "権限と認証",
+                "retrievedAt": "2026-10-20T20:50:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568930",
+        "learn": [
+          {
+            "title": "Azure SQL テーブルをナレッジ ソースとして追加する",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
