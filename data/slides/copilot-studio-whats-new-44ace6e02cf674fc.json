@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-44ace6e02cf674fc",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Agent 365 で Copilot Studio エージェントを一元管理",
+        "subtitleJa": "Entra での ID 表現とアクセス制御、一元的な可観測性を提供します",
+        "en": "Onboard to Microsoft Agent 365 for centralized governance of Copilot Studio agents, including identity representation..."
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["copilot-studio", "agents", "security-compliance"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**テナント管理者・AI 管理者**と、Copilot Studio のエージェント作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Agent 365 をオンボードすると、エージェントを一元的に管理・保護できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Agent 365 を使う場合は、少なくとも 1 人のユーザーに Agent 365 ライセンスの付与が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "可用性と前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Studio エージェントを **Entra の ID** として表現し、一元的に統制・観測できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Agent 365 は Copilot Studio エージェントを監視・管理・保護する中央制御プレーン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locator": "主要な概念", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "エージェントを Entra で ID として表現し、条件付きアクセスや RBAC/ABAC で制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locator": "主要な概念", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "アクセス ガバナンス ワークフローと、エージェント全体の一元的な可観測性も利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locator": "主要な概念", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Agent 365 は 2026 年 5 月 1 日から、ユーザー単位で商用セグメントにて一般提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "可用性と前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "Agent 365 のガバナンス・監査イベントは Customer Lockbox の対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locator": "データ損失の防止とガバナンス", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365", "term": "Microsoft Agent 365", "type": "product", "oneLine": { "text": "組織内のエージェントを監視・管理・保護するための制御プレーン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "entra-identity", "term": "Microsoft Entra の ID", "type": "term", "oneLine": { "text": "Agent 365 をオンボードすると、エージェントを Entra 上で ID として表現できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locator": "主要な概念", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "conditional-access", "term": "条件付きアクセス", "type": "feature", "oneLine": { "text": "エージェントの ID に適用できるアクセス制御の一つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locator": "主要な概念", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の更新を示す、更新情報上の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Agent 365 のライセンスは必要ですか？",
+          "answer": { "text": "はい。有効化には少なくとも 1 人のユーザーに Agent 365 ライセンスが必要で、ライセンスはユーザー単位です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "可用性と前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "既存の Power Platform の管理機能は不要になりますか？",
+          "answer": { "text": "いいえ。既存の Power Platform や Microsoft 365 のガバナンス機構に加えて Agent 365 を活用します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locator": "主要な概念", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/security-and-governance",
+        "learn": [
+          { "title": "Copilot Studio のセキュリティとガバナンス", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-and-governance", "locale": "ja-jp" },
+          { "title": "Microsoft Agent 365 の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
