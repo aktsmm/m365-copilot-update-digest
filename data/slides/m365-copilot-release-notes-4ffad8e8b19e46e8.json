@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-4ffad8e8b19e46e8",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot 検索のメール結果に添付ファイルがピルで表示",
+        "subtitleJa": "メールを開かずに、添付ファイルを確認して開けます",
+        "en": "See email attachments as pills in Copilot search results [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot 検索でメールを探すユーザー**（Windows・Web）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "2026年9月23日の更新", "retrievedAt": "2026-10-21T23:00:00Z" }] },
+        "change": { "text": "メールを開かずに、添付ファイルを確認して直接開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "2026年9月23日の更新", "retrievedAt": "2026-10-21T23:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザー向けの表示改善で、管理者の設定作業は示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "2026年9月23日の更新", "retrievedAt": "2026-10-21T23:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "これまでメール結果に添付ファイルは表示されず、メールを開いて探す必要があった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-21T23:00:00Z" }] },
+        "after": { "text": "メール結果に**添付ファイルがピル**で表示され、クリックで直接開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-21T23:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "検索でヒットしたメールの添付ファイルが、結果上にピルで表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-21T23:00:00Z" }] },
+            { "text": "どんな添付ファイルがあるかを、ひと目で把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-21T23:00:00Z" }] },
+            { "text": "ピルをクリックすると、添付ファイルを直接開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot 検索を開き、添付ファイル付きのメールを検索する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T23:00:00Z" }] },
+            { "text": "該当するメール結果の添付ファイルのピルを確認してクリックする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related",
+          "heading": "関連する更新",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "同日に、Outlook メール結果を日付順に並べ替える「Sort by」フィルターも追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "\"Sort by\" filter for Outlook Mail in Copilot search", "retrievedAt": "2026-10-21T23:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-search", "term": "Copilot 検索", "type": "feature", "oneLine": { "text": "メールなどの結果を検索できる、Microsoft Copilot の検索機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "2026年9月23日の更新", "retrievedAt": "2026-10-21T23:00:00Z" }] } },
+        { "termKey": "pill", "term": "ピル", "type": "term", "oneLine": { "text": "結果上に表示される、クリックして添付ファイルを開ける表示部品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-21T23:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能改善の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "リリース ノートでは Windows と Web が対象と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "2026年9月23日の更新", "retrievedAt": "2026-10-21T23:00:00Z" }] }
+        },
+        {
+          "question": "どう試せばよいですか？",
+          "answer": { "text": "Copilot 検索で添付ファイル付きのメールを検索し、結果のピルをクリックします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T23:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
