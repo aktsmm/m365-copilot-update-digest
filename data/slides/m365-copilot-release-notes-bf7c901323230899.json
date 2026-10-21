@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-bf7c901323230899",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot の利用状況を日単位で見る Power BI スナップショット レポート",
+        "subtitleJa": "最新の Copilot 利用データを、日次の傾向として確認できます",
+        "en": "Copilot usage snapshot PBI at day level with fresh data [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Viva Insights", "Microsoft Copilot"],
+        "categories": ["viva"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Viva Insights のアナリスト**と、Copilot の導入を推進する管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "前提条件", "retrievedAt": "2026-10-21T23:40:00Z" }] },
+        "change": { "text": "現在の日付の最大 2～3 日前の最新データで、日ごとの Copilot 利用傾向を追える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "冒頭", "retrievedAt": "2026-10-21T23:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うには、Insights アナリストの役割と Power BI Desktop が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "前提条件", "retrievedAt": "2026-10-21T23:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot 導入レポートより**新しいデータ**で、組織の Copilot 利用を**日次レベル**で把握できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "冒頭", "retrievedAt": "2026-10-21T23:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "レポートの範囲（プレビュー）",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "導入の概要ページで、導入レベルと傾向・グループ別・アプリと機能別の利用を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "このレポートについて", "retrievedAt": "2026-10-21T23:40:00Z" }] },
+            { "text": "データの鮮度は現在の日付の最大 2～3 日前、履歴は最大 3 か月分", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "データの可用性と鮮度", "retrievedAt": "2026-10-21T23:40:00Z" }] },
+            { "text": "パブリック プレビューのお客様のみが対象で、機能は変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "重要", "retrievedAt": "2026-10-21T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "導入前の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象の従業員に Microsoft Copilot または Viva Insights のライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "前提条件", "retrievedAt": "2026-10-21T23:40:00Z" }] },
+            { "text": "アクティブ ユーザーの定義は、日・週・4 週間の基準から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "設定ページ", "retrievedAt": "2026-10-21T23:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "latest-usage", "term": "最新の使用状況スナップショット", "type": "feature", "oneLine": { "text": "組織全体の Copilot 導入を、最新データで日次レベルに分析できるレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "冒頭", "retrievedAt": "2026-10-21T23:40:00Z" }] } },
+        { "termKey": "viva-insights", "term": "Viva Insights", "type": "product", "oneLine": { "text": "アナリスト エクスペリエンスで、クエリを実行して Power BI レポートを作る基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "レポートの設定", "retrievedAt": "2026-10-21T23:40:00Z" }] } },
+        { "termKey": "insights-analyst", "term": "分析情報アナリスト", "type": "term", "oneLine": { "text": "このレポートのクエリを実行するために Viva Insights で必要な役割。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "前提条件", "retrievedAt": "2026-10-21T23:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、機能の変更・追加の項目。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "既存の Copilot 導入レポートとの違いは何ですか？",
+          "answer": { "text": "導入レポートより新しい、最大 2～3 日前までのデータで、日次レベルの利用傾向を追えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "冒頭", "retrievedAt": "2026-10-21T23:40:00Z" }] }
+        },
+        {
+          "question": "レポートを作るには何が必要ですか？",
+          "answer": { "text": "Viva Insights の分析情報アナリストの役割、Power BI Desktop、対象従業員への Copilot または Viva Insights ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "前提条件", "retrievedAt": "2026-10-21T23:40:00Z" }] }
+        },
+        {
+          "question": "クエリの結果は自動で更新されますか？",
+          "answer": { "text": "自動更新を有効にすると、ライセンスを持つユーザーの Copilot データが更新されるたびにクエリが再実行されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locator": "クエリの実行", "retrievedAt": "2026-10-21T23:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft Copilot の最新の使用状況スナップショット レポート (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-latest-usage", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
