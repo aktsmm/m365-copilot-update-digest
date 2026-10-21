@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generatedAt": "2026-10-21T04:45:06.970Z",
+  "generatedAt": "2026-10-21T04:50:01.551Z",
   "events": [
     {
       "id": "m365-roadmap-rss-62918f5e775c997e",
@@ -59,15 +59,25 @@
       "sourceId": "m365-roadmap-rss",
       "sourceName": "Microsoft 365 Roadmap",
       "sourceFamily": "Roadmap",
-      "productArea": "Microsoft 365 Copilot",
-      "section": "Microsoft 365 Copilot",
+      "productArea": "Microsoft Power Platform",
+      "section": "Microsoft Power Platform",
       "title": "Microsoft Power Platform governance and administration: Multi-grader comparison",
       "titleJa": "Microsoft Power Platform のガバナンスと管理: 複数の採点者の比較",
       "titleEn": "Microsoft Power Platform governance and administration: Multi-grader comparison",
       "summary": "Multi-grader comparison enables makers to compare the results of multiple graders applied to the same evaluation. The experience highlights agreement, differences, and overall grading behavior. Core capabilities The core capabilities include: Compare graders side-by-side. Compare scores. Review explanations from...",
-      "summaryJa": "マルチグレーダー比較により、メーカーは同じ評価に適用された複数のグレーダーの結果を比較できます。この経験により、一致、相違、および全体的な採点動作が強調表示されます。コア機能 コア機能には以下が含まれます。 採点者を並べて比較します。スコアを比較します。からの説明を確認してください...",
+      "summaryJa": "同じ評価に適用した複数の採点者の結果を比較できます。一致点や相違点、全体的な採点傾向を確認でき、採点者ごとの結果やスコア、説明を並べて比較できます。",
       "summaryEn": "Multi-grader comparison enables makers to compare the results of multiple graders applied to the same evaluation. The experience highlights agreement, differences, and overall grading behavior. Core capabilities The core capabilities include: Compare graders side-by-side. Compare scores. Review explanations from...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=577183",
+      "relatedDocuments": [
+        {
+          "title": "マルチグレーダー比較",
+          "sourceTitle": "Multi-grader comparison",
+          "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577183",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: multi-grader, comparison"
+        }
+      ],
       "publishedAt": "2026-10-21T12:00:00.000Z",
       "capturedAt": "2026-10-21T04:45:06.970Z",
       "sourceLastSeen": "2026-10-21T04:45:06.970Z",
@@ -80,7 +90,7 @@
         "作成者向け"
       ],
       "tags": [
-        "Microsoft 365 Copilot",
+        "Microsoft Power Platform",
         "In development",
         "Microsoft Copilot (Microsoft 365)",
         "Microsoft Power Platform governance and administration",
@@ -90,17 +100,7 @@
         "作成者向け"
       ],
       "importanceScore": 128,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / ライセンス設計や展開判断に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "マルチグレーダー比較",
-          "sourceTitle": "Multi-grader comparison",
-          "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577183",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: multi-grader, comparison"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / ライセンス設計や展開判断に直結するため"
     },
     {
       "id": "m365-roadmap-rss-c274d300f91088ed",
@@ -110,7 +110,7 @@
       "productArea": "Microsoft 365 Copilot",
       "section": "Microsoft 365 Copilot",
       "title": "Microsoft Copilot (Microsoft 365): Support permission sync missed in incremental crawl",
-      "titleJa": "増分クロールでサポート許可の同期が失われる",
+      "titleJa": "増分クロール時のアクセス許可の同期漏れに対応",
       "titleEn": "Microsoft Copilot (Microsoft 365): Support permission sync missed in incremental crawl",
       "summary": "Earlier, permissions were synced only in the periodic full crawl which generally ha a default frequency of 1 day for most of the connectors. Now, we have support for doing permission syncs more frequently in an incremental way.",
       "summaryJa": "以前は、アクセス許可は定期的なフル クロールでのみ同期されていました。通常、ほとんどのコネクタでは、デフォルトの頻度が 1 日でした。現在、増分的な方法でより頻繁に権限の同期を実行できるようになりました。",
@@ -203,7 +203,7 @@
       "productArea": "Word",
       "section": "Word",
       "title": "Word: Legal plugins in Copilot",
-      "titleJa": "Copilot の法的なプラグイン",
+      "titleJa": "Copilot の法務プラグイン",
       "titleEn": "Word: Legal plugins in Copilot",
       "summary": "Legal plugins in Copilot provide purpose-built skills to help legal professionals summarize, draft, review, and redline legal documents. Available in Word and Cowork, these plugins can use work context from Microsoft 365 and connect to supported third-party legal sources.",
       "summaryJa": "Copilot の法務プラグインは、法律専門家が法的文書を要約、草案、レビュー、修正するのに役立つ専用のスキルを提供します。 Word および Cowork で利用できるこれらのプラグインは、Microsoft 365 の作業コンテキストを使用し、サポートされているサードパーティの法的ソースに接続できます。",
@@ -316,6 +316,16 @@
       "summaryJa": "AI エージェントと Copilot に生のスキーマだけでなくビジネス データを真に理解させることで、手作業による構成を減らして質問に正確に回答できるようになります。すでに実行しているシステムから学習 — データバースですでに定義されているビュー、フォーム、メタデータからセマンティックな知識を自動的に抽出します。",
       "summaryEn": "Give AI agents and Copilot a true understanding of your business data — not just raw schema — so they can answer questions accurately with less manual configuration. Learns from the systems you already run — Automatically extracts semantic knowledge from views, forms, and metadata already defined in your Dataverse...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=577185",
+      "relatedDocuments": [
+        {
+          "title": "Dataverse セマンティック モデルの概要 (プレビュー)",
+          "sourceTitle": "Overview of Dataverse semantic model (preview)",
+          "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577185",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: enable, semantic, data, understand, agentic"
+        }
+      ],
       "publishedAt": "2026-10-21T12:00:00.000Z",
       "capturedAt": "2026-10-21T04:45:06.970Z",
       "sourceLastSeen": "2026-10-21T04:45:06.970Z",
@@ -335,17 +345,7 @@
         "作成者向け"
       ],
       "importanceScore": 104,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Dataverse セマンティック モデルの概要 (プレビュー)",
-          "sourceTitle": "Overview of Dataverse semantic model (preview)",
-          "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577185",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: enable, semantic, data, understand, agentic"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-95a454ceda5ff903",
@@ -361,6 +361,16 @@
       "summaryJa": "Intraday Agent は、日中の運用シナリオの管理を支援する自律型 AI エージェントです。以下にその高レベルの機能を示します。日中のキュー追跡 キューの量をリアルタイムで継続的に監視します。実際の量が予測された需要から大きく乖離している場合に、異常を検出します。自動的に...",
       "summaryEn": "Intraday Agent is an autonomous AI agent that helps manage intraday operational scenarios. The following are its high‑level capabilities. Intraday queue tracking Continuously monitors queue volumes in real time. Detects anomalies when actual volume deviates significantly from forecasted demand. Automatically...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=577184",
+      "relatedDocuments": [
+        {
+          "title": "AI エージェントと Copilot の機能の概要",
+          "sourceTitle": "Overview of AI agents and Copilot features",
+          "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/use/overview-ai-agents-copilot-features",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577184",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: manage, intraday, operation, agent"
+        }
+      ],
       "publishedAt": "2026-10-21T12:00:00.000Z",
       "capturedAt": "2026-10-21T04:45:06.970Z",
       "sourceLastSeen": "2026-10-21T04:45:06.970Z",
@@ -380,17 +390,7 @@
         "作成者向け"
       ],
       "importanceScore": 92,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "AI エージェントと Copilot の機能の概要",
-          "sourceTitle": "Overview of AI agents and Copilot features",
-          "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/use/overview-ai-agents-copilot-features",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577184",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: manage, intraday, operation, agent"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     }
   ]
 }
