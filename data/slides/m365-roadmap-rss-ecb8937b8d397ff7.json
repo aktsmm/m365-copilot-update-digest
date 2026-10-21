@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ecb8937b8d397ff7",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ: Microsoft IQ（開発中）",
+        "subtitleJa": "エージェントが組織の知識を見つけ、推論し、使うための共通基盤です",
+        "en": "Work IQ: Microsoft IQ"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントを作成する開発者・作成者**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "組織の知識を探索・推論・活用する統合インテリジェンス レイヤーが提供される予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため対応は不要。既存の Work IQ は使用量ベースの課金で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが**組織の知識を見つけ、推論し、活用する**ための統合インテリジェンス レイヤーを利用できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は、Web 向け・Worldwide (Standard Multi-Tenant) が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft IQ は、エンタープライズ AI 向けの統合インテリジェンス レイヤー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] },
+            { "text": "Work IQ は従業員の働き方（人・コラボレーション・ワークフロー）の文脈を提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-iq", "locator": "Explore the capabilities in Microsoft IQ", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供時期は未定で、ロードマップには提供月が示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Work IQ API は Microsoft Copilot ライセンスとは無関係で、使用量ベースの課金", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに準備すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テナントの有効化には、使用量ベースの課金プランとグローバル管理者が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-21T01:30:00Z" }] },
+            { "text": "コストは Microsoft 365 管理センターで管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "エージェントが組織とビジネスのデータ・文脈・ツールにアクセスして推論できるワークプレイス インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "microsoft-iq", "term": "Microsoft IQ", "type": "feature", "oneLine": { "text": "Work IQ・Fabric IQ・Foundry IQ・Web IQ をまとめた、エンタープライズ AI 向けの統合インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。Work IQ は MCP サーバーを提供する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "ツール", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供に向けて開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Work IQ の利用には Microsoft Copilot ライセンスが必要ですか？",
+          "answer": {
+            "text": "Work IQ API の利用は Microsoft Copilot ライセンスとは無関係で、使用量ベースの課金です。ライセンス保有ユーザーは Microsoft Copilot の各エクスペリエンスとエージェントで利用できますが、カスタムおよびサードパーティ エージェントは使用量ベースの課金の対象です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-21T01:30:00Z" }]
+          }
+        },
+        {
+          "question": "Work IQ と Fabric IQ・Foundry IQ の違いは何ですか？",
+          "answer": {
+            "text": "Work IQ は従業員の働き方、Fabric IQ はビジネス データ、Foundry IQ は組織の方針や文書などの知識の文脈を提供します。Web IQ は Web の情報を提供します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-iq", "locator": "Explore the capabilities in Microsoft IQ", "retrievedAt": "2026-10-21T01:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570870",
+        "learn": [
+          { "title": "Work IQ の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locale": "ja-jp" },
+          { "title": "Work IQ のテナントを有効にする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locale": "ja-jp" },
+          { "title": "Microsoft IQ documentation", "url": "https://learn.microsoft.com/en-us/microsoft-iq", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
