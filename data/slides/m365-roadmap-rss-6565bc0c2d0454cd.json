@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6565bc0c2d0454cd",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams の「インテリジェントな通話委任」が開発中",
+        "subtitleJa": "AI が着信に応答して状況を確認し、出るかどうかの判断を助けます",
+        "en": "Microsoft Teams: Intelligent call delegation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams で通話を多く受ける人**と、Teams 通話を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "AI が着信に応答して文脈を集め、対応するかの判断を助けてくれる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "AI を活用した通話支援が**着信に応答して状況を確認**し、通話に出るかどうかの判断を助けます。フォローアップの予定調整もできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI が着信に応答し、発信者から文脈を集める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "集めた文脈をもとに、通話に出て話すかをユーザーが判断できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "フォローアップの予定調整にも対応する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は確定していない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象クラウドは Worldwide（標準マルチテナント）、対象環境はデスクトップと Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存の通話委任（共有回線）は、他のユーザーが代理で通話を受けられる機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "現行の Teams 通話の Copilot は、Microsoft Copilot ライセンスを持つ参加者が利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "Teams での Microsoft Copilot 通話", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "call-delegation", "term": "通話委任", "type": "feature", "oneLine": { "text": "ユーザーの電話回線を共有し、委任者に代わって通話を発信・受信できる Teams 電話の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "teams-calling-copilot", "term": "Teams 通話の Microsoft Copilot", "type": "feature", "oneLine": { "text": "通話中の重要なポイントをキャプチャし、フォローアップ タスクも提案する AI ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "Teams での Microsoft Copilot 通話", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
+        "learn": [{ "title": "Teams Calling の機能", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
