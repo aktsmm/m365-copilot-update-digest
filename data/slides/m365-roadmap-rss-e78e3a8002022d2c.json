@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e78e3a8002022d2c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central の経費エージェントが重複提出の防止を強化",
+        "subtitleJa": "類似した経費の二重提出を検出し、従業員へ事前に知らせます",
+        "en": "Dynamics 365 Business Central: Expense Agent - Improve duplicates prevention"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central で経費エージェントを使う従業員**と、経費の承認・経理担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "金額・日付・店舗・領収書などが一致または酷似する経費の重複提出を防ぎやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "経費エージェントが、**金額・日付・店舗・領収書・取引情報が一致または酷似する経費**を検出し、重複提出を防ぎます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "重複検出を強化し、詳細が一致または酷似する経費を特定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "重複の可能性を検出したとき、従業員へ事前に案内する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "経費エージェントは、異常や重複の検知などの AI 駆動型機能を持つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "経費エージェントは 2026 年 5 月 8 日からパブリック プレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locator": "有効対象", "retrievedAt": "2026-10-21T17:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に知っておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "経費エージェントを有効化し、ガイド付きの構成で必要な設定を行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:00:00Z" }] },
+            { "text": "まず現行の経費エージェントを試し、重複時の運用ルールを整理する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "expense-agent", "term": "経費エージェント", "type": "feature", "oneLine": { "text": "Business Central の経費管理を AI で自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-21T17:00:00Z" }] } },
+        { "termKey": "business-central", "term": "Business Central", "type": "product", "oneLine": { "text": "経費の転記と元帳エントリを処理する Dynamics 365 の業務アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:00:00Z" }] } },
+        { "termKey": "duplicate-detection", "term": "重複検出", "type": "feature", "oneLine": { "text": "一致または酷似した詳細を持つ経費を特定する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "重複検出の強化は今すぐ使えますか？",
+          "answer": { "text": "いいえ。ロードマップ上は開発中の段階です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "経費エージェント自体は使えますか？",
+          "answer": { "text": "2026 年 5 月 8 日からパブリック プレビューで、ユーザー向けで自動的に有効化される機能と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locator": "有効対象", "retrievedAt": "2026-10-21T17:00:00Z" }] }
+        },
+        {
+          "question": "どの国・言語で使えますか？",
+          "answer": { "text": "プレビューは英語と米国のみで、2026 年 7 月にオーストラリア、ニュージーランド、英国が加わる予定と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locator": "利用可能性", "retrievedAt": "2026-10-21T17:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573258",
+        "learn": [
+          { "title": "Business Central で経費エージェントを使用して経費を管理する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/manage-expenses-business-central-using-expense-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
