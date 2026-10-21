@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1f899a4495b7c673",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "データエンリッチメントで使うデータソースを選択可能に（CRM メモ追加）",
+        "subtitleJa": "Dynamics 365 Sales の管理者が、エージェントの参照元を選べます",
+        "en": "Dynamics 365 Sales: Choose the data sources AI-powered Data Enrichment uses, including CRM notes"
+      },
+      "meta": {
+        "publishedJst": "2026-10-10",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Dynamics 365 Sales"],
+        "categories": ["dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Sales",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Dynamics 365 Sales の**管理者**と、データエンリッチメントを使う営業担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メール、Teams 会議、CRM メモごとに参照の有無を切り替えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "参照させたくないデータソースがある場合は、管理者が設定でオフにできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook メール、Teams 会議、新しい **CRM メモ**のソースごとにトグルがあり、**1 つでもオンならエージェントは動作**します。すべてのソースを接続する必要はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI 搭載のデータエンリッチメントが、メールや Teams 会議などを分析して提案を生成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "AI を利用したデータ エンリッチメントではどのようなデータが使用されますか?", "retrievedAt": "2026-10-21T12:20:00Z" }] },
+            { "text": "Outlook メール・Teams 会議・CRM メモに、それぞれ管理用のトグルがある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "少なくとも 1 つのソースがオンなら、エージェントは動き続ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者がデータエンリッチメントの設定で、使うデータソースを選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "オポチュニティとリードでは、管理者が充実させるフィールドも設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "異なるレコードタイプでエンリッチメントはどのように機能しますか?", "retrievedAt": "2026-10-21T12:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "データへのアクセスは、Dynamics 365 のユーザー ロールとアクセス許可で制限される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "AI を利用したデータ エンリッチメントではどのようなデータが使用されますか?", "retrievedAt": "2026-10-21T12:20:00Z" }] },
+            { "text": "Teams 会議は、Copilot ライセンスがあれば AI 要約、なければ議事録を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "どのTeams会議でデータエンリッチメントが分析されているのか?", "retrievedAt": "2026-10-21T12:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide (Standard Multi-Tenant) 向けに展開中。プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "メールの参照を避けたい組織は、Teams 会議と CRM メモだけに絞って試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "処理は組織のテナント構成に従い、データはテナント外へ送信されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "組織外に送信されるデータは何ですか?", "retrievedAt": "2026-10-21T12:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "data-enrichment", "term": "AI 搭載のデータエンリッチメント", "type": "feature", "oneLine": { "text": "メールや Teams 会議を分析し、レコードの更新提案を生成する Dynamics 365 Sales の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "異なるレコードタイプでエンリッチメントはどのように機能しますか?", "retrievedAt": "2026-10-21T12:20:00Z" }] } },
+        { "termKey": "dataverse", "term": "Dataverse", "type": "term", "oneLine": { "text": "アカウントや連絡先などの CRM エンティティを格納するデータ基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "AI を利用したデータ エンリッチメントではどのようなデータが使用されますか?", "retrievedAt": "2026-10-21T12:20:00Z" }] } },
+        { "termKey": "crm-notes", "term": "CRM メモ", "type": "feature", "oneLine": { "text": "今回新たにデータソースとして選べるようになった CRM 上のメモ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、順次ユーザーへの展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "データエンリッチメントの提案が表示されない場合は？",
+          "answer": { "text": "管理者の構成、ユーザーのアクセス許可、所有者による無効化、十分なデータがないことなどが原因になりえます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "提案が表示されないのはなぜですか?", "retrievedAt": "2026-10-21T12:20:00Z" }] }
+        },
+        {
+          "question": "提案はどのくらいの期間保存されますか？",
+          "answer": { "text": "提案は 180 日間保存され、それより古いものは自動的に削除されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locator": "データ エンリッチメントの提案が消えたのはなぜですか?", "retrievedAt": "2026-10-21T12:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574364",
+        "learn": [{ "title": "AI搭載のデータエンリッチメントに関するよくある質問", "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/data-enrichment-agent-faqs", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
