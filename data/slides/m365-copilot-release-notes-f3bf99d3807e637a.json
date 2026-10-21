@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-f3bf99d3807e637a",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "SharePoint の権限をアイテム単位で監査できるレポート",
+        "subtitleJa": "特別な SharePoint グループ経由の共有を、サイトとファイルごとに確認できます",
+        "en": "Audit permissions at a granular level"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 SharePoint"],
+        "categories": ["security-compliance"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint の高度な管理を使う管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "EEEU と Everyone のアクセス許可を、アイテム単位で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートで示されること", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "過剰共有の確認には、SharePoint の高度な管理ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "データ アクセス ガバナンスの新しいレポート**「特別な SharePoint グループを介して共有されたサイトとファイル」**で、アイテム レベルのアクセス許可の詳細を確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 06, 2026", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "レポートでわかること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "EEEU または Everyone が受信者のアイテムごとに、アクセス許可の詳細を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートで示されること", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "付与された権限レベルと、間接アクセスの場合は親グループも確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートで示されること", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "SharePoint 管理センターで実行し、CSV を ZIP でダウンロードできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートの実行", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "利用前の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "事前に組織のサイト権限レポートを 1 回以上生成しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "SharePoint と OneDrive の両方が対象で、30 日ごとに再実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "copilot-relevance",
+          "heading": "Copilot との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "EEEU と共有されたコンテンツは Copilot の検索結果に表示されるため、導入前の整理が重要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "このレポートは、どのようなときに使用する必要がありますか?", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "スクリプトでの修正対象を、このレポートから絞り込む", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "eeeu", "term": "EEEU", "type": "term", "oneLine": { "text": "「外部ユーザー以外のすべてのユーザー」の略で、組織内の全ユーザーが対象となる特別なグループ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートで示されること", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "dag", "term": "データ アクセス ガバナンス レポート", "type": "feature", "oneLine": { "text": "SharePoint 高度な管理で使える、過剰共有を把握するためのスナップショット レポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "spo-adv", "term": "SharePoint 高度な管理", "type": "product", "oneLine": { "text": "このレポートの利用に前提条件と専用の管理者ロールが必要な SharePoint の管理機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能改善の項目。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } }
+      ],
+      "qa": [
+        { "question": "レポートの対象範囲は？", "answer": { "text": "SharePoint と OneDrive の両方が対象で、一方だけに限定はできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "question": "出力できる件数に上限はありますか？", "answer": { "text": "ダウンロードされるファイルは 100 万行に制限されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "question": "システム グループの権限も含まれますか？", "answer": { "text": "システム ファイルやシステム グループに付与された権限は含まれません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "例外", "retrievedAt": "2026-10-22T00:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+        "learn": [
+          { "title": "EEEU と Everyone の項目レベルのアクセス許可の詳細を取得する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locale": "ja-jp" },
+          { "title": "SharePoint Online PowerShell でデータ アクセス ガバナンス レポートを管理する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/powershell-for-data-access-governance", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
