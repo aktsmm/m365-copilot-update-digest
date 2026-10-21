@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-758b8b78bd780a80",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot 検索から、そのままチャットへ移れるように",
+        "subtitleJa": "検索結果を土台に、フォローアップの質問や作業へ進めます",
+        "en": "Seamless Search and Chat Integration [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot 検索を使うユーザー**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-21T12:30:00Z" }] },
+        "change": { "text": "情報を探す作業から、チャットでの深掘りや作業へ続けて進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者やユーザーが Copilot 検索を設定する操作は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-21T12:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "検索結果を土台にしたチャットで、**フォローアップの質問**をしながら、情報探しから作業へ移れます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot 検索は Microsoft Copilot アプリの専用「検索」モジュール", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Copilot 検索と Microsoft Copilot のしくみ", "retrievedAt": "2026-10-21T12:30:00Z" }] },
+            { "text": "検索で見つけた内容から、チャットで会話を続けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Copilot 検索と Microsoft Copilot のしくみ", "retrievedAt": "2026-10-21T12:30:00Z" }] },
+            { "text": "対象ライセンスのユーザーは追加料金なしで利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-21T12:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "検索は組織の探索用、チャットはタスク実行と深い対話用の位置づけ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Copilot 検索と Microsoft Copilot のしくみ", "retrievedAt": "2026-10-21T12:30:00Z" }] },
+            { "text": "データ保護とセキュリティ構成は Microsoft Copilot と同じ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "プライバシーとセキュリティ", "retrievedAt": "2026-10-21T12:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-search", "term": "Microsoft Copilot 検索", "type": "feature", "oneLine": { "text": "組織向けに最適化された、AI 搭載のユニバーサル検索エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "冒頭", "retrievedAt": "2026-10-21T12:30:00Z" }] } },
+        { "termKey": "copilot-answers", "term": "Copilot の回答", "type": "feature", "oneLine": { "text": "自然言語クエリに対し、検索結果ページの上部に表示される AI 生成の簡潔な応答。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "回答の種類", "retrievedAt": "2026-10-21T12:30:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Microsoft Copilot Chat", "type": "feature", "oneLine": { "text": "より深い回答の生成やコンテンツ作成、タスク完了に向く会話型の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Copilot 検索と Copilot Chat の違い", "retrievedAt": "2026-10-21T12:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot 検索と Copilot Chat は何が違いますか？",
+          "answer": { "text": "検索は検索ボックスでの素早い情報探し、チャットは会話形式で深い回答やコンテンツ作成、タスク完了に向きます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "Copilot 検索と Copilot Chat の違い", "retrievedAt": "2026-10-21T12:30:00Z" }] }
+        },
+        {
+          "question": "利用に追加のライセンスや設定は必要ですか？",
+          "answer": { "text": "対象の Microsoft Copilot ライセンスがあれば追加料金なしで使え、管理者やユーザーの設定は不要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locator": "アクセスと適格性", "retrievedAt": "2026-10-21T12:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+        "learn": [
+          { "title": "Microsoft Copilot 検索", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
