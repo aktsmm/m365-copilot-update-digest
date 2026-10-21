@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-cd6b3f46313a76e5",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot の回答を「再生成」して別の答えを得られる（Web）",
+        "subtitleJa": "やり直しやモデル切り替えで、プロンプトを入れ直さずに別案を確認できます",
+        "en": "Regenerate response for alternative answers [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot Chat で回答を作成・推敲する人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 06, 2026 / Regenerate response for alternative answers", "retrievedAt": "2026-10-21T09:00:00Z" }] },
+        "change": { "text": "プロンプトを入れ直さずに、別の回答や別モデルの回答を試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-21T09:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ボタンから試すだけで、事前の設定作業は案内されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前は、別の回答を得るにはプロンプトを入力し直す必要があった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-21T09:00:00Z" }] },
+        "after": { "text": "回答末尾の「その他のオプション」から**「もう一度試す」や「モデルの切り替え」**で別案を取得できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed / Try this", "retrievedAt": "2026-10-21T09:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Regenerate アクションで、直前のプロンプトに対する別の回答を取得", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Regenerate response for alternative answers", "retrievedAt": "2026-10-21T09:00:00Z" }] },
+            { "text": "Try Again で新しい回答、Switch Model で別の AI モデルの回答を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T09:00:00Z" }] },
+            { "text": "リリースノート上の対象プラットフォームは Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Regenerate response for alternative answers [Web]", "retrievedAt": "2026-10-21T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "使い方: Copilot Chat で回答末尾の「その他のオプション」を開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T09:00:00Z" }] },
+            { "text": "モデルごとの回答を見比べ、用途に合う文面を選ぶ使い方が考えられる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "regenerate", "term": "Regenerate", "type": "feature", "oneLine": { "text": "直前のプロンプトに対する別の回答を、再入力なしで取得できるアクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Regenerate response for alternative answers", "retrievedAt": "2026-10-21T09:00:00Z" }] } },
+        { "termKey": "try-again", "term": "Try Again", "type": "feature", "oneLine": { "text": "新しい回答を取得するオプション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T09:00:00Z" }] } },
+        { "termKey": "switch-model", "term": "Switch Model", "type": "feature", "oneLine": { "text": "別の AI モデルによる回答を確認できるオプション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T09:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリースノートに掲載された、既存機能の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "再生成はどこから使いますか？",
+          "answer": { "text": "Copilot Chat で回答の末尾にある「その他のオプション」メニューから、Try Again または Switch Model を選びます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-21T09:00:00Z" }] }
+        },
+        {
+          "question": "対象のプラットフォームは？",
+          "answer": { "text": "リリースノートでは Web が対象と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Regenerate response for alternative answers [Web]", "retrievedAt": "2026-10-21T09:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+        "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
