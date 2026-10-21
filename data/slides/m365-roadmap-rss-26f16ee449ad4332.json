@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-26f16ee449ad4332",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central の経費エージェントが、承認ポリシーに沿った確認を支援",
+        "subtitleJa": "自然言語のポリシーで経費報告書を検証し、承認者にガイダンスを示します",
+        "en": "Dynamics 365 Business Central: Expense Agent - AI-Driven Approvals"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**経費報告書を承認する人**と、Business Central の管理者・ポリシー作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "報告書全体と明細行がポリシーに沿うか、提出後に自動で評価される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない。関連機能の準備は任意", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "自然言語で書いた承認ポリシーを、提出された報告書と各明細行に照らして評価し、承認者にレビューのガイダンスを提供します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提出後、報告書全体と個々の明細行でポリシー違反の可能性を検出", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "経費エージェントは、領収書のスキャンや経費報告書の提出を支援する AI アプリ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "承認者は、承認または差し戻し（コメント付き）を行える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-overview", "locator": "What Expense Agent does", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は公表されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行のポリシー評価は、本番利用可能なプレビュー機能として提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Important", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "ポリシー評価は追加の AI クレジットを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Understand AI-assisted policy evaluation", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は「Configure Expense Agent」の初期設定で AI 支援のポリシー評価を有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Configure policy evaluation", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "出張・会議費・ホテルなどの社内基準を、自然言語のポリシーとして整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "expense-agent", "term": "経費エージェント（Expense Agent）", "type": "feature", "oneLine": { "text": "領収書の取り込みから経費報告書の提出までを支援する、Business Central の AI アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "expense-policy", "term": "経費ポリシー", "type": "term", "oneLine": { "text": "出張や会議費などの望ましい行動を自然言語で記述したもので、AI が評価する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Understand the difference between rules and policies", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "expense-rule", "term": "経費ルール", "type": "term", "oneLine": { "text": "支出上限など測定可能な条件を定め、Business Central が機械的に確認するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Understand the difference between rules and policies", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ルールとポリシーの違いは何ですか？",
+          "answer": {
+            "text": "ルールは測定可能な条件を Business Central が確認します。ポリシーは自然言語で記述し、AI が評価します。両者は独立しており、ルールを満たしてもポリシーで指摘されることがあります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Understand the difference between rules and policies", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "評価が終わらない場合、提出や承認は止まりますか？",
+          "answer": {
+            "text": "現行の仕様では、評価を開始・完了できなくても提出は続行でき、該当の経費は「Policies pending」と表示されます。承認者は結果が最新でない旨の警告を見て、待つか承認を続けるか選べます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Keep evaluation results current", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "AI に渡される情報にメールアドレスは含まれますか？",
+          "answer": {
+            "text": "いいえ。評価に必要な情報のみが送られ、参加者のメールアドレスと従業員番号は AI の入力から除かれます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locator": "Understand privacy for policy evaluation", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573255",
+        "learn": [
+          { "title": "Expense Agent で経費を管理する", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-overview", "locale": "en-us" },
+          { "title": "経費ポリシーとルールのコンプライアンス", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-policy-compliance", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
