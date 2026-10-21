@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-88a3be74bd3c6dab",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Excel の「変更の表示」ウィンドウで Copilot の利用を確認可能に",
+        "subtitleJa": "どの変更が Copilot によるものかを、カード上で確認できます",
+        "en": "See Copilot usage in show changes pane [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Excel", "Microsoft Copilot"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Excel で Copilot を使うユーザー**と、ブックの変更をレビューする人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot による編集や提案を、手動の変更と並べて追跡できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザーが [校閲] → [変更の表示] で確認するだけで、管理者の設定作業は案内されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前は、Copilot の操作が「変更の表示」ウィンドウに表示されなかった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "after": { "text": "カード上の表示で、Copilot が**編集や提案を行った箇所**が分かります。AI の貢献を手動の変更と並べて確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Windows・Mac・Web の Excel", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "「変更の表示」ウィンドウのカードに、Copilot の編集・提案を示す表示が追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "Copilot の動きが見え、変更確認時の信頼性と説明責任が高まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / Why", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認の手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot が編集したブックを開き、[校閲] タブ → [変更の表示] を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "Copilot を示すカードで、AI による変更を見分ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "show-changes", "term": "変更の表示", "type": "feature", "oneLine": { "text": "Excel の [校閲] タブから開く、ブックの変更を確認するウィンドウ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "copilot-in-excel", "term": "Copilot in Excel", "type": "product", "oneLine": { "text": "Excel のブックで Copilot と対話し、変更を加えられる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "attribution", "term": "カード上の帰属表示", "type": "term", "oneLine": { "text": "どの変更が Copilot によるものかをカードに示す表示（on-card attribution）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能への更新を示す、リリースノート上の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "リリースノートでは Windows、Mac、Web の Excel が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "管理者の設定は必要ですか？",
+          "answer": { "text": "リリースノートに管理者向けの設定手順はなく、ユーザーが [校閲] → [変更の表示] から確認する流れが案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Excel / Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
