@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-40671db91feb74ab",
-      "kind": "in-development",
+      "kind": "rolling-out",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "展開中",
       "title": {
-        "ja": "政府クラウド向けに PowerPoint の Copilot を提供予定（開発中）",
-        "subtitleJa": "会話でスライドの生成・編集・デザイン調整ができる機能が GCC に対応予定です",
+        "ja": "政府クラウド向けに PowerPoint の Copilot を展開中",
+        "subtitleJa": "会話でスライドの生成・編集・デザイン調整ができる機能が GCC に展開されています",
         "en": "Microsoft Copilot (Microsoft 365): Copilot in PowerPoint for Government clouds"
       },
       "meta": {
-        "publishedJst": "2026-09-19",
+        "publishedJst": "2026-10-20",
         "availability": [],
-        "status": "In development",
+        "status": "Rolling out",
         "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
         "categories": ["office-apps"],
-        "importance": "notable",
+        "importance": "normal",
         "cloudInstances": ["GCC"],
         "platforms": ["Desktop", "Web"],
         "productArea": "Microsoft 365 Copilot",
@@ -29,43 +29,59 @@
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "提供開始までは対応不要。政府クラウドでは機能の導入時期が商用環境と異なることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+        "required": "optional",
+        "summary": { "text": "展開は段階的。政府クラウドでは機能の導入時期が商用環境と異なることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-18T20:40:00Z" }] }
       },
       "beforeAfter": {
         "after": { "text": "PowerPoint 内で**自然な会話**により、スライドの生成、内容の更新、レイアウトの改善、デザインの調整ができます。新規作成にも既存プレゼンの編集にも使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "提供予定の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "対象クラウドは GCC。プラットフォームはデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "会話でスライド生成・内容更新・レイアウト改善・デザイン調整を実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Microsoft Copilot は GCC・GCC High・DoD で利用でき、政府クラウド テナント内で動作する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+            { "text": "PowerPoint 内の自然な会話で、新規作成も既存プレゼンの編集もできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スライド生成・内容更新・レイアウト改善・デザイン調整を Copilot に依頼", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "現在は開発中の段階。ロードマップ上の対象クラウドは GCC", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "政府クラウドでは、Copilot 機能が商用環境と異なる時期に導入される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-18T20:40:00Z" }] },
-            { "text": "「Copilot で編集」（Word・Excel・PowerPoint・OneNote）は GCC で現在利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+            { "text": "Office アプリの Copilot Chat は Microsoft 365 Copilot (Basic) と (Premium) のユーザーが利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性 脚注 6", "retrievedAt": "2026-10-21T06:50:00Z" }] },
+            { "text": "Microsoft Copilot は GCC・GCC High・DoD で利用でき、政府クラウド テナント内で動作する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T06:50:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備のポイント",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "Office アプリの Copilot Chat は、Microsoft 365 Copilot (Basic) と (Premium) のユーザーが利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性 脚注 6", "retrievedAt": "2026-10-18T20:40:00Z" }] },
-            { "text": "提供開始に備え、ロードマップとメッセージ センターで時期を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "「Copilot で編集」（Word・Excel・PowerPoint・OneNote）は GCC で現在利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-21T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象クラウドは GCC。プラットフォームはデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "政府クラウドでは、Copilot 機能が商用環境と異なる時期に導入される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "自分のテナントで表示されるか確認し、メッセージ センターで展開状況を把握する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
@@ -73,12 +89,12 @@
         { "termKey": "gcc", "term": "GCC", "type": "term", "oneLine": { "text": "Government Community Cloud。米国のデータ所在地と政府連携コンプライアンスを備えた専用環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 米国政府クラウド環境の概要", "retrievedAt": "2026-10-18T20:40:00Z" }] } },
         { "termKey": "gcc-high", "term": "GCC High", "type": "term", "oneLine": { "text": "管理された非機密情報（CUI）を扱う米国国防機関や請負業者向けの、より分離された環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 米国政府クラウド環境の概要", "retrievedAt": "2026-10-18T20:40:00Z" }] } },
         { "termKey": "copilot-in-powerpoint", "term": "Copilot in PowerPoint", "type": "feature", "oneLine": { "text": "PowerPoint 内の会話で、スライドの生成・編集・デザイン調整を行う Copilot の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
           "question": "GCC では今すぐ PowerPoint で Copilot を使えませんか？",
-          "answer": { "text": "PowerPoint の Copilot Chat は GCC で利用できます。今回の更新は、ロードマップ上で開発中の会話による作成・編集の機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-18T20:40:00Z" }] }
+          "answer": { "text": "PowerPoint の Copilot Chat は GCC で利用できます。今回の更新は、会話による作成・編集の機能を GCC に展開するものです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-18T20:40:00Z" }] }
         },
         {
           "question": "GCC High や DoD でも使えますか？",
