@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ccc164c4ea35251c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "従来の Outlook の共有・委任メールボックスで Copilot Chat が利用可能に",
+        "subtitleJa": "共有メールボックスからも、直接 Copilot Chat を開けるようになります",
+        "en": "Outlook: Copilot Chat available in shared and delegate mailboxes"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**共有メールボックスや委任メールボックスを使う Outlook ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "共有・委任メールボックスの画面から、そのまま Copilot Chat を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供開始に向けて、アクセス権の付与状況を確認しておくとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "読み取りと管理（フル アクセス）や、メール フォルダー単位の権限を持つ共有メールボックスのユーザーや代理人が、**従来の Outlook の共有・委任メールボックスから直接 Copilot Chat** を使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は、読み取りと管理（フル アクセス）または、フォルダー単位の権限を持つユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "従来の Outlook（デスクトップ）で、リソースとして追加した共有・委任メールボックスが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先: Worldwide、GCC、GCC High、DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期はまだ示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プラットフォームはデスクトップが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "共有メールボックスを使うチームのアクセス権（フル アクセスやフォルダー権限）を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Copilot のライセンスが付与されているユーザーを事前に把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "shared-mailbox", "term": "共有メールボックス", "type": "term", "oneLine": { "text": "複数のユーザーがアクセスして管理できる、チームで共用するメールボックス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "delegate-mailbox", "term": "委任メールボックス", "type": "term", "oneLine": { "text": "代理人として、他のユーザーのメールボックスを自分のプロファイルに追加して操作するもの。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "メールなどの仕事のデータを踏まえて対話できる、Microsoft Copilot のチャット機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発中であり、まだ提供が始まっていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されていないため、現時点では未定です。ロードマップの更新をご確認ください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "新しい Outlook でも使えますか？",
+          "answer": { "text": "今回の項目は従来の Outlook が対象です。新しい Outlook での扱いは、この項目では示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573698",
+        "learn": [
+          { "title": "2025 Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
