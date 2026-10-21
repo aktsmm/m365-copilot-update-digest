@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d3b79a5d2590026f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Agent 365 ダッシュボードにエージェントの価値インサイトを追加",
+        "subtitleJa": "エージェントの利用だけでなく、支援した推定時間と仕事の種類も把握できます",
+        "en": "Microsoft Viva: Copilot Analytics - Agent value insights in Agent 365 Dashboard"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva"],
+        "categories": ["agents", "viva"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**管理者**と、エージェントの導入・定着を進めるリーダーや作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントが使われているかだけでなく、支援した推定時間や仕事の種類を把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Viva Insights（Copilot Analytics）の Agent 365 ダッシュボードで、**エージェントが支援した推定時間と仕事の種類**を確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Viva Insights（Copilot Analytics）の Agent 365 ダッシュボードに価値インサイトを追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "利用状況に加え、エージェントが支援した推定時間と仕事の種類を表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ビジネスリーダーと、変更管理・導入支援の担当者が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Worldwide（標準マルチテナント）の Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連する Copilot Studio エージェント レポートは、Copilot ライセンス 50 以上が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-studio-agents", "locator": "前提条件", "retrievedAt": "2026-10-21T02:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "推定時間の指標「エージェント支援時間」は、ナレッジ参照数やセッションの結果などから算出される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-studio-agents", "locator": "エージェント支援時間 (AAH)", "retrievedAt": "2026-10-21T02:50:00Z" }] },
+            { "text": "既存のエージェント レポートで指標の見方に慣れておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365", "term": "Agent 365 ダッシュボード", "type": "feature", "oneLine": { "text": "Viva Insights（Copilot Analytics）内で、エージェントの利用状況と価値を確認する画面。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "aah", "term": "エージェント支援時間（AAH）", "type": "term", "oneLine": { "text": "エージェントを使って従業員が節約した時間を見積もる指標。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-studio-agents", "locator": "エージェント支援時間 (AAH)", "retrievedAt": "2026-10-21T02:50:00Z" }] } },
+        { "termKey": "viva-insights", "term": "Viva Insights", "type": "product", "oneLine": { "text": "Copilot Studio エージェント レポートなど、組織の導入と影響の分析を提供する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-studio-agents", "locator": "冒頭", "retrievedAt": "2026-10-21T02:50:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップには提供時期の月が示されていません。開発中の段階です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存のエージェント レポートとの関係は？",
+          "answer": { "text": "Copilot Studio エージェント レポートでも、エージェント支援時間による推定影響を確認できます。今回の更新は Agent 365 ダッシュボードの機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-studio-agents", "locator": "エージェント支援時間 (AAH)", "retrievedAt": "2026-10-21T02:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570847",
+        "learn": [
+          { "title": "Copilot Studio エージェント レポート", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/copilot-studio-agents", "locale": "ja-jp" },
+          { "title": "エージェントの価値を測定するためのユースケースのブループリント", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/agent-business-value-use-case-blueprints#executive-and-executive-assistant-productivity", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
