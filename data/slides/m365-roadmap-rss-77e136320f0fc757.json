@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-77e136320f0fc757",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ: Teams 会議のトランスクリプトをリアルタイムで取得（開発中）",
+        "subtitleJa": "アプリやエージェントが、会議中の文字起こしを支援や分析に使えるようになります",
+        "en": "Work IQ: Real Time Transcripts"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot", "Microsoft Teams", "Work IQ"],
+        "categories": ["work-iq", "teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Work IQ を使ってアプリやエージェントを作る人**と、Teams 会議を活用する組織", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会議の最中に、文字起こしを使った支援や洞察をアプリ・エージェントから得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "アプリやエージェントが **Teams 会議のトランスクリプトにリアルタイムでアクセス**し、支援や洞察に活用できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Teams 会議のトランスクリプト（リアルタイム）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "利用するのはアプリとエージェント。支援と洞察が目的", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の提供範囲は Worldwide（標準マルチテナント）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供時期はロードマップに示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Studio の Work IQ（プレビュー）は既定で読み取り専用。書き込みは管理者の明示的な有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-10-21T07:50:00Z" }] },
+            { "text": "Work IQ（プレビュー）は Copilot クレジットによる使用量ベースの課金を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-10-21T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ 用の支出ポリシーを別に作成する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-10-21T07:50:00Z" }] },
+            { "text": "既存の Work IQ（プレビュー）を小規模に試し、会議データ活用の運用を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Copilot とエージェントを、組織全体のリアルタイムで共有されたコンテキストに根ざさせるインテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T07:50:00Z" }] } },
+        { "termKey": "transcript", "term": "トランスクリプト", "type": "term", "oneLine": { "text": "Teams 会議での発言を文字に起こした記録。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントにWork IQ(プレビュー)を追加してください", "retrievedAt": "2026-10-21T07:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供時期が示されていません。開発中の段階で、今後の更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Work IQ を今すぐ試せますか？",
+          "answer": {
+            "text": "Copilot Studio では Work IQ がプレビューとして提供されています。ただし、このリアルタイム トランスクリプトが含まれるかは確認できていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "source-only",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T07:50:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570651",
+        "learn": [
+          { "title": "Copilot Studio での Work IQ（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
