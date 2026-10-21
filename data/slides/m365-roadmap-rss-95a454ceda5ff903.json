@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-95a454ceda5ff903",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Customer Service: AI エージェントで日中の運用を管理（開発中）",
+        "subtitleJa": "キューの状況を監視し、予測とのずれに気づけるエージェントです",
+        "en": "Dynamics 365 Customer Service: Manage intraday operations with AI agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Customer Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service の運用担当者・スーパーバイザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "日中の運用シナリオの管理を、自律型 AI エージェントに任せられるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Intraday Agent が、**日中の運用シナリオを自律的に管理**します。キューの量をリアルタイムで監視し、予測との大きなずれを検出します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Intraday Agent: 日中の運用シナリオを管理する自律型 AI エージェント", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "キュー追跡: キューの量をリアルタイムで継続的に監視", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "異常検出: 実際の量が予測需要から大きく外れたことを検出", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は「開発中」で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "既存の自律エージェントは、ロールアウト計画で段階的に導入できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/use/overview-ai-agents-copilot-features", "locator": "ロールアウト マネージャー", "retrievedAt": "2026-10-21T07:40:00Z" }]
+            },
+            { "text": "提供が近づいたら、ロードマップの更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "intraday-agent", "term": "Intraday Agent", "type": "feature", "oneLine": { "text": "日中の運用シナリオを管理する自律型 AI エージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        {
+          "termKey": "autonomous-agent",
+          "term": "自律エージェント",
+          "type": "term",
+          "oneLine": {
+            "text": "顧客と会話し、必要に応じて人間の担当者へ引き継げる AI 主導のプログラム。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/use/overview-ai-agents-copilot-features", "locator": "冒頭", "retrievedAt": "2026-10-21T07:40:00Z" }]
+          }
+        },
+        { "termKey": "queue", "term": "キュー", "type": "term", "oneLine": { "text": "顧客対応の作業が順番に待つ場所。このスライドでは量の監視対象。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている提供前の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、「開発中」の段階です。最新の状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存の AI エージェントとの関係は？",
+          "answer": {
+            "text": "Learn には、ケース管理やナレッジ管理などの自律エージェントが紹介されています。Intraday Agent はこの一覧にはまだ載っていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/use/overview-ai-agents-copilot-features", "locator": "AI エージェントの表", "retrievedAt": "2026-10-21T07:40:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577184",
+        "learn": [{ "title": "AI エージェントと Copilot の機能の概要", "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/use/overview-ai-agents-copilot-features", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
