@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-d2c4fd976c558657",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "エージェントの増加に備える、Copilot Studio のガバナンス運用",
+        "subtitleJa": "環境・データポリシー・アクセス制御で、AI を大規模に運用します",
+        "en": "Governance is becoming agentic, too: How enterprises can operate AI at scale"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": {
+          "text": "Copilot Studio のエージェントを管理する**IT 管理者**と、エージェントの作成者",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-intro",
+              "locator": "冒頭",
+              "retrievedAt": "2026-10-21T22:15:00Z"
+            }
+          ]
+        },
+        "change": {
+          "text": "テナント・環境・エージェントの各レベルで、機能や作成者のアクセスを制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+              "locator": "セキュリティと管理のコントロールを使用して Copilot Studio の使用を管理する",
+              "retrievedAt": "2026-10-21T22:15:00Z"
+            }
+          ]
+        },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "エージェントが増える前に、環境とデータポリシーの設計を見直しておくと安心",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "環境を**ゾーン**に分け、リスクに応じたガバナンスをエージェントごとに適用できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+              "locator": "冒頭",
+              "retrievedAt": "2026-10-21T22:15:00Z"
+            }
+          ]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "ガバナンスの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "データポリシーで、コネクタ・チャネル・ナレッジソースを許可/ブロック",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                  "locator": "機能コントロール（テナント）",
+                  "retrievedAt": "2026-10-21T22:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "環境単位でネットワーク隔離（仮想ネットワーク、IP ファイアウォール）",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                  "locator": "機能コントロール（環境）",
+                  "retrievedAt": "2026-10-21T22:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "エージェント単位で認証方式や生成オーケストレーションを設定",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                  "locator": "機能コントロール（エージェント）",
+                  "retrievedAt": "2026-10-21T22:15:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "3 ゾーン（市民開発・パートナー開発・プロ開発）で管理レベルを分ける",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                  "locator": "ゾーニングガバナンス",
+                  "retrievedAt": "2026-10-21T22:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Power Platform 管理センターでエージェントの使用状況を確認",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                  "locator": "モニター",
+                  "retrievedAt": "2026-10-21T22:15:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "zoned-governance",
+          "term": "ゾーニングガバナンス",
+          "type": "term",
+          "oneLine": {
+            "text": "環境を分け、エージェントの目的やリスクレベルに応じて異なるガバナンスポリシーを適用すること。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-21T22:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "power-platform-environment",
+          "term": "Power Platform 環境",
+          "type": "term",
+          "oneLine": {
+            "text": "エージェントのデータ境界、セキュリティ ロール、データポリシーを定める論理的なコンテナ。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                "locator": "Note",
+                "retrievedAt": "2026-10-21T22:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "data-policy",
+          "term": "データポリシー",
+          "type": "feature",
+          "oneLine": {
+            "text": "コネクタやチャネルなど、エージェントが使えるエンドポイントを制限する仕組み。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-intro",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-21T22:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-update",
+          "term": "アップデート",
+          "type": "label",
+          "oneLine": {
+            "text": "特定のリリース段階ではなく、ブログ記事などで公開された情報更新。",
+            "origin": "derived",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "データポリシーは誰が設定しますか？",
+          "answer": {
+            "text": "テナント全体のポリシーにはテナント管理者の権限が必要です。環境単位のポリシーは、より権限の低いロールでも設定できる場合があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/microsoft-copilot-studio/admin-dlp-troubleshooting",
+                "locator": "Identify users with sufficient permissions to update data policies",
+                "retrievedAt": "2026-10-21T22:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "作成者のアクセスはどう制御しますか？",
+          "answer": {
+            "text": "Copilot Studio ユーザーライセンスの割り当てや、環境のセキュリティ グループ・セキュリティ ロールで制御します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+                "locator": "Copilot Studio Maker のアクセス制御",
+                "retrievedAt": "2026-10-21T22:15:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/governance-is-becoming-agentic-too-how-enterprises-can-operate/ba-p/4556820",
+        "learn": [
+          {
+            "title": "Copilot Studio プロジェクトの管理、概要",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-intro",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "ゾーニングガバナンス戦略の実施",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
