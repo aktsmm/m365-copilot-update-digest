@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-919aad73473eeba6",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "DoD・GCC・GCC High 向け新しい Copilot Notebooks デザイン（開発中）",
+        "subtitleJa": "チャットや成果物、参照を永続的な AI ワークスペースに整理できます",
+        "en": "OneNote: New Copilot Notebooks design in the Microsoft 365 Copilot app (DoD, GCC, GCC High)"
+      },
+      "meta": {
+        "publishedJst": "2026-08-12",
+        "availability": [],
+        "status": "In development",
+        "products": ["OneNote"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC・GCC High・DoD の Microsoft Copilot 利用者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "関連するチャット・成果物・参照を 1 か所にまとめ、蓄積した文脈で回答を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はなし。提供開始後に利用範囲を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "関連するチャット・成果物・参照を**永続的な AI ワークスペース**に整理でき、作業を次のセッションへ引き継げます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は DoD・GCC・GCC High クラウドの Microsoft Copilot アプリ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "デスクトップと Web で利用できる予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Notebook に蓄積した文脈を、Copilot が回答の根拠にする", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "政府機関向けクラウドでは、機能の提供時期が商用環境と異なる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T07:00:00Z" }] },
+            { "text": "プロンプトや応答、生成コンテンツは政府機関のクラウド内に残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T07:00:00Z" }] },
+            { "text": "ロードマップ上は開発中の段階で、機能は今後変更される可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用する環境（GCC / GCC High / DoD）の機能提供状況を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T07:00:00Z" }] },
+            { "text": "提供開始に備え、試用するチームと対象データを検討しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "関連するチャットや成果物、参照を整理し、蓄積した文脈で Copilot の回答を支える AI ワークスペース。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "gcc", "term": "GCC", "type": "term", "oneLine": { "text": "米国のデータ所在地と政府連携コンプライアンスを備えた専用環境（Government Community Cloud）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境の概要", "retrievedAt": "2026-10-21T07:00:00Z" }] } },
+        { "termKey": "gcc-high", "term": "GCC High", "type": "term", "oneLine": { "text": "コンプライアンスと主権の要件が高い、より分離された政府向け環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境の概要", "retrievedAt": "2026-10-21T07:00:00Z" }] } },
+        { "termKey": "dod", "term": "DoD", "type": "term", "oneLine": { "text": "米国国防総省専用の、非常に制限された環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境の概要", "retrievedAt": "2026-10-21T07:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進行している段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "政府機関向けクラウドでの提供は商用環境と同時ですか？",
+          "answer": { "text": "同時とは限りません。主権クラウドの要件により、商用環境とは異なるタイムラインで機能が導入される場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T07:00:00Z" }] }
+        },
+        {
+          "question": "Copilot のデータは政府クラウドの外に出ますか？",
+          "answer": { "text": "Microsoft Copilot は顧客の政府クラウド テナント内で動作し、プロンプト、応答、生成コンテンツは政府機関のクラウドに残ります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T07:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569203",
+        "learn": [
+          { "title": "Microsoft 米国政府クラウド環境について理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
