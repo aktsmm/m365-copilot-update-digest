@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-62918f5e775c997e",
-      "kind": "in-development",
-      "kindSource": "ring",
-      "label": "開発中",
+      "kind": "retirement",
+      "kindSource": "tags",
+      "label": "廃止・終了",
       "title": {
-        "ja": "OneDrive iOS で Copilot のコンテキスト メニューから PDF をレビュー（開発中）",
+        "ja": "OneDrive iOS で Copilot のコンテキスト メニューから PDF をレビュー",
         "subtitleJa": "PDF のテキストを選んで、Ask Copilot で説明・要約・翻訳ができます",
         "en": "Microsoft Copilot (Microsoft 365): Review PDFs using the Copilot context menu on OneDrive iOS"
       },
       "meta": {
-        "publishedJst": "2026-08-11",
+        "publishedJst": "2026-10-21",
         "availability": [],
-        "status": "In development",
+        "status": "Retirement",
         "products": ["Microsoft Copilot (Microsoft 365)", "OneDrive", "SharePoint"],
         "categories": ["sharepoint"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
         "platforms": ["iOS"],
         "productArea": "Microsoft 365 Copilot",
@@ -39,8 +39,9 @@
       "action": {
         "required": "no",
         "summary": {
-          "text": "開発中の段階のため、現時点で必須の対応はありません",
-          "origin": "editorial", "assertion": "inference", "verification": "unverified"
+          "text": "ロードマップには、利用者・管理者に求める対応が示されていません",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only",
+          "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "説明", "retrievedAt": "2026-10-21T00:00:00Z"}]
         }
       },
       "beforeAfter": {
@@ -52,8 +53,8 @@
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "impact",
+          "heading": "利用者への影響",
           "availability": "present",
           "priority": "core",
           "items": [
@@ -63,8 +64,8 @@
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "migration",
+          "heading": "提供範囲とライセンス",
           "availability": "present",
           "priority": "core",
           "items": [
@@ -74,13 +75,13 @@
           ]
         },
         {
-          "id": "prepare",
-          "heading": "今のうちの準備",
+          "id": "action-plan",
+          "heading": "次の一歩",
           "availability": "present",
           "priority": "detail",
           "items": [
             {"text": "対象プランと Copilot ライセンスの割り当てを管理センターで確認しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{"url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-licensing", "locator": "Microsoft Copilot ライセンス", "retrievedAt": "2026-10-21T00:00:00Z"}]},
-            {"text": "提供開始に備え、iOS ユーザーの PDF 利用シーンを洗い出しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified"}
+            {"text": "iOS ユーザーに、PDF 内で Ask Copilot が使えることを案内する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified"}
           ]
         }
       ],
@@ -106,13 +107,13 @@
           }
         },
         {
-          "termKey": "label-in-development",
-          "term": "開発中",
+          "termKey": "label-retirement",
+          "term": "廃止・終了",
           "type": "label",
           "oneLine": {
-            "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。",
+            "text": "ロードマップ上でこの更新に付けられたステージ名（Retirement）。",
             "origin": "mrc", "assertion": "fact", "verification": "source-only",
-            "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "段階", "retrievedAt": "2026-10-21T00:00:00Z"}]
+            "evidence": [{"url": "https://www.microsoft.com/microsoft-365/roadmap?id=568790", "locator": "ステージ", "retrievedAt": "2026-10-21T00:00:00Z"}]
           }
         }
       ],
