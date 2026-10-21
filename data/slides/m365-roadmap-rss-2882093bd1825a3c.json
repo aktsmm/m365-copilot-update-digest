@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2882093bd1825a3c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Teams: 通話のインテリジェントな委任（開発中）",
+        "subtitleJa": "AI が着信に応答し、状況を確認して折り返しの予定も調整します",
+        "en": "Microsoft Teams: Intelligent call delegation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams の通話を多く受ける人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "着信への応答と状況の把握を AI に任せ、出るべき通話を判断しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "着信時に **AI が応答して状況を集め**、出て話すかどうかを判断できます。折り返しの予定調整にも対応します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI を活用した通話支援で、着信に応答して背景情報を収集する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "相手と話すかどうかの判断材料を提供し、フォローアップの予定も調整できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はデスクトップ、Worldwide（標準マルチテナント）、Targeted Release", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "開発中の機能のため、内容は変更される可能性がある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存の通話委任は、他のユーザーが委任者に代わって通話を受けたりかけたりできる機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-21T16:30:00Z" }] },
+            { "text": "現行の通話委任・通話設定の運用を棚卸しし、新機能との関係を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "call-delegation", "term": "通話委任", "type": "feature", "oneLine": { "text": "ユーザーの電話回線を他のユーザーと共有し、委任者に代わって通話を受けたりかけたりできる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-21T16:30:00Z" }] } },
+        { "termKey": "targeted-release", "term": "Targeted Release", "type": "term", "oneLine": { "text": "ロードマップに記載された、先行提供のリング名。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "既存の通話委任とは何が違いますか？",
+          "answer": { "text": "既存の通話委任は、他のユーザーが委任者の通話を受ける仕組みです。今回の機能は AI が着信に応答し、状況を集める点が特徴です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されていないため、現時点では決まっていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
+        "learn": [
+          { "title": "Teams Calling の機能", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
