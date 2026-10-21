@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-24f71c2b47f6a67a",
+      "kind": "update",
+      "kindSource": "stage",
+      "label": "アップデート",
+      "title": {
+        "ja": "Outlook の Copilot でメール整理の操作が増えました",
+        "subtitleJa": "削除・移動・分類・ルール作成を、自然な言葉で依頼できます",
+        "en": "Additional Outlook triage actions in Copilot [Android, Windows, iOS, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Outlook で Microsoft Copilot のチャットを使う人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Additional Outlook triage actions in Copilot", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "ピン留めやフラグに加え、削除・移動・コピー・分類も自然言語で頼める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Additional Outlook triage actions in Copilot", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者は Outlook のチャットでそのまま試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "既存のピン留め・フラグに加えて、**メールの削除・移動・コピー・分類、ルールの作成や管理、フォルダー作成**を自然言語で依頼できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook の「職場データとのチャット」で、メールの削除・移動・コピー・分類に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "受信トレイ ルールの作成・管理と、フォルダーの作成にも対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "クラシック／新しい Outlook for Windows、Web、Mac、モバイルで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "6 通以上のメール操作や受信トレイ ルールの変更では、実行前に確認を求められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "依頼例: 「先週の未読ニュースレターをすべて削除」「Contoso の請求書メールを Finance フォルダーへ移動」", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "triage", "term": "トリアージ", "type": "term", "oneLine": { "text": "受信メールを削除・移動・分類などで仕分け、整理する操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Why this matters", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "inbox-rule", "term": "受信トレイ ルール", "type": "feature", "oneLine": { "text": "Outlook でメールの整理を管理するルール。今回、Copilot から作成・管理できるようになった。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "新規提供の段階ではなく、既存機能の更新としてリリース ノートに載った項目。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "確認なしで大量のメールが削除されませんか？",
+          "answer": { "text": "5 通を超えるメールを操作する場合や受信トレイ ルールを変更する場合は、Copilot が事前に確認を求めます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "どの Outlook で使えますか？",
+          "answer": { "text": "クラシックと新しい Outlook for Windows、Web 版、Mac 版、モバイル版で使えるとされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
