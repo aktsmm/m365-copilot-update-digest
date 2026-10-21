@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-8ffcf0b5c36acbce",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Excel の Copilot 応答から、変更箇所へ直接移動できるように",
+        "subtitleJa": "チャットの応答内リンクから、新しいシートや表、グラフへ移れます",
+        "en": "Navigate to your workbook changes directly from the Copilot chat pane response [Windows, Web, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "Excel で Copilot にブックを編集させる**ユーザー（Windows・Web・Mac）**",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Navigate to your workbook changes directly", "retrievedAt": "2026-10-21T23:30:00Z" }]
+        },
+        "change": {
+          "text": "Copilot が加えた変更を、チャットを読みながらその場で確認できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Why", "retrievedAt": "2026-10-21T23:30:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "設定変更は不要。ブックを変更するプロンプトで試して確認する",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified",
+          "evidence": []
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "応答内の変更を自分で探し、シート上で場所を見つけて移動する必要があった",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-21T23:30:00Z" }]
+        },
+        "after": {
+          "text": "応答内のリンクから、**変更された場所へ直接移動**して確認できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-21T23:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Excel の Copilot の応答に、ブック内の変更箇所へのリンクが表示される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "新しいシート、表、範囲、グラフや図形などのオブジェクトに移動できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Try this", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "対象は Windows、Web、Mac の Excel",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "見出しのプラットフォーム表記", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方と狙い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "ブックを変更するプロンプトを送ると、変更箇所がハイライトされたリンクで表示される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Try this", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "Copilot の編集内容を把握し、チャットを読みながらレビューできる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Why", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-in-excel",
+          "term": "Copilot in Excel",
+          "type": "product",
+          "oneLine": {
+            "text": "Excel のブックに対して、チャットで分析や編集を依頼できる Copilot。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Navigate to your workbook changes directly", "retrievedAt": "2026-10-21T23:30:00Z" }]
+          }
+        },
+        {
+          "termKey": "chat-pane",
+          "term": "Copilot チャット ペイン",
+          "type": "feature",
+          "oneLine": {
+            "text": "Excel 内で Copilot と対話し、応答を確認する画面領域。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Navigate to your workbook changes directly", "retrievedAt": "2026-10-21T23:30:00Z" }]
+          }
+        },
+        {
+          "termKey": "update-stage",
+          "term": "アップデート",
+          "type": "term",
+          "oneLine": {
+            "text": "リリース ノートに掲載された、既存機能の更新を示す区分。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "September 23, 2026", "retrievedAt": "2026-10-21T23:30:00Z" }]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": {
+            "text": "リリース ノートでは Windows、Web、Mac の Excel が対象と記載されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "見出しのプラットフォーム表記", "retrievedAt": "2026-10-21T23:30:00Z" }]
+          }
+        },
+        {
+          "question": "以前との違いは何ですか？",
+          "answer": {
+            "text": "以前は応答中の変更を自分で探してシート上を移動していましたが、リンクで直接移動できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-21T23:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
