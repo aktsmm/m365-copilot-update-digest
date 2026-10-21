@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-0b1973abfe3fd472",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "Planner でエージェント チャットが使えるように",
+        "subtitleJa": "自然言語でタスクを探し、プラン内で更新できます",
+        "en": "Planner Agent chat [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Planner でタスクを管理するチーム**と、Planner の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メニューやフィルターをたどらず、チャットでタスクの確認や更新ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は PowerShell でチャットの利用範囲を制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-22T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": { "text": "タスクの管理には、手動での画面移動とフィルター操作が必要でした", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Planner に組み込まれた**エージェント チャット**で、自然言語の質問、関連タスクの検索、プラン内でのタスク更新ができます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "自然言語の質問に答える Q&A を、Planner アプリ内で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連するタスクをチャットで見つけられる（スマート タスク検出）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "会話形式の指示で、プラン内のタスクを更新できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner の右下の Copilot アイコンを選び、「今週期限のタスクを表示して」などと質問する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "チャットでタスクの状態更新や表示の絞り込みを行い、結果をプランで確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "admin-controls",
+          "heading": "管理者の設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Set-PlannerConfiguration -AllowPlannerCopilot で全ユーザーの有効・無効を切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "設定の反映に最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "動作マトリックスの注", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites",
+          "heading": "前提",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner エージェント チャットは Premium プランで利用できる（以前の「Copilot in Planner」）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "ユーザーに Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner-agent-chat", "term": "Planner エージェント チャット", "type": "feature", "oneLine": { "text": "Premium プランで使える、アプリ内の自然言語チャット（以前の「Copilot in Planner」）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも利用範囲の対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能への更新の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "特定のユーザーだけに使わせることはできますか？",
+          "answer": {
+            "text": "はい。-PlannerCopilotAllowedGroupId にセキュリティ グループ ID を指定すると、そのグループ（入れ子を含む）のメンバーだけが使えます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "動作マトリックス", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "無効なグループ ID を指定するとどうなりますか？",
+          "answer": {
+            "text": "AllowPlannerCopilot が $true でも、全ユーザーでオフになります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "動作マトリックス", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [{ "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
