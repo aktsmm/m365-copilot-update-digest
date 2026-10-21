@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-23a449cc6c662687",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "People Skills のデータを管理者が完全削除できるように",
+        "subtitleJa": "スキル ライブラリとユーザーのスキル データを、テナントから削除できます",
+        "en": "People Skills - removal and deletion admin control [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**People Skills を設定済みのテナントの管理者**（グローバル管理者、ナレッジ管理者、AI 管理者）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "前提条件", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+        "change": { "text": "People Skills を使わなくなったとき、関連するスキル データをすべて削除できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "People Skills の削除と削除", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "削除は管理者が任意で実行するもので、必須の対応はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "People Skills の削除と削除", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理センターの設定から、**スキル ライブラリと、確認済み・推論・インポート済みのユーザー スキル データを完全に削除**できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "削除されるもの", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "削除対象は、カスタム スキルを含むスキル ライブラリと全ユーザーのスキル データ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "削除されるもの", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "削除後は、プロファイル カードにスキルが表示されなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "削除がユーザーとコネクテッド エクスペリエンスに与える影響", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "スキル データは Microsoft Copilot や Viva などに流れなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "削除がユーザーとコネクテッド エクスペリエンスに与える影響", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "実行前の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "削除は永続的で、再設定してもデータは復元されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "警告", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "ほとんどのデータは 48〜72 時間以内に削除。Viva Learning は最大 1 週間", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "削除後", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "steps",
+          "heading": "実行手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センター → Copilot → 設定 → データ アクセス → People Skills → 設定 → 削除を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "People Skillsを削除する方法", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "再び使うには初期設定をやり直す。再設定は 1 週間以上待つことが推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "削除後", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "people-skills", "term": "People Skills", "type": "feature", "oneLine": { "text": "組織のスキル ライブラリとユーザーのスキル データを管理し、Microsoft Copilot や Viva などで活用する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "削除がユーザーとコネクテッド エクスペリエンスに与える影響", "retrievedAt": "2026-10-21T22:50:00Z" }] } },
+        { "termKey": "skills-library", "term": "スキル ライブラリ", "type": "term", "oneLine": { "text": "組織で使うスキルの一覧。すぐに使えるライブラリのスキルとカスタム スキルで構成される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "スキル ライブラリを管理するためのオプション", "retrievedAt": "2026-10-21T22:50:00Z" }] } },
+        { "termKey": "ai-skill-inference", "term": "AI スキル推論", "type": "feature", "oneLine": { "text": "AI がユーザーのスキルを推論してプロファイルに追加する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "AI スキル推論を Microsoft 365 E3 および E5 ライセンス ユーザーに拡張する", "retrievedAt": "2026-10-21T22:50:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能への更新の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "削除したデータは元に戻せますか？",
+          "answer": { "text": "戻せません。削除は永続的で、後で People Skills を再設定しても、スキル ライブラリやユーザーのスキル データは復元されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "警告", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+        },
+        {
+          "question": "People Skills を未設定のテナントでも使えますか？",
+          "answer": { "text": "使えません。People Skills がテナントで設定済みであることが前提で、実行できるのはグローバル管理者、ナレッジ管理者、AI 管理者です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locator": "前提条件", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [{ "title": "People Skills でスキル ライブラリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/people-skills-manage-skills-library", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
