@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-48a84b7b66fcf242",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ の A2A と MCP で、不足情報や承認の要求に対応（開発中）",
+        "subtitleJa": "タスクが追加情報や認可を求め、受け取ってから再開できるようになります",
+        "en": "Work IQ: A2A and MCP elicitation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Work IQ の A2A / MCP を使ってエージェントを作る開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "タスクの途中で不足情報や認可を要求し、回答後に処理を再開できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "A2A と MCP のタスクが、**不足している情報や認可を要求し、受け取った後に再開**できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Work IQ の A2A と MCP のタスク", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Work IQ は A2A、ローカル MCP、リモート MCP、REST に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "サポートされるプロトコル", "retrievedAt": "2026-10-21T00:20:00Z" }] },
+            { "text": "ロードマップ上の提供範囲は Web、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供時期は未定のため、ロードマップの更新を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "認証はユーザーの代理 (OBO) のみで、アプリケーションのみの認証は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "認証とセキュリティ", "retrievedAt": "2026-10-21T00:20:00Z" }] },
+            { "text": "Work IQ API の利用料は Copilot クレジットの使用量ベースで発生", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "A2A は A2A-Version ヘッダーで v1.0 と v0.3 を切り替える（省略時は v0.3）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "エージェント間 (A2A) プロトコル", "retrievedAt": "2026-10-21T00:20:00Z" }] },
+            { "text": "マルチターンは前の応答の contextId を次のメッセージに渡して続ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "マルチターンの会話", "retrievedAt": "2026-10-21T00:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Microsoft 365 データとコンテキスト理解を組み合わせ、エージェントが仕事を推論して実行できるようにするレイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "ワークIQとは何ですか?", "retrievedAt": "2026-10-21T00:20:00Z" }] } },
+        { "termKey": "a2a", "term": "A2A", "type": "term", "oneLine": { "text": "エージェント同士が構造化されたタスクをやり取りするためのプロトコル（エージェント間）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "サポートされるプロトコル", "retrievedAt": "2026-10-21T00:20:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "AI アシスタントがツールとして文脈にアクセスするためのモデル コンテキスト プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "プロトコルの選択", "retrievedAt": "2026-10-21T00:20:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Work IQ API で使える認証方式は？",
+          "answer": {
+            "text": "Microsoft Entra ID の代理 (OBO) 認証で、サインインしたユーザーのコンテキストで実行されます。アプリケーションのみの認証は非対応です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "認証とセキュリティ", "retrievedAt": "2026-10-21T00:20:00Z" }]
+          }
+        },
+        {
+          "question": "利用にかかる費用は？",
+          "answer": {
+            "text": "Work IQ API は Copilot クレジットを使う使用量ベースのモデルで課金されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T00:20:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570852",
+        "learn": [{ "title": "Work IQ API の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/api-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
