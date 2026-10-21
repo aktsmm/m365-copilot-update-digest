@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-215078f999816ca2",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の障害を AI エージェントで記録してデバッグ",
+        "subtitleJa": "事象を説明するだけで、次に再現したセッションのスナップショットを取得できます",
+        "en": "Dynamics 365 Business Central: Development - Debug recorded Business Central failures with an AI agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central の AL 開発者**と、環境の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "断続的な障害や本番環境だけの AL の障害を、エージェントに伝えるだけで記録し、オフラインでデバッグできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うには、MCP サーバーの有効化と D365 Snapshot Debug / D365 ATTACH DEBUG 権限セットが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Permissions and limitations", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントに**失敗するシナリオを説明**すると、次に再現したセッションを記録し、スナップショットを回収します。F7 / Alt+F7 の操作は不要です", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "3 つのツール: 初期化（待機）・状態確認・停止（スナップショットの回収）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "セッション ID は任意。省略すると次の再現セッションを記録し、指定すると実行中のセッションに直接接続する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Session ID is optional", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "回収したスナップショットは Visual Studio Code のデバッガーで開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ALTool を .NET ツールとして導入し、launchsnapshotmcpproxy を MCP ホストに登録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Set up the server", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "Visual Studio Code では AL 拡張が MCP サーバーを自動登録する。Claude CLI や GitHub Copilot CLI も使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Visual Studio Code", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "エージェントに事象を伝え、待機状態になったと言われたら自分で再現する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Session ID is optional", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントは自分の ID と権限の範囲で動作し、操作は自分のユーザーとして監査される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Permissions and limitations", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "待機中のセッションは 30 分以内に接続されないと閉じられ、開始後は 10 分以内に終了する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Permissions and limitations", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "手動の方法との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "記録の仕組みは従来のスナップショット デバッグと同じ。F7 / Shift+F7 / Alt+F7 の操作をエージェントが代行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "手動では他ユーザー対象のときだけ必要な D365 ATTACH DEBUG が、自分のセッションでも必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Permissions and limitations", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AL の実行時エラーは自動で取得される。それ以外の行を見たいときだけスナップポイントを指定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "What to tell the agent when you arm a snapshot", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "スナップショットには顧客の個人データが含まれ得るため、不要になったら削除する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "snapshot-debugging", "term": "スナップショット デバッグ", "type": "feature", "oneLine": { "text": "サーバー上で実行された AL コードを記録し、完了後に Visual Studio Code でデバッグする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "mcp-server", "term": "Business Central MCP サーバー", "type": "feature", "oneLine": { "text": "API ページをエージェントに公開するサーバー。スナップショット ツールもその一部。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Part of the Business Central MCP server", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "snappoint", "term": "スナップポイント", "type": "term", "oneLine": { "text": "記録したい AL オブジェクト内の行を指定する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "What to tell the agent when you arm a snapshot", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "altool", "term": "ALTool", "type": "term", "oneLine": { "text": "launchsnapshotmcpproxy コマンドを提供する .NET ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Set up the server", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どんな権限が必要ですか？",
+          "answer": { "text": "D365 Snapshot Debug と D365 ATTACH DEBUG の権限セットが必要です。環境で MCP サーバーを有効にすることも前提です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Permissions and limitations", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "通常のスナップショット デバッグと何が違いますか？",
+          "answer": { "text": "記録エンジンは同じで、キー操作の代わりにエージェントが開始・状態確認・停止を行います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "対象バージョンはどれですか？",
+          "answer": { "text": "Learn では Business Central 2026 release wave 2 以降が対象で、ランタイム 18 のプレリリースと Server 29 でプレビューとの注記もあります。利用環境のバージョンを確認してください。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locator": "Snapshot debugging with an AI agent (MCP server)", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573361",
+        "learn": [
+          { "title": "Snapshot debugging", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-snapshot-debugging", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
