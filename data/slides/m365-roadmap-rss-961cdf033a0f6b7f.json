@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-961cdf033a0f6b7f",
+      "kind": "in-development",
+      "kindSource": "stage",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint のモダン ページにエージェント チャット Web パーツ（開発中）",
+        "subtitleJa": "ページ上で Microsoft Copilot のエージェントと直接チャットできるようになります",
+        "en": "SharePoint: Agent chat web part"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["SharePoint"],
+        "categories": ["agents", "sharepoint"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint のモダン ページを編集する作成者**と、SharePoint 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ページに Web パーツを置き、任意の Microsoft Copilot エージェントを設定して使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供開始まで開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "モダン ページ用の**新しい Web パーツ**で、任意の Microsoft Copilot エージェントを使うよう構成できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "モダン ページのエディター向けの新しい Web パーツ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "任意の Microsoft Copilot エージェントを使うよう構成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲: Worldwide・GCC・GCC High・DoD、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "SharePoint のエージェントの応答は、各ユーザーのデータへのアクセス許可に基づく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "ユーザーがエージェントを通じてアクセスできる情報を管理します", "retrievedAt": "2026-10-21T01:00:00Z" }] },
+            { "text": "SharePoint のエージェントは Microsoft Copilot ライセンスで利用でき、従量課金でも制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "エージェントにアクセスできるユーザーを管理する", "retrievedAt": "2026-10-21T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに準備すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は、SharePoint のエージェントの利用者・参照情報・利用場所を管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "冒頭", "retrievedAt": "2026-10-21T01:00:00Z" }] },
+            { "text": "制限付きコンテンツ検出を設定したサイトでは、エージェント関連機能がオフになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "コンテンツの検出が制限されているサイトでエージェントをオフにする", "retrievedAt": "2026-10-21T01:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-chat-web-part", "term": "エージェント チャット Web パーツ", "type": "feature", "oneLine": { "text": "SharePoint のモダン ページ エディターで使える新しい Web パーツ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "agent-file", "term": ".agent ファイル", "type": "term", "oneLine": { "text": "SharePoint のエージェントを表すファイルで、権限が利用・編集できる人を決める。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "特定のエージェント ファイルでファイルのアクセス許可を使用する", "retrievedAt": "2026-10-21T01:00:00Z" }] } },
+        { "termKey": "restricted-content-discovery", "term": "制限付きコンテンツ検出", "type": "feature", "oneLine": { "text": "サイトのコンテンツを Microsoft Copilot や組織全体の検索に表示させない機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "コンテンツの検出が制限されているサイトでエージェントをオフにする", "retrievedAt": "2026-10-21T01:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "SharePoint のエージェントを使うには何が必要ですか？",
+          "answer": { "text": "Microsoft Copilot ライセンスを持つユーザーが使えます。ライセンスがないユーザーは、従量課金のポリシーで制御できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "エージェントにアクセスできるユーザーを管理する", "retrievedAt": "2026-10-21T01:00:00Z" }] }
+        },
+        {
+          "question": "エージェントの回答に、権限のないコンテンツが含まれませんか？",
+          "answer": { "text": "含まれません。応答は各ユーザーのアクセス許可で決まり、権限のないサイトやライブラリの内容は含まれません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locator": "特定のエージェント ファイルでファイルのアクセス許可を使用する", "retrievedAt": "2026-10-21T01:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=575298",
+        "learn": [
+          { "title": "SharePoint でエージェントへのアクセスを管理する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/manage-access-agents-in-sharepoint", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
