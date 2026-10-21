@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7ef3a4a2d279804e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio で Dataverse をネイティブのナレッジ ソースに（開発中）",
+        "subtitleJa": "Dataverse に保存した業務データで、エージェントの回答を裏付けられます",
+        "en": "Microsoft Copilot Studio: Dataverse integration on Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "work-iq"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Dataverse を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "レコードや顧客データなどの構造化された業務情報で、エージェントの回答を裏付けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Dataverse が Copilot Studio の**ネイティブなナレッジ ソース**になり、レコードや顧客データなどでエージェントの回答を裏付けられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Dataverse をナレッジ ソースとして Copilot Studio に統合する取り組み", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はレコード、顧客データ、運用データなどの Dataverse の情報", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現行ドキュメントでは、Dataverse 検索の有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "冒頭の Note", "retrievedAt": "2026-10-21T15:00:00Z" }] },
+            { "text": "エージェントの認証は Microsoft 認証のみ。認証なし・手動認証は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "冒頭の Note", "retrievedAt": "2026-10-21T15:00:00Z" }] },
+            { "text": "テーブルのデータにアクセスする適切な権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "冒頭の Note", "retrievedAt": "2026-10-21T15:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちの準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "1 つのナレッジ ソースに追加できる Dataverse テーブルは最大 15 個", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "手順 4", "retrievedAt": "2026-10-21T15:00:00Z" }] },
+            { "text": "列のシノニムや用語集を追加すると、回答の品質向上に役立つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "シノニムと用語集の用語", "retrievedAt": "2026-10-21T15:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dataverse", "term": "Dataverse", "type": "product", "oneLine": { "text": "テーブルにデータを格納する Microsoft のデータ プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "冒頭", "retrievedAt": "2026-10-21T15:00:00Z" }] } },
+        { "termKey": "knowledge-source", "term": "ナレッジ ソース", "type": "feature", "oneLine": { "text": "エージェントの回答を、格納されたデータに基づかせるための情報源。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "冒頭", "retrievedAt": "2026-10-21T15:00:00Z" }] } },
+        { "termKey": "dataverse-search", "term": "Dataverse 検索", "type": "feature", "oneLine": { "text": "Dataverse テーブルをナレッジ ソースにするために、環境で有効にする必要がある検索機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "冒頭の Note", "retrievedAt": "2026-10-21T15:00:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Dataverse をナレッジ ソースにするのに必要な条件は？",
+          "answer": { "text": "環境で Dataverse 検索が有効で、エージェントが Microsoft 認証を使い、利用者がデータへの権限を持つ必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "冒頭の Note", "retrievedAt": "2026-10-21T15:00:00Z" }] }
+        },
+        {
+          "question": "1 つのナレッジ ソースにいくつのテーブルを追加できますか？",
+          "answer": { "text": "最大 15 個の Dataverse テーブルを追加できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locator": "手順 4", "retrievedAt": "2026-10-21T15:00:00Z" }] }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップでは開発中で、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568929",
+        "learn": [{ "title": "ナレッジ ソースとして Dataverse テーブルを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/knowledge-add-dataverse", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
