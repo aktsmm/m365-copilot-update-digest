@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ce66c1a86bdf4897",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Viva Insights に Copilot 分析のエージェント ダッシュボードが登場予定",
+        "subtitleJa": "組織でのエージェントの導入状況を、リーダーやアナリストが一か所で把握できます",
+        "en": "Microsoft Viva: Copilot Analytics - Agent Dashboard."
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva"],
+        "categories": ["agents", "viva"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "組織のエージェント導入を把握したい**リーダー、代理人、アナリスト**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントの導入状況を、中心となる場所で確認できるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため対応は不要。管理センターで設定を変更できる点は把握しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "エージェント ダッシュボードへのアクセス方法と設定方法", "retrievedAt": "2026-10-21T15:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Viva Insights の**エージェント ダッシュボード**で、リーダー、代理人、アナリストが組織のエージェント導入状況を把握できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Viva Insights Web アプリで、リーダー・アナリスト・代理人が利用する想定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot 分析の 6 つの領域の 1 つとして、導入状況の把握に使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "冒頭", "retrievedAt": "2026-10-21T15:40:00Z" }] },
+            { "text": "最適化の機会の特定と、時間の経過に伴う導入の追跡に役立つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T15:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Learn の現行ページでは、Microsoft Copilot ライセンス 50 以上とエージェント アクティビティが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T15:40:00Z" }] },
+            { "text": "ロードマップ上の提供先は Worldwide（標準マルチテナント）で、Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "管理と準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定でオン。Microsoft 365 管理センターで有効・無効を切り替えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "エージェント ダッシュボードへのアクセス方法と設定方法", "retrievedAt": "2026-10-21T15:40:00Z" }] },
+            { "text": "アクセスは Entra ID データで決まるシニア リーダーが自動で得られ、他のユーザーへ委任もできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "エージェント ダッシュボードへのアクセス方法と設定方法", "retrievedAt": "2026-10-21T15:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-dashboard", "term": "エージェント ダッシュボード", "type": "feature", "oneLine": { "text": "組織のエージェントの採用と使用に関する実用的な洞察を、リーダーやアナリストに提供するダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "どのツールをいつ使用すればよいですか?", "retrievedAt": "2026-10-21T15:40:00Z" }] } },
+        { "termKey": "copilot-analytics", "term": "Copilot 分析", "type": "product", "oneLine": { "text": "従業員が Copilot をどう使っているかについて、組織に深い分析情報を提供する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "冒頭", "retrievedAt": "2026-10-21T15:40:00Z" }] } },
+        { "termKey": "viva-insights", "term": "Viva Insights", "type": "product", "oneLine": { "text": "Copilot 分析の各ダッシュボードを提供する Web アプリを持つ Microsoft Viva の製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "Copilot 分析には、次の 6 つの領域があります", "retrievedAt": "2026-10-21T15:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "コンサンプション ダッシュボードや Copilot ダッシュボードとの違いは？",
+          "answer": { "text": "Copilot ダッシュボードは Copilot の使用状況と影響、エージェント ダッシュボードはエージェントの採用と使用が中心です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "どのツールをいつ使用すればよいですか?", "retrievedAt": "2026-10-21T15:40:00Z" }] }
+        },
+        {
+          "question": "Entra ID を持つエージェントも測定対象ですか？",
+          "answer": { "text": "Copilot 分析の測定対象の母集団には、Entra ID を持つエージェントは含まれないと Learn に記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locator": "注", "retrievedAt": "2026-10-21T15:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=506749",
+        "learn": [
+          { "title": "Copilot 分析 の概要", "url": "https://learn.microsoft.com/ja-jp/viva/insights/copilot-analytics-introduction", "locale": "ja-jp" },
+          { "title": "エージェント ダッシュボードに接続する", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
