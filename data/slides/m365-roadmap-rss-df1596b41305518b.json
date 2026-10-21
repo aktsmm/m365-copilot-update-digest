@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-df1596b41305518b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dataverse のデータの意味を、エージェントが理解できるように",
+        "subtitleJa": "ビューやフォームなどの既存メタデータから、セマンティック知識を自動で抽出します",
+        "en": "Microsoft Dataverse: Enable semantic data understanding for agentic use"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Dataverse", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Dataverse",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dataverse のデータでエージェントを作る人**と、Power Platform の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "手動設定を減らしつつ、データの意味に沿った正確な回答を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "AI エージェントと Copilot が、生のスキーマではなく**ビジネスデータの意味**を理解し、少ない手動設定で正確に回答できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供される内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "既存のビュー・フォーム・メタデータから、セマンティック知識を自動抽出", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "テーブル間の関係や列の説明の概要も、モデルへのシグナルになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "セマンティック モデルのしくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "複数のエージェントが同じモデルを参照し、一貫した回答を返せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "セマンティック モデルを使用する理由", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "関連機能の Learn 記事はプレビュー扱いで、本番用途向けではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "Important", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "現在は新しいモデルの作成不可。環境のコピーや移動(ALM)も未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "既知の制限", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "システム ビューと個人用ビューは、シグナル抽出から除外される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "Note", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Dataverse インテリジェンスを有効にすると、モデルが自動で作られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "セマンティック モデルのしくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "用語集に独自の略語や業務用語を追加し、誤解を防げる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "用語集", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "semantic-model", "term": "セマンティック モデル", "type": "feature", "oneLine": { "text": "Dataverse データの意味をエージェントが共有して理解するためのモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "dataverse", "term": "Dataverse", "type": "product", "oneLine": { "text": "Power Platform のビジネスデータを格納するデータ プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "system-signal", "term": "システム推論シグナル", "type": "term", "oneLine": { "text": "テーブルの関係、ビュー、フォームなど、既存メタデータから自動抽出される手がかり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "システム推論信号", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "セマンティック モデルは手動で作る必要がありますか？",
+          "answer": {
+            "text": "いいえ。Dataverse データに対する Copilot エクスペリエンスを有効にすると、自動でプロビジョニングされます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "モデルはどのくらいの頻度で更新されますか？",
+          "answer": {
+            "text": "スキーマの変更を反映するため 12 時間ごとに再生成され、手動での再生成も可能です。初回生成は最大 2 時間かかることがあります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "セマンティック モデルのしくみ", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577185",
+        "learn": [
+          { "title": "Dataverse セマンティック モデルの概要 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
