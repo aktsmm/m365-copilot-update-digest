@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-4d942de4369466ce",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ: プロンプト作成時に使える Context IQ を拡張",
+        "subtitleJa": "エージェント・スキル・コンテンツ ソースを、プロンプトを書きながら選べるようになります",
+        "en": "Work IQ: ExpandedContextIQ"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot でプロンプトを作成する人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プロンプトの作成中に、追加のエージェント・スキル・コンテンツ ソースを見つけて選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点では開発中のため、対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Context IQ が拡張され、プロンプト作成中に**追加のエージェント・スキル・コンテンツ ソースを探して選択**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Web 版の Microsoft Copilot", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウド: Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "選択できるのは、エージェント・スキル・コンテンツ ソース", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "内容や提供範囲は、今後変更される可能性がある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備",
+          "availability": "not-stated",
+          "priority": "detail"
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "ロードマップ上で、この更新が属する分類（カテゴリ）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "context-iq", "term": "Context IQ", "type": "feature", "oneLine": { "text": "プロンプト作成時に、使うエージェントやコンテンツ ソースを選ぶための仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570854",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
