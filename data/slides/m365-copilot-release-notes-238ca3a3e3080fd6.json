@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-238ca3a3e3080fd6",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot でカスタム スキルを作成",
+        "subtitleJa": "独自のコマンドで、プレゼン作成の定型作業を自動化できます",
+        "en": "Define specific commands suited to their content style."
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot を使うプレゼン作成者**と、管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "PowerPoint - Create custom skills in Copilot in PowerPoint", "retrievedAt": "2026-10-21T08:30:00Z" }] },
+        "change": { "text": "自分のスタイルに合うコマンドを定義し、繰り返しの作業を自動化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "Why", "retrievedAt": "2026-10-21T08:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用は任意。PowerPoint の Copilot ウィンドウから試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "Try this", "retrievedAt": "2026-10-21T08:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "従来の Copilot は PowerPoint の組み込みスキルと定義済みの機能のみで動作していた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "What changed", "retrievedAt": "2026-10-21T08:30:00Z" }] },
+        "after": { "text": "ユーザー定義の**カスタム スキル**で、Copilot を個人用のコマンドやワークフローに拡張できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "What changed", "retrievedAt": "2026-10-21T08:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint の Copilot がユーザー定義のカスタム スキルに対応（Windows）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "What changed", "retrievedAt": "2026-10-21T08:30:00Z" }] },
+            { "text": "Microsoft 365 のセキュリティとコンプライアンスの基準内でカスタマイズできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "What changed", "retrievedAt": "2026-10-21T08:30:00Z" }] },
+            { "text": "コンテンツのスタイルに合うコマンドを定義し、定型・専門的な作業を自動化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "Why", "retrievedAt": "2026-10-21T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方と影響",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ウィンドウで「Create custom skill」を選んで定義し、作業で試す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "Try this", "retrievedAt": "2026-10-21T08:30:00Z" }] },
+            { "text": "チームで専門的なプレゼン作業を標準化し、一貫性と効率を高められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "Business impact", "retrievedAt": "2026-10-21T08:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "custom-skill", "term": "カスタム スキル", "type": "feature", "oneLine": { "text": "ユーザーが定義する、Copilot 用の個人向けコマンドとワークフロー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "What changed", "retrievedAt": "2026-10-21T08:30:00Z" }] } },
+        { "termKey": "builtin-skill", "term": "組み込みスキル", "type": "term", "oneLine": { "text": "PowerPoint の Copilot に最初から備わっている定義済みの機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "What changed", "retrievedAt": "2026-10-21T08:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の改善や機能追加。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "冒頭", "retrievedAt": "2026-10-21T08:30:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "カスタム スキルはどのプラットフォームで使えますか？",
+          "answer": { "text": "リリース ノートの項目には Windows と示されています。他のプラットフォームは確認できていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "Create custom skills in Copilot in PowerPoint [Windows]", "retrievedAt": "2026-10-21T08:30:00Z" }] }
+        },
+        {
+          "question": "どうやって作成しますか？",
+          "answer": { "text": "PowerPoint で Copilot ウィンドウを開き、「Create custom skill」を選んで新しいコマンドを定義します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06", "locator": "Try this", "retrievedAt": "2026-10-21T08:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
