@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9c3ef260f56c44b7",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central の経費エージェントが源泉徴収税を自動計算",
+        "subtitleJa": "経費精算の流れの中で、従業員の源泉徴収税を計算できるようになります",
+        "en": "Dynamics 365 Business Central: Expense Agent - Calculate withholding tax automatically in expense reports"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "iOS", "Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central で経費精算を扱う経理担当者**と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "源泉徴収税の対象となる経費に、適切な税計算が経費精算ワークフロー内で適用される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には Expense Withholding Tax アプリと Withholding Tax アプリの導入が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Add posting groups to the journal line", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "源泉徴収税の対象となる経費を申請すると、**システムが経費精算ワークフロー内で適切な税計算を自動で適用**します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "経費精算の過程で、従業員の源泉徴収税（WHT）を自動計算", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Expense Withholding Tax アプリが Expense Agent に源泉徴収税の項目と処理を追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Set up expense categories for withholding tax", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "経費カテゴリを選ぶと、その製品転記グループが仕訳行へ反映される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Add posting groups to the journal line", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Expense Withholding Tax は Expense Agent（プレビュー）と Withholding Tax アプリが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Add posting groups to the journal line", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "従業員が免除対象でなく、一致する転記設定があることが計算の条件", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "仕訳の金額がゼロの場合は計算されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "導入前の準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "総勘定元帳設定で源泉徴収税を有効化し、従業員カードで転記グループを設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Set up an employee for withholding tax", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "経費カテゴリは「単一税」か「税グループ」を選び、製品転記グループを指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Set up expense categories for withholding tax", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "wht", "term": "源泉徴収税（WHT）", "type": "term", "oneLine": { "text": "従業員の仕訳を転記するときに計算され、税額が記録される税。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "expense-agent", "term": "Expense Agent", "type": "feature", "oneLine": { "text": "Business Central の経費処理を支援するエージェント（Learn 上ではプレビュー）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Add posting groups to the journal line", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "expense-wht-app", "term": "Expense Withholding Tax", "type": "feature", "oneLine": { "text": "Expense Agent に源泉徴収税の項目と処理を追加する拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Set up expense categories for withholding tax", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "源泉徴収税が計算されるのはどのような条件ですか？",
+          "answer": { "text": "総勘定元帳設定での有効化、従業員が免除対象でないこと、2 種類の転記グループと一致する転記設定があること、金額がゼロでないことが条件です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "しきい値による判定はできますか？",
+          "answer": { "text": "転記設定でしきい値の金額・基準・期間を指定できます。従業員取引では、評価額がしきい値以上のときに税が計算されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locator": "Choose calculation and threshold options", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573304",
+        "learn": [
+          { "title": "Set up withholding tax for employee transactions", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/finance-withholding-tax-employees", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
