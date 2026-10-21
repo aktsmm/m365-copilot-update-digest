@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-39645b614c95a51e",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の AL 開発で、エージェントが空き ID を割り当て",
+        "subtitleJa": "AL オブジェクトの ID 確認をエージェントに任せられます",
+        "en": "Dynamics 365 Business Central: Development - Let agents allocate free AL object IDs"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Business Central の **AL 拡張機能を開発する開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "オブジェクト ID の手作業の確認が減り、ID の衝突を避けやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発者向けの機能で、AL Language 拡張機能 18.0 以降で利用できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Applies to", "retrievedAt": "2026-10-22T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "コーディング エージェントが、**プロジェクトの ID 範囲内の空き ID を自動で取得**し、AL オブジェクトを作成できます。app.json の確認や既存オブジェクトの走査が不要になります",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "al_getnextobjectid ツールが、指定した種類の空き ID を返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "app.json の idRanges の範囲内で、プロジェクト内の宣言済み ID を避けて割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Parameters", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "テーブル、ページ、コードユニット、拡張オブジェクトなど 13 種類に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Parameters", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "VS Code の GitHub Copilot で、新しいオブジェクトの ID を自然言語で依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Visual Studio Code examples", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "VS Code 以外では、AL MCP Server（altool launchmcpserver）から呼び出せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "Using the AL MCP Server", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "走査は構文のみで、インストール済みの依存アプリ内の ID は検出されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "ID は予約されず、保存前に再度呼ぶと同じ ID が返る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Important", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連ツール",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "al_symbolsearch で、接続先環境に同じ目的のオブジェクトがないか確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Suggested next steps", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "作成後は al_build と al_getdiagnostics でコンパイルを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Related tools", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "使いどころ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "複数のテーブルを作るときは count（最大 50）で ID をまとめて取得できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Parameters", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "範囲外になった場合は、app.json の idRanges を広げる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Suggested next steps", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "al-object-id", "term": "AL オブジェクト ID", "type": "term", "oneLine": { "text": "テーブルやページなど AL オブジェクトに付ける番号で、プロジェクトの idRanges の範囲から選ぶ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Parameters", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "al-mcp-server", "term": "AL MCP Server", "type": "feature", "oneLine": { "text": "AL のツールを Model Context Protocol で公開する単体のサーバー。VS Code なしでも動く。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "Using the AL MCP Server", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "al-agent-tools", "term": "AI エージェント ツール", "type": "feature", "oneLine": { "text": "GitHub Copilot などのエージェントが、AL のビルドや発行、診断を行うためのツール群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "他の拡張機能や依存アプリの ID とは衝突しませんか？",
+          "answer": {
+            "text": "ツールの走査はアクティブなプロジェクトの構文のみが対象で、依存アプリや同じサンドボックスに発行済みの他の拡張機能の ID は検出されません。ビルド時の確認が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "ID の範囲はどう決まりますか？",
+          "answer": {
+            "text": "既定ではプロジェクトの app.json に宣言された idRanges を使います。rangeStart と rangeEnd で範囲を絞ることもできます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locator": "Parameters", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573346",
+        "learn": [
+          { "title": "AL agent tools: al_getnextobjectid", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-tool-get-next-object-id", "locale": "en-us" },
+          { "title": "AI agent tools for AL development", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/al-agent-tools/al-agent-tools-overview", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
