@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b3811a4b32a9585f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "調達エージェントの仕入先フォローアップ条件をカスタマイズ（開発中）",
+        "subtitleJa": "自社のデータと基準で、フォローアップ対象の発注書を絞り込めるようになります",
+        "en": "Dynamics 365 Supply Chain Management: Procurement Agent - Customize the Procurement Agent supplier follow-up criteria"
+      },
+      "meta": {
+        "publishedJst": "2026-10-10",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Supply Chain Management"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Supply Chain Management",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Supply Chain Management で発注業務を行うバイヤー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "業務固有のデータと基準で、仕入先へのフォローアップ条件を拡張できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "バイヤーが標準・拡張・カスタムのテーブルのデータを使い、**テーブル結合やフィールドを追加して**フォローアップ条件を拡張できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "調達エージェントのフォローアップ条件を、関連テーブルのデータで拡張", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "バイヤーがテーブル結合を追加し、そのフィールドを条件に使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先はクラウド インスタンスが Worldwide、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供時期はロードマップ上で未公表（ステージは開発中）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行の調達エージェントのフォローアップ機能は、運用環境対応プレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "タイトル・冒頭", "retrievedAt": "2026-10-21T08:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現行の条件設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定タスクは「未確認の発注書」と「遅延発注書」の 2 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "既定のタスク", "retrievedAt": "2026-10-21T08:15:00Z" }] },
+            { "text": "条件を変更して、フォローアップが必要な発注書を定義できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "タスクの条件と電子メールの設定を構成する", "retrievedAt": "2026-10-21T08:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "email-flow",
+          "heading": "メール生成の流れ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象の発注書ごとに、仕入先宛ての下書きメールを自動生成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "冒頭", "retrievedAt": "2026-10-21T08:15:00Z" }] },
+            { "text": "下書きは確認し、変更してから送信できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "冒頭", "retrievedAt": "2026-10-21T08:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "procurement-agent", "term": "調達エージェント", "type": "feature", "oneLine": { "text": "仕入先が未確認、または出荷が遅れている発注書を特定し、フォローアップを支援するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "冒頭", "retrievedAt": "2026-10-21T08:15:00Z" }] } },
+        { "termKey": "agent-task", "term": "エージェント タスク", "type": "term", "oneLine": { "text": "フォローアップが必要な発注書を検索する条件と、メール設定をまとめた単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "冒頭", "retrievedAt": "2026-10-21T08:15:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現在のフォローアップ条件は変更できますか？",
+          "answer": { "text": "はい。既存タスクの条件を編集したり、新しいタスクを作成したりして、対象の発注書を定義できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "タスクの条件と電子メールの設定を構成する", "retrievedAt": "2026-10-21T08:15:00Z" }] }
+        },
+        {
+          "question": "同じ発注書に複数回フォローアップできますか？",
+          "answer": { "text": "タスクは、発注書が変更されない限り発注書ごとに 1 通のメールを生成します。重複しない日付範囲の 2 つのタスクで継続できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locator": "Examples", "retrievedAt": "2026-10-21T08:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573704",
+        "learn": [{ "title": "調達エージェントを使用した発注書のフォローアップ (運用環境対応プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/procurement-agent-supplier-com-follow-up", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
