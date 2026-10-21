@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6329fdc748b24bbe",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Queues アプリで通話後に Copilot Chat を利用可能に（開発中）",
+        "subtitleJa": "録音された通話の要点を、文字起こしを探さずに把握できます",
+        "en": "Microsoft Teams: Use Copilot Chat after a call in Queues app"
+      },
+      "meta": {
+        "publishedJst": "2026-08-08",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Queues アプリで顧客対応をするエージェントやリード**と、Teams 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "通話後に要点の把握や洞察の発見、顧客課題の解決を素早く進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は開発中。現時点で必要な対応は公表されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "録音された通話の終了後、Queues アプリの**統合通話履歴**から Copilot Chat を使えます。文字起こしの検索や録音の聞き直しは不要です", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は録音された通話。通話後に統合通話履歴から Copilot を利用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は Worldwide（Standard Multi-Tenant）、Desktop と Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップのステータスは「開発中」（Targeted Release）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Queues アプリの利用には Teams 電話と Teams Premium のライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-21T07:10:00Z" }] },
+            { "text": "Queues アプリは Web クライアントでは未サポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-21T07:10:00Z" }] },
+            { "text": "開発中のため、内容や時期は変更される可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Queues アプリは既定で有効。Teams 管理センターで無効化すると Insights や Tasks もオフになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリのセットアップ", "retrievedAt": "2026-10-21T07:10:00Z" }] },
+            { "text": "通話の録音を運用しているキューがあるか、先に確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "queues-app", "term": "Queues アプリ", "type": "product", "oneLine": { "text": "Teams の通話キューと自動応答の高度な通話機能を提供する Teams ネイティブのアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "キュー アプリの概要", "retrievedAt": "2026-10-21T07:10:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "Microsoft Copilot の対話型チャット機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "call-history", "term": "統合通話履歴", "type": "feature", "oneLine": { "text": "Queues アプリ内で通話を一覧し、録音された通話を選べる画面。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "teams-premium", "term": "Teams Premium", "type": "product", "oneLine": { "text": "Queues アプリの利用に Teams 電話とともに必要なライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-21T07:10:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用に必要なライセンスは？",
+          "answer": { "text": "Queues アプリ自体には Teams 電話と Teams Premium が必要です。この機能固有の追加要件は、現時点で公表されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locator": "ライセンス", "retrievedAt": "2026-10-21T07:10:00Z" }] }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。時期は今後の更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568933",
+        "learn": [{ "title": "組織の Microsoft Teams 用キュー アプリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-queues-app", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
