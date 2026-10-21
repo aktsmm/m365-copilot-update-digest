@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f8cc5408971f82ab",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "PowerPoint のエージェント モードで添付デッキのスタイルを参照可能に（Mac）",
+        "subtitleJa": "既存デッキのテーマとスタイルを、新しいプレゼンに引き継げます",
+        "en": "Microsoft Copilot (Microsoft 365): Reference an attached PowerPoint deck’s style when creating a new presentation with Agent Mode in PowerPoint"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "categories": ["agents", "office-apps"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Mac"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Microsoft Copilot を使って資料を作る人**（Mac）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存デッキのテーマやスタイルを新しいデッキに適用でき、書式を揃えやすい", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の対応は不要。ユーザーが参照ファイルを選んで使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェント モードで新規作成するとき、**既存の PowerPoint ファイルを参照**でき、そのテーマとスタイルが新しいデッキに適用されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェント モードで新規プレゼンを作成する際、既存ファイルを参照する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "参照したファイルのテーマとスタイルが新しいデッキに適用される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存のファイル権限とアクセス制御は尊重される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot の編集を開始し、「Reference file」で PowerPoint ファイルを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026 / Try this", "retrievedAt": "2026-10-21T07:30:00Z" }] },
+            { "text": "参照ファイルの内容やスタイルを使って新規作成するよう Copilot に依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026 / Try this", "retrievedAt": "2026-10-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "このロードマップ項目の対象プラットフォームは Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Windows・Web・Mac で既存デッキの内容やスタイルを再利用できる更新も案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-21T07:30:00Z" }] },
+            { "text": "既存プレゼンに別のデッキのスタイルを適用する使い方もある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "社内の標準デッキを参照させて、書式の揃った資料を作る", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "過去資料を土台にすると、手作業の修正を減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026 / Personal impact", "retrievedAt": "2026-10-21T07:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "エージェント モード", "type": "feature", "oneLine": { "text": "PowerPoint の Copilot で、プレゼンの作成を進める動作モード。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "reference-file", "term": "Reference file", "type": "feature", "oneLine": { "text": "Copilot に参照させる既存の PowerPoint ファイルを選ぶ操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026 / Try this", "retrievedAt": "2026-10-21T07:30:00Z" }] } },
+        { "termKey": "theme", "term": "テーマ", "type": "term", "oneLine": { "text": "既存デッキから新しいデッキへ引き継がれる、見た目のスタイル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Windows や Web でも使えますか？",
+          "answer": { "text": "本項目は Mac が対象です。別途、Windows・Web・Mac で既存デッキを参照できる更新が 2026 年 7 月 1 日のリリース ノートに載っています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-21T07:30:00Z" }] }
+        },
+        {
+          "question": "参照するファイルの権限はどうなりますか？",
+          "answer": { "text": "既存のファイル権限とアクセス制御が尊重されると案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-21T07:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555878",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#july-01,-2026", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
