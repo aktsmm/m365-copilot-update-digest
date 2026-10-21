@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b7cf457a6cbbb477",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot ダッシュボードで Copilot メトリックをエクスポート",
+        "subtitleJa": "行レベルの Copilot メトリックを書き出し、レポートや分析に使えます",
+        "en": "Microsoft Copilot (Microsoft 365): Export Copilot metrics in the Copilot Dashboard"
+      },
+      "meta": {
+        "publishedJst": "2026-10-16",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Viva", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["viva"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Copilot の導入状況を分析する**管理者**と、Copilot ダッシュボードにグローバル アクセスを持つ人", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "前提条件", "retrievedAt": "2026-10-21T00:40:00Z" }] },
+        "change": { "text": "ダッシュボードの Copilot メトリックをダウンロードして、独自のレポートや分析に使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため対応は不要。現行のプレビュー版では、管理者が Viva 機能アクセス管理で有効・無効を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "管理者の管理", "retrievedAt": "2026-10-21T00:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot ダッシュボードから、行レベルの Copilot メトリックを**エクスポートして深く分析**できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Web 版・Worldwide（標準マルチテナント）の Copilot ダッシュボード", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Learn のプレビュー版では、ユーザー レベルのメトリックをダウンロードできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "冒頭", "retrievedAt": "2026-10-21T00:40:00Z" }] },
+            { "text": "週レベルは過去 6 か月分、日レベルは過去 28 日分を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "週レベルのエクスポートと日レベルのエクスポートの主な相違点", "retrievedAt": "2026-10-21T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "テナントに Copilot または Viva Insights ライセンスが 50 以上必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "前提条件", "retrievedAt": "2026-10-21T00:40:00Z" }] },
+            { "text": "チーム レベルのビューのマネージャーは、データをエクスポートできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "前提条件の注", "retrievedAt": "2026-10-21T00:40:00Z" }] },
+            { "text": "エクスポートの内容はカスタマイズできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "週レベルのエクスポートの例の注", "retrievedAt": "2026-10-21T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "個人識別子は既定で匿名化され、管理者が識別可能なエクスポートを有効にした場合のみ含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "冒頭", "retrievedAt": "2026-10-21T00:40:00Z" }] },
+            { "text": "分析の用途と、閲覧できる担当者の範囲を先に決めておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-dashboard", "term": "Copilot ダッシュボード", "type": "feature", "oneLine": { "text": "組織での Microsoft Copilot の導入状況や利用状況を確認する Viva Insights のダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "冒頭", "retrievedAt": "2026-10-21T00:40:00Z" }] } },
+        { "termKey": "vfam", "term": "Viva 機能アクセス管理（VFAM）", "type": "feature", "oneLine": { "text": "Viva の機能をテナントやグループ単位で有効・無効にする管理機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "管理者の管理", "retrievedAt": "2026-10-21T00:40:00Z" }] } },
+        { "termKey": "global-access", "term": "グローバル アクセス", "type": "term", "oneLine": { "text": "チーム単位ではなく、組織全体のビューを見られる Copilot ダッシュボードの権限。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "前提条件", "retrievedAt": "2026-10-21T00:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "誰がデータをエクスポートできますか？",
+          "answer": { "text": "Copilot ダッシュボードにグローバル アクセスを持つ人（Microsoft 365 全体管理者、シニア リーダー、割り当て済みのユーザーや代理人など）です。チーム レベルのマネージャーはできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "前提条件", "retrievedAt": "2026-10-21T00:40:00Z" }] }
+        },
+        {
+          "question": "週レベルと日レベルのエクスポートはどう違いますか？",
+          "answer": { "text": "週レベルは過去 6 か月で毎週更新、日レベルは過去 28 日で毎日更新です。日レベルは最大 3 日前までのデータを反映します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locator": "週レベルのエクスポートと日レベルのエクスポートの主な相違点", "retrievedAt": "2026-10-21T00:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=500872",
+        "learn": [
+          { "title": "Copilot ダッシュボード (プレビュー) から Copilot メトリックをエクスポートする", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-copilot-metrics", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
