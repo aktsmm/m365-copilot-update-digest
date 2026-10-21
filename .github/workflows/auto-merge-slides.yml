@@ -22,6 +22,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      issues: write
       actions: write
     steps:
       - uses: actions/checkout@v6
@@ -106,6 +107,13 @@ jobs:
               gh workflow run maintenance.lock.yml
             fi
           fi
+          # PR を作れずに issue になったもの（同じスライドが先に取り込まれて add/add 衝突など）のうち、スライドが main にあるものを閉じる
+          for inum in $(gh issue list --state open --limit 100 --label automation --json number,title -q '.[] | select(.title | startswith("[slides]")) | .number'); do
+            sid=$(gh issue view "$inum" --json body -q .body | grep -oE 'data/slides/[A-Za-z0-9._-]+\.json' | head -1)
+            if [ -n "$sid" ] && [ -f "$sid" ]; then
+              gh issue close "$inum" -c "このスライドは main に取り込み済みのため閉じます（重複生成で PR を作れなかったものです）。" || true
+            fi
+          done
           if [ "$merged" = "true" ]; then
             gh workflow run deploy-pages.yml --ref "${{ github.event.repository.default_branch }}"
           fi
