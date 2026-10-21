@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-8ecc11e6ac94f919",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Analytics に Cowork の導入状況と効果の分析を追加",
+        "subtitleJa": "消費ダッシュボードの Cowork ページで、利用の広がりと成果を確認できます",
+        "en": "Copilot Analytics - Cowork adoption and impact [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["agents", "viva"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot の利用状況を分析する管理者・アナリスト**、グローバル管理者、マネージャー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-21T08:50:00Z" }] },
+        "change": { "text": "Cowork の利用者数・クレジット使用量・タスク傾向を一か所で把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork ページ", "retrievedAt": "2026-10-21T08:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Cowork の利用を見たい場合は、アクセス権を持つロールで消費ダッシュボードを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-21T08:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "消費ダッシュボードの **Cowork ページ**で、アクティブ ユーザー、クレジット使用量、ユーザーあたりの平均タスク数を確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork ページ", "retrievedAt": "2026-10-21T08:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cowork のアクティブ ユーザー、クレジット使用量、平均タスク数をカードで表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork ページ", "retrievedAt": "2026-10-21T08:50:00Z" }] },
+            { "text": "利用傾向をタスク カテゴリや組織・職務・ポリシー別に分解して確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork 使用傾向", "retrievedAt": "2026-10-21T08:50:00Z" }] },
+            { "text": "タスク別の内訳で、ユーザー起動とスケジュール実行の割合も分かる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork usage breakdown by task", "retrievedAt": "2026-10-21T08:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "閲覧できるのは、グローバル パーティションのアナリスト、マネージャー、グローバル管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-21T08:50:00Z" }] },
+            { "text": "タスクとセッションは別の指標のため、合計が一致しないことがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Cowork ページ", "retrievedAt": "2026-10-21T08:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "消費ダッシュボードで、クレジット使用量や利用状況の分析対象になっているサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "Microsoft 365 サービス ページ", "retrievedAt": "2026-10-21T08:50:00Z" }] } },
+        { "termKey": "consumption-dashboard", "term": "消費ダッシュボード", "type": "feature", "oneLine": { "text": "Copilot クレジットと GitHub AI クレジットの使われ方を把握する Insights のダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T08:50:00Z" }] } },
+        { "termKey": "partition", "term": "パーティション", "type": "term", "oneLine": { "text": "Insights でアナリストがアクセスできるデータ範囲を分ける仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "消費の分析情報へのアクセスを管理する", "retrievedAt": "2026-10-21T08:50:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノート上で、既存機能の更新として掲載された段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "誰がこのダッシュボードを見られますか？",
+          "answer": { "text": "グローバル パーティション アクセスを持つアナリストとグローバル管理者は組織全体、マネージャーは自分のグループが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-21T08:50:00Z" }] }
+        },
+        {
+          "question": "クレジット使用量は請求の根拠になりますか？",
+          "answer": { "text": "いいえ。ダッシュボードの情報は参考用で、正式な請求は Microsoft 365 管理センターで確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭の注", "retrievedAt": "2026-10-21T08:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/viva/insights/org-team-insights/ai-cost-dashboard#cowork-page",
+        "learn": [
+          { "title": "インサイトでコンサンプション ダッシュボードを使用する方法", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locale": "ja-jp" },
+          { "title": "Viva Insights のパーティション", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/admin/partitions", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
