@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-15716f9b1885f8be",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "宣言型エージェントの統合拡張機能が、従来の Outlook for Windows の Copilot Chat で利用可能に",
+        "subtitleJa": "プラグインやアダプティブ カードを使うエージェントを、慣れた Outlook で使えます",
+        "en": "Integrated extensibility experience capability for declarative agents for Microsoft 365 Copilot available in Copilot Chat in classic Outlook for Windows [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Outlook", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "agents", "outlook", "edge-windows"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**従来の Outlook for Windows で Copilot Chat を使う人**と、宣言型エージェントの作成者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "宣言型エージェントで Copilot の体験をカスタマイズでき、他の Copilot Chat と機能がそろう", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者は Copilot Chat からエージェントを使うだけでよい", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "従来の Outlook でも、**プラグイン・アダプティブ カード・メールや予定表の操作・コネクタ**を使う宣言型エージェントが使えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "今回の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は従来の Outlook for Windows の Copilot Chat", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "プラグイン、アダプティブ カード、カード アクション、タスク モジュールなどに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "メール・予定表の操作とエンタープライズ コネクタも利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "他の Copilot Chat と同じ水準のエージェント機能に揃う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "利用中のエージェントを従来の Outlook で試して動作を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "try-this",
+          "heading": "試す手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "従来の Outlook for Windows を開き、リボンまたはサイドバーから Copilot Chat を開いてエージェントを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "Copilot の体験をカスタマイズして使うエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "classic-outlook", "term": "従来の Outlook for Windows", "type": "product", "oneLine": { "text": "今回のリリース ノートで対象とされている、Windows 向けの従来の Outlook。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "adaptive-card", "term": "アダプティブ カード", "type": "term", "oneLine": { "text": "統合拡張機能として挙げられている、エージェントの表示・操作要素の 1 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能に変更や追加があったことを示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのクライアントが対象ですか？",
+          "answer": { "text": "従来の Outlook for Windows です。リリース ノートはこの範囲での提供を扱っています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "何が使えるようになりますか？",
+          "answer": { "text": "プラグイン、アダプティブ カード、メール・予定表の操作、エンタープライズ コネクタなどを使う宣言型エージェントです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 / Outlook / What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
