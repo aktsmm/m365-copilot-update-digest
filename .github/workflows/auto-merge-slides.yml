@@ -71,7 +71,12 @@ jobs:
             git reset -q --hard origin/main
             git clean -fdq data/slides
             rm -rf .slide-check
-            gh pr merge "$n" --squash --match-head-commit "$sha" && merged=true
+            if gh pr merge "$n" --squash --match-head-commit "$sha"; then
+              merged=true
+            elif [ "$(gh pr view "$n" --json mergeable -q .mergeable)" = "CONFLICTING" ]; then
+              # 同じスライドを別の PR が先に取り込んだ場合など。残しておくと永久に衝突したままになるので閉じる（必要なら次回のスライド生成で作り直される）
+              gh pr close "$n" -c "main と衝突しているためクローズします（同じスライドが先に取り込まれた可能性があります）。必要なら次回のスライド生成で作り直されます。" || true
+            fi
           done < <(gh pr list --state open --limit 100 --base "${{ github.event.repository.default_branch }}" --json number,title,headRefOid,labels \
               -q '.[] | select((.title | startswith("[slides] ")) and (.labels | map(.name) | index("data"))) | "\(.number) \(.headRefOid)"')
           # 失敗の理由を記録する（次の再試行でエージェントに渡す）。3 回続けて失敗したら保留にし、保守エージェントを起動する
