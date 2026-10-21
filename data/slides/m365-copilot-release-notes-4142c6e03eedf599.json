@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-4142c6e03eedf599",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot コネクタのクエリ文字列とユーザー ID マッピング規則を編集可能に",
+        "subtitleJa": "サポートチケットなしで、コネクタ設定から直接変更できます",
+        "en": "Edit query string and user identity mapping rules for Copilot connectors [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクタを管理する管理者**と、コネクタの作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "クエリ文字列と ID マッピングの規則を、サポートに依頼せず自分で編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "該当コネクタがあれば、設定画面で編集できることを運用担当に共有", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "コネクタ設定で**クエリ文字列**と**ユーザー ID マッピング**の規則を直接編集できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Copilot コネクタのクエリ文字列とユーザー ID マッピング規則", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ID マッピングは、非 Entra ID の ID を Microsoft Entra の ID に対応付ける設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "冒頭", "retrievedAt": "2026-10-21T08:40:00Z" }] },
+            { "text": "「このデータ ソースにアクセスできるユーザーのみ」と Non-Entra ID を選んだ場合に使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "冒頭", "retrievedAt": "2026-10-21T08:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "マッピング先は UPN、Microsoft Entra ID、オブジェクト ID の 3 種類のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "Limitations", "retrievedAt": "2026-10-21T08:40:00Z" }] },
+            { "text": "プレビューで 5 人分のマッピング結果と成功／失敗を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "Create formula to complete mapping", "retrievedAt": "2026-10-21T08:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "limits",
+          "heading": "Learn 記載の制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "全ユーザーに適用できるマッピングは 1 つで、条件付きマッピングは不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "Limitations", "retrievedAt": "2026-10-21T08:40:00Z" }] },
+            { "text": "変換に使えるのは、非 Entra ID のプロパティに対する正規表現のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "Limitations", "retrievedAt": "2026-10-21T08:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "connector", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "外部データ ソースのデータを Copilot で利用できるようにする接続。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "id-mapping", "term": "ID マッピング", "type": "term", "oneLine": { "text": "非 Entra ID の ID を Microsoft Entra の ID に対応付け、ACL の対象者に結果を表示する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "冒頭", "retrievedAt": "2026-10-21T08:40:00Z" }] } },
+        { "termKey": "upn", "term": "UPN", "type": "term", "oneLine": { "text": "ユーザー アカウント名と DNS ドメイン名を「@」でつないだユーザー プリンシパル名。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "Select a Microsoft Entra user property", "retrievedAt": "2026-10-21T08:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す表記。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "マッピングはどの Entra プロパティに対応付けできますか？",
+          "answer": { "text": "UPN、Microsoft Entra ID、オブジェクト ID の 3 つです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "Limitations", "retrievedAt": "2026-10-21T08:40:00Z" }] }
+        },
+        {
+          "question": "プレビューで失敗が出ても接続を作成できますか？",
+          "answer": { "text": "はい。プレビューは無作為の 5 人分なので、失敗があっても接続の作成は進められます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locator": "Note", "retrievedAt": "2026-10-21T08:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+        "learn": [
+          { "title": "Map non-Microsoft Entra ID identities", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/map-non-entra-id", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
