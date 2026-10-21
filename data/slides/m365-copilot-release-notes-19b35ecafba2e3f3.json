@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-19b35ecafba2e3f3",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "コネクタ管理者向けに、事前セットアップガイド・編集・エラー通知を強化",
+        "subtitleJa": "設定前の手順確認から、設定後の編集、エラーの把握までを管理センターで行えます",
+        "en": "Pre-setup guides, editability, actionable errors & alerting support available for Connector admins [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot コネクタを導入・運用する**AI 管理者（コネクタ管理者）**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "冒頭", "retrievedAt": "2026-10-21T22:40:00Z" }] },
+        "change": { "text": "設定前に手順を確認でき、設定後の編集やエラー対応・アラート確認がしやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "必須の対応はなし。コネクタの新規設定や障害対応の際に活用できる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**事前セットアップガイド**で手順を確認し、設定後も編集でき、エラーは**対処しやすい形**で通知されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デプロイ前に設定手順を示す事前セットアップガイドを利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "セットアップ後にコネクタの設定を編集できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対処しやすいエラーメッセージと、アラートによる通知に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響確認のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理操作には AI 管理者の権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "冒頭", "retrievedAt": "2026-10-21T22:40:00Z" }] },
+            { "text": "公開済み接続の編集内容は、パートナー製コネクタでは名前と説明のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "Supported connection operations", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "errors",
+          "heading": "エラーの確認方法",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センターの コネクタ > 接続 > エラー タブで、エラーコードと件数を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/error-responses", "locator": "Monitor errors", "retrievedAt": "2026-10-21T22:40:00Z" }] },
+            { "text": "恒久的なクロール失敗は、サービス正常性に通知される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "Notifications for permanent crawl failures", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "新しいコネクタを設定する際は、事前セットアップガイドを先に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connectors", "term": "Microsoft 365 Copilot コネクタ", "type": "feature", "oneLine": { "text": "Microsoft 365 外のデータにつなぎ、Copilot と検索の対象範囲を広げる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "冒頭", "retrievedAt": "2026-10-21T22:40:00Z" }] } },
+        { "termKey": "ai-admin", "term": "AI 管理者", "type": "term", "oneLine": { "text": "組織の Copilot コネクタを管理するために必要な管理者ロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "冒頭", "retrievedAt": "2026-10-21T22:40:00Z" }] } },
+        { "termKey": "crawl", "term": "クロール", "type": "term", "oneLine": { "text": "コネクタがデータソースからアイテムを取り込み、インデックスを更新する処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "Monitor your connection state", "retrievedAt": "2026-10-21T22:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "新規機能の提供段階ではなく、既存機能への変更を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "編集できるのはどの設定ですか？",
+          "answer": { "text": "Microsoft 製コネクタの公開済み接続では、名前・説明、接続設定、スキーマ、更新スケジュールなどを編集できます。パートナー製は名前と説明のみです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "Supported connection operations", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+        },
+        {
+          "question": "編集すると再クロールが走りますか？",
+          "answer": { "text": "編集により、該当する場合はフルクロールが実行されることがあります。ただし初回のフルクロール中の編集では追加のフルクロールは走りません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "Supported connection operations", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+        },
+        {
+          "question": "障害をメールで受け取れますか？",
+          "answer": { "text": "サービス正常性のメール購読で「Microsoft 365 スイート」を選ぶと、Copilot コネクタの通知も受け取れます。宛先は最大 2 件です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locator": "Email notifications subscription", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Manage Microsoft 365 Copilot connector connections", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/manage-connector", "locale": "en-us" },
+          { "title": "Monitor Microsoft 365 Copilot connector errors", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/error-responses", "locale": "en-us" },
+          { "title": "Deploy connectors in the Microsoft 365 admin center", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
