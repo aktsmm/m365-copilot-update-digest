@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-a584f614a28f93bc",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Cowork で複雑な仕事を任せる",
+        "subtitleJa": "成果物を伝えるだけで、Microsoft 365 全体を横断して作業を進めます",
+        "en": "Delegate complex work with Copilot Cowork [Android, Windows, iOS, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot app"],
+        "categories": ["copilot-chat", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "メール・会議・資料作成など**定型の仕事を任せたい Microsoft Copilot の利用者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "Cowork とは?", "retrievedAt": "2026-10-21T23:35:00Z" }] },
+        "change": { "text": "メール送信・会議設定・文書作成などを、依頼文だけで Cowork が実行してくれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "冒頭", "retrievedAt": "2026-10-21T23:35:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "必須の対応はなく、使いたい人が Copilot アプリから試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "開始する", "retrievedAt": "2026-10-21T23:35:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "必要な成果を説明すると、Cowork が**メール・会議・Teams・ファイル**を横断して作業し、完了した結果を返します", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "Cowork とは?", "retrievedAt": "2026-10-21T23:35:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "Cowork でできること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook のメール作成・送信、予定表の管理、会議のスケジュール設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "Cowork とは?", "retrievedAt": "2026-10-21T23:35:00Z" }] },
+            { "text": "Word・Excel・PowerPoint・PDF の作成と、既存 Office ファイルの編集", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "ドキュメントとファイル", "retrievedAt": "2026-10-21T23:35:00Z" }] },
+            { "text": "Teams への投稿、組織内検索、複数ソースにわたる詳細な調査", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "調査と検索", "retrievedAt": "2026-10-21T23:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "重要な操作は実行前に承認を求め、一時停止・再開・キャンセルも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "制御を維持する", "retrievedAt": "2026-10-21T23:35:00Z" }] },
+            { "text": "スケジュール実行やメール受信を起点にしたタスクの自動化も設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "オートメーション", "retrievedAt": "2026-10-21T23:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "extend",
+          "heading": "拡張と提供状況",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "カスタム スキル（最大 50 個）やプラグインで機能を拡張できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "スキル", "retrievedAt": "2026-10-21T23:35:00Z" }] },
+            { "text": "職場・学校アカウントは一般提供、個人アカウントはプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "注", "retrievedAt": "2026-10-21T23:35:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "依頼内容を説明すると、メール送信や文書作成などのタスクを代わりに実行する Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "冒頭", "retrievedAt": "2026-10-21T23:35:00Z" }] } },
+        { "termKey": "skill", "term": "スキル", "type": "term", "oneLine": { "text": "Cowork が特定の種類のタスクを行うときに読み込む専門的な機能単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "スキル", "retrievedAt": "2026-10-21T23:35:00Z" }] } },
+        { "termKey": "plugin", "term": "プラグイン", "type": "term", "oneLine": { "text": "Microsoft 365 App Store から追加でき、新しいスキルやコネクタを Cowork に加えるもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "プラグインを使用した拡張", "retrievedAt": "2026-10-21T23:35:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示すステージ表示。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Cowork はどこで使えますか?",
+          "answer": { "text": "ブラウザーの copilot.cloud.microsoft、Windows / macOS のデスクトップ アプリ、iPhone / Android のモバイル アプリで使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "開始する", "retrievedAt": "2026-10-21T23:35:00Z" }] }
+        },
+        {
+          "question": "勝手にメールが送信される心配はありませんか?",
+          "answer": { "text": "メール送信や会議設定などの重要な操作は、実行前に一時停止して承認を求めます。いつでも一時停止やキャンセルもできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "制御を維持する", "retrievedAt": "2026-10-21T23:35:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/",
+        "learn": [
+          { "title": "Copilot Cowork の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locale": "ja-jp" },
+          { "title": "Copilot Cowork を使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locale": "ja-jp" },
+          { "title": "Copilot Cowork でプラグインを使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-plugins", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
