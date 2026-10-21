@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c06f3dc86e9731ab",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central の経費エージェントで、期間と車両タイプ別の走行距離レートに対応",
+        "subtitleJa": "日付範囲と車両タイプを組み合わせた、柔軟な交通費精算を目指しています",
+        "en": "Dynamics 365 Business Central: Expense Agent - Add date ranges and vehicle types in your mileage calculation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central で経費エージェントを使う従業員**と、経費管理の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Before you start", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "有効期間と車両タイプごとのレートで、走行距離の精算額を計算できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Configure a mileage rate", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "開発中のため対応は不要。管理者は現行の Mileage Rate Setup を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Configure a mileage rate", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**日付範囲と車両タイプ**を組み合わせたレートで、走行距離の精算額をより正確に計算できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Configure a mileage rate", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Business Central の Expense Agent の走行距離計算が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-upload-receipts", "locator": "Create a mileage expense", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "レートは開始日・終了日と車両タイプごとに設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Configure a mileage rate", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "経費日付と車両タイプが一致するレートで精算額を計算する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Understand how Business Central selects a rate", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "同じ車両タイプと通貨の組み合わせで、期間は重複できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Configure a mileage rate", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "レート変更で既存の経費は自動再計算されず、転記済みは再計算されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Understand when rate changes apply", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "作成前の金額は目安で、保存時の金額と異なることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-upload-receipts", "locator": "Create a mileage expense", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "車両タイプを先に作成し、Mileage Rate Setup でレートを登録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Set up vehicle types", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "現行のレート表を整理し、期間の切れ目を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "expense-agent", "term": "Expense Agent", "type": "feature", "oneLine": { "text": "領収書の AI 読み取りで経費を作成し、経費レポートに追加する Business Central のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-upload-receipts", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "mileage-rate-setup", "term": "Mileage Rate Setup", "type": "feature", "oneLine": { "text": "車両タイプと通貨別に、有効期間付きの走行距離レートを定義するページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "vehicle-type", "term": "車両タイプ", "type": "term", "oneLine": { "text": "組織が定義する、経費ユーザーが選べる車両の種類（車、バイクなど）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Set up vehicle types", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現在のレート設定でも走行距離の精算はできますか？",
+          "answer": { "text": "はい。有効期間付きのレートと車両タイプを Mileage Rate Setup で設定でき、該当がなければ標準レートが使われます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Understand how Business Central selects a rate", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "レートを変えると過去の経費も再計算されますか？",
+          "answer": { "text": "いいえ。既存の経費は自動で再計算されず、転記済みは再計算されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locator": "Understand when rate changes apply", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573254",
+        "learn": [
+          { "title": "Set up mileage rates for expense management", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-mileage-rate-setup", "locale": "en-us" },
+          { "title": "Upload receipts and create expenses in Expense Agent", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent-upload-receipts", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
