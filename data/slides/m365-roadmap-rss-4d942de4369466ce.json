@@ -69,6 +69,40 @@
         { "termKey": "context-iq", "term": "Context IQ", "type": "feature", "oneLine": { "text": "プロンプト作成時に、使うエージェントやコンテンツ ソースを選ぶための仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "選択したコンテキストで、他人のデータが見えることはありますか？",
+          "answer": {
+            "text": "Work IQ は権限を考慮して動作し、各リクエストはユーザー本人の権限の範囲でのみデータにアクセスします。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq",
+                "locator": "Security, authorization, and governance",
+                "retrievedAt": "2026-10-21T22:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "Work IQ を使うには Microsoft Copilot のライセンスが必要ですか？",
+          "answer": {
+            "text": "ライセンスのあるユーザーは、Microsoft Copilot の各エクスペリエンスとエージェントで Work IQ を使えます。ライセンスのないユーザーは使用量に応じた課金になります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq",
+                "locator": "Access and pricing",
+                "retrievedAt": "2026-10-21T22:15:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570854",
         "learn": []
