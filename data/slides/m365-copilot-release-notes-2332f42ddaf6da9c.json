@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-2332f42ddaf6da9c",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot アプリの Copilot Notebooks が新デザインに",
+        "subtitleJa": "チャット・成果物・参照を、継続して使える AI ワークスペースにまとめられます",
+        "en": "New Copilot Notebooks design in the Microsoft 365 Copilot App [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot app"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot アプリで Notebooks を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "関連するチャット・成果物・参照を 1 か所に集め、作業をセッションをまたいで続けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "September 23, 2026 / New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリースノートには、管理者や利用者に必要な設定作業の記載はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "September 23, 2026 / New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "関連する**チャット・成果物・参照を永続的な AI ワークスペース**に整理でき、Notebook に蓄積した文脈で回答が根拠づけられます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "September 23, 2026 / New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot アプリで、チャット・参照の確認・成果物の作成を手早く行える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-21T22:40:00Z" }] },
+            { "text": "Notebook の蓄積した文脈を回答の根拠に使うため、作業が毎回やり直しにならない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }] },
+            { "text": "対象プラットフォームはリリースノート上で Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "[Web] 表記", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "OneNote の Notebooks との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "アプリ版は軽量で高速な Notebooks 体験", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-21T22:40:00Z" }] },
+            { "text": "ワークスペース重視の充実した体験は、引き続き OneNote で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "関連するチャット・成果物・参照をまとめ、蓄積した文脈で Copilot の回答を根拠づける AI ワークスペース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }] } },
+        { "termKey": "onenote", "term": "OneNote", "type": "product", "oneLine": { "text": "ワークスペース重視の充実した Notebooks 体験を引き続き利用できるアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の変更を示す、リリースノート上の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "OneNote の Copilot Notebooks はなくなりますか？",
+          "answer": { "text": "いいえ。充実したワークスペース重視の体験は引き続き OneNote で利用でき、アプリ版は軽量で高速な体験とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "New Copilot Notebooks design", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+        },
+        {
+          "question": "Notebooks に参照として何を追加できますか？",
+          "answer": { "text": "リリースノートでは、Search の Quick Access から参照を追加できること、Teams 会議を参照に使えることが別項目で案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "August 25, 2026 / September 23, 2026", "retrievedAt": "2026-10-21T22:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
