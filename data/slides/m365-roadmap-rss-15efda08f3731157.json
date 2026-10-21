@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-15efda08f3731157",
+      "kind": "in-development",
+      "kindSource": "manual",
+      "label": "開発中",
+      "title": {
+        "ja": "OneNote モバイル（Android）で Copilot による要約と Q&A",
+        "subtitleJa": "長いページの要約と、ノートへの質問をスマートフォンで",
+        "en": "OneNote: Summary and Q&A in OneNote Mobile with Copilot (Android)"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Android の OneNote モバイルを使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "長いページの要約や、ノート内への質問への回答を、素早く得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "OneNote モバイルで、**長いページの短い要約**を作成し、ノート内で**質問への回答**をリアルタイムに得られます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "OneNote モバイル（Android）に Copilot の要約機能が追加される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ノート内で質問し、回答をリアルタイムで受け取れる Q&A も提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Android", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot の機能を使うには、Microsoft Copilot ライセンスと対象の前提ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T17:45:00Z" }] },
+            { "text": "モバイルでは、サポートされているバージョンのアプリと OS を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "モバイル要件", "retrievedAt": "2026-10-21T17:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "onenote", "term": "OneNote", "type": "product", "oneLine": { "text": "Microsoft 365 のデジタル ノート アプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "旧称 Microsoft 365 Copilot。Microsoft 365 アプリで使える AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "冒頭の注", "retrievedAt": "2026-10-21T17:45:00Z" }] } },
+        { "termKey": "summary-qa", "term": "要約と Q&A", "type": "feature", "oneLine": { "text": "長いページを短く要約し、ノート内の内容について質問できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "Microsoft Copilot のライセンス機能には、Microsoft Copilot ライセンスと対象の前提ライセンスが必要です。この機能固有の要件は、ロードマップでは示されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T17:45:00Z" }] }
+        },
+        {
+          "question": "iOS など他のプラットフォームでも使えますか？",
+          "answer": { "text": "このロードマップ項目の対象は Android です。他のプラットフォームの提供は、この項目では示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=422323",
+        "learn": [
+          { "title": "Microsoft Copilot の要件", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-requirements", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
