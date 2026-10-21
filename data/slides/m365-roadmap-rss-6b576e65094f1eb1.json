@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6b576e65094f1eb1",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook で Copilot と会話しながらメールを作成・編集（開発中）",
+        "subtitleJa": "下書き、推敲、書式設定を、対話で進められるようになります",
+        "en": "Outlook: Draft, edit and format emails conversationally with Copilot in Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-10-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "GCC・GCC High・DoD 環境で Outlook on the web を使い、**メールを書く人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Word・Excel・PowerPoint と同じエージェント機能で、メールを対話しながら仕上げられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook の Copilot が、ユーザーと並んで**メールの下書き・推敲・書式設定を会話形式で支援**します。Word、Excel、PowerPoint と同じエージェント機能が基盤です", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook で Copilot がメールの下書き・推敲・書式設定を対話で支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Word・Excel・PowerPoint と同じエージェント機能を基盤にする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Web、クラウドは GCC・GCC High・DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在の Outlook の Copilot は、メールの下書き、スレッドの要約、コーチングのヒントを提供する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリの Copilot 機能", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存の下書き・要約・コーチング機能を先に試し、利用ルールを整えておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "提供時期はロードマップで継続して確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-outlook", "term": "Outlook の Copilot", "type": "feature", "oneLine": { "text": "メールの下書き、スレッドの要約、コーチングのヒントを提供する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリの Copilot 機能", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "Outlook などで、開いているコンテンツを認識して応答できるチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Copilot Chat", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "gcc", "term": "GCC / GCC High / DoD", "type": "term", "oneLine": { "text": "ロードマップで示される、米国政府向けのクラウド環境の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能はいつ使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中で、提供月は示されていません。最新の状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Outlook の Copilot では、すでにメールの下書きはできますか？",
+          "answer": { "text": "はい。Outlook の Copilot は、メールの下書き、スレッドの要約、コーチングのヒントを提供します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリの Copilot 機能", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573280",
+        "learn": [{ "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
