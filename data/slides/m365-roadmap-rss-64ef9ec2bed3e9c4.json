@@ -72,6 +72,26 @@
         { "termKey": "prompt-preview", "term": "プロンプトのプレビュー", "type": "feature", "oneLine": { "text": "選択した内容がプロンプトに表示され、送信前に編集できる仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示すステージ（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "利用者への案内はいつ行えばよいですか？",
+          "answer": {
+            "text": "提供時期が未定のため、ロードマップのステージが変わり提供開始が確認できた時点で案内するのが安全です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        },
+        {
+          "question": "管理者側で事前に設定する必要はありますか？",
+          "answer": {
+            "text": "ロードマップには管理者設定に関する記載がなく、現時点では不明です。提供が近づいた際の更新情報で確認が必要です。",
+            "origin": "editorial",
+            "assertion": "inference",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=522616",
         "learn": []
