@@ -91,6 +91,33 @@
         { "termKey": "worldwide", "term": "Worldwide (Standard Multi-Tenant)", "type": "term", "oneLine": { "text": "ロードマップ上の、一般的なクラウド環境の提供範囲。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Sales agent の音声ノートとは関係がありますか？",
+          "answer": {
+            "text": "Sales agent のモバイル チャットにも、音声入力でメモを取り CRM レコードに保存する機能があり、iOS と Android で使えます。今回のボイス メモとの関係は Learn では確認できていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/microsoft-sales-copilot/sales-agent-chat-mobile",
+                "locator": "Capture voice notes and save to CRM records",
+                "retrievedAt": "2026-10-21T12:40:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "管理者は展開前に何を準備すればよいですか？",
+          "answer": {
+            "text": "必須の作業は公開情報にありません。ライセンスの割り当てを確認し、モバイル アプリのユーザーに利用シーンを案内しておくとスムーズです。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=498640",
         "learn": [
