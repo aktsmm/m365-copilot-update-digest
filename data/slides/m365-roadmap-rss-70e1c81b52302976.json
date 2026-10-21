@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-70e1c81b52302976",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Finance で顧客の入金通知を AI で取り込み・消込",
+        "subtitleJa": "入金通知（送金案内）の取り込みから突合までを自動化します",
+        "en": "Dynamics 365 Finance: Core financials - Enable import of customer payment remittance advice for processing and settlement"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Finance", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Finance",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Finance で売掛金・入金消込を扱う担当者**と、管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "顧客からの入金通知の取り込み・スキャン・マッピングを AI で自動化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供が近づいたら内容を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "顧客の**入金通知（送金案内）の取り込み・スキャン・マッピング**を、統合された Power Platform 環境の AI 処理で自動化します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "入金通知の取り込み・スキャン・マッピングを、Power Platform 環境の AI 処理で自動化", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "入金通知のデータを Dynamics 365 Finance のデータと突合", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "入金通知の詳細を Finance へシームレスに統合", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現在は開発中の段階で、ロードマップ上の提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Web・Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在の入金通知の受け取り方法と消込の手順を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップの更新を確認し、提供開始時に検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "remittance-advice", "term": "入金通知（送金案内）", "type": "term", "oneLine": { "text": "顧客が支払いの内容を取引先へ知らせる通知。ロードマップでは remittance advice と表記される。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "d365-finance", "term": "Dynamics 365 Finance", "type": "product", "oneLine": { "text": "ロードマップ上でこの更新の製品領域とされている、財務管理のアプリケーション。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "power-platform", "term": "Power Platform", "type": "product", "oneLine": { "text": "この機能の AI 処理が動作する統合環境として、ロードマップに記載されている。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップのステージは開発中で、提供月は示されていません。更新があればロードマップで確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "ロードマップでは Web、Worldwide（標準マルチテナント）が対象とされています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576741"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
