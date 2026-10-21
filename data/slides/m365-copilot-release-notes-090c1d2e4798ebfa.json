@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-090c1d2e4798ebfa",
+      "kind": "update",
+      "kindSource": "stage",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot ノートブックへの参照追加を、検索のクイック アクセスから実行可能に",
+        "subtitleJa": "検索結果の項目から、ノートブックへ直接保存できます",
+        "en": "Add references to your Copilot Notebooks from the Quick Access section in Search on the Microsoft Copilot app [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot アプリ（Web）で Copilot ノートブックを使う人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Microsoft 365 Copilot app", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "ノートブックのメニューをたどらず、検索から参照を追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Microsoft 365 Copilot app", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "操作手順の変更のみで、管理者や利用者の事前対応は示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Microsoft 365 Copilot app", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前は、参照の追加にノートブック画面の複数のメニュー操作が必要でした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "after": { "text": "検索の**クイック アクセス**で項目の「…」から「Add to > Notebook」を選ぶだけで保存できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot アプリの検索にあるクイック アクセスが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "項目の横のコンテキスト メニュー（…）から参照を追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "リリース ノート上の対象プラットフォームは Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Microsoft 365 Copilot app", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "検索 → クイック アクセスの「…」→ Add to > Notebook → ノートブックを選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Try this", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "アプリ内の画面を行き来せずに、参照をノートブックへ整理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Personal impact", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "参照情報を集めて整理するための、Microsoft Copilot のノートブック機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Why", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "quick-access", "term": "クイック アクセス", "type": "feature", "oneLine": { "text": "Microsoft Copilot アプリの検索にある、項目へすばやく移動するためのセクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - What changed", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存の機能に加えられた改善を示すリリース ノート上の区分。", "origin": "editorial", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
