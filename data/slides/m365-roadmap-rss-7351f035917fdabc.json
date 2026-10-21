@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7351f035917fdabc",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Edge で Google 検索時に職場の結果を案内するバナー（開発中）",
+        "subtitleJa": "google.com の検索でも、職場の関連結果へすぐ移動できるようになります",
+        "en": "Microsoft Edge: Work Search Banner for Google"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge"],
+        "categories": ["copilot-chat", "edge-windows"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "職場プロファイルで Edge を使う**エンド ユーザー**と、Edge の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "google.com で検索したときに、組織固有の結果へ移動する案内が表示される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要。提供開始の情報を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "職場プロファイルで google.com を検索すると、Edge が組織固有の結果の有無を検出し、あれば**バナー**で Microsoft Copilot で職場の結果を確認するリンクを案内します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "職場プロファイルでの google.com 検索が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Edge が検索語句に対する組織固有の結果の有無を検出する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連する結果があるときだけバナーを表示し、Microsoft Copilot へのリンクを案内", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象クラウドは Worldwide (Standard Multi-Tenant)、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連する既存の仕組み",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Bing の Microsoft Search 廃止後、職場の検索は M365.cloud.microsoft と SharePoint Online が窓口", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locator": "何が変更ですか?", "retrievedAt": "2026-10-21T07:30:00Z" }] },
+            { "text": "Edge の Bing.com でも、仕事関連の検索語句ではバナーが表示される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locator": "ユーザーは職場および学校の回答をどこで検索できますか?", "retrievedAt": "2026-10-21T07:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-profile", "term": "職場プロファイル", "type": "term", "oneLine": { "text": "職場または学校のアカウントで Microsoft Edge にサインインして使うプロファイル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-search", "term": "Microsoft Copilot 検索", "type": "feature", "oneLine": { "text": "組織向けに最適化された、AI を活用したユニバーサル検索エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locator": "仕事と教育機関向けの Microsoft Copilot 検索", "retrievedAt": "2026-10-21T07:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot 検索は追加料金が必要ですか？",
+          "answer": {
+            "text": "対象となる Microsoft Copilot ライセンスを持つユーザーには追加料金なしで利用できます。ライセンスがないユーザーは Microsoft Copilot アプリで Microsoft Search にアクセスできます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locator": "仕事と教育機関向けの Microsoft Copilot 検索", "retrievedAt": "2026-10-21T07:30:00Z" }]
+          }
+        },
+        {
+          "question": "Edge のアドレス バーでの職場検索は管理者が制御できますか？",
+          "answer": {
+            "text": "アドレス バーでの職場の提案表示は、ポリシー AddressBarWorkSearchResultsEnabled で構成できます。今回のバナーに同様の制御があるかは、ソースからは確認できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locator": "Edge アドレス バー ポリシーの変更", "retrievedAt": "2026-10-21T07:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560823",
+        "learn": [
+          { "title": "Bing for your organization の Microsoft Search を廃止するためのガイダンス", "url": "https://learn.microsoft.com/ja-jp/microsoftsearch/retirement-microsoft-search-bing", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
