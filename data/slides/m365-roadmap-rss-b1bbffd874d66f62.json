@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b1bbffd874d66f62",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Viva Insights の Agent 365 ダッシュボードで、サードパーティ製エージェントも集計",
+        "subtitleJa": "組織内のエージェント活動を、より広い範囲でまとめて把握できるようになります",
+        "en": "Microsoft Viva: Expanded agent coverage in Agent Dashboard"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva"],
+        "categories": ["agents", "viva"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Agent 365 ダッシュボードを見る**管理者・リーダー・アナリスト**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "サードパーティ製プラットフォームのエージェントも、ダッシュボードで確認できるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はなし。利用には Agent 365 ライセンスなどの前提がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T02:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "サードパーティ製プラットフォームのエージェントのレポートも、Viva Insights（Copilot Analytics）の **Agent 365 ダッシュボード**で見られ、組織全体のエージェント活動を包括的に把握できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Agent 365 ダッシュボードの対象を、サードパーティ製プラットフォームのエージェントへ拡大", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在も Microsoft 365 アプリ全体で使われる、サポート対象のエージェントの採用とセッションを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T02:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Agent 365 ダッシュボードには、Microsoft Copilot ライセンス 50 以上に加え Agent 365 ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件", "retrievedAt": "2026-10-21T02:20:00Z" }] },
+            { "text": "エージェント ダッシュボードは、米国政府向けクラウドや 21Vianet 運用の Office 365 では利用不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件の注", "retrievedAt": "2026-10-21T02:20:00Z" }] },
+            { "text": "ダッシュボードは現在パブリック プレビューの顧客向けで、変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "重要", "retrievedAt": "2026-10-21T02:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI 管理者は VFAM で、テナント・グループ・ユーザー単位にダッシュボードを有効化・無効化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/insights/advanced/admin/manage-settings-copilot-dashboard", "locator": "Enable or disable the Agent Dashboard", "retrievedAt": "2026-10-21T02:20:00Z" }] },
+            { "text": "エージェント ソースのフィルターで、Microsoft・サードパーティなど作成元別に絞り込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "エージェント ソース", "retrievedAt": "2026-10-21T02:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365-dashboard", "term": "Agent 365 ダッシュボード", "type": "feature", "oneLine": { "text": "Microsoft 365 アプリ全体で使われるサポート対象エージェントの採用とセッションを示すビュー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T02:20:00Z" }] } },
+        { "termKey": "agent-dashboard", "term": "エージェント ダッシュボード", "type": "feature", "oneLine": { "text": "エージェント最適化の機会の特定と、導入状況の追跡に役立つ Viva Insights のダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T02:20:00Z" }] } },
+        { "termKey": "vfam", "term": "VFAM", "type": "term", "oneLine": { "text": "Viva Feature Access Management。Viva 機能のアクセスをテナント・グループ・ユーザー単位で制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/insights/advanced/admin/manage-settings-copilot-dashboard", "locator": "Using Viva Feature Access Management (VFAM)", "retrievedAt": "2026-10-21T02:20:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ダッシュボードに非公開のエージェントを含めない設定はありますか？",
+          "answer": { "text": "はい。VFAM でテナント・グループ・ユーザー単位に、非公開エージェントを Agent 365 ダッシュボードから除外できます。既定ではすべてのエージェントが含まれます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/insights/advanced/admin/manage-settings-copilot-dashboard", "locator": "Set reporting for agent type", "retrievedAt": "2026-10-21T02:20:00Z" }] }
+        },
+        {
+          "question": "レポートの履歴はどこまで遡れますか？",
+          "answer": { "text": "Agent 365 ダッシュボードの履歴は、組織が Agent 365 ライセンスの使用条件に同意した後の期間が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T02:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573169",
+        "learn": [
+          { "title": "エージェント ダッシュボード（プレビュー）に接続する", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locale": "ja-jp" },
+          { "title": "Copilot Dashboard、Agent Dashboard などの設定を管理する", "url": "https://learn.microsoft.com/en-us/viva/insights/advanced/admin/manage-settings-copilot-dashboard", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
