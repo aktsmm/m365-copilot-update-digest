@@ -73,6 +73,28 @@
         { "termKey": "teams-calling-copilot", "term": "Teams 通話の Microsoft Copilot", "type": "feature", "oneLine": { "text": "通話中の重要なポイントをキャプチャし、フォローアップ タスクも提案する AI ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "Teams での Microsoft Copilot 通話", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
         { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "既存の通話委任（共有回線）とは何が違いますか？",
+          "answer": {
+            "text": "既存の通話委任は、委任された他のユーザーが代理で通話を受ける機能です。今回の機能は AI が着信に応答して文脈を集める点が異なります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-21T22:10:00Z" }]
+          }
+        },
+        {
+          "question": "Teams 通話での Copilot 利用を管理者は制御できますか？",
+          "answer": {
+            "text": "現行の Teams 通話の Microsoft Copilot については、管理者が組織内での利用方法を管理できます。今回の開発中機能の管理方法は、ロードマップでは確認できません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "Teams での Microsoft Copilot 通話", "retrievedAt": "2026-10-21T22:10:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
         "learn": [{ "title": "Teams Calling の機能", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locale": "ja-jp" }]
