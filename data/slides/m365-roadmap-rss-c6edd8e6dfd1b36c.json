@@ -89,6 +89,38 @@
         { "termKey": "worldwide", "term": "Worldwide（標準マルチテナント）", "type": "term", "oneLine": { "text": "ロードマップで示される、一般的な商用クラウド環境の提供範囲。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者は Planner エージェントを無効にできますか？",
+          "answer": {
+            "text": "はい。PowerShell の Set-PlannerConfiguration で AllowPlannerCopilot を $false にすると全ユーザーで無効になり、セキュリティ グループ単位で制限することもできます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "Planner エージェントおよび Planner エージェント チャットへのアクセスを管理する", "retrievedAt": "2026-10-21T12:50:00Z" }]
+          }
+        },
+        {
+          "question": "Planner エージェントを使うのに必要なライセンスは？",
+          "answer": {
+            "text": "Planner で Planner エージェントにアクセスするには、ユーザーに Microsoft Copilot ライセンスが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-21T12:50:00Z" }]
+          }
+        },
+        {
+          "question": "GCC などの政府機関向けクラウドでも使えますか？",
+          "answer": {
+            "text": "今回のロードマップ項目の提供範囲は Worldwide（標準マルチテナント）のみです。なお Planner のタスクの Outlook カレンダー表示は、GCC / GCC-High / DOD では計画中とされています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locator": "機能の可用性", "retrievedAt": "2026-10-21T12:50:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=513278",
         "learn": [
