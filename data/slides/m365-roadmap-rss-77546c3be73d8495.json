@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-77546c3be73d8495",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central の経費エージェントが対応する国と言語を拡大",
+        "subtitleJa": "チェコ語・オランダ語など 7 言語を追加し、Business Central の全提供国・地域で使えるようになります",
+        "en": "Dynamics 365 Business Central: Expense Agent - More countries and languages"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central で経費精算を行うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対応言語が増え、より多くの国・地域のユーザーが経費エージェントを使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない。提供開始時に対応言語を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Business Central が使える**すべての国・地域**で経費エージェントを利用でき、チェコ語・オランダ語・フィンランド語・アイスランド語・イタリア語・ノルウェー語・スウェーデン語が加わります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Business Central が使える全ての国・地域のユーザーに体験を拡大", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "追加言語: チェコ語、オランダ語、フィンランド語、アイスランド語、イタリア語、ノルウェー語、スウェーデン語", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はパブリック クラウド（Worldwide）で、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Learn の言語一覧にない言語でも動作する場合があるが、想定どおりに機能しないことがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locator": "Supported versus unsupported languages", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "本番環境では、公式に対応している言語でのみ利用することが推奨されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locator": "Our recommendation", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "対応状況は、国・地域別の機能一覧で随時確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locator": "Feature availability by country/region and language", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "expense-agent", "term": "経費エージェント（Expense Agent）", "type": "feature", "oneLine": { "text": "Business Central で経費管理を支援する Copilot エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locator": "Feature availability by country/region and language", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "business-central", "term": "Business Central", "type": "product", "oneLine": { "text": "Microsoft の中堅・中小企業向けクラウド ビジネス管理ソリューション（Dynamics 365 Business Central）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "supported-languages", "term": "対応言語", "type": "term", "oneLine": { "text": "Microsoft が検証し、品質基準を満たした、機能ごとの言語。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locator": "Supported versus unsupported languages", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現在、経費エージェントはどの言語に対応していますか？",
+          "answer": {
+            "text": "Learn の一覧では、チェコ語、デンマーク語、オランダ語、英語、フィンランド語、フランス語、ドイツ語、アイスランド語、イタリア語、ノルウェー語（ブークモール）、スペイン語、スウェーデン語が掲載されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locator": "Feature availability by country/region and language", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "対応外の言語では使えませんか？",
+          "answer": {
+            "text": "一覧にない言語でも使える場合がありますが、想定どおりに機能しない可能性があります。本番では対応言語の利用が推奨されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locator": "Supported versus unsupported languages", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573253",
+        "learn": [{ "title": "Copilot and agents country/region availability and supported languages", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/copilot-agents-region-language-availability", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
