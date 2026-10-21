@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-15d2090e4194a1f9",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot のビジョンが、共有した画面やスマホのカメラ映像を解析",
+        "subtitleJa": "画面共有やカメラ映像について、音声で質問できます",
+        "en": "Vision in Microsoft 365 Copilot can analyze content shared on desktop screen and through mobile camera [Android, Windows, iOS, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot を使う人**（Android・Windows・iOS・Web）と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "画面やカメラに映る内容を、音声で Copilot に質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "既定でオン。無効化するなら管理センターで「画面とカメラの共有」をオフにする",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locator": "Microsoft Copilot のビジョン", "retrievedAt": "2026-10-21T22:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": { "text": "これまで Copilot は、テキストと静的なデータの入力に依存していた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "共有した**デスクトップ画面やモバイルのカメラ映像**をリアルタイムで解析し、音声で回答します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デスクトップ画面を共有し、見えている内容について質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "モバイルの音声セッション中に、前面・背面カメラを共有して質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "職場データと Web に基づく、文脈に沿った音声回答を返す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "管理者の確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センターの「Copilot」>「設定」>「Copilot アクション」>「画面とカメラの共有」で管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locator": "Microsoft Copilot のビジョン", "retrievedAt": "2026-10-21T22:30:00Z" }] },
+            { "text": "ビジョンを無効にしても、音声の利用可否には影響しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locator": "Microsoft Copilot のビジョン", "retrievedAt": "2026-10-21T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "try-this",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "画面を共有し、見えている内容について質問する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "モバイルの音声セッションでカメラを起動し、物や文書に向けて質問する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "vision", "term": "ビジョン", "type": "feature", "oneLine": { "text": "デスクトップ画面やモバイルのカメラを共有し、見ているものについて Copilot に質問できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locator": "Microsoft Copilot のビジョン", "retrievedAt": "2026-10-21T22:30:00Z" }] } },
+        { "termKey": "screen-camera-sharing", "term": "画面とカメラの共有", "type": "term", "oneLine": { "text": "管理センターでビジョンのオン・オフを切り替える設定項目。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locator": "Microsoft Copilot のビジョン", "retrievedAt": "2026-10-21T22:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ビジョンは管理者が有効化する必要がありますか？",
+          "answer": { "text": "いいえ。既定でオンのため、有効にする操作は不要です。無効にしたい場合は「画面とカメラの共有」をオフにします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locator": "Microsoft Copilot のビジョン", "retrievedAt": "2026-10-21T22:30:00Z" }] }
+        },
+        {
+          "question": "ビジョンを無効にすると音声機能も使えなくなりますか？",
+          "answer": { "text": "いいえ。ビジョンを無効にしても、音声の利用可否には影響しません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locator": "Microsoft Copilot のビジョン", "retrievedAt": "2026-10-21T22:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 管理センターで Microsoft Copilot 設定を管理する", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-page", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
