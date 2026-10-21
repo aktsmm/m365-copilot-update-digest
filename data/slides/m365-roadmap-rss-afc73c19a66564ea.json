@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-afc73c19a66564ea",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams のインテリジェント通話委任（開発中）",
+        "subtitleJa": "着信に AI が応答して状況を把握し、出るかどうかの判断を支援します",
+        "en": "Microsoft Teams: Intelligent call delegation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams で通話を受ける機会が多い人**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "AI が着信に応答して背景を確認するため、重要な会話に集中しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない。ロードマップの更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "AI を活用した通話支援が**着信に応答して状況を確認**し、応対するかどうかの判断を助けます。フォローアップの予定調整にも対応します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI が着信に応答し、発信者の背景情報を収集する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "収集した情報をもとに、応対するかどうかを利用者が判断できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "フォローアップの予定調整にも対応する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、仕様や提供時期は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象クラウドは Worldwide（標準マルチテナント）、対象プラットフォームはデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップのタグは Targeted Release（先行リリース）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は、現在の通話設定と通話ポリシーを棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "提供が近づいたら、ロードマップと Learn の更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "intelligent-call-delegation", "term": "インテリジェント通話委任", "type": "feature", "oneLine": { "text": "AI が着信に応答して状況を集め、応対の判断を支援する Teams の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "teams-calling", "term": "Teams Calling", "type": "product", "oneLine": { "text": "Microsoft Teams での通話と Teams 電話の機能群。", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "冒頭", "retrievedAt": "2026-10-21T17:40:00Z" }] } },
+        { "termKey": "targeted-release", "term": "Targeted Release", "type": "term", "oneLine": { "text": "ロードマップ上で、先行して提供される対象を示すタグ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。時期は今後の更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存の Teams 通話の委任（共有回線）と同じものですか？",
+          "answer": { "text": "ロードマップの説明は AI による応答と状況把握が中心です。既存の委任機能との関係は、ロードマップの記載からは判断できません。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
+        "learn": [
+          { "title": "Teams Calling の機能", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
