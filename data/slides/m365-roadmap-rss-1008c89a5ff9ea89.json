@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1008c89a5ff9ea89",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ で Office ドキュメントの更新に対応（開発中）",
+        "subtitleJa": "エージェントが組織の文脈を使って、Office ドキュメントを作成・編集できるようになります",
+        "en": "Work IQ: Updating documents in Office"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Work IQ を使うエージェントを作る人**と、Microsoft Copilot の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "組織の文脈を使って、エージェントが Office ドキュメントを作成・更新できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Work IQ により、エージェントが**組織の文脈を使って Microsoft Office ドキュメントを作成・編集**でき、コンテンツの作成と更新を効率化できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ を通じて、エージェントが Office ドキュメントを作成・編集する機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Work IQ は、エージェントが組織データ・コンテキスト・ツールにアクセスして推論できる基盤", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T01:40:00Z" }] },
+            { "text": "Work IQ MCP のツールで、メールやファイルなど Microsoft 365 データの取得・作成・更新ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "ツール", "retrievedAt": "2026-10-21T01:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ の処理は、要求したユーザー本人が表示・実行できる内容に限られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "セキュリティ、承認、ガバナンス", "retrievedAt": "2026-10-21T01:40:00Z" }] },
+            { "text": "Work IQ API の利用は使用量ベースの課金で、Microsoft 365 Copilot ライセンスとは別", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "アクセスと価格", "retrievedAt": "2026-10-21T01:40:00Z" }] },
+            { "text": "ロードマップ上は開発中の段階で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コストのコントロールは Microsoft 365 管理センターで利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T01:40:00Z" }] },
+            { "text": "提供が近づくまでに、Work IQ の権限とコストの考え方を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "エージェントが組織データやコンテキストを使って推論できるようにするワークプレイス インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T01:40:00Z" }] } },
+        { "termKey": "work-iq-mcp", "term": "Work IQ MCP", "type": "feature", "oneLine": { "text": "数百の操作を 10 個の汎用ツールに統合し、Microsoft 365 データへのアクセスと操作を提供するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "ツール", "retrievedAt": "2026-10-21T01:40:00Z" }] } },
+        { "termKey": "word-excel-ppt-agents", "term": "Word・Excel・PowerPoint エージェント", "type": "feature", "oneLine": { "text": "Microsoft Copilot 内で Word、Excel、PowerPoint ファイルを作成するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "冒頭", "retrievedAt": "2026-10-21T01:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発中の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Work IQ の利用に Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "Work IQ API 自体はライセンスと独立し、使用量ベースの課金です。ライセンスを持つユーザーは、Microsoft Copilot の各エクスペリエンスとエージェントで Work IQ を使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locator": "アクセスと価格", "retrievedAt": "2026-10-21T01:40:00Z" }] }
+        },
+        {
+          "question": "既存の Word・Excel・PowerPoint エージェントとの関係は？",
+          "answer": { "text": "既存のエージェントも Work IQ で組織データを取得してドキュメントを作成します。今回の更新との詳細な違いは、ロードマップには示されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locator": "エンタープライズ データ", "retrievedAt": "2026-10-21T01:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570871",
+        "learn": [
+          { "title": "Work IQ の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot で Word、Excel、PowerPoint エージェントの使用を開始する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/wordexcelppt-agents", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
