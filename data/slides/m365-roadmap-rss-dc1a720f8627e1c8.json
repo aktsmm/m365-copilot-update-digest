@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-dc1a720f8627e1c8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint の Copilot に AI 入力ウィジェットとコンテンツ プレビューが登場予定",
+        "subtitleJa": "保存済み・未保存のプレビューをチャットと並べて確認できます",
+        "en": "SharePoint: AI input widget and content preview in Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "In development",
+        "products": ["SharePoint"],
+        "categories": ["sharepoint"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint で Copilot を使うコンテンツ作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "作成中のコンテンツを、チャットと並べて見ながら調整できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はなし。開発中のため、提供時期は決まっていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot in SharePoint で、**保存済み・未保存のプレビューをチャットと並べて表示**できます。作成した HTML フォームを操作し、回答を確認してからチャットへ送れます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供予定の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "保存済み・未保存のプレビュー コンテンツを、チャットと並べて表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "作成された HTML フォームを、プレビュー上で操作できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "フォームの回答を確認してから、チャットへ送信できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、内容や時期が変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はワールドワイド（標準マルチテナント）の Web 版", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot in SharePoint 自体は、2026 年 9 月 30 日に一般提供のロールアウトを開始する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-21T02:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用には、ユーザーが有効な Microsoft Copilot ライセンスを持つ必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-21T02:30:00Z" }] },
+            { "text": "日常的な機能はライセンスに含まれ、大規模な高度な作業は Copilot クレジットを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-21T02:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの更新を確認し、提供が近づいたら作成者向けに案内する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-sharepoint", "term": "Copilot in SharePoint", "type": "product", "oneLine": { "text": "自然言語で SharePoint のコンテンツに質問し、サイトやページ、Office ファイルを作成できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-21T02:30:00Z" }] } },
+        { "termKey": "html-form", "term": "HTML フォーム", "type": "term", "oneLine": { "text": "入力欄を持つ Web 上のフォーム。この更新では、作成したものをプレビューで操作できる。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "使用量ベースの課金で消費される、高度な作業向けの単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-21T02:30:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能はいつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されていません。開発中の段階で、時期は決まっていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "追加のライセンスは必要ですか？",
+          "answer": { "text": "Copilot in SharePoint 全般では、有効な Microsoft Copilot ライセンスが前提です。高度な作業には Copilot クレジットが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-21T02:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574106",
+        "learn": [
+          { "title": "Copilot in SharePoint の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
