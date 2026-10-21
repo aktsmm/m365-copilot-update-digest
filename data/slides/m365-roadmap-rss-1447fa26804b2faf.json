@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1447fa26804b2faf",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Power Platform ガバナンスと管理: マルチグレーダー比較",
+        "subtitleJa": "同じ評価に使った複数のグレーダーの結果を並べて比較できます",
+        "en": "Microsoft Power Platform governance and administration: Multi-grader comparison"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["security-compliance", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**評価を作成するメーカー（作成者）**と、管理者・アナリスト", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-21T05:00:00Z" }] },
+        "change": { "text": "グレーダー間の一致や違い、採点の傾向を把握し、評価結果への信頼度を高められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-21T05:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "自動的に有効化される機能で、事前の設定作業は案内されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-21T05:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "同じ評価に適用した**複数のグレーダー**の結果を、スコアや説明とあわせて並べて比較できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "機能の詳細", "retrievedAt": "2026-10-21T05:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供される比較機能",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "グレーダーを並べて比較し、スコアを比較できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "コア機能", "retrievedAt": "2026-10-21T05:00:00Z" }] },
+            { "text": "各グレーダーの説明を確認し、採点の一貫性を分析できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "コア機能", "retrievedAt": "2026-10-21T05:00:00Z" }] },
+            { "text": "結果は比較スコア、合格/不合格の比較、説明、裏付ける証拠で表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "結果表示エクスペリエンス", "retrievedAt": "2026-10-21T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "開発中のステージで、提供内容や時期は変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "Important", "retrievedAt": "2026-10-21T05:00:00Z" }] },
+            { "text": "リリース計画ではパブリック プレビューが 2026 年 9 月、一般公開の時期は示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-21T05:00:00Z" }] },
+            { "text": "提供対象は Worldwide（標準マルチテナント）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えるポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "複数のグレーダーで評価している場合は、比較の観点を事前に整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "grader", "term": "グレーダー", "type": "term", "oneLine": { "text": "評価結果を採点する役割で、同じ評価に複数適用して結果を比べられる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "機能の詳細", "retrievedAt": "2026-10-21T05:00:00Z" }] } },
+        { "termKey": "multi-grader", "term": "マルチグレーダー比較", "type": "feature", "oneLine": { "text": "同じ評価に適用した複数のグレーダーの結果を比較し、一致や違いを確認する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "機能の詳細", "retrievedAt": "2026-10-21T05:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "リリース計画では、パブリック プレビューが 2026 年 9 月、一般公開の時期は示されていません。提供時期は変更される可能性があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-21T05:00:00Z" }] }
+        },
+        {
+          "question": "管理者の設定は必要ですか？",
+          "answer": { "text": "リリース計画では「自動的に有効化される」とされており、事前設定は案内されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-21T05:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577183",
+        "learn": [
+          { "title": "マルチグレーダー比較", "url": "https://learn.microsoft.com/ja-jp/power-platform/release-plan/2026wave1/power-platform-governance-administration/multi-grader-comparison", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
