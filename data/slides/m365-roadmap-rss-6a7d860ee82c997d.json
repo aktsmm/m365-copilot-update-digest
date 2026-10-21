@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6a7d860ee82c997d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Notebook の音声概要を強化（開発中）",
+        "subtitleJa": "トピック別エピソードや新しい形式で、長いコンテンツも聞きやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): Audio Overview updates in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Notebook を使う人**と、秘密度ラベルを運用する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "長い内容をトピック別に聞け、Critique や Debate など新しい形式も選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供が始まったら秘密度ラベルとの関係を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "音声概要が**トピック別エピソード**に対応し、新形式の Critique・Debate や、より多くのコンテンツ種別を扱えるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "トピック別エピソードで、長いコンテンツを順に聞ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新しい音声形式 Critique・Debate を追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "音声概要の対象を、より多くのコンテンツ種別に拡大", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「開発中」。提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "秘密度ラベルによる企業情報保護にも対応する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存の機能では、プロンプトで音声概要の内容やトーンを調整できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 11 月 25 日", "retrievedAt": "2026-10-21T02:00:00Z" }] },
+            { "text": "秘密度ラベルを使う組織は、Notebook 内のファイルへの付与状況を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebook", "type": "feature", "oneLine": { "text": "ファイルなどの資料をまとめ、Copilot で音声概要などを作れるノート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 11 月 25 日", "retrievedAt": "2026-10-21T02:00:00Z" }] } },
+        { "termKey": "audio-overview", "term": "音声概要", "type": "feature", "oneLine": { "text": "Notebook の内容を、聞いて把握できる音声の要約にする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 11 月 25 日", "retrievedAt": "2026-10-21T02:00:00Z" }] } },
+        { "termKey": "sensitivity-label", "term": "秘密度ラベル", "type": "term", "oneLine": { "text": "コンテンツを分類して保護する、企業情報保護の仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップのステージは開発中で、提供月は示されていません。時期はロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "既存の音声概要との違いは？",
+          "answer": { "text": "既存の音声概要はプロンプトで内容やトーンを調整できます。今回はトピック別エピソード、新形式、ラベル対応、対象拡大が加わります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025 年 11 月 25 日", "retrievedAt": "2026-10-21T02:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570966",
+        "learn": [{ "title": "2025 Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
