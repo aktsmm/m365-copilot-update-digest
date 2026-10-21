@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0d94493ce4be4ffe",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "PowerPoint のブランド キットにスキルを追加（開発中）",
+        "subtitleJa": "スキル（.md ファイル）をアップロードして PowerPoint の Copilot で使えるようになります",
+        "en": "PowerPoint: Skills in Brand Kit"
+      },
+      "meta": {
+        "publishedJst": "2026-09-24",
+        "availability": [],
+        "status": "In development",
+        "products": ["PowerPoint", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "PowerPoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint の Copilot を使う作成者**と、ブランド キットを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ブランド キットにスキル（.md ファイル）をアップロードし、PowerPoint の Copilot で使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ブランド キットに**スキル（.md ファイル）をアップロード**し、PowerPoint の Copilot 内で使えるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ブランド キットにスキル（.md ファイル）をアップロードできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "アップロードしたスキルを PowerPoint の Copilot で利用する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）の Desktop 版", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供内容は変更される場合がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スキルの作成方法や詳細な仕様は、現時点の公開情報では確認できていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "公開したブランド キットの画像は、Copilot in PowerPoint で使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/enable-enterprise-brand-images-powerpoint-copilot", "locator": "オプション 1", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "画像は名前・説明・タグ付きで 1,000 枚以上あると関連画像を取得しやすい", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/enable-enterprise-brand-images-powerpoint-copilot", "locator": "成功のためのヒント", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "brand-kit", "term": "ブランド キット", "type": "feature", "oneLine": { "text": "組織の承認済みブランド アセットを保存し、Copilot in PowerPoint でのプレゼン作成に使える仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/enable-enterprise-brand-images-powerpoint-copilot", "locator": "オプション 1", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "skill-md", "term": "スキル（.md ファイル）", "type": "term", "oneLine": { "text": "今回のアップロード対象となる、Markdown 形式のファイル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "ppt-copilot", "term": "Copilot in PowerPoint", "type": "feature", "oneLine": { "text": "ブランド キットの画像を使って、ブランドに沿ったプレゼンテーションを作成できる Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/enable-enterprise-brand-images-powerpoint-copilot", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "今のブランド キットでは何ができますか？",
+          "answer": { "text": "公開したブランド キットの画像を、Copilot in PowerPoint でのプレゼンテーション作成・編集に使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/enable-enterprise-brand-images-powerpoint-copilot", "locator": "オプション 1", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "最初に何を試すのがよいですか？",
+          "answer": { "text": "まず既存のブランド キットを整備し、画像のメタデータを充実させておくと運用しやすくなります。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569018",
+        "learn": [{ "title": "PowerPoint Copilot でエンタープライズ ブランド画像を有効にする方法", "url": "https://learn.microsoft.com/ja-jp/sharepoint/enable-enterprise-brand-images-powerpoint-copilot", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
