@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1e6e0253b369f25e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook の Copilot Chat が受信トレイ・予定表・組織データ全体を対象に推論",
+        "subtitleJa": "Microsoft Copilot ライセンスなしの Copilot Chat ユーザーが対象です",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat in Outlook expands to reason over inbox, calendar, and enterprise data"
+      },
+      "meta": {
+        "publishedJst": "2026-09-25",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)", "Outlook"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "GCC / GCC High / DoD で **Outlook の Copilot Chat を使うライセンスなしのユーザー**と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "単一のメール スレッドに限らず、受信トレイや予定表などを横断して質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必須の対応はない。提供時期の更新を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook の Copilot Chat が、**受信トレイ・予定表・その他の組織データ全体**をもとに推論できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Microsoft Copilot ライセンスのない Copilot Chat ユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウド: GCC / GCC High / DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プラットフォーム: Android / Desktop / iOS / Mac / Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中（In development）で、内容や時期は変わることがある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は、ユーザーが Microsoft 365 経由で既にアクセスできるデータ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日（ロードマップ ID 531910）", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "リリース ノートでは「受信トレイや予定表に関する質問」を試す手順が案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 7 月 1 日（ロードマップ ID 531910）", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "提供開始に備え、ユーザー向けの案内文を先に用意しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot ライセンスなしでも使える Copilot のチャット体験。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "gcc", "term": "GCC / GCC High / DoD", "type": "term", "oneLine": { "text": "米国政府機関向けに分離されたクラウド インスタンスの区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "ソースでは、ライセンスのない Copilot Chat ユーザーが対象と説明されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "いつ提供されますか？",
+          "answer": { "text": "ロードマップでは開発中で、提供時期はまだ示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=554934",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
