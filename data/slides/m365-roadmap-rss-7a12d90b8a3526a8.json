@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7a12d90b8a3526a8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ: エージェントが Microsoft 365 のコンテンツと文脈を取得",
+        "subtitleJa": "Work IQ MCP の retrieve ツールで、根拠となる情報をエージェントに渡せます",
+        "en": "Work IQ: Retrieve"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Work IQ を使うエージェントの開発者**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メール・ファイル・会議などの内容を、出典付きでエージェントの根拠として取得できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、テナントの Work IQ 有効化と Copilot クレジットの支出ポリシーが先に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Work IQ MCP の **retrieve ツール**が、サインインユーザーがアクセスできるデータを検索し、モデルに渡せる根拠コンテンツを返します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "メール・ファイル・会議・Teams メッセージ・ユーザーを検索できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "戻り値は、引用付きの Markdown と出典ごとの構造化メタデータ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "copilot 戦略なら、Copilot で使える接続済みの企業ソースも検索できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "取得方法の選択", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn 上の retrieve ツールはパブリック プレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "重要", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "代理認証で動作し、ユーザーがアクセスできないコンテンツは返らない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "重要", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "Dataverse と Power BI は、現在サポートされている取得ソースではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "取得方法の選択", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テナントで Work IQ を有効化し、Copilot クレジットの使用量ベース課金と Work IQ API を含む支出ポリシーを設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "クライアント アプリを登録し、委任アクセス許可 WorkIQAgent.Ask を付与。Work IQ MCP ポリシーを使う場合は有効化を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage-notes",
+          "heading": "使い方のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "capabilities で検索対象を絞れる（People、Meetings、Email、TeamsMessages など）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "特定のソース タイプに要求を制限する", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "ask ツールと異なり、最終的な回答は生成せず根拠を返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq-mcp", "term": "Work IQ MCP", "type": "feature", "oneLine": { "text": "MCP クライアントから Work IQ のツール（ask、retrieve など）を呼び出すためのサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "retrieve", "term": "retrieve ツール", "type": "feature", "oneLine": { "text": "ユーザーがアクセスできるデータを検索し、AI エージェントの根拠となるコンテンツを返すツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "AI の回答や処理を、実際のデータ（根拠）に基づかせること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供に向けて開発が進んでいる段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ask ツールとの違いは何ですか？",
+          "answer": { "text": "ask は質問への回答を返しますが、retrieve は最終回答を生成せず、引用付きの根拠コンテンツとメタデータを返します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "冒頭", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "grounding と copilot の戦略はどう使い分けますか？",
+          "answer": { "text": "答えが Microsoft 365 にあると分かっているなら既定の grounding、ソースが不明でコネクタなども必要なら copilot を使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "取得方法の選択", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        },
+        {
+          "question": "課金や管理面で必要なことは？",
+          "answer": { "text": "Copilot クレジットの使用量ベース課金の設定と、呼び出しユーザーへの支出ポリシー割り当てが必要です。Work IQ MCP ポリシーがある場合は有効状態も確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570673",
+        "learn": [
+          { "title": "Work IQ MCP で retrieve ツールを使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/mcp/retrieve", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
