@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3b3d758c4533a4c0",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Payables Agent の発注書マッチング精度が向上（Business Central）",
+        "subtitleJa": "仕入先請求書と発注書の照合が、金額も含めて正確になります",
+        "en": "Dynamics 365 Business Central: Copilot and agents - Improve purchase order matching in Payables Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Business Central で Payables Agent を使う経理・購買担当者**（エージェント スーパーバイザー）と管理者",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Customer and Business Central user involvement", "retrievedAt": "2026-10-22T00:00:00Z" }]
+        },
+        "change": {
+          "text": "発注書行への照合提案が改善し、ドラフトの確定時の動作も既存の転記管理に沿う",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "確定前にドラフトの「発注行の一致」と警告を確認する運用にする",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Review purchase order matches before finalization", "retrievedAt": "2026-10-22T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Payables Agent は拡充した発注書行の一覧を使って照合し、**金額**でも一致を判断できます。説明文と数量だけに頼りません",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "請求書が発注書を参照する場合、仕入先と請求書行を特定した後に発注行の一致を提案",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Drafting invoice details", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            },
+            {
+              "text": "Business Central が発注行の互換性を確認し、請求数量を割り当てる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Drafting invoice details", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            },
+            {
+              "text": "一致しなかった行は、既存の分類とレビューの流れで処理される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Drafting invoice details", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Payables Agent をセットアップし、エージェント スーパーバイザーを割り当てる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Activation and configuration", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            },
+            {
+              "text": "購買ドラフトで「発注行の一致」と「警告」を確認し、必要なら「発注行に一致」で修正",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locator": "Review proposed matches", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            },
+            {
+              "text": "確認後にエージェントがドラフトを未転記の購買請求書として確定する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Review purchase order matches before finalization", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "PDF 添付のメールのみ処理。10 ページ超・5 MB 超の PDF は対象外",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Limitations", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            },
+            {
+              "text": "検証・サポートは英語のみ。AI の利用は Copilot クレジットで課金される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Billing for use", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する動作",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "警告は Business Central の検証結果で、AI の信頼度ではない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locator": "Understand order-match warnings", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            },
+            {
+              "text": "エージェントは請求書を転記しない。転記前に受領の割り当てを確認する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locator": "Finalize and post the invoice", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "発注書番号入りの請求書で、金額差の警告がどう出るか試す",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            },
+            {
+              "text": "単価差は「価格差異」警告で示され、許容率は購買＆支払設定で決まる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locator": "Understand order-match warnings", "retrievedAt": "2026-10-22T00:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "payables-agent",
+          "term": "Payables Agent",
+          "type": "product",
+          "oneLine": {
+            "text": "受信した仕入先請求書を監視・解析し、購買請求書のドラフトを作る Business Central のエージェント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "概要", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "termKey": "agent-supervisor",
+          "term": "エージェント スーパーバイザー",
+          "type": "term",
+          "oneLine": {
+            "text": "エージェントが判断に迷ったときに関与し、ドラフトを確認する Business Central のユーザー。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Customer and Business Central user involvement", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "termKey": "purchase-document-draft",
+          "term": "購買ドキュメント ドラフト",
+          "type": "feature",
+          "oneLine": {
+            "text": "エージェントが提案した請求書の内容と理由を表示し、確定前に確認・修正する画面。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locator": "Finalizing the purchase document draft", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "提供開始（GA）",
+          "type": "label",
+          "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "qa": [
+        {
+          "question": "エージェントは請求書を自動で転記しますか？",
+          "answer": {
+            "text": "いいえ。エージェントは未転記の購買請求書として確定するだけで、転記はしません。転記前に受領の割り当てを確認します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locator": "Finalize and post the invoice", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "警告をすべて解消しないと確定できませんか？",
+          "answer": {
+            "text": "いいえ。単位情報の欠落は確定を妨げますが、価格差異や過剰受領などの警告は残したまま確定できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locator": "Understand order-match warnings", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "照合できない行はどうなりますか？",
+          "answer": {
+            "text": "既存の分類とレビューの流れに進みます。運賃や品目チャージなどが自動で照合されるとは限らないため、手動で確認します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locator": "Finalize and post the invoice", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573380",
+        "learn": [
+          { "title": "Payables Agent overview", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/payables-agent", "locale": "en-us" },
+          { "title": "Review and match incoming invoice drafts to orders", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/match-purchase-invoice-drafts-to-orders", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
