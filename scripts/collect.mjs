@@ -631,6 +631,14 @@ function knownJapaneseRoadmapSummary(event) {
     return "データ セキュリティ ポスチャ エージェントを、新しい資格情報スキャン機能で強化します。対象範囲内の場所にある露出した資格情報やデータ セキュリティ上のリスクを検出できます。エージェントにスキャン タスクを割り当て、進行状況を追跡し、優先度の高い検出結果に対応できます。選択したデータの場所がスキャン対象です。";
   }
 
+  if (/enable semantic data understanding for agentic use/.test(text)) {
+    return "AI エージェントや Copilot が、スキーマだけでなく業務データの意味も理解し、手動設定を減らして正確に回答できるようになります。Dataverse のビュー、フォーム、メタデータからセマンティックな知識を自動で抽出します。";
+  }
+
+  if (/manage intraday operations with ai agent/.test(text)) {
+    return "Intraday Agent は日中業務の運用を支援する自律型 AI エージェントです。キュー量をリアルタイムで監視し、実績が予測需要から大きく乖離した場合に異常を検知します。";
+  }
+
   return "";
 }
 
@@ -753,6 +761,14 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/support permission sync missed in incremental crawl/.test(text)) {
     return "増分クロール時のアクセス許可の同期漏れに対応";
+  }
+
+  if (/enable semantic data understanding for agentic use/.test(text)) {
+    return "Dataverse でエージェント向けのセマンティックなデータ理解を実現";
+  }
+
+  if (/manage intraday operations with ai agent/.test(text)) {
+    return "Dynamics 365 Customer Service の AI エージェントで日中業務を管理";
   }
 
   if (/word: legal plugins in copilot/.test(text)) {
@@ -2156,18 +2172,29 @@ function refreshLocalizedFieldsFromCache(event, summaryCache) {
 // unrelated features. Keep the Retirement stage only when the visible title or
 // summary actually announces one; roadmap items keep their feed category.
 function correctFalseRetirementStage(event) {
-  if (event.releaseStage !== "Retirement" || event.sourceFamily === "Roadmap") {
-    return event;
-  }
-
   const visibleText = `${event.titleEn || event.title || ""}\n${
     event.summaryEn || event.summary || ""
   }`;
+  const isNewOneDrivePdfReview =
+    event.sourceFamily === "Roadmap" &&
+    /review pdfs using the copilot context menu on onedrive ios/i.test(
+      visibleText,
+    );
+  if (
+    event.releaseStage !== "Retirement" ||
+    (event.sourceFamily === "Roadmap" && !isNewOneDrivePdfReview)
+  ) {
+    return event;
+  }
+
   if (RETIREMENT_SIGNAL_PATTERN.test(visibleText)) {
     return event;
   }
 
   const corrected = { ...event, releaseStage: detectReleaseStage(visibleText) };
+  if (isNewOneDrivePdfReview) {
+    corrected.releaseStage = "Launched";
+  }
   corrected.importanceScore = importanceScore(corrected);
   corrected.importanceReason = importanceReason(corrected, "ja");
   return corrected;
