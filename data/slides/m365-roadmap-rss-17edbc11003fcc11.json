@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-17edbc11003fcc11",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "OneDrive Web の Copilot でファイル操作機能が向上（開発中）",
+        "subtitleJa": "チャットから、ファイルを起点に仕事を仕上げられるようになります",
+        "en": "OneDrive: Improved capabilities for files with Copilot in OneDrive Web"
+      },
+      "meta": {
+        "publishedJst": "2026-08-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365", "OneDrive", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**OneDrive Web で Microsoft Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ファイルの検索・分析から成果物の作成、保存・共有までをチャットで進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要。ロードマップの更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "OneDrive の Copilot で、**ファイルから完成した成果物まで**チャットで進められます。要約・ダッシュボード・プレゼンテーションを作り、OneDrive で保存・共有できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "内容の検索、ファイルやデータの分析を Copilot が支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "要約・ダッシュボード・プレゼンテーションなどの成果物を作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "結果を OneDrive で保存・共有して共同作業できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Web、クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供前に、対象ファイルの共有範囲や機密ラベルの運用を見直しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Learn のリリース ノートで、OneDrive の Copilot 関連の更新を定期的に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "onedrive-copilot", "term": "Copilot in OneDrive", "type": "feature", "oneLine": { "text": "OneDrive Web 上で、ファイルの要約や分析などを Copilot に依頼できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-file-skills", "term": "ファイル スキル", "type": "term", "oneLine": { "text": "ファイルの検索、分析、成果物の作成を Copilot に任せるための能力。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "OneDrive の Copilot は、すでにファイルの要約に対応していますか？",
+          "answer": {
+            "text": "はい。2025 年 8 月のリリース ノートに、OneDrive Web と SharePoint のドキュメント ライブラリで PowerPoint・Excel・PDF などの要約に対応したとあります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "August 19, 2025 / OneDrive", "retrievedAt": "2026-10-21T06:55:00Z" }]
+          }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": {
+            "text": "ロードマップでは開発中で、提供時期は示されていません。ロードマップの更新を確認してください。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569215",
+        "learn": [
+          { "title": "2025 Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
