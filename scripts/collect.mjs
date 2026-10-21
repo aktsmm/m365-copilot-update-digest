@@ -751,6 +751,14 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/support permission sync missed in incremental crawl/.test(text)) {
+    return "増分クロール時のアクセス許可の同期漏れに対応";
+  }
+
+  if (/word: legal plugins in copilot/.test(text)) {
+    return "Copilot の法務プラグイン";
+  }
+
   if (/microsoft 365 admin center:\s*usage reports?\s*[–—-]\s*microsoft 365 copilot connectors/.test(text)) {
     return "Microsoft 365 管理センターに Copilot コネクタの利用状況レポートを追加";
   }
@@ -1686,6 +1694,10 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^microsoft dataverse:/.test(text)) {
     return "Microsoft Dataverse";
+  }
+
+  if (/^microsoft power platform governance and administration:/.test(text)) {
+    return "Microsoft Power Platform";
   }
 
   if (/^dynamics 365 business central:/.test(text)) {
