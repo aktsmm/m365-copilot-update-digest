@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-f3a49d59c982f911",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "管理センター: Everyone 系グループの権限をアイテム単位で確認できるレポート",
+        "subtitleJa": "過剰共有の場所を、アイテム単位で正確に特定できます",
+        "en": "Admin Center - detailed report on Everyone except external user permissions [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 SharePoint"],
+        "categories": ["admin"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint 高度な管理を使う管理者**（SharePoint の高度な管理管理者ロールが必要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "EEEU / Everyone に開かれたアイテムを個別に特定し、スクリプトで修正できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "このレポートは、どのようなときに使用する必要がありますか?", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Copilot 導入前の過剰共有対策として、レポートを実行して確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "特別な SharePoint グループ（EEEU / Everyone）が受信者のアイテムを、**階層の識別子・権限レベル・親グループ付きで 1 件ずつ**一覧できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートで示されること", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "レポートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "データ アクセス ガバナンスのスナップショット レポートの 1 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "実行: SharePoint 管理センター → レポート → データ アクセス ガバナンス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートの実行", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "結果は ZIP 内の CSV。項目 URL、ロール、親グループなどの列を含む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートのダウンロード", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "事前にサイト権限レポートを 1 回以上生成。再実行は 30 日ごと", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "SharePoint と OneDrive の両方が対象。ダウンロードは 100 万行まで", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "開始する前に", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "why-copilot",
+          "heading": "Copilot との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "EEEU と共有された内容は Microsoft Copilot の検索結果に表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "このレポートは、どのようなときに使用する必要がありますか?", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "システム ファイル・システム グループへの権限はレポートに含まれない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "例外", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "eeeu", "term": "EEEU", "type": "term", "oneLine": { "text": "「外部ユーザー以外のすべてのユーザー」。内部ユーザー全員を含み、ゲストを除く組み込みグループ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-everyone-except-external-user-report", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "spam", "term": "SharePoint 高度な管理", "type": "product", "oneLine": { "text": "データ アクセス ガバナンス レポートなどを提供する、SharePoint の管理機能群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "snapshot-report", "term": "スナップショット レポート", "type": "feature", "oneLine": { "text": "特定の時点のアクセス許可の状態を取得するレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "レポートで示されること", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能更新の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "必要なロールは何ですか？",
+          "answer": { "text": "SharePoint の高度な管理管理者ロールが必要です。レポート実行にはグローバル管理者へのこのロール割り当てが必要とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locator": "SharePoint 高度な管理管理者ロールを割り当てる", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "EEEU 活動レポートとの違いは？",
+          "answer": { "text": "EEEU 活動レポートは過去 28 日間に組織全体と共有された上位 100 サイトを示します。今回のレポートはアイテム単位の権限を一覧します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/get-ready-copilot-sharepoint-advanced-management", "locator": "次のレポートから始める", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+        "learn": [
+          { "title": "外部ユーザー以外のすべてのユーザー と すべてのユーザー の項目レベルのアクセス許可の詳細を取得する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/data-access-governance-detailed-eeeu-everyone-permissions-report", "locale": "ja-jp" },
+          { "title": "SharePoint 高度な管理を使用して Microsoft Copilot とエージェントに備える", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/get-ready-copilot-sharepoint-advanced-management", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
