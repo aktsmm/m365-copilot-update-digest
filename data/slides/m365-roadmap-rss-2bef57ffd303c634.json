@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2bef57ffd303c634",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "クラシック Outlook で、選択したテキストについて Copilot に質問できるように",
+        "subtitleJa": "ユーザーが自分でテキストを選び、関連情報を Copilot に尋ねられます",
+        "en": "Outlook: User-initiated Copilot insights in classic Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**クラシック Outlook を使うユーザー**と、Copilot を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メール内の気になる箇所を選ぶだけで、関連情報を Copilot に尋ねられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザーが自分で操作する機能のため、必須の対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ユーザーが**テキストを手動で選択して Copilot に質問**し、関連情報を得られます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザーがテキストを手動で選択し、Copilot に関連情報の提供を依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot が自動で提示するのではなく、ユーザーの操作で開始する方式", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "クラシック Outlook（デスクトップ）で、メール内のテキストを選択して Copilot に質問する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の更新チャネルは Current Channel", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "クラウド: Worldwide（Standard Multi-Tenant）、プラットフォーム: デスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated"
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "長いメールで分かりにくい用語や固有名詞を選んで、背景を確認する使い方が考えられる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "classic-outlook", "term": "クラシック Outlook", "type": "product", "oneLine": { "text": "Windows 向けのデスクトップ版 Outlook（新しい Outlook に対する従来版）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "current-channel", "term": "Current Channel", "type": "term", "oneLine": { "text": "Microsoft 365 アプリの更新チャネルの 1 つで、新機能が最も早く届く。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能は誰でも使えますか？",
+          "answer": { "text": "必要なライセンスはロードマップに示されていません。Copilot のリリース ノートで最新情報を確認してください。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=508524",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
