@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-048f25616916eaf7",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "エージェントは大きいほど良いのか？拡張できるエージェントの設計",
+        "subtitleJa": "ツールや知識を足し続ける前に、分割の判断基準を確認します",
+        "en": "Are bigger agents better? How to design agents that scale"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": {
+          "text": "Copilot Studio で**エージェントを作成・保守するメーカー**",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "マルチエージェント ソリューション設計に関する考慮事項", "retrievedAt": "2026-10-21T08:20:00Z" }]
+        },
+        "change": {
+          "text": "機能を足し続けたエージェントを、いつ分割すべきかの設計指針が得られる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "エージェントを複数の接続されたエージェントに分割することを検討する必要がある場合", "retrievedAt": "2026-10-21T08:20:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "設定変更は不要。既存エージェントの設計を見直すときの参考にする",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified",
+          "evidence": []
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "ツールやトピックが増えて**ツールの使い分けが鈍ったとき**、子エージェントや接続エージェントへ分けて精度を保てます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "エージェントを複数の接続されたエージェントに分割することを検討する必要がある場合", "retrievedAt": "2026-10-21T08:20:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "分割を考える目安",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "ツール・トピック・他エージェントの選択肢が 30〜40 を超えると、使い分けの精度が落ちることがある",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "エージェントを複数の接続されたエージェントに分割することを検討する必要がある場合", "retrievedAt": "2026-10-21T08:20:00Z" }]
+            },
+            {
+              "text": "説明が似たツールが少数でも低下する場合があるため、自分の評価で確認する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "エージェントを複数の接続されたエージェントに分割することを検討する必要がある場合", "retrievedAt": "2026-10-21T08:20:00Z" }]
+            },
+            {
+              "text": "複数チームでの管理、個別の発行、専用モデル、独立した ALM が必要なら接続エージェントを検討",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "複数の接続されたエージェントにソリューションを分割することを検討するその他の理由", "retrievedAt": "2026-10-21T08:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "分割の影響と使い分け",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "分割するとオーケストレーションが増えて待機時間が長くなり、テスト・管理・ガバナンスの対象も増える",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "マルチエージェント ソリューションの潜在的な影響", "retrievedAt": "2026-10-21T08:20:00Z" }]
+            },
+            {
+              "text": "単一の目的で 1 チームが管理するなら、子エージェントで足りる。まず 1 つのエージェントから始める",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/multi-agent-patterns", "locator": "エージェントを分離するタイミング", "retrievedAt": "2026-10-21T08:20:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "child-agent",
+          "term": "子エージェント",
+          "type": "feature",
+          "oneLine": {
+            "text": "既存のエージェント内にある軽量なエージェント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "冒頭", "retrievedAt": "2026-10-21T08:20:00Z" }]
+          }
+        },
+        {
+          "termKey": "connected-agent",
+          "term": "接続エージェント",
+          "type": "feature",
+          "oneLine": {
+            "text": "独自のオーケストレーション、ツール、知識を持つ別個のエージェント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/multi-agent-patterns", "locator": "接続されているエージェント", "retrievedAt": "2026-10-21T08:20:00Z" }]
+          }
+        },
+        {
+          "termKey": "orchestration",
+          "term": "マルチエージェント オーケストレーション",
+          "type": "term",
+          "oneLine": {
+            "text": "1 つのエージェントが他のエージェントを呼び出して処理を進める仕組み。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/multi-agent-patterns", "locator": "冒頭", "retrievedAt": "2026-10-21T08:20:00Z" }]
+          }
+        },
+        {
+          "termKey": "alm",
+          "term": "ALM",
+          "type": "term",
+          "oneLine": {
+            "text": "アプリケーション ライフサイクル管理。エージェントごとに独立して運用する場合の管理プロセス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "複数の接続されたエージェントにソリューションを分割することを検討するその他の理由", "retrievedAt": "2026-10-21T08:20:00Z" }]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "子エージェントと接続エージェントはどう選び分けますか？",
+          "answer": {
+            "text": "1 つの目的を 1 チームで管理し、個別の設定・発行・再利用が不要なら子エージェントです。個別の発行や専用設定、再利用が必要なら接続エージェントを検討します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locator": "子エージェントを使用するタイミング", "retrievedAt": "2026-10-21T08:20:00Z" }]
+          }
+        },
+        {
+          "question": "接続エージェントを使うときのガバナンス上の注意は？",
+          "answer": {
+            "text": "接続エージェントは親がアクセスできないものにアクセスできる場合があります。呼び出しを強力なアクションと同様に扱い、呼び出しの記録も取ります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/multi-agent-patterns", "locator": "接続されているエージェント", "retrievedAt": "2026-10-21T08:20:00Z" }]
+          }
+        },
+        {
+          "question": "接続エージェントには会話履歴が渡されますか？",
+          "answer": {
+            "text": "接続エージェントにはコンテキスト包含設定があり、履歴を受け取るかを制御します。自動で渡されると仮定せず設定を確認します。子エージェントは常に親のコンテキストを受け取ります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/multi-agent-patterns", "locator": "データハンドオフ", "retrievedAt": "2026-10-21T08:20:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/ba-p/4559073",
+        "learn": [
+          { "title": "他のエージェントの概要を追加", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents", "locale": "ja-jp" },
+          { "title": "マルチエージェント オーケストレーション パターンとベスト プラクティス", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/multi-agent-patterns", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
