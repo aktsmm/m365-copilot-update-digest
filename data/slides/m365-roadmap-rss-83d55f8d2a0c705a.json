@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-83d55f8d2a0c705a",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Forms の Copilot が米国政府クラウドで展開中",
+        "subtitleJa": "フォームの作成から送信、結果の分析までを AI が支援します",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot in Forms - US Government clouds"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Forms", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**政府クラウド（GCC / GCC High / DoD）で Forms を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "フォームの作成・送信・結果分析で Copilot の支援を受けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "政府クラウドは機能の提供時期が商用環境と異なる場合があるため、展開状況を確認しておく",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T08:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "Forms で、**下書き作成・配信と状況の確認・結果の分析**まで Copilot の支援を受けられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Draft with Copilot: Copilot がフォームの下書きを作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "配信とモニタリング、結果の分析も Copilot が支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Web 版の Microsoft Forms で提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot は GCC、GCC High、DoD で利用でき、顧客の政府クラウド テナント内で動作する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T08:00:00Z" }] },
+            { "text": "プロンプトや応答、生成コンテンツは政府機関のクラウドに残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "機能の可用性は環境ごとに異なる場合があり、リリースは通常商用環境より遅れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 365 と米国政府のクラウド環境の違い", "retrievedAt": "2026-10-21T08:00:00Z" }] },
+            { "text": "特定の規制義務を満たす構成は、お客様側の責任", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "コンプライアンスと信頼に関する考慮事項", "retrievedAt": "2026-10-21T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "展開範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象は GCC、GCC High、DoD の各政府クラウド", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "GCC は連邦民間機関や自治体、GCC High は CUI を扱う機関・請負業者、DoD は国防総省向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 米国政府クラウド環境の概要", "retrievedAt": "2026-10-21T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "アンケートや調査を行う部署で、下書き作成から試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-forms", "term": "Copilot in Forms", "type": "feature", "oneLine": { "text": "Forms でフォームの作成から送信、結果の分析までを支援する Copilot 機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "gcc", "term": "GCC", "type": "term", "oneLine": { "text": "米国のデータ所在地と政府連携コンプライアンスを備えた専用環境（Government Community Cloud）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 米国政府クラウド環境の概要", "retrievedAt": "2026-10-21T08:00:00Z" }] } },
+        { "termKey": "gcc-high", "term": "GCC High", "type": "term", "oneLine": { "text": "コンプライアンスと主権の要件の昇格のために設計された、より分離された環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 米国政府クラウド環境の概要", "retrievedAt": "2026-10-21T08:00:00Z" }] } },
+        { "termKey": "dod", "term": "DoD", "type": "term", "oneLine": { "text": "米国国防総省専用の非常に制限された環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 米国政府クラウド環境の概要", "retrievedAt": "2026-10-21T08:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "商用環境と同じ機能がすぐ使えますか？",
+          "answer": { "text": "政府クラウドでは機能の可用性が異なる場合があり、リリースは通常商用環境より遅れます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 365 と米国政府のクラウド環境の違い", "retrievedAt": "2026-10-21T08:00:00Z" }] }
+        },
+        {
+          "question": "データはどこに保存されますか？",
+          "answer": { "text": "プロンプト、応答、生成されたコンテンツは政府機関のクラウドに残ります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-21T08:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
+        "learn": [{ "title": "Microsoft 365 および Microsoft Copilot のための Microsoft 米国政府クラウド環境について理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
