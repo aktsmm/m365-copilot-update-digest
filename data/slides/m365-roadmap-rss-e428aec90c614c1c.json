@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e428aec90c614c1c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Rights Management コネクタが証明書ベース認証に移行",
+        "subtitleJa": "共有シークレットから、管理者が用意する証明書へ。セキュリティが強化されます",
+        "en": "Microsoft Purview: Information Protection - Rights Management connector – Certificate-based authentication"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Rights Management コネクタを運用している管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "認証が共有シークレットから証明書ベースに変わり、セキュリティ体制が向上する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "管理者は独自の Microsoft Entra アプリ登録と証明書を用意する必要がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が**自分で Microsoft Entra アプリ登録と証明書を構成**し、新しい PowerShell モジュールでコネクタを設定する方式になります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "コネクタの認証を共有シークレットから証明書ベースへ移行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理者が Microsoft Entra のアプリ登録と証明書を自分で構成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新しい PowerShell モジュールでコネクタを設定", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Worldwide（標準マルチテナント）。時期はロードマップで未定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "RMS コネクタは Exchange Server・SharePoint Server・FCI を使うファイル サーバー向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locator": "Azure Rights Management サービスでサポートされているオンプレミス サーバー", "retrievedAt": "2026-10-21T01:30:00Z" }] },
+            { "text": "コネクタ関連のアカウントでは多要素認証（MFA）を要求しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locator": "Rights Management コネクタと MFA", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在のコネクタ構成と、使用しているオンプレミス サーバーを棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "コネクタには Azure RMS のアクティブ化とディレクトリ同期が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/information-protection/deploy-rms-connector", "locator": "RMS コネクタの前提条件", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "rms-connector", "term": "Microsoft Rights Management コネクタ", "type": "feature", "oneLine": { "text": "オンプレミス サーバーがクラウドの Azure RMS で IRM 機能を使えるようにする中継サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/information-protection/deploy-rms-connector", "locator": "RMS コネクタの概要", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "azure-rms", "term": "Azure Rights Management", "type": "term", "oneLine": { "text": "Microsoft Purview Information Protection が使う、アイテムを暗号化して保護するクラウド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "fci", "term": "ファイル分類インフラストラクチャ（FCI）", "type": "term", "oneLine": { "text": "Windows Server のファイル サーバーで、フォルダー内の Office ドキュメントを分類してポリシーを適用する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/information-protection/deploy-rms-connector", "locator": "サポートされているオンプレミス サーバー", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "RMS コネクタはどのサーバーで使えますか？",
+          "answer": { "text": "Exchange Server、SharePoint Server、およびファイル分類インフラストラクチャを使う Windows Server のファイル サーバーをサポートします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/information-protection/deploy-rms-connector", "locator": "サポートされているオンプレミス サーバー", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+        },
+        {
+          "question": "コネクタの前提条件は何ですか？",
+          "answer": { "text": "保護サービスのアクティブ化、Active Directory と Microsoft Entra ID のディレクトリ同期、2 台以上のメンバー コンピューター、TLS 1.2 が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/information-protection/deploy-rms-connector", "locator": "RMS コネクタの前提条件", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=564617",
+        "learn": [
+          { "title": "Azure Rights Management サービスの要件", "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements#microsoft-entra-requirements", "locale": "ja-jp" },
+          { "title": "Microsoft Rights Management コネクタの展開", "url": "https://learn.microsoft.com/ja-jp/azure/information-protection/deploy-rms-connector", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
