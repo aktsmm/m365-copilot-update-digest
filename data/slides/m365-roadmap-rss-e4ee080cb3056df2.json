@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e4ee080cb3056df2",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio に Agent Readiness を追加（開発中）",
+        "subtitleJa": "エージェントの公開可否と注意点を、構築画面で常に確認できます",
+        "en": "Microsoft Copilot Studio: Agent Readiness in Microsoft Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-08-07",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、組織のポリシーを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "公開前に、ブロックされる事項やリスクを構築画面で把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "構築画面の「Review」表示で、ポリシー制限や評価の不足など公開を妨げる事項を事前に確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントの健全性を示すヘルス チェックを、常時表示する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "「Review」の表示 1 つで、ブロック中や要注意の事項を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ブロックされる機能は、あらかじめグレーアウトで表示される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）で、Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連機能（GitHub Copilot ハーネス）",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GitHub Copilot ハーネスのエージェントでは、レビュー アイコンに未解決の問題数が表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "冒頭", "retrievedAt": "2026-10-21T07:20:00Z" }] },
+            { "text": "問題は「ブロッキング」と「Warning」に分類され、ブロッキングがなければ公開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-21T07:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-readiness", "term": "Agent Readiness", "type": "feature", "oneLine": { "text": "Copilot Studio のエージェントの状態を、構築中に常に確認できるヘルス チェック。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "review", "term": "レビュー", "type": "feature", "oneLine": { "text": "エージェントの準備状況、ガバナンス、セキュリティに影響する問題を一か所で確認できるパネル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "冒頭", "retrievedAt": "2026-10-21T07:20:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、まだ提供が始まっていない開発段階を示すラベル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "公開が止まるのはどんなときですか。",
+          "answer": { "text": "Learn では、ブロッキングの問題がなければエージェントは公開できる状態とされています。Warning は公開を止めませんが、確認が推奨されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "重大度レベル", "retrievedAt": "2026-10-21T07:20:00Z" }] }
+        },
+        {
+          "question": "管理レベルのコンプライアンス報告の代わりになりますか。",
+          "answer": { "text": "なりません。Learn によると、レビュー パネルはガバナンスやコンプライアンス報告の代わりではなく、詳細な診断は Power Platform 管理センターなどでも確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locator": "Note", "retrievedAt": "2026-10-21T07:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=568762",
+        "learn": [
+          { "title": "エージェントの準備状況と状況を確認する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-status", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
