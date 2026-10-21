@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-60516b829731fe1f",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview エンドポイント DLP のポリシー同期とデバイス正常性を AI エージェントで調査",
+        "subtitleJa": "異常なポリシー同期やデバイス構成を検出して通知するエージェント スキルを開発中です",
+        "en": "Microsoft Purview: Endpoint Data Loss Prevention - Policy Sync & Device Health AI-Powered Investigation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "エンドポイント DLP を運用する**コンプライアンス管理者・セキュリティ管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+        "change": { "text": "異常なポリシー同期やデバイス構成を、AI エージェントのスキルが検出して通知する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=562016", "locator": "Roadmap 説明", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため対応は不要。現行のデバイス正常性の確認手順を把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "AI エージェントのスキルが、正常でないポリシー同期とデバイス構成を検出し、アラートを出します", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=562016", "locator": "Roadmap 説明", "retrievedAt": "2026-10-21T00:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象はエンドポイント DLP のポリシー同期とデバイス構成", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=562016", "locator": "タイトル", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+            { "text": "AI エージェントのスキルが異常を検出してアラートを出す", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=562016", "locator": "Roadmap 説明", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)、Web", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=562016", "locator": "Cloud instance / Platform", "retrievedAt": "2026-10-21T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ポリシー更新が行われるには、デバイスがオンラインである必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-edlp-tshoot-sync", "locator": "重要", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+            { "text": "現行ダッシュボードは、過去 30 日以内に報告されたデバイスのデータを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "ダッシュボードに表示される内容", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+            { "text": "対象デバイスはエンドポイント DLP にオンボードされ、テレメトリを報告している必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "デバイス正常性レポート ダッシュボードで、デバイスの準備状況を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+            { "text": "状態は「更新あり／更新されない／使用不可」の 3 値で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-edlp-tshoot-sync", "locator": "デバイス構成とポリシー同期の状態の値", "retrievedAt": "2026-10-21T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "current",
+          "heading": "現行の確認方法",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Purview ポータルの設定 > デバイス オンボードからレポートを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "デバイス正常性レポート ダッシュボードを開く", "retrievedAt": "2026-10-21T00:30:00Z" }] },
+            { "text": "高度なハンティングの DeviceInfo テーブルでも、同じデータを KQL で照会できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-edlp-tshoot-sync", "locator": "高度なハンティングを使用してデバイス属性データにアクセスする", "retrievedAt": "2026-10-21T00:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edlp", "term": "エンドポイント DLP", "type": "feature", "oneLine": { "text": "オンボードしたデバイス上のデータ損失防止ポリシーを適用する Microsoft Purview の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T00:30:00Z" }] } },
+        { "termKey": "policy-sync", "term": "ポリシー同期の状態", "type": "term", "oneLine": { "text": "デバイスが最新のポリシー バージョンを受け取ったかどうかを示す状態。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-edlp-tshoot-sync", "locator": "デバイス構成とポリシー同期の状態の値", "retrievedAt": "2026-10-21T00:30:00Z" }] } },
+        { "termKey": "device-health", "term": "デバイス正常性レポート", "type": "feature", "oneLine": { "text": "エンドポイント DLP のデバイスの準備状況を一元的に表示するダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-21T00:30:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=562016", "locator": "Status", "retrievedAt": "2026-10-21T00:30:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "現行のダッシュボードを見るには何の権限が必要ですか？",
+          "answer": { "text": "コンプライアンス管理者、セキュリティ管理者、グローバル管理者のいずれかのロールが必要です。新しいスキルの要件は、現時点で公開情報にありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locator": "開始する前に", "retrievedAt": "2026-10-21T00:30:00Z" }] }
+        },
+        {
+          "question": "ポリシー同期の状態は反映まで時間がかかりますか？",
+          "answer": { "text": "状態が「更新されない」の場合、デバイス一覧の状態が更新されるまで最大 2 時間かかることがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-edlp-tshoot-sync", "locator": "デバイス構成とポリシー同期の状態の値", "retrievedAt": "2026-10-21T00:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562016",
+        "learn": [
+          { "title": "デバイス正常性レポート ダッシュボードを使用してデバイスの正常性を監視する", "url": "https://learn.microsoft.com/ja-jp/purview/device-onboarding-health-reports-dashboard", "locale": "ja-jp" },
+          { "title": "エンドポイントのデータ損失防止構成とポリシー同期のトラブルシューティング", "url": "https://learn.microsoft.com/ja-jp/purview/dlp-edlp-tshoot-sync", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
