@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f4d1f729accfe9cc",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Analytics のエージェント ダッシュボードから指標をエクスポート",
+        "subtitleJa": "個人を特定しない行レベルのエージェント指標を取り出せるようになります",
+        "en": "Microsoft Viva: Copilot Analytics - Export metrics from Agent Dashboard"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "viva"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot のエージェント利用を分析する管理者**と作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "組織全体のエージェント利用状況を、行レベルのデータで詳しく分析できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェント ダッシュボードから、**個人識別子を除いた行レベルのエージェント指標と属性**をエクスポートでき、ユーザー単位のやり取りまで把握できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェント ダッシュボードから行レベルの指標と属性をエクスポート", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "個人識別子を除いたデータで、組織全体の利用状況を分析できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連する Learn のエクスポートでは、識別可能なエクスポートがパブリック プレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "冒頭", "retrievedAt": "2026-10-21T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連機能の前提",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Learn 上の前提: Microsoft Copilot ライセンス 50 以上、Agent 365 ライセンス 1 以上、アクティブなエージェント 1 つ以上", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "前提条件", "retrievedAt": "2026-10-21T07:50:00Z" }] },
+            { "text": "管理者は VFAM でエクスポートのオン/オフと識別可能性を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "管理者の管理", "retrievedAt": "2026-10-21T07:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-dashboard", "term": "エージェント ダッシュボード", "type": "feature", "oneLine": { "text": "Copilot エージェントと Agent 365 の 2 つのビューを持つ、エージェント利用状況のダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "エージェント ダッシュボード ビュー", "retrievedAt": "2026-10-21T07:50:00Z" }] } },
+        { "termKey": "vfam", "term": "VFAM", "type": "term", "oneLine": { "text": "Microsoft 365 管理センターで Viva 機能へのアクセスを管理する仕組み（Viva 機能アクセス管理）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "管理者の管理", "retrievedAt": "2026-10-21T07:50:00Z" }] } },
+        { "termKey": "deidentified", "term": "匿名化されたエクスポート", "type": "term", "oneLine": { "text": "直接のユーザー識別子が保護された識別子に置き換えられた出力。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "出力をエクスポートする", "retrievedAt": "2026-10-21T07:50:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "エクスポートは誰が実行できますか？",
+          "answer": { "text": "関連する Learn では、上級リーダーとその代理人、グローバル Viva Insights アナリスト、全体管理者、Viva Insights AI 管理者が対象です。グローバルでないアクセスのユーザーは実行できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "前提条件", "retrievedAt": "2026-10-21T07:50:00Z" }] }
+        },
+        {
+          "question": "エクスポートの形式と所要時間は？",
+          "answer": { "text": "関連する Learn では、複数の .csv ファイルを含む .zip で、日単位か週単位を選べます。生成には最大 30 分かかることがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locator": "データのエクスポート方法", "retrievedAt": "2026-10-21T07:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560538",
+        "learn": [{ "title": "エージェント ダッシュボード (プレビュー) からデータをエクスポートする", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/export-agent-data", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
