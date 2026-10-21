@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2d8e1e6add105764",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Sales Agent で Dataverse のビジネス スキルを利用可能に（開発中）",
+        "subtitleJa": "自社の業務手順を自然言語で書いて、Sales Agent に守らせられます",
+        "en": "Microsoft Copilot (Microsoft 365): Use Dataverse Business Skills in Sales Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Sales Agent の作成者・管理者**と、Dynamics 365 Sales の営業担当者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "組織の業務プロセスやルールに沿った動きを、Sales Agent にさせられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら Power Platform 管理センターでの環境設定が先に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "Dataverse でビジネス スキルを有効にする", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "ビジネス スキルは Dataverse に保存する自然言語の指示で、**組織ごとの仕事の進め方を Sales Agent に教えます**", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ビジネス スキル: エージェントが組織の手順やポリシーに従うための自然言語の指示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "各スキルに、必要なステップ・情報・ビジネス ルールを定義する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "Sales Agent は Dataverse MCP サーバー経由でスキルを見つけて使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn の手順書はプレビュー版で、運用環境での使用を想定していない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "Important", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "ユーザーには Microsoft 365 Copilot と Dynamics 365 Sales のライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "組織レベルのスキルを見るには、環境で Basic User 以上のロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "環境の機能ページで「Work IQ のビジネス アプリケーション」をオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "Dataverse でビジネス スキルを有効にする", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "Enterprise Copilot Platform の MCP クライアントが有効か確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "手順 9", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "admin-controls",
+          "heading": "管理者による制御",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "環境の WorkIQ 設定をオフにすると、環境内でビジネス スキルを使えなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "ビジネススキルまたはMCPアクセスを無効にしてください", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "変更は新しい操作から適用され、既存セッションは更新が必要な場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "Note", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず読み取り専用の簡単なスキルを作り、Sales Agent に一覧を尋ねて接続を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "ビジネス スキルを作成する", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "business-skills", "term": "ビジネス スキル", "type": "feature", "oneLine": { "text": "エージェントが組織のプロセスやポリシーに従ってタスクを行うための自然言語の指示。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "dataverse", "term": "Dataverse", "type": "product", "oneLine": { "text": "ビジネス スキルを保存するデータ基盤で、Sales Agent の接続先になる。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントがツールやデータにつながるための仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ビジネス スキルを無効にするにはどうしますか？",
+          "answer": { "text": "Power Platform 管理センターで環境の WorkIQ 設定をオフにするか、Enterprise Copilot Platform の MCP クライアントを無効にします。個別のスキルは無効化または削除できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "ビジネススキルまたはMCPアクセスを無効にしてください", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "スキルを作れる人は誰ですか？",
+          "answer": { "text": "環境の System Administrator、System Customizer、Environment Maker、Power Platform Administrator のいずれかの権限を持つ人です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locator": "前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571394",
+        "learn": [
+          { "title": "Dataverse for Sales agent でビジネス スキルを有効にする（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/business-skills-dataverse", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
