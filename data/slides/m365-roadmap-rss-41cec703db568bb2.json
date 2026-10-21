@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-41cec703db568bb2",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Sales Development エージェントが Salesforce と連携（展開中）",
+        "subtitleJa": "既存の Salesforce CRM のまま、リード対応をエージェントに任せられます",
+        "en": "Microsoft Copilot (Microsoft 365): Integrate the Sales Development agent with Salesforce"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Salesforce CRM を使う**営業チーム**と、エージェントの管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存の Salesforce を使い続けたまま、Sales Development エージェントでリード対応を進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用する場合は、Teams のチャットで Salesforce 接続を作成し、エージェントと共有する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 2・3", "retrievedAt": "2026-10-21T01:50:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Salesforce のリードを**取得・管理し、営業活動を記録**できます。見込み評価、不適格化、所有者変更も CRM と同期されます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "概要 / ステップ 6", "retrievedAt": "2026-10-21T01:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "リードの取得、Lead.Status による見込み評価と不適格化、所有者の割り当てを実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 6", "retrievedAt": "2026-10-21T01:50:00Z" }] },
+            { "text": "メールのやり取りは、リードに関連するタスクとして Salesforce に記録", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 6", "retrievedAt": "2026-10-21T01:50:00Z" }] },
+            { "text": "Salesforce の MCP サーバー経由で接続する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 2", "retrievedAt": "2026-10-21T01:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams のエージェントとのチャットで「Connect to my Salesforce CRM」と依頼", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 2", "retrievedAt": "2026-10-21T01:50:00Z" }] },
+            { "text": "Power Platform メーカー ポータルで接続を作成し、エージェントに共有", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 2・3", "retrievedAt": "2026-10-21T01:50:00Z" }] },
+            { "text": "プレイブック、リードの扱い、メール記録、所有者割り当てを設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 5", "retrievedAt": "2026-10-21T01:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "API アクセスが有効な Salesforce 組織と、リード・タスク・ユーザーの権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "前提条件 / ステップ 1", "retrievedAt": "2026-10-21T01:50:00Z" }] },
+            { "text": "1 つのエージェントが接続できる CRM は 1 つ。カスタムのステータス値は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "トラブルシューティング / よく寄せられる質問", "retrievedAt": "2026-10-21T01:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供対象は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "メールオプトアウト項目にエージェントがアクセスできるか、開始前に確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-21T01:50:00Z" }] },
+            { "text": "まず少人数のリードで接続と権限を確認してから広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-dev-agent", "term": "Sales Development エージェント", "type": "feature", "oneLine": { "text": "リードとつながり、やり取りを記録し、営業活動を CRM と同期するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "概要", "retrievedAt": "2026-10-21T01:50:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP サーバー", "type": "term", "oneLine": { "text": "エージェントが Salesforce に接続するために使う、モデル コンテキスト プロトコルのサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 2", "retrievedAt": "2026-10-21T01:50:00Z" }] } },
+        { "termKey": "lead-status", "term": "Lead.Status", "type": "term", "oneLine": { "text": "Salesforce のリードの状態を表す項目。見込み評価や不適格化で更新される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "ステップ 6", "retrievedAt": "2026-10-21T01:50:00Z" }] } },
+        { "termKey": "label-rolling", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Dynamics 365 Sales と Salesforce を同じエージェントで使えますか？",
+          "answer": { "text": "いいえ。1 つのエージェントは一度に 1 つの CRM にのみ接続できるため、両方を使うにはエージェントを分けます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-21T01:50:00Z" }] }
+        },
+        {
+          "question": "メール送信の同意はどう扱われますか？",
+          "answer": { "text": "エージェントは Salesforce の「メールオプトアウト」項目を読み、尊重しようとします。項目にアクセスできないと連絡する可能性があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-21T01:50:00Z" }] }
+        },
+        {
+          "question": "接続を後から解除できますか？",
+          "answer": { "text": "はい。エージェントに Salesforce との接続を切断するよう依頼できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-21T01:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=574105",
+        "learn": [
+          { "title": "セールス開発エージェントを Salesforce（プレビュー版）と統合する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-salesforce", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
