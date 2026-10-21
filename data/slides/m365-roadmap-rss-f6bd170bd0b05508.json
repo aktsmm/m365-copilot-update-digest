@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f6bd170bd0b05508",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "組織のプロンプトの公開を、ユーザーやグループへ委任可能に",
+        "subtitleJa": "管理者以外にも、組織プロンプトの公開を任せられるようになります",
+        "en": "Microsoft Copilot (Microsoft M365): Delegated prompt publishing for organization prompts"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 admin center", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["admin"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の管理者**と、組織のプロンプトを作成・公開する担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "管理者に集中していた組織プロンプトの公開作業を、ユーザーやグループに任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "組織のプロンプトの作成・公開は、AI 管理者や検索エディターなどの役割を持つ管理者が行う",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }]
+        },
+        "after": { "text": "管理者が、**ユーザー・セキュリティ グループ・配布グループ**に組織プロンプトの公開を委任できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "組織プロンプトに続く機能として、公開を委任する仕組みが追加される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "委任先はユーザー、AAD セキュリティ グループ、配布グループ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "組織プロンプトは Copilot Chat、Edge、Teams のユーザーに表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "概要", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）のデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現行は AI 管理者・検索エディターなどの役割で組織プロンプトを管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "current",
+          "heading": "現行の組織プロンプト",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テナントで公開できるのは最大 1,000 個。ピン留めは最大 4 個", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "管理センターで組織のプロンプトを表示および管理する", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "公開後、プロンプト ラボに表示されるまで通常約 3 時間かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "管理センターで組織のプロンプトを表示および管理する", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "公開を任せる担当者やグループの候補を洗い出しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "管理センターの Copilot > プロンプトで、現行のプロンプト運用を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "組織のプロンプトを作成する", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "org-prompts", "term": "組織のプロンプト", "type": "feature", "oneLine": { "text": "組織が作成・公開し、エンド ユーザーに提案される Copilot プロンプト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "概要", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "prompt-lab", "term": "プロンプト ラボ", "type": "feature", "oneLine": { "text": "ユーザーが利用できる組織のプロンプトを検索・絞り込みできる画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "プロンプト ラボ", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "delegation", "term": "委任", "type": "term", "oneLine": { "text": "管理者が、組織プロンプトの公開権限をユーザーやグループに与えること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現在、組織のプロンプトは誰が管理できますか？",
+          "answer": { "text": "AI 管理者、検索エディター、または同等のアクセス許可を持つ役割のユーザーが管理できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locator": "前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "委任された人は何に対して公開できますか？",
+          "answer": { "text": "ロードマップでは、Copilot アプリのホーム画面に表示される組織のプロンプトの公開を委任できると説明されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569425",
+        "learn": [{ "title": "組織のプロンプトの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/organizational-prompts", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
