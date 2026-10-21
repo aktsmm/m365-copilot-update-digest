@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-837aad330e2210d1",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Field Service のスケジュール操作エージェントで最適化を自動化",
+        "subtitleJa": "リソースの最適化を、定期スケジュールで自動実行できます",
+        "en": "Dynamics 365 Field Service: Automate optimizations with Scheduling Operations Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Field Service"],
+        "categories": ["copilot-chat", "agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Field Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Field Service でディスパッチを担当する人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "各実行を手動で開始せず、リソースの定期的な最適化を作成・管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ユーザー向け機能で、管理者・作成者・アナリストによる有効化や構成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**繰り返しスケジュールで最適化を自動実行**し、結果も構成したスケジュールに基づいて適用されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "最適化計画を、繰り返しスケジュールで実行するよう構成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "リソースの可用性、現在のスケジュール、未スケジュールの要件を考慮", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "構成された制約を優先し、選んだ目標に沿ってスケジュールを提案", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供タイムラインは変更される可能性があり、予定機能が提供されない場合もある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "Important", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "既存のパブリック プレビューを基盤に、エージェントが有効な全組織で自動的に有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "最適化の目標を追加し、重みを付けて組織の優先順位に合わせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "パブリック プレビューは 2026 年 9 月、一般公開は 2027 年 3 月の予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "scheduling-operations-agent", "term": "スケジュール操作エージェント", "type": "feature", "oneLine": { "text": "リソースの可用性や要件を考慮し、スケジュールの最適化を提案するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "recurring-optimization", "term": "定期的な最適化", "type": "feature", "oneLine": { "text": "繰り返しスケジュールに従って自動実行される最適化計画。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "optimization-objective", "term": "最適化の目標", "type": "term", "oneLine": { "text": "ギャップの削減や出張の減少などを、重みを付けて組み合わせる指標。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "Learn の記載では、パブリック プレビューが 2026 年 9 月、一般公開が 2027 年 3 月の予定です。時期は変更される可能性があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "対象となる場合は有効", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "追加の設定は必要ですか？",
+          "answer": { "text": "エージェントが有効な組織では自動的に有効になります。最適化の目標や重みの構成は、管理者・作成者・アナリストが行います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571675",
+        "learn": [
+          { "title": "スケジュール操作エージェントを使用して最適化を自動化する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-field-service/automate-optimizations-scheduling-operations-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
