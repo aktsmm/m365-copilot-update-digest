@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6471f9111ff3c20a",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central の Expense Agent が経費の VAT を自動計算・報告",
+        "subtitleJa": "領収書の VAT を拾い、経費レポートへ反映します",
+        "en": "Dynamics 365 Business Central: Expense Agent - Calculate and report VAT based on expense reports"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central で経費精算を行う経理担当者・申請者**と管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "Who is expense management for?", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "VAT の計算を申請者が手作業で行わずに済み、報告の精度向上が見込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Expense Agent が**VAT 対象の経費を識別し、該当する VAT 額を自動計算**します。経費レポートの VAT 管理を簡素化できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」。提供対象は Web、Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "VAT 還付を有効にすると、領収書の VAT 情報から税率ごとの内訳を作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "VAT calculation and reclaim", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "内訳は VAT 率・課税基準額・VAT 額・合計金額・カテゴリを含む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "VAT calculation and reclaim", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会計担当者が VAT 還付の提案を承認または却下しないと、レポートは転記できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "VAT calculation and reclaim", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "最終的な税務判断の責任は会計担当者にある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "VAT calculation and reclaim", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "経費管理機能は、現在「本番利用可能なプレビュー」として案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "Important", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "還付の提案割合は、カテゴリまたはサブカテゴリの設定から決まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "VAT calculation and reclaim", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "転記には Essentials または Premium ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "Licensing requirements", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "expense-agent", "term": "Expense Agent", "type": "feature", "oneLine": { "text": "領収書からデータを抽出し、経費の分類・明細化・経費レポート作成を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "With and without Expense Agent", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "vat-reclaim", "term": "VAT 還付", "type": "term", "oneLine": { "text": "領収書上の VAT のうち、還付対象として会計担当者が承認する部分。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "VAT calculation and reclaim", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "expense-report", "term": "経費レポート", "type": "term", "oneLine": { "text": "複数の経費を 1 つにまとめ、承認と総勘定元帳への転記に進める文書。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "Expense reports", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Expense Agent を使わない場合、経費管理は使えませんか？",
+          "answer": {
+            "text": "使えます。エージェントなしでも Business Central 内で経費レポートを手動作成でき、承認ワークフローも利用できます。ただし AI による領収書の読み取りや自動分類はありません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "With and without Expense Agent", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        },
+        {
+          "question": "Business Central のライセンスがない従業員も経費を申請できますか？",
+          "answer": {
+            "text": "Web アプリ、メール、Microsoft Copilot チャットのみで申請する場合、Business Central ライセンスは不要で、Copilot クレジットで課金されます。Business Central にサインインして作業する場合は Team Member 以上が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locator": "Licensing requirements", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573262",
+        "learn": [{ "title": "Manage employee expenses", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-management-overview", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
