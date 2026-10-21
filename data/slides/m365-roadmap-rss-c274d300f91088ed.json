@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c274d300f91088ed",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot コネクタの権限同期が増分クロールで可能に",
+        "subtitleJa": "権限の変更を、定期的なフル クロールを待たずに反映できます",
+        "en": "Microsoft Copilot (Microsoft 365): Support permission sync missed in incremental crawl"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Copilot コネクタを運用する**管理者**と、コネクタを作成する開発者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "権限の変更が、より早くコネクタのコンテンツに反映されるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "新しい操作は求められていない。権限の反映を早めたい場合に利用を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "権限の同期は、多くのコネクタで既定 1 日ごとのフル クロールでのみ行われていました",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "after": { "text": "権限の同期を**増分（インクリメンタル）方式でより頻繁に**実行できるようになりました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "フル クロール: 全コンテンツを再インデックスし、権限もすべて更新する（既定は毎日）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-21T05:20:00Z" }] },
+            { "text": "増分クロール: 変更されたコンテンツのみ同期する（既定は 15 分ごと）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-21T05:20:00Z" }] },
+            { "text": "今回、権限の同期を増分方式でも実行できるようになった", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web の管理画面から利用する Copilot コネクタが対象（Worldwide 環境）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ServiceNow Catalog コネクタのドキュメントでは、増分クロールはアクセス権限とグループ メンバーシップを更新しない旨が記載されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-21T05:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "増分・フルそれぞれのクロール頻度は、コネクタの設定でカスタマイズできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-21T05:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "機密性の高いコンテンツを扱うコネクタで、権限反映の遅れが問題になっていないか見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connector", "term": "Copilot コネクタ", "type": "product", "oneLine": { "text": "外部データ ソースのコンテンツをインデックスし、Copilot や Microsoft Search で見つけられるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Overview", "retrievedAt": "2026-10-21T05:20:00Z" }] } },
+        { "termKey": "full-crawl", "term": "フル クロール", "type": "term", "oneLine": { "text": "全コンテンツを再インデックスし、削除済みコンテンツの除去と権限の更新を行うクロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-21T05:20:00Z" }] } },
+        { "termKey": "incremental-crawl", "term": "増分クロール", "type": "term", "oneLine": { "text": "変更されたコンテンツだけを同期するクロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-21T05:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "増分クロールとフル クロールの既定の頻度は？",
+          "answer": { "text": "ServiceNow Catalog コネクタの例では、増分クロールは 15 分ごと、フル クロールは毎日です。コネクタにより異なる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-21T05:20:00Z" }] }
+        },
+        {
+          "question": "対象コネクタの範囲はどこで確認できますか？",
+          "answer": { "text": "各コネクタのドキュメントと、Microsoft 365 ロードマップの該当項目で確認するのが確実です。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=503570",
+        "learn": [{ "title": "Deploy the ServiceNow Catalog connector", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-catalog-deployment", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
