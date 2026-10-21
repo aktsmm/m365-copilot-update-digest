@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1aafb2eabbdcb098",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ: エージェントからのアップロード（開発中）",
+        "subtitleJa": "エージェントが Microsoft 365 の保存先にファイルやコンテンツをアップロードできるようになります",
+        "en": "Work IQ: Upload"
+      },
+      "meta": {
+        "publishedJst": "2026-10-13",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントを作成する人**と、Work IQ を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントが、対応する Microsoft 365 の保存先へファイルやコンテンツをアップロードできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが**対応する Microsoft 365 の保存先**にファイルやコンテンツをアップロードできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ の機能として、エージェントによるアップロードを開発中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の対象は Web と Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "開発中の段階のため、提供時期は公開されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "アップロードできるのは、サポートされる Microsoft 365 の保存先に限られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ の利用には、使用量ベースの課金プランと、プランに割り当てたユーザーが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-21T01:45:00Z" }] },
+            { "text": "初回セットアップは、グローバル管理者がテナントで 1 回行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-21T01:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "ビジネス全体の出来事をセマンティックに理解する職場インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T01:45:00Z" }] } },
+        { "termKey": "usage-billing", "term": "使用量ベースの課金", "type": "term", "oneLine": { "text": "Work IQ の利用に必要な、Copilot Studio で設定する課金プラン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-21T01:45:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、時期は公開されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "今、Work IQ を使うために必要な準備は？",
+          "answer": { "text": "使用量ベースの課金プランの設定と、グローバル管理者によるテナントでの 1 回限りのセットアップが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locator": "前提条件", "retrievedAt": "2026-10-21T01:45:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570850",
+        "learn": [
+          { "title": "Work IQ のテナントを有効にする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
