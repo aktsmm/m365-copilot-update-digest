@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8cdd9f8aa1ecb1cd",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ がカスタム エージェントとサードパーティ ツール呼び出しに対応",
+        "subtitleJa": "Work IQ からカスタム エージェントや外部ツールを呼び出せるようになる予定です",
+        "en": "Work IQ: Custom agents + 3P calls"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントを作成する人**と、Work IQ を活用する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Work IQ が、カスタム エージェントや外部ツールを呼ぶエージェントを呼び出せるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない。提供時期はロードマップで確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Work IQ から**カスタム エージェント**と、**サードパーティ ツールを呼ぶエージェント**を呼び出せるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ がカスタム エージェントを呼び出せるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "サポートされるサードパーティ ツールを呼ぶエージェントも対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Work IQ のプレビュー機能は SLA なしで提供され、運用ワークロードでの使用は推奨されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "Important", "retrievedAt": "2026-10-21T18:00:00Z" }] },
+            { "text": "Work IQ への接続はコストが発生し、データが Azure のコンプライアンス境界外に送信される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "Warning", "retrievedAt": "2026-10-21T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ のリクエストは、サインイン中ユーザーのコンテキストと Microsoft 365 のアクセス許可で実行される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T18:00:00Z" }] },
+            { "text": "Work IQ API 経由の利用は、Copilot クレジットによる使用量ベースの課金が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "Prerequisites", "retrievedAt": "2026-10-21T18:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "組織全体のリアルタイムの共有コンテキストで Copilot とエージェントを根拠づけるインテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T18:00:00Z" }] } },
+        { "termKey": "a2a", "term": "A2A", "type": "term", "oneLine": { "text": "エージェント間（Agent-to-Agent）でやり取りするためのプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T18:00:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "Work IQ API 経由の利用で、使用量ベースの請求に使われる課金の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "Prerequisites", "retrievedAt": "2026-10-21T18:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Work IQ 経由の利用で、課金はどうなりますか？",
+          "answer": { "text": "Work IQ API（A2A・REST・MCP）経由では、Copilot クレジットによる使用量ベースの請求を有効にする必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "Prerequisites", "retrievedAt": "2026-10-21T18:00:00Z" }] }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中で、提供時期は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Work IQ はユーザーの権限を超えたデータを返しますか？",
+          "answer": { "text": "いいえ。リクエストはサインイン中ユーザーのコンテキストで実行され、Microsoft 365 のアクセス許可が尊重されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locator": "冒頭", "retrievedAt": "2026-10-21T18:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570853",
+        "learn": [
+          { "title": "Work IQ を使用してエージェントを Microsoft 365 に接続する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/work-iq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
