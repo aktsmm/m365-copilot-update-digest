@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b383b61b3bb97eff",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の一覧に作成者・更新者のアバターを表示",
+        "subtitleJa": "レコードを開かなくても、ユーザーやエージェントの関与がひと目で分かります",
+        "en": "Dynamics 365 Business Central: Copilot and agents - Show avatars for record creators and modifiers in list"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central でレコードを扱うユーザー**（会計、受注処理、倉庫、サービス、管理者）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] },
+        "change": { "text": "レコードの所有者や AI エージェントの関与を、一覧上で即座に確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-21T17:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザー向けで自動的に有効化されるため、管理者の対応は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "有効対象", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "一覧ページで、**レコードを作成・最終更新したユーザーや AI エージェントがアバターで分かり**、責任の所在をすばやく把握できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-21T17:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "一覧ページに、レコードの作成者と最終更新者のアバターを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] },
+            { "text": "アバターは Business Central ユーザー、システム ユーザー、AI エージェントのいずれかを表す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] },
+            { "text": "カーソルを合わせると、表示名と更新日時（利用可能な場合）がヒントで表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザー向けの機能で、自動的に有効化される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "有効対象", "retrievedAt": "2026-10-21T17:10:00Z" }] },
+            { "text": "リスト ページに、表示を切り替える新しいスイッチが追加される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細（画像: リスト ページの新しいスイッチ）", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Business Central のデータ プライバシーとアクセス許可モデルは維持される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] },
+            { "text": "対象地域と対応言語は、Microsoft が公開するレポートで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "地域 / 利用可能な言語", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "既存機能との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存の「作成者」「変更者」フィールドを、より直感的に確認できるようにする機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI 生成レコードを採用する組織が、エージェントの貢献を把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] },
+            { "text": "アイテム、書類、設定項目の所有権や責任の確認にかかる時間を短縮できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "business-central", "term": "Dynamics 365 Business Central", "type": "product", "oneLine": { "text": "共有データを扱う会計、受注、倉庫、サービスなどの業務で使われるビジネス アプリケーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] } },
+        { "termKey": "avatar", "term": "アバター", "type": "feature", "oneLine": { "text": "レコードを作成・最終更新したユーザーやエージェントを示す、一覧上のアイコン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] } },
+        { "termKey": "ai-agent", "term": "AI エージェント", "type": "term", "oneLine": { "text": "ユーザーやシステム ユーザーと並んで、アバターで示される作成・更新の主体。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能はいつ一般提供になりましたか？",
+          "answer": { "text": "リリース プランでは、2026 年 4 月 1 日に一般提供と記載されています。ロードマップ上の状態は Launched です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "有効対象", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+        },
+        {
+          "question": "ユーザーが設定を変更する必要はありますか？",
+          "answer": { "text": "自動的に有効化されるため、有効化のための作業は不要です。一覧ページには表示を切り替える新しいスイッチも追加されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locator": "有効対象 / 機能の詳細", "retrievedAt": "2026-10-21T17:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573364",
+        "learn": [{ "title": "リストにレコード作成者と最終更新者のアバターを表示する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/show-avatars-record-creators-modifiers-lists", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
