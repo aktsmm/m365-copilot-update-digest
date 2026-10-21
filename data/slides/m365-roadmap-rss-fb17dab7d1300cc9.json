@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fb17dab7d1300cc9",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview DLP が管理単位に対応、Copilot と Cowork のポリシーを委任管理",
+        "subtitleJa": "リージョンや部署ごとの管理者に、Copilot の DLP ポリシー管理を任せられます",
+        "en": "Microsoft Purview: Data Loss Prevention-Admin Units Support for Copilot & Cowork DLP"
+      },
+      "meta": {
+        "publishedJst": "2026-10-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Purview の管理者**（地域・部署ごとに管理者を分けている組織）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "割り当てられた管理単位の範囲で、Copilot の DLP ポリシーを管理できるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため今すぐの対応は不要。提供時期は Roadmap で確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "Microsoft Copilot と Copilot Chat の DLP ポリシーの場所は、現在の Learn では管理単位に対応していません", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "管理単位", "retrievedAt": "2026-10-21T01:30:00Z" }] },
+        "after": { "text": "Copilot・Copilot Chat・Cowork の DLP ポリシー管理を、各管理単位の管理者に委任できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対応範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Microsoft Copilot、Copilot Chat、Cowork の DLP ポリシー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "リージョンや部署など、管理単位ごとに管理を委任できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理単位は Entra ID で作成し、Purview の役割グループ割り当てで可視性を制限", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-admin-units", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "段階は開発中（提供範囲は Worldwide、Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在の Learn では、Copilot の DLP ポリシーの場所は管理単位に未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "管理単位", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "役割グループを管理単位に割り当てるには「ロール管理」ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-admin-units", "locator": "管理単位のアクセス許可", "retrievedAt": "2026-10-21T01:30:00Z" }] },
+            { "text": "既存の管理単位と役割グループの構成を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "admin-unit", "term": "管理単位", "type": "term", "oneLine": { "text": "組織をより小さな単位に分割し、管理アクセス許可を Entra 組織の特定の部分に制限できる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/purview-admin-units", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "dlp", "term": "データ損失防止 (DLP)", "type": "feature", "oneLine": { "text": "Purview の機能で、Copilot が機密データを外部 Web 検索に使わないよう制限するなどの保護ができる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "cowork", "term": "Cowork", "type": "product", "oneLine": { "text": "DLP で Microsoft Copilot、Copilot Chat とあわせて保護対象となる Copilot のエクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "冒頭", "retrievedAt": "2026-10-21T01:30:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "Roadmap 上で、機能の開発が進行中の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現時点で Copilot の DLP ポリシーに管理単位は使えますか？",
+          "answer": { "text": "現在の Learn では、Microsoft Copilot と Copilot Chat のポリシーの場所は管理単位をサポートしないと説明されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "管理単位", "retrievedAt": "2026-10-21T01:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=575287",
+        "learn": [
+          { "title": "DLP で Copilot、Copilot Chat、Cowork との対話を保護する", "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locale": "ja-jp" },
+          { "title": "Microsoft Purview の管理単位", "url": "https://learn.microsoft.com/ja-jp/purview/purview-admin-units", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
