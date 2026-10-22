@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-9ffc69406cafbacf",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Anthropic Claude Fable 5.1 が Microsoft Copilot で利用可能に",
+        "subtitleJa": "Copilot Cowork と Copilot Studio で、新しいモデルを選べます",
+        "en": "Available today: Anthropic Claude Fable 5.1 in Microsoft Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Cowork や Copilot Studio を使う作成者**と、AI プロバイダーを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "より複雑なタスクを任せる際に、選べる先端モデルが増える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は、AI プロバイダー設定で Anthropic の有効・無効を管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルの使用をオプトインする", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Cowork と Copilot Studio の**先端モデルに Claude Fable 5.1 が加わり**、長時間の作業・財務分析・フロントエンドのビジュアル コーディングで選択肢が広がります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Claude Fable 5.1 が Copilot Cowork と Copilot Studio の先端モデルに加わる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "長時間の作業、財務分析、フロントエンドのビジュアル コーディング向けに設計", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Studio では、作成者がエージェント作成時にモデルを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Microsoft 365 管理センターで Anthropic のClaude モデル設定を管理する", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "商用クラウドの多くの顧客（EU/EFTA・英国を除く）では Anthropic モデルが既定で有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "概要", "retrievedAt": "2026-10-22T12:30:00Z" }] },
+            { "text": "EU/EFTA・英国では既定で無効。AI 管理者かグローバル管理者がオプトインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルの使用をオプトインする", "retrievedAt": "2026-10-22T12:30:00Z" }] },
+            { "text": "管理センターの Copilot > 設定で、Anthropic を有効にしてアクセス対象を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルの使用をオプトインする", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Anthropic モデルは EU データ境界と国内処理コミットメントの対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "重要", "retrievedAt": "2026-10-22T12:30:00Z" }] },
+            { "text": "GCC High・DoD・その他のソブリン クラウドでは Anthropic モデルを使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "オプトインの地域と除外", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲の注意点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "組織の適格性に応じて、Fable 5.1 は追加条件なしで使える場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic Fable クラスのモデル", "retrievedAt": "2026-10-22T12:30:00Z" }] },
+            { "text": "データ保持付きのモデルは、別途オプトインが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Data Retention 付きの Anthropic モデルの使用を許可するためのオプトイン", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "長い分析やコード生成を伴う業務で、既存モデルと出力を比べて試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Copilot Studio と Power Platform には、Power Platform 管理センターの追加コントロールがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Power Platform 管理 センターでの Copilot Studio と Power Platform の追加コントロール", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "claude-fable", "term": "Claude Fable 5.1", "type": "feature", "oneLine": { "text": "Anthropic の Fable クラス モデルの 1 つ。適格な組織では Microsoft の製品条項と DPA の下で使える。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic Fable クラスのモデル", "retrievedAt": "2026-10-22T12:30:00Z" }] } },
+        { "termKey": "subprocessor", "term": "サブプロセッサー", "type": "term", "oneLine": { "text": "Microsoft の監督下で運営される外部事業者。Anthropic は Microsoft サブプロセッサーとしてオンボードされている。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "概要", "retrievedAt": "2026-10-22T12:30:00Z" }] } },
+        { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "作成者がエージェントを作る際にモデルを選べる Microsoft のエージェント作成製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Microsoft 365 管理センターで Anthropic のClaude モデル設定を管理する", "retrievedAt": "2026-10-22T12:30:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "順次ユーザーへ提供が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Fable 5.1 を使うために管理者の操作は必要ですか？",
+          "answer": { "text": "EU/EFTA・英国以外の商用クラウドでは既定で有効です。EU/EFTA・英国では管理者のオプトインが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "オプトインの地域と除外", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+        },
+        {
+          "question": "データはどう扱われますか？",
+          "answer": { "text": "適格な組織の Fable 5.1 は Microsoft の製品条項と DPA が適用され、Anthropic は顧客コンテンツを保持しません。データ保持付きのモデルは別扱いです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic Fable クラスのモデル", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+        },
+        {
+          "question": "特定のユーザーだけに限定できますか？",
+          "answer": { "text": "管理センターでユーザーまたは Entra ID セキュリティ グループに割り当て、アクセスを制限できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルの使用をオプトインする", "retrievedAt": "2026-10-22T12:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/available-today-anthropic-claude-fable-5-1-in-microsoft-copilot/ba-p/4551974",
+        "learn": [
+          { "title": "Microsoft Online Services の Anthropic モデル", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locale": "ja-jp" },
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
