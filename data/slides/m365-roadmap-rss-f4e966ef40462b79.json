@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f4e966ef40462b79",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft 365 組織データ サービスが GCC High で利用可能に（開発中）",
+        "subtitleJa": "人事データの取り込みを、GCC High 環境でも一本化できます",
+        "en": "Microsoft 365: Organizational Data Service is now available in GCC-High"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["GCC High"],
+        "platforms": ["Mac"],
+        "productArea": "Microsoft 365",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC High 環境のテナント管理者**と、人事データを Microsoft 365 に連携したい組織", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "複数の人事システムのデータを、単一の取り込み窓口で Microsoft 365 に取り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要。提供開始の案内を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "複数の HRIS システムのデータを、**コネクタ経由で単一の取り込み窓口**から取り込めます。取り込んだデータは Microsoft 365 プロファイルや Microsoft Copilot などで使われます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "冒頭", "retrievedAt": "2026-10-22T16:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は GCC High（GCC-H）環境。ロードマップ上は開発中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "人事などの外部システムのユーザー データを Microsoft 365 に取り込む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "冒頭", "retrievedAt": "2026-10-22T16:40:00Z" }] },
+            { "text": "取り込み後は Microsoft Copilot や Viva などで自動的に利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "パブリック データを利用できるようにする方法", "retrievedAt": "2026-10-22T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "利用できる属性や体験は、データを受け取るアプリごとに異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "注", "retrievedAt": "2026-10-22T16:40:00Z" }] },
+            { "text": "既定では Microsoft Entra ID の値が優先され、本サービスはフォールバック", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "Microsoft 365 プロファイルへの影響", "retrievedAt": "2026-10-22T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "取り込む属性（部署・役職・コスト センターなど）を洗い出しておく", "origin": "learn", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "管理者は、データの優先順位を割り当てて既定の動作を変更できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "Microsoft 365 プロファイルへの影響", "retrievedAt": "2026-10-22T16:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "org-data-service", "term": "Microsoft 365 組織データ サービス", "type": "product", "oneLine": { "text": "人事などの外部システムのユーザー データを Microsoft 365 に取り込むサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "冒頭", "retrievedAt": "2026-10-22T16:40:00Z" }] } },
+        { "termKey": "public-data", "term": "パブリック データ", "type": "term", "oneLine": { "text": "テナント内のユーザーを説明する、組織内で広く利用できる組織データ（部署・役職など）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "パブリック データの概要", "retrievedAt": "2026-10-22T16:40:00Z" }] } },
+        { "termKey": "hris", "term": "HRIS", "type": "term", "oneLine": { "text": "人事情報を管理するシステム。本サービスはコネクタでこれらから取り込む。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Entra ID の値と競合した場合はどちらが使われますか？",
+          "answer": {
+            "text": "既定では Entra ID の値が優先されます。管理者が組織データ サービスを優先ソースに設定すると、その値が使われます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "Microsoft 365 プロファイルへの影響", "retrievedAt": "2026-10-22T16:40:00Z" }]
+          }
+        },
+        {
+          "question": "取り込んだデータはテナント外に公開されますか？",
+          "answer": {
+            "text": "いいえ。パブリック データは、テナント内のユーザーが参照でき、テナント外やインターネットに公開されるものではありません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locator": "パブリック データの概要", "retrievedAt": "2026-10-22T16:40:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570431",
+        "learn": [{ "title": "Microsoft 365 組織データ サービスのしくみ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/manage/how-org-data-service-works", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
