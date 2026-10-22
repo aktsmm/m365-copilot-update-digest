@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8eb465a96f362950",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook: メール作成にインライン チャットを追加",
+        "subtitleJa": "サイドバーを開かずに、Copilot にメールの下書きを頼めるようになります",
+        "en": "Outlook: Inline chat for email drafting"
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook（Web）でメールを書く Microsoft Copilot の利用者**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot Chat を開かずに、作成画面のまま下書きを依頼できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応は案内されていない。提供開始までロードマップを確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat を毎回開かず、**インライン チャット**でサイドバーなしに Copilot とやり取りして下書きできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "メール作成時に使うインライン チャット コンポーネントを導入", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はロードマップ上、Web 版 Outlook", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "内容や提供範囲は、提供開始までに変わる可能性がある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Outlook での Copilot によるメール下書きは、既存機能としてリリース ノートに掲載されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "新しい Outlook で Copilot でメールを下書きする", "retrievedAt": "2026-10-22T08:50:00Z" }] },
+            { "text": "現在の下書き機能の利用状況を把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "inline-chat", "term": "インライン チャット", "type": "feature", "oneLine": { "text": "Copilot Chat のサイドバーを開かずに、作成画面の中で Copilot とやり取りできる仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "draft-copilot", "term": "Copilot でメールを下書き", "type": "feature", "oneLine": { "text": "プロンプトからメール全体を生成し、トーンや長さを調整できる Outlook の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locator": "2023 年 11 月", "retrievedAt": "2026-10-22T08:50:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中で、提供時期は示されていません。提供開始の際はロードマップで更新されます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "サイドバーの Copilot Chat はなくなりますか？",
+          "answer": { "text": "ロードマップの記載は、毎回 Copilot Chat を開かずに使える手段を追加するというものです。置き換えには触れていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570440",
+        "learn": [{ "title": "アーカイブされた Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes-archive", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
