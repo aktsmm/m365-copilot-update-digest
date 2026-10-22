@@ -1,13 +1,19 @@
 {
-  "generatedAt": "2026-10-22T04:48:17.171Z",
-  "lastCheckedAt": "2026-10-22T17:09:36.488Z",
+  "generatedAt": "2026-10-22T21:40:27.409Z",
+  "lastCheckedAt": "2026-10-22T21:40:27.409Z",
   "sourceCount": 5,
   "totalEvents": 2385,
   "newEventCount": 0,
-  "errorCount": 0,
-  "errors": [],
+  "errorCount": 1,
+  "errors": [
+    {
+      "sourceId": "m365-copilot-techcommunity-blog",
+      "sourceName": "Microsoft 365 Copilot Blog",
+      "message": "fetch failed"
+    }
+  ],
   "coverage": {
-    "status": "complete",
+    "status": "partial",
     "sources": [
       {
         "sourceId": "copilot-studio-techcommunity-blog",
@@ -26,7 +32,7 @@
       },
       {
         "sourceId": "m365-copilot-techcommunity-blog",
-        "status": "empty",
+        "status": "failed",
         "parsedCount": 0
       },
       {
