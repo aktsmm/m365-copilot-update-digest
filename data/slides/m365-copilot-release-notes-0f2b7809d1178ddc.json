@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-0f2b7809d1178ddc",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "モデル メニューで Sonnet 5 を有効化（Web）",
+        "subtitleJa": "Sonnet 5 では既定の推論レベルが高まり、下書きや編集がより正確になります",
+        "en": "Enable Sonnet 5 in models menu [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Word"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Word で Microsoft Copilot を使って文書を作成する人**（Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Sonnet 5 の高めの既定の推論レベルで、下書きや編集がより正確になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Anthropic モデル ファミリは、管理者が Microsoft 365 管理センターでオフにできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "管理者向け", "retrievedAt": "2026-10-22T21:15:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Sonnet 5 を使うと、Copilot が**高めの既定の推論レベル**で、より正確な下書きと編集を行います", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "モデル メニューで Sonnet 5 を有効化できる（Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Sonnet 5 では既定の推論レベルが高く、下書きと編集の精度が上がる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連機能の Copilot Cowork では、Claude Sonnet 5 は下書きや日常業務向けのモデル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "利用可能なモデル", "retrievedAt": "2026-10-22T21:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Anthropic モデル ファミリは、管理者がテナント全体でオフにできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "管理者向け", "retrievedAt": "2026-10-22T21:15:00Z" }] },
+            { "text": "推論の労力が高いほど徹底的だが、速度は遅くなりクレジットも多く使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "推論の労力レベル", "retrievedAt": "2026-10-22T21:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sonnet-5", "term": "Claude Sonnet 5", "type": "feature", "oneLine": { "text": "下書き、クイック検索、日常業務などに対応する Anthropic のモデル（Copilot Cowork の説明）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "利用可能なモデル", "retrievedAt": "2026-10-22T21:15:00Z" }] } },
+        { "termKey": "reasoning-effort", "term": "推論の労力レベル", "type": "term", "oneLine": { "text": "品質、速度、コストのバランスを調整する設定。Copilot Cowork の既定は「中」。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "推論の労力レベル", "retrievedAt": "2026-10-22T21:15:00Z" }] } },
+        { "termKey": "model-menu", "term": "モデル メニュー", "type": "feature", "oneLine": { "text": "チャット入力ボックスで、使用するモデルを選べるドロップダウン メニュー（Copilot Cowork の説明）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "利用可能なモデル", "retrievedAt": "2026-10-22T21:15:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "推論の労力レベルを上げると何が変わりますか？",
+          "answer": { "text": "回答はより徹底的になりますが、速度は遅くなり、より多くのクレジットが使われます（Copilot Cowork の説明）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "推論の労力レベル", "retrievedAt": "2026-10-22T21:15:00Z" }] }
+        },
+        {
+          "question": "管理者はモデルの利用を制限できますか？",
+          "answer": { "text": "Anthropic モデル ファミリは、Microsoft 365 管理センターの Copilot 設定でテナント全体に対してオフにできます。ユーザーの一部だけに付与する用途には使えません（Copilot Cowork の説明）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "管理者向け", "retrievedAt": "2026-10-22T21:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Copilot Cowork のモデルを選択する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models#available-models", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
