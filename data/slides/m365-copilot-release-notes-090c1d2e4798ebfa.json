@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-090c1d2e4798ebfa",
+      "kind": "update",
+      "kindSource": "title",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot アプリの検索から Copilot ノートブックに参照を追加",
+        "subtitleJa": "クイック アクセスのメニューから、そのまま保存できます",
+        "en": "Add references to your Copilot Notebooks from the Quick Access section in Search on the Microsoft Copilot app [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot app"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot アプリ（Web）で Copilot ノートブックを使う人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026", "retrievedAt": "2026-10-22T05:15:00Z" }] },
+        "change": { "text": "ノートブック画面で複数のメニューをたどらず、検索から直接参照を追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - What changed", "retrievedAt": "2026-10-22T05:15:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリース ノートに、管理者や利用者が事前に行う設定は示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026", "retrievedAt": "2026-10-22T05:15:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "参照を追加するには、ノートブック画面の複数のメニューをたどる必要がありました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - What changed", "retrievedAt": "2026-10-22T05:15:00Z" }] },
+        "after": { "text": "クイック アクセスの項目の「…」から **追加先 > ノートブック** を選ぶだけで、参照を保存できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - What changed", "retrievedAt": "2026-10-22T05:15:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot アプリの検索にあるクイック アクセスから、ノートブックへ参照を追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026", "retrievedAt": "2026-10-22T05:15:00Z" }] },
+            { "text": "項目の「…」メニューから「追加先 > ノートブック」を選び、対象のノートブックを選択する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Try this", "retrievedAt": "2026-10-22T05:15:00Z" }] },
+            { "text": "ノートブック内の操作を減らし、情報整理の手間を軽くする狙い", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026 - Why", "retrievedAt": "2026-10-22T05:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象は Web 版（ロードマップ ID: 510099）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026", "retrievedAt": "2026-10-22T05:15:00Z" }] },
+            { "text": "社内の利用手順に、検索からの追加方法を足しておくと案内しやすい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "参照を保存して管理する、Microsoft Copilot アプリの機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026", "retrievedAt": "2026-10-22T05:15:00Z" }] } },
+        { "termKey": "quick-access", "term": "クイック アクセス", "type": "feature", "oneLine": { "text": "Microsoft Copilot アプリの検索にある、項目が並ぶセクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "September 23, 2026", "retrievedAt": "2026-10-22T05:15:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能に加えられた変更を示す段階。", "origin": "derived", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
