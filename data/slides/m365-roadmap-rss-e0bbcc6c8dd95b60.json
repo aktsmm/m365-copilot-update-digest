@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e0bbcc6c8dd95b60",
+      "kind": "in-development",
+      "kindSource": "manual",
+      "label": "開発中",
+      "title": {
+        "ja": "OneNote モバイル（iPhone）で Copilot によるページ要約と Q&A",
+        "subtitleJa": "長いページを短く要約し、ノートの内容にその場で質問できます",
+        "en": "OneNote: Summary and Q&A in OneNote Mobile with Copilot (Iphone)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["iOS"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**iPhone で OneNote を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "長いページを短時間で把握でき、ノート内の疑問にもその場で答えを得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため現時点で必須の対応はなし。提供時期はロードマップで確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "OneNote モバイルで、**長いページの短く流れのよい要約**を作成でき、ノートに対する質問にリアルタイムで回答が得られます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供予定の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "要約: 長いページから短く読みやすい要約を作成し、必要な情報を素早く把握", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Q&A: ノート内の内容についての質問に、リアルタイムで回答", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は OneNote モバイルの iPhone（iOS）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中（In development）で、まだ提供されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウド インスタンスは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供開始に備え、iPhone 版 OneNote の利用状況と Copilot ライセンスの割り当てを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップを定期的に確認し、ステージの変化を追う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "onenote-mobile", "term": "OneNote モバイル", "type": "product", "oneLine": { "text": "スマートフォンやタブレットで使う OneNote アプリ。本更新の対象は iPhone。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-summary", "term": "要約（Summary）", "type": "feature", "oneLine": { "text": "長いページから短く流れのよい要約を作り、必要な情報を素早く把握できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-qa", "term": "Q&A", "type": "feature", "oneLine": { "text": "ノート内の内容に関する質問に、リアルタイムで回答を返す機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり未提供の状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "iPhone 以外でも使えますか？",
+          "answer": { "text": "この項目の対象プラットフォームは、ロードマップ上 iOS のみです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されていません。更新があればロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=422324",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
