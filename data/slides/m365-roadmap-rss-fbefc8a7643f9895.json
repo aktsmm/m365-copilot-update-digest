@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fbefc8a7643f9895",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "政府機関向けクラウドの Teams で Copilot Chat が利用可能に（開発中）",
+        "subtitleJa": "GCC・GCC High・DoD のチャット、チャネル、通話、会議で状況をすばやく把握",
+        "en": "Microsoft Teams: Copilot Chat for chats, channels, calls, and meetings in GCC, GCC High, and DoD"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC / GCC High / DoD の Teams 利用者**と、その Microsoft 365 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャット・チャネル・通話・会議で、Copilot Chat により状況をすばやく把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、今すぐの対応は不要。提供時期の確認と展開計画の準備から", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat が**チャット・チャネル・通話・会議**で使えるようになり、利用者は内容を把握しやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は GCC・GCC High・DoD の政府機関向けクラウド環境", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams のチャット、チャネル、通話、会議が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams の Copilot は、チャットやチャネルでの会話把握を支援する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams での Microsoft Copilot", "retrievedAt": "2026-10-22T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "政府機関向けクラウドでは、機能の提供時期が商用環境と異なる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-22T12:50:00Z" }] },
+            { "text": "機能の可用性は、各環境の分離とコンプライアンスの境界に合わせて調整される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-22T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロンプト、応答、生成コンテンツは政府機関のクラウド内に残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-22T12:50:00Z" }] },
+            { "text": "ロードマップで提供時期を確認し、展開計画を準備する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "対象の Microsoft 365 ユーザーが使える、保護された AI チャット体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/overview", "locator": "冒頭", "retrievedAt": "2026-10-22T12:50:00Z" }] } },
+        { "termKey": "gcc", "term": "GCC", "type": "term", "oneLine": { "text": "米国のデータ所在地と政府連携コンプライアンスを備えた専用環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "環境の概要", "retrievedAt": "2026-10-22T12:50:00Z" }] } },
+        { "termKey": "gcc-high", "term": "GCC High", "type": "term", "oneLine": { "text": "コンプライアンスと主権の要件の昇格のために設計された、より分離された環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "環境の概要", "retrievedAt": "2026-10-22T12:50:00Z" }] } },
+        { "termKey": "dod", "term": "DoD", "type": "term", "oneLine": { "text": "米国国防総省専用の、非常に制限された環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "環境の概要", "retrievedAt": "2026-10-22T12:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot Chat の利用に Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "Copilot Chat の基本的な利用に Microsoft Copilot ライセンスは不要です。ただし、Teams での機能の範囲は、ライセンスによって異なります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locator": "Teams の Standard AI 機能", "retrievedAt": "2026-10-22T12:50:00Z" }] }
+        },
+        {
+          "question": "政府機関向けクラウドでは商用環境と同時に提供されますか？",
+          "answer": { "text": "同時とは限りません。政府機関向けクラウドでは、リリースのタイミングが商用環境より遅れるのが通常です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "Microsoft 365 と米国政府のクラウド環境の違い", "retrievedAt": "2026-10-22T12:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569214",
+        "learn": [
+          { "title": "Microsoft 365 および Microsoft Copilot のための Microsoft 米国政府クラウド環境について理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locale": "ja-jp" },
+          { "title": "IT 管理者向け Microsoft Teams の AI の概要", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/copilot-ai-agents-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
