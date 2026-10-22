@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9cb797afc324fae7",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "OneNote モバイル（Android）で Copilot による要約と Q&A",
+        "subtitleJa": "長いページを短く要約し、ノートの内容に質問して答えを得られます",
+        "en": "OneNote: Summary and Q&A in OneNote Mobile with Copilot (Android)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Android 版 OneNote を使う人**と、Microsoft Copilot を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "長いページの要点を素早くつかみ、ノートの内容に質問して答えを得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "OneNote モバイルで、長いページの**短く流暢な要約**を作成でき、ノート内の内容へ**質問してリアルタイムに回答**を得られます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Summary: 長いページから短く流暢な要約を作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Q&A: ノートの内容に対する質問へ、ノート内で回答を取得", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は OneNote モバイルの Android 版", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) のみ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象ユーザーの Microsoft Copilot ライセンスの割り当て状況を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Android 端末で OneNote を使うユーザーに、提供予定を共有する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "onenote-mobile", "term": "OneNote モバイル", "type": "term", "oneLine": { "text": "スマートフォンやタブレット向けの OneNote アプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "summary", "term": "Summary", "type": "feature", "oneLine": { "text": "長いページから短く流暢な要約を作成し、情報を素早く把握するための機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "qa", "term": "Q&A", "type": "feature", "oneLine": { "text": "ノートの内容に対する質問へ、ノート内で回答を得られる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供時期が示されていません。提供が近づくとロードマップの更新で確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "iOS や Windows でも使えますか？",
+          "answer": { "text": "この項目の対象は Android のみです。他のプラットフォームは別の項目で扱われます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=422323",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
