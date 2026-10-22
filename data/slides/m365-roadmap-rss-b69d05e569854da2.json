@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b69d05e569854da2",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "PowerPoint の Copilot によるドキュメント編集を政府機関向けクラウドに提供予定",
+        "subtitleJa": "自然言語で、スライドの作成・編集・デザイン調整ができるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Edit your document with Copilot in PowerPoint in Government Clouds"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "PowerPoint", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["DoD"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**DoD 環境で PowerPoint と Microsoft Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "デッキ内で Copilot に頼んで、スライドの生成や編集、デザインの調整ができるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点では開発中のため、提供開始を待ってから利用範囲を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "既存のデッキの中で、Copilot に頼むだけで**スライド生成・内容更新・レイアウト改善・デザイン調整**ができます。書式や構成は保たれます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象クラウドは DoD、対象プラットフォームはデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステージは「開発中」で、提供時期は未定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "政府機関向けクラウドでは、商用環境と異なる時期に機能が導入されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-10-22T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "サービス説明では、Word・Excel・PowerPoint・OneNote での Copilot による編集は DoD で現在利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-22T07:50:00Z" }] },
+            { "text": "Copilot Chat は DoD の Word・Excel・PowerPoint・OneNote で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-22T07:50:00Z" }] },
+            { "text": "ロードマップのステージは変更される場合があり、提供を約束するものではない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この機能の利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性（注 2）", "retrievedAt": "2026-10-22T07:50:00Z" }] },
+            { "text": "提供開始時期は、Microsoft 365 ロードマップとメッセージ センターで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性／メッセージング", "retrievedAt": "2026-10-22T07:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dod", "term": "DoD", "type": "term", "oneLine": { "text": "米国国防総省専用の、非常に制限された Microsoft 365 政府機関向けクラウド環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "概要", "retrievedAt": "2026-10-22T07:50:00Z" }] } },
+        { "termKey": "gov-cloud", "term": "政府機関向けクラウド", "type": "term", "oneLine": { "text": "GCC、GCC High、DoD の 3 つがある、米国政府向けに分離された Microsoft 365 環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locator": "概要", "retrievedAt": "2026-10-22T07:50:00Z" }] } },
+        { "termKey": "copilot-chat-apps", "term": "Copilot Chat（Office アプリ内）", "type": "feature", "oneLine": { "text": "Word・Excel・PowerPoint・OneNote で使えるチャット形式の Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-22T07:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "DoD 環境の PowerPoint で、Copilot はすでに使えますか？",
+          "answer": {
+            "text": "Copilot Chat は DoD で利用できます。一方、Copilot による編集は、サービス説明では現在利用できないとされています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-22T07:50:00Z" }]
+          }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": {
+            "text": "ロードマップのステージは開発中で、月単位の提供時期は示されていません。最新情報はロードマップで確認してください。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566702",
+        "learn": [
+          { "title": "Microsoft Copilot のサービス説明（機能の可用性）", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locale": "ja-jp" },
+          { "title": "Microsoft 米国政府クラウド環境について理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/gov-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
