@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5761b018b09f34ae",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Edge で画像について Microsoft Copilot に質問（開発中）",
+        "subtitleJa": "Web 上の画像を右クリックから Copilot に送り、内容を質問できます",
+        "en": "Microsoft Edge: Ask Copilot about an image"
+      },
+      "meta": {
+        "publishedJst": "2026-09-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "edge-windows"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Edge で Microsoft Copilot を使うユーザー**と、Edge の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "閲覧中の画像を、ブラウザーを離れずに Copilot で分析・質問できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は提供範囲を制御できる（詳細は今後の公式情報で確認）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Edge の**コンテキスト メニューから画像を Copilot に直接送り**、質問や洞察の取得、視覚コンテンツの理解ができます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web 上の画像を Edge のコンテキスト メニューから Copilot へ送信", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "画像について質問し、内容の理解や洞察を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供対象は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理者はこの機能の提供可否を制御できるとされている", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "管理者の備え",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Edge の Copilot Chat は Edge ポリシーで管理でき、閲覧コンテキストの利用は EdgeEntraCopilotPageContext で許可・ブロックを制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "Microsoft Edge で Copilot Chat を管理する", "retrievedAt": "2026-10-22T07:55:00Z" }] },
+            { "text": "提供開始前に、現在の Edge ポリシー設定を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ask-copilot-image", "term": "画像について Copilot に質問", "type": "feature", "oneLine": { "text": "Edge のコンテキスト メニューから Web 上の画像を Copilot に送り、質問できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat-edge", "term": "Edge の Copilot Chat", "type": "product", "oneLine": { "text": "Entra の職場・学校アカウントで Edge にサインインすると、サイドバーの Copilot アイコンから使えるチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "Microsoft Edge で Copilot Chat を管理する", "retrievedAt": "2026-10-22T07:55:00Z" }] } },
+        { "termKey": "edge-policy", "term": "Microsoft Edge ポリシー", "type": "term", "oneLine": { "text": "管理者が Edge の Copilot Chat の可用性や動作を制御するための設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "Microsoft Edge で Copilot Chat を管理する", "retrievedAt": "2026-10-22T07:55:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、現時点では開発中の段階です。最新状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者は無効にできますか？",
+          "answer": { "text": "ロードマップには、管理者が提供可否を制御できると記載されています。具体的な設定項目は提供時の公式情報で確認が必要です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566864",
+        "learn": [
+          { "title": "Microsoft Copilot Chat の管理", "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
