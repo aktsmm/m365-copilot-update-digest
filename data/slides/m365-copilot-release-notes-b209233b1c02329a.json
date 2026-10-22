@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b209233b1c02329a",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot アプリが Apple CarPlay に対応（iOS）",
+        "subtitleJa": "運転中でも、音声だけで Copilot と会話できます",
+        "en": "CarPlay support for the Microsoft Copilot app [iOS]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot app"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**iPhone で Microsoft Copilot アプリを使い、CarPlay 対応車に乗る人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Requirements to use Copilot with Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "change": { "text": "運転中に、ハンズフリーの音声で Copilot に質問や準備を頼める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の作業は不要。利用者は iOS 26.4 以降と最新アプリを用意する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Requirements to use Copilot with Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "CarPlay 画面から **Microsoft Copilot** を選ぶか「Hey, Siri, ask Copilot」で、音声チャットを始められます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Start a voice chat with Copilot using Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "回答の取得、会議の準備、メールやメッセージの確認、音声でのアイデア出しが可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "音声中心で、運転中に注意をそらさない体験を優先している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Note", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "モバイル アプリの一部機能は CarPlay で使えないことがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Note", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "利用前の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "iOS 26.4 以降の iPhone、最新アプリ、CarPlay 対応車、音声へのアクセスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Requirements to use Copilot with Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "運転前に設定を済ませ、走行中は端末を操作しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "For your safety", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "carplay", "term": "Apple CarPlay", "type": "term", "oneLine": { "text": "iPhone を対応車とつなぎ、車の画面から対応アプリを使える仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Set up Copilot in Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "voice-chat", "term": "音声チャット", "type": "feature", "oneLine": { "text": "話しかけて Copilot と会話する機能で、CarPlay でも新しい音声チャットを開始できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Start a voice chat with Copilot using Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存製品の機能追加・改善。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "CarPlay で Copilot を使うための前提条件は？",
+          "answer": { "text": "iOS 26.4 以降の iPhone、最新の Microsoft Copilot アプリ、CarPlay 対応車、Microsoft Copilot の音声へのアクセスです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Requirements to use Copilot with Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        },
+        {
+          "question": "どう起動しますか？",
+          "answer": { "text": "CarPlay 画面で Microsoft Copilot を選び「New voice chat」を選ぶか、「Hey, Siri, ask Copilot」と話しかけます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locator": "Start a voice chat with Copilot using Apple CarPlay", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay",
+        "learn": [
+          { "title": "Use Microsoft Copilot in Apple CarPlay", "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/voice-apple-carplay", "locale": "en-us" },
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
