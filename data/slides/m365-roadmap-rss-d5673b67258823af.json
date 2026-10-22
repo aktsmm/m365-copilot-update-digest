@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d5673b67258823af",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Agent 365 ダッシュボードにエージェントの価値インサイトを追加",
+        "subtitleJa": "推定の支援時間や業務の種類で、エージェントの効果を把握できます",
+        "en": "Microsoft Viva: Copilot Analytics - Agent value insights in Agent 365 Dashboard"
+      },
+      "meta": {
+        "publishedJst": "2026-09-09",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva"],
+        "categories": ["agents", "viva"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**リーダーと、変更管理・導入推進の担当者**（管理者・作成者向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントが使われているかだけでなく、推定の支援時間や業務の種類も把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。利用には Agent 365 ライセンスなどの要件がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Viva Insights（Copilot Analytics）の Agent 365 ダッシュボードで、**エージェントが提供する推定の支援時間と業務の種類**を確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Viva Insights（Copilot Analytics）の Agent 365 ダッシュボードに価値インサイトを追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Agent 365 ダッシュボードは、Microsoft 365 アプリ全体のサポート対象エージェントの導入とセッションを示す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、Web 版", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot ライセンス 50 以上とエージェント活動に加え、Agent 365 ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "国・地域のクラウド（米国政府向け、21Vianet 運用を含む）では利用不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件の注", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ダッシュボードの自動アクセスは、グローバル管理者が PowerShell などで有効・無効にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "エージェント ダッシュボードへの自動アクセスの決定方法", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "閲覧する担当者と、Agent 365 ライセンスの有無を先に確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365-dashboard", "term": "Agent 365 ダッシュボード", "type": "feature", "oneLine": { "text": "Microsoft 365 アプリ全体のサポート対象エージェントについて、導入とセッションの洞察を示すビュー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] } },
+        { "termKey": "agent-dashboard", "term": "エージェント ダッシュボード", "type": "feature", "oneLine": { "text": "組織がエージェント最適化の機会を特定し、導入を追跡するのに役立つ Viva Insights のレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] } },
+        { "termKey": "copilot-analytics", "term": "Copilot Analytics", "type": "product", "oneLine": { "text": "Viva Insights で Copilot とエージェントの利用状況を分析する機能群。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot エージェント ダッシュボードとの違いは何ですか？",
+          "answer": { "text": "Copilot エージェント ダッシュボードは Microsoft Copilot 内のエージェントのみが対象です。Agent 365 ダッシュボードは Microsoft 365 アプリ全体のサポート対象エージェントが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+        },
+        {
+          "question": "Agent 365 ダッシュボードの表示に必要なライセンスは？",
+          "answer": { "text": "Copilot エージェント ダッシュボードと同じ要件に加え、Agent 365 ライセンスが必要です。満たさない場合は「すべてのエージェント」トグルが表示されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locator": "ライセンスの要件", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570847",
+        "learn": [
+          { "title": "エージェント ダッシュボード（プレビュー）に接続する", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/agent-dashboard", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
