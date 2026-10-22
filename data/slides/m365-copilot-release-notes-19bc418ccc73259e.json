@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-19bc418ccc73259e",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Viva Engage のプライベート コンテンツを Microsoft Copilot の根拠データに利用",
+        "subtitleJa": "プライベート コミュニティとイベントの内容を、Copilot が回答に活用します",
+        "en": "Viva Engage private content in Microsoft 365 Copilot [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["viva"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Viva Engage のプライベート コミュニティやイベントを使う Microsoft Copilot ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プライベートな議論やイベントの内容も、Copilot の回答に反映される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "ライセンスの付与以外の設定は、公式ページでは確認できていない", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Viva Engage の**プライベート コミュニティとイベントのコンテンツ**が、Microsoft Copilot の根拠データになります。ユーザーは、アクセス権のあるコンテンツだけを参照できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Viva Engage のプライベート コミュニティとイベントのコンテンツ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft Copilot に質問したとき、根拠データとして使われる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザーが見られるのは、アクセス権のあるコンテンツのみ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot は、ユーザーが既にアクセスできるデータだけを使い、権限のない情報にはアクセスしない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/configure-microsoft-365-copilot-in-viva-engage", "locator": "メカニズム", "retrievedAt": "2026-10-22T21:30:00Z" }] },
+            { "text": "Viva Engage の Copilot の利用には、Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/configure-microsoft-365-copilot-in-viva-engage", "locator": "セットアップ & 要件", "retrievedAt": "2026-10-22T21:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "viva-engage", "term": "Viva Engage", "type": "product", "oneLine": { "text": "Microsoft 365 のコミュニティ、ストーリーライン、キャンペーンなどで社内の交流を行うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/configure-microsoft-365-copilot-in-viva-engage", "locator": "冒頭", "retrievedAt": "2026-10-22T21:30:00Z" }] } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "プロンプトに関連するコンテキストやユーザーのデータを加えて強化する前処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/configure-microsoft-365-copilot-in-viva-engage", "locator": "メカニズム", "retrievedAt": "2026-10-22T21:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに記載された、既存機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "他のテナントのコンテンツも参照されますか？",
+          "answer": { "text": "マルチテナント組織でも、Copilot のアクセスはユーザーが属するテナントに限定されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/engage/configure-microsoft-365-copilot-in-viva-engage", "locator": "プロンプトと応答の Copilot データ使用量", "retrievedAt": "2026-10-22T21:30:00Z" }] }
+        },
+        {
+          "question": "Copilot の回答に、権限のないユーザーのコンテンツが出ませんか？",
+          "answer": { "text": "出ません。ユーザーが見られるのは、自分にアクセス権のあるコンテンツだけです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Viva Engage で Microsoft Copilot を設定する", "url": "https://learn.microsoft.com/ja-jp/viva/engage/configure-microsoft-365-copilot-in-viva-engage", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
