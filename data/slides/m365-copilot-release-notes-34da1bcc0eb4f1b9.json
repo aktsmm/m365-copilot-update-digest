@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-34da1bcc0eb4f1b9",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "ブロック時に表示する組織ポリシーのリンクを設定可能に",
+        "subtitleJa": "Copilot Chat をブロックした組織が、社内ガイダンスへの URL を案内できます",
+        "en": "Configure organizational policy link for blocked Microsoft 365 Copilot app [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot app"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot Chat へのアクセスをブロックしている組織の**管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] },
+        "change": { "text": "ブロックされたユーザーに、社内ガイダンスやポリシーへのリンクを示せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ブロック運用中なら、管理センターでカスタム リンクに URL を設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat へのアクセスがブロックされたときに表示されるページに、組織が指定した URL へのリンクが表示されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "社内ガイダンス・サポート情報・会社のポリシーを示す URL を指定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] },
+            { "text": "ユーザーには「View info from your organization」のリンクが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] },
+            { "text": "リンクは、ブロックされたときに表示されるページに掲載される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "設定手順と確認点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センター → Copilot → 設定 → すべて表示 → ブロックされたアプリのカスタム リンク", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] },
+            { "text": "ブロック中も Chat が表示される場合があり、選ぶと組織ポリシーで無効という製品内メッセージが出る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "Copilot Chat へのアクセスのブロック", "retrievedAt": "2026-10-22T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ブロック理由や問い合わせ窓口を載せた社内ページを用意し、リンクを設定する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Microsoft Copilot Chat", "type": "product", "oneLine": { "text": "職場または学校アカウントでサインインした対象ユーザーが追加料金なしで使える Copilot のチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "Microsoft Copilot Chat適格性", "retrievedAt": "2026-10-22T05:30:00Z" }] } },
+        { "termKey": "custom-link", "term": "カスタム リンク", "type": "feature", "oneLine": { "text": "Copilot Chat がブロックされたときに表示される、社内ガイダンスや会社のポリシーを示す URL。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された既存機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ユーザーにはどのように表示されますか？",
+          "answer": { "text": "ブロックされたときのページに「View info from your organization」というリンクが表示され、設定した URL に移動します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "会社のポリシーの URL を指定する", "retrievedAt": "2026-10-22T05:30:00Z" }] }
+        },
+        {
+          "question": "Copilot Chat のアクセス制御はどこで行いますか？",
+          "answer": { "text": "Microsoft 365 管理センターで、特定のユーザーやグループへの制限、またはアクセスのブロックを構成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locator": "Copilot Chat へのアクセスのブロック", "retrievedAt": "2026-10-22T05:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/copilot/manage#provide-company-policy-url",
+        "learn": [
+          { "title": "Microsoft Copilot Chat の管理", "url": "https://learn.microsoft.com/ja-jp/copilot/manage", "locale": "ja-jp" },
+          { "title": "Microsoft 365 アプリでMicrosoft Copilot Chatをピン留めする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pin-copilot-chat-navbar", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
