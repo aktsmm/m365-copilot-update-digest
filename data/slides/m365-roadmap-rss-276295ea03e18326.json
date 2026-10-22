@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-276295ea03e18326",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Viva Insights と Copilot Analytics が GCC High 向けに開発中",
+        "subtitleJa": "政府機関向けクラウドでも、Microsoft Copilot の導入状況を分析できるようになります",
+        "en": "Microsoft Viva: Viva Insights and Copilot Analytics in GCC-High"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva"],
+        "categories": ["viva"],
+        "importance": "normal",
+        "cloudInstances": ["GCC High"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC High テナントの管理者**と、Microsoft Copilot の導入を推進する担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プライバシーが保護された役割ベースの分析で、Copilot の導入・利用・効果を把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には Microsoft 365 Copilot と G5 のライセンスが必要（2026 年 11 月中旬以降は G5 不要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "重要", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "GCC High でも、Viva Insights と Copilot Analytics で **Copilot の導入状況・利用状況・効果**を把握できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot ダッシュボードの導入ページと影響ページに GCC-H でアクセスできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "Microsoft Copilot 分析 ダッシュボード", "retrievedAt": "2026-10-22T13:00:00Z" }] },
+            { "text": "導入ページの推奨事項の分析情報は GCC-H で利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "導入ページ", "retrievedAt": "2026-10-22T13:00:00Z" }] },
+            { "text": "高度な分析の分析作成・結果・レポート ページも GCC-H で利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "高度な分析プラットフォームの機能", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "アプリ別の導入、パワー ユーザー、クレジットの各メトリックは一部のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "導入ページ", "retrievedAt": "2026-10-22T13:00:00Z" }] },
+            { "text": "Pulse 統合、アンケート結果のプレビュー、エージェント ダッシュボードは GCC-H では対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "影響ページ／エージェント ダッシュボード", "retrievedAt": "2026-10-22T13:00:00Z" }] },
+            { "text": "対応表は公開時点の情報で、可用性は今後変わることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "重要", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GCC-H の Copilot 分析には Microsoft 365 G5 と Microsoft 365 Copilot の両ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "重要", "retrievedAt": "2026-10-22T13:00:00Z" }] },
+            { "text": "2026 年 11 月中旬以降は G5 ライセンスが不要になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "重要", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "viva-insights", "term": "Viva Insights", "type": "product", "oneLine": { "text": "Copilot 分析ダッシュボードや高度な分析などを提供する、Microsoft Viva の分析機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "全体", "retrievedAt": "2026-10-22T13:00:00Z" }] } },
+        { "termKey": "copilot-analytics", "term": "Copilot Analytics", "type": "feature", "oneLine": { "text": "Copilot の導入・影響・学習などを確認できる、Copilot 分析ダッシュボードを含む分析機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "Microsoft Copilot 分析 ダッシュボード", "retrievedAt": "2026-10-22T13:00:00Z" }] } },
+        { "termKey": "gcc-high", "term": "GCC High", "type": "term", "oneLine": { "text": "Microsoft 365 の政府機関向けクラウド環境のひとつ（GCC-H）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "冒頭", "retrievedAt": "2026-10-22T13:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能を開発している段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "GCC High では現時点でどの機能が使えますか？",
+          "answer": { "text": "Learn の対応表では、Copilot ダッシュボードの導入ページと影響ページ、高度な分析の主要機能が GCC-H で利用可能とされています。ただしメトリックが一部のみの項目があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "Microsoft Copilot 分析 ダッシュボード", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+        },
+        {
+          "question": "必要なライセンスは何ですか？",
+          "answer": { "text": "GCC-H の Copilot 分析には G5 と Microsoft 365 Copilot のライセンスが必要です。2026 年 11 月中旬以降は G5 が不要になります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locator": "重要", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570428",
+        "learn": [
+          { "title": "Viva Insights 機能でサポートされている Microsoft 365 環境", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/setup-maint/supported-environments", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
