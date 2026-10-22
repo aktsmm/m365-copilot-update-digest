@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b8733d58811bf6d4",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "建物・会議室・デスクの新しいプロファイル カード",
+        "subtitleJa": "Places ディレクトリの場所情報を、Copilot Chat などで見られます",
+        "en": "New profile cards for buildings, rooms and desks [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "**Places を管理する管理者**と、会議室やデスクを探す Microsoft Copilot の利用者",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "建物・会議室・デスクの詳細を、カードでまとめて確認できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+              "locator": "冒頭",
+              "retrievedAt": "2026-10-22T00:10:00Z"
+            }
+          ]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "カードは Set-PlaceV3 で設定する場所情報に基づくため、設定の見直しが有効",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+              "locator": "冒頭",
+              "retrievedAt": "2026-10-22T00:10:00Z"
+            }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Places ディレクトリに追加した建物・会議室・デスクに新しいプロファイル カードが用意され、Copilot Chat など Microsoft 365 の各入口から開けます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "場所を作成すると、オブジェクト プロファイル カードが自動で作られる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-10-22T00:10:00Z"
+                }
+              ]
+            },
+            {
+              "text": "カードは手動作成せず、メタデータと構成に基づいて動的に設定される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-10-22T00:10:00Z"
+                }
+              ]
+            },
+            {
+              "text": "表示名・容量・アクセシビリティ・デバイス・タグなどが表示される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                  "locator": "オブジェクト プロファイル カードの設定方法",
+                  "retrievedAt": "2026-10-22T00:10:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "設定には Exchange 管理者・Places TenantPlacesManagement・グローバル管理者のいずれかが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                  "locator": "アクセス許可",
+                  "retrievedAt": "2026-10-22T00:10:00Z"
+                }
+              ]
+            },
+            {
+              "text": "部屋・ワークスペースの更新が表示されるまで最大 24 時間かかることがある",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                  "locator": "一部のプロパティには伝達遅延があります",
+                  "retrievedAt": "2026-10-22T00:10:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "setup-points",
+          "heading": "設定のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "住所は個々の部屋ではなく建物レベルで設定し、階層を正しく親付ける",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                  "locator": "階層駆動型の場所の詳細",
+                  "retrievedAt": "2026-10-22T00:10:00Z"
+                }
+              ]
+            },
+            {
+              "text": "写真は Entra 管理センターで設定し、建物・フロアには設定できない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                  "locator": "オブジェクトの写真",
+                  "retrievedAt": "2026-10-22T00:10:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "places",
+          "term": "Microsoft Places",
+          "type": "product",
+          "oneLine": {
+            "text": "建物・部屋・デスクなどの場所情報を扱う Microsoft 365 のアプリ。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                "locator": "Places アプリを Outlook と Teams に追加する",
+                "retrievedAt": "2026-10-22T00:10:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "profile-card",
+          "term": "オブジェクト プロファイル カード",
+          "type": "feature",
+          "oneLine": {
+            "text": "場所の作成時に自動で作られ、設定したメタデータが表示されるカード。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-22T00:10:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "set-placev3",
+          "term": "Set-PlaceV3",
+          "type": "term",
+          "oneLine": {
+            "text": "カードに表示する場所のプロパティを設定する PowerShell コマンドレット。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-22T00:10:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "カードは管理者が手動で作る必要がありますか。",
+          "answer": {
+            "text": "いいえ。場所の作成時に自動で作られ、カード自体は手動作成しません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-22T00:10:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "設定を変更するとすぐカードに反映されますか。",
+          "answer": {
+            "text": "部屋とワークスペースの更新は、反映まで最大 24 時間かかることがあります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+                "locator": "一部のプロパティには伝達遅延があります",
+                "retrievedAt": "2026-10-22T00:10:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          {
+            "title": "建物および予約可能なオブジェクト プロファイル カード",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-365/places/end-user/building-bookable-object-cards",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
