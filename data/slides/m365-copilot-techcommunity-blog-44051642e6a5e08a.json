@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-44051642e6a5e08a",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "OpenAI GPT-6 Astra が Copilot Cowork と Copilot Studio で利用可能に",
+        "subtitleJa": "難しい作業を丸ごと任せたいときの、新しいフロンティア モデルです",
+        "en": "Available today: OpenAI GPT-6 Astra in Microsoft Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-05",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Cowork や Copilot Studio でエージェントを作る・使う作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "複雑な作業を細かく分けずに、まとめて Copilot へ任せやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "選択肢は組織が使えるようにしているモデルが反映される。必須の対応はない",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "モデルを選択する場所", "retrievedAt": "2026-10-22T09:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "GPT-6 Astra が Copilot Cowork と Copilot Studio のフロンティア モデルに加わり、**複雑な作業を委任するときの選択肢**が広がります",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cowork のモデル選択に「GPT 6 Astra」（難しい問題向けの最新モデル）が追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "利用可能なモデル", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "OpenAI がサブプロセッサとして提供するモデル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "利用可能なモデル", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "会話にモデル バッジが表示され、どのモデルの応答か確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "モデルの選択が応答に与える影響", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "チャット入力ボックスの［モデル］ドロップダウンから選ぶ（既定は［自動］）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "利用可能なモデル", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "モデル ピッカーの横で推論の労力レベル（軽い〜Max）も選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "推論の労力レベル", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "推論の労力が高いほど徹底的だが、遅くなりクレジットも多く使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "推論の労力レベル", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "労力レベルは Web、Windows、macOS の Cowork で使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "推論の労力レベル", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Cowork の 2026 年 9 月の新機能として、モデル選択に追加されたと案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/whats-new", "locator": "September 2026", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "表示されるモデルは、組織が使えるようにしているものだけ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "モデルを選択する場所", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ふだんは［自動］のまま使い、難しい案件だけ Astra を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Anthropic モデル ファミリをオフにしても、GPT モデルなど他のモデルで Cowork を使い続けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "管理者向け", "retrievedAt": "2026-10-22T09:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "gpt-6-astra", "term": "GPT 6 Astra", "type": "product", "oneLine": { "text": "Cowork のモデル選択にある、難しい問題向けの最新モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "利用可能なモデル", "retrievedAt": "2026-10-22T09:00:00Z" }] } },
+        { "termKey": "copilot-cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "作業を Copilot に任せられる Microsoft Copilot の機能。モデルを選べる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "概要", "retrievedAt": "2026-10-22T09:00:00Z" }] } },
+        { "termKey": "reasoning-effort", "term": "推論の労力レベル", "type": "term", "oneLine": { "text": "品質・速度・コストのバランスを調整する設定。既定は［中］。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "推論の労力レベル", "retrievedAt": "2026-10-22T09:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "提供が段階的に始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのモデルを選べばよいですか？",
+          "answer": {
+            "text": "ほとんどの作業では［自動］が推奨されています。Astra は難しい問題向けの最新モデルと説明されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "自動を使用する場合", "retrievedAt": "2026-10-22T09:00:00Z" }]
+          }
+        },
+        {
+          "question": "管理者はモデルを制御できますか？",
+          "answer": {
+            "text": "Anthropic モデル ファミリは管理センターでオフにできますが、設定はテナント全体に適用されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locator": "管理者向け", "retrievedAt": "2026-10-22T09:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/available-today-openai-gpt-6-astra-in-microsoft-copilot/ba-p/4552808",
+        "learn": [
+          { "title": "Copilot Cowork のモデルを選択する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-models", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
