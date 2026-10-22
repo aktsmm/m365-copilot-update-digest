@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-bf7c901323230899",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot 利用状況スナップショットの Power BI レポートが日単位・最新データに対応",
+        "subtitleJa": "日単位で、直近の Copilot アクティビティを反映した分析情報を確認できます",
+        "en": "Copilot usage snapshot PBI at day level with fresh data [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": null,
+        "products": ["Viva Insights"],
+        "categories": ["viva"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Viva Insights で Copilot の導入状況を分析する管理者・レポート作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "日単位で、最新の Copilot アクティビティを反映した導入状況を把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリースノートでは、利用者側の対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot 導入の **Power BI レポート**が、日単位で直近のアクティビティと新しいデータを反映します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot 利用状況スナップショットの Power BI レポートが日単位に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "直近の Copilot アクティビティを反映した、新しい分析情報を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "リリースノートのタグは Viva Insights、管理者向け、作成者向け", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "レポートの実行には Insights Analyst ロールと Power BI Desktop が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locator": "前提条件", "retrievedAt": "2026-10-22T00:15:00Z" }] },
+            { "text": "測定対象の従業員には Microsoft Copilot または Viva Insights のライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locator": "前提条件", "retrievedAt": "2026-10-22T00:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-adoption-report", "term": "Microsoft Copilot 導入レポート", "type": "feature", "oneLine": { "text": "Microsoft Copilot が組織全体でどう採用されているかを分析する Power BI レポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locator": "冒頭", "retrievedAt": "2026-10-22T00:15:00Z" }] } },
+        { "termKey": "viva-insights", "term": "Viva Insights", "type": "product", "oneLine": { "text": "Copilot 利用状況のクエリとレポートの元になるデータを扱うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locator": "前提条件", "retrievedAt": "2026-10-22T00:15:00Z" }] } },
+        { "termKey": "power-bi", "term": "Power BI", "type": "product", "oneLine": { "text": "クエリ結果をレポートとして表示するために使うツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locator": "前提条件", "retrievedAt": "2026-10-22T00:15:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリースノートに掲載された、既存機能の更新を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "このレポートを実行するには何が必要ですか？",
+          "answer": { "text": "Viva Insights の Insights Analyst ロール、Power BI Desktop、対象従業員へのライセンス割り当てが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locator": "前提条件", "retrievedAt": "2026-10-22T00:15:00Z" }] }
+        },
+        {
+          "question": "Copilot のデータはどのくらい新しいですか？",
+          "answer": { "text": "導入レポートのクエリでは、最新の Copilot データは現在の日付の 6 日前まで利用できると説明されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locator": "クエリの実行", "retrievedAt": "2026-10-22T00:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft Copilot 導入レポート", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/templates/microsoft-365-copilot-adoption", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
