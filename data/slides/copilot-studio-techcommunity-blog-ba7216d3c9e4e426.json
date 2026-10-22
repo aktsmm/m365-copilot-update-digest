@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-ba7216d3c9e4e426",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio で作成したアプリの管理",
+        "subtitleJa": "ソース管理とデプロイ段階を備えたアプリを、Microsoft ホスト環境で運用できます",
+        "en": "Managing apps built in Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でアプリを作る人**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ソース管理とプレビュー・デプロイの流れで、作成したアプリを管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/developer/dev-inner-loop", "locator": "What to expect", "retrievedAt": "2026-10-22T08:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は Copilot Studio でのアプリ作成を管理センターで制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locator": "Enable Copilot Managed Runtime for your tenant", "retrievedAt": "2026-10-22T08:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "成果を言葉で説明して**フルスタックのアプリを作成**し、ソース管理・デプロイ段階・バージョン分離つきで管理できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "管理の仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Git ネイティブの流れ。プッシュ後にビルドし、プレビューで確認してから本番へデプロイ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/developer/dev-inner-loop", "locator": "What to expect", "retrievedAt": "2026-10-22T08:00:00Z" }] },
+            { "text": "リポジトリは、プラットフォーム管理の Git か GitHub Enterprise Cloud から選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/developer/dev-inner-loop", "locator": "Repository modes", "retrievedAt": "2026-10-22T08:00:00Z" }] },
+            { "text": "アプリは Microsoft 365 管理センターの一覧に表示され、利用状況と状態を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locator": "Govern apps", "retrievedAt": "2026-10-22T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Studio のアプリ作成は既定でオン。管理センターで管理でき、セキュリティ グループで対象を絞れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locator": "Enable Copilot Managed Runtime for your tenant", "retrievedAt": "2026-10-22T08:00:00Z" }] },
+            { "text": "作成時から Copilot クレジットを消費し、課金は Copilot Studio の環境単位", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locator": "Licensing and billing", "retrievedAt": "2026-10-22T08:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-managed-runtime", "term": "Copilot Managed Runtime", "type": "feature", "oneLine": { "text": "IT ガバナンス ポリシーに自動で準拠する社内業務アプリを作るための基盤（プレビュー）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locator": "冒頭", "retrievedAt": "2026-10-22T08:00:00Z" }] } },
+        { "termKey": "inner-loop", "term": "インナー ループ", "type": "term", "oneLine": { "text": "編集、コミット、ビルド、プレビュー、デプロイを繰り返す Git ネイティブの開発サイクル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/developer/dev-inner-loop", "locator": "The inner loop cycle", "retrievedAt": "2026-10-22T08:00:00Z" }] } },
+        { "termKey": "app-inventory", "term": "アプリ インベントリ", "type": "term", "oneLine": { "text": "テナント内の全アプリの利用状況・状態を管理センターで確認できる一覧。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locator": "Key concepts", "retrievedAt": "2026-10-22T08:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存の発表に関する続報や追加情報を示す分類。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は Copilot Studio でのアプリ作成を止められますか？",
+          "answer": { "text": "はい。Microsoft 365 管理センターまたは pac admin update-tenant-settings で無効化でき、セキュリティ グループで対象も限定できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locator": "Where the settings live", "retrievedAt": "2026-10-22T08:00:00Z" }] }
+        },
+        {
+          "question": "本番反映はプッシュで自動的に行われますか？",
+          "answer": { "text": "いいえ。プッシュはビルドを起こさず、本番反映は ms app deploy を明示的に実行したときです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/developer/dev-inner-loop", "locator": "Deploy", "retrievedAt": "2026-10-22T08:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/managing-apps-built-in-copilot-studio/ba-p/4556774",
+        "learn": [
+          { "title": "Copilot Managed Runtime overview and key concepts for admins (preview)", "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/apps/", "locale": "en-us" },
+          { "title": "Build, preview, and deploy Microsoft Copilot Managed Runtime apps (preview)", "url": "https://learn.microsoft.com/en-us/microsoft-365/managed-apps/developer/dev-inner-loop", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
