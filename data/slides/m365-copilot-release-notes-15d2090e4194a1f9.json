@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-15d2090e4194a1f9",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot の「ビジョン」で、共有した画面やモバイルカメラの内容を分析",
+        "subtitleJa": "デスクトップ画面やスマートフォンのカメラ映像について、音声で質問できます",
+        "en": "Vision in Microsoft 365 Copilot can analyze content shared on desktop screen and through mobile camera [Android, Windows, iOS, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot を Android・Windows・iOS・Web で使う人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "September 23, 2026 / Vision in Microsoft 365 Copilot", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+        "change": { "text": "画面やカメラの内容について、アプリを切り替えずに音声で質問できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Why", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリースノートに必須の対応は記載されておらず、そのまま試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Details / Try this", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前の Copilot は、テキストと静的なデータの入力だけが前提でした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+        "after": { "text": "共有した**デスクトップ画面やモバイルのカメラ映像**をリアルタイムで解析し、仕事と Web のデータに基づく音声回答を返します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デスクトップで共有した画面の内容を分析し、詳しい洞察を提示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Vision in Microsoft 365 Copilot", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "モバイルの音声セッション中に、前面・背面どちらのカメラも共有できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Vision in Microsoft 365 Copilot", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "ライブ映像や画面をリアルタイムで解析し、音声で回答する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Vision in Microsoft 365 Copilot", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "セッションでデスクトップ画面を共有し、見えている内容について質問する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Try this", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "モバイルの音声セッションでカメラを起動し、物や文書に向けて質問する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Try this", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "vision", "term": "ビジョン", "type": "feature", "oneLine": { "text": "共有した画面やカメラ映像から文脈を読み取り、質問に答える機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Vision in Microsoft 365 Copilot", "retrievedAt": "2026-10-22T05:00:00Z" }] } },
+        { "termKey": "voice-session", "term": "音声セッション", "type": "term", "oneLine": { "text": "モバイルで Copilot とリアルタイムに音声で対話するセッション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Vision in Microsoft 365 Copilot", "retrievedAt": "2026-10-22T05:00:00Z" }] } },
+        { "termKey": "grounded", "term": "仕事と Web のデータに基づく回答", "type": "term", "oneLine": { "text": "映像の分析結果を、仕事のデータと Web のデータに基づいて回答する動作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "Vision in Microsoft 365 Copilot", "retrievedAt": "2026-10-22T05:00:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "リリースノートでは Android、Windows、iOS、Web が対象と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "見出しの対象プラットフォーム", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+        },
+        {
+          "question": "以前の Copilot との違いは何ですか？",
+          "answer": { "text": "以前はテキストと静的データの入力が前提でしたが、ライブの画面共有やカメラ映像も解析できるようになりました。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23", "locator": "What changed", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
