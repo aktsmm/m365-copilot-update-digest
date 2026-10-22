@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-6e7430c61dd5aa90",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint Live 中に選択したスライド内容を Microsoft Copilot が解説（Windows）",
+        "subtitleJa": "会議の参加者が、スライドの文字を選んでその場で説明を得られます",
+        "en": "Explain slide selection during PowerPoint Live with Microsoft 365 Copilot [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "**PowerPoint Live 会議の参加者**と、発表資料の作成者・管理者",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "Explain slide selection during PowerPoint Live", "retrievedAt": "2026-10-22T20:20:00Z" }]
+        },
+        "change": {
+          "text": "会議の流れを止めずに、スライドの内容を Copilot に説明してもらえる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "Why", "retrievedAt": "2026-10-22T20:20:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "管理者・参加者とも、必須の設定作業は確認されていない",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified",
+          "evidence": []
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "スライドの内容は固定的で、参加者が操作して説明を得ることはできなかった",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-22T20:20:00Z" }]
+        },
+        "after": {
+          "text": "参加者がスライド上の**テキストを選択**して、Copilot に説明を求められます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-22T20:20:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "対象は Windows 向けの PowerPoint Live セッション",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "[Windows]", "retrievedAt": "2026-10-22T20:20:00Z" }]
+            },
+            {
+              "text": "参加者がスライドの文字を選ぶと、Copilot がその内容を説明する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-22T20:20:00Z" }]
+            },
+            {
+              "text": "コンテンツは会議の環境内で処理され、データのセキュリティが保たれる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-22T20:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "会議への参加者の理解と関与を高めることが狙い",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "Why", "retrievedAt": "2026-10-22T20:20:00Z" }]
+            },
+            {
+              "text": "Copilot の機能は、テナント内の一部のユーザーから段階的に展開される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T20:20:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "powerpoint-live",
+          "term": "PowerPoint Live",
+          "type": "feature",
+          "oneLine": {
+            "text": "会議の参加者が発表者と同期したり、自分のペースでスライドを見たりできる、PowerPoint の会議向け体験。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/document-collaboration-partner-program/scenarios/present", "locator": "冒頭", "retrievedAt": "2026-10-22T20:20:00Z" }]
+          }
+        },
+        {
+          "termKey": "copilot",
+          "term": "Microsoft Copilot",
+          "type": "product",
+          "oneLine": {
+            "text": "Microsoft 365 のアプリや会議の中で、質問や説明などを支援する AI アシスタント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T20:20:00Z" }]
+          }
+        },
+        {
+          "termKey": "label-update",
+          "term": "アップデート",
+          "type": "label",
+          "oneLine": {
+            "text": "リリースノートに掲載された、既存の機能への改善。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T20:20:00Z" }]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームが対象ですか。",
+          "answer": {
+            "text": "リリースノートでは Windows と記載されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "[Windows]", "retrievedAt": "2026-10-22T20:20:00Z" }]
+          }
+        },
+        {
+          "question": "すべてのユーザーにすぐ表示されますか。",
+          "answer": {
+            "text": "Copilot の機能は、テナント内の一部のユーザーから段階的に展開され、その後組織全体に広がります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T20:20:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "PowerPoint Live の連携体験（パートナー向け）", "url": "https://learn.microsoft.com/en-us/microsoft-365/document-collaboration-partner-program/scenarios/present", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
