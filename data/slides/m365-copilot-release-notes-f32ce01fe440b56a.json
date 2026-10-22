@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-f32ce01fe440b56a",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft 365 管理センターに「ライセンス要求」専用ページが登場",
+        "subtitleJa": "Microsoft Copilot のライセンス要求を一か所で確認・管理できます",
+        "en": "New dedicated License Requests page in Microsoft 365 Admin Center [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 admin center"],
+        "categories": ["admin"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot のライセンスを割り当てる**テナント管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ユーザーからのライセンス要求を探し回らず、1 つのページで確認・承認・拒否できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対応は不要。要求を受ける運用なら、新しいページで処理方法を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "ライセンス要求は、複数のメニューや通知をたどって探す必要があった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "専用の**ライセンス要求**ページに Microsoft Copilot の要求が集約され、並べ替え・絞り込み・一括操作ができます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 管理センターに、ライセンス要求の専用ページを新設", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は、ユーザーが送信した Microsoft Copilot のライセンス要求", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "並べ替え・フィルター・一括操作に対応（ユーザーや日付で絞り込み）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "管理者の確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センターのナビゲーションから「ライセンス要求」を開き、保留中の要求を確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "要求を直接承認または拒否でき、ライセンス配布の統制とコンプライアンスを保ちやすい", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "license-requests", "term": "ライセンス要求ページ", "type": "feature", "oneLine": { "text": "ユーザーが送信した Microsoft Copilot のライセンス要求を管理者が確認・管理する管理センターのページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "m365-admin-center", "term": "Microsoft 365 管理センター", "type": "product", "oneLine": { "text": "管理者が Microsoft 365 のユーザーやライセンスを管理する Web ポータル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、機能の変更や追加の通知。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この変更で管理者が必要な作業はありますか？",
+          "answer": { "text": "リリース ノート上、必須の作業は示されていません。ライセンス要求を処理する管理者が、新しいページを使うことになります。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "複数の要求をまとめて処理できますか？",
+          "answer": { "text": "はい。リリース ノートによると、このページは並べ替え、フィルター、一括操作に対応しています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
