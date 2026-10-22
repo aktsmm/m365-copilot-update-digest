@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2c0291364ddc0065",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Viva Glint 管理者向け Copilot 構成アシスタントを展開中",
+        "subtitleJa": "設定や操作方法の疑問に、管理画面内で対話しながら答えます",
+        "en": "Microsoft Viva: Viva Glint - Copilot admin configuration assistance"
+      },
+      "meta": {
+        "publishedJst": "2026-08-29",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Viva"],
+        "categories": ["viva"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Viva",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Viva Glint の管理者**（サービス管理者、アンケート デザイナーなど）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "Viva Glint 管理構成アシスタントの対象", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "change": { "text": "管理画面を離れずに、構成手順や設定場所を会話で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "Viva Glint 管理構成アシスタントの用途", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "設定変更は行わないガイダンス機能のため、必須の対応はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "重要（ガイダンスのみ）", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Viva Glint 管理者エクスペリエンスに組み込まれたアシスタントが、**質問への回答と手順のガイダンス**を提供。回答には設定ページへの直接リンクが付きます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "Viva Glint 管理構成アシスタントの用途", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot 上に構築され、Viva Glint 管理者画面に直接組み込まれた AI 体験", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "概要", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "回答は承認済みの知識ソースに基づき、情報源の帰属と設定ページへの直接リンクを含む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "どのように回答が得られるのでしょうか?", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "表示中の管理ページに合わせた推奨プロンプトが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "Viva Glint 管理構成アシスタントの用途", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者として Viva Glint にサインインし、エントリ ポイントからサイド ペインを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "アクセスする", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "推奨プロンプトを選ぶか、500 文字以内で質問を入力する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "質問する", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "回答の評価（サムズ アップ／ダウン）で品質改善にフィードバックできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "質問する", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Viva Glint 管理者エクスペリエンスにアクセスできるユーザーが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "Viva Glint 管理構成アシスタントの対象", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "設定・ユーザー・ロール・データの変更やエクスポート、自律的な操作はできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "できないこと", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の提供範囲は Worldwide（Standard Multi-Tenant）と GCC", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "一度に 1 つのタスクを、使用中のプログラムや設定を含めて具体的に質問する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "最良の結果を得るためのヒント", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "AI の回答は不正確な場合があるため、リンク先のソースで確認してから適用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "AI 生成のガイダンスを安全に使用するにはどうすればよいですか?", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "viva-glint", "term": "Viva Glint", "type": "product", "oneLine": { "text": "従業員リスニング プログラムを設定・実行・管理する Microsoft Viva の製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "Viva Glint 管理構成アシスタントの対象", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "admin-config-assistant", "term": "管理者構成アシスタント", "type": "feature", "oneLine": { "text": "Viva Glint 管理者画面内で、会話形式の手順ガイダンスを提供する Copilot 機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "概要", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "suggested-prompts", "term": "推奨プロンプト", "type": "term", "oneLine": { "text": "表示中の管理ページに合わせて提示される、ワンクリックで使える質問例。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "Viva Glint 管理構成アシスタントの用途", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "アシスタントは設定を代わりに変更してくれますか？",
+          "answer": { "text": "いいえ。ガイダンスのみで、アンケート、ユーザー、ロール、設定の変更はできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "重要（ガイダンスのみ）", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        },
+        {
+          "question": "テナントのデータは利用されますか？",
+          "answer": { "text": "組織データやアンケート回答データは収集・アクセス・処理されず、製品ドキュメントと画面上の選択コンテキストに基づいて案内します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locator": "この機能でデータがどのように収集されますか?", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567320",
+        "learn": [{ "title": "Microsoft Viva Glint 管理者構成アシスタント", "url": "https://learn.microsoft.com/ja-jp/viva/glint/copilot/copilot-viva-glint-admin", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
