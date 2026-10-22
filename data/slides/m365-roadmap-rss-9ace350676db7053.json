@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9ace350676db7053",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Purview エンドポイント DLP が Copilot+ PC の Recall スナップショットを保護",
+        "subtitleJa": "カスタム ポリシーで、機密コンテンツを含むスナップショットを制御できます",
+        "en": "Microsoft Purview: Endpoint Data Loss Prevention - Expand protection to Copilot + PC devices for Recall snapshots through custom policies"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview 管理者**と、Copilot+ PC で Recall を使うユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "機密ラベルや SIT を含むウィンドウが Recall に保存されるのを、DLP ポリシーで防げる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "冒頭", "retrievedAt": "2026-10-22T08:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Recall を許可する組織は、DLP ポリシーでの保護設定を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "DLP ポリシーで **Recall のスナップショットに機密コンテンツを含めない**ようにできます。監査のみ、またはブロックを選べます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "取り消し用の DLP ポリシー保護の構成", "retrievedAt": "2026-10-22T08:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "秘密度ラベルや機密情報の種類（SIT）を含む項目が保護の対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "冒頭", "retrievedAt": "2026-10-22T08:30:00Z" }] },
+            { "text": "対象例: Teams チャネル・会議チャット、ラベル付きメール、Office アプリで開いたファイル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "冒頭", "retrievedAt": "2026-10-22T08:30:00Z" }] },
+            { "text": "ブロックを選ぶと、機密コンテンツはスナップショットに含まれない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "取り消し用の DLP ポリシー保護の構成", "retrievedAt": "2026-10-22T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "DLP ポリシーの作成・編集で「Windows Recall のコンテンツを制限」を設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "取り消し用の DLP ポリシー保護の構成", "retrievedAt": "2026-10-22T08:30:00Z" }] },
+            { "text": "監査のみでは、ユーザーに通知せずイベントを DLP レポートに記録", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "取り消し用の DLP ポリシー保護の構成", "retrievedAt": "2026-10-22T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot+ PC をエンドポイント DLP にオンボードし、Intune が稼働していること", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "前提条件", "retrievedAt": "2026-10-22T08:30:00Z" }] },
+            { "text": "グループ ポリシーでスナップショット保存を有効にし、ユーザーのオプトインが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "開始する前に", "retrievedAt": "2026-10-22T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の対象クラウドは GCC、GCC High、DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "まず Copilot+ PC で Recall スナップショットを対象に拡大", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず監査のみで影響を確認してから、ブロックへ切り替える", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "関連イベントは Purview アクティビティ エクスプローラーで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "取り消し用の DLP ポリシー保護の構成", "retrievedAt": "2026-10-22T08:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "recall", "term": "Recall", "type": "feature", "oneLine": { "text": "ローカルに保存・分析された画面のスナップショットを、自然言語で検索できる Copilot+ PC の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "冒頭", "retrievedAt": "2026-10-22T08:30:00Z" }] } },
+        { "termKey": "endpoint-dlp", "term": "エンドポイント DLP", "type": "feature", "oneLine": { "text": "Microsoft Purview で、デバイス上の機密情報の扱いを監査・制限するデータ損失防止機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "前提条件", "retrievedAt": "2026-10-22T08:30:00Z" }] } },
+        { "termKey": "sit", "term": "機密情報の種類（SIT）", "type": "term", "oneLine": { "text": "DLP が機密データを検出するための定義で、Recall の保護対象にもなる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "冒頭", "retrievedAt": "2026-10-22T08:30:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ユーザーが Recall を使い始めるには何が必要ですか？",
+          "answer": {
+            "text": "管理者がスナップショット保存を使えるようポリシーを設定し、そのうえでユーザー自身がオプトインする必要があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "開始する前に", "retrievedAt": "2026-10-22T08:30:00Z" }]
+          }
+        },
+        {
+          "question": "必要なデバイス要件はありますか？",
+          "answer": {
+            "text": "Windows ビルドや Teams、Office アプリ、マルウェア対策クライアントに最低バージョンが定められています。詳細は Learn の前提条件を参照してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locator": "前提条件", "retrievedAt": "2026-10-22T08:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560396",
+        "learn": [{ "title": "リコールのデータ損失防止保護の概要", "url": "https://learn.microsoft.com/ja-jp/purview/dlp-recall-get-started", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
