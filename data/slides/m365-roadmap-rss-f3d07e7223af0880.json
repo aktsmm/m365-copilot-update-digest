@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f3d07e7223af0880",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Teams の記録・文字起こしの通知メッセージを管理者がカスタマイズ可能に",
+        "subtitleJa": "会議内の通知バナーに、組織独自の同意メッセージを表示できます",
+        "en": "Microsoft Teams: Ability for IT admins to customize the user notification messages for recording and transcription in calls"
+      },
+      "meta": {
+        "publishedJst": "2026-10-22",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams の管理者**と、記録・文字起こしを使う会議の参加者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "録画・文字起こし開始時の通知の一部を、組織の方針に合わせて変えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うには、会議ポリシーでカスタム通知をオンにしてメッセージを設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が**同意メッセージとプライバシー ポリシー URL**を、会議ポリシー単位・言語・シナリオ別に設定できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "通知バナーのうち、同意メッセージとプライバシー ポリシー URL だけを変更可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "開始者・参加者、暗黙的・明示的な同意など、シナリオと言語ごとに設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "CSV テンプレートを入力する方法", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "参加者は開催者のメッセージ設定に従い、未設定の言語は既定メッセージ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams 管理センター → 会議 → 会議ポリシーで該当ポリシーを選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "「カスタマイズされた会議内通知を表示」をオンにし、CSV をアップロード", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "プレビューで既定値との差を確認してから保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "メッセージは 200 文字以内。1:1 通話では未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "CSV テンプレートを入力する方法 / Teams での動作", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "iOS / Android は現在プレーン テキストのみ（完全対応は近日公開予定）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "同意ダイアログはプレーン テキストのみ。HTML リンクは通知バナーで利用可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-10-22T05:00:00Z" }] },
+            { "text": "「プライバシー ポリシー」の表示テキストは固定で、URL のみ変更可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず一部の会議ポリシーで設定し、プレビューで表示を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "英語以外のシステム言語では、CSV を Excel で再保存しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "CSV テンプレートを入力する方法", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "consent-message", "term": "同意メッセージ", "type": "feature", "oneLine": { "text": "記録・文字起こし開始時の通知バナーに表示される、カスタマイズ可能なメッセージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-10-22T05:00:00Z" }] } },
+        { "termKey": "meeting-policy", "term": "会議ポリシー", "type": "term", "oneLine": { "text": "Teams 管理センターで、会議の設定をユーザーに割り当てる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-10-22T05:00:00Z" }] } },
+        { "termKey": "explicit-consent", "term": "明示的な同意", "type": "term", "oneLine": { "text": "記録・文字起こしの際に、参加者へ同意ダイアログを表示する会議の設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-10-22T05:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "通知メッセージは言語ごとに設定できますか？",
+          "answer": { "text": "はい。サポートされている言語ごとに CSV で設定でき、日本語（ja-JP）も含まれます。未設定の言語は既定メッセージが表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "サポートされている言語とコード", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+        },
+        {
+          "question": "参加者の通知は誰の設定で決まりますか？",
+          "answer": { "text": "開催者に割り当てられた会議ポリシーのカスタム メッセージに、会議の全参加者が従います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-10-22T05:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567302",
+        "learn": [{ "title": "記録と文字起こしのためのカスタム会議内通知", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
