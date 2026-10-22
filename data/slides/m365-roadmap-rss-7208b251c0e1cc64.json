@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7208b251c0e1cc64",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Sales Development Agent が Microsoft Copilot に登場予定",
+        "subtitleJa": "リードの調査から商談化までを、エージェントが 24 時間自律的に進めます",
+        "en": "Microsoft Copilot (Microsoft 365): Sales Development Agent is now available"
+      },
+      "meta": {
+        "publishedJst": "2026-10-22",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**営業チームとリード対応の担当者**、エージェントの管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "リードの調査・適格性の判断・エンゲージを自律エージェントに任せ、営業の対応力を広げられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点では開発中。ロードマップの更新を見守る段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが**リードの調査・適格性の判断・エンゲージを自律的に行い**、24 時間 営業の対応力を拡大します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "ロードマップ上の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "自律エージェントがリードを調査し、適格性を判断し、エンゲージする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "営業の対応力を 24 時間体制で拡大することを狙う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウドは Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "項目名は「is now available」だが、ステージは開発中のまま", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連する既存機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Dynamics 365 Sales には、リードを自律的に調査・エンゲージする既製の AI エージェントがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/ai-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T04:55:00Z" }] },
+            { "text": "AI エージェントは、本番環境の前にサンドボックスやテスト環境で検証できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/ai-agent-overview", "locator": "複数の環境で AI エージェントを管理する", "retrievedAt": "2026-10-22T04:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-development-agent", "term": "Sales Development Agent", "type": "feature", "oneLine": { "text": "リードの調査・適格性判断・エンゲージを自律的に行い、営業の対応力を 24 時間拡大するエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "ai-agent", "term": "AI エージェント", "type": "term", "oneLine": { "text": "Dynamics 365 Sales が備える、リードや機会を自律的に調査・エンゲージメントする既製のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/ai-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T04:55:00Z" }] } },
+        { "termKey": "lead", "term": "リード", "type": "term", "oneLine": { "text": "営業担当者が適格性を判断し、取引につなげていく見込み顧客。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/ai-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T04:55:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供時期の月が示されていません。更新があれば、ロードマップの項目で確認できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Dynamics 365 Sales の既存のエージェントとは何が違いますか？",
+          "answer": { "text": "Dynamics 365 Sales にはリードを自律的に調査・エンゲージする既製エージェントがあります。この項目との関係は、現時点の情報では確認できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/ai-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T04:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573700",
+        "learn": [{ "title": "Dynamics 365 Sales の AI エージェント", "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/ai-agent-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
