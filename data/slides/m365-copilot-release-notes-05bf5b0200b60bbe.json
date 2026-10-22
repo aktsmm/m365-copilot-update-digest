@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-05bf5b0200b60bbe",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot アプリのデザインが簡素化",
+        "subtitleJa": "チャットのホーム画面・応答レイアウト・ナビゲーションが刷新されます",
+        "en": "Simplified design for the Microsoft 365 Copilot app [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot app"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の Web・デスクトップアプリを使う人**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Microsoft 365 Copilot アプリの簡素化されたデザイン [Windows、Mac、Web]", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "change": { "text": "画面が簡素化され、Copilot を操作しやすく、機能を探す時間も短くなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "理由", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "画面デザインの更新のため、必須の設定作業は示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "変更内容", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "更新されたチャットのホーム画面、合理化された応答レイアウト、再設計されたナビゲーションウィンドウで、Web とデスクトップの両方で集中して使えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "変更内容", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Microsoft Copilot の Web アプリとデスクトップアプリ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "概要", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "チャットのホーム画面、チャット応答のレイアウト、ナビゲーションウィンドウを更新", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "概要", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "対象プラットフォームは Windows、Mac、Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "見出し", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "画面の見た目が変わるため、社内の手順書やスクリーンショットの確認が必要になる場合がある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップ ID は 561488", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "ロードマップ ID", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-app", "term": "Microsoft Copilot アプリ", "type": "product", "oneLine": { "text": "Web とデスクトップで Copilot のチャットなどを使うためのアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "概要", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "nav-pane", "term": "ナビゲーションウィンドウ", "type": "term", "oneLine": { "text": "アプリ内の機能や画面を切り替えるための領域で、今回再設計されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "変更内容", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリースノートに掲載された、既存機能の更新を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この変更で管理者が必ず行う作業はありますか？",
+          "answer": { "text": "リリースノートには必須の管理作業は示されていません。画面デザインの更新です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "変更内容", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        },
+        {
+          "question": "なぜデザインを変えるのですか？",
+          "answer": { "text": "アプリを簡素化して Copilot と連携しやすくし、機能の検索時間を減らして使いやすさを高めるためです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "理由", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#august-25,-2026", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
