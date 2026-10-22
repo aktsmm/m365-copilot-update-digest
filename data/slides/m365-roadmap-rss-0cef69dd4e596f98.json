@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0cef69dd4e596f98",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint のフォームから Power Automate で文書を生成（開発中）",
+        "subtitleJa": "テンプレートの項目にデータを割り当て、文書を自動で作れます",
+        "en": "Microsoft Copilot (Microsoft 365): Generate documents using forms in SharePoint with Power Automate"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Power Automate", "SharePoint", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps", "sharepoint"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint と Power Automate で定型文書を作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "テンプレートに入力データを割り当てて、文書を自動生成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供が近づいたらテンプレートとフローの設計を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Power Automate の新しいアクション「Generate document from form」で、SharePoint のドキュメント生成フォームのテンプレート項目にデータを割り当てて文書を作れます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "SharePoint のドキュメント生成（DocGen）フォームを使う Power Automate の新アクション", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "アクション名は「Generate document from form（プレビュー）」", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "入力データを、定義済みのテンプレート項目に割り当てて文書を生成", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Web、Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コンテンツ アセンブリでは、既存レポートからモダン テンプレートを作り、フィールドを SharePoint リストの列に関連付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "定期的なメンテナンス レポート 手順 3", "retrievedAt": "2026-10-22T13:00:00Z" }] },
+            { "text": "ドキュメント生成アクションとリストのトリガーを使うフローで、新規エントリごとに文書を生成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "手順 4", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "docgen", "term": "ドキュメント生成（DocGen）フォーム", "type": "feature", "oneLine": { "text": "SharePoint でテンプレートの項目にデータを割り当てて文書を作るためのフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "content-assembly", "term": "コンテンツ アセンブリ", "type": "feature", "oneLine": { "text": "定期的に作成するファイルの最新テンプレートを作り、手動要求や自動化で文書を生成するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "冒頭", "retrievedAt": "2026-10-22T13:00:00Z" }] } },
+        { "termKey": "power-automate", "term": "Power Automate", "type": "product", "oneLine": { "text": "トリガーとアクションを組み合わせて、業務をフローとして自動化するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "手順 4", "retrievedAt": "2026-10-22T13:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "文書生成のトリガーには SharePoint リスト以外も使えますか？",
+          "answer": { "text": "Learn のシナリオでは、必要な Power Automate コネクタにアクセスできれば任意のデータ ソースをトリガーにできるとされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "注", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561026",
+        "learn": [
+          { "title": "ドキュメント処理でルーチン ドキュメントを自動生成するシナリオ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
