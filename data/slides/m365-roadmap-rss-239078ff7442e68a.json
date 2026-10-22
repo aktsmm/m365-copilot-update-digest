@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-239078ff7442e68a",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "OneNote の Copilot ノートブックが作成する成果物を提案",
+        "subtitleJa": "ノートブックの内容から、Word・Excel・PowerPoint の作成を提案します",
+        "en": "OneNote: Suggested Artifact Creation in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**OneNote で Copilot ノートブックを使う作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "作る成果物を Copilot が提案してくれるため、何を作るか迷わず着手できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の設定作業は案内されていない。利用者は提案を選ぶだけ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot が、Microsoft 365 のナレッジとノートブックの内容をもとに**作成する成果物を提案**します。提案を選ぶと Copilot が生成します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Word 文書、Excel ブック、PowerPoint プレゼンテーションなどを提案", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提案の根拠は、Microsoft 365 のナレッジとノートブックの内容", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提案を選択すると、Copilot が成果物を生成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot ノートブックで提案された成果物を選択する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "手動で作る場合は、ノートブックの「作成」から「ドキュメント」を選ぶ（Word 文書の例）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブックでの Word 文書の生成", "retrievedAt": "2026-10-22T08:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated",
+          "priority": "detail",
+          "items": []
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide (Standard Multi-Tenant) で、デスクトップと Web に展開中", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ノートブックは、ノートブックの内容から Word 文書や Excel ブックを生成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブック", "retrievedAt": "2026-10-22T08:20:00Z" }] },
+            { "text": "生成した成果物は、Word・Excel・PowerPoint で開いて編集できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブック", "retrievedAt": "2026-10-22T08:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "ノートブックに集めた内容と参照をもとに、Copilot が成果物を作る機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブック", "retrievedAt": "2026-10-22T08:20:00Z" }] } },
+        { "termKey": "onenote", "term": "OneNote", "type": "product", "oneLine": { "text": "ノートを整理するための Microsoft 365 のアプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "artifact", "term": "成果物（アーティファクト）", "type": "term", "oneLine": { "text": "Copilot が生成する Word 文書、Excel ブック、PowerPoint プレゼンテーションなど。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、順次ユーザーへの展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提案される成果物にはどんな種類がありますか？",
+          "answer": { "text": "Word 文書、Excel ブック、PowerPoint プレゼンテーションなどが例として挙げられています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "提案に従わず、自分で成果物を作ることもできますか？",
+          "answer": { "text": "はい。Copilot ノートブックでは、ノートブックの内容から Word 文書や Excel ブック、PowerPoint を生成できると Learn のリリース ノートに記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Copilot ノートブック", "retrievedAt": "2026-10-22T08:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566870",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
