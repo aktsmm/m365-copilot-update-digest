@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-94fadf096e1c1011",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams 用の古い保持ポリシーが Teams 専用として扱われる予定",
+        "subtitleJa": "Microsoft Copilot の操作には暗黙的に適用されなくなります",
+        "en": "Microsoft Purview: Data Lifecycle Management-Legacy Teams retention policies covering Copilot will be treated as Teams-only"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["teams", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview のアイテム保持ポリシーを管理する管理者**（Teams 用の既存ポリシーを持つ組織）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存の Teams 向けポリシーは Teams 専用になり、Copilot のワークロードには暗黙的に適用されなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Copilot の操作も保持したい場合は、Copilot 専用の保持ポリシーを用意しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Teams 向けの従来のポリシーは **Teams 専用ポリシーとして扱われ**、Copilot のワークロードを暗黙的に管理しなくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "一部の Teams 向け保持ポリシーは、現在 Microsoft Copilot の操作にも適用されている場合がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "従来の Teams 保持ポリシーは Teams 専用に変換され、Copilot を暗黙的に管理しなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams チャットと Copilot の保持場所は、すでに別々の場所に分かれている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、Web。ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "「Teams チャットと Copilot 操作」の既存ポリシーは、別の場所に対応したテナントでは編集できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] },
+            { "text": "新しいポリシーでは、新しい保持場所を使う必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "新規ポリシーでは「Teams チャット」や「Microsoft Copilot エクスペリエンス」を選択できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] },
+            { "text": "PowerShell の Set-AppRetentionCompliancePolicy で、既存ポリシーに User:M365Copilot を追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "retention-policy", "term": "アイテム保持ポリシー", "type": "feature", "oneLine": { "text": "コンテンツを保持するか、削除するか、保持した後に削除するかを事前に決めて組織のデータを管理する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "冒頭", "retrievedAt": "2026-10-22T07:45:00Z" }] } },
+        { "termKey": "copilot-experiences", "term": "Microsoft Copilot エクスペリエンス", "type": "feature", "oneLine": { "text": "組み込みおよびカスタムの Copilot エクスペリエンスのプロンプトと応答を対象にする保持場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "ポリシーの作成と構成", "retrievedAt": "2026-10-22T07:45:00Z" }] } },
+        { "termKey": "teams-chats", "term": "Teams チャット", "type": "feature", "oneLine": { "text": "Teams の 1:1 チャットやグループ チャットなどのメッセージを対象にする保持場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "ポリシーの作成と構成", "retrievedAt": "2026-10-22T07:45:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot の操作を保持し続けるには何をすればよいですか？",
+          "answer": { "text": "Microsoft Copilot エクスペリエンスの場所を選んだ新しい保持ポリシーを作成するか、PowerShell で既存ポリシーに User:M365Copilot を追加します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] }
+        },
+        {
+          "question": "既存の「Teams チャットと Copilot 操作」ポリシーはどうなりますか？",
+          "answer": { "text": "引き続きサポートされますが、別の場所に対応したテナントでは編集できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locator": "既存の \"Teams チャットと Copilot 操作\" ポリシーを分離する", "retrievedAt": "2026-10-22T07:45:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571306",
+        "learn": [{ "title": "アイテム保持ポリシーを作成して構成する", "url": "https://learn.microsoft.com/ja-jp/purview/create-retention-policies", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
