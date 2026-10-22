@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-3906ce327995db07",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot 2026 年 8 月の新機能まとめ",
+        "subtitleJa": "月次ブログで、Microsoft 365 向けの新機能と機能強化を紹介します",
+        "en": "What’s New in Microsoft Copilot | August 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-09-04",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の管理者と、エージェントなどの作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "毎月の新機能と機能強化を、1 本のブログでまとめて把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "個別の機能ごとに提供時期を確認し、必要なものだけ検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "毎月の **What's New** で、日常的に使うアプリの Copilot 機能の追加・改善をまとめて追えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "この更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "2026 年 8 月版の「What's New in Microsoft Copilot」ブログ記事", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft 365 のお客様向けに、毎月の新機能と機能強化を紹介する連載", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "機能は安全な展開モデルで、一部のユーザーから段階的に組織全体へ広がる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "個々の機能の提供時期やライセンスは、各機能の公式情報で確認が必要", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "リリース ノートで、一般提供済みの機能とプラットフォーム別の変更を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] },
+            { "text": "ブログで気になった機能を、管理者と作成者で共有して優先度を決める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "Microsoft 365 のアプリで、日々の仕事の生産性と効率を高める Copilot 機能の総称。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "release-notes", "term": "リリース ノート", "type": "term", "oneLine": { "text": "Microsoft 365 Copilot の最新の機能と機能強化を一覧できる公式ページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] } },
+        { "termKey": "staged-rollout", "term": "段階的ロールアウト", "type": "term", "oneLine": { "text": "テナント内の一部のユーザーに先に提供し、その後に組織全体へ広げる展開方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/what-s-new-in-microsoft-copilot-august-2026/ba-p/4551960",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
