@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-035905429911e4a4",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Word の Copilot で Sonnet 5 を選べるように",
+        "subtitleJa": "複雑な文章の理解が強化され、下書きや編集の質が上がります",
+        "en": "Experience better handling of nuanced language"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Word"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Word で Copilot を使って文書を作成・編集する人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "複雑な内容の下書きや編集で、より的確な提案を受けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者の操作は不要。モデルメニューで Sonnet 5 が選ばれているか確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word の Copilot のモデルメニューに **Sonnet 5** が加わり、高度な推論が必要なタスクの既定になります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Word の Copilot のモデルメニューで Sonnet 5 が利用可能に", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "高度な推論が必要なタスクの既定モデルとして設定される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "下書きと編集の正確さ・品質が向上し、Microsoft 365 のセキュリティ基準は維持", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Word で Copilot を開き、モデルメニューで Sonnet 5 の選択を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Anthropic モデルは管理センターの AI プロバイダー設定で管理者が制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルへの接続を無効にする", "retrievedAt": "2026-10-22T20:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sonnet-5", "term": "Sonnet 5", "type": "feature", "oneLine": { "text": "Word の Copilot のモデルメニューに加わった、高度な推論タスク向けの既定モデル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "anthropic", "term": "Anthropic モデル", "type": "term", "oneLine": { "text": "Microsoft オンライン サービスで、Microsoft のサブプロセッサーとして使われる Anthropic の AI モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "冒頭", "retrievedAt": "2026-10-22T20:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートで公開された、既存機能の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は Anthropic モデルの利用を制御できますか？",
+          "answer": { "text": "はい。Microsoft 365 管理センターの AI プロバイダー設定で、Anthropic の有効化・無効化や、使えるユーザー・グループの指定ができます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルの使用をオプトインする", "retrievedAt": "2026-10-22T20:30:00Z" }] }
+        },
+        {
+          "question": "EU や英国のテナントでも既定で使えますか？",
+          "answer": { "text": "EU/EFTA と英国では、Anthropic モデルは既定でオフです。利用するには管理者のオプトインが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "オプトインの地域と除外", "retrievedAt": "2026-10-22T20:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft Online Services の Anthropic モデル", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
