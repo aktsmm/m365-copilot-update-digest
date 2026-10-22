@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-647ffe1376675960",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook のリンクを開くと Edge の Copilot サイド ウィンドウが自動で開く",
+        "subtitleJa": "メールの文脈を踏まえた分析情報と次の一手の提案を、閲覧を止めずに表示します",
+        "en": "Microsoft Edge: Auto-open Copilot side pane for Outlook links"
+      },
+      "meta": {
+        "publishedJst": "2026-08-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Edge"],
+        "categories": ["outlook", "edge-windows"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Outlook のメールからリンクを開く Microsoft Edge ユーザー**と、Edge の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] },
+        "change": { "text": "リンク先の内容とメールの文脈から、要点の整理や次の行動の提案を受けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "自動で開きたくない場合は、ポリシー M365LinksAutoOpenCopilotEnabled で無効化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Outlook メールの適格なリンクを開くと、**Copilot サイド ウィンドウ**が自動で開き、分析情報と次の手順の提案が Web コンテンツと並んで表示されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "同じテナントから送信された Outlook メールの適格な Web リンクが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] },
+            { "text": "元のメールをコンテキストにして、関連する分析情報と次の手順を提案", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] },
+            { "text": "Microsoft Edge 148 以降（Windows / macOS）が対象バージョン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "サポートされているバージョン", "retrievedAt": "2026-10-22T17:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Android と iOS の Edge はサポートされていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "サポートされているバージョン", "retrievedAt": "2026-10-22T17:50:00Z" }] },
+            { "text": "ポリシーを構成しない場合も、有効と同じく自動で開く動作になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] },
+            { "text": "現在は開発中で、ポリシーのサポートは提供開始後になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "管理者の準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "グループ ポリシーでは「管理用テンプレート/Microsoft Edge」から設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "Windows の情報と設定", "retrievedAt": "2026-10-22T17:50:00Z" }] },
+            { "text": "プロファイルごとに適用され、動的なポリシー更新に対応している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "サポートされている機能", "retrievedAt": "2026-10-22T17:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edge-copilot-side-pane", "term": "Copilot サイド ウィンドウ", "type": "feature", "oneLine": { "text": "Edge の閲覧中に横に表示される Microsoft Copilot のウィンドウ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] } },
+        { "termKey": "m365-links-policy", "term": "M365LinksAutoOpenCopilotEnabled", "type": "term", "oneLine": { "text": "Outlook から開いたリンクで Copilot サイド ウィンドウを自動で開くかを制御する Edge のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "自動で開く動作を止めるには？",
+          "answer": { "text": "ポリシー M365LinksAutoOpenCopilotEnabled を無効にすると、これらのリンクで自動では開かなくなります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "説明", "retrievedAt": "2026-10-22T17:50:00Z" }] }
+        },
+        {
+          "question": "どの Edge バージョンから対象ですか？",
+          "answer": { "text": "Windows と macOS は Edge 148 以降で、Android と iOS はサポートされていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locator": "サポートされているバージョン", "retrievedAt": "2026-10-22T17:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=557561",
+        "learn": [
+          { "title": "M365LinksAutoOpenCopilotEnabled ポリシー", "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
