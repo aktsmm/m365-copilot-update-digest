@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-77eb3c4a10e70545",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Word と PowerPoint で Copilot とリアルタイムに音声で対話（開発中）",
+        "subtitleJa": "声で話しかけ、文書やプレゼンの内容を理解する支援を受けられます",
+        "en": "Microsoft Copilot (Microsoft 365): Realtime voice interactions in Word and PowerPoint"
+      },
+      "meta": {
+        "publishedJst": "2026-09-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint", "Word"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Word と PowerPoint で Microsoft Copilot を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "声でリアルタイムに Copilot と対話し、文書やプレゼンの内容を理解しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はない。10 月の再リリースを待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**音声で Copilot と会話**しながら、ドキュメントやプレゼンテーションの内容を理解できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "声で Copilot と話し、リアルタイムにやり取りできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Word と PowerPoint。ドキュメントやプレゼンの内容の理解を支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Android・デスクトップ・iOS・Web が対象のプラットフォーム", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "2026 年 9 月 9 日の更新: 機能は 10 月に更新を加えて再リリース予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "再リリースの時期に合わせ、ロードマップとリリース ノートを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "realtime-voice", "term": "リアルタイム音声対話", "type": "feature", "oneLine": { "text": "声で Copilot に話しかけ、その場でやり取りできる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "read-aloud-voice-qa", "term": "Read Aloud の音声 Q&A", "type": "feature", "oneLine": { "text": "Word で文書の読み上げ中に、声で質問して答えを得られる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 / Word", "retrievedAt": "2026-10-22T12:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進行中の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップによると、更新を加えて 10 月に再リリースする予定です。具体的な日付は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "関連する音声機能は、すでにありますか？",
+          "answer": {
+            "text": "リリース ノートに、Word で読み上げ中に声で質問できる機能（Windows）が載っています。本件とは別のロードマップ項目です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026 年 8 月 25 日 / Word", "retrievedAt": "2026-10-22T12:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=487852",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
