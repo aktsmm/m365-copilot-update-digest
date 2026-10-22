@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6cfcfc7facdbd6eb",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "クラシック Outlook で、選択したテキストから Copilot に質問できるように",
+        "subtitleJa": "ユーザーが手動でテキストを選び、関連情報の提示を Copilot に頼めます",
+        "en": "Outlook: User-initiated Copilot insights in classic Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**クラシック Outlook（デスクトップ）で Copilot を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "気になる箇所を選ぶだけで、関連情報の提示を Copilot に頼める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない。進捗はロードマップで確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "メール内のテキストを**ユーザー自身が選択**し、Copilot に関連情報の提示を依頼できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は classic Outlook（デスクトップ版）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザーが手動でテキストを選択し、Copilot に関連情報を尋ねる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は Worldwide（Standard Multi-Tenant）、Current Channel", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は「開発中」。提供内容や時期は今後変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザーが自分で操作して使う機能で、自動では動作しない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在も Outlook では、開いているコンテンツを Copilot Chat が認識して使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Outlook と Teams での Copilot Chat", "retrievedAt": "2026-10-22T15:55:00Z" }] },
+            { "text": "利用者がクラシック Outlook か新しい Outlook かを把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "classic-outlook", "term": "クラシック Outlook", "type": "product", "oneLine": { "text": "ロードマップ上で対象とされているデスクトップ版の Outlook。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat-outlook", "term": "Outlook の Copilot Chat", "type": "feature", "oneLine": { "text": "Outlook で開いているコンテンツを認識し、コピーや貼り付けなしで使える Copilot Chat。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locator": "Outlook と Teams での Copilot Chat", "retrievedAt": "2026-10-22T15:55:00Z" }] } },
+        { "termKey": "current-channel", "term": "Current Channel", "type": "term", "oneLine": { "text": "ロードマップで提供先として示されている更新チャネル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が載っておらず、時期は確認できません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在の Outlook の Copilot Chat と何が違いますか？",
+          "answer": { "text": "現在は開いているコンテンツを Copilot Chat が認識します。この更新は、ユーザーが選んだテキストを起点にする点が特徴ですが、詳細な動作は公開情報では確認できません。", "origin": "learn", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=508524",
+        "learn": [
+          { "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-overview", "locale": "ja-jp" },
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
