@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-3cb63499c549324e",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot がトピックやキーワードから会議を検索できるように",
+        "subtitleJa": "会議の本文・チャット・文字起こしの内容から、目的の会議を探せます",
+        "en": "Find meetings based on topics and keywords [Android, Windows, iOS, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot で会議を探す人**（Android・Windows・iOS・Mac）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "September 23, 2026 / Find meetings based on topics and keywords", "retrievedAt": "2026-10-22T07:10:00Z" }] },
+        "change": { "text": "会議の件名を覚えていなくても、話題やキーワードで会議を見つけられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Why", "retrievedAt": "2026-10-22T07:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリース ノートに管理者の設定作業は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "会議の検索は限定的で、チャットや文字起こしの内容は含まれていなかった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T07:10:00Z" }] },
+        "after": { "text": "会議の**本文・チャット・文字起こし**のキーワードから会議を検索できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T07:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "検索対象は、会議の本文、チャット、文字起こしのテキスト", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Find meetings based on topics and keywords", "retrievedAt": "2026-10-22T07:10:00Z" }] },
+            { "text": "文字起こしに基づく検索は、直近 2 か月の会議が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Find meetings based on topics and keywords", "retrievedAt": "2026-10-22T07:10:00Z" }] },
+            { "text": "対象プラットフォームは Android、Windows、iOS、Mac", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Find meetings based on topics and keywords", "retrievedAt": "2026-10-22T07:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方と確認点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot にトピックやキーワードを入力し、該当する会議の一覧から詳細を開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-22T07:10:00Z" }] },
+            { "text": "文字起こしが残っている会議で、実際にヒットするか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "Microsoft 365 アプリで使える AI アシスタント。リリース ノートでは Microsoft 365 Copilot の機能として掲載されている。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "冒頭", "retrievedAt": "2026-10-22T07:10:00Z" }] } },
+        { "termKey": "transcript", "term": "文字起こし", "type": "term", "oneLine": { "text": "会議中の発話をテキスト化したもの。今回の検索対象のひとつ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Find meetings based on topics and keywords", "retrievedAt": "2026-10-22T07:10:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能への更新として、リリース ノートに掲載された段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どの期間の会議が検索できますか？",
+          "answer": { "text": "文字起こしのテキストに基づく検索は、直近 2 か月の会議が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Find meetings based on topics and keywords", "retrievedAt": "2026-10-22T07:10:00Z" }] }
+        },
+        {
+          "question": "以前とは何が違いますか？",
+          "answer": { "text": "以前の会議検索は限定的で、チャットや文字起こしの内容を含んでいませんでした。今回、本文・チャット・文字起こしが対象になります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T07:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
