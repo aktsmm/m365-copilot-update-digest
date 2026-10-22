@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-46be055461a2b670",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot のローカル推論（開発中）",
+        "subtitleJa": "対応する Copilot の AI 推論を、その国・地域内で処理できるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Local inferencing"
+      },
+      "meta": {
+        "publishedJst": "2026-09-24",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**データの所在に厳しい要件を持つ組織の管理者**と、Microsoft Copilot の利用者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対応する Copilot のやり取りの AI 推論を、該当する国・地域内で行えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はなし。提供開始に備え、データの所在要件を確認しておく", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot のソブリン コントロールが広がり、**対応する Copilot のやり取りの AI 推論が、該当する国・地域内で行われる**ようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供予定の国・地域: オーストラリア、インド、アラブ首長国連邦、英国、米国", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は、サポートされる Copilot のやり取りの AI 推論", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウド インスタンス: Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "開発中の段階のため、内容や時期は今後変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は「サポートされる Copilot のやり取り」に限られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "やり取りの保存場所は、Data Residency（Advanced Data Residency など）で別に扱われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-service-copilot-offerings", "locator": "概要 / Advanced Data Residency (ADR) アドオン", "retrievedAt": "2026-10-22T14:56:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot のやり取りのコンテンツは、ローカル リージョンの地理に保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-service-copilot-offerings", "locator": "概要", "retrievedAt": "2026-10-22T14:56:00Z" }] },
+            { "text": "自社テナントの国・地域が、提供予定の 5 か国に含まれるか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "local-inferencing", "term": "ローカル推論", "type": "feature", "oneLine": { "text": "対応する Copilot のやり取りの AI 推論を、該当する国・地域内で行う機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "inferencing", "term": "推論", "type": "term", "oneLine": { "text": "AI モデルがプロンプトに対して回答を生成する処理。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "adr", "term": "Advanced Data Residency", "type": "feature", "oneLine": { "text": "ローカル リージョンの地理に、特定の保存データを置くことを約束するアドオン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-service-copilot-offerings", "locator": "Advanced Data Residency (ADR) アドオン", "retrievedAt": "2026-10-22T14:56:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進んでいて提供前の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どの国・地域で提供される予定ですか？",
+          "answer": { "text": "オーストラリア、インド、アラブ首長国連邦、英国、米国での提供が予定されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "ローカル推論はデータの保存場所と同じものですか？",
+          "answer": { "text": "別のものです。やり取りの保存場所は Data Residency のコミットメントで扱われ、ローカル推論は AI 推論の処理場所に関する機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-service-copilot-offerings", "locator": "概要", "retrievedAt": "2026-10-22T14:56:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571886",
+        "learn": [
+          { "title": "Microsoft 365 Copilot オファリングの Data Residency", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/m365-dr-service-copilot-offerings", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
