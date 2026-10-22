@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-387fe7c16e5d99b4",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Teams / Microsoft 365 管理センターでエージェントとアプリの管理を統合",
+        "subtitleJa": "インストール設定を一度行えば、Teams・Outlook・Microsoft Copilot に反映されます",
+        "en": "Microsoft Teams: Unified Agent and App Installation Management Across Microsoft 365 and Teams Admin Center"
+      },
+      "meta": {
+        "publishedJst": "2026-08-29",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Teams"],
+        "categories": ["agents", "teams", "admin"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams / Microsoft 365 の管理者**と、エージェントやアプリの作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "一度の設定が Teams・Outlook・Microsoft Copilot で一貫して適用され、設定の不一致を避けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "冒頭", "retrievedAt": "2026-10-22T17:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既定設定のテナントは自動で統合される。設定を変更済みのテナントは、グローバル管理者の同意で統合する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "管理センターの既定の設定を持つテナント", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Teams 管理センターと Microsoft 365 管理センターの**組織全体の設定・アプリの状態・可用性が自動で同期**されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "冒頭", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "統合後は、一方の管理センターでの変更がもう一方へ自動で同期される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "冒頭", "retrievedAt": "2026-10-22T17:40:00Z" }] },
+            { "text": "Teams、Outlook、Microsoft Copilot アプリ間でアプリの可用性を管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "冒頭", "retrievedAt": "2026-10-22T17:40:00Z" }] },
+            { "text": "管理者は Teams のエージェントとアプリを、Outlook や Microsoft 365 Apps にもプレインストールできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "インストールまたはユーザーにインストールとアンインストールを許可する", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "既定設定のテナントは自動で統合。［Teams アプリ］>［アプリの管理］で確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "管理センターの既定の設定を持つテナント", "retrievedAt": "2026-10-22T17:40:00Z" }] },
+            { "text": "設定を変更済みなら、［統合アプリ管理に移動］から違いを調整する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "管理センターの設定が変更されたテナント", "retrievedAt": "2026-10-22T17:40:00Z" }] },
+            { "text": "最後の同意と変更の適用はグローバル管理者のみが行える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "同意", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "統合が完了するまでは、両方の管理センターの設定を同期した状態に保つ必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "ユーザー リクエスト", "retrievedAt": "2026-10-22T17:40:00Z" }] },
+            { "text": "調整ページでは、概要の確認までは Teams 管理者も更新できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "概要の確認", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "クラウド: Worldwide (Standard Multi-Tenant)、プラットフォーム: Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "調整では、アプリごと・一括の適用元の選択と CSV 出力が使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "アプリの一括解決", "retrievedAt": "2026-10-22T17:40:00Z" }] },
+            { "text": "統合後は、人気アプリのウィジェットから他のユーザーへインストールできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "人気のあるアプリ", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "tac", "term": "Teams 管理センター（TAC）", "type": "product", "oneLine": { "text": "Teams のエージェントとアプリを管理する専用ページを含む管理センター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-22T17:40:00Z" }] } },
+        { "termKey": "mac", "term": "Microsoft 365 管理センター（MAC）", "type": "product", "oneLine": { "text": "エージェントとアプリを Teams 管理センターと並んで管理できる管理センター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps", "locator": "冒頭", "retrievedAt": "2026-10-22T17:40:00Z" }] } },
+        { "termKey": "uam", "term": "統合アプリ管理", "type": "feature", "oneLine": { "text": "両管理センター間でエージェントとアプリの可用性を統合し、変更を同期する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "冒頭", "retrievedAt": "2026-10-22T17:40:00Z" }] } },
+        { "termKey": "label-rollout", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "統合のために管理者は何をする必要がありますか？",
+          "answer": { "text": "設定を変更していないテナントは自動で統合されます。変更済みのテナントは、違いを調整してグローバル管理者が同意します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "管理センターの設定が変更されたテナント", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+        },
+        {
+          "question": "統合後、片方の管理センターで変更するとどうなりますか？",
+          "answer": { "text": "アプリの状態、組織全体の設定、ユーザーの割り当ての変更がもう一方へ同期されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locator": "管理センターの設定が変更されたテナント", "retrievedAt": "2026-10-22T17:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567883",
+        "learn": [
+          { "title": "エージェントとアプリの統合管理", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/uam-tac-mac", "locale": "ja-jp" },
+          { "title": "Teams 管理センターでのエージェントとアプリの管理とガバナンスの概要", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/manage-apps#agent-and-app-governance", "locale": "ja-jp" }
+        ]
+      }
+    }
+  ]
+}
