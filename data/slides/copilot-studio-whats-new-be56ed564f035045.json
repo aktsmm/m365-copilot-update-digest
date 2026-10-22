@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-be56ed564f035045",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio のワークフローに抽出ノードを追加",
+        "subtitleJa": "請求書や契約書などの文書から、値や表を取り出して後続の処理で使えます",
+        "en": "Add an extract node to a workflow to pull named values and tables out of documents, such as invoices, contracts, and..."
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": {
+          "text": "**Copilot Studio でワークフローを作る人**",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "文書を定義した構造のデータに変換してから、レコード作成や通知などの処理へ渡せる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-22T17:05:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "文書処理を自動化したいワークフローで、必要に応じて追加する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "抽出ノードを追加する", "retrievedAt": "2026-10-22T17:05:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "ワークフローに**抽出ノード**を追加すると、PDF・Word・Excel などの文書から名前付きの値やテーブルを取り出し、後のステップで動的コンテンツとして使えます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-22T17:05:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "請求書・契約書・領収書・財務諸表など、多くの文書タイプを処理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-22T17:05:00Z" }] },
+            { "text": "抽出スキーマは、サンプル文書・テンプレート・手動追加のいずれでも定義できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-22T17:05:00Z" }] },
+            { "text": "テスト文書をアップロードして、ノード内で出力を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "抽出ノードのテスト", "retrievedAt": "2026-10-22T17:05:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "導入前に確認すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GitHub Copilot harness 搭載の機能で、使用量ベースの課金により Copilot クレジットを消費することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "Note", "retrievedAt": "2026-10-22T17:05:00Z" }] },
+            { "text": "モデルは能力と速度のトレードオフで選び、公開前に代表的な文書でテストする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "モデルを選択する", "retrievedAt": "2026-10-22T17:05:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage",
+          "heading": "使い方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Flows でワークフローを開き、追加パネルの抽出アイコンを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "抽出ノードを追加する", "retrievedAt": "2026-10-22T17:05:00Z" }] },
+            { "text": "抽出した各フィールドは、後のステップで動的コンテンツとして選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "ワークフローで抽出した値を活用してください", "retrievedAt": "2026-10-22T17:05:00Z" }] }
+          ]
+        },
+        {
+          "id": "comparison",
+          "heading": "エージェントノードとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "定義した構造への文書抽出には抽出ノード、広い推論やツール利用にはエージェントノード", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-22T17:05:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "extract-node", "term": "抽出ノード", "type": "feature", "oneLine": { "text": "文書を処理し、定義した値やテーブルを返すワークフローのノード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "冒頭", "retrievedAt": "2026-10-22T17:05:00Z" }] } },
+        { "termKey": "dynamic-content", "term": "動的コンテンツ", "type": "term", "oneLine": { "text": "前のステップの出力を、後のステップの入力として選べる値。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "ワークフローで抽出した値を活用してください", "retrievedAt": "2026-10-22T17:05:00Z" }] } },
+        { "termKey": "agent-node", "term": "エージェントノード", "type": "feature", "oneLine": { "text": "広範な推論、ツール、知識、多段階のタスク実行が必要なときに使うノード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-22T17:05:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "Copilot Studio の新機能ページに掲載された更新情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "生成されたフィールドは編集できますか？",
+          "answer": { "text": "はい。サンプル文書やテンプレートから作ったフィールドも、保存前に追加・削除・名前変更・編集できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-22T17:05:00Z" }] }
+        },
+        {
+          "question": "請求書の明細のような繰り返しデータも取り出せますか？",
+          "answer": { "text": "はい。リスト（テーブル）のフィールドタイプで、明細行などの繰り返し情報を抽出できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locator": "フィールドを手動で追加します", "retrievedAt": "2026-10-22T17:05:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/workflows-experience/extract-node-workflow",
+        "learn": [
+          { "title": "ワークフローにエクストラクトノードを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/extract-node-workflow", "locale": "ja-jp" },
+          { "title": "ワークフローにエージェントノードを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
