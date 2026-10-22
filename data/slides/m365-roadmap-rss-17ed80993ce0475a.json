@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-17ed80993ce0475a",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview の Rights Management コネクタが証明書ベース認証に移行",
+        "subtitleJa": "共有シークレットから証明書へ。認証のセキュリティが強化されます",
+        "en": "Microsoft Purview: Information Protection - Rights Management connector – Certificate-based authentication"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Rights Management コネクタを運用する管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "共有シークレットを使わず、証明書で認証できるようになり、セキュリティ体制が向上する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "提供開始後、管理者が Entra アプリ登録と証明書を自分で用意して構成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が**自分の Microsoft Entra アプリ登録と証明書**を構成し、新しい PowerShell モジュールでコネクタを設定します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Rights Management コネクタの認証を、共有シークレットから証明書ベースに移行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理者が自分の Microsoft Entra アプリ登録と証明書を構成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新しい PowerShell モジュールでコネクタを構成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）のみ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現行コネクタの前提",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コネクタは Exchange Server、SharePoint Server、ファイル分類インフラストラクチャ（FCI）を使うファイル サーバーを対象とする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locator": "サポートされているオンプレミス サーバー", "retrievedAt": "2026-10-22T09:30:00Z" }] },
+            { "text": "コネクタを構成するアカウントとサービス プリンシパルでは MFA を要求しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locator": "Rights Management コネクタと MFA", "retrievedAt": "2026-10-22T09:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "rms-connector", "term": "Rights Management コネクタ", "type": "feature", "oneLine": { "text": "Exchange Server や SharePoint Server などのオンプレミス サーバーが Azure Rights Management サービスを使えるようにするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locator": "サポートされているオンプレミス サーバー", "retrievedAt": "2026-10-22T09:30:00Z" }] } },
+        { "termKey": "entra-app", "term": "Microsoft Entra アプリ登録", "type": "term", "oneLine": { "text": "アプリケーションを Microsoft Entra ID に登録し、認証に使う ID を発行する設定。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "cba", "term": "証明書ベース認証", "type": "term", "oneLine": { "text": "共有シークレットの代わりに証明書で本人性を確認する認証方式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップには提供時期の月が示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現行コネクタは MFA を使えますか？",
+          "answer": {
+            "text": "Rights Management コネクタは MFA をサポートしないため、構成アカウントなどで MFA を要求しないようにします。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locator": "Rights Management コネクタと MFA", "retrievedAt": "2026-10-22T09:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=564617",
+        "learn": [{ "title": "Azure Rights Management サービスの要件", "url": "https://learn.microsoft.com/ja-jp/purview/rights-management-requirements", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
