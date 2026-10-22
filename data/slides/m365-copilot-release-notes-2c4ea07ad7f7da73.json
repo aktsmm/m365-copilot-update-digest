@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-2c4ea07ad7f7da73",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Chat 内で Outlook のメールを開けるように",
+        "subtitleJa": "メールの参照元をクリックすると、Chat の横でそのまま読めます",
+        "en": "Open Outlook emails within Copilot Chat [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot でメールを参照して作業する人**（Windows・Mac・Web）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Open Outlook emails within Copilot Chat", "retrievedAt": "2026-10-22T19:00:00Z" }] },
+        "change": { "text": "メールを開くためにアプリを切り替えずに、内容を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Why", "retrievedAt": "2026-10-22T19:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "特別な対応は不要。メールの参照リンクをクリックして使える", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前は、メールの内容を見るためにアプリを切り替える必要があった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / What changed", "retrievedAt": "2026-10-22T19:00:00Z" }] },
+        "after": { "text": "Microsoft Copilot アプリ内のメールの参照元をクリックすると、**Chat の横でメールが開きます**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / What changed", "retrievedAt": "2026-10-22T19:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "フル アプリの Microsoft Copilot 体験で、Outlook のメールを直接開ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-22T19:00:00Z" }] },
+            { "text": "メールの参照元をクリックすると、別の Outlook ウィンドウなしで Chat の横に表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-22T19:00:00Z" }] },
+            { "text": "対象プラットフォームは Windows・Mac・Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "見出しの [Windows, Mac, Web]", "retrievedAt": "2026-10-22T19:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方と効果",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot アプリでメールの参照を探し、リンクをクリックして開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-22T19:00:00Z" }] },
+            { "text": "コンテキストの切り替えが減り、情報の確認が速くなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-22T19:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "メールなどの参照元を示しながら対話できる、Microsoft Copilot のチャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-22T19:00:00Z" }] } },
+        { "termKey": "full-app", "term": "フル アプリ体験", "type": "term", "oneLine": { "text": "Microsoft Copilot アプリ全体で提供される体験。このアップデートの対象範囲。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-22T19:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の改善や変更を示す分類。", "origin": "derived", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者側の設定は必要ですか？",
+          "answer": { "text": "リリース ノートには必要な設定への言及はなく、通常の機能改善として提供されるとみられます。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "Windows、Mac、Web が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "見出しの [Windows, Mac, Web]", "retrievedAt": "2026-10-22T19:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
