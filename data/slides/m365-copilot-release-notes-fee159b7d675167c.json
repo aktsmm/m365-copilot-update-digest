@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-fee159b7d675167c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Insights に GitHub Copilot の AI コスト ダッシュボードが登場",
+        "subtitleJa": "GitHub Copilot の消費・コスト・利用状況を 1 か所で確認できます",
+        "en": "GitHub Copilot AI cost dashboard in Insights [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Insights アナリスト・マネージャー・Microsoft 365 グローバル管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-22T00:40:00Z" }] },
+        "change": { "text": "GitHub Copilot の AI 消費・コスト・導入状況を 1 つのダッシュボードで把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対応は不要。閲覧できるのは対象ロールのみで、管理者はアクセス権を調整できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "コンサンプションの分析情報へのアクセスを管理する", "retrievedAt": "2026-10-22T00:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "管理者やアナリストは、この情報を複数のソースから集める必要がありました", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Insights の**ダッシュボード 1 か所**で、予算に対する支出と導入状況を確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "GitHub Copilot のクレジット消費量と利用状況を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "GitHub ページ", "retrievedAt": "2026-10-22T00:40:00Z" }] },
+            { "text": "「GitHub」タブで、グループ別のクレジット消費やユーザー別の分布を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボード内を移動する", "retrievedAt": "2026-10-22T00:40:00Z" }] },
+            { "text": "チャット要求数やコード補完の受け入れ率など、詳細な導入指標も確認可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "GitHub ページ", "retrievedAt": "2026-10-22T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "インサイト アナリスト（グローバル パーティション）、マネージャー、全体管理者が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-22T00:40:00Z" }] },
+            { "text": "金額は参考値。公式の請求は GitHub.com で確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭の注", "retrievedAt": "2026-10-22T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage-notes",
+          "heading": "利用上の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GitHub ページは過去 28 日間のデータのみを表示する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "GitHub ページの注", "retrievedAt": "2026-10-22T00:40:00Z" }] },
+            { "text": "2026 年 7 月 10 日より前の GitHub データは過小報告の可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "GitHub ページの注", "retrievedAt": "2026-10-22T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-open",
+          "heading": "確認の手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Insights を開き、GitHub Copilot AI コスト ダッシュボードで指標を確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "consumption-dashboard", "term": "消費ダッシュボード", "type": "feature", "oneLine": { "text": "Copilot クレジットと GitHub AI クレジットの使われ方を把握する Insights のダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭", "retrievedAt": "2026-10-22T00:40:00Z" }] } },
+        { "termKey": "github-copilot", "term": "GitHub Copilot", "type": "product", "oneLine": { "text": "Copilot を搭載したコーディング アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "GitHub page", "retrievedAt": "2026-10-22T00:40:00Z" }] } },
+        { "termKey": "insights-analyst", "term": "インサイト アナリスト", "type": "term", "oneLine": { "text": "グローバル パーティションにアクセスできると、組織全体の消費分析情報を見られるロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-22T00:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存サービスの機能追加・変更。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "誰がこのダッシュボードを見られますか？",
+          "answer": { "text": "グローバル パーティション アクセスを持つインサイト アナリスト、マネージャー（所属グループの範囲）、Microsoft 365 グローバル管理者です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "ダッシュボードにアクセスできるユーザー", "retrievedAt": "2026-10-22T00:40:00Z" }] }
+        },
+        {
+          "question": "マネージャーに見せたくない場合はどうしますか？",
+          "answer": { "text": "既定ではすべてのマネージャーで有効ですが、Insights のマネージャー設定で調整できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "コンサンプションの分析情報へのアクセスを管理する", "retrievedAt": "2026-10-22T00:40:00Z" }] }
+        },
+        {
+          "question": "請求額の根拠として使えますか？",
+          "answer": { "text": "いいえ。ダッシュボードの情報は参考用で、公式の請求は GitHub.com で確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locator": "冒頭の注", "retrievedAt": "2026-10-22T00:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [{ "title": "インサイトでコンサンプション ダッシュボードを使用する方法", "url": "https://learn.microsoft.com/ja-jp/viva/insights/org-team-insights/ai-cost-dashboard", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
