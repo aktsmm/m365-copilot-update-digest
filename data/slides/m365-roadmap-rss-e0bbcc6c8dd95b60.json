@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e0bbcc6c8dd95b60",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "OneNote モバイルで Copilot による要約と Q&A（iPhone・開発中）",
+        "subtitleJa": "長いページを短く要約し、ノートの内容にその場で質問できるようになります",
+        "en": "OneNote: Summary and Q&A in OneNote Mobile with Copilot (Iphone)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["iOS"],
+        "productArea": "OneNote",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**iPhone の OneNote でノートを読み書きするユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "長いページの要約と、ノート内容への質問を OneNote モバイルで行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "ロードマップ上は開発中の段階で、現時点で管理者の対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "長いページを**短く読みやすい要約**にでき、ノートへの質問にもその場で回答が得られます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "OneNote モバイルで、長いページの短く流れの良い要約を作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "質問と回答（Q&A）で、ノート内の情報にリアルタイムで回答を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "必要な情報をより速く把握できるようにすることが狙い", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は iOS（iPhone）で、Worldwide（標準マルチテナント）が提供範囲", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供状況はロードマップで確認し、段階の変更を追跡する", "origin": "recommendation", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "利用対象ユーザーに Microsoft Copilot ライセンスがあるかを確認しておく", "origin": "recommendation", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "onenote-mobile", "term": "OneNote モバイル", "type": "product", "oneLine": { "text": "スマートフォンやタブレット向けの OneNote アプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "page-summary", "term": "要約", "type": "feature", "oneLine": { "text": "長いページの内容を、短く流れの良い文章にまとめる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "qa", "term": "Q&A", "type": "feature", "oneLine": { "text": "ノートの内容について質問し、その場で回答を得る機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=422324",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
