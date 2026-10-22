@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-83d029ee100ca4b8",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Copilot Studio のエージェントのモデルをドロップダウンで選択（プレビュー）",
+        "subtitleJa": "GitHub Copilot ハーネスのエージェントで、実験モデルも早期に試せます",
+        "en": "Choose a model for your agent powered by the GitHub Copilot harness from a simple dropdown menu, and try out..."
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Power Platform の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "AI モデルの選択に対する管理者コントロール", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "change": { "text": "エージェントの用途に合うモデルを選び、実験モデルを本番前に評価できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "冒頭", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "実験モデルを許可するなら、管理者が環境の設定を有効にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "AI モデルの選択に対する管理者コントロール", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "ビルド タブの**モデル リストから選ぶだけ**で、エージェントのオーケストレーションに使うモデルを変更できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "エージェントのモデルを変更する", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "GitHub Copilot ハーネスを搭載するエージェントとワークフローが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "注", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "モデルは Deep・Auto・General の用途タグで、強みや遅延、コストが異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "モデル使用カテゴリ", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "Anthropic や Mistral の外部モデルも、管理者が許可すれば追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "外部モデル", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "実験・プレビュー モデルは本番用ではなく、遅延やタイムアウトが起こりうる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "試験的モデルとプレビュー モデルの制限事項", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "データが組織の地理的境界外で処理・保存されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "Important", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "使用量ベースの課金で、Copilot クレジットを消費することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "注", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "手順: ビルド タブ → モデル リスト → モデルを選択 → 保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "エージェントのモデルを変更する", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "実験・プレビュー モデルで公開したエージェントの利用は、設定された料金で請求される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "試験的モデルとプレビュー モデルの制限事項", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "admin-controls",
+          "heading": "管理者コントロール",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "環境の「プレビューおよび実験的な AI モデル」設定と、リージョン間のデータ移動の設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "AI モデルの選択に対する管理者コントロール", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "外部モデルの設定はプレビュー モデルとは別で、両者は独立して許可・ブロックできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "外部モデルの管理コントロールと要件", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テスト用の環境で、用途に合う Deep・General などのモデルを比べて評価する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "github-copilot-harness", "term": "GitHub Copilot ハーネス", "type": "feature", "oneLine": { "text": "この機能が使われる、Copilot Studio のエージェントやワークフローの基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "注", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "experimental-model", "term": "実験モデル", "type": "term", "oneLine": { "text": "実験用で本番向けではなく、可用性や品質に制限があるモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "モデルリリースタイプ", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "cross-geo", "term": "クロスジオ", "type": "term", "oneLine": { "text": "組織の地理的境界外でのデータ処理や保存が必要になる場合があるモデルの区分。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "モデルリリースタイプ", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "early-access-env", "term": "早期アクセス環境", "type": "term", "oneLine": { "text": "新しい更新と機能を最初に受け取る、早期リリース サイクルの環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "モデルリリースタイプ", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "本番環境向けではなく、可用性や品質に制限がある先行提供の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "モデルリリースタイプ", "retrievedAt": "2026-10-23T00:00:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "選んだモデルが使えなくなったらどうなりますか？",
+          "answer": { "text": "既定のモデルがフォールバックとして使われます。既定モデルは、より高性能なモデルが一般提供されると定期的に更新されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "モデルリリースタイプ", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        },
+        {
+          "question": "実験モデルを使えない環境があるのはなぜですか？",
+          "answer": { "text": "環境で「プレビューおよび実験的な AI モデル」設定と、リージョン間のデータ移動の設定が有効になっている必要があるためです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locator": "AI モデルの選択に対する管理者コントロール", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        },
+        {
+          "question": "日本リージョンでも使えますか？",
+          "answer": { "text": "Learn の提供状況表では、日本は多くのモデルが GA（クロスジオ）で、Mistral Medium 3.5 は実験的（クロスジオ）です。モデルごとに異なります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locator": "GitHub Copilot harness の提供状況", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability",
+        "learn": [
+          { "title": "エージェントのモデルを選択する (GitHub Copilot)", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-select-agent-model", "locale": "ja-jp" },
+          { "title": "モデルの利用可能性とコントロール (GitHub Copilot)", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability", "locale": "ja-jp" },
+          { "title": "早期リリース サイクル環境", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/early-release", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
