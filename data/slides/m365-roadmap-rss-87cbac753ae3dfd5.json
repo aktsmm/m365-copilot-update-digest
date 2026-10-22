@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-87cbac753ae3dfd5",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Web グラウンディングのドメイン除外が展開中",
+        "subtitleJa": "Microsoft Copilot の Web 検索から除外するサイトを、管理者が指定できます",
+        "en": "Microsoft Copilot (Microsoft 365): Domain exclusion for web grounding"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot / Copilot Chat の管理者**（検索管理者・グローバル管理者）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "前提条件", "retrievedAt": "2026-10-22T16:15:00Z" }] },
+        "change": { "text": "Web グラウンディングで参照させたくないサイトを、テナント単位で除外できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "冒頭", "retrievedAt": "2026-10-22T16:15:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既定では除外なし。使う場合のみ PowerShell スクリプトで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**最大 1,000 サイト**を Web グラウンディングから除外できます。既定の設定では除外構成は含まれません", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ConfigureTenantDomainExclusions.ps1 でテナントの除外構成を管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-22T16:15:00Z" }] },
+            { "text": "構成の取得（CSV 出力）・作成・更新・削除・テンプレート生成に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-22T16:15:00Z" }] },
+            { "text": "CSV の Domain と IncludeSubPages（True/False）でサブページの扱いを指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "CSV ファイル形式", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "検索管理者またはグローバル管理者としてサインインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "前提条件", "retrievedAt": "2026-10-22T16:15:00Z" }] },
+            { "text": "-Template でテンプレート CSV を作り、-Create -FromFile で適用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "PowerShell を使用してドメインの除外を構成する", "retrievedAt": "2026-10-22T16:15:00Z" }] },
+            { "text": "スクリプトを実行することで、この機能にオプトインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Windows PowerShell 5.1 または PowerShell 7+ が必要。CSV は 1 ファイル最大 1,000 件", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "前提条件", "retrievedAt": "2026-10-22T16:15:00Z" }] },
+            { "text": "フィルター対象は Web ページの結果のみ。ニュースなど他の回答は引用される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "制限事項", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide (Standard Multi-Tenant)。Desktop と Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Cowork も組織のドメイン除外ポリシーを使用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "注", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テンプレート CSV に除外したいサイトを書き出し、少数から試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "更新は古い構成を新しい構成で置き換える。-Get で現状を出力してから編集する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "既存の構成を更新する", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "domain-exclusion", "term": "ドメイン除外", "type": "feature", "oneLine": { "text": "Copilot と Copilot Chat の Web グラウンディングから、指定したサイトを除外する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "冒頭", "retrievedAt": "2026-10-22T16:15:00Z" }] } },
+        { "termKey": "web-grounding", "term": "Web グラウンディング", "type": "term", "oneLine": { "text": "Copilot が回答を作る際に、Web 上の情報を根拠として参照する仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "search-admin", "term": "検索管理者", "type": "term", "oneLine": { "text": "ドメイン除外の構成スクリプトを実行できる管理者ロールの 1 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "前提条件", "retrievedAt": "2026-10-22T16:15:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ドメイン除外は既定で有効ですか？",
+          "answer": { "text": "いいえ。既定の設定にはドメイン除外構成は含まれず、PowerShell スクリプトを実行してオプトインします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+        },
+        {
+          "question": "サブドメインも除外できますか？",
+          "answer": { "text": "現在、最大 2 つのレベルのサブドメインまでサポートされます。サブページを含めるかは IncludeSubPages で指定します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-22T16:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=503144",
+        "learn": [{ "title": "ドメイン除外の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
