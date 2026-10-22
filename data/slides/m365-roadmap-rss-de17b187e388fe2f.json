@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-de17b187e388fe2f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview データ ライフサイクル管理: 最終アクセス日に基づく保持（OneDrive・SharePoint）",
+        "subtitleJa": "ファイルが最後に利用された時点を基準に、保持を適用できるようになります",
+        "en": "Microsoft Purview compliance portal: Data Lifecycle Management - Retention based on Last Accessed for files in OneDrive and SharePoint"
+      },
+      "meta": {
+        "publishedJst": "2026-09-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)", "Microsoft Purview"],
+        "categories": ["sharepoint", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview のデータ ライフサイクル管理を運用する管理者**（OneDrive・SharePoint のコンプライアンス担当）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ユーザーが最後にアクセスした時点を基準に、アイテムごとに保持を適用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要。既存の保持ポリシーの構成を把握しておくとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "OneDrive・SharePoint の**アイテムごとに、ユーザーが最後にアクセスした時点を基準とした保持**を適用できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は OneDrive と SharePoint のアイテムごとの保持", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の段階は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "開発中の機能は、内容や提供時期が変更される場合がある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "現行の保持は、アイテム保持ポリシーまたは保持ラベルで適用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "保持と削除の対象となる機能", "retrievedAt": "2026-10-22T08:40:00Z" }] },
+            { "text": "保持を適用するには、SharePoint サイトにインデックスが作成されている必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "保持と削除の対象となる機能", "retrievedAt": "2026-10-22T08:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在の保持ポリシーと保持ラベルの適用範囲を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "保持対象のファイルは、編集・削除時に元のコンテンツが保持ライブラリへコピーされる（ポリシー適用時）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "SharePoint と OneDrive の保持のしくみ", "retrievedAt": "2026-10-22T08:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "existing-scope",
+          "heading": "現行の保持の対象",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "SharePoint・OneDrive サイトに格納されたすべてのファイルを保持できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "保持と削除の対象となる機能", "retrievedAt": "2026-10-22T08:40:00Z" }] },
+            { "text": "リスト アイテムは、アイテム保持ポリシーでは非対応で、保持ラベルでは対応（システム リストを除く）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "保持と削除の対象となる機能", "retrievedAt": "2026-10-22T08:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dlm", "term": "データ ライフサイクル管理", "type": "feature", "oneLine": { "text": "Microsoft Purview で、コンテンツの保持と削除を管理する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "retention-label", "term": "保持ラベル", "type": "feature", "oneLine": { "text": "個々のアイテムに保持設定を適用するためのラベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "保持と削除の対象となる機能", "retrievedAt": "2026-10-22T08:40:00Z" }] } },
+        { "termKey": "retention-library", "term": "保持保持ライブラリ", "type": "term", "oneLine": { "text": "保持が必要なコンテンツのコピーを自動的に格納する、非表示のシステムの場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "SharePoint と OneDrive の保持のしくみ", "retrievedAt": "2026-10-22T08:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、現時点では「開発中」の段階です。最新状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在の SharePoint・OneDrive の保持では何が対象ですか？",
+          "answer": { "text": "SharePoint と OneDrive サイトに格納されたすべてのファイルが、保持ポリシーまたは保持ラベルの対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "保持と削除の対象となる機能", "retrievedAt": "2026-10-22T08:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=472030",
+        "learn": [{ "title": "SharePoint と OneDrive の保持の詳細", "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
