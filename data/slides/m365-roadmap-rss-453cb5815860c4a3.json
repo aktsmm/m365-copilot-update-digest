@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-453cb5815860c4a3",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Cowork が政府向けクラウド（GCC / GCC High）向けに開発中",
+        "subtitleJa": "成果を伝えるだけで、メール・会議・ファイルを根拠に作業を任せられます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Cowork for Government Clouds"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC / GCC High 環境で Microsoft Copilot を使う組織**の利用者と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "成果を伝えるだけで、メール・会議・メッセージ・ファイルを根拠に作業を任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません。提供開始の続報を待ちます", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Cowork に**成果を説明するだけ**で、メール・会議・メッセージ・ファイル・データを根拠に作業を進めてもらえます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象クラウドは GCC と GCC High（ロードマップ記載）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応先は Web・デスクトップ（Mac 含む）・iOS・Android", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Cowork はメール送信、会議設定、文書作成、Teams 投稿などを代行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "Cowork とは?", "retrievedAt": "2026-10-22T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップは開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "重要な操作（送信・投稿など）は実行前に利用者が承認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/get-started", "locator": "アクションの承認", "retrievedAt": "2026-10-22T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用には有効な Microsoft Copilot ライセンスと、使用量ベースの課金設定が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/get-started", "locator": "前提条件", "retrievedAt": "2026-10-22T12:00:00Z" }] },
+            { "text": "まず対象ユーザーと、任せたい定型業務の候補を整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "必要な内容を説明すると、メール送信や会議設定などを代わりに実行する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "冒頭", "retrievedAt": "2026-10-22T12:00:00Z" }] } },
+        { "termKey": "gcc", "term": "GCC / GCC High", "type": "term", "oneLine": { "text": "ロードマップ上で、政府機関向けに分離された Microsoft 365 のクラウド インスタンス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Cowork は実行前に確認なしで操作しますか？",
+          "answer": {
+            "text": "いいえ。メール送信や会議設定など重要な操作の前に承認を求め、いつでも一時停止やキャンセルができます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/get-started", "locator": "アクションの承認", "retrievedAt": "2026-10-22T12:00:00Z" }]
+          }
+        },
+        {
+          "question": "利用にはどんな前提がありますか？",
+          "answer": {
+            "text": "有効な Microsoft Copilot ライセンスに加え、使用量ベースの課金と Cowork 課金の有効化が前提です。政府向けクラウドでの条件は提供時に確認が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/get-started", "locator": "前提条件", "retrievedAt": "2026-10-22T12:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571637",
+        "learn": [
+          { "title": "Copilot Cowork の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locale": "ja-jp" },
+          { "title": "Copilot Cowork の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/get-started", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
