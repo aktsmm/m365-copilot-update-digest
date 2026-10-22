@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e84ab97f8d4cf107",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "DLP ポリシーの変更分析情報を Security Copilot で取得（開発中）",
+        "subtitleJa": "DLP ポリシーの対象範囲を、プロンプトで把握できるようになります",
+        "en": "Data Loss Prevention- DLP Policy Change Insights with Security Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "availability": [],
+        "status": "In development",
+        "products": ["Security Copilot", "Microsoft Purview"],
+        "categories": ["security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Security Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Purview の DLP 管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ポリシーの場所・分類子・通知などの網羅状況を、Security Copilot で把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "DLP 管理者が、**すべて、または選んだポリシーの網羅状況**を Security Copilot から把握できます。プロンプトでさらに深掘りも可能です", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Security Copilot が DLP ポリシーを要約する機能の拡張", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "場所・分類子・通知などの観点でポリシーの網羅状況を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は全ポリシー、または選択した一部のポリシー", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は GCC / GCC High / DoD、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連する既存機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "DLP ポリシー ページの「Copilot で分析情報を取得」で、場所や検出する機密情報の種類を確認できる（プレビュー）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locator": "Microsoft Security Copilotを使用して分析情報を取得する", "retrievedAt": "2026-10-22T08:55:00Z" }] },
+            { "text": "利用には Security Copilot のライセンスと情報保護管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locator": "前提条件", "retrievedAt": "2026-10-22T08:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dlp", "term": "データ損失防止（DLP）", "type": "term", "oneLine": { "text": "Microsoft Purview で、機密情報を保護するためのポリシーを定義・適用する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locator": "冒頭", "retrievedAt": "2026-10-22T08:55:00Z" }] } },
+        { "termKey": "security-copilot", "term": "Security Copilot", "type": "product", "oneLine": { "text": "Purview の DLP ポリシー ページにもスキルとして埋め込まれている、セキュリティ向けの Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locator": "Microsoft Security Copilotを使用して分析情報を取得する", "retrievedAt": "2026-10-22T08:55:00Z" }] } },
+        { "termKey": "simulation-mode", "term": "シミュレーション モード", "type": "feature", "oneLine": { "text": "実際の適用なしに、DLP ポリシーがスコープ内の項目へ与える影響を確認できるモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locator": "シミュレーション モード", "retrievedAt": "2026-10-22T08:55:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり、まだ提供されていない状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "同様の機能はすでに使えますか？",
+          "answer": {
+            "text": "Purview の DLP ポリシー ページには「Copilot で分析情報を取得」がプレビューとして用意されています。今回のロードマップ項目との関係は、ソースでは示されていません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locator": "Microsoft Security Copilotを使用して分析情報を取得する", "retrievedAt": "2026-10-22T08:55:00Z" }]
+          }
+        },
+        {
+          "question": "利用に必要な条件は何ですか？",
+          "answer": {
+            "text": "既存の「Copilot で分析情報を取得」では、Security Copilot のライセンスと情報保護管理者ロールが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locator": "前提条件", "retrievedAt": "2026-10-22T08:55:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=472031",
+        "learn": [{ "title": "データ損失防止ポリシーをテストする", "url": "https://learn.microsoft.com/ja-jp/purview/dlp-test-dlp-policies", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
