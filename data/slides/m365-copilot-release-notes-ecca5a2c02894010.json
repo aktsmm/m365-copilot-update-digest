@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-ecca5a2c02894010",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot 検索の Outlook メールに「並べ替え」フィルターが追加",
+        "subtitleJa": "メールの検索結果を、日付の昇順・降順で並べ替えられます",
+        "en": "\"Sort by\" filter for Outlook Mail in Copilot search [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot 検索で Outlook メールを探すユーザー**（Windows・Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メールの検索結果を新しい順・古い順に並べ替えて探せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者・ユーザーともに、特別な対応は不要", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot 検索で Outlook メールの結果を、**日付の昇順または降順**で並べ替えられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Copilot 検索内の Outlook メール の検索結果", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "並べ替えは日付の昇順・降順を選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "タイトルの対象プラットフォームは Windows と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Outlook メールは、Copilot 検索のデータ ソース フィルターで絞り込める対象の 1 つ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locator": "Copilot 検索のデータ ソース フィルターとは何ですか?", "retrievedAt": "2026-10-22T00:30:00Z" }]
+            },
+            {
+              "text": "Copilot 検索は、対象の Microsoft Copilot ライセンスを持つユーザーが Microsoft Copilot アプリで使う",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locator": "Microsoft Copilot 検索 を使用できるのは誰ですか?", "retrievedAt": "2026-10-22T00:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-search",
+          "term": "Microsoft Copilot 検索",
+          "type": "feature",
+          "oneLine": {
+            "text": "職場と学校向けに最適化された、AI 搭載の統合検索エクスペリエンス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locator": "Microsoft Copilot 検索 とは?", "retrievedAt": "2026-10-22T00:30:00Z" }]
+          }
+        },
+        {
+          "termKey": "data-source-filter",
+          "term": "データ ソース フィルター",
+          "type": "feature",
+          "oneLine": {
+            "text": "検索結果を SharePoint、Teams、Outlook メールなど特定のデータ ソースに絞り込む機能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locator": "Copilot 検索のデータ ソース フィルターとは何ですか?", "retrievedAt": "2026-10-22T00:30:00Z" }]
+          }
+        },
+        {
+          "termKey": "label-update",
+          "term": "アップデート",
+          "type": "label",
+          "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot Chat でも使えますか？",
+          "answer": {
+            "text": "Copilot 検索は Microsoft Copilot Chat には含まれず、ライセンスと提供方法が異なります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locator": "Microsoft Copilot 検索 は Microsoft Copilot Chat で利用できますか?", "retrievedAt": "2026-10-22T00:30:00Z" }]
+          }
+        },
+        {
+          "question": "追加料金はかかりますか？",
+          "answer": {
+            "text": "Copilot 検索自体に追加費用はなく、Microsoft Copilot ライセンスに含まれます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locator": "Microsoft Copilot 検索 に追加料金はかかりますか?", "retrievedAt": "2026-10-22T00:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+        "learn": [
+          { "title": "Microsoft Copilot 検索 に関してよく寄せられる質問", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-search-faq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
