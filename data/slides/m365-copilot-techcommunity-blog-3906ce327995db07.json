@@ -72,6 +72,28 @@
         { "termKey": "release-notes", "term": "リリース ノート", "type": "term", "oneLine": { "text": "Microsoft 365 Copilot の最新の機能と機能強化を一覧できる公式ページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] } },
         { "termKey": "staged-rollout", "term": "段階的ロールアウト", "type": "term", "oneLine": { "text": "テナント内の一部のユーザーに先に提供し、その後に組織全体へ広げる展開方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T09:00:00Z" }] } }
       ],
+      "qa": [
+        {
+          "question": "紹介された機能は、全ユーザーに同時に使えるようになりますか？",
+          "answer": {
+            "text": "いいえ。機能はテナント内の一部のユーザーから段階的に展開され、その後に組織全体へ広がります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-10-22T12:50:00Z" }]
+          }
+        },
+        {
+          "question": "プラットフォームごとの変更はどこで確認できますか？",
+          "answer": {
+            "text": "リリース ノートに、すべての機能のほか Windows・Android・iOS・Mac 別のタブがあり、プラットフォーム固有の変更を確認できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "タブ（すべての機能 / Windows / Android / iOS / Mac）", "retrievedAt": "2026-10-22T12:50:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/what-s-new-in-microsoft-copilot-august-2026/ba-p/4551960",
         "learn": [
