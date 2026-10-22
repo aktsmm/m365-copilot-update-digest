@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-52be1556f525b7f2",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot チャットで Researcher 使用時にモデルを選択可能に",
+        "subtitleJa": "対応するモデルとモードを、チャット内で直接選べます",
+        "en": "Select models when using Researcher in Copilot Chat [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot Chat"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot チャットで Researcher を使うユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Researcher を会話に追加したまま、対応モデルとモードを選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対応は不要。チャットで Researcher を追加するとモデルを選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "エージェントの外で Researcher（@Researcher）をチャットに追加すると、モデル ピッカーは無効で既定は自動だった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "リサーチ ツール内で使用するモデルを選択できますか?", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "after": { "text": "Copilot チャットに Researcher エージェントを追加する際、対応するモデルとモードを直接選べます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot チャットに Researcher を追加するとき、モデルとモードを選択できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はタイトルに示された Windows と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Researcher エージェントを直接使う場合は、右上のモデル ピッカーで選択できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "リサーチ ツール内で使用するモデルを選択できますか?", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Researcher は複数ステップの深いリサーチ向けで、通常の Copilot チャットとは役割が異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "一般的な機能", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "管理者は Researcher エージェントをブロックできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "管理と制御", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "researcher", "term": "Researcher", "type": "feature", "oneLine": { "text": "クイック Q&A 向けの Copilot チャットとは異なり、深い複数ステップのリサーチ タスク向けに設計されたエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "一般的な機能", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "model-picker", "term": "モデル ピッカー", "type": "feature", "oneLine": { "text": "Researcher で使うモデルとモードを選ぶ、ページ右上の選択 UI。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "リサーチ ツール内で使用するモデルを選択できますか?", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された既存機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "月あたりの利用回数に上限はありますか？",
+          "answer": { "text": "FAQ では、ユーザーあたり 1 か月あたり最大 25 件のクエリと記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "使用制限", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        },
+        {
+          "question": "ユーザーが Researcher を無効にできますか？",
+          "answer": { "text": "ユーザー自身は無効にできません。管理者は Researcher とアナリスト エージェントをブロックできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "管理と制御", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        },
+        {
+          "question": "Web 検索を無効にするとどうなりますか？",
+          "answer": { "text": "テナント レベルで Web 検索が無効の場合、Researcher は Web データを使用しません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locator": "Web 検索の統合", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft Copilot リサーチ エージェントについてよく寄せられる質問", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/faq-researcher", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
