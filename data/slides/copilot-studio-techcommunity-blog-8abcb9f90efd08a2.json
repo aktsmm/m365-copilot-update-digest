@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-8abcb9f90efd08a2",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio の Customer Conversation ハーネス",
+        "subtitleJa": "音声とチャットで顧客対応をするエージェントの新しい土台です",
+        "en": "Introducing the customer conversation harness in Microsoft Copilot Studio"
+      },
+      "meta": {
+        "publishedJst": "2026-10-22",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": {
+          "text": "Copilot Studio で顧客対応エージェントを作る**作成者・コンタクトセンター担当者**",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "What is the Customer Conversation harness?", "retrievedAt": "2026-10-22T06:50:00Z" }]
+        },
+        "change": {
+          "text": "音声とチャットの顧客対応エージェントを、専用ハーネスで構築できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "What is the Customer Conversation harness?", "retrievedAt": "2026-10-22T06:50:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "既存エージェントへの影響は確認できていない。顧客対応を作る場合に試す",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified",
+          "evidence": []
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "定義済みトピックでは予測しやすい応答を保ちつつ、**音声やチャットで自然な会話**ができるエージェントを作れます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "What is the Customer Conversation harness?", "retrievedAt": "2026-10-22T06:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "ハーネスの概要",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "複数の専門サブエージェントを使い、未解決の問い合わせは人の担当者へ引き継ぐ構成",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "What is the Customer Conversation harness?", "retrievedAt": "2026-10-22T06:50:00Z" }]
+            },
+            {
+              "text": "コネクタ、ナレッジ、MCP、接続エージェントのツールを呼び出せ、スキルとメモリにも対応",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "What is the Customer Conversation harness?", "retrievedAt": "2026-10-22T06:50:00Z" }]
+            },
+            {
+              "text": "Web サイトでのチャット公開や、電話番号を割り当てた音声対応に使える",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "What is the Customer Conversation harness?", "retrievedAt": "2026-10-22T06:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "利用前の確認点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "構築・テスト・評価で Copilot クレジットを消費する場合がある（使用量ベース課金）",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "Note", "retrievedAt": "2026-10-22T06:50:00Z" }]
+            },
+            {
+              "text": "音声チャネルはユーザーのサインイン非対応。資格情報が要るナレッジはチャットのみ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "Key concepts", "retrievedAt": "2026-10-22T06:50:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "harness",
+          "term": "Customer Conversation ハーネス",
+          "type": "feature",
+          "oneLine": {
+            "text": "音声とチャットで顧客の質問や問題解決に対応するエージェント向けの基盤。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "冒頭", "retrievedAt": "2026-10-22T06:50:00Z" }]
+          }
+        },
+        {
+          "termKey": "customer-assist-agent",
+          "term": "Customer Assist Agent",
+          "type": "feature",
+          "oneLine": {
+            "text": "Customer Conversation ハーネス上で構築されたエージェントの呼称。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "冒頭", "retrievedAt": "2026-10-22T06:50:00Z" }]
+          }
+        },
+        {
+          "termKey": "copilot-credits",
+          "term": "Copilot クレジット",
+          "type": "term",
+          "oneLine": {
+            "text": "このハーネスのエージェントで使われる、使用量ベース課金の単位。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "Note", "retrievedAt": "2026-10-22T06:50:00Z" }]
+          }
+        },
+        {
+          "termKey": "connected-agent",
+          "term": "接続エージェント",
+          "type": "feature",
+          "oneLine": {
+            "text": "Azure AI Foundry などで動作し、独立した構成と ALM を持つエージェント。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "Key concepts", "retrievedAt": "2026-10-22T06:50:00Z" }]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "サブエージェントと接続エージェントの違いは？",
+          "answer": {
+            "text": "サブエージェントは親エージェントと構成・展開・ALM を共有します。接続エージェントは独立した構成と ALM を持ち、複数の連携で再利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "Key concepts", "retrievedAt": "2026-10-22T06:50:00Z" }]
+          }
+        },
+        {
+          "question": "作成後の流れは？",
+          "answer": {
+            "text": "Build で構成し、Preview と Evaluate でテストし、Deploy で音声・チャットに公開し、Monitor で稼働状況を確認します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locator": "Agent lifecycle", "retrievedAt": "2026-10-22T06:50:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/introducing-the-customer-conversation-harness-in-microsoft/ba-p/4563954",
+        "learn": [
+          { "title": "Customer Conversation ハーネスのエージェント概要（プレビュー）", "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation", "locale": "en-us" },
+          { "title": "Copilot クレジットの使用量ベースの課金とコスト管理を理解する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-overview-copilot-credits", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
