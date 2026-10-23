@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-56d34b8d36bf7789",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dynamics 365 Contact Center で強化された顧客第一のダイレクトコールバックが提供開始",
+        "subtitleJa": "AI を活用したコールバックを、コールバック プロファイルで構成できます",
+        "en": "Dynamics 365 Contact Center: Administrator experiences - Use enhanced customer-first direct callbacks"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Contact Center",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Contact Center の管理者・作成者**と、コンタクト センターの担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "顧客を保留で待たせず、順番が来た時点でコールバックを開始できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "yes",
+        "summary": {
+          "text": "直接コールバックをオーバーフロー アクションにするキューごとに、コールバック プロファイルの選択が必要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "機能の詳細", "retrievedAt": "2026-10-23T07:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "順番が来た瞬間にシステムがコールバックを開始するため、**顧客は順番を失わず**、担当者は顧客の準備ができたときだけ通話に参加します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T07:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Service admin center の「コールバック プロファイル」で AI を活用した体験を管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "機能の詳細", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+            { "text": "事前構築済みの AI エージェントがコールバックの詳細をキャプチャする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者が挨拶メッセージ、代替番号の取得、提示時間帯、再試行ロジック、AI エージェントを定義", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "機能の詳細", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+            { "text": "プロファイルをオーバーフロー処理下のキューに関連付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "機能の詳細", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "直接コールバックをオーバーフロー アクションに選ぶキューごとに、プロファイルの選択が必須", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "機能の詳細", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+            { "text": "対象地域と言語は、Microsoft の Feature Geography / Language レポートで確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "地域 / 利用可能な言語", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "AI エージェントの選択",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "独自の AI エージェントで、顧客検証などのカスタム ワークフローを実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "不在着信を減らし、担当者の時間を節約して生産性を高める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+            { "text": "まず特定のキュー 1 つでプロファイルを試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "callback-profile", "term": "コールバック プロファイル", "type": "feature", "oneLine": { "text": "挨拶メッセージ、再試行ロジック、AI エージェントなどを定義する、コールバックの構成単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "機能の詳細", "retrievedAt": "2026-10-23T07:30:00Z" }] } },
+        { "termKey": "direct-callback", "term": "直接コールバック", "type": "feature", "oneLine": { "text": "顧客を保留にせず、順番が来た時点でシステムが折り返し通話を開始する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T07:30:00Z" }] } },
+        { "termKey": "copilot-service-admin-center", "term": "Copilot Service admin center", "type": "product", "oneLine": { "text": "コールバック プロファイルを管理する管理センター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "機能の詳細", "retrievedAt": "2026-10-23T07:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能の一般公開日はいつですか？",
+          "answer": { "text": "Learn のリリース プランでは、一般公開は 2026 年 8 月 24 日と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "表", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+        },
+        {
+          "question": "独自の AI エージェントは使えますか？",
+          "answer": { "text": "はい。独自の AI エージェントで、顧客検証などのカスタム ワークフローを実行できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577801",
+        "learn": [
+          { "title": "拡張された顧客優先の直接コールバックを使用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-enhanced-customer-first-direct-callbacks", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
