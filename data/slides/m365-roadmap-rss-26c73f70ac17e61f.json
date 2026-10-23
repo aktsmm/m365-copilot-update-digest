@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-26c73f70ac17e61f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams のキュー アプリでインテリジェント通話要約が利用可能に（開発中）",
+        "subtitleJa": "録音されたコール キューの通話を、AI の要約で素早く振り返れます",
+        "en": "Microsoft Teams: Intelligent call recaps in Queues app"
+      },
+      "meta": {
+        "publishedJst": "2026-08-08",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**キュー アプリでコール キューの通話を扱う担当者**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "録音された通話の振り返りに使う時間を減らし、顧客の課題を素早く解決できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点では開発中のため、対応は不要。提供開始に備えて前提を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "録音されたコール キューの通話に、**AI が生成した要約メモ・主要な議論ポイント・フォローアップ アクション**を含むインテリジェント要約が付きます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は、録音されたコール キューの通話", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "要約には AI 生成の要約メモ、主要な議論ポイント、フォローアップ アクションが含まれる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象環境は Worldwide（標準マルチテナント）、Desktop と Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "前提・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams のインテリジェント要約には、Teams Premium または Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ライセンス", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "要約を使うには、通話の文字起こしをオンにする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ポリシー > 文字起こし", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認したいこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "PSTN 通話では、Teams 電話ライセンスと通話プランも必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ライセンス", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "文字起こしと録音のポリシーを、対象ユーザーに割り当てておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "existing-recap",
+          "heading": "既存の通話要約",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams の通話アプリの［要約］ボタンから、AI 生成のメモと推奨タスクを確認できる（PSTN 通話）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "通話のインテリジェント要約 > PSTN 通話", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "queues-app", "term": "キュー アプリ", "type": "product", "oneLine": { "text": "Teams でコール キューの通話を扱うアプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "intelligent-recap", "term": "インテリジェント要約", "type": "feature", "oneLine": { "text": "AI を使い、通話や会議のメモや推奨タスクなどを提供する Teams の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "pstn", "term": "PSTN 通話", "type": "term", "oneLine": { "text": "電話番号を使って発着信する通話。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "PSTN 通話", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップは開発中の段階で、提供時期の月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "必要なライセンスは何ですか？",
+          "answer": { "text": "Teams のインテリジェント要約全般では、Teams Premium または Microsoft Copilot ライセンスが必要です。キュー アプリ固有の要件は、提供開始時に確認が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ライセンス", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569017",
+        "learn": [{ "title": "Teams の通話、会議、イベントのためのインテリジェント要約", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
