@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b60331ecdb797c98",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Excel の「Copilot で編集」で Python が使えるように",
+        "subtitleJa": "統計・シミュレーション・高度なグラフを、ブックのデータで実行できます",
+        "en": "Use Python when Editing with Copilot in Excel [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Excel"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Excel で Copilot を使ってデータ分析をする人**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Excel", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+        "change": { "text": "Python のコードを Copilot が実行し、結果をブックに直接出力してくれる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Excel", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "既存のセキュリティと実行の制御がそのまま適用されるため、必須の対応はない", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "「Copilot で編集」に依頼するだけで、Python による**高度な分析・自動化・データ変換**をブック上で実行できます", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Excel", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "統計・シミュレーション・高度な可視化など、ブックのデータの分析が可能", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+            { "text": "対象プラットフォームは Windows・Mac・Web", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Excel", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+            { "text": "コードの実行方法は、既存のセキュリティと実行の制御で管理される", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方と確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "データのあるブックで「Copilot で編集」を開き、傾向の要約やデータ整理、グラフ作成を Python で依頼", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+            { "text": "出力された結果は Excel 上で確認する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edit-with-copilot", "term": "Copilot で編集", "type": "feature", "oneLine": { "text": "依頼に応じて Copilot がブックを編集・分析する Excel の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "python-in-excel", "term": "Python", "type": "term", "oneLine": { "text": "データ分析、可視化、自動化で広く使われるプログラミング言語。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-23T00:20:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者側で必要な対応はありますか？",
+          "answer": { "text": "リリース ノートでは、既存のセキュリティと実行の制御がコードの実行管理に引き続き使われるとされています。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "リリース ノートの対象プラットフォームは Windows、Mac、Web です。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Excel", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
