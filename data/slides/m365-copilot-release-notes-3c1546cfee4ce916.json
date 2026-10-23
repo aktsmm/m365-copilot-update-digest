@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-3c1546cfee4ce916",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "SharePoint の権限のあるサイトで、信頼できる情報源を指定",
+        "subtitleJa": "公式サイトを Copilot 検索の信頼できる情報源として管理者が指定できます",
+        "en": "**SharePoint: Authoritative Sites ** [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["sharepoint"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint 管理者**と、Copilot 検索で社内情報を探すユーザー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-23T12:55:00Z" }] },
+        "change": { "text": "公式サイトのコンテンツが信頼できるものとして認識され、検索結果の信頼性が高まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-23T12:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うなら、管理者が PowerShell か CSOM で対象サイトを指定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "重要", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が指定したサイトは**信頼できる情報源**として扱われ、「From your organization」ラベルなどで公式コンテンツを見分けやすくなります", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者が SharePoint サイトを権限のあるサイトとして指定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-23T12:55:00Z" }] },
+            { "text": "現在のリリースでは PowerShell と CSOM API で構成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "重要", "retrievedAt": "2026-10-23T12:55:00Z" }] },
+            { "text": "指定はサイト レベルのみで、個人用サイトは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "最大 100 サイトまで指定でき、反映に最大 72 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-23T12:55:00Z" }] },
+            { "text": "複数地域（マルチ ジオ）のテナントは、地域ごとにデータを管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites",
+          "heading": "前提条件",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot ライセンスが必要（SharePoint の高度な管理の前提条件を参照）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "トラブルシューティング", "retrievedAt": "2026-10-23T12:55:00Z" }] },
+            { "text": "SharePoint Online 管理シェルでは Set-SPOSite の -IsAuthoritative で指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "SharePoint Online 管理シェルを使用して構成する", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "operations",
+          "heading": "運用のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "一覧を定期的に見直し、古いサイトや非公式サイトは削除する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "ライフサイクルとメンテナンス", "retrievedAt": "2026-10-23T12:55:00Z" }] },
+            { "text": "一括の指定・削除は CSOM（バージョン 16.1.26914.12004 以降）で行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "CSOM を使用した構成", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "authoritative-site", "term": "権限のあるサイト", "type": "feature", "oneLine": { "text": "管理者が公式の信頼できる情報源として指定した SharePoint サイト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-23T12:55:00Z" }] } },
+        { "termKey": "copilot-search", "term": "Copilot 検索", "type": "product", "oneLine": { "text": "組織のコンテンツを横断して探す検索で、信頼できるサイトの内容を識別して表示する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-23T12:55:00Z" }] } },
+        { "termKey": "csom", "term": "CSOM", "type": "term", "oneLine": { "text": "自動化や一括操作に使う SharePoint のクライアント側オブジェクト モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "CSOM を使用した構成", "retrievedAt": "2026-10-23T12:55:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能に変更が加わったことを示す、リリース ノート上の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "反映までどのくらいかかりますか？",
+          "answer": { "text": "変更がサポートされるエクスペリエンスに表示されるまで、最大 72 時間かかることがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+        },
+        {
+          "question": "ユーザー向けの画面上の変化はありますか？",
+          "answer": { "text": "「From your organization」ラベルなどの視覚的なシグナルで、信頼できる項目を識別できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-10-23T12:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/sharepoint/sharepoint-authoritative-sites",
+        "learn": [
+          { "title": "Copilot 検索の SharePoint 権限のあるサイト", "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locale": "ja-jp" },
+          { "title": "SharePoint の前提条件 高度な管理", "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-advanced-management-prerequisites", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
