@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2e0190e1c3837819",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot に「ライティング ブロック」が追加予定",
+        "subtitleJa": "下書きやメールを、チャットで相談しながらその場で編集できます",
+        "en": "Microsoft Copilot (Microsoft 365) Writing Blocks in M365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-08-21",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mobile"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot で文書やメールを作成する人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "下書き・メモ・メールなどを、チャットを使いながらその場で編集・改良できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中の段階。提供開始の続報を待てばよい", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot が**ライティング ブロック**に対応し、下書き・メモ・メールなどをインラインで編集しながらチャットで反復できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は下書き、メモ、メールなどの文章", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "インライン編集と Chat を組み合わせ、編集と改良を繰り返せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供対象はデスクトップとモバイル", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウド インスタンスは Worldwide（標準マルチテナント）が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの項目をウォッチし、ステージの変化を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "writing-blocks", "term": "ライティング ブロック", "type": "feature", "oneLine": { "text": "下書きやメール等をインラインで編集しつつ、チャットで改良できる Microsoft Copilot の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の開発中・提供中の機能を公開している一覧。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップのステージは開発中で、提供時期の月は示されていません。ステージが変わるまで待つ必要があります。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "ロードマップ上はデスクトップとモバイル、Worldwide（標準マルチテナント）が対象です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569428"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
