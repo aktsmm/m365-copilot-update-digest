@@ -73,6 +73,40 @@
         { "termKey": "current-channel", "term": "Current Channel", "type": "term", "oneLine": { "text": "ロードマップで示される、Microsoft 365 アプリの更新チャネルの一つ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり、提供が始まっていない状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "この機能を使うには Copilot ライセンスが必要ですか？",
+          "answer": {
+            "text": "ライセンスされた Microsoft Copilot 機能には、Microsoft Copilot ライセンスと対象の前提ライセンスが必要です。この機能自体の要件はロードマップに記載がなく、提供開始時に確認が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-requirements",
+                "locator": "ライセンスの要件",
+                "retrievedAt": "2026-10-23T21:55:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "メールボックスにはどんな前提条件がありますか？",
+          "answer": {
+            "text": "メールやメールボックス データを使う Copilot のエクスペリエンスには Exchange Online メールボックスが必要です。グループ メールボックスでは使えません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-copilot-requirements",
+                "locator": "メールボックスの要件",
+                "retrievedAt": "2026-10-23T21:55:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=508524",
         "learn": [
