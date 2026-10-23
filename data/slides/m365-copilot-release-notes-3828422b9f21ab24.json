@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-3828422b9f21ab24",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot で Web ソースを参照してプレゼンを作成",
+        "subtitleJa": "最新の Web 情報を取り込んだスライドを、Copilot に作ってもらえます",
+        "en": "Reference web sources when creating a presentation with Copilot in PowerPoint [Web, Windows, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot を使ってプレゼンを作る人**と、Web 検索を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "関連するオンライン ソースを参照するよう Copilot に依頼でき、最新情報を反映したプレゼンを作りやすくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026 / PowerPoint", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は「Copilot での Web 検索を許可する」ポリシーで Web 参照を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "管理コントロール", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot が**Web から関連情報を集め、参照したソースを使って**プレゼンを作成できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026 / PowerPoint", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint の Copilot が、プレゼン作成中に関連するオンライン ソースを参照できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026 / PowerPoint", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "対象は Web・Windows・Mac 版の PowerPoint", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026 / PowerPoint", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "Web コンテンツのセキュリティとプライバシーの基準を守りながら Web 情報を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Web 検索が有効な場合、Copilot は Bing 検索サービスから情報を取得することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "Web 検索", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "管理者はポリシーで、ユーザーやグループ単位の Web 検索の有効・無効を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "管理コントロール", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-try",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "PowerPoint で Copilot を開き、最新の Web 情報が役立つテーマでプレゼンの作成を依頼", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "生成されたスライドと参照ソースを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "privacy",
+          "heading": "プライバシーの扱い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Bing に送る検索クエリには、プロンプト全体や Microsoft 365 ファイル全体は含まれない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "Web 検索のしくみ", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "管理者は Web 検索クエリを検索・監査・電子情報開示の対象にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "Web 検索クエリのログ", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "組織の Web 検索ポリシーの設定を確認してから、利用者に案内する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "web-search", "term": "Web 検索", "type": "feature", "oneLine": { "text": "Copilot が応答の質を高めるため、Bing 検索サービスから Web 情報を取得する任意の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "bing", "term": "Bing 検索サービス", "type": "term", "oneLine": { "text": "Web 検索が有効なとき、Copilot が情報を取得する検索サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "Web 検索", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "web-policy", "term": "Copilot での Web 検索を許可する", "type": "term", "oneLine": { "text": "管理者が Web 検索へのアクセスを制御する主なポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "管理コントロール", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Web 参照は管理者が止められますか？",
+          "answer": { "text": "はい。「Copilot での Web 検索を許可する」ポリシーで、ユーザーやグループ単位で有効・無効を設定できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "管理コントロール", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "Web 検索で組織のファイル内容は外部に送られますか？",
+          "answer": { "text": "検索クエリにはプロンプト全体や Microsoft 365 ファイル全体は含まれません。ただし開いている文書のデータが生成クエリの手がかりになる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locator": "Web 検索のしくみ", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          { "title": "Microsoft Copilot と Copilot Chat での Web 検索のデータ、プライバシー、セキュリティ", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/manage-public-web-access", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
