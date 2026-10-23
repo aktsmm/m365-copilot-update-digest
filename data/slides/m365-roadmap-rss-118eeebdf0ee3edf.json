@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-118eeebdf0ee3edf",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Supply Chain Management の需要計画に生成インサイトの新指標（開発中）",
+        "subtitleJa": "販売履歴や予測データから、トレンドを自動で見つけられるようになります",
+        "en": "Dynamics 365 Supply Chain Management: Copilot and AI innovation - Analyze demand using generative insights for better planning"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Supply Chain Management", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Supply Chain Management",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Supply Chain Management で需要計画を扱うプランナー**と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "販売履歴や予測データの傾向を、AI が検出したパターンとして把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "一般提供に合わせて、生成インサイトに**新しい指標「トレンド」**が加わります。製品や拠点などの切り口で、データを動的にクラスター化して分析します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "想定される範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "需要計画の生成インサイトに、新指標「トレンド」を追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在の指標は「季節性」と「シグナルの相関関係」の 2 つ（運用準備完了プレビュー）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "クラスターごとに信頼度スコアと自然言語の説明を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "現行の生成分析情報は運用に対応したプレビュー機能で、追加使用条件が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locator": "Important", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "ロードマップ上の提供範囲は Worldwide (Standard Multi-Tenant) の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "分析する時系列を開き「分析情報の生成」を選ぶと、AI が分析情報を生成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locator": "手順 2", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "現行の季節性・相関の分析情報を試し、運用での見方に慣れておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "generative-insights", "term": "生成分析情報", "type": "feature", "oneLine": { "text": "AI モデルで計算した詳細な分析情報を提供する、需要計画の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] } },
+        { "termKey": "demand-planning", "term": "需要計画", "type": "feature", "oneLine": { "text": "Dynamics 365 Supply Chain Management で販売履歴や予測データを扱う計画機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "cluster", "term": "クラスター", "type": "term", "oneLine": { "text": "検出されたパターンに従ってデータをグループ化したもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発の段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "「トレンド」指標はいつ使えますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、一般提供に合わせて追加されるとされています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在の生成分析情報で使える指標は？",
+          "answer": { "text": "季節性とシグナルの相関関係の 2 つです。運用準備完了プレビューとして提供されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577817",
+        "learn": [{ "title": "需要計画に関する生成分析情報 (運用準備完了プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/demand-planning/generative-insights", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
