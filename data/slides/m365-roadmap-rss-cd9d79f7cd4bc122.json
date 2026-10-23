@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-cd9d79f7cd4bc122",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot が文書構造を使って長いファイルを読み取り、回答と引用が正確に",
+        "subtitleJa": "長く複雑なファイルでも、関連する章やページをたどって答えます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot improved long files navigation using document structure, enabling more accurate answers and clearer citations."
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "長いファイルを Copilot で読み取る**一般ユーザーと作成者**、および管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "見落としが減り、回答の引用がわかりやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップの記載では、利用側で必要な設定の案内はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "質問すると、Copilot が文書の**関連する部分（特定のセクションやページ）**へ移動してから回答します。見落としが減り、引用も明確になります",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "文書構造を認識し、長く複雑なファイルの読み取りを改善", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "回答の前に、関連するセクションやページへ移動できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）の Android とデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップのタグに「Cancelled」が付いている。提供状況は最新のロードマップで確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "長い文書で回答を試すときは、引用先が該当箇所かを見比べる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "ロードマップ上で「Microsoft Copilot (Microsoft 365)」と表記される、Microsoft 365 の Copilot。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "document-structure", "term": "文書構造", "type": "term", "oneLine": { "text": "文書内のセクションやページなど、内容の区切りのこと。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "citation", "term": "引用", "type": "term", "oneLine": { "text": "Copilot が回答の根拠として示す、元の文書の箇所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "ロードマップ上で、既存機能の改善を示す段階（Update）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者が行う設定はありますか？",
+          "answer": { "text": "ロードマップの記載には、管理者向けの設定や手順は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップには提供月が示されていません。タグに「Cancelled」が付いているため、最新のロードマップで状況を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=559614",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
