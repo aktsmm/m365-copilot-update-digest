@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d3be611efa020d88",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Customer Intent Agent で次善のアクションを Copilot ペインに表示（提供開始）",
+        "subtitleJa": "サービス担当者がワンクリックで Copilot のアクションを実行できます",
+        "en": "Dynamics 365 Customer Service: Copilot and AI innovation - View next best actions with Customer Intent Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Dynamics 365 Customer Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service のサービス担当者**と、その管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "次に取るべき対応が Copilot ペインに並び、ケース対応を素早く進められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T11:45:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "yes",
+        "summary": {
+          "text": "管理者が Customer Service admin center で組織全体に対して有効にする",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-23T11:45:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Next best actions をオンにすると、**担当者が使えるアクションが Copilot ペインに表示**され、重要なケース属性も一か所に集約されます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-23T11:45:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Next Best Action（NBA）: Copilot 搭載のアクションをワンクリックで実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T11:45:00Z" }] },
+            { "text": "アクション例: メールの作成、知識記事の更新、ケースノートの更新", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T11:45:00Z" }] },
+            { "text": "ナレッジ記事も提案され、推奨の理由を担当者が深く確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-23T11:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者が Customer Service admin center で組織全体に対して有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-23T11:45:00Z" }] },
+            { "text": "Next best actions をオンにすると、Copilot ペインにアクションが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-23T11:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の提供範囲は Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供リージョンと対応言語は、Microsoft の Feature Geography / Language レポートで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "地域・利用可能な言語", "retrievedAt": "2026-10-23T11:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "担当者向けに、ケース対応で使うアクションの流れを事前に共有しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "nba", "term": "Next Best Action（NBA）", "type": "feature", "oneLine": { "text": "サービス担当者がワンクリックで実行できる、Copilot 搭載の一連のアクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "ビジネス価値", "retrievedAt": "2026-10-23T11:45:00Z" }] } },
+        { "termKey": "customer-intent-agent", "term": "Customer Intent Agent", "type": "product", "oneLine": { "text": "Dynamics 365 Customer Service で、次善のアクションの表示に使われるエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-pane", "term": "Copilot ペイン", "type": "feature", "oneLine": { "text": "サービス担当者が使えるアクションが表示される画面領域。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "機能の詳細", "retrievedAt": "2026-10-23T11:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ一般提供になりましたか？",
+          "answer": { "text": "Learn のリリース プランでは、一般公開は 2026 年 8 月 19 日とされています。パブリック プレビューは 2026 年 8 月です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "表", "retrievedAt": "2026-10-23T11:45:00Z" }] }
+        },
+        {
+          "question": "利用できるリージョンや言語は？",
+          "answer": { "text": "Learn のページは、Feature Geography と Feature Language のレポートで確認するよう案内しています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locator": "地域・利用可能な言語", "retrievedAt": "2026-10-23T11:45:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577819",
+        "learn": [{ "title": "Customer Intent Agent で次のベスト アクションを見る", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/view-next-best-actions-customer-intent-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
