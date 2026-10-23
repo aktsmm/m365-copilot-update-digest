@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-bc18a17ad8da74f5",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot ノートブックに Teams 会議を参照として追加",
+        "subtitleJa": "会議の文字起こしやチャットを、Copilot の根拠情報にできます",
+        "en": "Teams Meetings in Copilot Notebooks [Android, Windows, iOS, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": null,
+        "products": ["OneNote"],
+        "categories": ["teams", "office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot ノートブックでプロジェクトを進める人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / OneNote", "retrievedAt": "2026-10-23T00:55:00Z" }] },
+        "change": { "text": "会議の議論や決定事項を根拠に、資料やブリーフの質を高められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / OneNote", "retrievedAt": "2026-10-23T00:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者側の事前対応は不要。ノートブックで参照を追加して使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / OneNote / Try this", "retrievedAt": "2026-10-23T00:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "ノートブックの参照として使えたのは、ファイルのみでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:55:00Z" }] },
+        "after": { "text": "**Teams 会議を参照に追加**し、文字起こし・ノート・チャット・共有ファイルを Copilot の根拠にできます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:55:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 の Copilot ノートブックで利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / OneNote", "retrievedAt": "2026-10-23T00:55:00Z" }] },
+            { "text": "対象プラットフォーム: Android、Windows、iOS、Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / OneNote", "retrievedAt": "2026-10-23T00:55:00Z" }] },
+            { "text": "会議の文字起こし・ノート・チャット・共有コンテンツを連携できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方と効果",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ノートブックで「参照を追加」を選び、最近の会議から選択する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:55:00Z" }] },
+            { "text": "プレゼンテーションやブリーフなど、後続の成果物の質が上がる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "プロジェクトの参照情報をまとめ、Copilot の回答の根拠にできるノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / OneNote", "retrievedAt": "2026-10-23T00:55:00Z" }] } },
+        { "termKey": "reference", "term": "参照（リファレンス）", "type": "term", "oneLine": { "text": "ノートブックに追加して、Copilot が根拠として使う情報源。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / OneNote", "retrievedAt": "2026-10-23T00:55:00Z" }] } },
+        { "termKey": "grounding", "term": "グラウンディング", "type": "term", "oneLine": { "text": "Copilot の回答を、特定の情報源の内容に基づかせること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-23T00:55:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリースノートに掲載された機能変更の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "以前は、どのような情報を参照にできましたか？",
+          "answer": { "text": "リリースノートによると、従来のノートブックで参照にできたのはファイルのみでした。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:55:00Z" }] }
+        },
+        {
+          "question": "会議はどこから選びますか？",
+          "answer": { "text": "ノートブックで「参照を追加」を選び、最近の会議から Teams 会議を選びます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
