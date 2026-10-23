@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-714ab4d2a53d86b5",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "エージェント応答の画像・埋め込み URL を環境ごとに制御",
+        "subtitleJa": "信頼できない画像やリンクから、ユーザーを守れます",
+        "en": "Control image rendering and embedded URLs in agent responses to help protect users from untrusted or potentially..."
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-chat", "copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio のエージェントを運用する管理者**と、エージェントの作成者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+        "change": { "text": "エージェント応答の画像とクリック可能なリンクの表示を、環境単位で制限できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "必要に応じて、Power Platform 管理センターで対象環境の設定を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "セキュリティタブで画像やURLをブロックする", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Power Platform 管理センターで、**環境または環境グループごとに画像と URL の表示を許可・ブロック**できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "画像とクリック可能なリンクの表示を、管理者が有効化・無効化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "画像や URL を悪用した機密データの流出リスクを軽減できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "設定は環境または環境グループごとに Power Platform 管理センターで行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "settings",
+          "heading": "選べる 3 つの設定",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "すべての画像やその他の URL をブロック", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "セキュリティタブで画像やURLをブロックする", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "信頼できない（会話に文脈的に関連しない）画像や URL のみブロック", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "セキュリティタブで画像やURLをブロックする", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "画像と URL をすべて許可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "セキュリティタブで画像やURLをブロックする", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ブロック時、ユーザーには組織のポリシーで制限されている旨のメッセージが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "画像レンダリングや埋め込みURLをオフにしたときのユーザー体験", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "文脈的に関連しない画像や URL は、クリックできないプレーンテキストになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "文脈的に信頼できない画像やURLをブロックします", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "trusted-sources",
+          "heading": "文脈的に関連するとみなされるもの",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントが引用した文書の画像や URL、ユーザーが入力した画像や URL", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "文脈的に信頼できない画像やURLをブロックします", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "Microsoft が go.microsoft.com で管理するコンテンツ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "文脈的に信頼できない画像やURLをブロックします", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "admin-path",
+          "heading": "設定場所",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "セキュリティ > 脅威検出 > 画像と URL を表示します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "セキュリティタブで画像やURLをブロックする", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "環境グループは、管理 > 環境グループ > ルール > 画像と URL を表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "セキュリティタブで画像やURLをブロックする", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず検証用の環境で設定を試し、エージェント応答の見え方を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "env-group", "term": "環境グループ", "type": "term", "oneLine": { "text": "複数の環境をまとめて、同じ設定を適用できる管理単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "セキュリティタブで画像やURLをブロックする", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "ppac", "term": "Power Platform 管理センター", "type": "product", "oneLine": { "text": "画像と URL の表示設定を、環境ごとに構成する管理画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "untrusted", "term": "信頼できない画像や URL", "type": "term", "oneLine": { "text": "エージェントの会話に文脈的に関連しない画像やクリック可能なリンク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "文脈的に信頼できない画像やURLをブロックします", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能に対する更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "設定の単位は何ですか？",
+          "answer": { "text": "環境または環境グループごとに設定できます。環境グループのルールからも設定できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "入れ子の画像や URL はどう扱われますか？",
+          "answer": { "text": "Markdown で別の画像や URL の中に入れ子になっている場合は信頼できないとみなされ、安全でない旨のメッセージに置き換えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locator": "文脈的に信頼できない画像やURLをブロックします", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/image-render-embedded-url",
+        "learn": [{ "title": "画像レンダリングと埋め込み URL の制御", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/image-render-embedded-url", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
