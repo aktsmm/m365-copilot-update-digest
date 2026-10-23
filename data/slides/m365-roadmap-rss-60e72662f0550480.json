@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-60e72662f0550480",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Customer Insights MCP サーバーでエージェントの AI 精度を向上（開発中）",
+        "subtitleJa": "顧客インサイトを根拠に、エージェントの回答精度を高められます",
+        "en": "Dynamics 365 Customer Insights - Data: Agents and Copilot - Increase AI accuracy by grounding agents in customer insights"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Customer Insights", "Dynamics 365 Customer Insights - Data", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Insights",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Customer Insights - Data を使い、エージェントを作る人**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+        "change": { "text": "統合プロファイルや予測インサイトを使い、エージェントがより的確に回答できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必須の対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントやチャットが、**統合された顧客プロファイルと AI 生成のインサイト**を MCP 経由で参照できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "機能の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MCP サーバーが Customer Insights - Data の機能を、エージェントの呼び出せるツールとして公開", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+            { "text": "統合プロファイル、計算された指標、セグメント メンバーシップ、CLV・チャーンリスクなどを取得", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+            { "text": "提供範囲: Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、内容は変更される可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "前提条件: ユーザーが Dataverse テーブルへのアクセス権を持つこと", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "前提条件", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Studio で、エージェントに MCP のツールとして追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "Customer Insights MCP Server をエージェントに追加する", "retrievedAt": "2026-10-23T07:30:00Z" }] },
+            { "text": "まず Dataverse のアクセス権の付与状況を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ci-data", "term": "Customer Insights - Data", "type": "product", "oneLine": { "text": "外部ソースのデータを統合し、統合顧客プロファイルなどのインサイトを生成する Dynamics 365 の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "LLM エージェントが呼び出せるツールを公開する、モデル コンテキスト プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] } },
+        { "termKey": "clv", "term": "CLV", "type": "term", "oneLine": { "text": "顧客生涯価値。チャーンリスクと並ぶ予測インサイトの例。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "エージェントにはどう追加しますか？",
+          "answer": { "text": "Copilot Studio でツールの追加から「モデル コンテキスト プロトコル」を選び、Customer Insights を検索して追加します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "Customer Insights MCP Server をエージェントに追加する", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+        },
+        {
+          "question": "どんなインサイトを取得できますか？",
+          "answer": { "text": "統合プロファイル、計算された指標、セグメント メンバーシップ、CLV やチャーンリスクの予測などです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locator": "冒頭", "retrievedAt": "2026-10-23T07:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577814",
+        "learn": [{ "title": "Customer Insights MCP サーバー内のツールを活用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/data/mcp-server-tools", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
