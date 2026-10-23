@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-bd6a24cad01ca4eb",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot が Adobe Experience Manager のアセットでプレゼンを作成（Windows）",
+        "subtitleJa": "組織の画像ライブラリを、PowerPoint のプレゼン作成に活用できます",
+        "en": "Copilot uses enterprise assets hosted on Adobe Experience Manager when creating presentations [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint でプレゼンを作る人**と、Copilot コネクタを管理する AI 管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Prerequisites", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+        "change": { "text": "Adobe Experience Manager の組織の画像を使って、Microsoft Copilot がプレゼンを作成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、AI 管理者が AEM Assets コネクタを展開する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Prerequisites / Deploy the connector", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Adobe Experience Manager に置いた**組織の画像**を、Microsoft Copilot がプレゼン作成時に使います", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象と範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AEM Assets コネクタが、公開済みのアセットを Microsoft 365 に取り込む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Access permissions", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "展開は Microsoft 365 管理センターの Copilot > コネクタ > ギャラリーから", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Deploy the connector", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "コネクタ作成後は、公開済みアセットのインデックス作成がすぐに始まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Roll out", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定では、インデックスされた公開アセットがテナント内の全ユーザーに見える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Access permissions", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "限定したユーザーやグループへの段階的な展開で、事前に検証できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Roll out", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites",
+          "heading": "前提条件",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI 管理者、Author と Publish の URL、Adobe のテクニカル アカウントが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Prerequisites", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "sync",
+          "heading": "同期とフィルター",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定の同期は、増分クロールが 15 分ごと、フル クロールが毎日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Roll out", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "取り込むパスやメタデータを、包含・除外ルールで絞り込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Content ingestion filters", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aem-assets", "term": "Adobe Experience Manager Assets", "type": "product", "oneLine": { "text": "Adobe のアセット管理。公開済みアセットを Copilot や検索に表示できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "冒頭", "retrievedAt": "2026-10-23T17:40:00Z" }] } },
+        { "termKey": "copilot-connector", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "外部データのコンテンツを Microsoft 365 に取り込み、Copilot や検索で使えるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "冒頭", "retrievedAt": "2026-10-23T17:40:00Z" }] } },
+        { "termKey": "staged-rollout", "term": "段階的なロールアウト", "type": "term", "oneLine": { "text": "限定したユーザーとグループにだけコネクタを展開して検証する方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Roll out", "retrievedAt": "2026-10-23T17:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "プレビューや提供開始以外の、機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は何を準備すればよいですか？",
+          "answer": { "text": "AI 管理者の権限、Adobe の Author と Publish の環境 URL、公開アセットにアクセスできるテクニカル アカウントが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Prerequisites", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+        },
+        {
+          "question": "最初から全ユーザーに公開されますか？",
+          "answer": { "text": "既定では全ユーザーに見えますが、限定したユーザーやグループへの段階的な展開も選べます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locator": "Roll out", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment",
+        "learn": [
+          { "title": "Deploy the Adobe Experience Manager Assets connector", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-deployment", "locale": "en-us" },
+          { "title": "Staged rollout for connectors", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/staged-rollout", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
