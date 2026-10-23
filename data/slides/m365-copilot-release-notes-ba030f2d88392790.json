@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-ba030f2d88392790",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "classic Outlook for Windows で Copilot チャットから会議を調整",
+        "subtitleJa": "チャットで頼むだけで、空き時間の検索から招待の送信まで進みます",
+        "en": "Scheduling with Copilot chat in classic Outlook for Windows [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Outlook"],
+        "categories": ["copilot-chat", "outlook", "edge-windows"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**classic Outlook for Windows で Microsoft Copilot ライセンスを使うユーザー**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Outlook: Scheduling with Copilot chat in classic Outlook for Windows (2026-08-25)", "retrievedAt": "2026-10-23T00:30:00Z" }] },
+        "change": { "text": "会議の調整をチャットから離れずに進められ、手作業が減る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Why", "retrievedAt": "2026-10-23T00:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "段階的に展開される。ライセンスがあれば特別な対応は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "これまで、スケジュールの調整にはチャット外での手作業が必要でした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] },
+        "after": { "text": "チャットで頼むか「**Schedule with Copilot**」を押すだけで、空き時間の検索・会議室の予約・アジェンダ作成・招待送信まで進みます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "チャットで同僚との会議調整を依頼、または UI の「Schedule with Copilot」をクリック", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] },
+            { "text": "Copilot が空き時間を探し、会議室を予約し、アジェンダを作成して招待を送信", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "classic Outlook for Windows を開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-23T00:30:00Z" }] },
+            { "text": "Copilot とのチャットを始めるか「Schedule with Copilot」をクリックし、会議の調整を依頼", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] },
+            { "text": "対象は Windows 版の classic Outlook", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Outlook: Scheduling with Copilot chat in classic Outlook for Windows (2026-08-25)", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "展開状況",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "段階的に展開中（Roadmap ID: 542185）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Roadmap ID / What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "日程調整が多いチームで先に試し、会議室予約の動作を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "classic-outlook", "term": "classic Outlook for Windows", "type": "product", "oneLine": { "text": "今回の機能の対象となる、Windows 向けの Outlook。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Outlook: Scheduling with Copilot chat in classic Outlook for Windows (2026-08-25)", "retrievedAt": "2026-10-23T00:30:00Z" }] } },
+        { "termKey": "schedule-with-copilot", "term": "Schedule with Copilot", "type": "feature", "oneLine": { "text": "UI 上のボタン。クリックすると Copilot が会議の調整を進める。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot チャット", "type": "feature", "oneLine": { "text": "Copilot に自然な言葉で依頼できるチャット。今回は会議の調整にも使える。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "提供が段階的に始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "利用に必要なライセンスは？",
+          "answer": { "text": "Microsoft Copilot ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+        },
+        {
+          "question": "すべてのユーザーにすぐ使えますか？",
+          "answer": { "text": "いいえ。段階的に展開されているため、表示時期にばらつきがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T00:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
