@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-adf3bc517778cec3",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "政府機関向けクラウドで、MCP エージェントの対話型 UI ウィジェットに対応",
+        "subtitleJa": "エージェントがチャット内でリッチな操作画面を表示できます",
+        "en": "Microsoft Copilot (Microsoft 365): Support for MCP Agents with Interactive UI Widgets in Government Clouds"
+      },
+      "meta": {
+        "publishedJst": "2026-08-19",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**政府機関向けクラウド（GCC / GCC High / DoD）でエージェントを作る開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "MCP ベースのエージェントが、チャット内に対話型 UI ウィジェットを表示できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、MCP サーバー側で UI ウィジェットを実装する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP アプリの前提条件", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントがテキスト応答だけでなく、**構造化された対話型ウィジェット**をチャットに直接表示できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "冒頭", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MCP アプリ: MCP サーバーが提供し、Copilot 内で動く対話型 UI ウィジェット", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "冒頭", "retrievedAt": "2026-10-23T10:00:00Z" }] },
+            { "text": "ツールが対話型 UI を返す MCP サーバー ベースのプラグインを宣言型エージェントに追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "冒頭", "retrievedAt": "2026-10-23T10:00:00Z" }] },
+            { "text": "MCP Apps と OpenAI Apps SDK の両方で作る UI ウィジェットに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "冒頭", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "リモート MCP サーバーと、Agents Toolkit 6.12.0 以降（VS Code）を用意", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP アプリの前提条件", "retrievedAt": "2026-10-23T10:00:00Z" }] },
+            { "text": "エージェントを作成・サイドロードし、MCP サーバーを呼ぶ依頼で UI の表示を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "エージェントをテストする", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "認証は OAuth 2.1 と Microsoft Entra SSO。開発中のみ匿名認証も可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP サーバー要件", "retrievedAt": "2026-10-23T10:00:00Z" }] },
+            { "text": "全画面表示のみ対応。ファイル アップロードなど一部 API は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "コンポーネント ブリッジ", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象クラウドは GCC・GCC High・DoD、対応環境はデスクトップと Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "データの視覚化、フォーム、タスク管理などの画面をチャット内で提供できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP アプリとは", "retrievedAt": "2026-10-23T10:00:00Z" }] },
+            { "text": "API の可否を確認し、未対応時の代替 UI を用意する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "API の可用性を確認する", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp-apps", "term": "MCP アプリ", "type": "feature", "oneLine": { "text": "MCP サーバーが提供し、Copilot 内で直接表示される対話型 UI ウィジェット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP アプリとは", "retrievedAt": "2026-10-23T10:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "冒頭", "retrievedAt": "2026-10-23T10:00:00Z" }] } },
+        { "termKey": "openai-apps-sdk", "term": "OpenAI Apps SDK", "type": "term", "oneLine": { "text": "MCP Apps 標準に基づき、ChatGPT 固有の機能を加えたアプリ構築ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP Apps と OpenAI Apps SDK の違い", "retrievedAt": "2026-10-23T10:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進行中の段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "MCP Apps と OpenAI Apps SDK のどちらで作るべきですか？",
+          "answer": { "text": "Microsoft Copilot は両方をサポートしますが、すべての機能が使えるわけではありません。対応状況は Learn の機能一覧で確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "MCP Apps と OpenAI Apps SDK の違い", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+        },
+        {
+          "question": "開発中に認証なしで試せますか？",
+          "answer": { "text": "はい。開発目的では匿名認証が使えますが、運用環境にデプロイする前に認証を追加する必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-23T10:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=564608",
+        "learn": [{ "title": "Microsoft 365 Copilot の宣言型エージェントに MCP アプリを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/plugin-mcp-apps", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
