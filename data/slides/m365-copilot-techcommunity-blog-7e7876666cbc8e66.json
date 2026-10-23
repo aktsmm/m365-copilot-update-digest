@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-7e7876666cbc8e66",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "ドメイン除外で Microsoft Copilot の Web グラウンディングを制御",
+        "subtitleJa": "Web 検索で参照させたくないサイトを、管理者が除外できます",
+        "en": "More control over web grounding with Domain Exclusion for Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の管理者**（検索管理者またはグローバル管理者）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "前提条件", "retrievedAt": "2026-10-23T20:40:00Z" }] },
+        "change": { "text": "Web グラウンディングで参照させないサイトを、テナント単位で指定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既定では未設定。使う場合は PowerShell スクリプトを実行してオプトインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**最大 1,000 サイト**を Web グラウンディングから除外できます。除外は管理者が PowerShell スクリプトで構成します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot と Copilot Chat の Web グラウンディングが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] },
+            { "text": "ConfigureTenantDomainExclusions.ps1 で構成の取得・作成・更新・削除ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] },
+            { "text": "Cowork も、組織のドメイン除外ポリシーを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "注", "retrievedAt": "2026-10-23T20:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "導入前の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "検索管理者またはグローバル管理者でサインインし、CSV は 1,000 件以内", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "前提条件", "retrievedAt": "2026-10-23T20:40:00Z" }] },
+            { "text": "Web ページの結果のみが対象。ニュースなど他の回答バーティカルは引用される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "制限事項", "retrievedAt": "2026-10-23T20:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "web-grounding", "term": "Web グラウンディング", "type": "term", "oneLine": { "text": "Copilot が回答時に Web コンテンツを参照する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locator": "冒頭", "retrievedAt": "2026-10-23T20:40:00Z" }] } },
+        { "termKey": "domain-exclusion", "term": "ドメイン除外", "type": "feature", "oneLine": { "text": "Web グラウンディングから除外するサイトを、最大 1,000 個指定できる管理機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] } },
+        { "termKey": "include-subpages", "term": "IncludeSubPages", "type": "term", "oneLine": { "text": "除外にすべてのサブページを含めるかを True/False で指定する CSV の列。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "CSV ファイル形式", "retrievedAt": "2026-10-23T20:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "発表元の段階表記が Update の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "除外の設定はどう管理しますか？",
+          "answer": { "text": "PowerShell スクリプトで、構成の取得（CSV 出力）、作成、更新、削除ができます。更新すると古い構成は新しい構成に置き換わります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "PowerShell を使用してドメインの除外を構成する", "retrievedAt": "2026-10-23T20:40:00Z" }] }
+        },
+        {
+          "question": "既定で有効になりますか？",
+          "answer": { "text": "いいえ。既定の設定にはドメイン除外構成は含まれず、スクリプトを実行してオプトインします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] }
+        },
+        {
+          "question": "サブドメインも指定できますか？",
+          "answer": { "text": "現在は最大 2 つのレベルのサブドメインをサポートしています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "概要", "retrievedAt": "2026-10-23T20:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/more-control-over-web-grounding-with-domain-exclusion-for/ba-p/4540151",
+        "learn": [
+          { "title": "ドメイン除外の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot と Copilot Chat での Web 検索のデータ、プライバシー、セキュリティ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
