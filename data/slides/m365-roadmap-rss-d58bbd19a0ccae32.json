@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d58bbd19a0ccae32",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot のチャットがコード ブロックに対応",
+        "subtitleJa": "コードやグラフ、図をチャット内でそのままプレビューできます",
+        "en": "Microsoft Copilot (Microsoft 365): Code Blocks in M365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mobile"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot のチャットでコードを扱うユーザー**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コードやグラフ、図をチャット内で直接プレビューできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点では開発中のため、対応は不要。ロードマップの更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "コードは、横に並んだコード キャンバスでプレビューしていました", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "**コード ブロック**により、チャットの中でコード、グラフ、図などを直接プレビューできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供内容の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot がコード ブロックに対応する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "コード、グラフ、図などをチャット内でインライン表示してプレビュー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の段階は「開発中」", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "対象環境",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プラットフォーム: デスクトップとモバイル", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウド: Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供時期はロードマップの更新を見て確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "code-blocks", "term": "コード ブロック", "type": "feature", "oneLine": { "text": "コードやグラフ、図などをチャット内でインライン表示してプレビューできる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "code-canvas", "term": "コード キャンバス", "type": "feature", "oneLine": { "text": "コードをチャットの横に並べてプレビューする、これまでの表示方法。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "コード ブロックはいつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されておらず、現時点では開発中です。更新はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "これまでのコード キャンバスはどうなりますか？",
+          "answer": { "text": "ロードマップには、これまでコード キャンバスで横並びにプレビューしていたことのみ記載があり、今後の扱いは示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569429",
+        "learn": [
+          { "title": "2025 Microsoft 365 Copilot リリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-29,-2025", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
