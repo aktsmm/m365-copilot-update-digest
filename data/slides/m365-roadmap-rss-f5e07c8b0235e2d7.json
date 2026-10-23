@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f5e07c8b0235e2d7",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Purview DLP が Copilot の外部 Web 検索で機密情報を保護（展開中）",
+        "subtitleJa": "機密情報を含むプロンプトでは、外部 Web 検索の利用を自動でブロックします",
+        "en": "Microsoft Purview: Data Loss Prevention - Data Loss Prevention to safeguard sensitive information from external web search in Microsoft 365 Copilot and Copilot Chat"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Purview"],
+        "categories": ["copilot-chat", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot と Copilot Chat を使う組織の**情報セキュリティ・コンプライアンス管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "機密データが外部の Web 検索に送られるリスクを、リアルタイムに抑えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用するには、Web 検索の実行を禁止する DLP ポリシーを管理者が作成する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "Web 検索で機密情報の種類をブロックする", "retrievedAt": "2026-10-23T20:15:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "プロンプトに機密情報の種類（SIT）が含まれると、**外部 Web 検索を自動でブロック**し、許可された社内の Microsoft 365 データだけで回答します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プロンプトに SIT（クレジット カード番号、パスポート番号など）が含まれるか判定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] },
+            { "text": "該当時は外部 Web 検索を根拠として使わず、社内データで応答を生成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] },
+            { "text": "該当プロンプトのテキストは、外部の検索プロバイダーに送信されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Purview の DLP ポリシーで、場所に Microsoft 365 Copilot と Copilot Chat を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "Web 検索で機密情報の種類をブロックする", "retrievedAt": "2026-10-23T20:15:00Z" }] },
+            { "text": "条件に SIT を設定し、アクションを「Web 検索の実行」の禁止にして保存・有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "Web 検索で機密情報の種類をブロックする", "retrievedAt": "2026-10-23T20:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "同じルール内で、SIT の条件と秘密度ラベルの条件は併用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "ポリシーの場所", "retrievedAt": "2026-10-23T20:15:00Z" }] },
+            { "text": "ポリシーの作成・編集には、Purview データ セキュリティ AI 管理などの役割が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "アクセス許可", "retrievedAt": "2026-10-23T20:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の対象クラウドは GCC、GCC High、DoD（プラットフォームは Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "顧客の機密データが外部の Web 検索プロバイダーに送られないよう、SIT でプロンプトを検出する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "Web 検索での SIT をブロックするユース ケースの例", "retrievedAt": "2026-10-23T20:15:00Z" }] },
+            { "text": "まず対象を絞ったポリシーで挙動を確認してから広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "purview-dlp", "term": "Microsoft Purview データ損失防止（DLP）", "type": "product", "oneLine": { "text": "Copilot との対話で機密データの扱いを制御できる Purview の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] } },
+        { "termKey": "sit", "term": "機密情報の種類（SIT）", "type": "term", "oneLine": { "text": "クレジット カード番号などを検出するための定義。独自のカスタム SIT も作成できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Microsoft Copilot とともに、この DLP ポリシーの場所として指定できるチャット体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進行している段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "外部 Web 検索がブロックされると、Copilot は応答しなくなりますか？",
+          "answer": { "text": "いいえ。外部 Web 検索を根拠にしないだけで、許可された社内の Microsoft 365 データ ソースを使って応答を生成し続けます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] }
+        },
+        {
+          "question": "プロンプト自体を制限する DLP とは何が違いますか？",
+          "answer": { "text": "プロンプトの処理自体を制限するアクションもあり、その場合は機密性の高いプロンプトに応答しません。今回の更新は Web 検索の実行だけを禁止します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locator": "概要", "retrievedAt": "2026-10-23T20:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565870",
+        "learn": [
+          { "title": "Microsoft Purview DLP による Microsoft 365 Copilot、Copilot Chat、Cowork との対話の保護", "url": "https://learn.microsoft.com/ja-jp/purview/dlp-microsoft365-copilot-location-learn-about", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
