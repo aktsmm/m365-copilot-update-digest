@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-4fcbe55116767fc1",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot が Adobe Experience Manager の企業アセットでプレゼンを作成",
+        "subtitleJa": "組織の画像ライブラリを使った PowerPoint の資料作成に対応します",
+        "en": "Copilot uses enterprise assets hosted on Adobe Experience Manager when creating presentations [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で資料を作る人**と、Copilot コネクタを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "組織の画像ライブラリの素材を使って、Copilot がプレゼンテーションを作成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、AEM のアセット ライブラリを Microsoft 365 と Copilot に接続する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "AEM のアセット ライブラリを接続すると、Copilot が**組織の画像を使ってプレゼンテーションを作成**します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: AEM でホストする組織のアセット ライブラリ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AEM Assets コネクタは公開済みアセットをインデックスし、Copilot から検索・プレビュー・再利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "概要", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "承認済みのロゴや製品画像を Word・PowerPoint・Teams などで使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "概要", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コネクタは権限を取得せず、公開アセットはテナントの全ユーザーに見える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "機能と制限", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "対応は AEM Assets（Cloud）のみ。Sites など他の AEM は別コネクタが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "機能と制限", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "indexing",
+          "heading": "インデックス対象",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定で公開アセットのメタデータが対象。100 MB 未満の PDF は内容も対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "インデックスされるデータ型", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "パスやメタデータによる取り込みフィルターで対象を絞れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "機能と制限", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aem", "term": "Adobe Experience Manager（AEM）", "type": "term", "oneLine": { "text": "組織のブランド画像などを管理するデジタル アセット管理（DAM）システムとして使われる Adobe の製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "概要", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "aem-connector", "term": "AEM Assets コネクタ", "type": "feature", "oneLine": { "text": "AEM Assets の公開アセットをインデックスし、Copilot や Microsoft Search で使えるようにするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "概要", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "接続したアセットは誰に見えますか？",
+          "answer": { "text": "コネクタは権限を取得しないため、インデックスされた公開アセットはテナントの全ユーザーに見えます。管理者はパスやメタデータのフィルターで対象を選べます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "権限モデル", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "画像以外のファイルも検索対象ですか？",
+          "answer": { "text": "メタデータは PDF・PNG・JPG などで取り込まれ、内容ベースの取得は 100 MB 未満の PDF のみ対応です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locator": "インデックスされるデータ型", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          { "title": "Adobe Experience Manager Assets connector overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/adobe-experience-manager-assets-overview", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
