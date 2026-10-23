@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-415031901cf3aa0c",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio で Azure SQL テーブルを知識ソースに追加可能に",
+        "subtitleJa": "業務データベースの構造化データに基づいて、エージェントが回答できます",
+        "en": "Add Azure SQL tables as a knowledge source to ground your agent in structured data from your Azure SQL database or..."
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Azure SQL の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Prerequisites", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+        "change": { "text": "Azure SQL Database や SQL Server の業務データに基づく回答をエージェントに持たせられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "概要", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うには、接続とテーブルの読み取り権限、Power Platform からのネットワーク到達性が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Prerequisites", "retrievedAt": "2026-10-23T21:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントの**知識**に Azure SQL を追加し、選んだテーブルのデータから質問に答えさせられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Add Azure SQL tables to your agent", "retrievedAt": "2026-10-23T21:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できること",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Azure SQL Database または SQL Server のテーブルを知識ソースに追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Azure SQL データベースを準備してください", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+            { "text": "回答は、ユーザーが接続とデータベース権限で到達できるデータに基づく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "権限と認証", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+            { "text": "ビルド → 知識 → 追加 → Azure SQL を選び、接続とテーブルを指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Add Azure SQL tables to your agent", "retrievedAt": "2026-10-23T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "導入前の確認",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Power Platform から到達できる Azure SQL Database / Managed Instance が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Prerequisites", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+            { "text": "各テーブルに主キーを定義し、分かりやすい列名にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Azure SQL データベースを準備してください", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+            { "text": "必要なテーブルだけを選ぶ。余分なテーブルは回答の精度を下げる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "回答の質を向上させる", "retrievedAt": "2026-10-23T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "after-setup",
+          "heading": "追加後の作業",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントを公開し、テーブルから答えられる質問でテストする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "知識源を追加した後", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+            { "text": "結果が空や誤りなら、データとクエリがスキーマと整合しているか確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "知識源を追加した後", "retrievedAt": "2026-10-23T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "quality",
+          "heading": "回答品質のコツ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "業務ドメインを反映した知識名と、対象データ・用途を書いた説明を付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "回答の質を向上させる", "retrievedAt": "2026-10-23T21:40:00Z" }] },
+            { "text": "小さな診断ビューで接続を確認してから本番テーブルを使う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "knowledge-source", "term": "知識ソース", "type": "feature", "oneLine": { "text": "エージェントが回答の根拠にするデータの接続先。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Add Azure SQL tables to your agent", "retrievedAt": "2026-10-23T21:40:00Z" }] } },
+        { "termKey": "azure-sql", "term": "Azure SQL", "type": "product", "oneLine": { "text": "Azure SQL Database や SQL Managed Instance など、Azure 上のリレーショナル データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Prerequisites", "retrievedAt": "2026-10-23T21:40:00Z" }] } },
+        { "termKey": "primary-key", "term": "主キー", "type": "term", "oneLine": { "text": "行を一意に特定する列。エージェントは主キーで行を特定して結果を返す。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "Azure SQL データベースを準備してください", "retrievedAt": "2026-10-23T21:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "What's new in Copilot Studio に掲載された機能更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どの権限で回答が返されますか？",
+          "answer": { "text": "作成者が設定した接続とデータベース権限でアクセスできるデータに基づいてのみ回答されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "権限と認証", "retrievedAt": "2026-10-23T21:40:00Z" }] }
+        },
+        {
+          "question": "セットアップ時にテーブルが一覧に出ない場合は？",
+          "answer": { "text": "Copilot Studio の外で接続が成功し、アカウントがテーブルを一覧・読み取りできるか確認してください。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locator": "権限と認証", "retrievedAt": "2026-10-23T21:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables",
+        "learn": [
+          { "title": "Azure SQL テーブルを知識ソースとして追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-add-azure-sql-tables", "locale": "ja-jp" },
+          { "title": "エージェントをテストする", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-test-bot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
