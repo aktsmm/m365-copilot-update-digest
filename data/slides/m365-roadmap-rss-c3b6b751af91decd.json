@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c3b6b751af91decd",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dynamics 365 Contact Center の設定を Service Operations Agent で効率化",
+        "subtitleJa": "チャネルや音声の設定を、対話しながら進められます",
+        "en": "Dynamics 365 Contact Center: Administrator experiences - Use Service Operations Agent to accelerate setup, onboard, and verify config changes"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Contact Center",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Contact Center の管理者**と構成を担当する作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャネル・音声・Teams Phone などの設定作業を、対話形式で効率化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用するにはオムニチャネル管理者ロールと従量課金の設定が必要",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "前提条件", "retrievedAt": "2026-10-23T06:55:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Copilot Service admin center の Service Operations Agent で、**自然言語の指示によりコンタクト センターを設定**できます。実行時も人が手順に関与します",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "会話のセットアップ", "retrievedAt": "2026-10-23T06:55:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "構成・検証・トラブルシューティングを支援するセルフサービス AI エージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "キューやワークストリームなどの Dataverse テーブルを会話形式で設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "電話番号を Azure Communication Services と Teams に同期できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "チャンネルの設定", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Service admin center の Conversational Setup タイルで「起動」を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "アクセス手順", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "MCP サーバー経由の Dataverse 接続を促されるので「許可」を 1 回選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "アクセス手順", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "オムニチャネル管理者ロールが必要。英語のみで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "前提条件 / サポートされている機能", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "Power Platform の従量課金プランと Azure サブスクリプションが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "前提条件", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "手動設定が必要な範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ルール内の条件の追加・編集や分類ルールセットは未対応で、管理センターで手動設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "ルーティングルールの作成と管理", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "キューのカスタム割り当て方式は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "キューの管理", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "「音声ワークストリームの作成を手伝って」など、チャネルを明示して依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "プロンプトの例を使用する", "retrievedAt": "2026-10-23T06:55:00Z" }] },
+            { "text": "Application Insights を接続すると、設定中の問題を調査できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "前提条件", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "service-operations-agent", "term": "Service Operations Agent", "type": "feature", "oneLine": { "text": "構成、検証、トラブルシューティングで管理者を支援するセルフサービス AI エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "冒頭", "retrievedAt": "2026-10-23T06:55:00Z" }] } },
+        { "termKey": "workstream", "term": "ワークストリーム", "type": "term", "oneLine": { "text": "チャネルの構成とキューへの振り分けをまとめるコンタクト センターの設定単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "ワークストリームの作成と管理", "retrievedAt": "2026-10-23T06:55:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "アクセス手順", "retrievedAt": "2026-10-23T06:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "日本語で指示できますか？",
+          "answer": { "text": "Learn では、Service Operations Agent は英語のみで利用できると記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "サポートされている機能", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+        },
+        {
+          "question": "エージェントが勝手に設定を変更しませんか？",
+          "answer": { "text": "セットアップでは、エージェントが手順を実行する間も人がプロセスに関与し続ける設計です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "会話のセットアップ", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+        },
+        {
+          "question": "必要なロールと課金は？",
+          "answer": { "text": "オムニチャネル管理者ロールが必要で、実行時の課金のため従量課金プランの設定が前提です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locator": "前提条件", "retrievedAt": "2026-10-23T06:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577808",
+        "learn": [{ "title": "サービス操作エージェントを使用する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/use-service-operations-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
