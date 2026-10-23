@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-856cfa3ee03c75a5",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Customer Insights - Journeys のアウトリーチ最適化エージェントで送信タイミングを改善",
+        "subtitleJa": "メールの送信時間とシーケンスの間隔を、エージェントが自動で決めます",
+        "en": "Dynamics 365 Customer Insights - Journeys: Improve engagement and message timing with Outreach Optimization Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Dynamics 365 Customer Insights - Journeys"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Customer Insights - Journeys でジャーニーを作るマーケター**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メールの最適な送信時間を、手動で分析せずにエージェントへ任せられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "主な利点", "retrievedAt": "2026-10-23T05:45:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うには AI ハブでエージェントを有効にし、Copilot クレジットの割り当てを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "Prerequisites", "retrievedAt": "2026-10-23T05:45:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "ジャーニーに**エージェントのステップを追加**し、送るメールを選ぶだけで、タイミングと間隔を自動で調整します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "アウトリーチ最適化エージェントの機能", "retrievedAt": "2026-10-23T05:45:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "過去のエンゲージメント傾向から、反応が高い送信時間を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "アウトリーチ最適化エージェントの機能", "retrievedAt": "2026-10-23T05:45:00Z" }] },
+            { "text": "1 通でも複数メールのシーケンスでも、各送信を最適な時間に配置", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "送信するメールを選択する", "retrievedAt": "2026-10-23T05:45:00Z" }] },
+            { "text": "履歴データがない場合は汎用のフォールバック戦略で送信", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "アウトリーチ最適化エージェントの機能", "retrievedAt": "2026-10-23T05:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn ではプレビュー機能。本番用途向けではなく、機能が制限されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "Important", "retrievedAt": "2026-10-23T05:45:00Z" }] },
+            { "text": "利用すると Copilot クレジットを消費する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "Important", "retrievedAt": "2026-10-23T05:45:00Z" }] },
+            { "text": "静かな時間と連絡先の同意設定を尊重し、オプトアウトには送信しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "アウトリーチ最適化エージェントの機能", "retrievedAt": "2026-10-23T05:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI ハブでアウトリーチ最適化エージェントを有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "Prerequisites", "retrievedAt": "2026-10-23T05:45:00Z" }] },
+            { "text": "複数メールでは目標（全送信・任意のリンク・指定リンク）と終了日を決める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "複数メール シーケンスの目標オプション", "retrievedAt": "2026-10-23T05:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "outreach-agent", "term": "アウトリーチ最適化エージェント", "type": "feature", "oneLine": { "text": "メールの送信タイミングを最適化する、AI 搭載のジャーニー ステップ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "冒頭", "retrievedAt": "2026-10-23T05:45:00Z" }] } },
+        { "termKey": "journeys", "term": "Customer Insights - Journeys", "type": "product", "oneLine": { "text": "Dynamics 365 のマーケティング アプリ。エージェントはジャーニー内のステップとして動く。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "冒頭", "retrievedAt": "2026-10-23T05:45:00Z" }] } },
+        { "termKey": "quiet-time", "term": "静かな時間", "type": "term", "oneLine": { "text": "組織で設定する、メールを送らない時間帯。エージェントも従う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "アウトリーチ最適化エージェントの機能", "retrievedAt": "2026-10-23T05:45:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "複数のメールを送る場合、何を設定しますか？",
+          "answer": { "text": "送るメールと、全送信・任意のリンク・指定リンクのいずれかの目標、終了日を設定します。すべての送信は終了日より前に行われます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "終了日を定義する", "retrievedAt": "2026-10-23T05:45:00Z" }] }
+        },
+        {
+          "question": "費用面で注意することはありますか？",
+          "answer": { "text": "利用すると Copilot クレジットが消費されます。割り当ては Copilot Studio の容量設定で調整します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locator": "Important", "retrievedAt": "2026-10-23T05:45:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577417",
+        "learn": [
+          { "title": "Customer Insights - Journeysのアウトリーチ最適化エージェント (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-insights/journeys/outreach-optimization-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
