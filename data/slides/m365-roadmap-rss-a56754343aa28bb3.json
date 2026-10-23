@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-a56754343aa28bb3",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams Rooms on Android の Facilitator が対面会議の AI ノートに対応",
+        "subtitleJa": "ルームのコンソールからワンタップで、対面会議のメモ・決定事項・アクションを残せます",
+        "en": "Microsoft Teams: AI-powered notes for in-person meetings with Facilitator in Teams Rooms on Android"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC"],
+        "platforms": [],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams Rooms on Android を使う会議室の参加者**と、Teams Rooms の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対面会議でも、メモ・決定事項・アクションを AI が会議室の画面に表示してくれる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Windows 版では、管理ポータルでの有効化と Teams Rooms Pro ライセンスが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "Teams Rooms での予定外会議のファシリテーター", "retrievedAt": "2026-10-23T01:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議室のコンソールで **Facilitator を招待**すると、対面の議論が AI ノートとしてまとめられ、画面に表示されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "会議エクスペリエンス", "retrievedAt": "2026-10-23T01:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "予定・ハイブリッド・アドホックの会議で、リアルタイムのメモとアクション項目を作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "冒頭", "retrievedAt": "2026-10-23T01:50:00Z" }] },
+            { "text": "Android 版 Teams Rooms では、ルーム コンソールのワンタップで Facilitator を招待", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "メモは会議の進行に合わせて自動更新され、画面に表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "会議エクスペリエンス", "retrievedAt": "2026-10-23T01:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Facilitator は現在 Windows 版 Teams Rooms のパブリック プレビュー。Android 版は後日提供予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-23T01:50:00Z" }] },
+            { "text": "QR コードで開始したユーザーのみ話者が特定され、他の参加者は「発表者 1」などと表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "Teams Rooms のファシリテーター", "retrievedAt": "2026-10-23T01:50:00Z" }] },
+            { "text": "フェデレーション ユーザーや外部ユーザーは、オフライン ノートを使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "Teams Rooms のファシリテーター", "retrievedAt": "2026-10-23T01:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Windows 版の設定: リソース アカウントに Teams Rooms Pro ライセンスを割り当て、管理ポータルで有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "Teams Rooms での予定外会議のファシリテーター", "retrievedAt": "2026-10-23T01:50:00Z" }] },
+            { "text": "会議は録音されず文字起こしのみ有効になることを、利用者へ先に周知する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "facilitator", "term": "Facilitator", "type": "feature", "oneLine": { "text": "会議中の会話を自動でメモし、要約やアクション項目を作成する AI 搭載エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "冒頭", "retrievedAt": "2026-10-23T01:50:00Z" }] } },
+        { "termKey": "teams-rooms", "term": "Teams Rooms", "type": "product", "oneLine": { "text": "会議室のコンソールとディスプレイで Teams 会議を行うためのデバイス構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "Teams Rooms のファシリテーター", "retrievedAt": "2026-10-23T01:50:00Z" }] } },
+        { "termKey": "teams-rooms-pro", "term": "Teams Rooms Pro", "type": "term", "oneLine": { "text": "Facilitator の QR コード設定を行う管理ポータルと、リソース アカウントに割り当てるライセンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "Teams Rooms での予定外会議のファシリテーター", "retrievedAt": "2026-10-23T01:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Facilitator は会議を録音しますか？",
+          "answer": { "text": "いいえ。会議中にのみ文字起こしを有効にし、会議は記録されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-23T01:50:00Z" }] }
+        },
+        {
+          "question": "会議の後、メモはどこで見られますか？",
+          "answer": { "text": "Teams の予定表で、会議の「要約」から「メモ」を開くと確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-23T01:50:00Z" }] }
+        },
+        {
+          "question": "会議中に Facilitator を止められますか？",
+          "answer": { "text": "ルームのマイクをミュートするか、名簿で Facilitator を選んで削除できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-23T01:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560700",
+        "learn": [
+          { "title": "Microsoft Teams Rooms のファシリテーター", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/facilitator-teams-rooms", "locale": "ja-jp" },
+          { "title": "Microsoft Teams Rooms のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/rooms-release-note#teams-rooms-on-android-feature-introduction-and-issue-resolution", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
