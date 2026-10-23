@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-60c66e265572b654",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "PowerPoint のエージェント モードで SharePoint・OneDrive のファイルを参照",
-        "subtitleJa": "プレゼンテーション作成時に、保存済みのファイルを材料として使えるようになります",
+        "ja": "PowerPoint の Agent Mode で SharePoint ライブラリと OneDrive のファイルを参照（提供開始）",
+        "subtitleJa": "保存済みのファイルを、プレゼンテーション作成の材料として指定できます",
         "en": "Microsoft Copilot (Microsoft 365): Reference files saved in SharePoint libraries and OneDrive folders when creating a presentation with Agent Mode in PowerPoint"
       },
       "meta": {
-        "publishedJst": "2026-08-22",
+        "publishedJst": "2026-10-23",
         "availability": [],
-        "status": "In development",
-        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "PowerPoint", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["agents", "office-apps", "sharepoint"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Desktop"],
         "productArea": "Microsoft 365 Copilot",
@@ -25,62 +25,92 @@
       },
       "audience": {
         "who": { "text": "**PowerPoint で Microsoft Copilot を使って資料を作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "SharePoint ライブラリや OneDrive フォルダーのファイルを参照して、プレゼンテーションを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "SharePoint や OneDrive に保存した既存ファイルを、資料作成の元ネタとして使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "changeNature": "benefit"
       },
       "action": {
         "required": "no",
-        "summary": { "text": "現時点では開発中のため、対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "summary": { "text": "必須の対応はなく、Agent Mode で資料を作るときに利用できる", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
       },
       "beforeAfter": {
-        "after": { "text": "PowerPoint のエージェント モードでプレゼンテーションを作るとき、**SharePoint ライブラリや OneDrive フォルダーに保存したファイル**を参照できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "after": { "text": "PowerPoint の Agent Mode でプレゼンテーションを作るとき、**SharePoint ライブラリや OneDrive フォルダーに保存したファイル**を参照できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "対象: PowerPoint のエージェント モードでのプレゼンテーション作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "参照元: SharePoint ライブラリと OneDrive フォルダーのファイル", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "プラットフォーム: デスクトップ。クラウド: Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "PowerPoint の Agent Mode でプレゼンテーションを作成する際に、保存済みファイルを参照", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "参照元は SharePoint ライブラリと OneDrive フォルダー", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "ロードマップ上の段階は「開発中」で、提供時期は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "ライセンスや管理設定の詳細は、提供開始時の案内で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "PowerPoint で Copilot を開き、Agent Mode でプレゼンテーションの作成を依頼する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Mac 版の同種機能では、プロンプトにファイル名や文書名を書くとファイルが認識される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 06, 2026 / PowerPoint", "retrievedAt": "2026-10-23T06:40:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "今から準備できること",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "参照させたい資料を SharePoint や OneDrive の決まった場所に整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
-            { "text": "ロードマップの更新と、Microsoft Copilot のリリース ノートを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームはデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Mac 版 Copilot in PowerPoint でも、SharePoint・OneDrive のファイル参照が案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 06, 2026 / PowerPoint", "retrievedAt": "2026-10-23T06:40:00Z" }] },
+            { "text": "Agent Mode では Teams の会議やチャットも参照して作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026 / PowerPoint", "retrievedAt": "2026-10-23T06:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "過去の提案書や報告書を元に、新しい資料の下書きを作らせる使い方が考えられる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
       "glossary": [
-        { "termKey": "agent-mode-powerpoint", "term": "PowerPoint のエージェント モード", "type": "feature", "oneLine": { "text": "Microsoft Copilot を使って PowerPoint でプレゼンテーションを作成するモード。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "agent-mode", "term": "Agent Mode", "type": "feature", "oneLine": { "text": "PowerPoint の Copilot で、プレゼンテーションの作成を任せるモード。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "sharepoint-library", "term": "SharePoint ライブラリ", "type": "term", "oneLine": { "text": "SharePoint サイト上でファイルを保存・共有する場所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進行中の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "onedrive", "term": "OneDrive", "type": "product", "oneLine": { "text": "個人のファイルを保存するクラウド ストレージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
-          "question": "いつから使えるようになりますか？",
-          "answer": { "text": "ロードマップには提供月が記載されていません。段階が進んだ時点で更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          "question": "Mac 版の PowerPoint でも使えますか？",
+          "answer": {
+            "text": "この項目の対象プラットフォームはデスクトップです。Mac 版 Copilot in PowerPoint の同様の機能は、リリース ノートで別項目として案内されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 06, 2026 / PowerPoint", "retrievedAt": "2026-10-23T06:40:00Z" }]
+          }
         },
         {
-          "question": "Mac でも使えますか？",
-          "answer": { "text": "このロードマップ項目の対象プラットフォームはデスクトップです。Mac の可否は項目からは確認できません。", "origin": "mrc", "assertion": "inference", "verification": "unverified" }
+          "question": "Teams の会議やチャットも参照できますか？",
+          "answer": {
+            "text": "はい。Agent Mode では Teams の会議やチャットを参照したプレゼンテーション作成も案内されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026 / PowerPoint", "retrievedAt": "2026-10-23T06:40:00Z" }]
+          }
         }
       ],
       "references": {
