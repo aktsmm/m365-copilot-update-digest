@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ae04ac7f0a8352b1",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot ページで Copilot から改善の提案を受けられるように（開発中）",
+        "subtitleJa": "「提案された編集」で、文章の明確さと品質を高める修正案が得られます",
+        "en": "Microsoft Copilot (Microsoft 365): Get actionable suggestions from Copilot in your Copilot Page"
+      },
+      "meta": {
+        "publishedJst": "2026-08-12",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot ページで文章を作成する人**と、Copilot ページを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ページの内容に対する具体的な改善提案を受け、そのままページに反映できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "開発中のため、現時点で必要な対応はない。管理者は既存のクラウド ポリシーで Copilot ページを制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T05:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Copilot ショートカット メニューの**「提案された編集」**を選ぶと、Copilot がページの内容を分析し、改善案を提示します。提案はページに直接適用できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot ショートカット メニューの「提案された編集」から依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot がページの内容を分析し、明確さと品質を高める提案を提示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提案はページに直接適用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の状態は開発中。提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Web プラットフォーム、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ページの作成・表示は、クラウド ポリシーで有効・無効を切り替える（既定は有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T05:10:00Z" }] },
+            { "text": "ポリシーの変更が反映されるまで、最大 90 分から 24 時間かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-23T05:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-pages", "term": "Copilot ページ", "type": "feature", "oneLine": { "text": "Copilot が作成・編集に関わる、.page ファイル形式のページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "冒頭", "retrievedAt": "2026-10-23T05:10:00Z" }] } },
+        { "termKey": "suggested-edits", "term": "提案された編集", "type": "feature", "oneLine": { "text": "Copilot がページの内容を分析し、改善提案を出す機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "Copilot ページの作成と表示などを、管理者がユーザーやグループ単位で制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-23T05:10:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は Copilot ページを無効にできますか？",
+          "answer": {
+            "text": "はい。クラウド ポリシー「Copilot ページと Copilot ノートブックを作成して表示する」を無効にすると、作成と統合が使えなくなります。既存のアイテムは削除されません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "Copilot ページと Copilot ノートブックが無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-23T05:10:00Z" }]
+          }
+        },
+        {
+          "question": "いつから使えますか？",
+          "answer": {
+            "text": "ロードマップは開発中で、提供時期の月は示されていません。最新の状況はロードマップで確認してください。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562351",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locale": "ja-jp" },
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
