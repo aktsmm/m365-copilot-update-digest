@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-84f0c65ab85db17d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "GCC-M のユーザーがカスタム エンジン エージェントを利用可能に（開発中）",
+        "subtitleJa": "Microsoft Copilot の拡張機能として、GCC 環境でも使えるようになる予定です",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Users in GCC-M will able to use custom engine agents"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["GCC"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC 環境で Microsoft Copilot を使う組織**のエージェント作成者と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "GCC-M のユーザーがカスタム エンジン エージェントを使えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はなし。提供時期は未定のため、ロードマップを確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "GCC-M のユーザーが、Microsoft Copilot の**カスタム エンジン エージェント**を利用できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "カテゴリは Copilot Extensibility。対象は GCC-M のユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期や仕様は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "GCC 向けの現行の機能提供状況は、サービスの説明の機能表で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-23T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現在の GCC の状況",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GCC では宣言型エージェントとエージェント ビルダーが「はい」と記載されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性（拡張機能 & エージェント）", "retrievedAt": "2026-10-23T23:10:00Z" }] },
+            { "text": "拡張機能とエージェントの詳細は、既知の問題のページを参照する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "脚注 7", "retrievedAt": "2026-10-23T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップの更新を追い、提供開始に備えて利用計画を整理する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "custom-engine-agent", "term": "カスタム エンジン エージェント", "type": "feature", "oneLine": { "text": "Microsoft Copilot の拡張機能（Copilot Extensibility）で扱われるエージェントの一種。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "gcc-m", "term": "GCC-M", "type": "term", "oneLine": { "text": "ロードマップで対象として示されている政府機関向けクラウド（GCC）のユーザー区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり、まだ提供されていない状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから GCC-M で使えるようになりますか？",
+          "answer": { "text": "ロードマップのこの項目には提供月が示されていません。ロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "GCC では現在どのエージェント機能が使えますか？",
+          "answer": {
+            "text": "サービスの説明の機能表では、GCC で宣言型エージェントとエージェント ビルダーが利用可能と記載されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-23T23:10:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=501111",
+        "learn": [
+          { "title": "Microsoft Copilot のサービスの説明（機能の可用性）", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
