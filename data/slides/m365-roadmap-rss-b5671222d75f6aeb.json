@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b5671222d75f6aeb",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Teams の多言語要約に翻訳ボタンが追加",
+        "subtitleJa": "生成後の会議要約の言語を、あとから切り替えられます",
+        "en": "Microsoft Teams: Multilingual recap available with translation button"
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**多言語の Teams 会議に参加するユーザー**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "生成された会議要約の言語を、あとから好みの言語に切り替えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザー側の操作で使える機能で、管理者の設定変更は案内されていない", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "会議中に選んだ翻訳言語で要約が自動生成されたあとも、**要約の言語を変更できます**", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会議終了後、ライブ翻訳文字起こし用に選んだ言語で要約が表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "多言語会議のためのインテリジェント要約", "retrievedAt": "2026-10-23T04:50:00Z" }] },
+            { "text": "生成後に、翻訳ボタンで要約の言語を変更できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザーに Teams Premium または Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ライセンス", "retrievedAt": "2026-10-23T04:50:00Z" }] },
+            { "text": "文字起こしをオンにする必要がある（会議・イベントの場合）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ポリシー > 文字起こし", "retrievedAt": "2026-10-23T04:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "大規模な参加者向けに最適化されたイベントは、多言語要約の対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "多言語会議のためのインテリジェント要約", "retrievedAt": "2026-10-23T04:50:00Z" }] },
+            { "text": "対応言語: 英語、スペイン語、日本語、フランス語、ドイツ語、ポルトガル語、イタリア語、簡体字中国語、韓国語", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "多言語会議のためのインテリジェント要約", "retrievedAt": "2026-10-23T04:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide、GCC、GCC High で展開中（Desktop・Mac・Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "多言語チームで、要約を各自の読みやすい言語に切り替えて共有・確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "intelligent-recap", "term": "インテリジェント要約", "type": "feature", "oneLine": { "text": "AI で会議のメモや推奨タスクなどを「要約」タブに提供する Teams の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "会議のインテリジェント要約", "retrievedAt": "2026-10-23T04:50:00Z" }] } },
+        { "termKey": "multilingual-recap", "term": "多言語会議の要約", "type": "feature", "oneLine": { "text": "会議の要約を、各参加者が選んだ言語に翻訳して表示する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "多言語会議のためのインテリジェント要約", "retrievedAt": "2026-10-23T04:50:00Z" }] } },
+        { "termKey": "live-translated-transcription", "term": "ライブ翻訳文字起こし", "type": "feature", "oneLine": { "text": "会議の文字起こしを、各自が使いやすい言語に翻訳して表示する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoftteams/enhanced-teams-experience", "locator": "Intelligent meeting features", "retrievedAt": "2026-10-23T04:50:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのライセンスが必要ですか？",
+          "answer": { "text": "インテリジェント要約には Teams Premium または Microsoft Copilot ライセンスの割り当てが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ライセンス", "retrievedAt": "2026-10-23T04:50:00Z" }] }
+        },
+        {
+          "question": "管理者がこの機能をオフにできますか？",
+          "answer": { "text": "Teams Premium の管理者向け概要では、インテリジェント会議要約はサポートへの連絡が必要とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoftteams/enhanced-teams-experience", "locator": "Intelligent meeting features", "retrievedAt": "2026-10-23T04:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567458",
+        "learn": [
+          { "title": "Teams の通話、会議、イベントのためのインテリジェント要約", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
