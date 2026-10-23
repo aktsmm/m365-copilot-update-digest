@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-7208a190b4b8c4ef",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Copilot ノートブックが Markdown・テキスト・リッチテキストに対応",
+        "subtitleJa": "README や Wiki、ログ、文字起こしをノートブックに追加できます",
+        "en": "Copilot Notebooks now works with Markdown, plain-text, and rich-text files"
+      },
+      "meta": {
+        "publishedJst": "2026-08-14",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "Copilot ノートブックで資料を集める**作成者**と、プロジェクトの担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "整った文書でなくても、README やログなどをそのまま知識源にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "新たな設定は不要。ノートブックの作成自体はクラウド ポリシーで制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T03:56:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "README、プロジェクト Wiki、システム ログ、会議の文字起こし、リサーチのエクスポート、テキスト ファイルを**ノートブックに追加**できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Markdown、プレーンテキスト、リッチテキストのファイルをノートブックの参照として追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "README や Wiki、ログなど、プロジェクトの知識をそのまま Copilot の文脈にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot ノートブックを開き、「参照を追加」から対象のファイルを選ぶ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ノートブックの作成は、既定で有効（クラウド ポリシーで制御）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T03:56:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ポリシー無効時は新規作成できないが、既存のノートブックは削除されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-23T03:56:00Z" }] },
+            { "text": "ポリシー変更の反映には、既存設定がある場合で最大 90 分かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-23T03:56:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "not-stated",
+          "priority": "detail",
+          "items": []
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロジェクトの README や Wiki、会議の文字起こしをまとめて参照させる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "プロジェクトの参照資料を集めて Copilot と作業する、Loop と同じコンテナーに保存されるノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "冒頭", "retrievedAt": "2026-10-23T03:56:00Z" }] } },
+        { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "管理者が config.office.com から、ユーザーやグループ単位で Office の設定を制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-23T03:56:00Z" }] } },
+        { "termKey": "markdown", "term": "Markdown", "type": "term", "oneLine": { "text": "README などで広く使われる、記号で書式を表す軽量なテキスト形式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "提供が順次始まっており、すべてのテナントには届いていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は Copilot ノートブックを無効にできますか？",
+          "answer": {
+            "text": "はい。クラウド ポリシー「Copilot ページと Copilot ノートブックを作成して表示する」で制御できます。既存のノートブックは削除されません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T03:56:00Z" }]
+          }
+        },
+        {
+          "question": "ノートブックに追加したファイルはどこに保存されますか？",
+          "answer": {
+            "text": "追加したファイルは、保存されている OneDrive や SharePoint にそのまま残ります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-23T03:56:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/copilot-notebooks-now-works-with-markdown-plain-text-and-rich/ba-p/4545652",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
