@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-9d388855c18b0f6e",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot で法務関連の仕事を作業の流れのまま進める",
+        "subtitleJa": "文書を離れずに、必要な情報の検索や下書きができます",
+        "en": "Built for business: How Microsoft 365 Copilot keeps you in the flow of legal work"
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "法務関連の作業を自分で行う**小規模事業の経営者・作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "文書作成を中断せずに、情報の検索や資料探しを進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ブログ記事での活用紹介で、設定や移行の対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word や Outlook などのアプリ内で Copilot を使い、作業の流れを止めずに下書きや要約ができます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Microsoft 365 アプリでの Copilot", "retrievedAt": "2026-10-23T15:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "紹介されている内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "事業ツールが複数の場所に分散している課題を、小規模事業者の視点で紹介", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "弁護士の検索や、記憶にある書類探しで文書作成を中断する場面を例示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Word では文書の下書き・書き換え・要約を Copilot で行える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Word", "retrievedAt": "2026-10-23T15:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Outlook ではメールの下書きやスレッドの要約に Copilot を使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Outlook", "retrievedAt": "2026-10-23T15:10:00Z" }] },
+            { "text": "アプリ内の Copilot の体験はライセンスの種類によって異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "ライセンスとエクスペリエンス", "retrievedAt": "2026-10-23T15:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-copilot", "term": "Microsoft Copilot", "type": "product", "oneLine": { "text": "Word、Excel、PowerPoint、Outlook、Teams などで使える AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "概要", "retrievedAt": "2026-10-23T15:10:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "ブログ記事など、機能の提供段階を示さない情報を表すラベル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "元記事は活用紹介のブログで、提供時期は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "利用にはどのライセンスが必要ですか？",
+          "answer": { "text": "Word などでのフル エクスペリエンスには Microsoft 365 Copilot アドオン ライセンスが必要です。ライセンスがない場合は標準アクセスなど制限のある体験になります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "ライセンスとエクスペリエンス", "retrievedAt": "2026-10-23T15:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/built-for-business-how-microsoft-365-copilot-keeps-you-in-the/ba-p/4546016",
+        "learn": [
+          { "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
