@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6465dc3f62ceecf6",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Excel の =COPILOT 関数は提供が見送りに（Mac）",
+        "subtitleJa": "数式内で Copilot を呼び出す機能は、提供しないことが決まりました",
+        "en": "Excel: =COPILOT Function"
+      },
+      "meta": {
+        "publishedJst": "2026-08-14",
+        "availability": [],
+        "status": "Cancelled",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Excel"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Mac"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Mac 版 Excel で =COPILOT 関数の提供を待っていた人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "この機能は提供されない。計画していた活用や案内の見直しが必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "=COPILOT 関数の提供を前提にした計画や社内案内があれば見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "=COPILOT 関数は**提供されません**。ロードマップ上では、この機能を進めないことが決まったと案内されています", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象の機能",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "予定されていた内容: Excel の数式で =COPILOT 関数を使い、テキストやデータの生成・分類・要約を行う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップのステータスは Cancelled（提供しない）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Mac、クラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft は、この機能を進めないことについて不便をおかけすると案内している", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "検証や展開の計画に含めていた場合は、計画から外して関係者に共有する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-function", "term": "=COPILOT 関数", "type": "feature", "oneLine": { "text": "Excel の数式の中で、テキストやデータの生成・分類・要約を行う予定だった関数。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の今後の機能や提供状況を公開しているページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-cancelled", "term": "Cancelled", "type": "label", "oneLine": { "text": "ロードマップ上で、その機能を提供しないことが決まった状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "=COPILOT 関数は今後提供されますか？",
+          "answer": { "text": "ロードマップでは、この機能を進めないことが決まったと案内されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "代わりに Excel で Copilot を使うにはどうすればよいですか？",
+          "answer": { "text": "ロードマップの原文には代替機能の案内がありません。Excel の Copilot の提供状況は、最新のロードマップで確認してください。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=499659",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
