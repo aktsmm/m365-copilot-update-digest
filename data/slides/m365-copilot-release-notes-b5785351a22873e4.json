@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b5785351a22873e4",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot のチャットが統合され、Work IQ ボタンで仕事データを切り替え可能に",
+        "subtitleJa": "Web と仕事のチャットが 1 つになり、左上のボタンで切り替えられます",
+        "en": "Unified web and work chat experience with dedicated Work IQ button [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Windows と Web で Microsoft Copilot のチャットを使う人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+        "change": { "text": "チャットのタブを行き来せず、仕事データの利用をその場でオン・オフできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者がボタンで切り替えるだけで、リリース ノートに管理者の作業は示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "Web チャットと仕事チャットの別々のタブを切り替えて使っていました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+        "after": { "text": "**1 つのチャット画面**で、左上の Work IQ ボタンから仕事データへのアクセスを切り替えられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web チャットと仕事チャットが 1 つのチャット画面に統合", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+            { "text": "チャット UI の左上に Work IQ ボタンが加わり、仕事データへのアクセスを制御", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+            { "text": "対象プラットフォームは Windows と Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "仕事データへのアクセスは既定でオン。ボタンを選んで切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:20:00Z" }] },
+            { "text": "試すには Copilot Chat を開き、左上の Work IQ ボタンを探す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq-button", "term": "Work IQ ボタン", "type": "feature", "oneLine": { "text": "チャット UI の左上にあり、仕事データへのアクセスのオン・オフを切り替えるボタン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T00:20:00Z" }] } },
+        { "termKey": "unified-chat", "term": "統合チャット", "type": "feature", "oneLine": { "text": "Web チャットと仕事チャットを 1 つにまとめたチャット インターフェイス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "提供段階ではなく、既存機能の変更を知らせる更新情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "以前のチャットから何が変わりますか？",
+          "answer": { "text": "以前は Web チャットと仕事チャットのタブを切り替えていましたが、1 つの画面に統合され、Work IQ ボタンで仕事データの利用を制御します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+        },
+        {
+          "question": "仕事データの利用は初期状態でオンですか？",
+          "answer": { "text": "はい。リリース ノートでは、仕事データへのアクセスは既定でオンと案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
