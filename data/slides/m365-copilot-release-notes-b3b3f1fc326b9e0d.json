@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b3b3f1fc326b9e0d",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Cowork で画像の生成と編集が可能に",
+        "subtitleJa": "ChatGPT Images 2.0 モデルで、依頼するだけで画像を作れます",
+        "en": "Generate and edit images in Copilot Cowork [Android, Windows, iOS, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot app"],
+        "categories": ["copilot-chat", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Cowork で資料やコンテンツを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "文章で依頼するだけで画像を作成でき、生成後の調整も依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "Cowork の組み込みスキルとして使える。生成画像は Cowork の他の機能と同じコンテンツ ポリシーに従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Cowork に「夕暮れ時の山の湖の画像を作成して」のように頼むだけで、**画像を生成・調整**できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "組み込みの画像生成スキルで、Cowork が画像を作成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] },
+            { "text": "画像生成には ChatGPT Images 2.0 モデルを自動的に使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] },
+            { "text": "完成した画像はセッションと OneDrive の出力フォルダーに保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "向き・スタイル・用途が不足していると、Cowork が確認の質問をする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] },
+            { "text": "「空をもっとドラマチックに」「縦向きで」など、生成後の調整も依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "メール送信、文書作成、会議設定、組織内検索などのタスクをユーザーに代わって実行する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "冒頭", "retrievedAt": "2026-10-23T12:30:00Z" }] } },
+        { "termKey": "chatgpt-images-2", "term": "ChatGPT Images 2.0", "type": "term", "oneLine": { "text": "Cowork が画像生成に自動的に使用するモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能に変更や機能追加が行われたことを示す、リリース ノート上の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "生成した画像はどこに保存されますか？",
+          "answer": { "text": "完成した画像は、Cowork のセッションと OneDrive の出力フォルダーに保存されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] }
+        },
+        {
+          "question": "画像生成にコンテンツ ポリシーは適用されますか？",
+          "answer": { "text": "はい。画像の生成でも Cowork の他の部分と同じコンテンツ ポリシーが尊重されます。AI 生成コンテンツの扱いは Cowork の責任ある AI に関する FAQ にまとめられています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locator": "画像の生成", "retrievedAt": "2026-10-23T12:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork#generate-images",
+        "learn": [
+          { "title": "Copilot Cowork を使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/use-cowork", "locale": "ja-jp" },
+          { "title": "モバイルで Cowork を使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-mobile", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
