@@ -87,6 +87,28 @@
         { "termKey": "models-menu", "term": "モデル メニュー", "type": "term", "oneLine": { "text": "Copilot が使う AI モデルを確認・切り替えるメニュー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-22T23:58:00Z" }] } },
         { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能改善の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "管理者は Anthropic モデルの利用を制御できますか？",
+          "answer": {
+            "text": "はい。Microsoft 365 管理センターの「Microsoft のサブプロセッサーとして動作する AI プロバイダー」設定で、Anthropic を有効にしているかを確認・管理できます。この設定の変更には AI Administrator ロールが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps", "locator": "Manage the setting in the Microsoft 365 admin center", "retrievedAt": "2026-10-23T12:30:00Z" }]
+          }
+        },
+        {
+          "question": "Anthropic モデルを使うとデータは EU データ境界の外で処理されますか？",
+          "answer": {
+            "text": "はい。Word、Excel、PowerPoint の Copilot で Anthropic モデルを使う場合、処理は Microsoft EU Data Boundary の外で行われます。Anthropic は Microsoft のサブプロセッサーとして、Microsoft 製品条項とデータ保護追加条項 (DPA) の対象です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps", "locator": "Data processing and the EU Data Boundary", "retrievedAt": "2026-10-23T12:30:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25"
       },
