@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-7a13b12c942ebd0a",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Planner エージェントがグループベースの Basic プランでも利用可能に",
+        "subtitleJa": "Basic プランでも、エージェントにタスクの実行を任せられます",
+        "en": "Planner Agent in group-based basic plans [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot ライセンスを持つ Planner ユーザー**と、Planner の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "グループベースの Planner プランすべて（Basic プランを含む）で Planner エージェントを使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は PowerShell の Set-PlannerConfiguration で利用可否を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-23T16:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot ライセンスを持つユーザーは、**グループベースのすべての Planner プラン（Basic プランを含む）**で Planner エージェントを使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Microsoft Copilot ライセンスを持つユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラン: グループベースのすべての Planner プラン（Basic を含む）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Basic・Premium の両プランで、タスクの実行と状態レポートに Planner エージェントを利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "冒頭の注", "retrievedAt": "2026-10-23T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザーには Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-23T16:40:00Z" }] },
+            { "text": "管理者はセキュリティ グループで対象を絞れる。反映に最大 1 時間かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-23T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "chat-note",
+          "heading": "Premium プランとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Planner エージェント チャットは Premium プランのみの機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "冒頭の注", "retrievedAt": "2026-10-23T16:40:00Z" }] },
+            { "text": "Planner エージェントをオフにすると、Facilitator の文書作成スキルも無効になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "動作マトリックスの注", "retrievedAt": "2026-10-23T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は Get-PlannerConfiguration で現在の設定を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-23T16:40:00Z" }] } },
+        { "termKey": "planner-agent-chat", "term": "Planner エージェント チャット", "type": "feature", "oneLine": { "text": "Premium プランで使える、アプリ内の自然言語チャット体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-23T16:40:00Z" }] } },
+        { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-23T16:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリースノートに掲載された機能の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Planner エージェントの利用に必要なライセンスは？",
+          "answer": { "text": "ユーザーに Microsoft Copilot ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-23T16:40:00Z" }] }
+        },
+        {
+          "question": "特定のユーザーだけに有効にできますか？",
+          "answer": { "text": "はい。PlannerCopilotAllowedGroupId にセキュリティ グループ ID を指定すると、そのグループのメンバーだけに有効にできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-23T16:40:00Z" }] }
+        },
+        {
+          "question": "Basic プランでも Planner エージェント チャットは使えますか？",
+          "answer": { "text": "いいえ。Planner エージェント チャットは Premium プランのみです。Basic プランではタスクの実行と状態レポートが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "冒頭の注", "retrievedAt": "2026-10-23T16:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          { "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
