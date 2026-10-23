@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-8fa0cfca40a52131",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot で、メールを参照してプレゼンテーションを作成（Windows）",
+        "subtitleJa": "メールの内容を、スライド作成のプロンプトに取り込めます",
+        "en": "Reference an email with when using Copilot in PowerPoint to create a presentation [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint", "Outlook"],
+        "categories": ["outlook", "office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint の Copilot でスライドを作る Windows ユーザー**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+        "change": { "text": "メールの内容を手作業でコピーせず、プレゼンテーションに反映できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint / Why", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリース ノートに、管理者や利用者に求める対応の記載はない", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前は、Copilot でメールの情報を直接プレゼンテーションに取り込むことができなかった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint / What changed", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+        "after": { "text": "Copilot ペインのプロンプトで**メールを参照**し、その内容を使ったスライドを作成できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint / Try this", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint の Copilot で、メールを参照してプレゼンテーションを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "対象プラットフォームは Windows", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "Microsoft 365 のセキュリティ標準を維持したまま、メール内容を取り込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-use",
+          "heading": "使い方",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint で Copilot ペインを開き、メールを参照するプロンプトを入力", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "メールは件名・送信者・送信時期（期間または日付）で指定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "生成されたスライドで、メール情報の使われ方を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "リリース ノートでは、手作業の転記によるミスの削減が利点とされている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "機密性の高いメールを参照する場合は、共有前に生成結果を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず報告メールなどを題材に、小さなデッキで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-powerpoint", "term": "PowerPoint の Copilot", "type": "feature", "oneLine": { "text": "PowerPoint の Copilot ペインから、プロンプトでスライド作成を支援する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T09:00:00Z" }] } },
+        { "termKey": "copilot-pane", "term": "Copilot ペイン", "type": "term", "oneLine": { "text": "PowerPoint でプロンプトを入力する、Copilot の作業ウィンドウ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T09:00:00Z" }] } },
+        { "termKey": "roadmap-id", "term": "ロードマップ ID 555888", "type": "term", "oneLine": { "text": "この機能に対応する Microsoft 365 ロードマップの項目番号。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Roadmap ID", "retrievedAt": "2026-10-23T09:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の改善や追加を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームが対象ですか？",
+          "answer": { "text": "リリース ノートの表記は Windows です。他のプラットフォームについての記載はありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+        },
+        {
+          "question": "メールはどのように指定しますか？",
+          "answer": { "text": "件名、送信者、送信された時期や日付でメールを指定できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
