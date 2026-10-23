@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-db35c916a634c403",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Outlook の Copilot Chat が受信トレイ全体・予定表・組織データを横断して回答（開発中）",
+        "subtitleJa": "Microsoft Copilot ライセンスがなくても、メールの 1 スレッドを超えて質問できるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Chat in Outlook expands to reason over inbox, calendar, and enterprise data"
+      },
+      "meta": {
+        "publishedJst": "2026-08-08",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Outlook", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "outlook"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot ライセンスなしで Copilot Chat を使う Outlook ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "受信トレイ・予定表・会議などをまたいで、Outlook 内で質問や操作ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T19:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "ロードマップ上は開発中。今後の展開に備えて動向を確認しておく", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Outlook の Copilot Chat が、単一のメール スレッドに限らず、**受信トレイ全体・予定表・会議などの組織データ**を対象に回答します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T19:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Microsoft Copilot ライセンスのない Copilot Chat ユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "メールの検索・要約、アクション項目の抽出、予定表の空き確認を依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T19:00:00Z" }] },
+            { "text": "対応クラウド: GCC・GCC High・DoD。プラットフォーム: Web・デスクトップ・Mac・iOS・Android", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、内容や時期が変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は、ユーザーが Microsoft 365 経由で既に利用できるデータに限られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T19:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えるポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供前に、ユーザーのメール・予定表の共有範囲やアクセス権を点検しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Outlook で Copilot Chat を開き、受信トレイや予定表に関する質問で動作を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T19:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "Microsoft Copilot ライセンスがなくても使える、Microsoft 365 上のチャット型 Copilot。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "enterprise-data", "term": "組織データ", "type": "term", "oneLine": { "text": "ユーザーが Microsoft 365 経由で既に利用できる、メール・予定表・会議などのデータ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T19:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot ライセンスは必要ですか？",
+          "answer": {
+            "text": "ロードマップとリリース ノートでは、Microsoft Copilot ライセンスなしの Copilot Chat ユーザーが対象と説明されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T19:00:00Z" }]
+          }
+        },
+        {
+          "question": "従来の動作との違いは何ですか？",
+          "answer": {
+            "text": "従来は最近のメッセージなど限られた範囲に回答が限定されていましたが、受信トレイ全体・予定表・会議などに広がります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T19:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=554934",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#july-01,-2026", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
