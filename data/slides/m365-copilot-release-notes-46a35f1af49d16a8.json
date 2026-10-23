@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-46a35f1af49d16a8",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Outlook: メール作成中の添削フィードバックを Copilot チャットで提供",
+        "subtitleJa": "提案を選んで適用でき、メール本文もその場で更新されます",
+        "en": "Outlook: Copilot provides coaching feedback in chat as you draft, edit, and format emails [Android, Windows, iOS, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Outlook でメールを作成する Microsoft Copilot ユーザー**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Outlook", "retrievedAt": "2026-10-23T13:00:00Z" }] },
+        "change": { "text": "添削提案を選んで適用でき、本文もその場で更新される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T13:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者が Outlook の「Get Coaching」から使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T13:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "添削フィードバックは canvas で表示され、提案は**すべてまとめて**しか適用できませんでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T13:00:00Z" }] },
+        "after": { "text": "Copilot チャットが提案を示し、**適用する提案を選択**でき、調整するとメール本文がその場で更新されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T13:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "下書きへの添削フィードバックを Copilot チャットで提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Outlook", "retrievedAt": "2026-10-23T13:00:00Z" }] },
+            { "text": "提案を選んで適用でき、さらに調整も可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T13:00:00Z" }] },
+            { "text": "対象: Android・Windows・iOS・Mac・Web の Outlook", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Outlook", "retrievedAt": "2026-10-23T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方と効果",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "新規メール作成中に「Get Coaching」を選ぶと Copilot チャットが開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T13:00:00Z" }] },
+            { "text": "メールの明確さとプロらしさが上がり、手作業の修正が減る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-23T13:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "get-coaching", "term": "Get Coaching", "type": "feature", "oneLine": { "text": "Outlook の作成画面で、下書きへの添削提案を Copilot から受け取る操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T13:00:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot チャット", "type": "feature", "oneLine": { "text": "提案の確認や調整、メールへの適用を対話で行えるチャット ペイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T13:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の改善や変更を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "以前の動作とどう違いますか？",
+          "answer": { "text": "以前は canvas で添削を受け、提案をまとめてしか適用できませんでした。今は Copilot チャットで提案を選んで適用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T13:00:00Z" }] }
+        },
+        {
+          "question": "試すにはどう操作しますか？",
+          "answer": { "text": "Outlook で新規メールを作成し「Get Coaching」を選ぶと、Copilot チャットが開いて提案が表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T13:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
