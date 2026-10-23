@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f5e7704c7e6861f8",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Microsoft Copilot アプリの Chat 画面にブランド フッターを追加",
+        "subtitleJa": "管理者が承認した組織のロゴを、Chat 画面の下部に表示できます",
+        "en": "Microsoft Copilot (Microsoft 365): Branded footer in the Microsoft 365 Copilot app"
+      },
+      "meta": {
+        "publishedJst": "2026-08-04",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft 365 Copilot", "Microsoft 365", "Microsoft 365 app", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft 365 管理者**と、Microsoft Copilot アプリで Chat を使うユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "組織のロゴが Chat 画面に表示され、組織の Copilot であることを識別しやすくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "Copilot Chat: ブランド フッターを追加する", "retrievedAt": "2026-10-23T21:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "フッターは既定でオフ。使うなら管理者が既定のテーマで有効化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "Copilot Chat: ブランド フッターを追加する", "retrievedAt": "2026-10-23T21:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理センターで管理している**組織のロゴ**を、Chat 画面の下部にブランド フッターとして表示できます。ラベルも選べます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "Copilot Chat: ブランド フッターを追加する", "retrievedAt": "2026-10-23T21:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "既定のテーマの「ロゴ」ページで設定したロゴを、フッターに表示する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "Copilot Chat: ブランド フッターを追加する", "retrievedAt": "2026-10-23T21:30:00Z" }] },
+            { "text": "フッターのスタイルは「ラベルなし」「承認者」「提供元」「管理者」から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ブランド フッターを追加するには", "retrievedAt": "2026-10-23T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理センターで 既定のテーマ → ロゴ でロゴを設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ブランド フッターを追加するには", "retrievedAt": "2026-10-23T21:30:00Z" }] },
+            { "text": "Copilot Chat ページで「Copilot Chat フッター領域にブランドを追加する」を選び、保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ブランド フッターを追加するには", "retrievedAt": "2026-10-23T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "フッターは既定でオフ。ロゴ以外のテーマ設定はフッターに適用されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "Copilot Chat: ブランド フッターを追加する", "retrievedAt": "2026-10-23T21:30:00Z" }] },
+            { "text": "テーマのカスタマイズはグローバル管理者のみ。グローバル閲覧者は読み取り専用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-23T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定のテーマを使うため全ユーザーに適用され、グループ別に異なるロゴは設定できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ブランド フッターを追加するには（注）", "retrievedAt": "2026-10-23T21:30:00Z" }] },
+            { "text": "ロードマップ上の対象は Worldwide（Standard Multi-Tenant）、段階は Targeted Release", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロゴは HTTPS で匿名アクセスできる JPG・PNG・GIF・SVG の URL を指定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ロゴ: テーマのロゴを指定する", "retrievedAt": "2026-10-23T21:30:00Z" }] },
+            { "text": "有効化前に、設定したロゴが Chat 画面で意図どおり見えるか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "branded-footer", "term": "ブランド フッター", "type": "feature", "oneLine": { "text": "Chat 画面の下部に、組織のロゴとオプションのラベルを表示する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "Copilot Chat: ブランド フッターを追加する", "retrievedAt": "2026-10-23T21:30:00Z" }] } },
+        { "termKey": "default-theme", "term": "既定のテーマ", "type": "term", "oneLine": { "text": "組織内のすべてのユーザーに適用される、一意のテーマ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "既定のテーマを更新する", "retrievedAt": "2026-10-23T21:30:00Z" }] } },
+        { "termKey": "targeted-release", "term": "Targeted Release", "type": "term", "oneLine": { "text": "ロードマップのタグ。対象の組織へ段階的に展開する形態を示す。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ユーザーごと、グループごとに異なるロゴを出せますか？",
+          "answer": { "text": "いいえ。ブランド フッターは既定のテーマのロゴを使い、全ユーザーに適用されます。特定のグループ向けに別のロゴは指定できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ブランド フッターを追加するには（注）", "retrievedAt": "2026-10-23T21:30:00Z" }] }
+        },
+        {
+          "question": "ロゴの画像サイズに決まりはありますか？",
+          "answer": { "text": "JPG・PNG・GIF は 200 x 48 ピクセルに収まるよう拡縮され、SVG は縦 24 ピクセルに収まるよう調整されます。縦横比は保たれます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locator": "ロゴ: テーマのロゴを指定する", "retrievedAt": "2026-10-23T21:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555852",
+        "learn": [{ "title": "組織の Microsoft 365 テーマをカスタマイズする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/setup/customize-your-organization-theme", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
