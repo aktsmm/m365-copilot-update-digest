@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e30dbc8b47256d0f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "SharePoint の Copilot でサイト スキルの管理機能を強化（開発中）",
+        "subtitleJa": "編集・バージョン管理・公開・復元・サイト間の複製に対応します",
+        "en": "SharePoint: Site Skills in Copilot in SharePoint"
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["SharePoint"],
+        "categories": ["sharepoint"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "SharePoint",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint のサイト スキルを作成・管理する人**と、サイト管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "スキルを編集・公開・復元し、他のサイトへ複製して再利用できるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "サイト スキルの**編集、バージョン管理、公開、復元、サイト間の複製**ができ、組織でスキルを統制して再利用しやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "サイト スキルの編集、バージョン管理、公開、復元、サイト間の複製", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "サイト スキルは、サイトの「エージェント アセット」ライブラリに SKILL.md として保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "スキルが格納されている場所", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "サイト管理者がサイト スキルを所有・管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "ガバナンスとアクセス許可", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スキルは外部システムへの接続やカスタム コードの実行はできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "スキルができること", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "スキルは実行ユーザーが既に持つアクセス許可の範囲でのみ動作する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "ガバナンスとアクセス許可", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既定では、サイトの編集権限で作成、表示権限で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "サイト スキルのガバナンス", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "スキルのオン・オフを切り替える個別の管理者コントロールはない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "ガバナンスとアクセス許可", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "current",
+          "heading": "現在できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot に依頼して、個人スキルかサイト スキルを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "個人用スキルまたはサイト スキルを作成する", "retrievedAt": "2026-10-23T09:00:00Z" }] },
+            { "text": "SharePoint チャットで /skills と入力すると組み込みスキルを確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "組み込みのスキル", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "試すなら、まず小さなサイトでサイト スキルを作成して運用を確かめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "site-skill", "term": "サイト スキル", "type": "feature", "oneLine": { "text": "同じサイト内のユーザーが一貫して使うワークフローを再利用できるようにしたスキル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "スキルの種類を選択する", "retrievedAt": "2026-10-23T09:00:00Z" }] } },
+        { "termKey": "personal-skill", "term": "個人スキル", "type": "feature", "oneLine": { "text": "個人の作業方法に基づくワークフローで、ユーザーの OneDrive に保存されるスキル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "スキルの種類を選択する", "retrievedAt": "2026-10-23T09:00:00Z" }] } },
+        { "termKey": "agent-assets", "term": "エージェント アセット", "type": "term", "oneLine": { "text": "サイト スキルを保存する、製品が作成・管理するサイトのライブラリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "サイト スキルのガバナンス", "retrievedAt": "2026-10-23T09:00:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "サイト スキルと個人スキルの違いは何ですか？",
+          "answer": { "text": "サイト スキルはサイト管理者が所有しサイトのライブラリに保存され、個人スキルは所有者の OneDrive に保存されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "スキルの種類を選択する", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+        },
+        {
+          "question": "スキルを無効にする管理者設定はありますか？",
+          "answer": { "text": "スキルをオンまたはオフに切り替える個別の管理者コントロールはありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "ガバナンスとアクセス許可", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+        },
+        {
+          "question": "スキルでアクセス権を超える操作はできますか？",
+          "answer": { "text": "できません。スキルは実行ユーザーが既に権限を持つサイトとコンテンツに対してのみ動作します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locator": "ガバナンスとアクセス許可", "retrievedAt": "2026-10-23T09:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570155",
+        "learn": [
+          { "title": "Copilot in SharePoint をスキルで拡張する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-skills", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
