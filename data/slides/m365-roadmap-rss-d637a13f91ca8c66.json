@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d637a13f91ca8c66",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Sales Development Agent が会議日程の調整を担当（開発中）",
+        "subtitleJa": "見込み客の希望日時を担当者の予定と照合し、会議を予約します",
+        "en": "Microsoft Copilot (Microsoft 365): Sales Development Agent - Meeting scheduling"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "agents", "teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**営業担当者・営業部門の管理者**（Sales Development Agent を使う組織）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "見込み客の「会いたい」が、担当者の会議予約までつながる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "見込み客が希望日時を伝えると、エージェントが担当者の予定と照合し、希望順で最初に空いている候補を会議として予約します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "見込み客に、希望する日時を尋ねる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "候補を担当する営業担当者のカレンダーと照合する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "見込み客が示した希望順で、最初に有効な候補を予約する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連する Dynamics 365 連携は現在プレビューで、本番用途は想定されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-dynamics", "locator": "冒頭 Important", "retrievedAt": "2026-10-23T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントユーザーに Sales ライセンスと Salesperson ロール（または同等のカスタムロール）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-dynamics", "locator": "ステップ 1", "retrievedAt": "2026-10-23T08:00:00Z" }] },
+            { "text": "Dataverse MCP サーバーの有効化と、グローバル管理者または AI 管理者による承認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-dynamics", "locator": "手順 2〜ステップ 4", "retrievedAt": "2026-10-23T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供前に、Dynamics 365 連携の前提を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-development-agent", "term": "Sales Development Agent", "type": "product", "oneLine": { "text": "Dynamics 365 と連携し、潜在顧客との接続、対話の記録、メール送信や資格付与などを同期できるエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-dynamics", "locator": "冒頭", "retrievedAt": "2026-10-23T08:00:00Z" }] } },
+        { "termKey": "mcp", "term": "Dataverse MCP サーバー", "type": "feature", "oneLine": { "text": "Sales Development エージェントが Dynamics 365 に接続するときに使うサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-dynamics", "locator": "手順 2", "retrievedAt": "2026-10-23T08:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        { "question": "いつから使えるようになりますか。", "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。提供が始まるまでは更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "question": "利用には何が必要ですか。", "answer": { "text": "関連する Dynamics 365 連携では、エージェントユーザーへの Sales ライセンス付与、Dataverse MCP サーバーの有効化と発行、管理者の承認が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-dynamics", "locator": "ステップ 1〜4", "retrievedAt": "2026-10-23T08:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=575289",
+        "learn": [
+          { "title": "セールス開発エージェントを Dynamics 365 と統合する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/sales-dev-agent/integrate-with-dynamics", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
