@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-565e8ca409ed6367",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "組織のメッセージが Microsoft Entra ハイブリッド参加済みデバイスに対応",
+        "subtitleJa": "Windows デバイスの参加方式を問わず、社内向けメッセージを届けられます",
+        "en": "Organizational Messages now supports Hybrid-joined Devices [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft 365 admin center"],
+        "categories": ["admin"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**組織のメッセージを作成・配信する管理者**と、ハイブリッド参加済みの Windows デバイスを使うユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ハイブリッド参加済みデバイスにも組織のメッセージを配信できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "対象デバイスが要件を満たしているか確認し、必要に応じてメッセージを配信する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件", "retrievedAt": "2026-10-22T22:50:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Windows では **Microsoft Entra ID 参加済みデバイスと Microsoft Entra ハイブリッド参加済みデバイス**が、組織のメッセージの対象になります",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件 - デバイス", "retrievedAt": "2026-10-22T22:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対応の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Windows 向けの組織のメッセージは、Entra 参加済みとハイブリッド参加済みのデバイスのみ対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件 - デバイス", "retrievedAt": "2026-10-22T22:50:00Z" }] },
+            { "text": "Windows スポットライトやタスク バーでは、受信者が Windows 11 25H2 / 24H2 Enterprise を使う必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件 - メッセージ受信者", "retrievedAt": "2026-10-22T22:50:00Z" }] },
+            { "text": "作成には Organizational Messages Writer の Entra ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件 - 作成者", "retrievedAt": "2026-10-22T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "確実に届けるには、ファイアウォールで fd.api.orgmsg.microsoft.com などのエンドポイントを開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件 - ファイアウォール", "retrievedAt": "2026-10-22T22:50:00Z" }] },
+            { "text": "高度な機能（独自のメッセージ作成など）は Microsoft 365 E3 / E5 などのライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "高度な機能の要件", "retrievedAt": "2026-10-22T22:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "organizational-messages", "term": "組織のメッセージ", "type": "feature", "oneLine": { "text": "Microsoft 365 管理センターから、製品内のカスタマイズされたメッセージでユーザーに情報を伝える機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "冒頭", "retrievedAt": "2026-10-22T22:50:00Z" }] } },
+        { "termKey": "hybrid-joined", "term": "Microsoft Entra ハイブリッド参加済みデバイス", "type": "term", "oneLine": { "text": "組織のメッセージで、Entra ID 参加済みデバイスと並んで Windows でサポートされるデバイスの種類。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件 - デバイス", "retrievedAt": "2026-10-22T22:50:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "メッセージの作成に必要な権限は何ですか？",
+          "answer": {
+            "text": "作成者には Organizational Messages Writer、承認者には Organizational Messages Approver の Entra ロールを割り当てます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件", "retrievedAt": "2026-10-22T22:50:00Z" }]
+          }
+        },
+        {
+          "question": "受信者に Entra ロールは必要ですか？",
+          "answer": {
+            "text": "不要です。受信者は、メッセージの配信先の Microsoft 製品にアクセスできれば受け取れます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365", "locator": "要件 - メッセージ受信者", "retrievedAt": "2026-10-22T22:50:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft 365 管理センターの組織のメッセージ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/misc/organizational-messages-microsoft-365#requirements", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
