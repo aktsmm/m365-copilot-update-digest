@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5927dce473293df9",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "PowerPoint のエージェント モードで SharePoint・OneDrive のファイルを参照",
+        "subtitleJa": "プロンプトでファイルを指定して、保存済みの資料から資料を作れます",
+        "en": "Microsoft Copilot (Microsoft 365): Reference files saved in SharePoint libraries and OneDrive folders when creating a presentation with Agent Mode in PowerPoint"
+      },
+      "meta": {
+        "publishedJst": "2026-08-22",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "categories": ["agents", "office-apps", "sharepoint"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Mac"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Mac 版 PowerPoint で Microsoft Copilot を使って資料を作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "SharePoint や OneDrive にあるファイルを、添付せずに資料作成の材料にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、今すぐの対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "以前は、SharePoint や OneDrive に保存されたファイルへの暗黙的なファイル参照は未対応でした",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: SharePoint ライブラリと OneDrive フォルダーのファイル参照 [Mac] 変更内容", "retrievedAt": "2026-10-23T01:10:00Z" }]
+        },
+        "after": {
+          "text": "プロンプトで**ファイル名やドキュメントの所有者を挙げる**と、Copilot がそのファイルを文脈にして資料を作成します",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "PowerPoint: SharePoint ライブラリと OneDrive フォルダーのファイル参照 [Mac] 次の操作を試してください", "retrievedAt": "2026-10-23T01:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint のエージェント モードによる資料作成で、SharePoint ライブラリと OneDrive フォルダーのファイルを参照できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プロンプトでの言及で、保存先のファイルへの参照を認識する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "変更内容", "retrievedAt": "2026-10-23T01:10:00Z" }] },
+            { "text": "ファイルを手動で添付・アップロードする手間が不要になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "変更内容", "retrievedAt": "2026-10-23T01:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のプラットフォームは Mac、クラウドは Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップの段階は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えるには",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "使い方: Copilot で資料作成を始め、ドキュメント名または所有者でファイルを指定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "次の操作を試してください", "retrievedAt": "2026-10-23T01:10:00Z" }] },
+            { "text": "参照させたい資料の名前を分かりやすく整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "エージェント モード", "type": "feature", "oneLine": { "text": "PowerPoint で Copilot がプロンプトから資料を作成する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "sharepoint-onedrive", "term": "SharePoint ライブラリ / OneDrive", "type": "term", "oneLine": { "text": "Microsoft 365 上でファイルを保存するクラウドの場所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームが対象ですか？",
+          "answer": { "text": "ロードマップでは Mac が対象として示されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "ファイルを添付する必要はありますか？",
+          "answer": {
+            "text": "ありません。プロンプトでの言及で SharePoint・OneDrive のファイルを参照でき、手動の添付やアップロードは不要になります。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "変更内容", "retrievedAt": "2026-10-23T01:10:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555897",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
