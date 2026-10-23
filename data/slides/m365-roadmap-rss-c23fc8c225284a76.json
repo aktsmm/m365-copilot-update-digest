@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c23fc8c225284a76",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "GCC High のユーザーがカスタム エンジン エージェントを利用可能に",
+        "subtitleJa": "政府機関向けクラウドでも、独自の AI モデルやオーケストレーターを使うエージェントを扱えるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Users in GCC-H will be able to use custom engine agents"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["GCC High"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC High テナントでエージェントを作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "GCC High のユーザーが、カスタム エンジン エージェントを使えるようになる予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供開始に備え、利用計画を整理しておく", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "独自のオーケストレーターと言語モデルを使う**カスタム エンジン エージェント**を、GCC High のユーザーが利用できるようになります",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-10-23T23:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は GCC High のユーザー（ロードマップ上は Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "カスタム エンジン エージェントは、完全にカスタマイズされた AI アシスタント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-10-23T23:00:00Z" }] },
+            { "text": "Microsoft 365 Copilot や Teams、Word、Excel、Edge などで実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェントの特性", "retrievedAt": "2026-10-23T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "開発中の段階のため、提供時期や仕様は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "モデルとオーケストレーター用に追加のホスティングが必要で、追加料金がかかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェントの特性", "retrievedAt": "2026-10-23T23:00:00Z" }] },
+            { "text": "コンプライアンスと RAI ポリシーへの準拠は、開発者側で確保する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-10-23T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "宣言型エージェントは Copilot のオーケストレーターを使い、追加ホスティングは不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェント", "retrievedAt": "2026-10-23T23:00:00Z" }] },
+            { "text": "提供開始前に、宣言型とカスタム エンジンのどちらが要件に合うか比較しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "build-tools",
+          "heading": "構築ツール",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Studio や Visual Studio、Agents Toolkit などで構築できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェントの特性", "retrievedAt": "2026-10-23T23:00:00Z" }] },
+            { "text": "Agents Toolkit による発行は Microsoft 365 Government テナントでは未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/m365-agents-sdk", "locator": "注", "retrievedAt": "2026-10-23T23:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cea", "term": "カスタム エンジン エージェント", "type": "feature", "oneLine": { "text": "独自のオーケストレーションとモデルを使う、完全にカスタマイズされた AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-10-23T23:00:00Z" }] } },
+        { "termKey": "da", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "指示・知識・アクションを追加し、Copilot のオーケストレーターとモデルで動くエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェント", "retrievedAt": "2026-10-23T23:00:00Z" }] } },
+        { "termKey": "orchestrator", "term": "オーケストレーター", "type": "term", "oneLine": { "text": "エージェントが知識、スキル、自律性と対話する方法を管理する中心的なエンジン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "エージェントのコア コンポーネント", "retrievedAt": "2026-10-23T23:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "カスタム エンジン エージェントと宣言型エージェントの違いは？",
+          "answer": { "text": "宣言型は Copilot のオーケストレーターとモデルを使い、カスタム エンジンは独自のオーケストレーターとモデルを使います。後者は追加ホスティングが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "比較表", "retrievedAt": "2026-10-23T23:00:00Z" }] }
+        },
+        {
+          "question": "提供開始はいつですか？",
+          "answer": { "text": "ロードマップ上では開発中で、提供時期は示されていません。最新情報はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=503771",
+        "learn": [
+          { "title": "宣言型エンジン エージェントとカスタム エンジン エージェントの比較", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locale": "ja-jp" },
+          { "title": "Microsoft 365 エージェント SDK を使用してカスタム エンジン エージェントを構築する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/m365-agents-sdk", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
