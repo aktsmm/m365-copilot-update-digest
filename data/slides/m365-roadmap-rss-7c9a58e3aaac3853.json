@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7c9a58e3aaac3853",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview eDiscovery：ユーザー所有の SharePoint Embedded コンテナーをデータ ソースに選択",
+        "subtitleJa": "Loop・Copilot ページ・Copilot ノートブックの保存先を、ユーザー単位で調査対象にできます",
+        "en": "Microsoft Purview: eDiscovery- Select user-owned SharePoint embedded container as a data source"
+      },
+      "meta": {
+        "publishedJst": "2026-08-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["sharepoint", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**eDiscovery を担当するコンプライアンス管理者・調査担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "指定したユーザーが所有するコンテナーを一覧で確認し、調査に必要なものだけ選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "提供開始までに必須の対応はない。調査手順の見直し候補として把握する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "選択したユーザーが所有・作成した SharePoint Embedded コンテナーを、eDiscovery 上で表示して選択できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザー所有の SharePoint Embedded コンテナーを選択可能にする計画", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "コンテナーには Microsoft Loop・Copilot ページ・Copilot ノートブックなどのコンテンツが格納される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "SharePoint Embedded アプリケーション コンテンツ", "retrievedAt": "2026-10-23T03:45:00Z" }] },
+            { "text": "提供先は Worldwide (Standard Multi-Tenant)、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn では、電子情報開示での同コンテナーのサポートはプレビューで、一般公開前に変更される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "SharePoint Embedded アプリケーション コンテンツ", "retrievedAt": "2026-10-23T03:45:00Z" }] },
+            { "text": "グループ所有・アプリ所有のコンテナーは現在サポートされていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "SharePoint Embedded の制限事項", "retrievedAt": "2026-10-23T03:45:00Z" }] },
+            { "text": "コンプライアンス境界の適用は、SharePoint Embedded コンテナーでは現在サポートされていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "SharePoint Embedded の制限事項", "retrievedAt": "2026-10-23T03:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ページ・ノートブックは Loop と同じコンテナーを使い、「Loop」ラベルで表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "注", "retrievedAt": "2026-10-23T03:45:00Z" }] },
+            { "text": "「アプリでフィルター処理」やコンテナー URL の直接指定でも絞り込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "SharePoint Embedded コンテナーをデータ ソースとして追加する", "retrievedAt": "2026-10-23T03:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edisc", "term": "電子情報開示（eDiscovery）", "type": "feature", "oneLine": { "text": "調査に関連する Microsoft 365 のデータをデータ ソース単位で特定し、検索・管理する Purview の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "冒頭", "retrievedAt": "2026-10-23T03:45:00Z" }] } },
+        { "termKey": "spe", "term": "SharePoint Embedded コンテナー", "type": "term", "oneLine": { "text": "Loop や Copilot ページなど一部のアプリがコンテンツを格納する保存先。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "SharePoint Embedded アプリケーション コンテンツ", "retrievedAt": "2026-10-23T03:45:00Z" }] } },
+        { "termKey": "data-source", "term": "データ ソース", "type": "term", "oneLine": { "text": "eDiscovery で、プラットフォームをまたぐデータの識別と管理を効率化する概念。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "冒頭", "retrievedAt": "2026-10-23T03:45:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能がまだ開発段階にあることを示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ユーザー以外が所有するコンテナーも対象になりますか？",
+          "answer": { "text": "Learn の現行記載では、ユーザー所有とテナント所有が表示対象で、グループ所有・アプリ所有は未サポートです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "SharePoint Embedded の制限事項", "retrievedAt": "2026-10-23T03:45:00Z" }] }
+        },
+        {
+          "question": "組織全体を選べば、全コンテナーの一覧が出ますか？",
+          "answer": { "text": "組織全体の検索には対象コンテンツが含まれますが、全コンテナーの一覧は表示されません。個別に選ぶにはユーザーベースの管理エクスペリエンスを使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources", "locator": "グループおよび組織全体のデータ ソース", "retrievedAt": "2026-10-23T03:45:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569364",
+        "learn": [
+          { "title": "電子情報開示のデータ ソース", "url": "https://learn.microsoft.com/ja-jp/purview/edisc-data-sources#sharepoint-embedded-application-content", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
