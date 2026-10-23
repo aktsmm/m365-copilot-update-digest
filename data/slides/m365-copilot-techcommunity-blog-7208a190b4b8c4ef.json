@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-7208a190b4b8c4ef",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Copilot ノートブックが Markdown・テキスト・リッチテキストに対応",
+        "subtitleJa": "README や Wiki、ログ、文字起こしをそのままノートブックに追加できます",
+        "en": "Copilot Notebooks now works with Markdown, plain-text, and rich-text files"
+      },
+      "meta": {
+        "publishedJst": "2026-08-14",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "Copilot ノートブックでプロジェクト情報をまとめる**作成者・チームメンバー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "README やログなど、Word 以外に溜まった知識もノートブックの参照元にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の作業は不要。ユーザーは対応ファイルを参照として追加できる", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "README、プロジェクト Wiki、システム ログ、会議の文字起こし、リサーチのエクスポート、テキスト ファイルを**ノートブックに追加して活用**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Markdown・プレーンテキスト・リッチテキストのファイルをノートブックに追加できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "整った文書でなくても、手元の知識を Copilot の参照元として使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ノートブックの利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "Copilot ノートブックのライセンス要件", "retrievedAt": "2026-10-23T03:55:00Z" }] },
+            { "text": "対象ファイルをノートブックに追加し、Copilot に質問や整理を依頼する", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Exchange Online メールボックスがないと @mentions など一部機能に制限がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "Exchange Online の要件", "retrievedAt": "2026-10-23T03:55:00Z" }] },
+            { "text": "ノートブックは .pod ファイルとして SharePoint Embedded コンテナーに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-23T03:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "展開状況",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ソース上のステージは「展開中」。順次利用可能になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロジェクトの README や Wiki を集め、引き継ぎ用の要約づくりに使う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ログや文字起こしを追加し、振り返りの論点を整理する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "参照資料を集めて Copilot と作業する、.pod 形式で保存されるノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-23T03:55:00Z" }] } },
+        { "termKey": "markdown", "term": "Markdown", "type": "term", "oneLine": { "text": "README などでよく使われる、記号で書式を表す軽量なテキスト形式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "sharepoint-embedded", "term": "SharePoint Embedded コンテナー", "type": "term", "oneLine": { "text": "ノートブックを保存する、ユーザー所有のコンテナー（Loop マイ ワークスペースと共通）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-23T03:55:00Z" }] } },
+        { "termKey": "label-rolling", "term": "展開中", "type": "label", "oneLine": { "text": "提供が始まり、順次ユーザーに行き渡っている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ノートブックの利用にはどのライセンスが必要ですか？",
+          "answer": { "text": "Microsoft Copilot ライセンスが必要です。Copilot Chat ライセンスも要件に挙げられています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-23T03:55:00Z" }] }
+        },
+        {
+          "question": "ノートブックのデータはどこに保存されますか？",
+          "answer": { "text": "ユーザー所有の SharePoint Embedded コンテナーに .pod ファイルとして保存され、容量は組織の SharePoint クォータに含まれます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-23T03:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/copilot-notebooks-now-works-with-markdown-plain-text-and-rich/ba-p/4545652",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブックの要件", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
