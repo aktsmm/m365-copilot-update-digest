@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-6a026a4cb1801c82",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "ID と権限の変更がより早く反映されるように",
+        "subtitleJa": "ServiceNow Knowledge コネクタで、ID の変更を定期的に同期します",
+        "en": "Quicker reflection of identity and permission changes"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot extensibility"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot のコネクタを管理する管理者**（ServiceNow Knowledge コネクタの利用組織）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+        "change": { "text": "ユーザーやグループ所属の変更が、フル クロールを待たずに権限へ反映される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "高速化には、Advanced フローで user_changes リソースの設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**増分 ID 同期クロール**が、ユーザーの追加・削除、ロール割り当て、グループ所属などの変更を、フル クロールの合間に権限へ反映します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "増分 ID 同期クロールは、新しい種類の増分クロール", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "対象は、Advanced フローで user_changes リソースを設定した接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "既定の頻度は 30 分ごと（管理センターでは変更不可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "標準の増分クロールは、ID やグループ所属を更新しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "未設定の場合、ID の更新はフル クロール時のみ（既定は毎日）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "full-crawl", "term": "フル クロール", "type": "term", "oneLine": { "text": "全コンテンツの再インデックス、削除内容の除去、全権限の更新を行う同期。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "incremental-crawl", "term": "増分クロール", "type": "term", "oneLine": { "text": "変更されたコンテンツと記事レベルの権限変更を同期する処理。既定は 15 分ごと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "identity-sync", "term": "増分 ID 同期クロール", "type": "feature", "oneLine": { "text": "ユーザー、ロール、グループ所属などの ID 変更を、フル クロールの合間に権限へ反映する新しいクロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能に対する変更や改善を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ID 同期の頻度は変更できますか？",
+          "answer": { "text": "管理センターでは変更できません。変更したい場合は、Learn に記載の Microsoft Graph コネクタ チームの連絡先へ問い合わせます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "設定しない場合、ID の変更はいつ反映されますか？",
+          "answer": { "text": "標準の増分クロールは ID を更新しないため、フル クロール時に反映されます。既定のフル クロールは毎日です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment#customize-sync-intervals",
+        "learn": [
+          { "title": "Deploy the ServiceNow Knowledge Copilot connector", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locale": "en-us" },
+          { "title": "Set up the ServiceNow service for ServiceNow Knowledge connector ingestion", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
