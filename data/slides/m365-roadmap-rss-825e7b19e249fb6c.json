@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-825e7b19e249fb6c",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "動画のストック映像を AI 生成画像に置き換える機能（取り消し）",
+        "subtitleJa": "Microsoft Copilot の Create での提供予定は、ロードマップ上で Cancelled になっています",
+        "en": "Microsoft Copilot (Microsoft 365): Replace stock video footage with AI-Generated Images in Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Create で動画を作る人**と、Microsoft Copilot の展開を計画する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "この機能の提供を前提にした計画は見直しが必要（ロードマップのタグは Cancelled）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "待っていた場合は、提供予定がなくなった点だけ把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Create の動画で、ストック映像を OpenAI の最新の画像生成モデルによる AI 生成画像に置き換える構想でした。ロードマップ上では取り消されています", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象と現状",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Create で動画のストック映像を AI 生成画像に差し替える機能として計画されていた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップのタグは Cancelled。2026 年 8 月 10 日付の更新が掲載されている", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）、Desktop・Mac・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "社内の案内や展開計画にこの機能を載せていた場合は、削除を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "create", "term": "Create", "type": "feature", "oneLine": { "text": "Microsoft Copilot で動画などのコンテンツを作成する体験。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "product", "oneLine": { "text": "Microsoft 365 の開発中・提供中の機能を公開しているページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "ロードマップ項目の内容やステータスが更新されたことを示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        { "question": "この機能は今後提供されますか。", "answer": { "text": "ロードマップ上のタグは Cancelled で、提供予定は取り消されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=501570"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
