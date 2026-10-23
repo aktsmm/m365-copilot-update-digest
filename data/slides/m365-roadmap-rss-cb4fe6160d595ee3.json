@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-cb4fe6160d595ee3",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview DLP トリアージ エージェントに信頼度スコアと推論トレースを追加",
+        "subtitleJa": "エージェントが分類したアラートの根拠と確からしさを確認できるようになります",
+        "en": "Microsoft Purview: Data Security Triage Agent in Data Loss Prevention - Reasoning Trace and Confidence Score for agent-triaged alerts"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Purview"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Purview",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Purview DLP のアラートを調査するアナリスト**と、トリアージ エージェントの管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントの判断理由と信頼度が見え、手動での再確認を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "DLP のトリアージ エージェントが分類したアラートに、**信頼度スコアと推論トレース**が付き、判断の理由と確からしさを確認できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "DLP のトリアージ エージェントに信頼度スコアと推論トレースの説明性を追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "判断理由や確信度が分からず、アナリストが手動確認に戻る課題に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エージェントは Exchange、Teams、OneDrive、SharePoint、デバイスの場所のみを対象とするポリシーのアラートをトリアージする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "冒頭", "retrievedAt": "2026-10-23T09:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "すべてのアラートがトリアージされるわけではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "トリアージされたアラート", "retrievedAt": "2026-10-23T09:50:00Z" }] },
+            { "text": "サポート外の条件を持つポリシーは「制限付き適格性」となり、一部アラートがトリアージされないことがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "制限付き適格性", "retrievedAt": "2026-10-23T09:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "シート単位と従量課金の両方のライセンス モデルが必要で、SCU のプロビジョニングも要る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "サブスクリプションとライセンス", "retrievedAt": "2026-10-23T09:50:00Z" }] },
+            { "text": "設定後 30〜60 分で実行を開始し、既定では過去 30 日のアラートを処理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "アクセス許可と役割", "retrievedAt": "2026-10-23T09:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "triage-agent", "term": "Purview トリアージ エージェント", "type": "feature", "oneLine": { "text": "DLP のアラートを自動でトリアージするエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "冒頭", "retrievedAt": "2026-10-23T09:50:00Z" }] } },
+        { "termKey": "dlp", "term": "データ損失防止（DLP）", "type": "term", "oneLine": { "text": "機密情報の流出を防ぐ Microsoft Purview の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "冒頭", "retrievedAt": "2026-10-23T09:50:00Z" }] } },
+        { "termKey": "scu", "term": "SCU", "type": "term", "oneLine": { "text": "セキュリティ コンピューティング ユニット。エージェントがタスク実行時に使う単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "サブスクリプションとライセンス", "retrievedAt": "2026-10-23T09:50:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ使えるようになりますか？",
+          "answer": { "text": "ロードマップには提供月が示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "トリアージ エージェントを使うにはどんなライセンスが必要ですか？",
+          "answer": { "text": "シート単位と従量課金の両方のモデルが必要で、SCU のプロビジョニングも必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locator": "サブスクリプションとライセンス", "retrievedAt": "2026-10-23T09:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560597",
+        "learn": [
+          { "title": "データ損失防止での Microsoft Purview トリアージ エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/purview/copilot-in-purview-triage-dlp-agent-get-started", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
