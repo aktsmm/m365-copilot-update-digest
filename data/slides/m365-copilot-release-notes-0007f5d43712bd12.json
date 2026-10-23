@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-0007f5d43712bd12",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Word の Copilot で編集時に Anthropic モデルを選択可能に（Web）",
+        "subtitleJa": "OpenAI モデルに加えて、Anthropic モデルを選べます",
+        "en": "Choose Anthropic models when editing with Copilot in Word [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Word の Copilot（Web）で文書を編集する人**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "編集内容に合わせて、OpenAI と Anthropic のモデルを選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は、サブプロセッサーとしての Anthropic を管理センターで有効・無効にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルへの接続を無効にする", "retrievedAt": "2026-10-23T12:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word で Copilot を使った編集時に、**モデル選択メニューから Anthropic モデル**を選べます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Word の Copilot での文書編集（Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "モデル選択メニューで Anthropic モデルを選び、編集を実行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Word・Excel・PowerPoint の Copilot では、管理者の設定により Anthropic モデルを使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-anthropic-apps", "locator": "Microsoft 365 アプリでの Anthropic モデルの可用性", "retrievedAt": "2026-10-23T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "EU・EFTA・英国では Anthropic モデルが既定で無効。管理者がオプトインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "オプトインの地域と除外", "retrievedAt": "2026-10-23T12:50:00Z" }] },
+            { "text": "Anthropic モデルは EU データ境界の対象外で処理される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "重要", "retrievedAt": "2026-10-23T12:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "admin-control",
+          "heading": "管理者の設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI 管理者またはグローバル管理者が、管理センターの Copilot 設定から切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルの使用をオプトインする", "retrievedAt": "2026-10-23T12:50:00Z" }] },
+            { "text": "利用前に、自組織のリージョンでの既定値とデータ処理の条件を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "anthropic", "term": "Anthropic モデル", "type": "term", "oneLine": { "text": "Microsoft Online Services で Microsoft のサブプロセッサーとして提供される Anthropic の AI モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "冒頭", "retrievedAt": "2026-10-23T12:50:00Z" }] } },
+        { "termKey": "subprocessor", "term": "サブプロセッサー", "type": "term", "oneLine": { "text": "Microsoft の監督下で、契約上の保護措置のもとデータ処理を行う事業者。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "冒頭", "retrievedAt": "2026-10-23T12:50:00Z" }] } },
+        { "termKey": "eudb", "term": "EU データ境界", "type": "term", "oneLine": { "text": "EU 内でのデータ処理に関する Microsoft のコミットメント。Anthropic モデルの処理は対象外。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-anthropic-apps", "locator": "データ処理と EU データ境界", "retrievedAt": "2026-10-23T12:50:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の拡張として、リリース ノートに掲載された変更。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "EU のテナントでも使えますか？",
+          "answer": { "text": "EU・EFTA・英国では Anthropic モデルが既定で無効なため、管理者のオプトインが必要です。Word・Excel・PowerPoint 向けの専用管理設定もあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "オプトインの地域と除外", "retrievedAt": "2026-10-23T12:50:00Z" }] }
+        },
+        {
+          "question": "一部のユーザーだけに制限できますか？",
+          "answer": { "text": "はい。管理センターで特定のユーザーまたは Entra ID セキュリティ グループに AI プロバイダーへのアクセスを割り当てられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locator": "Anthropic モデルの使用をオプトインする", "retrievedAt": "2026-10-23T12:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          { "title": "Microsoft Online Services の Anthropic モデル", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connect-to-ai-subprocessor", "locale": "ja-jp" },
+          { "title": "Anthropic モデルを使用した Microsoft 365 アプリの Copilot", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-anthropic-apps", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
