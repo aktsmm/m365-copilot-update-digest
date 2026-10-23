@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-a078ebac7b2506d2",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams の Queues アプリでインテリジェント通話要約（開発中）",
+        "subtitleJa": "録音された通話キューの通話を、AI の要約で素早く振り返れます",
+        "en": "Microsoft Teams: Intelligent call recaps in Queues app"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams の通話キューで顧客対応をする担当者**と、Teams 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "録音された通話を聞き直さずに、要点とフォローアップを把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため、提供開始まで対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Queues アプリの通話記録から、**AI 生成の要約メモ・主な議論ポイント・フォローアップ**を確認できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "録音された通話キューの通話が対象（Queues アプリ）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AI 生成の要約メモ、主な議論ポイント、フォローアップ アクションを提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象環境は Worldwide・GCC・GCC High、デスクトップと Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、内容や時期は変更されることがある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teams の既存の通話要約では、文字起こしをオンにする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ポリシー > 文字起こし", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存の通話要約は、Teams Premium または Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件 > ライセンス", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "ライセンスと文字起こしポリシーの現状を、先に棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "intelligent-recap", "term": "インテリジェント要約", "type": "feature", "oneLine": { "text": "AI を使って、会議や通話のメモや推奨タスクを提供する Teams の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "概要", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "pstn", "term": "PSTN 通話", "type": "term", "oneLine": { "text": "電話番号を使って発着信する通話。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "PSTN 通話", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "queues-app", "term": "Queues アプリ", "type": "feature", "oneLine": { "text": "Teams で通話キューの通話を扱うアプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "既存の通話要約には何が必要ですか？",
+          "answer": { "text": "Teams を含むライセンスに加え、Teams Premium または Microsoft Copilot ライセンスが必要で、文字起こしもオンにします。PSTN 通話では Teams 電話ライセンスと通話プランも必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "Queues アプリ版にも同じ前提条件が適用されますか？",
+          "answer": { "text": "Queues アプリ版の前提条件は、ロードマップ上では確認できていません。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569017",
+        "learn": [{ "title": "Teams の通話、会議、イベントのためのインテリジェント要約", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
