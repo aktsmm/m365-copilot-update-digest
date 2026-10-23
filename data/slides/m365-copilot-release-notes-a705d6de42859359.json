@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-a705d6de42859359",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Word の Copilot で Sonnet 5 を選択可能に",
+        "subtitleJa": "ドラフトや編集で、より正確で文脈に合ったテキストを生成できます",
+        "en": "Generate more precise and contextually relevant text"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": null,
+        "products": ["Word"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "**Word で Microsoft Copilot を使って文書を作成・編集する人**と、管理者",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Enable Sonnet 5 in models menu", "retrievedAt": "2026-10-22T23:58:00Z" }]
+        },
+        "change": {
+          "text": "複雑な編集でも、より的確な提案を受けられる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Enable Sonnet 5 in models menu", "retrievedAt": "2026-10-22T23:58:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "特別な対応は不要。Word で Copilot を開き、モデル メニューで確認できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-22T23:58:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Word の Copilot の**モデル メニューで Sonnet 5 が使えるように**なり、高い推論レベルのタスクの既定になります。ドラフトや編集の精度と品質が向上します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T23:58:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Word の Copilot のモデル メニューに Sonnet 5 が追加された", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T23:58:00Z" }] },
+            { "text": "高い推論レベルのタスクでは Sonnet 5 が既定になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T23:58:00Z" }] },
+            { "text": "複雑な言語の理解が向上し、Microsoft 365 のセキュリティ基準は維持される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T23:58:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Word で Copilot を開き、モデル メニューで Sonnet 5 が選ばれていることを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-22T23:58:00Z" }] },
+            { "text": "複雑な内容のドラフトや編集を依頼し、結果を比べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-22T23:58:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sonnet-5", "term": "Sonnet 5", "type": "feature", "oneLine": { "text": "Word の Copilot のモデル メニューで選べる AI モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-22T23:58:00Z" }] } },
+        { "termKey": "models-menu", "term": "モデル メニュー", "type": "term", "oneLine": { "text": "Copilot が使う AI モデルを確認・切り替えるメニュー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-22T23:58:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能改善の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
