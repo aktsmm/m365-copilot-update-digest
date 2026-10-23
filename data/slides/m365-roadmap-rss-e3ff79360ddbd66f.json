@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e3ff79360ddbd66f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Dataverse スキルで、コーディング エージェントから Dataverse ソリューションを構築",
+        "subtitleJa": "自然言語のプロンプトで、テーブルやリレーションを含むソリューションを作れます",
+        "en": "Microsoft Dataverse: Enable AI powered business workflows in Work IQ with Dataverse - Build Dataverse solutions with coding agents using Dataverse skills"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Dataverse", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Dataverse",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dataverse でソリューションを作る作成者**と、Power Platform 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "テーブルやリレーションの設計を、自然言語でコーディング エージェントに任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、今すぐの対応は不要。提供開始の続報を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "「採用管理システムを作りたい。求人・候補者・面接官・面接・フィードバックのテーブルが必要」のような**自然言語のプロンプト**で、コーディング エージェントが Dataverse ソリューションを構築します",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Dataverse スキルを使い、コーディング エージェントで Dataverse ソリューションを構築", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "例: 参照列や、候補者と求人の多対多リレーションを含むテーブル設計をプロンプトで指示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中。提供時期の月はまだ示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連機能のビジネス スキルはプレビュー。本番用途向けではなく、変更や廃止の可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "Important", "retrievedAt": "2026-10-23T06:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "関連機能の前提（ビジネス スキル）",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Power Platform 管理者が Work IQ を有効にした Dataverse 環境が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "前提条件", "retrievedAt": "2026-10-23T06:20:00Z" }] },
+            { "text": "Dataverse MCP 経由で直接接続する場合は、環境で Dataverse MCP サーバーの構成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "前提条件", "retrievedAt": "2026-10-23T06:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-skills",
+          "heading": "ビジネス スキルとの関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ビジネス スキルは、組織のプロセスをエージェントに教える仕組み。Work IQ MCP や Dataverse MCP から使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "ビジネス スキルを使用する", "retrievedAt": "2026-10-23T06:20:00Z" }] },
+            { "text": "スキルはソリューションに追加でき、環境間で移行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "ソリューションにビジネス スキルを追加する", "retrievedAt": "2026-10-23T06:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dataverse", "term": "Microsoft Dataverse", "type": "product", "oneLine": { "text": "Power Platform のアプリやエージェントが使う、テーブルでデータを管理する基盤。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "ビジネス スキルを MCP 経由でエージェントに届ける、Dataverse 環境向けの仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "前提条件", "retrievedAt": "2026-10-23T06:20:00Z" }] } },
+        { "termKey": "business-skill", "term": "ビジネス スキル", "type": "feature", "oneLine": { "text": "組織のプロセスをマークダウンで記述し、エージェントが従えるようにしたもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "ビジネス スキルを作成する", "retrievedAt": "2026-10-23T06:20:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "ビジネス スキルを使用する", "retrievedAt": "2026-10-23T06:20:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中で、提供時期の月は示されていません。続報はロードマップで確認します。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "ビジネス スキルとは何が違いますか？",
+          "answer": { "text": "ビジネス スキルは、業務プロセスの手順をエージェントに教える機能です。本更新は、Dataverse ソリューション自体をエージェントで構築する内容です。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        },
+        {
+          "question": "利用に必要な前提は何ですか？",
+          "answer": { "text": "本更新の前提はまだ公表されていません。関連するビジネス スキルでは、Work IQ を有効にした Dataverse 環境が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locator": "前提条件", "retrievedAt": "2026-10-23T06:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577815",
+        "learn": [
+          { "title": "ビジネス スキルの作成と使用 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/data-platform-business-skills", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
