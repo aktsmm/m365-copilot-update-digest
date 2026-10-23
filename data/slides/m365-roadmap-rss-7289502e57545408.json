@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7289502e57545408",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Power Pages の MCP サーバー機能を Copilot から利用可能に",
+        "subtitleJa": "サイトのデータや操作を、AI クライアントから安全に使えるようにします",
+        "en": "Power Pages: Power Pages Copilot - Use Power Pages MCP server capabilities"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Power Pages"],
+        "categories": ["copilot-chat", "agents"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Power Pages サイトの作成者（メーカー）**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "サイトのデータや操作を、カスタム コードなしで AI クライアントに公開できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。作成者は提供状況を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Power Pages の MCP サーバーで、**サイトのデータと操作を標準化されたインターフェイス**から AI クライアントに公開できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "MCP Server for Power Pagesとは?", "retrievedAt": "2026-10-23T06:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "パブリック プレビューでは、サイトの Web API 層を介した CRUD 操作を有効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft 365 Copilot などの AI エージェントが Dataverse データを操作できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "MCP Server for Power Pagesとは?", "retrievedAt": "2026-10-23T06:00:00Z" }] },
+            { "text": "内部チームがポータル UI を移動せずに操作を実行する用途にも使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "主な機能", "retrievedAt": "2026-10-23T06:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Web ロール、テーブルのアクセス許可、認証の境界は引き続き尊重される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "MCP Server for Power Pagesとは?", "retrievedAt": "2026-10-23T06:00:00Z" }] },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "公開するテーブルと Web ロールのアクセス許可を事前に棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "概要ドキュメントで、MCP サーバーの主な機能を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "主な機能", "retrievedAt": "2026-10-23T06:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "AI アシスタントがデータやツールと標準的な方法でやり取りするための仕組み（モデル コンテキスト プロトコル）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "MCP Server for Power Pagesとは?", "retrievedAt": "2026-10-23T06:00:00Z" }] } },
+        { "termKey": "power-pages-mcp", "term": "MCP Server for Power Pages", "type": "feature", "oneLine": { "text": "Power Pages のデータ、API、ビジネス ロジックを MCP 準拠のインターフェイスで公開する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "MCP Server for Power Pagesとは?", "retrievedAt": "2026-10-23T06:00:00Z" }] } },
+        { "termKey": "crud", "term": "CRUD", "type": "term", "oneLine": { "text": "レコードの作成、読み取り、更新、削除の 4 つの基本操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "MCP Server for Power Pagesとは?", "retrievedAt": "2026-10-23T06:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "AI エージェントはどのデータを操作できますか？",
+          "answer": {
+            "text": "Dataverse データに対する作成・読み取り・更新・削除ができます。Web ロールやテーブルのアクセス許可、認証の境界は尊重されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locator": "MCP Server for Power Pagesとは?", "retrievedAt": "2026-10-23T06:00:00Z" }]
+          }
+        },
+        {
+          "question": "カスタム コードは必要ですか？",
+          "answer": {
+            "text": "ロードマップでは、パブリック プレビューで Web API 層を介した CRUD 操作をカスタム コードなしで有効化できるとされています。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577813",
+        "learn": [{ "title": "Power Pages 用モデル コンテキスト プロトコル (MCP) サーバーの概要", "url": "https://learn.microsoft.com/ja-jp/power-pages/configure/mcp-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
