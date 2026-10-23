@@ -771,6 +771,26 @@ function knownJapaneseRoadmapTitle(event) {
     return "Dynamics 365 Customer Service の AI エージェントで日中業務を管理";
   }
 
+  if (/dynamics 365 contact center: administrator experiences - use service operations agent/.test(text)) {
+    return "Dynamics 365 Contact Center: Service Operations Agent で設定・導入・変更確認を迅速化";
+  }
+
+  if (/reference an email with work iq when using edit with copilot in powerpoint/.test(text)) {
+    return "PowerPoint で Copilot 編集時に Work IQ のメールを参照可能に";
+  }
+
+  if (/improve engagement and message timing with outreach optimization agent/.test(text)) {
+    return "Dynamics 365 Customer Insights - Journeys: Outreach Optimization Agent で顧客エンゲージメントと配信タイミングを最適化";
+  }
+
+  if (/increase ai accuracy by grounding agents in customer insights/.test(text)) {
+    return "Dynamics 365 Customer Insights - Data: 顧客インサイトに基づきエージェントの AI 精度を向上";
+  }
+
+  if (/build dataverse solutions with coding agents using dataverse skills/.test(text)) {
+    return "Work IQ と Dataverse スキルを活用して、コーディング エージェントで Dataverse ソリューションを構築";
+  }
+
   if (/word: legal plugins in copilot/.test(text)) {
     return "Copilot の法務プラグイン";
   }
@@ -1694,6 +1714,14 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^dynamics 365 contact center:/.test(text)) {
     return "Dynamics 365 Contact Center";
+  }
+
+  if (/^dynamics 365 customer insights(?:\s*[-:])/.test(text)) {
+    return "Dynamics 365 Customer Insights";
+  }
+
+  if (/^power pages:/.test(text)) {
+    return "Power Pages";
   }
 
   if (/^dynamics 365 finance and operations cross-app:/.test(text)) {
