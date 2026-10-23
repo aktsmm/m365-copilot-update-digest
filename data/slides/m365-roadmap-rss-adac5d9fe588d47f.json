@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-adac5d9fe588d47f",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Excel の =COPILOT 関数は提供中止になりました",
+        "subtitleJa": "ロードマップ上で、この機能は計画から外れています",
+        "en": "Excel: =COPILOT Function"
+      },
+      "meta": {
+        "publishedJst": "2026-08-14",
+        "availability": [],
+        "status": "Cancelled",
+        "products": ["Microsoft Copilot", "Excel"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Excel for the web で =COPILOT 関数を待っていた作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "当初予定されていた関数の提供は行われない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この機能のための準備や設定は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Excel の数式内で文章やデータの生成・分類・要約を行う =COPILOT 関数は、**提供しない**ことが決まりました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "予定されていた機能: 数式内で文章やデータを生成・分類・要約する =COPILOT 関数", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft は、この機能を進めない判断をした", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップの対象は Worldwide (Standard Multi-Tenant) の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "社内の案内や計画に =COPILOT 関数の提供予定が含まれていれば修正する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-function", "term": "=COPILOT 関数", "type": "feature", "oneLine": { "text": "Excel の数式から、文章やデータの生成・分類・要約を行う予定だった関数。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の開発中・展開中・提供済みの機能を公開しているページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "ロードマップ上の項目の内容や状況が更新されたことを示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能は後日提供される可能性がありますか？",
+          "answer": { "text": "ロードマップには「この機能は進めないことにした」と記載されています。再開の予定は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者が対応することはありますか？",
+          "answer": { "text": "提供されない機能のため、設定変更などの対応は発生しません。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=499660"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
