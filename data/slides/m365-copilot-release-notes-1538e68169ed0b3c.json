@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-1538e68169ed0b3c",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot で、Web 上の情報源を参照してプレゼンを作成",
+        "subtitleJa": "最新の Web 情報を取り込んだスライドを、Copilot に作らせられます",
+        "en": "Reference web sources when creating a presentation with Copilot in PowerPoint [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint", "Microsoft Copilot"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint の Copilot でプレゼンを作成する人**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026", "retrievedAt": "2026-10-23T11:10:00Z" }] },
+        "change": { "text": "最新の Web 情報を根拠にしたスライドを、手作業の調査を減らして作れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026", "retrievedAt": "2026-10-23T11:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリース ノートに、管理者へ求める対応の記載はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026", "retrievedAt": "2026-10-23T11:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "PowerPoint の Copilot では、ライブの Web 情報を直接ソース資料として取り込めなかった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T11:10:00Z" }] },
+        "after": { "text": "Copilot が Web から関連情報を集め、**参照したソースを使って**プレゼンを作成できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T11:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレゼン作成時に、関連するオンライン ソースの参照を Copilot に依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026", "retrievedAt": "2026-10-23T11:10:00Z" }] },
+            { "text": "Web コンテンツのセキュリティとプライバシーの基準を守りながら情報を利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T11:10:00Z" }] },
+            { "text": "正確性・関連性・最新性の向上と、手作業の調査の削減が目的", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-23T11:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot で新規プレゼンを開始し、最新の Web 情報が役立つテーマで作成を依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T11:10:00Z" }] },
+            { "text": "生成されたスライドと、参照されたソースを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T11:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "tip",
+          "heading": "確認のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "社外向け資料では、引用された情報源の内容を公開前に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-powerpoint", "term": "Copilot in PowerPoint", "type": "feature", "oneLine": { "text": "PowerPoint でプレゼンの作成を支援する Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026", "retrievedAt": "2026-10-23T11:10:00Z" }] } },
+        { "termKey": "web-sources", "term": "Web ソースの参照", "type": "feature", "oneLine": { "text": "Copilot が Web から関連情報を集め、参照元として使う動作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T11:10:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能への更新を示す、リリース ノート上の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この更新で、これまでと何が変わりますか？",
+          "answer": { "text": "以前は Copilot にライブの Web 情報を直接ソースとして使わせられませんでしたが、今回から Web の情報源を参照して作成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T11:10:00Z" }] }
+        },
+        {
+          "question": "管理者の設定変更は必要ですか？",
+          "answer": { "text": "リリース ノートには、管理者向けの設定や対応の記載はありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 11, 2026", "retrievedAt": "2026-10-23T11:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
