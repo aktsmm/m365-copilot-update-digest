@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-020fa54221086baa",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot モバイル アプリにプロアクティブなプッシュ通知（開発中）",
+        "subtitleJa": "「今日の概要」や「待機中の項目」を、Copilot が先回りして知らせます",
+        "en": "Microsoft Copilot (Microsoft 365): Proactive push notifications for the Microsoft 365 Copilot mobile app"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Android", "iOS"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot モバイル アプリ（Android / iOS）を使う人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "日々の定型作業の情報を、アプリを開く前にプッシュ通知で受け取れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "モバイル アプリが「今日の概要」や「待機中の項目」などの**定型ワークフローを先回りして通知**します。通知を開くと、対応する Copilot の応答に移動します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "通知の例: 「Your Day at a Glance」「Items waiting for you」", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "通知を開くと、対応する Copilot の応答が表示される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot メモリの情報を活用する機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象プラットフォームは Android と iOS", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上の提供対象クラウドは GCC / GCC High / DoD", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理者が拡張個人用設定をオフにすると、ユーザーは Copilot メモリを使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から備えること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "拡張個人用設定は既定でオン。無効にする場合は管理者が設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "提供開始前に、モバイル アプリの通知の扱いを社内で整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-memory", "term": "Copilot メモリ", "type": "feature", "oneLine": { "text": "保存されたメモリ、チャット履歴から推測された詳細、カスタム指示で構成され、Exchange メールボックスの隠しフォルダーに保存される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "enhanced-personalization", "term": "拡張個人用設定", "type": "feature", "oneLine": { "text": "エンド ユーザーが Copilot メモリを使えるようにするコントロール。既定ではオン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "push-notification", "term": "プッシュ通知", "type": "term", "oneLine": { "text": "アプリを開いていなくても、端末に届く通知。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この通知は Copilot メモリとどう関係しますか？",
+          "answer": { "text": "ロードマップでは、この機能は Copilot メモリを活用すると説明されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者はメモリ機能を制御できますか？",
+          "answer": { "text": "はい。管理者は拡張個人用設定のコントロールをオフにでき、Microsoft Graph でも構成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=560339",
+        "learn": [
+          { "title": "Copilot の個人用設定とメモリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
