@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-02c7993e305722eb",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Excel の Copilot による複雑な Web 検索（計画は中止）",
+        "subtitleJa": "マルチエージェント検索の強化は、現時点では実施されないことになりました",
+        "en": "Microsoft Copilot (Microsoft 365): Complex web search with Copilot in Excel"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Excel で Microsoft Copilot を使う作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ロードマップ項目は中止され、この変更は提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この項目に関する対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Excel の Copilot に、並列調査・検証・再確認を行う**マルチエージェント検索**を入れる計画でしたが、**現時点では見送り**となりました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "計画されていた内容と現状",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "計画: 並列調査を調整し、結果を検証して、不足を再確認する検索システム", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "より速く、より完全な回答を目指す変更だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現状: 現時点ではこの変更を進めないことにした、と案内されている", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Web 検索は、管理者の「Copilot での Web 検索を許可する」ポリシーで制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locator": "Web 検索を管理するために使用できるコントロール", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "ユーザーは「Web コンテンツ」トグルで Web コンテンツの利用を切り替えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locator": "ユーザー向けの Web コンテンツ トグル", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-excel", "term": "Excel の Copilot", "type": "feature", "oneLine": { "text": "Excel 上で Microsoft Copilot の支援を受けられる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "web-search", "term": "Web 検索（Copilot）", "type": "feature", "oneLine": { "text": "Copilot が応答時に Web コンテンツを参照できるオプション機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "multi-agent", "term": "マルチエージェント検索", "type": "term", "oneLine": { "text": "複数のエージェントが並列に調査し、結果を検証・再確認する検索の仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-cancelled", "term": "中止（Cancelled）", "type": "label", "oneLine": { "text": "ロードマップ上で、変更を進めないと判断された状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この検索強化は今後提供されますか？",
+          "answer": { "text": "ロードマップでは、現時点でこの変更を進めないと案内されています。提供予定の日付は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者は Copilot の Web 検索を制御できますか？",
+          "answer": { "text": "はい。クラウド ポリシー サービスの「Copilot での Web 検索を許可する」ポリシーで制御できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locator": "Web 検索を管理するために使用できるコントロール", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566872",
+        "learn": [
+          { "title": "Microsoft Copilot と Microsoft Copilot Chat での Web 検索のデータ、プライバシー、セキュリティ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
