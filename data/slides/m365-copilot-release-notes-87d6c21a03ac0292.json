@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-87d6c21a03ac0292",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Notebooks に Outlook メールを参照として追加",
+        "subtitleJa": "メールの会話や決定事項を、ノートブックの文脈として使えます",
+        "en": "Outlook Emails in Copilot Notebooks [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Notebooks でプロジェクトの資料をまとめる人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "August 25, 2026 / Outlook Emails in Copilot Notebooks", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "change": { "text": "ファイルだけでなくメールの文脈も、Copilot の回答や成果物に反映できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "August 25, 2026 / Outlook Emails in Copilot Notebooks", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者は、ノートブックの「コンテンツを追加」から Outlook メールを選べばよい", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "Try this", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "ノートブックに含められるのは、ファイルなどのドキュメントのみでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+        "after": { "text": "**Outlook メールを知識ソースとして追加**でき、Copilot が会話や決定事項を踏まえた内容を作れます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Notebooks で、Outlook メールを参照（知識ソース）として追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "対象は Windows と Web（Microsoft 365 の Copilot Notebooks）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "見出しの対象表記", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "プレゼンテーションやブリーフなどの成果物の文脈が豊かになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Notebook を開き、「コンテンツを追加」から Outlook メールを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "Try this", "retrievedAt": "2026-10-23T00:00:00Z" }] },
+            { "text": "参照に含めたいメールを選んで、ノートブックに追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "Try this", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "tip",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "案件ごとのノートブックに、関連メールを集めて試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "ファイルなどを参照として集め、Copilot の文脈にするノートブック機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "knowledge-source", "term": "知識ソース", "type": "term", "oneLine": { "text": "Copilot が文脈として利用する、ノートブックに追加した参照元。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-23T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能への更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "以前はメールを参照に追加できなかったのですか？",
+          "answer": { "text": "リリース ノートによると、従来のノートブックに含められたのはファイルなどのドキュメントのみです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "What changed", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": { "text": "リリース ノートの対象表記は Windows と Web です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locator": "見出しの対象表記", "retrievedAt": "2026-10-23T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
