@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-c0fa97e251844fae",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot コネクタ：コンテンツとIDのクロールを並列実行",
+        "subtitleJa": "取り込んだコンテンツが、これまでより早く利用可能になります",
+        "en": "Parallel content and identity crawl improves content freshness [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクタで外部データを取り込んでいる管理者・作成者**", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Parallel content and identity crawl improves content freshness", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+        "change": { "text": "新規・更新コンテンツや権限変更が、Copilot の結果により早く反映される", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Why", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "設定変更は不要。接続元に更新を加え、反映の速さと権限の正確さを確認できる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Try this", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "コンテンツのクロールと ID のクロールが順番に実行され、Copilot で使えるようになるまで遅延があった", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "What changed", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+        "after": { "text": "両方のクロールを**並列**で実行し、処理時間を短縮。セキュリティや権限の正確さは損なわれません", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "What changed", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot コネクタが、コンテンツと ID のクロールを並列で実行する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "冒頭", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "新規・更新コンテンツの取り込みが速くなる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Why", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "ID・権限の変更も、より早く反映される", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Why", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認方法",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "接続元のコンテンツを追加・更新し、Copilot の結果に早く出るか確認", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Try this", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "権限と ID 情報が正確なままであることも確認する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Try this", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "connector-basics",
+          "heading": "コネクタの前提",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "同期型コネクタは外部データを Microsoft Graph にインデックス化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Synced connectors - Tenant configuration", "retrievedAt": "2026-10-23T17:40:00Z" }] },
+            { "text": "ソースの権限を尊重し、権限のあるユーザーだけが内容を参照できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Permission-based filtering", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connectors", "term": "Copilot コネクタ", "type": "product", "oneLine": { "text": "Microsoft 365 外のデータを Microsoft Copilot や検索の対象に加える仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "冒頭", "retrievedAt": "2026-10-23T17:40:00Z" }] } },
+        { "termKey": "synced-connector", "term": "同期型コネクタ", "type": "feature", "oneLine": { "text": "外部ソースのコンテンツをクロールし、Microsoft Graph にインデックス化するコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Synced connectors - Tenant configuration", "retrievedAt": "2026-10-23T17:40:00Z" }] } },
+        { "termKey": "acl", "term": "ACL", "type": "term", "oneLine": { "text": "各アイテムに付き、誰がアクセスできるかを定める権限情報（アクセス制御リスト）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "How Copilot connectors work", "retrievedAt": "2026-10-23T17:40:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "管理者が設定を変更する必要はありますか？",
+          "answer": { "text": "リリースノートが示すのは、接続元に更新を加えて反映の速さを確認する手順のみです。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "Try this", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+        },
+        {
+          "question": "並列化でセキュリティは下がりませんか？",
+          "answer": { "text": "リリースノートでは、セキュリティや権限の正確さを損なわずに鮮度と可用性が向上すると説明されています。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11", "locator": "What changed", "retrievedAt": "2026-10-23T17:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          { "title": "Copilot connectors overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
