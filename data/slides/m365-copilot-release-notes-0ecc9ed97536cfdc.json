@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-0ecc9ed97536cfdc",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot コネクタの新規・更新コンテンツが、より早く反映",
+        "subtitleJa": "コンテンツ クロールと ID クロールを並列実行し、鮮度を高めます",
+        "en": "Faster ingestion of new and updated content"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクタを管理・構築する管理者と作成者**、およびコネクタ経由の情報を使う利用者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "August 11, 2026 / Microsoft 365 Copilot extensibility", "retrievedAt": "2026-10-23T11:00:00Z" }] },
+        "change": { "text": "取り込まれたコンテンツが、これまでより早くユーザーに届く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "August 11, 2026 / Parallel content and identity crawl", "retrievedAt": "2026-10-23T11:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリース ノートに、管理者が行う設定変更の記載はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "August 11, 2026 / Parallel content and identity crawl", "retrievedAt": "2026-10-23T11:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "コンテンツ クロールと ID クロールが順番に実行され、コンテンツが Copilot で使えるまで遅延が生じていた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T11:00:00Z" }] },
+        "after": { "text": "両方のクロールを**並列で実行**し、処理時間が短縮。セキュリティとアクセス許可の正確さは保たれます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-10-23T11:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Copilot コネクタ。コンテンツと ID のクロールを並列実行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Parallel content and identity crawl improves content freshness", "retrievedAt": "2026-10-23T11:00:00Z" }] },
+            { "text": "新規・更新コンテンツの取り込みが速くなり、ID と権限の変更も早く反映される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Parallel execution enables", "retrievedAt": "2026-10-23T11:00:00Z" }] },
+            { "text": "リリース ノート上の提供プラットフォーム表記は Web", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Parallel content and identity crawl improves content freshness [Web]", "retrievedAt": "2026-10-23T11:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "接続先でコンテンツを更新し、Copilot の結果に早く出ることを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-23T11:00:00Z" }] },
+            { "text": "アクセス許可や ID の情報が正しいままかも確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-10-23T11:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "sync-note",
+          "heading": "同期の考え方（ServiceNow の例）",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ServiceNow Knowledge コネクタのフル クロールでは、コンテンツ同期と ID 同期が並列で動く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-10-23T11:00:00Z" }] },
+            { "text": "増分クロールの既定は 15 分ごと、フル クロールは毎日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-10-23T11:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connector", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "ServiceNow などの外部データを Microsoft Copilot の体験に取り込む仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "冒頭", "retrievedAt": "2026-10-23T11:00:00Z" }] } },
+        { "termKey": "content-crawl", "term": "コンテンツ クロール", "type": "term", "oneLine": { "text": "接続先のコンテンツを読み取り、取り込む処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-10-23T11:00:00Z" }] } },
+        { "termKey": "identity-crawl", "term": "ID クロール", "type": "term", "oneLine": { "text": "ユーザーやグループ メンバーシップなどの ID の変更を確認し、アクセス許可に反映する処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-10-23T11:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、機能の改善・変更。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者に必要な作業はありますか？",
+          "answer": { "text": "リリース ノートには、管理者が行う設定変更は記載されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Parallel content and identity crawl", "retrievedAt": "2026-10-23T11:00:00Z" }] }
+        },
+        {
+          "question": "ServiceNow コネクタの既定の同期間隔は？",
+          "answer": { "text": "増分クロールは 15 分ごと、フル クロールは毎日が既定です。ID 増分同期は 30 分ごとで、管理センターからは変更できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-10-23T11:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          { "title": "ServiceNow Knowledge Copilot コネクタのデプロイ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
