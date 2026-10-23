@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7d2717489806a85a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "PowerPoint の Edit with Copilot でメールを Work IQ で参照可能に",
+        "subtitleJa": "メールの内容を土台に、プレゼンテーション作成を進められます",
+        "en": "Microsoft Copilot (Microsoft 365): Reference an email with Work IQ when using Edit with Copilot in PowerPoint to create a presentation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "PowerPoint"],
+        "categories": ["work-iq", "outlook", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint の Edit with Copilot で資料を作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メールを参照して、プレゼンテーションを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "特別な対応は案内されていない。Web 版の PowerPoint で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "PowerPoint の Edit with Copilot でプレゼンテーションを作成するとき、**Work IQ でメールを参照**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Edit with Copilot でプレゼンテーションを作成する際に、Work IQ でメールを参照できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Work IQ は、関連するファイル・会議・メールを自動で集めて資料作成を支援する（7 月の更新）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint（Web）で Edit with Copilot を開き、プレゼンテーションを作成する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Edit with Copilot から、Work IQ をもとに作成する手順が案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) で、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Windows の Copilot ペインでも、件名・送信者・日時でメールを指定して参照できる（8 月の更新）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "やり取りの多い案件の報告資料づくりで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "edit-with-copilot", "term": "Edit with Copilot", "type": "feature", "oneLine": { "text": "PowerPoint で Copilot を使ってプレゼンテーションを作成・編集する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "関連するファイル・会議・メールを集めて、Copilot の資料作成に活用する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-23T06:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Windows 版でもメールを参照できますか？",
+          "answer": { "text": "Windows では、Copilot ペインでメールを参照して資料を作成できる機能が別に案内されています。今回の更新の対象プラットフォームは Web です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T06:50:00Z" }] }
+        },
+        {
+          "question": "管理者は何かする必要がありますか？",
+          "answer": { "text": "今回の更新で、管理者向けの対応は案内されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555891",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
