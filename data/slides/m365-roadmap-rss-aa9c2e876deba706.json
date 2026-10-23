@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-aa9c2e876deba706",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "クラシック Outlook の要約で言語を選べるように（開発中）",
+        "subtitleJa": "メール本文と Outlook の言語が違うとき、Copilot の要約の言語を変えられます",
+        "en": "Outlook: Language support for Summarize in Classic Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-08-08",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**クラシック Outlook で Copilot の要約を使う人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "メールの言語と Outlook の言語が異なるとき、要約を読む言語を選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "メールの言語と Outlook の言語が一致しない場合に、**要約の回答を表示する言語を別の言語に切り替え**られるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象はクラシック Outlook の「要約」（Summarize）の Copilot 回答", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プラットフォームはデスクトップ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "言語を選べるのは、メールの言語と Outlook の言語が一致しないとき", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップで提供状況の更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "summarize", "term": "要約（Summarize）", "type": "feature", "oneLine": { "text": "Outlook で Copilot がメールの内容を短くまとめる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "classic-outlook", "term": "クラシック Outlook", "type": "term", "oneLine": { "text": "Windows 向けの従来のデスクトップ版 Outlook。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップは開発中の段階で、提供時期の月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569023",
+        "learn": [
+          { "title": "View and save email summaries to your CRM", "url": "https://learn.microsoft.com/en-us/microsoft-sales-copilot/view-save-email-summary-crm", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
