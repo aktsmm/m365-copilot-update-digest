@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-a35f69fcb6bb6a0c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "パートナーブログ: 30 日で AI への関心から Copilot 活用へ",
+        "subtitleJa": "中小企業が Microsoft Copilot を実務に使い始めるための道筋を紹介します",
+        "en": "ICYMI: Partner Blog | From AI curiosity to Copilot adoption in 30 days"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の導入を検討する中小企業**の管理者と、導入を支援するパートナー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "30 日・25 ユーザーという小さな規模から、Copilot 活用を始める道筋を参考にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ブログ記事の紹介のため、対応は不要。導入を検討するときの参考情報", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "中小企業にとって AI は「いつか」ではなく**「今」決める話**になっています。ブログは、小規模な試行から実務での活用へ進む方法を取り上げます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "この更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "30 日間・25 ユーザーで、AI 活用への明確な道筋を示すパートナーブログ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "中小企業が AI を実務で使う方法に焦点を当てた内容", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot Business は、最大 300 人の組織向けのアドオン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-license-options", "locator": "Microsoft Copilot ライセンス（注）", "retrievedAt": "2026-10-23T19:30:00Z" }] },
+            { "text": "年間契約で利用でき、テナントごとに最大 300 人のライセンス ユーザーを支援", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-license-options", "locator": "Microsoft Copilot ライセンス（注）", "retrievedAt": "2026-10-23T19:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ライセンス要件を確認し、小さなグループから試して効果を測る", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-business", "term": "Microsoft Copilot Business", "type": "product", "oneLine": { "text": "適格な Microsoft 365 Business ライセンスを持つ最大 300 人の組織向けの、Copilot アドオン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-license-options", "locator": "Microsoft Copilot ライセンス（注）", "retrievedAt": "2026-10-23T19:30:00Z" }] } },
+        { "termKey": "smb", "term": "中小企業（SMB）", "type": "term", "oneLine": { "text": "Small and Medium-sized Businesses。ブログが対象とする顧客層。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "ロードマップ上の段階には当てはまらない、お知らせ・情報提供の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "中小企業向けの Copilot ライセンスはありますか？",
+          "answer": { "text": "はい。Microsoft Copilot Business が、最大 300 人の組織向けのアドオンとして用意されています。年間契約で利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-license-options", "locator": "Microsoft Copilot ライセンス（注）", "retrievedAt": "2026-10-23T19:30:00Z" }] }
+        },
+        {
+          "question": "300 人を超える組織はどうなりますか？",
+          "answer": { "text": "エンタープライズ環境向けの Microsoft Copilot ライセンス オプションを使う必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-license-options", "locator": "Microsoft Copilot ライセンス（注）", "retrievedAt": "2026-10-23T19:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/icymi-partner-blog-from-ai-curiosity-to-copilot-adoption-in-30/ba-p/4544027",
+        "learn": [{ "title": "Microsoft Copilot のライセンス オプション", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-license-options", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
