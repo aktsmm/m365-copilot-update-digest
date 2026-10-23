@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-bad794e5913e2586",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "モバイルの Copilot ページで、コマンドによる編集とチャットからの自動作成に対応",
+        "subtitleJa": "Android / iOS で「このページを短くして」などの指示でページを整えられます",
+        "en": "Page steering and auto-triggering of pages on mobile [Android, iOS]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft 365 Copilot app", "作成者向け"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**モバイルで Copilot ページを作成・編集する人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Page steering and auto-triggering of pages on mobile", "retrievedAt": "2026-10-23T00:50:00Z" }] },
+        "change": { "text": "ページの編集と新規作成を、自然言語の指示だけで進められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者はモバイルでページを開いて指示するだけ。管理者の対応は案内されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "モバイルでは、AI の支援なしにページを手作業で編集していました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:50:00Z" }] },
+        "after": { "text": "「Shorten this page」などのコマンドでページを調整でき、チャットから「Create a new page for XYZ」でページを自動作成できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Page steering and auto-triggering of pages on mobile", "retrievedAt": "2026-10-23T00:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Android と iOS のモバイル。ページの内容を自然言語で修正できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:50:00Z" }] },
+            { "text": "チャットのプロンプトから、Copilot が新しいページの作成を自動で始める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:50:00Z" }] },
+            { "text": "試し方: ページを開いて指示 → チャットで作成を依頼 → 生成内容を確認して編集", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-23T00:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "作成した画像とページは Copilot ライブラリにまとまる（Copilot Chat の資格が必要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-library", "locator": "Copilot ライブラリ ポリシーの設定と適格性ロジック", "retrievedAt": "2026-10-23T00:50:00Z" }] },
+            { "text": "ページの作成は、クラウド ポリシーで管理者が無効にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T00:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-pages", "term": "Copilot ページ", "type": "feature", "oneLine": { "text": "Copilot Chat で作成するコンテンツの 1 つで、Copilot ライブラリで画像などと一緒に管理される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-library", "locator": "冒頭", "retrievedAt": "2026-10-23T00:50:00Z" }] } },
+        { "termKey": "page-steering", "term": "ページ ステアリング", "type": "feature", "oneLine": { "text": "自然言語のコマンドで、ページの内容を修正・調整する操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-23T00:50:00Z" }] } },
+        { "termKey": "copilot-library", "term": "Copilot ライブラリ", "type": "feature", "oneLine": { "text": "生成した画像・ページ・インフォグラフィック・ストーリーに 1 か所でアクセスできるハブ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-library", "locator": "冒頭", "retrievedAt": "2026-10-23T00:50:00Z" }] } },
+        { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "Microsoft 365 Apps の設定を管理者が構成センターから制御する仕組み。ページ作成の可否もここで設定する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-23T00:50:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "ページ作成を組織で止めることはできますか？",
+          "answer": { "text": "はい。クラウド ポリシー「Copilot ページと Copilot ノートブックを作成して表示する」を無効にすると、新しいページを作成できません。既存のページは削除されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "Copilot ページと Copilot ノートブックが無効になっている場合のユーザー エクスペリエンス", "retrievedAt": "2026-10-23T00:50:00Z" }] }
+        },
+        {
+          "question": "作成したページはどこで見つけられますか？",
+          "answer": { "text": "Copilot ライブラリの [ページ] タブに表示されます。最終更新日順で並び、タイトルで検索できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-library", "locator": "アイテムの並べ替えと検索の方法", "retrievedAt": "2026-10-23T00:50:00Z" }] }
+        },
+        {
+          "question": "利用に Microsoft Copilot のライセンスは必要ですか？",
+          "answer": { "text": "Copilot ライブラリの利用に必要なのは Copilot Chat の資格で、Copilot ライセンスは必須ではありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-library", "locator": "Copilot ライブラリにアクセスするには、どのようなライセンスが必要ですか?", "retrievedAt": "2026-10-23T00:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Copilot ライブラリを使用して画像とページを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-library", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブックの管理ポリシー", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
