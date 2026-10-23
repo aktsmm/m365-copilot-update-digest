@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1820482aeb0812a4",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Researcher で Copilot メモリを利用可能に（開発中）",
+        "subtitleJa": "過去のやり取りの文脈を、調査の回答に活かせるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot memory in Researcher"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Researcher で複雑な調査を行う人**と、Copilot の個人用設定を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "過去のやり取りの文脈で回答の根拠づけと出力の個人化ができ、毎回の前提設定を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "メモリは既定でオン。止めたい場合のみ、管理者が拡張個人用設定をオフにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-23T21:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Researcher が**過去のやり取りから関連する文脈を引き継ぎ**、回答の根拠づけと出力の個人化を行います。繰り返しの前提設定が減ります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Researcher 内の Copilot メモリが、過去のやり取りの関連文脈を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Desktop・Mac・Web（Worldwide の標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot メモリは、保存メモリ・チャット履歴の推測・カスタム指示で構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-23T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot の個人用設定とメモリはプレビュー段階で、変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "重要", "retrievedAt": "2026-10-23T21:20:00Z" }] },
+            { "text": "管理者は、メモリに追加される情報の種類を制限できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "テナント管理者は、メモリに追加される情報を制限できますか?", "retrievedAt": "2026-10-23T21:20:00Z" }] },
+            { "text": "Purview の保持ポリシーは適用されず、メモリ操作は監査ログに出ない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "メモリのアイテム保持ポリシー / 監査ログ", "retrievedAt": "2026-10-23T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前の準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "拡張個人用設定は既定でオン。オフにすると利用を止められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-23T21:20:00Z" }] },
+            { "text": "メモリは Exchange の隠しフォルダーに保存され、eDiscovery で検索できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭 / 管理者はユーザーのメモリを検出して削除できますか?", "retrievedAt": "2026-10-23T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップで提供時期を確認し、メモリの利用方針を先に社内へ周知する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-memory", "term": "Copilot メモリ", "type": "feature", "oneLine": { "text": "保存されたメモリ、チャット履歴から推測された詳細、カスタム指示で構成される個人化の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-23T21:20:00Z" }] } },
+        { "termKey": "researcher", "term": "Researcher", "type": "product", "oneLine": { "text": "複雑なトピックを調べる Microsoft Copilot の機能（ソースでは複雑なトピックの探索で言及）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "enhanced-personalization", "term": "拡張個人用設定", "type": "feature", "oneLine": { "text": "エンド ユーザーが Copilot メモリを使えるようにするコントロール。既定ではオン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-23T21:20:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot メモリを組織で止めることはできますか？",
+          "answer": { "text": "はい。管理者が拡張個人用設定コントロールをオフにすると、エンド ユーザーはメモリを使えなくなります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "高度な個人用設定コントロールを管理する", "retrievedAt": "2026-10-23T21:20:00Z" }] }
+        },
+        {
+          "question": "メモリのデータはどこに保存されますか？",
+          "answer": { "text": "ユーザーの Exchange メールボックスの隠しフォルダーに保存され、他のメールボックス データと同じセキュリティとコンプライアンス ポリシーに従います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locator": "冒頭", "retrievedAt": "2026-10-23T21:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562996",
+        "learn": [{ "title": "Copilot の個人用設定とメモリを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-personalization-memory", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
