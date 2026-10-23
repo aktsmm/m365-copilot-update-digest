@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f4940388c67f860f",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "クラシック Outlook で、選択したテキストから Copilot に質問できるように（開発中）",
+        "subtitleJa": "テキストを手動で選択して、関連情報を Copilot に尋ねられます",
+        "en": "Outlook: User-initiated Copilot insights in classic Outlook"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Outlook",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**クラシック Outlook（デスクトップ）で Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "選択したテキストについて、関連情報を Copilot に尋ねられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供が始まるまで、ロードマップの更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ユーザーが**テキストを手動で選択**し、Copilot に関連情報の提供を依頼できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザーが選択したテキストについて、Copilot が関連情報を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はクラシック Outlook のデスクトップ版", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のチャネルは Current Channel", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステータスは開発中で、提供は始まっていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) の環境", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に準備すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用者のクラシック Outlook の更新チャネルを把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップ ID 508524 を追跡し、提供開始を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "classic-outlook", "term": "クラシック Outlook", "type": "product", "oneLine": { "text": "Windows 向けの従来のデスクトップ版 Outlook。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "current-channel", "term": "Current Channel", "type": "term", "oneLine": { "text": "ロードマップで示される、Microsoft 365 アプリの更新チャネルの一つ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあり、提供が始まっていない状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=508524",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
