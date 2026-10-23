@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-417ea9cd2ca685b3",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "プラス（+）メニューからエージェントとスキルを追加できるように（開発中）",
+        "subtitleJa": "プロンプトに専門タスク用のエージェントやスキルを差し込めます",
+        "en": "Microsoft Copilot (Microsoft 365): Add Agents and Skills from the Plus menu"
+      },
+      "meta": {
+        "publishedJst": "2026-08-12",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot でエージェントやスキルを使う・作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "専門的なタスク向けのエージェントとスキルを、プロンプトの中から選んで使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "プロンプトに**エージェントとスキルを挿入**して、専門的なタスクを任せられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "予定されている範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プラス（+）メニューの「作業コンテンツを追加」から、[エージェントとスキル] タブで追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プロンプトに「/」や「@」を入力して、エージェントとスキルを呼び出すこともできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象はデスクトップと Web（Worldwide 環境）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "宣言型エージェントのカスタム スキルは現在プレビューで、Frontier プレビュー参加組織向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "冒頭の重要", "retrievedAt": "2026-10-23T05:05:00Z" }] },
+            { "text": "Microsoft Purview 情報バリアを使うテナントでは、カスタム スキルは使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "冒頭の重要", "retrievedAt": "2026-10-23T05:05:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに知っておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "スキルは SKILL.md を含むディレクトリで、宣言型エージェントに特定タスクを担わせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "スキルとは", "retrievedAt": "2026-10-23T05:05:00Z" }] },
+            { "text": "Agent Builder や Agents Toolkit で追加でき、1 エージェントあたり最大 8 スキル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "サポート マトリックス", "retrievedAt": "2026-10-23T05:05:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "skill", "term": "スキル", "type": "feature", "oneLine": { "text": "宣言型エージェントが特定のタスクを確実に繰り返し実行できるようにする、モジュール式の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "冒頭", "retrievedAt": "2026-10-23T05:05:00Z" }] } },
+        { "termKey": "skill-md", "term": "SKILL.md", "type": "term", "oneLine": { "text": "スキルに必須のファイルで、モデルにタスクの完了方法を指示する内容を保持する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "冒頭", "retrievedAt": "2026-10-23T05:05:00Z" }] } },
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "指示やスキルなどを宣言して構成する、Microsoft Copilot 向けのエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "冒頭", "retrievedAt": "2026-10-23T05:05:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "カスタム スキルは今でも作れますか？",
+          "answer": { "text": "宣言型エージェントのカスタム スキルは Frontier プレビュー参加組織向けにプレビュー中で、Agent Builder か Agents Toolkit から追加できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locator": "冒頭", "retrievedAt": "2026-10-23T05:05:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=569213",
+        "learn": [{ "title": "宣言型エージェントのカスタム スキル (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/declarative-agent-skills", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
