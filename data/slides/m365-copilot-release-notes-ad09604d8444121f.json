@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-ad09604d8444121f",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Notebooks の操作フローを刷新（Web）",
+        "subtitleJa": "項目を開く流れと画面移動が、よりシンプルになります",
+        "en": "Updated Copilot Notebooks UX [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Web 版の Copilot Notebooks を使う人**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Updated Copilot Notebooks UX", "retrievedAt": "2026-10-23T09:40:00Z" }] },
+        "change": { "text": "項目を開く操作や画面移動の流れが整理され、操作に迷いにくくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / What changed", "retrievedAt": "2026-10-23T09:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者の設定変更は案内されていない。UI の変更点を利用者に周知すれば十分", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Updated Copilot Notebooks UX", "retrievedAt": "2026-10-23T09:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "以前は、より複雑でまとまりに欠けるインターフェイスでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / What changed", "retrievedAt": "2026-10-23T09:40:00Z" }] },
+        "after": { "text": "**項目を開く流れと製品内の移動**が整理され、よく使う操作がシンプルになり、製品全体で一貫性が高まります", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / What changed", "retrievedAt": "2026-10-23T09:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Web 版の Copilot Notebooks", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Updated Copilot Notebooks UX [Web]", "retrievedAt": "2026-10-23T09:40:00Z" }] },
+            { "text": "項目を開く流れと、製品内の移動が合理化された", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / What changed", "retrievedAt": "2026-10-23T09:40:00Z" }] },
+            { "text": "リリース ノートの掲載日は 2026 年 8 月 25 日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026", "retrievedAt": "2026-10-23T09:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "操作手順書やスクリーンショットに Copilot Notebooks が含まれる場合は、画面の差分を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "Microsoft Copilot 内でプロジェクトの資料や会議などを参照として集め、Copilot の回答に活用するノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-23T09:40:00Z" }] } },
+        { "termKey": "ux-flow", "term": "UX フロー", "type": "term", "oneLine": { "text": "項目を開く、画面を移動するといった、利用者の操作の流れ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / What changed", "retrievedAt": "2026-10-23T09:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の改善や変更を知らせる区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者が設定する必要はありますか？",
+          "answer": { "text": "リリース ノートには管理者向けの設定や手順の記載はなく、UI の改善として案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Updated Copilot Notebooks UX", "retrievedAt": "2026-10-23T09:40:00Z" }] }
+        },
+        {
+          "question": "デスクトップやモバイルでも変わりますか？",
+          "answer": { "text": "このリリース ノートの項目は [Web] と表記されており、Web 版が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / Updated Copilot Notebooks UX [Web]", "retrievedAt": "2026-10-23T09:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
