@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-97cde2216ee0c5b0",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot 検索の右側ペインから Copilot Chat を利用可能に",
+        "subtitleJa": "検索結果を見ながら、ページを切り替えずにチャットできます",
+        "en": "Copilot Chat available when using Copilot Search [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "Copilot 検索を使う **Microsoft Copilot ライセンスのユーザー**（Windows・Web）",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "検索結果を見ながら、ページを切り替えずに Copilot とやり取りできる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "Copilot 検索の利用に管理者やユーザーの設定作業は不要",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+              "locator": "アクセスと適格性",
+              "retrievedAt": "2026-10-23T09:00:00Z"
+            }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Copilot Chat を使うには、ページを切り替える必要があった",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "after": {
+          "text": "Copilot 検索の**右側ペイン**から Copilot Chat を開き、検索を続けながら質問できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Microsoft Copilot アプリの Copilot 検索で、右側のペインに Copilot Chat を表示",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "対象プラットフォームは Windows と Web",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "Copilot 検索は対象の Microsoft Copilot ライセンスで追加料金なしで利用可能",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+                  "locator": "アクセスと適格性",
+                  "retrievedAt": "2026-10-23T09:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方と確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Copilot 検索を開き、検索結果を操作するか検索ボックスで質問するとチャットが開く",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "検索は素早く情報を探す用途、チャットは深い回答やタスク実行の用途",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+                  "locator": "Copilot 検索と Copilot Chat の違い",
+                  "retrievedAt": "2026-10-23T09:00:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-search",
+          "term": "Copilot 検索",
+          "type": "feature",
+          "oneLine": {
+            "text": "組織向けに最適化された、AI 搭載のユニバーサル検索エクスペリエンス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-23T09:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "copilot-chat",
+          "term": "Copilot Chat",
+          "type": "feature",
+          "oneLine": {
+            "text": "より深い回答の生成、コンテンツ作成、タスク完了に向く会話型のワークスペース。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+                "locator": "Copilot 検索と Copilot Chat の違い",
+                "retrievedAt": "2026-10-23T09:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "side-pane",
+          "term": "サイド ペイン",
+          "type": "term",
+          "oneLine": {
+            "text": "画面右側に表示される領域で、ここに Copilot Chat が表示される。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "Copilot 検索と Copilot Chat は何が違いますか？",
+          "answer": {
+            "text": "検索は検索ボックス中心で情報を素早く見つける用途、チャットは会話形式で深い回答やタスク完了に向く用途です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+                "locator": "Copilot 検索と Copilot Chat の違い",
+                "retrievedAt": "2026-10-23T09:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "利用に追加の設定やライセンスは必要ですか？",
+          "answer": {
+            "text": "Copilot 検索は対象の Microsoft Copilot ライセンスで追加料金なしで使え、設定作業も不要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+                "locator": "アクセスと適格性",
+                "retrievedAt": "2026-10-23T09:00:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          {
+            "title": "Microsoft Copilot 検索",
+            "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-search",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
