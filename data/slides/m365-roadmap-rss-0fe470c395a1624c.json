@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0fe470c395a1624c",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Teams: アプリ用スラッシュ コマンド",
+        "subtitleJa": "作成ボックスで / を入力して、アプリやエージェントを呼び出せます",
+        "en": "Microsoft Teams: Slash commands for apps"
+      },
+      "meta": {
+        "publishedJst": "2026-08-04",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Teams"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams のアプリ・エージェントを開発する人**と、チャットやチャネルで使うユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャットやチャネルの作成ボックスから、スラッシュ コマンドでアプリやエージェントを呼び出せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "開発者は、アプリやエージェントのマニフェストでコマンドを宣言すると公開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "コマンドの追加", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "作成ボックスに **/ を入力**すると、アプリやエージェントのコマンドをオートコンプリート メニューから検出して使えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "ユーザー エクスペリエンス", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "空の作成ボックスに / を入力すると、組み込みコマンドとアプリのコマンドが一覧表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "ユーザー エクスペリエンス", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "エージェント スラッシュ コマンドは、チャネル・グループ チャット・会議チャットでプライベートに呼び出せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "エージェントスラッシュコマンド", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "アクション型メッセージ拡張機能も、スラッシュ コマンドとして公開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "アクション型メッセージ拡張機能のスラッシュ コマンド", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ユーザーは作成ボックスに / を入力し、メニューからコマンドを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "ユーザー エクスペリエンス", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "開発者はマニフェストの bots[].commandLists[] で triggers に slash を指定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "トリガー: スラッシュと @mention", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "コマンド名と説明を明確にして、検出しやすくする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "ベスト プラクティスと設計ガイダンス", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントは supportsTargetedMessages を true にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "エージェントのスラッシュコマンドと @mention コマンド", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "検索型メッセージ拡張機能は、スラッシュ コマンドとして公開できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "アクション型メッセージ拡張機能のスラッシュ コマンド", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲: Worldwide (Standard Multi-Tenant)、Desktop・Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のリリース: Targeted Release で展開中", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "/create-task で会話を追跡タスクに変換する、といったコマンドを公開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "エージェントスラッシュコマンド", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "繰り返し使う操作から、少数のコマンドに絞って公開する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "slash-command", "term": "スラッシュ コマンド", "type": "feature", "oneLine": { "text": "ユーザーが作成ボックスから名前付き機能を実行できる、テキストベースのショートカット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "ユーザー エクスペリエンス", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "targeted-message", "term": "ターゲット メッセージ", "type": "feature", "oneLine": { "text": "選択したエージェントにのみ配信され、エージェントがプライベートに応答できるメッセージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "重要", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "manifest", "term": "マニフェスト", "type": "term", "oneLine": { "text": "アプリやエージェントのコマンドを宣言する構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "コマンドの追加", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "スラッシュ コマンドと @mention コマンドの違いは？",
+          "answer": { "text": "スラッシュ コマンドは繰り返し使う個人向けの操作に向き、特定のエージェントに話しかけたい場合や会話の文脈を使う場合は @mention コマンドを使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "ベスト プラクティスと設計ガイダンス", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "コマンドの処理は Teams が行いますか？",
+          "answer": { "text": "いいえ。マニフェストの宣言はコマンドを表示するだけで、送信後の処理はアプリやエージェントの実装が担います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locator": "コマンドの追加", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=495002",
+        "learn": [{ "title": "エージェントとアプリからスラッシュ コマンドを公開する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/platform/agents-in-teams/agent-slash-commands", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
