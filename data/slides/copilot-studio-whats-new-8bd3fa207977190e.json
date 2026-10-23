@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-8bd3fa207977190e",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "エージェント評価にコンテンツ安全性のテスト方法を追加",
+        "subtitleJa": "有害な応答を、重大度のしきい値つきで自動チェックできます",
+        "en": "Configure a content safety test method to evaluate your agent's responses for potentially harmful content, such as..."
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-chat", "copilot-studio", "agents"],
+        "importance": "normal",
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**（テスト セットで評価する作成者）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "テスト メソッドを追加する", "retrievedAt": "2026-10-23T12:20:00Z" }] },
+        "change": { "text": "憎悪・性的・暴力・自傷行為の有害コンテンツを、合格/不合格で評価できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うかどうかは任意。テスト セットでテスト方法として追加して利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "テスト メソッドを追加する", "retrievedAt": "2026-10-23T12:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "テスト セットに**コンテンツの安全性**を追加すると、エージェントの回答に有害な内容が含まれるかを、深刻度のしきい値に基づき自動で判定できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できること・設定",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "憎悪と不公平さ・性的・暴力・自傷行為の 4 種類の有害コンテンツを評価", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] },
+            { "text": "単一応答・会話の両方のテスト セットで使え、結果は合格/不合格", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "評価方法の選択（表）", "retrievedAt": "2026-10-23T12:20:00Z" }] },
+            { "text": "深刻度のしきい値はレベル 0（最も厳しい）〜 7（最も寛容）から選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方と注意点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コンテンツ タイプごとに別々のテスト方法を追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] },
+            { "text": "エージェントの安全性を保証するものではなく、責任ある AI レビューやフィルターと併用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prereq",
+          "heading": "対象となるエージェント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "標準ハーネスで動くエージェントやエージェント フローで使う機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "Note", "retrievedAt": "2026-10-23T12:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "content-safety", "term": "コンテンツの安全性", "type": "feature", "oneLine": { "text": "エージェントの応答に憎悪・性的・暴力・自傷行為などの有害な内容がないかを評価するテスト方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] } },
+        { "termKey": "test-set", "term": "テスト セット", "type": "term", "oneLine": { "text": "エージェント評価で使う、テスト ケースとテスト方法をまとめたもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-create", "locator": "冒頭", "retrievedAt": "2026-10-23T12:20:00Z" }] } },
+        { "termKey": "severity-level", "term": "深刻度レベル", "type": "term", "oneLine": { "text": "応答の詳細度に応じて評価者が付ける 0〜7 の段階で、0 が最も厳しい。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "What's new in Copilot Studio に掲載された、既存機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "他のテスト方法とはどう使い分けますか？",
+          "answer": { "text": "一般的な品質は関連性や完全性を 100 点満点で評価し、コンテンツの安全性は有害内容の有無を合格/不合格で判定します。目的に応じて複数のテスト方法を併用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "評価方法の選択（表）", "retrievedAt": "2026-10-23T12:20:00Z" }] }
+        },
+        {
+          "question": "これで安全性が保証されますか？",
+          "answer": { "text": "いいえ。有害な内容の特定に役立ちますが、あらゆる状況での安全性を保証するものではありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locator": "コンテンツの安全性", "retrievedAt": "2026-10-23T12:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-agent-evaluation-overview#content-safety",
+        "learn": [
+          { "title": "評価方法の選択", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-overview", "locale": "ja-jp" },
+          { "title": "1 つの応答テスト セットを作成する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/analytics-agent-evaluation-create", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
