@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-20da9ffdc4b31a63",
+      "kind": "in-development",
+      "label": "開発中",
+      "title": {
+        "ja": "Purview データ ライフサイクル管理：最終アクセス日時に基づく保持（OneDrive・SharePoint）",
+        "subtitleJa": "ファイルが最後に使われた時点を基準に、保持期間を適用できるようになります",
+        "en": "Microsoft Purview compliance portal: Data Lifecycle Management - Retention based on Last Accessed for files in OneDrive and SharePoint"
+      },
+      "meta": {
+        "publishedJst": "2026-08-19",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Microsoft Purview"],
+        "categories": ["sharepoint", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Purview で保持を管理する管理者**と、OneDrive・SharePoint のコンプライアンス担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "SharePoint・OneDrive の各アイテムに、最後にユーザーがアクセスした時点を基準に保持を適用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "SharePoint や OneDrive の**アイテムごとに、ユーザーが最後にアクセスした時点を基準に保持**を適用できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は OneDrive と SharePoint のファイル（アイテム単位）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft Purview コンプライアンス ポータルのデータ ライフサイクル管理の機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステータスは開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "保持設定の評価はタイマー ジョブで行われ、完了まで最大 7 日かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "保持設定の評価（タイマー ジョブ）", "retrievedAt": "2026-10-23T09:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今のうちに確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "保持ポリシーの対象アイテムは、保持期間まで古いバージョンが自動消去されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "バージョン管理", "retrievedAt": "2026-10-23T09:55:00Z" }] },
+            { "text": "現在の保持ポリシーと保持ラベルの起点を棚卸しし、将来の見直し対象を把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "retention", "term": "保持", "type": "term", "oneLine": { "text": "ポリシーやラベルで、コンテンツを一定期間残す、または期間後に削除する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "冒頭", "retrievedAt": "2026-10-23T09:55:00Z" }] } },
+        { "termKey": "retention-library", "term": "アイテム保管ライブラリ", "type": "feature", "oneLine": { "text": "保持が必要なコンテンツを保存するために作成される、非表示のシステムの場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "アイテム保管ライブラリ", "retrievedAt": "2026-10-23T09:55:00Z" }] } },
+        { "termKey": "purview", "term": "Microsoft Purview", "type": "product", "oneLine": { "text": "保持などのデータ ガバナンスとコンプライアンス機能を提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "冒頭のサービスの説明", "retrievedAt": "2026-10-23T09:55:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進行中の段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "最終アクセス日時に基づく保持はいつ使えますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期は示されていません。公開された時点で改めて確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在の保持設定の詳細はどこで確認できますか？",
+          "answer": { "text": "Microsoft Learn の「SharePoint と OneDrive の保持の詳細」に、現在の動作がまとまっています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locator": "全体", "retrievedAt": "2026-10-23T09:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=472030",
+        "learn": [{ "title": "SharePoint と OneDrive の保持の詳細", "url": "https://learn.microsoft.com/ja-jp/purview/retention-policies-sharepoint", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
