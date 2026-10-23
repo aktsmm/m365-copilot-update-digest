@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b88d71342f46573b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Sales Agent でセマンティック モデルを有効化（開発中）",
+        "subtitleJa": "CRM データの構造と意味を理解し、営業シナリオでの回答精度を高めます",
+        "en": "Microsoft Copilot (Microsoft 365): Enable semantic model in Sales agent"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mobile", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Sales Agent を使う営業担当者**と、CRM データ・エージェントを整備する作成者・管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Sales Agent が CRM データの意味を理解し、より適切に文脈を取得できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため対応は不要。ロードマップの更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Sales Agent が **CRM のテーブル・項目・リレーション・用語集などをつなげた表現**を使い、組織の CRM データの構造と意味を理解します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "テーブル／オブジェクト、項目、説明、データ型、リレーションを対象にする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ビュー、選択肢の値、用語集の用語も含めた CRM メタデータを表現する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Sales Agent がこのコンテキストを取得して利用する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「開発中」で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）。デスクトップ・モバイル・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "Dataverse セマンティック モデル（プレビュー）",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Dataverse のセマンティック モデルは、Sales Agent を含むエージェントが利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "セマンティック モデルを使用する Copilot エクスペリエンス", "retrievedAt": "2026-10-23T05:50:00Z" }] },
+            { "text": "Dataverse では、テーブル関係・ビュー・説明の概要からシグナルを抽出する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "セマンティック モデルのしくみ", "retrievedAt": "2026-10-23T05:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "semantic-model", "term": "セマンティック モデル", "type": "feature", "oneLine": { "text": "列名やテーブル名だけでなく、データの意味をエージェントが理解できるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "冒頭", "retrievedAt": "2026-10-23T05:50:00Z" }] } },
+        { "termKey": "sales-agent", "term": "Sales Agent", "type": "product", "oneLine": { "text": "Microsoft 365 で Dataverse データを使って販売シナリオを支援するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "セマンティック モデルを使用する Copilot エクスペリエンス", "retrievedAt": "2026-10-23T05:50:00Z" }] } },
+        { "termKey": "glossary-entry", "term": "用語集", "type": "term", "oneLine": { "text": "システムが推測できない業務固有の用語や頭字語、定義を作成者が追加できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "用語集", "retrievedAt": "2026-10-23T05:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつ提供されますか？",
+          "answer": { "text": "ロードマップのステージは「開発中」で、提供月は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Dataverse のセマンティック モデルに制限はありますか？",
+          "answer": { "text": "Learn では、Dataverse セマンティック モデルはプレビューで、新規モデルの作成や環境のコピー・移動（ALM）は未対応と案内されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locator": "既知の制限", "retrievedAt": "2026-10-23T05:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573294",
+        "learn": [{ "title": "Dataverse セマンティック モデルの概要 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/data-platform/semantic-model-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
