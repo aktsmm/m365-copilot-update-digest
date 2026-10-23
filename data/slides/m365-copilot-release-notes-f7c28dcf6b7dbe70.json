@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-f7c28dcf6b7dbe70",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "ServiceNow コネクタがロールベースのアクセス許可に対応",
+        "subtitleJa": "admin・knowledge manager などのロールに応じて、アクセスが制御されます",
+        "en": "ServiceNow connectors support role-based permissions [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクタを管理する管理者**と、ServiceNow 連携を作成する人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ユーザーのロールに応じて、ServiceNow のナレッジやカタログへのアクセスが制御される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": {
+          "text": "ServiceNow 連携を使う場合は、サービス アカウントのロール設定を確認する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Assign roles to the integration user", "retrievedAt": "2026-10-23T18:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "ServiceNow の **Knowledge および Catalog コネクタ**が、admin・knowledge manager・knowledge admin などのユーザー ロールに基づいてアクセス許可を適用します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象と範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は ServiceNow の Knowledge コネクタと Catalog コネクタ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "admin、knowledge manager、knowledge admin などのロールで権限を判定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Knowledge コネクタは「アクセス権のあるユーザーのみ」（既定）か「全員」を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Access permissions", "retrievedAt": "2026-10-23T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "スクリプト型のユーザー条件は Advanced フローで評価される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Advanced Scripts", "retrievedAt": "2026-10-23T18:00:00Z" }] },
+            { "text": "HR Service Delivery を扱う場合、サービス アカウントに sn_hr_core.content_reader などのロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Access permissions", "retrievedAt": "2026-10-23T18:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "servicenow-knowledge-connector", "term": "ServiceNow Knowledge コネクタ", "type": "feature", "oneLine": { "text": "ServiceNow のナレッジ ベース記事を Microsoft 365 Copilot で参照できるようにするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "冒頭", "retrievedAt": "2026-10-23T18:00:00Z" }] } },
+        { "termKey": "user-criteria", "term": "ユーザー条件（user criteria）", "type": "term", "oneLine": { "text": "ServiceNow で、ナレッジ ベースや記事を誰が読めるかを定める条件。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Access permissions", "retrievedAt": "2026-10-23T18:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "HR 関連のナレッジを扱う場合の注意点は？",
+          "answer": { "text": "サービス アカウントに sn_hr_core.content_reader か sn_hr_core.admin ロールがないと、HR 用のユーザー条件を読めず、記事が全員に表示される恐れがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Access permissions", "retrievedAt": "2026-10-23T18:00:00Z" }] }
+        },
+        {
+          "question": "ユーザー条件のない記事はどう扱われますか？",
+          "answer": { "text": "ServiceNow の glide.knowman.block_access_with_no_user_criteria が false なら全員に表示され、true なら表示されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locator": "Access permissions", "retrievedAt": "2026-10-23T18:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [{ "title": "Deploy the ServiceNow Knowledge Copilot connector", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
