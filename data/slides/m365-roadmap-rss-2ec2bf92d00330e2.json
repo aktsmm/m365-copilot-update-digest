@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2ec2bf92d00330e2",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dynamics 365 Customer Service: AI がお客様のメールを自律的に解決",
+        "subtitleJa": "ケースを作らずに、受信メールの分析から返信までを自動化します",
+        "en": "Dynamics 365 Customer Service: Copilot and AI innovation - Resolve customer emails autonomously with AI"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Customer Service"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service を運用する管理者と作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "定型的な問い合わせメールを、担当者の手を介さず解決できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "利用する場合は、Copilot サービス管理センターで電子メール解決を有効にして設定する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "電子メールの解決を有効にする", "retrievedAt": "2026-10-24T05:20:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "受信メールの意図を分析し、**ケースを作成せずにメールチャネルから直接応答**します。解決できない場合のみケースを作成します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "概要", "retrievedAt": "2026-10-24T05:20:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "受信メールの内容から、顧客の意図を識別する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "概要", "retrievedAt": "2026-10-24T05:20:00Z" }] },
+            { "text": "追加情報を求めるメールや、提案・最終的な解決策の下書きを生成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "概要", "retrievedAt": "2026-10-24T05:20:00Z" }] },
+            { "text": "応答を自律的に送信し、解決できない場合はケースを作成してメールを関連付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "概要", "retrievedAt": "2026-10-24T05:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot サービス管理センターの［電子メールの設定］で、メール解決を有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "電子メールの解決を有効にする", "retrievedAt": "2026-10-24T05:20:00Z" }] },
+            { "text": "返信に使うアプリケーション ユーザー、展開設定、言語を設定して保存する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "電子メールの解決を有効にする", "retrievedAt": "2026-10-24T05:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Customer Intent Agent の構成と、ケース管理エージェントのガイド付きセットアップが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "前提条件", "retrievedAt": "2026-10-24T05:20:00Z" }] },
+            { "text": "従量課金制プランでは、エージェントの実行時に Azure サブスクリプションへ課金される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "前提条件", "retrievedAt": "2026-10-24T05:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ケース管理エージェントの機能を適用して、顧客の意図と下書き応答を分析する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "概要", "retrievedAt": "2026-10-24T05:20:00Z" }] },
+            { "text": "意図の識別には Customer Intent Agent を使用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "ランタイムの動作", "retrievedAt": "2026-10-24T05:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず対象の基幹業務（LOB）を絞って展開設定を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "email-resolution", "term": "メール解決", "type": "feature", "oneLine": { "text": "受信した顧客のメールを分析し、ケースを作成せずに直接応答する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "概要", "retrievedAt": "2026-10-24T05:20:00Z" }] } },
+        { "termKey": "case-management-agent", "term": "ケース管理エージェント", "type": "feature", "oneLine": { "text": "電子メール解決が機能を適用している、ケース対応のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "概要", "retrievedAt": "2026-10-24T05:20:00Z" }] } },
+        { "termKey": "customer-intent-agent", "term": "Customer Intent Agent", "type": "feature", "oneLine": { "text": "受信メールから顧客の意図を識別するために使われるエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "ランタイムの動作", "retrievedAt": "2026-10-24T05:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "メールを解決できなかった場合はどうなりますか？",
+          "answer": { "text": "サービス担当者が対応するケースが作成され、メールがケースに関連付けられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "ランタイムの動作", "retrievedAt": "2026-10-24T05:20:00Z" }] }
+        },
+        {
+          "question": "事前に何を構成しておく必要がありますか？",
+          "answer": { "text": "Customer Intent Agent の構成、ガイド付きセットアップの完了、完全自律フローではアプリケーション ユーザーと共有メールボックスの設定が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locator": "前提条件", "retrievedAt": "2026-10-24T05:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=578064",
+        "learn": [{ "title": "顧客の問題を解決するようにメール解決を構成する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-email-resolution", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
