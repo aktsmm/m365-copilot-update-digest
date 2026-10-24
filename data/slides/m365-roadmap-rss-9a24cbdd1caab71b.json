@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9a24cbdd1caab71b",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Business Central の販売注文エージェントを会社ごとに複数実行可能に",
+        "subtitleJa": "チームや製品ラインごとに、独立した設定と KPI でエージェントを運用できます",
+        "en": "Dynamics 365 Business Central: Copilot and agents - Run multiple Sales Order Agents per company with smarter item matching, relevance filtering, and streamlined setup"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "July" }],
+        "status": "Launched",
+        "products": ["Dynamics 365 Business Central", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central の販売注文エージェントを使う販売チーム**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チームや製品ラインごとにエージェントを分けて、受注メールの処理を運用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "既存の単一インスタンスは、アップグレード パスで新しい構成に移行される",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "1 つの会社で**複数の販売注文エージェント**を実行でき、各インスタンスが独自のメールボックス・署名・処理ルールで独立して動作します",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "各インスタンスが独自のメールボックス、フォルダー設定、署名、処理ルールで動作", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "インスタンスごとに受信メール、作成した見積もり・注文、保存時間の KPI を追跡", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "品目番号・GTIN などの識別子、属性のセマンティック照合、広範な検索の多層で項目を照合", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "改善されたアイテム検索", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントのセットアップ ページでインスタンスごとに構成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "「試してみる」セクションで、実メールなしにタスクを作成して動作を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "試してみてください", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "有効化前にメールボックス フォルダーの選択が必須（未選択だとエラー）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "電子メールをより詳細に制御する", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "PDF は 1 ファイル最大 50 ページ（従来 10）、1 通の累積 150,000 文字まで", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "診断を含む大きな添付ファイル", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "あわせて改善された点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "処理前に無関係なメッセージを関連性モデルで除外し、クレジット消費を抑える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "未登録の送信者は、新規作成・一回のみ別連絡先を使用・既存連絡先のメール更新から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "不明な送信者の処理", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "販売チーム、製品ライン、顧客セグメントごとに個別のエージェントを設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "まず 1 チームだけ新しいインスタンスで試し、KPI を見て広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-order-agent", "term": "販売注文エージェント", "type": "feature", "oneLine": { "text": "受信メールの内容から見積もりや注文を作成する Business Central のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] } },
+        { "termKey": "agent-instance", "term": "エージェント インスタンス", "type": "term", "oneLine": { "text": "独自のメールボックスや処理ルールを持ち、独立して動作するエージェントの単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] } },
+        { "termKey": "gtin", "term": "GTIN", "type": "term", "oneLine": { "text": "項目の照合に使われる識別子の 1 つ（品目番号や仕入先品目番号と並ぶ）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "改善されたアイテム検索", "retrievedAt": "2026-10-24T05:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": {
+            "text": "Learn のリリース プランでは、一般公開は 2026 年 7 月 8 日とされています。ユーザー向けで、自動的に有効化されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "冒頭の表", "retrievedAt": "2026-10-24T05:10:00Z" }]
+          }
+        },
+        {
+          "question": "既存の単一インスタンスの設定はどうなりますか？",
+          "answer": {
+            "text": "アップグレード パスにより、既存の単一インスタンスのセットアップが新しいアーキテクチャに移行されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }]
+          }
+        },
+        {
+          "question": "添付ファイルが処理されなかった理由は確認できますか？",
+          "answer": {
+            "text": "はい。スキップ理由が添付ファイル レコードに保存され、「添付ファイル」ページで確認でき、テレメトリにも記録されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locator": "診断を含む大きな添付ファイル", "retrievedAt": "2026-10-24T05:10:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=578065",
+        "learn": [{ "title": "会社ごとに複数の販売注文エージェントを実行する（2026 年リリース ウェーブ 1）", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/smb/dynamics365-business-central/run-multiple-sales-order-agents-per-company-smarter-item-matching-relevance-filtering-streamlined-setup", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
