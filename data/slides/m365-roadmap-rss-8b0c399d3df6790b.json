@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-8b0c399d3df6790b",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Customer Service の提出済み評価を修正・上書き可能に",
+        "subtitleJa": "完了・期限切れの評価も、品質マネージャーが訂正できます",
+        "en": "Dynamics 365 Customer Service: Workforce engagement management - Modify and override submitted evaluations"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Customer Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Customer Service の**品質マネージャー・スーパーバイザー**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] },
+        "change": { "text": "AI 予測や人手の評価ミスを、完了後でも訂正できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-24T05:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "上書きは監督権限を持つユーザーのみが実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "完了した評価は、完全性を保つためデフォルトで読み取り専用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] },
+        "after": { "text": "不一致が見つかれば、**「編集」アクションで結果を上書き**できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "完了・期限切れの評価で「編集」アクションを開始できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] },
+            { "text": "評価回答の更新、スコアの調整、コメントの修正ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] },
+            { "text": "全ての変更は監査信号で追跡され、上書きされた評価は明示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "監督権限を持つユーザーが、完了した評価から「編集」を実行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] },
+            { "text": "誤った AI 予測や手動評価の誤りなど、不一致の発見時に使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "監督権限を持つユーザーのみがオーバーライドを実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "対象となる評価",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI 支援、AI エージェント生成、手動の評価のいずれでも利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "not-stated",
+          "priority": "detail"
+        }
+      ],
+      "glossary": [
+        { "termKey": "override", "term": "評価の上書き", "type": "feature", "oneLine": { "text": "完了・期限切れの評価結果を、権限を持つユーザーが編集して訂正する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] } },
+        { "termKey": "audit-signal", "term": "監査信号", "type": "term", "oneLine": { "text": "誰がいつ編集したかを追跡する記録。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "AI が生成した評価も上書きできますか？",
+          "answer": { "text": "はい。AI 支援、AI エージェント生成、手動の評価のいずれにも対応します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+        },
+        {
+          "question": "誰でも評価を上書きできますか？",
+          "answer": { "text": "いいえ。監督権限を持つユーザーのみが実行でき、変更は監査信号で追跡されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=578070",
+        "learn": [
+          { "title": "提出された評価を修正・上書きする", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-customer-service/modify-override-submitted-evaluations", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
