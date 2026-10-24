@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7d0c02303cafe5ee",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Customer Service のガバナンス ポリシーで、送信メールを事前チェック",
+        "subtitleJa": "AI 生成メールや担当者のメールを、送信前にポリシーで確認できます",
+        "en": "Dynamics 365 Customer Service: Workforce engagement management - Enforce governance policy"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Dynamics 365 Customer Service", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["security-compliance", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Customer Service",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service の管理者**と、顧客対応メールを管理するマネージャー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "リスクのある顧客向けメールや非準拠のメールを、送信前にポリシーで防げる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、ガバナンスをオンにし、ロール・クレジット・AI エージェントの設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "前提条件", "retrievedAt": "2026-10-24T05:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "AI 生成の自律的なメール応答を、顧客に送る前に**ビジネス・法務・規制の要件で検証**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "サービス担当者や AI エージェントが作成した各メールを、有効なポリシーと照合", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "ガバナンス ポリシーのしくみ", "retrievedAt": "2026-10-24T05:00:00Z" }] },
+            { "text": "違反時は警告・送信ブロック、記録、手動承認への回付から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "ガバナンス ポリシーのしくみ", "retrievedAt": "2026-10-24T05:00:00Z" }] },
+            { "text": "管理者は検知ログを確認し、ポリシーの説明を調整してプロンプトを改善できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "ガバナンス ポリシーのしくみ", "retrievedAt": "2026-10-24T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot サービス管理センターで、カスタマー サポート → 品質管理 → ガバナンスの管理を開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "ガバナンスを有効にする", "retrievedAt": "2026-10-24T05:00:00Z" }] },
+            { "text": "ガバナンスのトグルをオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "ガバナンスを有効にする", "retrievedAt": "2026-10-24T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は CSRマネージャー、担当者はカスタマーサービス担当者のロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "前提条件", "retrievedAt": "2026-10-24T05:00:00Z" }] },
+            { "text": "Copilot クレジットの設定、リージョン間のデータ移動への同意、AI エージェントの有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "前提条件", "retrievedAt": "2026-10-24T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "メールチャネルを支援し、他の自律エージェントで使う安全チェックを拡張する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "冒頭", "retrievedAt": "2026-10-24T05:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "従業員の雇用に影響する判断（報酬・年功序列など）には使わない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "Important", "retrievedAt": "2026-10-24T05:00:00Z" }] },
+            { "text": "まず少数のポリシーで試し、検知ログを見て調整する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "governance-policy", "term": "ガバナンス ポリシー", "type": "feature", "oneLine": { "text": "顧客向けの発信メッセージに、コンプライアンスや安全基準を強制する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "冒頭", "retrievedAt": "2026-10-24T05:00:00Z" }] } },
+        { "termKey": "csr-manager", "term": "CSRマネージャー", "type": "term", "oneLine": { "text": "ガバナンスを管理する管理者に必要なセキュリティ ロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "前提条件", "retrievedAt": "2026-10-24T05:00:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "この機能の前提条件として設定が求められる、従量課金の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "前提条件", "retrievedAt": "2026-10-24T05:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのチャネルが対象ですか？",
+          "answer": { "text": "ガバナンス ポリシーはメールチャネルを支援します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "冒頭", "retrievedAt": "2026-10-24T05:00:00Z" }] }
+        },
+        {
+          "question": "違反を検知したときの動作は？",
+          "answer": { "text": "送信者への警告や送信ブロック、違反の記録、手動承認へのルーティングから選べます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locator": "ガバナンス ポリシーのしくみ", "retrievedAt": "2026-10-24T05:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=578067",
+        "learn": [{ "title": "ガバナンス ポリシーの設定", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-governance-policies", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
