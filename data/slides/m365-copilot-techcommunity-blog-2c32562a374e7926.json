@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-2c32562a374e7926",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot の新機能まとめ（2026 年 7 月号）",
+        "subtitleJa": "月ごとの新機能と改善点を、Tech Community ブログで確認できます",
+        "en": "What’s New in Microsoft 365 Copilot | July 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の管理者と、エージェントなどの作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "毎月の新機能と改善点を、まとめて把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "気になる機能は、公式のリリース ノートで提供状況を確かめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "日常のアプリで生産性を高める Copilot の新機能と強化点が、月ごとに 1 本のブログにまとまります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "この更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "2026 年 7 月号。Copilot の新機能と改善点を毎月紹介するシリーズ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "7 月 29 日分のリリース ノートに、メールの添付ファイル一覧表示などがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "July 29, 2026", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "7 月 1 日分には、従業員セルフサービス エージェントの画面カスタマイズなどがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "July 01, 2026", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "機能ごとに対象プラットフォームが異なり、ロードマップ ID で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "Roadmap ID", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "コネクタの書き込み操作は 2026 年 10 月初旬から。それまでは読み取り専用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Note", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "使用量ベースの請求で有効になる AI 機能は、支出ポリシーで制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-manage-copilot-credits", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コネクタは同期型とフェデレーション型があり、管理者が管理センターで構成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "支出ポリシーで、組織・ユーザー単位の支出制限と通知を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-manage-copilot-credits", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "qa": [
+        {
+          "question": "コネクタの書き込み操作はいつから使えますか？",
+          "answer": { "text": "Learn では、書き込み操作は 2026 年 10 月初旬から利用できるとされています。それまでは検索と取得のみです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Note", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "Copilot クレジットの支出はどう制御しますか？",
+          "answer": { "text": "コスト管理ダッシュボードの支出ポリシーで、アクセス制御、組織・ユーザー単位の上限、しきい値通知を構成します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-manage-copilot-credits", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connectors", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "Microsoft 365 外のデータにつないで、Copilot や検索の対象を広げる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "federated", "term": "フェデレーション型コネクタ", "type": "term", "oneLine": { "text": "MCP を使い、データをインデックス化せずにリアルタイムで取得するコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locator": "Federated connectors", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "spend-policy", "term": "支出ポリシー", "type": "feature", "oneLine": { "text": "使用量ベースの請求で有効になる AI 機能へのアクセスと支出を制御する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-manage-copilot-credits", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供開始前の開発段階にあることを示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/what-s-new-in-microsoft-365-copilot-july-2026/ba-p/4538332",
+        "learn": [
+          { "title": "Copilot connectors overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/overview", "locale": "en-us" },
+          { "title": "使用量ベースの請求によって有効化された AI エクスペリエンスの管理", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-manage-copilot-credits", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
