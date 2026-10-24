@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-techcommunity-blog-0d5996d29e692234",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot のドメイン除外機能がロールバックされました",
+        "subtitleJa": "Web グラウンディングから特定サイトを除外する機能の告知が更新されました",
+        "en": "Update: Domain Exclusion for Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-08-08",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot Blog"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の管理者**と、ドメイン除外の利用を検討していた作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "以前の告知で案内されたドメイン除外機能は、現時点でロールバックされた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "ブログ上で管理者に求める対応は示されていない。最新の状況は告知で確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ドメイン除外機能は、**現時点でロールバック**されたとコミュニティに告知されました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "今回のアップデートの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "以前のブログで紹介したドメイン除外機能が、現時点でロールバックされた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は、Web グラウンディングの制御を扱う機能（元記事は管理者向け・作成者向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "この機能は、PowerShell で Web グラウンディングから最大 1,000 サイトを除外する仕組み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "冒頭", "retrievedAt": "2026-10-23T22:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ドメイン除外は既定では構成されず、スクリプトで利用を開始する方式だった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "冒頭", "retrievedAt": "2026-10-23T22:20:00Z" }] },
+            { "text": "スクリプトで除外設定を行った場合は、現在の動作を告知で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "domain-exclusion", "term": "ドメイン除外", "type": "feature", "oneLine": { "text": "Web グラウンディングから除外するサイトを、PowerShell スクリプトで指定する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "冒頭", "retrievedAt": "2026-10-23T22:20:00Z" }] } },
+        { "termKey": "web-grounding", "term": "Web グラウンディング", "type": "term", "oneLine": { "text": "Copilot が回答時に Web コンテンツを参照できる、オプションの機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locator": "冒頭", "retrievedAt": "2026-10-23T22:20:00Z" }] } },
+        { "termKey": "rollback", "term": "ロールバック", "type": "term", "oneLine": { "text": "機能の提供を以前の状態に戻すこと。今回はドメイン除外が対象。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "以前の告知に対する続報として投稿された更新情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ドメイン除外の機能はどのようなものでしたか？",
+          "answer": { "text": "PowerShell スクリプトで、Microsoft Copilot と Copilot Chat の Web グラウンディングから最大 1,000 サイトを除外する機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "冒頭", "retrievedAt": "2026-10-23T22:20:00Z" }] }
+        },
+        {
+          "question": "設定にはどんな管理者権限が必要でしたか？",
+          "answer": { "text": "Learn の前提条件では、検索管理者またはグローバル管理者としてのサインインが必要と記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locator": "前提条件", "retrievedAt": "2026-10-23T22:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/microsoft-365-copilot-blog/update-domain-exclusion-for-microsoft-365-copilot/ba-p/4543648",
+        "learn": [
+          { "title": "ドメイン除外の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/domain-exclusion", "locale": "ja-jp" },
+          { "title": "Microsoft Copilot と Microsoft Copilot Chat での Web 検索のデータ、プライバシー、セキュリティ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/manage-public-web-access", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
