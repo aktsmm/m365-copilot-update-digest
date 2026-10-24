@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-ae04ac7f0a8352b1",
-      "kind": "in-development",
+      "kind": "retirement",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "廃止・終了",
       "title": {
-        "ja": "Copilot ページで Copilot から改善の提案を受けられるように（開発中）",
-        "subtitleJa": "「提案された編集」で、文章の明確さと品質を高める修正案が得られます",
+        "ja": "Copilot ページで Copilot から改善の提案を受ける機能（廃止・終了区分）",
+        "subtitleJa": "「提案された編集」に関する項目が、ロードマップ上で Retirement になっています",
         "en": "Microsoft Copilot (Microsoft 365): Get actionable suggestions from Copilot in your Copilot Page"
       },
       "meta": {
-        "publishedJst": "2026-08-12",
+        "publishedJst": "2026-10-24",
         "availability": [],
-        "status": "In development",
+        "status": null,
         "products": ["Microsoft Copilot (Microsoft 365)"],
         "categories": ["other"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Microsoft 365 Copilot",
@@ -25,22 +25,16 @@
       },
       "audience": {
         "who": { "text": "**Copilot ページで文章を作成する人**と、Copilot ページを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "ページの内容に対する具体的な改善提案を受け、そのままページに反映できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "changeNature": "benefit"
+        "change": { "text": "ロードマップ上のステージが Retirement になっている", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
       },
       "action": {
-        "required": "no",
-        "summary": {
-          "text": "開発中のため、現時点で必要な対応はない。管理者は既存のクラウド ポリシーで Copilot ページを制御できる",
-          "origin": "learn",
-          "assertion": "fact",
-          "verification": "verified",
-          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T05:10:00Z" }]
-        }
+        "required": "unknown",
+        "summary": { "text": "終了日や代替手段は公開情報で確認できないため、ロードマップの項目を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
       "beforeAfter": {
         "after": {
-          "text": "Copilot ショートカット メニューの**「提案された編集」**を選ぶと、Copilot がページの内容を分析し、改善案を提示します。提案はページに直接適用できます",
+          "text": "Copilot ショートカット メニューの**「提案された編集」**でページの内容を分析し、明確さと品質を高める提案を得て、ページに直接適用できる機能に関する項目です",
           "origin": "mrc",
           "assertion": "fact",
           "verification": "source-only"
@@ -48,34 +42,30 @@
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "impact",
+          "heading": "影響",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "Copilot ショートカット メニューの「提案された編集」から依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Copilot がページの内容を分析し、明確さと品質を高める提案を提示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "提案はページに直接適用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "対象: Web 版、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステージは Retirement", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot ページの作成・表示は、クラウド ポリシーで管理する（既定は有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-24T04:50:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
-          "availability": "present",
-          "priority": "core",
-          "items": [
-            { "text": "ロードマップ上の状態は開発中。提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "対象は Web プラットフォーム、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
-          ]
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
         },
         {
-          "id": "prepare",
-          "heading": "準備のポイント",
+          "id": "action-plan",
+          "heading": "対応計画",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "Copilot ページの作成・表示は、クラウド ポリシーで有効・無効を切り替える（既定は有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "概要", "retrievedAt": "2026-10-23T05:10:00Z" }] },
-            { "text": "ポリシーの変更が反映されるまで、最大 90 分から 24 時間かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-23T05:10:00Z" }] }
+            { "text": "ロードマップの項目で終了時期と影響範囲を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "「提案された編集」を使っている場合は、利用状況を棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
@@ -83,7 +73,7 @@
         { "termKey": "copilot-pages", "term": "Copilot ページ", "type": "feature", "oneLine": { "text": "Copilot が作成・編集に関わる、.page ファイル形式のページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "冒頭", "retrievedAt": "2026-10-23T05:10:00Z" }] } },
         { "termKey": "suggested-edits", "term": "提案された編集", "type": "feature", "oneLine": { "text": "Copilot がページの内容を分析し、改善提案を出す機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "cloud-policy", "term": "クラウド ポリシー", "type": "term", "oneLine": { "text": "Copilot ページの作成と表示などを、管理者がユーザーやグループ単位で制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-admin-configuration", "locator": "クラウド ポリシーの設定管理", "retrievedAt": "2026-10-23T05:10:00Z" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
@@ -97,12 +87,12 @@
           }
         },
         {
-          "question": "いつから使えますか？",
+          "question": "終了日や代替手段が不明なとき、現場にどう案内すべきですか？",
           "answer": {
-            "text": "ロードマップは開発中で、提供時期の月は示されていません。最新の状況はロードマップで確認してください。",
-            "origin": "mrc",
-            "assertion": "fact",
-            "verification": "source-only"
+            "text": "確定情報が出るまでは、ロードマップの項目を確認し、利用状況を棚卸しするよう案内するのが無難です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
           }
         }
       ],
