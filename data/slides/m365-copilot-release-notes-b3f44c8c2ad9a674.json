@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b3f44c8c2ad9a674",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "ServiceNow のロール割り当てへの準拠が向上",
+        "subtitleJa": "Copilot コネクタ経由でも、ServiceNow のロールどおりのアクセスになります",
+        "en": "Better compliance with ServiceNow role assignments"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["agents", "security-compliance"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "**ServiceNow の Copilot コネクタを使う管理者**と、ナレッジ記事やカタログ項目を参照するユーザー",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "ロールに基づくアクセス制御が一貫し、権限のないコンテンツが表示されにくくなる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "ServiceNow のロール割り当てを確認し、アクセスが想定どおりか検証する",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "ServiceNow のロール（管理者、ナレッジ マネージャーなど）に沿って、Copilot コネクタ経由のナレッジ記事・カタログ項目へのアクセスが制御されます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "対象: ServiceNow のナレッジ記事とカタログ項目（Copilot コネクタ経由）",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "ねらい: ユーザーが権限のあるコンテンツだけを見られるようにしてデータ セキュリティを高める",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "組織は ServiceNow のロール ポリシーを Copilot コネクタ全体で一貫して適用できる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "リリース ノートの確認手順: ロールを割り当て、コネクタ経由で記事にアクセスし、ロールと一致するか検証する",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "コネクタの検索権限は「全員」または「このデータ ソースにアクセスできるユーザーのみ（既定）」から選べる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/microsoft-365/copilot/connectors/servicenow-knowledge-deployment",
+                  "locator": "Customize settings > Access permissions",
+                  "retrievedAt": "2026-10-24T06:50:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "admin-notes",
+          "heading": "管理者向けの注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "サービス アカウントが sys_properties テーブルを読めないと、ユーザー条件のない記事は検索結果に出ない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup",
+                  "locator": "Set up hierarchical permissions",
+                  "retrievedAt": "2026-10-24T06:50:00Z"
+                }
+              ]
+            },
+            {
+              "text": "HR Service Delivery の記事には sn_hr_core.content_reader または sn_hr_core.admin ロールが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/microsoft-365/copilot/connectors/servicenow-knowledge-deployment",
+                  "locator": "Customize settings > Access permissions",
+                  "retrievedAt": "2026-10-24T06:50:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-connectors",
+          "term": "Copilot コネクタ",
+          "type": "feature",
+          "oneLine": {
+            "text": "外部データ ソースのコンテンツを Microsoft Copilot と検索で利用できるようにインデックス化する仕組み。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup",
+                "locator": "冒頭の概要",
+                "retrievedAt": "2026-10-24T06:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "servicenow-knowledge",
+          "term": "ServiceNow Knowledge コネクタ",
+          "type": "product",
+          "oneLine": {
+            "text": "ServiceNow のナレッジベース記事を Microsoft Copilot と検索にインデックス化するコネクタ。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup",
+                "locator": "冒頭の概要",
+                "retrievedAt": "2026-10-24T06:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "user-criteria",
+          "term": "ユーザー条件（User Criteria）",
+          "type": "term",
+          "oneLine": {
+            "text": "ServiceNow でナレッジベースや記事を読めるユーザーを決める条件。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/microsoft-365/copilot/connectors/servicenow-knowledge-deployment",
+                "locator": "Access permissions",
+                "retrievedAt": "2026-10-24T06:50:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "いつから利用できますか？",
+          "answer": {
+            "text": "リリース ノートは 2026 年 8 月 11 日付で、提供時期の月や段階的展開の詳細は示されていません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "question": "管理者は設定変更が必要ですか？",
+          "answer": {
+            "text": "リリース ノートには必須の対応は示されていません。ロール割り当てとアクセス結果の確認が推奨されています。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-11",
+        "learn": [
+          {
+            "title": "ServiceNow Knowledge コネクタ: ServiceNow サービスの設定",
+            "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-admin-setup",
+            "locale": "en-us"
+          },
+          {
+            "title": "ServiceNow Knowledge コネクタのデプロイ",
+            "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/servicenow-knowledge-deployment",
+            "locale": "en-us"
+          }
+        ]
+      }
+    }
+  ]
+}
