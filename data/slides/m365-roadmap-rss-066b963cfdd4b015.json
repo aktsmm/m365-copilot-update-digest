@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-066b963cfdd4b015",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "DoD のユーザーがカスタム エンジン エージェントを利用可能に",
+        "subtitleJa": "DoD 環境でも、独自のオーケストレーションを持つエージェントを使えるようになります",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Users in DoD will be able to use custom engine agents"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**DoD 環境で Microsoft Copilot を使う組織**のエージェント作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "DoD のユーザーがカスタム エンジン エージェントを使えるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供開始まで待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "DoD のユーザーが**カスタム エンジン エージェント**を使用できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は DoD のクラウド インスタンスのユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "カスタム エンジン エージェントは、オーケストレーション、AI モデル、データ統合を完全に制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は DoD のみ。他のクラウド インスタンスの提供状況は別に確認が必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "備えておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "構築方法は Copilot Studio、Microsoft 365 エージェント SDK、Teams SDK、Microsoft Foundry から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] },
+            { "text": "提供開始に備え、候補となる開発アプローチを整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "custom-engine-agent", "term": "カスタム エンジン エージェント", "type": "feature", "oneLine": { "text": "独自のオーケストレーションと AI モデルを持ち、Microsoft 365 Copilot の機能を拡張するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "冒頭", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "dod", "term": "DoD", "type": "term", "oneLine": { "text": "ロードマップ上で示されるクラウド インスタンスの 1 つ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "orchestration", "term": "オーケストレーション", "type": "term", "oneLine": { "text": "カスタム エンジン エージェントでは、ワークフローの制御を組織が定義できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントの主な特徴", "retrievedAt": "2026-10-24T00:00:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進行中でまだ提供が始まっていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "カスタム エンジン エージェントはどう作りますか？",
+          "answer": { "text": "ローコードの Copilot Studio のほか、Microsoft 365 エージェント SDK、Teams SDK、Microsoft Foundry で構築できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "開発アプローチ", "retrievedAt": "2026-10-24T00:00:00Z" }] }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップでは開発中で、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=503772",
+        "learn": [{ "title": "Microsoft 365 用カスタム エンジン エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
