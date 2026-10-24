@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6ecad13dfcaf6b92",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Contact Center で直通着信向けオーバーフロー操作（開発中）",
+        "subtitleJa": "担当者が応答できない直通ダイヤル着信に、代替の対応を自動で適用します",
+        "en": "Dynamics 365 Contact Center: Unified routing - Use overflow actions to protect customer experience for direct inward calls"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Contact Center",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Contact Center の管理者・作成者**、および直通ダイヤルを使う担当者のチーム", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] },
+        "change": { "text": "担当者に直接ダイヤルする発信者の、待機・切断・不統一な処理を減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "ビジネス価値", "retrievedAt": "2026-10-24T06:45:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するなら、管理者がプレイブックでフォールバック アクションを設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "担当者が**ビジー・オフライン・拒否・不応答**のとき、管理者が定義したフォールバック アクションが自動で適用されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "機能の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "会話オーケストレーションで、直通ダイヤルに関する主要なイベントを検出", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] },
+            { "text": "検出対象: 担当者のビジー、オフライン、通話の拒否、応答の失敗", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] },
+            { "text": "アクション: コールバック提供、ボイスメール、別キューや外部番号への転送、通話終了", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「開発中」で、まだ提供は始まっていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "リリース計画の機能には未リリースのものがあり、予定どおり提供されない可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "冒頭の注記", "retrievedAt": "2026-10-24T06:45:00Z" }] },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "自然言語プレイブックは、グローバル プロファイルまたは受信プロファイルで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] },
+            { "text": "コールバックやボイスメールなど、発信者向けの代替策を事前に整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "did", "term": "直接内向きダイヤル", "type": "term", "oneLine": { "text": "発信者が特定の担当者に直接つながる番号へ電話をかける方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "ビジネス価値", "retrievedAt": "2026-10-24T06:45:00Z" }] } },
+        { "termKey": "orchestration", "term": "会話オーケストレーション", "type": "feature", "oneLine": { "text": "直通ダイヤルのイベントを検出し、フォールバック アクションを適用する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] } },
+        { "termKey": "playbook", "term": "自然言語プレイブック", "type": "feature", "oneLine": { "text": "通話に参加できない場合の動作を、管理者が自然言語で指定する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "Learn のリリース計画では、パブリック プレビューが 2026 年 6 月 30 日、一般公開が 2026 年 10 月とされています。ただし時期は変更される可能性があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "提供時期の表", "retrievedAt": "2026-10-24T06:45:00Z" }] }
+        },
+        {
+          "question": "どんなフォールバック アクションを選べますか？",
+          "answer": { "text": "発信者への直接コールバック、ボイスメール、別のキューや外部番号への転送、通話の終了です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locator": "機能の詳細", "retrievedAt": "2026-10-24T06:45:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576607",
+        "learn": [{ "title": "オーバーフロー アクションを使用して、直接内向き通話のカスタマー エクスペリエンスを保護する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-overflow-actions-protect-customer-experience-direct-inward-calls", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
