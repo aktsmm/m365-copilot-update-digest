@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d0ffe29a98c473a8",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Business Central で AI エージェントの設計・開発が可能に（開発中）",
+        "subtitleJa": "繰り返し作業を自動化する専用アシスタントを設計できます",
+        "en": "Dynamics 365 Business Central: Copilot and agents - Envision and design AI agents in Business Central"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Business Central", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Business Central",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Business Central でエージェントを作る人**（作成者）と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "繰り返し作業を自動化し、業務プロセスを効率化するエージェントを設計できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、Custom Agent 機能の有効化とサンドボックス環境が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Prerequisites", "retrievedAt": "2026-10-24T06:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Business Central に**AI エージェント**が加わり、コンテキストを理解して構造化データを扱い、ユーザーと協力して業務を完了します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントは、繰り返し作業を自動化する専用アシスタントとして機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AI 開発ツールキットで、エージェントを作って試作できる（プレビュー）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "冒頭", "retrievedAt": "2026-10-24T06:50:00Z" }] },
+            { "text": "対象は、プロダクト オーナー、ドメイン専門家、コンサルタント、開発者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Purpose and audience", "retrievedAt": "2026-10-24T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "AI 開発ツールキットはサンドボックス環境のみ。本番では使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Important", "retrievedAt": "2026-10-24T06:50:00Z" }] },
+            { "text": "エージェントは、作成したユーザー以上の権限を持てない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Operational constraints", "retrievedAt": "2026-10-24T06:50:00Z" }] },
+            { "text": "現時点の対応言語は英語のみ。他言語では意図どおり動かないことがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Supported languages", "retrievedAt": "2026-10-24T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Custom Agent 機能の有効化と、AGENT - ADMIN 権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Prerequisites", "retrievedAt": "2026-10-24T06:50:00Z" }] },
+            { "text": "テナントでエージェント機能の課金設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Prerequisites", "retrievedAt": "2026-10-24T06:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "bc-agent", "term": "AI エージェント", "type": "feature", "oneLine": { "text": "コンテキストを理解し、構造化データを扱って業務を支援する専用アシスタント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "ai-toolkit", "term": "AI 開発ツールキット", "type": "feature", "oneLine": { "text": "Business Central でエージェントを作り、AI 機能を試すための環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "冒頭", "retrievedAt": "2026-10-24T06:50:00Z" }] } },
+        { "termKey": "sandbox", "term": "サンドボックス環境", "type": "term", "oneLine": { "text": "本番とは別に、テストや試行のために用意する環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Prerequisites", "retrievedAt": "2026-10-24T06:50:00Z" }] } },
+        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあること（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "本番環境で使えますか？",
+          "answer": { "text": "AI 開発ツールキットはサンドボックスのみです。Agent SDK for AL は、バージョン 28.1 以降で本番環境でも使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Important", "retrievedAt": "2026-10-24T06:50:00Z" }] }
+        },
+        {
+          "question": "必要な権限は何ですか？",
+          "answer": { "text": "エージェントの設計には AGENT - ADMIN が必要です。実行コストの確認などには AGENT - DIAGNOSTICS を使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locator": "Prerequisites", "retrievedAt": "2026-10-24T06:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=578068",
+        "learn": [{ "title": "Designing and coding agents (preview)", "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/ai-development-toolkit-overview", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
