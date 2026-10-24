@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-6bf9e94f5d3e6186",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "Copilot Notebooks で CSV・TSV を参照可能に（開発中）",
+        "ja": "Copilot Notebooks で CSV・TSV を参照可能に",
         "subtitleJa": "構造化されたリストや表を、ノートブックの参照資料として使えます",
         "en": "Microsoft Copilot (Microsoft 365): CSV and TSV references in Copilot Notebooks"
       },
       "meta": {
-        "publishedJst": "2026-08-12",
+        "publishedJst": "2026-10-24",
         "availability": [],
-        "status": "In development",
+        "status": "Launched",
         "products": ["Microsoft 365 Copilot", "OneNote", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["office-apps"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Android", "Desktop", "iOS", "Web"],
         "productArea": "Microsoft 365 Copilot",
@@ -29,9 +29,9 @@
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
+        "required": "optional",
         "summary": {
-          "text": "開発中のため対応は不要。Copilot Notebooks の作成ポリシーは既定で有効",
+          "text": "管理者は、Copilot Notebooks の作成ポリシー（既定は有効）を確認しておく",
           "origin": "learn",
           "assertion": "fact",
           "verification": "verified",
@@ -43,8 +43,8 @@
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
@@ -54,8 +54,8 @@
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
@@ -65,8 +65,8 @@
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備のポイント",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
@@ -79,7 +79,7 @@
         { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "ファイルや Teams 会議などを参照として集め、Copilot に文脈として使わせるノートブック機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes#august-25,-2026", "locator": "Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T20:00:00Z" }] } },
         { "termKey": "csv-tsv", "term": "CSV / TSV", "type": "term", "oneLine": { "text": "表形式のデータを、カンマ区切り（CSV）またはタブ区切り（TSV）で保存したテキスト ファイル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "knowledge-source", "term": "ナレッジ ソース", "type": "term", "oneLine": { "text": "Copilot が回答や成果物の生成で根拠として参照する情報源。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes#august-25,-2026", "locator": "Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-20T20:00:00Z" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
