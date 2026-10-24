@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fe5bcc33eac7f66a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Dynamics 365 Sales で複数の営業見込み評価エージェントを 1 環境にデプロイ可能に",
+        "subtitleJa": "製品・地域・チームごとに専用のエージェントを使い分けられます",
+        "en": "Dynamics 365 Sales: Lead management - Deploy multiple Sales Qualification Agents in a single environment"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Dynamics 365 Sales", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "dynamics"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Sales",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Sales の管理者・作成者**と、リード対応を管理する営業組織", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": {
+          "text": "製品ラインや地域ごとに評価基準の異なるエージェントを展開でき、重複したアプローチを避けられる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-24T05:10:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "セグメントごとのエージェント構成が必要な場合に、選択基準とフォールバックの設計を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "営業見込み評価エージェントを**製品ライン・地域・営業チームごとに複数展開**でき、各エージェントが独自の評価基準や情報ソースで動作します",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-24T05:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "セグメント固有の評価: 各エージェントが独自の顧客プロファイル、情報ソース、テンプレート、同意設定で稼働", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "リード ルーティング: 選択基準と優先順位に基づき、受信リードの所有権を割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "常に 1 つのエージェントだけがリードに対応し、関心が変わると適切なエージェントへ引き継ぐ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn では、有効対象は管理者、作成者、またはアナリストによるユーザーとされている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "リリース計画の概要表", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "フォールバック エージェントが、選択基準に一致しないリードを処理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供リージョンと対応言語は、Microsoft の提供状況レポートで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "地域・利用可能な言語", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "共有ナレッジ基盤: 会社共通の知識を使いつつ、各エージェントが専門ソースを維持する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "スーパーバイザーはダッシュボードで活動の監視やリードの再割り当てができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "実際の営業体制を反映でき、営業担当者を増やさず対応範囲を広げられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-24T05:10:00Z" }] },
+            { "text": "まず 1 つの製品ラインでエージェントを分けて試し、ルーティング結果を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-qualification-agent", "term": "営業見込み評価エージェント", "type": "feature", "oneLine": { "text": "リードの評価に関する会話を担う Dynamics 365 Sales のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "ビジネス バリュー", "retrievedAt": "2026-10-24T05:10:00Z" }] } },
+        { "termKey": "lead-routing", "term": "リード ルーティング", "type": "term", "oneLine": { "text": "受信リードを選択基準と優先順位に基づいてエージェントへ割り当てる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] } },
+        { "termKey": "fallback-agent", "term": "フォールバック エージェント", "type": "term", "oneLine": { "text": "特定の選択基準に一致しないリードを処理するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのリードがどのエージェントに割り当てられますか？",
+          "answer": { "text": "受信リードはエージェントの選択基準と設定された優先順位で評価され、所有権が割り当てられます。一致しないリードはフォールバック エージェントが処理します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "機能の詳細", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+        },
+        {
+          "question": "プレビューと一般提供の時期はいつでしたか？",
+          "answer": { "text": "Learn のリリース計画では、パブリック プレビューが 2026 年 8 月、一般提供が 2026 年 9 月とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locator": "リリース計画の概要表", "retrievedAt": "2026-10-24T05:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=578076",
+        "learn": [
+          { "title": "1 つの環境に複数の営業見込み評価エージェントをデプロイする", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/sales/dynamics365-sales/deploy-multiple-sales-qualification-agents-single-environment", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
