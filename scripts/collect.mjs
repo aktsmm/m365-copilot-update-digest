@@ -759,6 +759,10 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/run multiple sales order agents per company with smarter item matching/.test(text)) {
+    return "Dynamics 365 Business Central: 会社ごとに複数の Sales Order Agent を実行し、品目照合と関連性フィルターを強化";
+  }
+
   if (/support permission sync missed in incremental crawl/.test(text)) {
     return "増分クロール時のアクセス許可の同期漏れに対応";
   }
