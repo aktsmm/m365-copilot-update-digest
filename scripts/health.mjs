@@ -36,6 +36,18 @@ const nodeCount = (script, args = []) => {
 };
 
 const slides = countFiles("data/slides");
+
+// 公開サイトの slides.json の件数が、リポジトリのスライド数と一致するか（デプロイが止まっていないか）を確かめる
+async function liveSlideCount() {
+  try {
+    const response = await fetch("https://aktsmm.github.io/m365-copilot-update-digest/data/slides.json", { cache: "no-store", signal: AbortSignal.timeout(15000) });
+    if (!response.ok) return -1;
+    return (await response.json()).slides.length;
+  } catch {
+    return -1;
+  }
+}
+const liveSlides = await liveSlideCount();
 const summaries = countFiles("data/summaries");
 const pendingSlides = nodeCount("scripts/pending-slides.mjs", ["--limit", "5000", "--out", ".work/health-pending.json"]);
 const pendingQa = nodeCount("scripts/pending-qa.mjs", ["--limit", "5000"]);
@@ -98,6 +110,7 @@ if (coverage) {
   lines.push(`- 本物のスライドがある割合: 直近 30 日 ${pct(coverage.coverage.d30)}、90 日 ${pct(coverage.coverage.d90)}（スライドがない更新は、PDF・PPTX では簡易ページで出るので件数は揃います）`);
   lines.push(`- 48 時間より前に出たのに本物のスライドがない: ${coverage.coverage.overdue} 件、失敗が続いて保留中: ${coverage.coverage.held} 件${coverage.problems.length ? `（${coverage.enforced ? "上限超過" : "追いつき中のため警告のみ"}）` : ""}`);
 }
+lines.push(`- 公開サイト: ${liveSlides < 0 ? "確認できませんでした" : liveSlides === slides ? `スライド ${liveSlides} 件（リポジトリと一致）` : `スライド ${liveSlides} 件（リポジトリは ${slides} 件。デプロイが遅れている可能性があります）`}`);
 lines.push(`- 日本語要約: ${summaries} 件（未生成・要再生成 ${pendingSummaries < 0 ? "?" : pendingSummaries} 件）`);
 if (runSummary.sourceCount != null) lines.push(`- 監視ソース: ${runSummary.sourceCount}（取得状態: ${runSummary.coverage?.status ?? "不明"}、エラー ${runSummary.errorCount ?? 0} 件）`);
 lines.push("");
