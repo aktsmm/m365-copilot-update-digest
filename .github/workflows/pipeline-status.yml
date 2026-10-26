@@ -45,3 +45,15 @@ jobs:
           else
             gh issue edit "$number" --body-file .work/status.md
           fi
+      - name: Close stale slide-failure issues once caught up
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # 未作成のスライドが 0 件なら、過去の生成失敗の報告は役目を終えている。放置すると本当の失敗が埋もれるので閉じる
+          pending=$(npm run -s pending-slides -- --limit 1 2>/dev/null || echo "unknown")
+          if [ -z "$pending" ]; then
+            cutoff=$(date -u -d '1 day ago' +%Y-%m-%dT%H:%M:%SZ)
+            for n in $(gh issue list --state open --limit 100 --label agentic-workflows --json number,title,createdAt -q ".[] | select((.title | test(\"one-update slide JSON\")) and .createdAt < \"$cutoff\") | .number"); do
+              gh issue close "$n" -c "スライドの未作成が 0 件になったため、過去の生成失敗の報告として閉じます（毎日の状況確認で自動）。" || true
+            done
+          fi

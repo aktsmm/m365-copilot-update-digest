@@ -1,5 +1,7 @@
 # Microsoft Copilot Update Digest
 
+**公開サイト（GitHub Pages）: https://aktsmm.github.io/m365-copilot-update-digest/**
+
 Microsoft 365 Copilot、Copilot Studio、Agent Builder の公開アップデートを継続的に収集し、日次 JSON、日次 Markdown、記事 draft、X 投稿 draft、GitHub Pages 向けの静的サイトを生成するリポジトリです。
 
 現在は次の 5 系統を収集対象にし、更新に日本語要約・解説スライド（想定問答つき）を付けて公開しています。全体の自動運用は「[自動運用の全体像](#自動運用の全体像)」を参照してください。
