@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-ca69e2614823adc0",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Cowork の Power Platform Admin プラグイン：自然言語でのエージェント ガバナンス",
+        "subtitleJa": "テナントの資産や所有者を、会話で調べてレポートや連絡につなげます",
+        "en": "Introducing the Power Platform Admin Plugin in Cowork: Agentic Governance with Natural Language"
+      },
+      "meta": {
+        "publishedJst": "2026-10-26",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents", "security-compliance", "dynamics"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": {
+          "text": "**Power Platform 管理者・Dynamics 365 管理者・グローバル管理者**",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/power-platform-admin-cowork", "locator": "データ アクセスに必要なロール", "retrievedAt": "2026-10-26T16:40:00Z" }]
+        },
+        "change": {
+          "text": "複数の管理画面を行き来せず、平易な言葉の質問でインベントリ・使用状況・所有権を確認できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "冒頭", "retrievedAt": "2026-10-26T16:40:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "プレビュー機能。試す場合は管理者がプラグインを導入し、Copilot クレジットの支出方針も先に決める",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified",
+          "evidence": []
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Power Platform 管理センターのページ間を移動し、レポートを管理し、Excel に出力して答えをまとめていた",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "冒頭", "retrievedAt": "2026-10-26T16:40:00Z" }]
+        },
+        "after": {
+          "text": "Cowork で質問すると、プラグインが環境全体のデータを集めて回答。**レポート化・所有者宛てメールの下書き・定期実行**も同じ会話で依頼できます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "冒頭", "retrievedAt": "2026-10-26T16:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "できることと範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "対象はアプリ・フロー・エージェント・環境のインベントリと、使用状況・所有権のデータ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "Cowork の Power Platform 管理の概要", "retrievedAt": "2026-10-26T16:40:00Z" }]
+            },
+            {
+              "text": "読み取り専用の分析情報とガイダンスを提供し、管理アクションは個別に実行しない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/power-platform-admin-cowork", "locator": "Note", "retrievedAt": "2026-10-26T16:40:00Z" }]
+            },
+            {
+              "text": "メール送信や Teams 投稿などの機密性の高い操作は、Cowork が承認を求めて一時停止する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "プラグインと Cowork の連携のしくみ", "retrievedAt": "2026-10-26T16:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "導入前の確認事項",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "プラグインのインストールだけではデータ アクセスも Cowork へのアクセスも付与されず、別途設定が必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/power-platform-admin-cowork", "locator": "前提条件", "retrievedAt": "2026-10-26T16:40:00Z" }]
+            },
+            {
+              "text": "質問は Copilot クレジットを消費する。回答は AI 生成で変動するため、変更前に検証する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "Cowork の Power Platform 管理の概要", "retrievedAt": "2026-10-26T16:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "cowork",
+          "term": "Microsoft Copilot Cowork",
+          "type": "product",
+          "oneLine": {
+            "text": "必要な結果を伝えると、手順を計画して Microsoft 365 全体で実行する自律型のシステム。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "プラグインと Cowork の連携のしくみ", "retrievedAt": "2026-10-26T16:40:00Z" }]
+          }
+        },
+        {
+          "termKey": "ppac-plugin",
+          "term": "Power Platform Admin プラグイン",
+          "type": "feature",
+          "oneLine": {
+            "text": "テナントに何が存在し、誰が所有し、どう使われているかを Cowork に提供するプラグイン（プレビュー）。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "プラグインと Cowork の連携のしくみ", "retrievedAt": "2026-10-26T16:40:00Z" }]
+          }
+        },
+        {
+          "termKey": "copilot-credits",
+          "term": "Copilot クレジット",
+          "type": "term",
+          "oneLine": {
+            "text": "プラグインへの質問で消費される従量課金の単位。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "Cowork の Power Platform 管理の概要", "retrievedAt": "2026-10-26T16:40:00Z" }]
+          }
+        },
+        {
+          "termKey": "managed-env",
+          "term": "マネージド環境",
+          "type": "feature",
+          "oneLine": {
+            "text": "Power Platform のガバナンス機能群。プラグインへの質問には必須ではない。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "管理された環境", "retrievedAt": "2026-10-26T16:40:00Z" }]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "誰が接続して使えますか？",
+          "answer": {
+            "text": "プラグインは任意のユーザーに導入できますが、接続アカウントにはグローバル管理者、Power Platform 管理者、Dynamics 365 管理者のいずれかのロールが必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/power-platform-admin-cowork", "locator": "データ アクセスに必要なロール", "retrievedAt": "2026-10-26T16:40:00Z" }]
+          }
+        },
+        {
+          "question": "管理者はどこでプラグインを導入しますか？",
+          "answer": {
+            "text": "Microsoft 365 管理センターの［エージェント］>［ツール］>［レジストリ］で Power Platform Admin（プレビュー）を選び、Copilot チャネルで対象ユーザーにインストールします。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/power-platform-admin-cowork", "locator": "ユーザー向けにプラグインをインストールする", "retrievedAt": "2026-10-26T16:40:00Z" }]
+          }
+        },
+        {
+          "question": "コストはどう管理しますか？",
+          "answer": {
+            "text": "Microsoft 365 管理センターで消費を監視し、支出ポリシーを構成できます。広範な展開の前に、1 か月ほどの試験運用で実消費から予算を決める方法が案内されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locator": "ロールアウトの準備", "retrievedAt": "2026-10-26T16:40:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/introducing-the-power-platform-admin-plugin-in-cowork-agentic/ba-p/4567557",
+        "learn": [
+          { "title": "Power Platform Admin in Cowork (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/power-platform-admin-cowork", "locale": "ja-jp" },
+          { "title": "Cowork での Power Platform Admin を使用したエージェント ガバナンス", "url": "https://learn.microsoft.com/ja-jp/power-platform/guidance/adoption/agentic-governance", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
