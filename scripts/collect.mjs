@@ -639,6 +639,14 @@ function knownJapaneseRoadmapSummary(event) {
     return "Intraday Agent は日中業務の運用を支援する自律型 AI エージェントです。キュー量をリアルタイムで監視し、実績が予測需要から大きく乖離した場合に異常を検知します。";
   }
 
+  if (/envision and design ai agents in business central/.test(text)) {
+    return "Business Central の AI エージェントは、反復作業を自動化し、業務プロセスの高度化と効率化を支援します。エージェントはコンテキストを理解して構造化データを扱い、ユーザーと連携しながら業務をエンドツーエンドで完了する専門アシスタントとして機能します。";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): powerpoint agent/.test(text)) {
+    return "PowerPoint Agent は、ストーリー性と視覚的な構成に優れたプレゼンテーションの作成を支援します。調査、書式設定、レイアウトを効率化でき、複数ターンのチャットで内容を調整したり、PowerPoint で開いて編集・共同作業したりできます。経営層向けのブリーフ作成にも適しています。";
+  }
+
   return "";
 }
 
@@ -761,6 +769,30 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/run multiple sales order agents per company with smarter item matching/.test(text)) {
     return "Dynamics 365 Business Central: 会社ごとに複数の Sales Order Agent を実行し、品目照合と関連性フィルターを強化";
+  }
+
+  if (/outlook: account selector in outlook copilot side pane/.test(text)) {
+    return "Outlook Copilot サイド ウィンドウのアカウント切り替えに対応";
+  }
+
+  if (/copilot in powerpoint for government clouds/.test(text)) {
+    return "政府機関クラウドで PowerPoint の Copilot を利用可能に";
+  }
+
+  if (/microsoft purview: data security triage agent in data loss prevention - reasoning trace and confidence score/.test(text)) {
+    return "Microsoft Purview: DLP の Data Security Triage Agent に推論トレースと信頼スコアを追加";
+  }
+
+  if (/microsoft teams: run smb admin tasks faster with microsoft 365 admin agent/.test(text)) {
+    return "Microsoft Teams で Microsoft 365 Admin Agent による SMB 管理を効率化";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): powerpoint agent/.test(text)) {
+    return "PowerPoint Agent で洗練されたプレゼンテーションを作成";
+  }
+
+  if (/dynamics 365 contact center: unified routing - use overflow actions to protect customer experience for direct inward calls/.test(text)) {
+    return "Dynamics 365 Contact Center: 統合ルーティング - オーバーフロー アクションで直通着信の顧客体験を保護";
   }
 
   if (/support permission sync missed in incremental crawl/.test(text)) {
@@ -2254,6 +2286,18 @@ async function localizeJapaneseTitles(
       existingById,
       existingByLogicalKey,
     );
+    const knownTitle = knownJapaneseRoadmapTitle(event);
+    if (knownTitle) {
+      event.titleJa = knownTitle;
+      updateSummaryCacheEntry(
+        summaryCache,
+        event.id,
+        { title: event.titleEn, titleJa: event.titleJa },
+        nowIso,
+      );
+      continue;
+    }
+
     if (existing?.titleJa && shouldPreservePastLocalization(existing, nowIso)) {
       event.titleJa = normalizeWhitespace(existing.titleJa);
       continue;
