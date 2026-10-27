@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-463d99457b0f5b15",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot で SharePoint サイトを簡単に作成（SharePoint Site Builder）",
+        "subtitleJa": "サイト プランを確認・承認してから、Copilot がサイトを構築します",
+        "en": "Microsoft Copilot (Microsoft 365): SharePoint Site Builder"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot", "SharePoint"],
+        "categories": ["sharepoint"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**SharePoint サイトを作成する人**と、SharePoint 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "SharePoint の専門知識がなくても、計画を確認してからサイトを作れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "主な利点", "retrievedAt": "2026-10-27T05:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応はなし。提供時期はロードマップで確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "**サイト プランを確認・承認してから**、Copilot がサイトを構築します",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 ロードマップでは「開発中」の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連機能「AI を使用したサイトの作成」では、ページ・リスト・ライブラリの構成を提案", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "冒頭", "retrievedAt": "2026-10-27T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "関連機能の利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "前提条件", "retrievedAt": "2026-10-27T05:30:00Z" }] },
+            { "text": "ユーザーがサイトを作成できる設定（セルフサービス サイト作成）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "前提条件", "retrievedAt": "2026-10-27T05:30:00Z" }] },
+            { "text": "サイトの作成には最大 15 分かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "手順 4", "retrievedAt": "2026-10-27T05:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備と流れ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "説明を入力 → プランを確認・調整 → 「確認」を選んで作成の順に進む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "手順 1〜4", "retrievedAt": "2026-10-27T05:30:00Z" }] },
+            { "text": "Power Automate の複雑なフローや権限設定などは、プレビュー中は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "対象外のシナリオ", "retrievedAt": "2026-10-27T05:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "site-builder", "term": "SharePoint Site Builder", "type": "feature", "oneLine": { "text": "Copilot で SharePoint サイトを作成し、事前にサイト プランを確認できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-in-sharepoint", "term": "Copilot in SharePoint", "type": "product", "oneLine": { "text": "自然言語で SharePoint のサイトやページなどを作成・改善できる Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "冒頭", "retrievedAt": "2026-10-27T05:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップは「開発中」で、提供月は示されていません。時期はロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "今すぐ試せる関連機能はありますか？",
+          "answer": { "text": "Learn には、プレビュー中の「AI を使用したサイトの作成」が掲載されています。この更新との関係は公式情報では明示されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locator": "冒頭", "retrievedAt": "2026-10-27T05:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576708",
+        "learn": [
+          { "title": "AI を使用してサイトを作成する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/create-sites-with-ai", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
