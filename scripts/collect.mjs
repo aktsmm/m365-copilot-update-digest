@@ -767,6 +767,10 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/microsoft copilot studio: supercharge your workflows with computer use/.test(text)) {
+    return "Microsoft Copilot Studio: コンピューターの使用でワークフローを強化します";
+  }
+
   if (/run multiple sales order agents per company with smarter item matching/.test(text)) {
     return "Dynamics 365 Business Central: 会社ごとに複数の Sales Order Agent を実行し、品目照合と関連性フィルターを強化";
   }
