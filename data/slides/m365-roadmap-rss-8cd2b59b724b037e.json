@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-8cd2b59b724b037e",
-      "kind": "rolling-out",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "展開中",
+      "label": "提供開始",
       "title": {
-        "ja": "SharePoint で Word テンプレートからフォーム経由の文書生成が展開中",
+        "ja": "SharePoint で Word テンプレートからフォーム経由の文書生成が提供開始",
         "subtitleJa": "契約書や提案書などの標準文書を、フォーム入力だけで統制された形で作成できます",
         "en": "Microsoft Copilot (Microsoft 365): Structured Document Generation with Forms"
       },
       "meta": {
-        "publishedJst": "2026-10-07",
+        "publishedJst": "2026-10-27",
         "availability": [],
-        "status": "Rolling out",
+        "status": "Launched",
         "products": ["Microsoft Copilot (Microsoft 365)", "SharePoint"],
         "categories": ["office-apps", "sharepoint"],
-        "importance": "normal",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Desktop", "Web"],
         "productArea": "Microsoft 365 Copilot",
@@ -81,12 +81,12 @@
           ]
         },
         {
-          "id": "rollout-scope",
-          "heading": "提供範囲",
+          "id": "related-features",
+          "heading": "関連する機能",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "ロードマップ上の段階は展開中。対象は Worldwide（標準マルチテナント）の Desktop / Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "生成文書には、サイト内で一意の参照番号が自動で付与される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "参照番号", "retrievedAt": "2026-10-27T05:10:00Z" }] }
           ]
         },
         {
@@ -105,7 +105,7 @@
         { "termKey": "content-manager", "term": "コンテンツ マネージャー", "type": "term", "oneLine": { "text": "テンプレートとフォームを作成・管理し、文書の構造や必須項目を定義する役割。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "しくみ", "retrievedAt": "2026-10-21T02:40:00Z" }] } },
         { "termKey": "content-consumer", "term": "コンテンツ コンシューマー", "type": "term", "oneLine": { "text": "フォームを送信して文書を生成する利用者。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "しくみ", "retrievedAt": "2026-10-21T02:40:00Z" }] } },
         { "termKey": "conditional-section", "term": "条件付きセクション", "type": "feature", "oneLine": { "text": "フィールド値に応じて、生成文書内の特定セクションを表示・非表示にする設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "条件付きセクションの設定", "retrievedAt": "2026-10-21T02:40:00Z" }] } },
-        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
