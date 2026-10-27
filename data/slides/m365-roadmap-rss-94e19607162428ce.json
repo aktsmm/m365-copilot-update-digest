@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-94e19607162428ce",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Copilot Studio のコンピューター操作がロードマップで「廃止」段階に",
+        "subtitleJa": "Web やアプリの操作を自動化するツールの扱いを確認しましょう",
+        "en": "Microsoft Copilot Studio: Supercharge your workflows with computer use"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Copilot Studio", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-studio"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でコンピューター操作ツールを使う作成者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ロードマップ上の段階が「Retirement」になった。具体的な終了日はロードマップに記載されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "利用中の自動化がないか棚卸しし、ロードマップの更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ロードマップは、コンピューター操作を「**ワークフローに耐障害性のある AI 駆動の UI 自動化を追加するツール**」として説明しています", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Web サイトやアプリの操作を自然言語で自動化するエージェント用ツール", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locator": "コンピューター使用ツールとは", "retrievedAt": "2026-10-27T05:20:00Z" }] },
+            { "text": "画面を認識し、推論し、クリックや入力を行う反復ループで動作", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locator": "コンピューターはツールを使用して何ができますか", "retrievedAt": "2026-10-27T05:20:00Z" }] },
+            { "text": "管理者はアクセス制御・ホスト型ブラウザー管理・環境の権限で統制できると説明されている", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行・代替",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コンピューター操作を使うエージェントとフローを洗い出す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップの項目を定期的に確認し、終了日が出たら計画に反映する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "computer-use", "term": "コンピューター操作ツール", "type": "feature", "oneLine": { "text": "Web サイトやアプリの操作を自然言語の指示で自動化する、Copilot Studio エージェント用のツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locator": "コンピューター使用ツールとは", "retrievedAt": "2026-10-27T05:20:00Z" }] } },
+        { "termKey": "human-supervision", "term": "人間による監督", "type": "feature", "oneLine": { "text": "あいまいな場面で実行を一時停止し、承認済みのレビュー担当者に確認を求める機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locator": "人間の監督機能は何ですか", "retrievedAt": "2026-10-27T05:20:00Z" }] } },
+        { "termKey": "prompt-injection", "term": "プロンプト インジェクション", "type": "term", "oneLine": { "text": "画面や Web ページに隠された悪意ある命令が、エージェントの動作に影響を与える攻撃。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locator": "人間の監督機能は何ですか", "retrievedAt": "2026-10-27T05:20:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の提供終了を示す段階（Retirement）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "コンピューター操作ツールは何ができますか？",
+          "answer": { "text": "画面のピクセル データを理解し、仮想マウスとキーボードで Web サイトやアプリを操作します。API が使えない場面で特に有用です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locator": "コンピューターはツールを使用して何ができますか", "retrievedAt": "2026-10-27T05:20:00Z" }] }
+        },
+        {
+          "question": "いつ終了しますか？",
+          "answer": { "text": "ロードマップの情報には終了日が含まれていません。公式の案内の更新を確認してください。", "origin": "mrc", "assertion": "inference", "verification": "unverified" }
+        },
+        {
+          "question": "利用時の注意点は？",
+          "answer": { "text": "プロンプト インジェクションのリスクがあるため、信頼できる隔離環境で使い、人間による監督を設定することが推奨されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locator": "人間の監督機能は何ですか", "retrievedAt": "2026-10-27T05:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562220",
+        "learn": [
+          { "title": "コンピューター操作ツールに関する FAQ", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faqs-computer-use", "locale": "ja-jp" },
+          { "title": "コンピューターを使用して Web アプリとデスクトップ アプリを自動化する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/computer-use", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
