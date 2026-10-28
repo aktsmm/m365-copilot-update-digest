@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3de059072cdb3f3c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Power Automate のフロー デザイナーに AI 支援 UI オートメーション修復",
+        "subtitleJa": "デバッグ実行中に、壊れたセレクターの修復案を AI が提案します",
+        "en": "Power Automate: AI-assisted UI Automation repair"
+      },
+      "meta": {
+        "publishedJst": "2026-10-28",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Power Automate でデスクトップ フローを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "セレクターの手動での調査・更新に代わり、AI の提案を確認して適用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "冒頭", "retrievedAt": "2026-10-28T07:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必須の対応はない。Copilot の設定が必要になる点は確認しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "必要な管理者の構成", "retrievedAt": "2026-10-28T07:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "フロー実行中にセレクターを検証し、動かないものは**要素を再キャプチャすると新しいセレクターを提案**します",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "フロー デザイナーで、実行中に各セレクターを検証する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "動かないセレクターは、作成者が要素をキャプチャすると新案を提案", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "作成者は提案を確認・テスト・変更・受け入れ・スキップできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "デバッグ中の AI 支援 UI オートメーションの修復", "retrievedAt": "2026-10-28T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デバッグ機能で、無人・有人の実行時にはセレクターは自動修復されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "Important", "retrievedAt": "2026-10-28T07:50:00Z" }] },
+            { "text": "セレクター関連のエラーが対象。無関係なエラーは修正できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "サポートされているアクションとシナリオ", "retrievedAt": "2026-10-28T07:50:00Z" }] },
+            { "text": "変更の確認と検証は作成者の責任", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "Note", "retrievedAt": "2026-10-28T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Power Platform 管理センターで Power Automate の Copilot をオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "必要な管理者の構成", "retrievedAt": "2026-10-28T07:50:00Z" }] },
+            { "text": "現行の Learn のプレビュー版は、政府機関向けクラウドやソブリン クラウドで使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "リージョンごとの可用性", "retrievedAt": "2026-10-28T07:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "selector", "term": "セレクター", "type": "term", "oneLine": { "text": "UI オートメーションで、操作対象の UI 要素を識別するための情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "デバッグ中の AI 支援 UI オートメーションの修復", "retrievedAt": "2026-10-28T07:50:00Z" }] } },
+        { "termKey": "ai-ui-repair", "term": "AI 支援 UI オートメーションの修復", "type": "feature", "oneLine": { "text": "デバッグ中のセレクター エラーに対し、より回復性の高いセレクターを AI が提案する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "冒頭", "retrievedAt": "2026-10-28T07:50:00Z" }] } },
+        { "termKey": "flow-designer", "term": "フロー デザイナー", "type": "product", "oneLine": { "text": "Power Automate でフローを作成・デバッグする編集画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "デスクトップ用のPower Automateで機能を使用する", "retrievedAt": "2026-10-28T07:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "実行時の自己復旧とは何が違いますか？",
+          "answer": {
+            "text": "自己復旧は実行時に適用されますが、この機能はフロー デザイナーでのデバッグ専用です。無人・有人の実行時にはセレクターは自動修復されません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "Important", "retrievedAt": "2026-10-28T07:50:00Z" }]
+          }
+        },
+        {
+          "question": "追加料金は必要ですか？",
+          "answer": {
+            "text": "Learn のプレビュー版では、組織の Premium アカウントで追加料金なしで利用できます。サービスの制限や変更が適用される場合があります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "アカウントの種類別の可用性", "retrievedAt": "2026-10-28T07:50:00Z" }]
+          }
+        },
+        {
+          "question": "利用に必要なバージョンは？",
+          "answer": {
+            "text": "Learn のプレビュー版では、Power Automate for desktop のバージョン 2.70 以降が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locator": "デスクトップ用のPower Automateで機能を使用する", "retrievedAt": "2026-10-28T07:50:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577869",
+        "learn": [
+          { "title": "AI 支援 UI オートメーションの修復 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
