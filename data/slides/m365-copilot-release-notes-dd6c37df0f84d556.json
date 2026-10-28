@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-dd6c37df0f84d556",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot が、添付したデッキのスタイルを参照して新規作成",
+        "subtitleJa": "既存ファイルのテーマとスタイルを新しいデッキに適用できます",
+        "en": "Reference an attached PowerPoint deck’s style when creating a new presentation in PowerPoint [Windows, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot を使ってデッキを作る人**（Windows、Web）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 / PowerPoint", "retrievedAt": "2026-10-28T09:00:00Z" }] },
+        "change": { "text": "既存デッキのテーマとスタイルが自動で適用され、手作業の書式設定が減る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 / PowerPoint", "retrievedAt": "2026-10-28T09:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者がファイルを添付して依頼するだけで使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "新しいプレゼンテーションには、既定のテーマが使われていました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T09:00:00Z" }] },
+        "after": { "text": "添付した既存ファイルの**テーマとスタイルを新しいデッキに適用**し、デザインの一貫性を保てます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T09:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Windows 版と Web 版の PowerPoint の Copilot", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 / PowerPoint", "retrievedAt": "2026-10-28T09:00:00Z" }] },
+            { "text": "既存のプレゼンテーションを添付して、新規作成や編集ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T09:00:00Z" }] },
+            { "text": "手作業の書式設定が減り、ブランドの一貫性を保ちやすい", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-10-28T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方の流れ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "PowerPoint で Copilot を使って新規作成し、「ファイルを添付」で既存デッキを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:00:00Z" }] },
+            { "text": "添付したデッキのスタイルでスライドを生成するよう Copilot に依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-powerpoint", "term": "PowerPoint の Copilot", "type": "feature", "oneLine": { "text": "プロンプトから PowerPoint のプレゼンテーションを作成・編集できる Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 / PowerPoint", "retrievedAt": "2026-10-28T09:00:00Z" }] } },
+        { "termKey": "theme", "term": "テーマ", "type": "term", "oneLine": { "text": "デッキの配色・フォント・レイアウトなどの見た目をまとめたもの。", "origin": "editorial", "assertion": "fact", "verification": "unverified" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の改善を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "画像を参照して作成する機能とは別ですか？",
+          "answer": {
+            "text": "別の更新です。同じリリース ノートに、添付した画像を参照してプレゼンテーションを作成する機能も掲載されています（Windows、Web）。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 / PowerPoint 2", "retrievedAt": "2026-10-28T09:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
