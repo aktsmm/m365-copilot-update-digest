@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-3dcd844dc6b92bb6",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "管理者がカスタム MCP コネクタを作成・展開可能に",
+        "subtitleJa": "組織独自のデータを Microsoft Copilot に取り込めます",
+        "en": "Admins can create and deploy custom Model Context Protocol (MCP) connectors across Microsoft 365 [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft 365 管理者**と、自社データを Copilot で使いたいコネクタ作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "社内システムのデータを、MCP 経由で Copilot から自然言語で扱える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "冒頭", "retrievedAt": "2026-10-28T06:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するなら、MCP サーバー URL と認証の準備、管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Prerequisites", "retrievedAt": "2026-10-28T06:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理センターで**カスタム MCP コネクタを作成**し、ユーザーやグループへ段階的に展開できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Create the connector / Stage the rollout", "retrievedAt": "2026-10-28T06:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MCP サーバーが、社内システムのデータや操作を Copilot へ橋渡しする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "冒頭", "retrievedAt": "2026-10-28T06:20:00Z" }] },
+            { "text": "作成は Microsoft 365 管理センターの Copilot > コネクタ > ギャラリーから", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Create the connector", "retrievedAt": "2026-10-28T06:20:00Z" }] },
+            { "text": "認証は Microsoft Entra SSO、OAuth 2.0、認証なしから選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Set up authentication", "retrievedAt": "2026-10-28T06:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Global Administrator または AI Administrator ロールと Teams 開発者ポータルへのアクセスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Prerequisites", "retrievedAt": "2026-10-28T06:20:00Z" }] },
+            { "text": "「組織が作成したエージェントとプラグインを許可」設定と、ユーザー アクセス設定が利用範囲を左右する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Manage the connector", "retrievedAt": "2026-10-28T06:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-control",
+          "heading": "展開と管理",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "段階的ロールアウトで対象ユーザー・グループを絞り、検証後に全ユーザーへ展開", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Stage the rollout", "retrievedAt": "2026-10-28T06:20:00Z" }] },
+            { "text": "無効化は設定を保持して一時停止、削除は設定ごと完全に削除（元に戻せない）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "FAQ", "retrievedAt": "2026-10-28T06:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage-notes",
+          "heading": "利用時の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "設定変更の反映に最大 10 分かかり、ユーザーは Copilot の更新が必要な場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Manage the connector", "retrievedAt": "2026-10-28T06:20:00Z" }] },
+            { "text": "ユーザーには Microsoft Copilot ライセンスが必要。認証が要る場合は設定 > ソースで接続する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "FAQ", "retrievedAt": "2026-10-28T06:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず少人数のグループだけに展開し、動作と権限を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Copilot が外部のツールやデータにつながるための仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "冒頭", "retrievedAt": "2026-10-28T06:20:00Z" }] } },
+        { "termKey": "custom-federated-connector", "term": "カスタム フェデレーション コネクタ", "type": "feature", "oneLine": { "text": "MCP サーバーを起点に、社内データを Copilot へ取り込むコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "冒頭", "retrievedAt": "2026-10-28T06:20:00Z" }] } },
+        { "termKey": "staged-rollout", "term": "段階的ロールアウト", "type": "feature", "oneLine": { "text": "コネクタを選んだユーザーやグループにだけ先に展開する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Stage the rollout", "retrievedAt": "2026-10-28T06:20:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の変更・追加の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "コネクタを無効化した場合、ユーザーの画面からも消えますか？",
+          "answer": {
+            "text": "はい。反映後は Copilot の「ソース」に表示されなくなります。反映には最大 10 分かかります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "FAQ", "retrievedAt": "2026-10-28T06:20:00Z" }]
+          }
+        },
+        {
+          "question": "管理者には見えるのに、ユーザーには見えないのはなぜですか？",
+          "answer": {
+            "text": "管理者は ガバナンスのため全コネクタを確認できます。ユーザーは、ユーザー アクセスや段階的ロールアウトなどすべての制御が許可した場合のみ利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "FAQ", "retrievedAt": "2026-10-28T06:20:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [{ "title": "Set up custom federated connectors", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
