@@ -44,6 +44,13 @@ test("roadmap items map to events and reuse existing ids by roadmap id", () => {
   assert.equal(events[0].publishedAt, "2026-03-04T10:00:00.000Z");
 });
 
+test("roadmap product area follows a Power Automate title", () => {
+  const [event] = mrcRoadmapItemsToEvents(source, [
+    item(577869, { title: "Power Automate: AI-assisted UI Automation repair" }),
+  ]);
+  assert.equal(event.productArea, "Power Automate");
+});
+
 test("listing is complete only when unique ids match totalCount", async () => {
   const complete = await listM365Roadmaps(
     fakeClient([

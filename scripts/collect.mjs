@@ -1764,6 +1764,10 @@ function roadmapProductArea(title, categories, source) {
     return "Power Pages";
   }
 
+  if (/^power automate:/.test(text)) {
+    return "Power Automate";
+  }
+
   if (/^dynamics 365 finance and operations cross-app:/.test(text)) {
     return "Dynamics 365 Finance and Operations";
   }
