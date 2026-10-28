@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-6e842d0b5f9a0044",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot ノートブックのマルチモーダル キャプチャが Android で提供開始",
+        "subtitleJa": "音声・画像・メモを 1 回のセッションで記録し、構造化されたページにできます",
+        "en": "Multimodal capture in Copilot Notebooks (Android) [Android]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Launched",
+        "products": ["OneNote"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Android 版 OneNote で Copilot ノートブックを使うユーザー**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Multimodal capture in Copilot Notebooks (Android)", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+        "change": { "text": "会議やホワイトボードなどの対面の場面を、アプリを切り替えずに 1 か所へ記録できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Multimodal capture in Copilot Notebooks (Android)", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者は OneNote の Copilot ノートブックから試せる。管理者の必須対応は案内されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Multimodal capture in Copilot Notebooks (Android)", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**音声の文字起こし・画像・テキスト メモを 1 回のセッションで記録**し、Copilot が洞察付きの構造化ページを作成します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "音声の文字起こし、画像の撮影、テキスト入力を 1 回のセッションで実施", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+            { "text": "Copilot が洞察とキャプチャした内容を含む構造化 Copilot ページを作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+            { "text": "ページは、ユーザーが選んだ Copilot ノートブックに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Android の OneNote を開き、Copilot ノートブックを選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+            { "text": "マルチモーダル キャプチャで録音・撮影・入力を行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+            { "text": "作成された構造化 Copilot ページの内容を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ノートブックは外部共有に非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-permission", "locator": "ゲスト/外部共有", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+            { "text": "Copilot ノートブックにはエンド ユーザーのごみ箱がなく、削除したものは復元できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ユーザー退職後のストレージ管理", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "iPhone と iPad では提供済みで、Android が同等の機能になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+            { "text": "Copilot ページと Copilot ノートブックは SharePoint Embedded のユーザー所有コンテナーに保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ストレージ", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対面の会話、ホワイトボード セッション、個人メモの記録を想定している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Multimodal capture in Copilot Notebooks (Android)", "retrievedAt": "2026-10-28T06:30:00Z" }] },
+            { "text": "まず会議メモ用の Copilot ノートブックで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "multimodal-capture", "term": "マルチモーダル キャプチャ", "type": "feature", "oneLine": { "text": "音声の文字起こし、画像、テキスト メモを 1 回のセッションで記録する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Multimodal capture in Copilot Notebooks (Android)", "retrievedAt": "2026-10-28T06:30:00Z" }] } },
+        { "termKey": "copilot-notebook", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "Copilot ページを保存する、ユーザー所有のノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "概要", "retrievedAt": "2026-10-28T06:30:00Z" }] } },
+        { "termKey": "copilot-page", "term": "Copilot ページ", "type": "feature", "oneLine": { "text": "キャプチャ内容と洞察をまとめた構造化ページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Multimodal capture in Copilot Notebooks (Android)", "retrievedAt": "2026-10-28T06:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "一般に提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "他のプラットフォームでも使えますか？",
+          "answer": { "text": "リリース ノートによると、iPhone と iPad ではすでに一般提供されており、今回 Android に加わりました。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Multimodal capture in Copilot Notebooks (Android)", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+        },
+        {
+          "question": "Copilot ノートブックは社外ユーザーと共有できますか？",
+          "answer": { "text": "Copilot ノートブックは外部共有をサポートしていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-permission", "locator": "ゲスト/外部共有", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+        },
+        {
+          "question": "保存データは容量に影響しますか？",
+          "answer": { "text": "Copilot ページとノートブックは組織の SharePoint ストレージ クォータにカウントされます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locator": "ストレージ クォータ", "retrievedAt": "2026-10-28T06:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [
+          { "title": "Copilot ページと Copilot ノートブックのアクセス許可の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-permission", "locale": "ja-jp" },
+          { "title": "Copilot ページと Copilot ノートブック ストレージの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage", "locale": "ja-jp" }
+        ]
+      }
+    }
+  ]
+}
