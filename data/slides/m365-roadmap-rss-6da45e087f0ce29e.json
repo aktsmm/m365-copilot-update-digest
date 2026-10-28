@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-6da45e087f0ce29e",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Copilot Notebooks の「推奨される参照」ロードマップ項目が削除",
+        "subtitleJa": "この項目の内容は正確ではなくなり、ロードマップから取り下げられます",
+        "en": "Microsoft Copilot (Microsoft 365): Suggested References in Copilot Notebooks"
+      },
+      "meta": {
+        "publishedJst": "2026-10-28",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Notebooks を使うユーザー**と、ロードマップを追っている管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "最近の作業に基づく「推奨される参照」の提供予定は、ロードマップから取り下げられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この項目を前提にした計画があれば見直す。ほかの対応は発表されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "以前は、最近の作業をもとに Copilot Notebook へ関連する**推奨される参照**を追加できる予定でした。今回、この項目は正確ではなくなり削除されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ項目「Suggested References in Copilot Notebooks」は正確ではなくなった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "項目はロードマップから削除される。対象は Web・Worldwide（標準マルチテナント）だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft は、ご不便をおわびしている", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "代わりに使える機能",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web リンクを Copilot Notebooks の参照として追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Web Link as a Reference in Copilot Notebooks", "retrievedAt": "2026-10-28T05:50:00Z" }] },
+            { "text": "Teams 会議を参照として追加できる（Copilot Notebooks）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Teams Meetings in Copilot Notebooks", "retrievedAt": "2026-10-28T05:50:00Z" }] },
+            { "text": "Search のクイック アクセスで「追加先 > ノートブック」を選び、参照を保存できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "Add references to your Copilot Notebooks from the Quick Access section", "retrievedAt": "2026-10-28T05:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この機能を前提にした展開計画や社内案内があれば、見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "参照の追加は、提供済みの上記の方法で案内する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot Notebooks", "type": "feature", "oneLine": { "text": "関連するチャット・成果物・参照を 1 つの永続的な AI ワークスペースにまとめる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "New Copilot Notebooks design in the Microsoft Copilot App (iOS)", "retrievedAt": "2026-10-28T05:50:00Z" }] } },
+        { "termKey": "suggested-references", "term": "推奨される参照", "type": "feature", "oneLine": { "text": "最近の作業に基づく参照を Copilot Notebook に追加する予定だった、ロードマップ上の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の機能の提供予定を公開しているページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "ロードマップ上の段階が Retirement の項目。今回は項目の取り下げを指す。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "「推奨される参照」はもう提供されないのですか？",
+          "answer": { "text": "ロードマップ項目は「正確ではなくなった」として削除されます。代替の提供予定は、この項目では示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者の設定変更は必要ですか？",
+          "answer": { "text": "発表されている範囲では、管理者の作業は示されていません。ロードマップ項目の取り下げのみです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=529843",
+        "learn": [{ "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
