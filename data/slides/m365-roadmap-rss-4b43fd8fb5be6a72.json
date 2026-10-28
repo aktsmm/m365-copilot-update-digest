@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-4b43fd8fb5be6a72",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Search で幅広い検索クエリから人物を探せるように",
+        "subtitleJa": "スキル名などの検索で、該当する人物が結果に表示されます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Search Helps You Discover People"
+      },
+      "meta": {
+        "publishedJst": "2026-10-28",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Search で社内の人物を探したいユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "スキルなどの幅広い検索語から、連絡すべき人物を見つけやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "提供済みの検索機能の拡張で、ロードマップ上に管理者の対応は記載されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Copilot Search が、**幅広い人物検索クエリに対して該当する人物を返す**ようになります。既知の人も新しい連絡先も探せます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "「Project leadership」や「Artificial Intelligence」など、スキルでの検索に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既知の人物の確認と、新しい連絡先の発見、候補の見分けを支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Search は Microsoft 365 のメール、ファイル、チャット、会議などを横断して検索する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "Universal search", "retrievedAt": "2026-10-28T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Search で人物を探す語（スキル名など）を検索する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Search は Microsoft Copilot アプリ内で使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "概要", "retrievedAt": "2026-10-28T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の提供範囲は Worldwide（標準マルチテナント）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は、ブックマークや略語、人物メタデータで組織固有の回答を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "Curated answers", "retrievedAt": "2026-10-28T07:50:00Z" }] },
+            { "text": "検索結果から Copilot Chat に移り、さらに深掘りできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "Connected experience", "retrievedAt": "2026-10-28T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "特定分野の詳しい人を探すときに、スキル名で検索してみる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-search", "term": "Copilot Search", "type": "product", "oneLine": { "text": "Microsoft 365 とその外部の情報を横断して探す、AI を活用した企業向け検索体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "概要", "retrievedAt": "2026-10-28T07:50:00Z" }] } },
+        { "termKey": "copilot-connectors", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "外部サービスのデータを Microsoft Graph に取り込み、検索で使えるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "Use Copilot connectors to enhance Copilot Search", "retrievedAt": "2026-10-28T07:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は人物の検索結果をカスタマイズできますか？",
+          "answer": {
+            "text": "Learn によると、管理者はブックマーク、略語、人物メタデータで権威ある回答を設定できます。今回の機能そのものの設定項目は、ロードマップには記載がありません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "Curated answers", "retrievedAt": "2026-10-28T07:50:00Z" }]
+          }
+        },
+        {
+          "question": "どの環境で使えますか？",
+          "answer": {
+            "text": "ロードマップでは、Worldwide（標準マルチテナント）の Web が対象です。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=555240",
+        "learn": [{ "title": "Copilot connectors and Copilot Search", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
