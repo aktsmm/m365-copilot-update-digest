@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-3a709815398fe476",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot でメールを参照してプレゼンテーションを作成",
+        "subtitleJa": "メールの内容を、スライド作成の材料として使えます",
+        "en": "Reference an email with when using Copilot in PowerPoint to create a presentation [Windows, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [],
+        "status": null,
+        "products": ["PowerPoint"],
+        "categories": ["outlook", "office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "**PowerPoint の Copilot でスライドを作る人**（Windows、Mac）",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-28T09:10:00Z" }]
+        },
+        "change": {
+          "text": "メールからスライドへの手作業の転記が減り、最新のやり取りを反映した資料を作れる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why / Personal impact", "retrievedAt": "2026-10-28T09:10:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "管理者の設定作業は案内されていない。利用者は Copilot ペインでプロンプトに指定するだけ",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Copilot でプレゼンテーションを作るとき、メールの情報を直接取り込むことはできませんでした",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T09:10:00Z" }]
+        },
+        "after": {
+          "text": "プロンプトで**メールを参照**すると、その内容を使ったスライドを Copilot が作成します",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T09:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Windows と Mac の PowerPoint の Copilot", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-28T09:10:00Z" }] },
+            { "text": "メールの件名、送信者、送信時期（期間・日付）で参照できる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:10:00Z" }] },
+            { "text": "Microsoft 365 のセキュリティ基準を維持したまま連携する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "PowerPoint を開き、Copilot ペインでメールを指定したプロンプトを入力", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:10:00Z" }] },
+            { "text": "出力されたスライドで、メールの情報が使われた箇所を確認する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "data-access",
+          "heading": "データ保護の前提",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot は、ユーザーがアクセスを許可されているデータにのみアクセスする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-ai-security", "locator": "データ保護とコンプライアンス", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-in-powerpoint",
+          "term": "Copilot in PowerPoint",
+          "type": "feature",
+          "oneLine": { "text": "PowerPoint 内の Copilot ペインでプロンプトを入力し、プレゼンテーションを作成できる機能。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+        },
+        {
+          "termKey": "roadmap-id",
+          "term": "ロードマップ ID 555888",
+          "type": "term",
+          "oneLine": { "text": "この更新に対応する Microsoft 365 ロードマップ上の識別番号。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Roadmap ID", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+        },
+        {
+          "termKey": "label-update",
+          "term": "アップデート",
+          "type": "label",
+          "oneLine": { "text": "リリース ノートに掲載された、既存機能の改善を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "リリース ノートでは Windows と Mac が対象と記載されています。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "August 25, 2026 / PowerPoint", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+        },
+        {
+          "question": "どのようにメールを指定しますか？",
+          "answer": { "text": "プロンプトで、件名、送信者、送信された期間や日付を使ってメールを指定できます。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+        },
+        {
+          "question": "他人のメールも参照できますか？",
+          "answer": { "text": "Copilot はユーザーがアクセスを許可されているデータにのみアクセスします。参照できる範囲は既存のアクセス許可に従います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-ai-security", "locator": "データ保護とコンプライアンス", "retrievedAt": "2026-10-28T09:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-08-25",
+        "learn": [
+          { "title": "Microsoft Copilot のセキュリティ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/microsoft-365-copilot-ai-security", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
