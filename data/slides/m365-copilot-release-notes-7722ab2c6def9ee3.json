@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-7722ab2c6def9ee3",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Queues アプリで通話後に Copilot Chat を利用可能に",
+        "subtitleJa": "録音済みの通話を、要約や質問で素早く振り返れます",
+        "en": "Use Copilot Chat after a call in Queues app [Windows, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["copilot-chat"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Queues アプリで録音済みの通話を扱う、Microsoft Copilot を使えるユーザー**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 – What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] },
+        "change": { "text": "文字起こしの検索や録音の聞き直しをせず、通話内容を把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 – What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用には Copilot が使えることが条件。管理者向けの作業は案内されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 – What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "録音済みの通話レコードの **Recap タブで Copilot Chat** を開き、要約や通話内容への質問ができます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 – What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Queues アプリの統合通話履歴にある、録音済みのコール キュー通話", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] },
+            { "text": "通話の終了後、Recap タブから Copilot Chat サイドカーを起動できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] },
+            { "text": "Copilot に要約を作らせたり、通話の詳細を質問したりできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用できるのは録音された通話のみで、ユーザーに Copilot の提供が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] },
+            { "text": "手順: 通話を選択 → Recap タブ → Copilot Chat サイドカー → 質問", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T08:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "queues-app", "term": "Queues アプリ", "type": "product", "oneLine": { "text": "コール キューの通話を扱うアプリ。統合通話履歴から録音済みの通話を開ける。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] } },
+        { "termKey": "recap-tab", "term": "Recap タブ", "type": "feature", "oneLine": { "text": "録音済み通話のレコード内にあり、Copilot Chat サイドカーを起動できるタブ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T08:20:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の更新を示す、リリース ノート上の分類。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どの通話で使えますか？",
+          "answer": { "text": "録音された通話が対象です。Copilot が使えるユーザーが、Queues アプリの統合通話履歴から該当の通話を開いて使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:20:00Z" }] }
+        },
+        {
+          "question": "試すときの手順は？",
+          "answer": { "text": "Queues アプリで録音済みの通話を選び、Recap タブで Copilot Chat サイドカーを起動して、要約や詳細を質問します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T08:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://support.microsoft.com/en-us/teams/copilot/get-started-with-microsoft-365-copilot-in-teams-phone",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/microsoft-365/copilot/release-notes", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
