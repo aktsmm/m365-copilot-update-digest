@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-91376557ef5d9790",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "OneNote の Copilot ノートブックで画像と入力メモをまとめて取り込み（Android）",
+        "subtitleJa": "音声の文字起こし・画像・入力メモを 1 回のセッションで扱えます",
+        "en": "Add images and typed notes together."
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["OneNote", "Microsoft Copilot"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**OneNote for Android で Copilot ノートブックを使うユーザー**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 / OneNote", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+        "change": { "text": "会議やホワイトボードの内容を、音声・写真・入力メモでまとめて記録できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026 / OneNote", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ユーザーは OneNote の Copilot ノートブックを開いて試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**音声の文字起こし・画像・入力メモ**を 1 回のセッションで取り込み、Copilot が構造化ページにまとめます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "今回の更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "マルチモーダル キャプチャが Android 版 OneNote の Copilot ノートブックで利用可能に", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+            { "text": "Copilot が洞察付きの構造化ページを作成し、選んだノートブックに保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+            { "text": "iPhone と iPad ではすでに一般提供されている機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "OneNote", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試すときの確認点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Android の OneNote で Copilot ノートブックを選び、録音・撮影・入力を行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+            { "text": "作成された Copilot ページの内容を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "Copilot が構造化ページを作成して保存する、OneNote のノートブック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "OneNote", "retrievedAt": "2026-10-28T08:30:00Z" }] } },
+        { "termKey": "multimodal-capture", "term": "マルチモーダル キャプチャ", "type": "feature", "oneLine": { "text": "音声の文字起こし、画像、入力メモを 1 回のセッションで取り込む機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "OneNote", "retrievedAt": "2026-10-28T08:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された更新の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "iPhone や iPad ではどうなっていますか？",
+          "answer": { "text": "iPhone と iPad ではすでに一般提供されており、今回 Android に対応しました。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "OneNote", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+        },
+        {
+          "question": "どんな場面で使う想定ですか？",
+          "answer": { "text": "対面の会話、ホワイトボード セッション、個人メモなど、オフラインの仕事の場面です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "OneNote", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
