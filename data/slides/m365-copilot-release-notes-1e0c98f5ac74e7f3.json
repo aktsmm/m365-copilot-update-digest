@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-1e0c98f5ac74e7f3",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Researcher で Canva コネクタが使えるように",
+        "subtitleJa": "Canva のコンテンツを、調査の情報源として取り込めます",
+        "en": "User can use Canva Connector in Researcher [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot extensibility"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Researcher を使い、Canva を利用している人**と、コネクタを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アプリを行き来せずに、Canva の内容を調査に使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用はコネクタが環境で有効な場合のみ。特別な対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "Researcher では、このコネクタ経由で Canva のコンテンツを使えなかった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Researcher で、接続済みの **Canva の情報を調査に含められる**ようになりました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Researcher が Canva コネクタに対応（Web 版）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "調査タスクで Canva コネクタを選び、返された内容を結果に活用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "コンテンツ ソースが増え、ツール間の切り替えが減る", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コネクタは環境で利用可能な場合に選べる（有効化は組織の設定次第）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "まず少人数の調査タスクで、Canva の内容が返るか試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "researcher", "term": "Researcher", "type": "feature", "oneLine": { "text": "Microsoft Copilot で調査タスクを進めるための機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "canva-connector", "term": "Canva コネクタ", "type": "feature", "oneLine": { "text": "接続した Canva の情報を Copilot で扱えるようにするコネクタ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Canva コネクタはすべての環境で使えますか？",
+          "answer": { "text": "リリース ノートでは、コネクタが環境で利用可能な場合に選べると説明されています。提供範囲の詳細は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "使い方を教えてください。",
+          "answer": { "text": "Microsoft Copilot の Researcher で調査を始め、Canva コネクタを選び、返された内容を調査結果に活用します。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
