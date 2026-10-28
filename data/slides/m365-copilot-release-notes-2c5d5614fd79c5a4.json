@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-2c5d5614fd79c5a4",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Work IQ API で使用量ベースの課金が利用可能に",
+        "subtitleJa": "ライセンスを割り当てなくても、使った分だけの課金でエージェントや機能を呼び出せます",
+        "en": "Work IQ APIs: Usage-based billing [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot extensibility"],
+        "categories": ["agents", "work-iq"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Work IQ API でエージェントや統合を作る開発者**と、コストを管理する管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-28T06:10:00Z" }] },
+        "change": { "text": "ライセンスの事前割り当てなしで、Work IQ のエンドポイントを呼び出せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "Work IQ の概要", "retrievedAt": "2026-10-28T06:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用する場合は、Microsoft 365 管理センターでコストを管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Work IQ のエンドポイントを**ライセンス不要**で呼び出せます。課金は呼び出したエージェントとモデルに応じた使用量ベースです", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "Work IQ の概要", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ API アクセスは Microsoft Copilot ライセンスとは無関係", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-28T06:10:00Z" }] },
+            { "text": "エンドポイントは A2A、リモート MCP サーバー、REST API", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "Work IQ の概要", "retrievedAt": "2026-10-28T06:10:00Z" }] },
+            { "text": "課金は要求ごとに、呼び出したエージェントとモデルに基づく", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ライセンスを持つユーザーは、Microsoft 365 Copilot のエクスペリエンスとエージェントで Work IQ を利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-28T06:10:00Z" }] },
+            { "text": "カスタム／サードパーティ エージェントは使用量ベースの課金の対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "cost-view",
+          "heading": "コストの見方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ API を直接呼び出した使用量は、Work IQ API の下に表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/business-applications-work-iq/understand-costs", "locator": "料金がビジネス コンテキストにアクセスするために使用されるエクスペリエンスに従う方法", "retrievedAt": "2026-10-28T06:10:00Z" }] },
+            { "text": "プロンプトは固定価格ではなく、複雑さや実行した作業で消費が変わる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/business-applications-work-iq/understand-costs", "locator": "タスクのコストが異なる理由", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "エージェントが組織やビジネスのデータ、コンテキスト、ツールにアクセスして推論できるようにするワークプレイス インテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "冒頭", "retrievedAt": "2026-10-28T06:10:00Z" }] } },
+        { "termKey": "ubb", "term": "使用量ベースの課金", "type": "term", "oneLine": { "text": "機能を有効にするだけでなく、利用量に応じて課金される方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/business-applications-work-iq/understand-costs", "locator": "使用量ベースの課金と料金が表示される場所", "retrievedAt": "2026-10-28T06:10:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "参加している使用量ベースのエクスペリエンスで使われる単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/business-applications-work-iq/understand-costs", "locator": "使用量ベースの課金と料金が表示される場所", "retrievedAt": "2026-10-28T06:10:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートで、既存機能の変更として掲載された段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Microsoft Copilot ライセンスがないユーザーも使えますか？",
+          "answer": { "text": "はい。ライセンスを持たないユーザーは、使用量に基づいて課金されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+        },
+        {
+          "question": "コストはどこで管理しますか？",
+          "answer": { "text": "Microsoft 365 管理センターのコスト管理で、支出ポリシーにより対象ユーザーとサービスの選択や月次制限の設定ができます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/business-applications-work-iq/understand-costs", "locator": "冒頭", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [
+          { "title": "Work IQ の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locale": "ja-jp" },
+          { "title": "Work IQ でのビジネス アプリケーションのコストを理解する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/business-applications-work-iq/understand-costs#usage-based-billing-and-where-charges-appear", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
