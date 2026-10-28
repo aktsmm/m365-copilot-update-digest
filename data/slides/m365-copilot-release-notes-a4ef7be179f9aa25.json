@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-a4ef7be179f9aa25",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Windows の Microsoft Copilot にラーニング エージェントが追加",
+        "subtitleJa": "仕事の流れの中で、パーソナライズされたマイクロラーニングを受けられます",
+        "en": "Learning Agent in Microsoft 365 Copilot [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot でスキルを身につけたい従業員**と、学習施策の担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ヒントやプロンプト、ロール プレイ、評価などで、仕事に合った学習を進められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "このアップデートで必須の対応はない。学習の使い方を従業員へ案内するとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**パーソナライズされたマイクロラーニングと構造化された学習**を、Microsoft Copilot のラーニング エージェントで受けられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "概要", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロール情報・スキル シグナル・タスク推論で、学習をパーソナライズ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "概要", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "毎日の AI ヒントやタスクベースの学習で、実際の業務から学べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "AI を活用したロール プレイと評価で、実践とスキル ギャップの把握ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI スキル ナビゲーターと Copilot スターター プロンプトはプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "まず小規模なグループで、学習内容と使い勝手を確かめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "learning-agent", "term": "ラーニング エージェント", "type": "feature", "oneLine": { "text": "学習者が作業フローの中でスキルを身につけるのに役立つ、Microsoft Copilot の AI を利用した学習エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "概要", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "micro-learning", "term": "マイクロラーニング", "type": "term", "oneLine": { "text": "長い学習コンテンツから取り出した、短時間でターゲットを絞った学習。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "ai-skill-navigator", "term": "AI スキル ナビゲーター", "type": "feature", "oneLine": { "text": "Microsoft の AI スキリング コンテンツを 1 か所で探索できる機能（プレビュー）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "概要", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能への更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どんな学習機能がありますか？",
+          "answer": { "text": "毎日の AI ヒント、タスクベースの学習、ロール プレイ、評価、学習計画、マイクロラーニングなどがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+        },
+        {
+          "question": "管理者向けの機能はありますか？",
+          "answer": { "text": "管理者主導の Copilot の基本を学ぶ Copilot スターター プロンプト（プレビュー）や、使用状況を見るエージェント レポートがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+        "learn": [{ "title": "ラーニング エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
