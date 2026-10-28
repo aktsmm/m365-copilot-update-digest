@@ -63,6 +63,20 @@
         { "termKey": "entity-card", "term": "エンティティ カード", "type": "feature", "oneLine": { "text": "検索結果で、メタデータや関連する属性をまとめて示す詳細な表示形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] } },
         { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の改善や変更を知らせる、リリース ノート上の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "コネクタの検索結果への表示を管理者が止められますか？",
+          "answer": { "text": "パートナー コネクタは、管理センターの [Your Connections] で [Copilot Visibility] をオフにすると、Copilot 検索と Copilot Chat の結果から除外できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/connectors/manage-connector", "locator": "Manage visibility of partner data sources in Copilot", "retrievedAt": "2026-10-28T13:50:00Z" }] }
+        },
+        {
+          "question": "設定を変えるとどのくらいで反映されますか？",
+          "answer": { "text": "接続レベルの表示設定を変更した場合、すべての Copilot 体験に反映されるまで最大 30 分かかります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/connectors/manage-connector", "locator": "Manage visibility of partner data sources in Copilot (Note)", "retrievedAt": "2026-10-28T13:50:00Z" }] }
+        },
+        {
+          "question": "コネクタを管理するにはどの管理者ロールが必要ですか？",
+          "answer": { "text": "Microsoft Copilot コネクタの管理には、組織の AI 管理者であることが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-365/copilot/connectors/manage-connector", "locator": "冒頭", "retrievedAt": "2026-10-28T13:50:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
         "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locale": "en-us" }]
