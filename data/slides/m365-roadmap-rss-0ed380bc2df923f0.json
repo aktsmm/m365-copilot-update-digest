@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-0ed380bc2df923f0",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Agent 365 のエージェントを Copilot Chat と宣言型エージェントで利用可能に",
+        "subtitleJa": "A2A 対応のエージェントを、接続エージェントとして使えます",
+        "en": "Microsoft Copilot (Microsoft 365): Use Agent 365 agents within Microsoft 365 Copilot Chat and Declarative Agents"
+      },
+      "meta": {
+        "publishedJst": "2026-10-28",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントの作成者**と、Microsoft 365 管理センターでエージェントを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Agent 365 に公開したエージェントを、自作エージェントから呼び出して連携できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者はエージェントへのアクセスを Microsoft 365 管理センターで制御できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps", "locator": "概要", "retrievedAt": "2026-10-28T05:55:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "Agent 365 に公開済みのエージェントが **A2A プロトコルを実装していれば、Agent Builder や Copilot Studio で作るエージェントの接続エージェント**として使えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Agent 365 に公開したエージェントは、Microsoft 365 管理センターで管理済み", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "A2A を実装していれば、作成者のエージェントの接続エージェントとして利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "A2A は、エージェント間の通信と連携のためのオープン標準", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "Agent2Agent (A2A) プロトコルとは", "retrievedAt": "2026-10-28T05:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Studio では、エージェント ページの「エージェントを追加」から A2A エージェントを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "A2A プロトコル経由でエージェントを別のエージェントに接続する", "retrievedAt": "2026-10-28T05:55:00Z" }] },
+            { "text": "エンドポイント URL と認証方法（なし／API キー／OAuth 2.0）を指定して保存する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "A2A プロトコル経由でエージェントを別のエージェントに接続する", "retrievedAt": "2026-10-28T05:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "接続先は A2A プロトコルをサポートするエージェントである必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-10-28T05:55:00Z" }] },
+            { "text": "外部エージェントのデータ処理や権限は、利用者が責任を持って確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "Note", "retrievedAt": "2026-10-28T05:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide（Standard Multi-Tenant）で展開中。Android / Desktop / iOS / Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "独自の推論やワークフローを持つエージェントの統合に A2A 接続が向く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "A2A 接続を使用する場合", "retrievedAt": "2026-10-28T05:55:00Z" }] },
+            { "text": "まず管理済みの 1 つのエージェントを接続し、応答を確認してから広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365", "term": "Agent 365", "type": "product", "oneLine": { "text": "AI エージェントのコントロール プレーンで、構築元を問わずエージェントの展開と管理を支える。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps", "locator": "Microsoft Agent 365", "retrievedAt": "2026-10-28T05:55:00Z" }] } },
+        { "termKey": "a2a", "term": "Agent2Agent (A2A)", "type": "term", "oneLine": { "text": "エージェント間の通信と連携のためのオープン標準プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-10-28T05:55:00Z" }] } },
+        { "termKey": "agent-builder", "term": "エージェント ビルダー", "type": "feature", "oneLine": { "text": "Copilot 内で、シンプルにエージェントを作成できるエクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locator": "ビルド エージェント", "retrievedAt": "2026-10-28T05:55:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、順次提供が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "A2A と従来の HTTP コネクタは何が違いますか？",
+          "answer": { "text": "A2A はエージェント ワークフロー向けに設計され、マルチターン対話や豊富なコンテキスト メタデータに対応します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locator": "A2A プロトコルと HTTP コネクタの比較", "retrievedAt": "2026-10-28T05:55:00Z" }] }
+        },
+        {
+          "question": "どの管理画面でエージェントを管理しますか？",
+          "answer": { "text": "エージェントの有効化・無効化・ブロックなどは Microsoft 365 管理センターで行えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps", "locator": "概要", "retrievedAt": "2026-10-28T05:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567670",
+        "learn": [
+          { "title": "Agent2Agent(A2A)プロトコル上で利用可能なエージェントを接続する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/add-agent-agent-to-agent", "locale": "ja-jp" },
+          { "title": "Microsoft 365 管理センターでエージェントを管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps", "locale": "ja-jp" },
+          { "title": "Copilot Chat でエージェントを購入して管理する", "url": "https://learn.microsoft.com/ja-jp/copilot/agents", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
