@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-e6e516567ab33102",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Android の Copilot ノートブックでマルチモーダル キャプチャが利用可能に",
+        "subtitleJa": "音声・画像・テキストのメモを 1 回のセッションでまとめて記録できます",
+        "en": "Multimodal capture in Copilot Notebooks [Android]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Launched",
+        "products": ["OneNote", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Android 版 OneNote で Copilot ノートブックを使う人**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] },
+        "change": { "text": "会議・ホワイトボード・個人メモなどを、Android からまとめて構造化ページにできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用には Microsoft Copilot または Copilot Chat ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Android でも、**音声の文字起こし・画像・入力メモを 1 回のセッション**で記録し、Copilot が洞察付きの構造化ページにまとめます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "音声の文字起こし、画像の撮影、メモの入力を 1 回のセッションで行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] },
+            { "text": "Copilot が洞察とキャプチャ内容を含む構造化された Copilot ページを作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] },
+            { "text": "ページは、ユーザーが選んだ Copilot ノートブックに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Android 版 OneNote の Copilot ノートブックで利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] },
+            { "text": "Copilot ノートブックには Microsoft Copilot または Copilot Chat ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot ノートブックは .pod ファイルとして SharePoint Embedded コンテナーに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-28T06:40:00Z" }] },
+            { "text": "ストレージは組織の SharePoint クォータに計上される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "同じ機能は OneNote for iPhone と iPad で既に一般提供されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対面の会話、ホワイトボード セッション、個人メモなどオフラインの作業の記録向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "multimodal-capture", "term": "マルチモーダル キャプチャ", "type": "feature", "oneLine": { "text": "音声の文字起こし、画像、入力メモを 1 回のセッションで取り込む機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] } },
+        { "termKey": "copilot-notebooks", "term": "Copilot ノートブック", "type": "feature", "oneLine": { "text": "Copilot のノートブック機能。.pod ファイルとして保存される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-28T06:40:00Z" }] } },
+        { "termKey": "copilot-pages", "term": "Copilot ページ", "type": "feature", "oneLine": { "text": "Copilot が作るページ。.page ファイルとして保存される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "概要", "retrievedAt": "2026-10-28T06:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "一般に提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot ノートブックを使うのに必要なライセンスは？",
+          "answer": { "text": "Microsoft Copilot または Copilot Chat ライセンスが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locator": "ライセンス要件", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+        },
+        {
+          "question": "iPhone や iPad ではどうなっていますか？",
+          "answer": { "text": "同じ機能は OneNote for iPhone と iPad で既に一般提供されており、今回 Android に対応しました。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T06:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [{ "title": "Copilot ページと Copilot ノートブックの要件", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-requirements", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
