@@ -123,7 +123,7 @@ export async function createLearnLookup() {
           throw new Error("Learn MCP search response has no results array");
         }
         const candidates = [];
-        const seen = new Set([urlKey(event.url)]);
+        const seen = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
         for (const result of payload.results) {
           const url = documentUrl(result.contentUrl);
           if (!url || new URL(url).hostname !== "learn.microsoft.com" ||

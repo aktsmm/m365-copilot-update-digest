@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generatedAt": "2026-10-28T05:41:02.983Z",
+  "generatedAt": "2026-10-28T05:45:53.296Z",
   "events": [
     {
       "id": "m365-roadmap-rss-6da45e087f0ce29e",
@@ -16,6 +16,16 @@
       "summaryJa": "ユーザーは、最近のユーザーの作業アクティビティに基づいて、関連する推奨参照情報を使用して Copilot ノートブックを迅速に充実させることができるようになりました。",
       "summaryEn": "Users can now quickly enrich their Copilot Notebook with relevant Suggested References based on recent user work activity. Update: This roadmap item is no longer accurate and will be removed from the roadmap. We apologize for any inconvenience.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=529843",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 Copilot のリリース ノート",
+          "sourceTitle": "Microsoft 365 Copilot release notes",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#october-27,-2026",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=529843",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: suggest, reference, notebook"
+        }
+      ],
       "publishedAt": "2026-10-28T12:00:00.000Z",
       "capturedAt": "2026-10-14T17:31:47.169Z",
       "sourceLastSeen": "2026-10-14T17:31:47.169Z",
@@ -38,17 +48,7 @@
         "作成者向け"
       ],
       "importanceScore": 139,
-      "importanceReason": "廃止や移行判断に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 Copilot のリリース ノート",
-          "sourceTitle": "Microsoft 365 Copilot release notes",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes#october-27,-2026",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=529843",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: suggest, reference, notebook"
-        }
-      ]
+      "importanceReason": "廃止や移行判断に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-c6d6f3a8ea236c5e",
@@ -142,9 +142,9 @@
       "title": "Outlook: New Copilot entry point in Classic Outlook",
       "titleJa": "従来の Outlook の新しい Copilot エントリ ポイント",
       "titleEn": "Outlook: New Copilot entry point in Classic Outlook",
-      "summary": "We've introduced a new experience for Copilot in the apps—a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft 365, surfacing relevant actions that help...",
-      "summaryJa": "私たちは、アプリ内に Copilot の新しいエクスペリエンスを導入しました。これは、作業の上に位置し、その下にあるコンテキストを理解する、アプリ間での一貫したエントリ ポイントです。インターフェイス全体にタッチポイントを分散させるのではなく、Copilot を Microsoft 365 全体にわたる 1 つの接続されたシステムとして固定し、役立つ関連アクションを表面化します。",
-      "summaryEn": "We've introduced a new experience for Copilot in the apps—a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft 365, surfacing relevant actions that help...",
+      "summary": "We've introduced a new experience for Copilot in the apps—a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft 365, surfacing relevant actions that...",
+      "summaryJa": "私たちは、アプリ内に Copilot の新しいエクスペリエンスを導入しました。これは、作業の上に位置し、その下にあるコンテキストを理解する、アプリ間での一貫したエントリ ポイントです。インターフェイス全体にタッチポイントを分散させるのではなく、Copilot を Microsoft 365 全体にわたる 1 つの接続されたシステムとして固定し、関連するアクションを表面化します。",
+      "summaryEn": "We've introduced a new experience for Copilot in the apps—a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft 365, surfacing relevant actions that...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=567007",
       "relatedDocuments": [
         {
@@ -295,10 +295,20 @@
       "title": "Power Automate: AI-assisted UI Automation repair",
       "titleJa": "Power Automate: AI 支援による UI オートメーションの修復",
       "titleEn": "Power Automate: AI-assisted UI Automation repair",
-      "summary": "A new agentic debug run feature will be available in the flow designer. The UI automation repair interface launches while the flow is running, validating each selector used in the flow. It then proposes a new selector in case an existing one does not work as expected, after the user captures the respective element for...",
+      "summary": "A new agentic debug run feature will be available in the flow designer. The UI automation repair interface launches while the flow is running, validating each selector used in the flow. It then proposes a new selector in case an existing one does not work as expected, after the user captures the respective element...",
       "summaryJa": "新しいエージェント デバッグ実行機能がフロー デザイナーで利用できるようになります。フローの実行中に UI 自動修復インターフェイスが起動し、フローで使用される各セレクターを検証します。次に、ユーザーがそれぞれの要素をキャプチャした後、既存のセレクターが期待どおりに機能しない場合に備えて、新しいセレクターを提案します。",
-      "summaryEn": "A new agentic debug run feature will be available in the flow designer. The UI automation repair interface launches while the flow is running, validating each selector used in the flow. It then proposes a new selector in case an existing one does not work as expected, after the user captures the respective element for...",
+      "summaryEn": "A new agentic debug run feature will be available in the flow designer. The UI automation repair interface launches while the flow is running, validating each selector used in the flow. It then proposes a new selector in case an existing one does not work as expected, after the user captures the respective element...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=577869",
+      "relatedDocuments": [
+        {
+          "title": "AI 支援 UI オートメーションの修復 (プレビュー)",
+          "sourceTitle": "AI-assisted UI automation repair (preview)",
+          "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair#ai-assisted-ui-automation-repair-during-debugging",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577869",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ai-assist, automation, repair"
+        }
+      ],
       "publishedAt": "2026-10-28T12:00:00.000Z",
       "capturedAt": "2026-10-28T05:41:02.983Z",
       "sourceLastSeen": "2026-10-28T05:41:02.983Z",
@@ -319,17 +329,7 @@
         "作成者向け"
       ],
       "importanceScore": 102,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "AI 支援 UI オートメーションの修復 (プレビュー)",
-          "sourceTitle": "AI-assisted UI automation repair (preview)",
-          "url": "https://learn.microsoft.com/ja-jp/power-automate/desktop-flows/ai-assisted-ui-automation-repair#ai-assisted-ui-automation-repair-during-debugging",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=577869",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: ai-assist, automation, repair"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-fbefc8a7643f9895",
