@@ -479,9 +479,13 @@ function stageDescription(stage) {
   }
 }
 
-function knownJapaneseRoadmapSummary(event) {
+export function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/copilot studio: computer use for web browsing on microsoft copilot harness/.test(text)) {
+    return "Microsoft Copilot Studio エージェントは、Microsoft Copilot Harness を利用して Web サイトを閲覧・操作できます。自然言語の指示に従ってページを移動し、情報の抽出やファイルのダウンロードを行えます。";
+  }
 
   if (/ai citations analytics for documents and pages/.test(text)) {
     return "Copilot と AI エージェントによる SharePoint のドキュメント、ニュース、ページの利用状況を追跡できます。各ページやファイルが Copilot の応答で参照された頻度を確認でき、サイト コンテンツの引用状況も把握できます。";
@@ -763,9 +767,13 @@ function buildJapaneseFallbackSummary(event) {
   );
 }
 
-function knownJapaneseRoadmapTitle(event) {
+export function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/copilot studio: computer use for web browsing on microsoft copilot harness/.test(text)) {
+    return "Copilot Studio: Microsoft Copilot Harness による Web ブラウジングでコンピューターを使用";
+  }
 
   if (/microsoft copilot studio: supercharge your workflows with computer use/.test(text)) {
     return "Microsoft Copilot Studio: コンピューターの使用でワークフローを強化します";

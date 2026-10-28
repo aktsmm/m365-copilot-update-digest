@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { mrcRoadmapItemsToEvents } from "../scripts/collect.mjs";
+import {
+  knownJapaneseRoadmapSummary,
+  knownJapaneseRoadmapTitle,
+  mrcRoadmapItemsToEvents,
+} from "../scripts/collect.mjs";
 import { listM365Roadmaps } from "../scripts/lib/mrc.mjs";
 
 const source = { id: "m365-roadmap-rss", name: "Microsoft 365 Roadmap", productArea: "Microsoft 365 Copilot", sourceFamily: "Roadmap" };
@@ -32,6 +36,23 @@ function fakeClient(pages) {
     },
   };
 }
+
+test("Copilot Studio Computer Use localization names Microsoft Copilot Harness", () => {
+  const event = {
+    titleEn: "Copilot Studio: Computer Use for web browsing on Microsoft Copilot Harness",
+    summaryEn: "Enable Microsoft Copilot Studio agents to browse and interact with websites.",
+  };
+  assert.equal(
+    knownJapaneseRoadmapTitle(event),
+    "Copilot Studio: Microsoft Copilot Harness による Web ブラウジングでコンピューターを使用",
+  );
+  assert.equal(
+    knownJapaneseRoadmapSummary(event),
+    "Microsoft Copilot Studio エージェントは、Microsoft Copilot Harness を利用して Web サイトを閲覧・操作できます。自然言語の指示に従ってページを移動し、情報の抽出やファイルのダウンロードを行えます。",
+  );
+  assert.doesNotMatch(knownJapaneseRoadmapTitle(event), /GitHub/);
+  assert.doesNotMatch(knownJapaneseRoadmapSummary(event), /GitHub/);
+});
 
 test("roadmap items map to events and reuse existing ids by roadmap id", () => {
   const existing = [{ id: "m365-roadmap-rss-old", sourceId: source.id, roadmapIds: ["101"], publishedAt: "2026-02-01T12:00:00.000Z" }];
