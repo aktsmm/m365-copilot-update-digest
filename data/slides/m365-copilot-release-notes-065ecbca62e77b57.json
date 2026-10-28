@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-065ecbca62e77b57",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Work IQ API：宣言型エージェントへのエンドポイント アクセス",
+        "subtitleJa": "アプリから宣言型エージェントをプログラムで呼び出せます",
+        "en": "Work IQ APIs - Endpoints: Declarative Agent Access [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents", "work-iq"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**宣言型エージェントを作る開発者**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Work IQ エンドポイント経由で、アプリから専門エージェントを呼び出せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用は任意。Work IQ API は Copilot クレジットの使用量ベース課金", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "ライセンスの要件", "retrievedAt": "2026-10-28T12:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "提供元・テナント定義の宣言型エージェントを、**Work IQ エンドポイント**からプログラムで呼び出し、業務フローに組み込めます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供元・テナント定義の宣言型エージェントにプログラムでアクセスできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ドメイン固有のタスク向け専門エージェントを、広いワークフローから起動できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Work IQ は A2A・MCP・REST など複数のプロトコルを提供する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "Work IQ API の概要", "retrievedAt": "2026-10-28T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "認証は Microsoft Entra ID の代理認証。アプリのみの認証は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "認証とセキュリティ", "retrievedAt": "2026-10-28T12:00:00Z" }] },
+            { "text": "Microsoft 365 のアクセス許可・秘密度ラベル・コンプライアンス ポリシーが自動適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "認証とセキュリティ", "retrievedAt": "2026-10-28T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "billing",
+          "heading": "課金と条件",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "利用料は Copilot クレジットの使用量ベースで発生する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "ライセンスの要件", "retrievedAt": "2026-10-28T12:00:00Z" }] },
+            { "text": "利用には Work IQ API の使用条件への同意が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "冒頭", "retrievedAt": "2026-10-28T12:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Microsoft 365 データとコンテキスト理解を組み合わせ、エージェントが仕事を推論して実行できるようにするレイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "ワークIQとは何ですか?", "retrievedAt": "2026-10-28T12:00:00Z" }] } },
+        { "termKey": "a2a", "term": "A2A", "type": "term", "oneLine": { "text": "構造化されたエージェント間のコミュニケーションを行うプロトコルで、マルチエージェントや委任に使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "サポートされるプロトコル", "retrievedAt": "2026-10-28T12:00:00Z" }] } },
+        { "termKey": "obo", "term": "代理（OBO）認証", "type": "term", "oneLine": { "text": "サインインしたユーザーのコンテキストで要求を実行する Microsoft Entra ID の認証フロー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "認証とセキュリティ", "retrievedAt": "2026-10-28T12:00:00Z" }] } }
+      ],
+      "qa": [
+        { "question": "Work IQ API はどの認証方式に対応していますか？", "answer": { "text": "Microsoft Entra ID の代理認証で、サインインしたユーザーのコンテキストで実行されます。アプリのみの認証は非対応です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "認証とセキュリティ", "retrievedAt": "2026-10-28T12:00:00Z" }] } },
+        { "question": "利用にコストはかかりますか？", "answer": { "text": "Work IQ API の使用料は、Copilot クレジットを使う使用量ベースのモデルで発生します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locator": "ライセンスの要件", "retrievedAt": "2026-10-28T12:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [
+          { "title": "Work IQ API の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq-api-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
