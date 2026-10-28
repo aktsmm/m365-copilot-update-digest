@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-a4ef7be179f9aa25",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Windows の Microsoft Copilot にラーニング エージェントが登場",
+        "subtitleJa": "マイクロラーニングや構造化された学習で、仕事の中でスキルを身につけられます",
+        "en": "Learning Agent in Microsoft 365 Copilot [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot で AI スキルを身につけたい従業員**と、Microsoft 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "概要", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+        "change": { "text": "仕事の流れの中で、パーソナライズされた短い学習や学習計画を利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は、Microsoft 365 管理センターで全ユーザーまたは選択したグループに展開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "学習エージェントのデプロイ", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "ラーニング エージェントが、**パーソナライズされたマイクロラーニングと構造化された学習**で、従業員のスキル習得を支援します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Windows 向けのラーニング エージェント", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "毎日の AI ヒント、ロール プレイ、評価、学習計画などを提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+            { "text": "ロール情報、スキル シグナル、タスク推論で学習をパーソナライズ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "概要", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "機能は割り当てられたライセンスに基づいて有効になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "冒頭", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+            { "text": "管理者はグローバル管理者またはナレッジ管理者のロールで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "管理ロールとアクセス許可", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot の［すべてのエージェント］で検索し、［追加］を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "ラーニング エージェントを追加する手順", "retrievedAt": "2026-10-28T08:30:00Z" }] },
+            { "text": "Microsoft Copilot と Microsoft Teams（Web・デスクトップ）で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "プラットフォーム サポート", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "learning-agent", "term": "ラーニング エージェント", "type": "feature", "oneLine": { "text": "学習者が作業フローの中でスキルを身につけるのを助ける、AI を利用した学習エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "概要", "retrievedAt": "2026-10-28T08:30:00Z" }] } },
+        { "termKey": "microlearning", "term": "マイクロラーニング", "type": "term", "oneLine": { "text": "長い学習コンテンツから取り出す、短時間でターゲットを絞った学習。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locator": "主な機能", "retrievedAt": "2026-10-28T08:30:00Z" }] } },
+        { "termKey": "knowledge-admin", "term": "ナレッジ管理者", "type": "term", "oneLine": { "text": "コンテンツ ソースや機能設定など、学習固有の構成を管理するロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "管理ロールとアクセス許可", "retrievedAt": "2026-10-28T08:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートで、既存の機能に更新があったことを示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は展開の範囲を限定できますか？",
+          "answer": { "text": "はい。全ユーザーか選択した Microsoft 365 グループかを選んで展開でき、ロールアウト中は特定のユーザーやグループに限定できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "ユーザー アクセスの管理", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+        },
+        {
+          "question": "どのライセンスで使えますか？",
+          "answer": { "text": "機能は割り当てられたライセンスに基づいて有効になり、特定のサブスクリプションが必要な機能もあります。詳細はライセンス マトリックスで確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locator": "冒頭", "retrievedAt": "2026-10-28T08:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://aka.ms/LearningAgent/add",
+        "learn": [
+          { "title": "ラーニング エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview", "locale": "ja-jp" },
+          { "title": "学習エージェントの設定", "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-setup", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
