@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-210e8e9019809cd5",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "検索結果でコネクタの詳細なエンティティ カードを表示",
+        "subtitleJa": "プレーンなテキスト リンクではなく、メタデータ付きのカードで確認できます",
+        "en": "Rich entity representation for connectors in Search results [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["copilot-chat", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot の検索で**コネクタのデータを探すユーザー**と、拡張機能の作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "移動せずに、コネクタ コンテンツの内容を検索結果上で把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "リリース ノートに管理者向けの必須対応は記載されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "検索結果に、コネクタの**詳細なエンティティ カード**が表示され、メタデータと関連する属性を直接確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot の検索結果で、コネクタをエンティティ カードとして表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] },
+            { "text": "メタデータや関連する属性を、検索結果上で直接確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] },
+            { "text": "対象は Web 版（リリース ノートの [Web] 表記）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "期待される効果",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "データ ソースが明確になり、誤クリックの減少につながる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] },
+            { "text": "コンテンツを開かなくても内容を把握でき、確認の手間が減る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "connector", "term": "コネクタ", "type": "term", "oneLine": { "text": "外部のデータ ソースを Microsoft 365 の検索や Copilot から使えるようにする仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "entity-card", "term": "エンティティ カード", "type": "feature", "oneLine": { "text": "検索結果で、メタデータや関連する属性をまとめて示す詳細な表示形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T08:10:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の改善や変更を知らせる、リリース ノート上の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
