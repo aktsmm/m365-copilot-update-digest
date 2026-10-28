@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-a5b1f8100e083851",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Viva Insights に新しい Microsoft Copilot メトリックが追加",
+        "subtitleJa": "Outlook・Word・Excel・PowerPoint などの利用アクションを細かく測定できます",
+        "en": "Insights - New Copilot Metrics Available [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Viva Insights で Copilot の利用状況を分析する管理者・アナリスト**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "冒頭", "retrievedAt": "2026-10-28T13:00:00Z" }] },
+        "change": { "text": "推奨される返信・翻訳・コーチング・データのクリーンなど、具体的な利用アクションを把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Outlook / PowerPoint / Excel の各メトリック", "retrievedAt": "2026-10-28T13:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既存のカスタム クエリがある場合は、メトリック名の変更の影響を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "重要（Copilot Chat の統合）", "retrievedAt": "2026-10-28T13:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot アプリ、Edge、OneNote での**アクション**や、Outlook・Word・Excel・PowerPoint の主要な利用シーン別の**メトリック**を確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-28T13:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "追加・更新されるメトリック",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook: 推奨される返信、メールのコーチング、書き換えなどのアクション数", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Outlook", "retrievedAt": "2026-10-28T13:00:00Z" }] },
+            { "text": "PowerPoint の翻訳・書き換え、Excel のデータのクリーン、Word のコーチングのアクション数", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "PowerPoint / Excel / Word", "retrievedAt": "2026-10-28T13:00:00Z" }] },
+            { "text": "Edge・OneNote を含む任意の Microsoft 365 アプリでの Copilot アクション数", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "任意の特定の Microsoft 365 アプリ", "retrievedAt": "2026-10-28T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Chat（職場）と（Web）は、新しい Copilot Chat メトリックに統合された", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "重要", "retrievedAt": "2026-10-28T13:00:00Z" }] },
+            { "text": "旧メトリックを使った既存のカスタム クエリは、更新時に失敗する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "重要", "retrievedAt": "2026-10-28T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "counting",
+          "heading": "カウントの考え方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ユーザーが意図的に操作したアクティビティのみをカウントし、自動表示だけは含めない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-28T13:00:00Z" }] },
+            { "text": "メトリック ルールの調整により、定義は組織ごとに異なる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "注", "retrievedAt": "2026-10-28T13:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "viva-insights", "term": "Viva Insights（高度な分析）", "type": "product", "oneLine": { "text": "クエリを作成し、メトリックを追加して従業員の働き方を分析する Web アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "冒頭", "retrievedAt": "2026-10-28T13:00:00Z" }] } },
+        { "termKey": "copilot-metrics", "term": "Microsoft Copilot メトリック", "type": "feature", "oneLine": { "text": "従業員が Microsoft 365 アプリで Copilot をどう使っているかを示す分析情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-28T13:00:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat メトリック", "type": "feature", "oneLine": { "text": "職場と Web の両方のアクティビティを集計する、統合された新しいメトリック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "重要", "retrievedAt": "2026-10-28T13:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された既存機能の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのような操作がカウントされますか？",
+          "answer": { "text": "ユーザーが Copilot やエージェントを意図的に操作したときです。自動生成された概要は、ユーザーが選択した場合のみカウントされます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "Microsoft Copilot メトリック", "retrievedAt": "2026-10-28T13:00:00Z" }] }
+        },
+        {
+          "question": "既存のカスタム クエリへの影響は？",
+          "answer": { "text": "旧 Copilot Chat（職場）と（Web）のメトリックを使ったクエリは更新時に失敗します。対処は高度な分析の FAQ に記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locator": "重要", "retrievedAt": "2026-10-28T13:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/viva/insights/advanced/reference/metrics#microsoft-copilot-metrics",
+        "learn": [
+          { "title": "高度な分析メトリック", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/reference/metrics", "locale": "ja-jp" },
+          { "title": "高度な分析メトリック ルール", "url": "https://learn.microsoft.com/ja-jp/viva/insights/advanced/analyst/metric-rules", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
