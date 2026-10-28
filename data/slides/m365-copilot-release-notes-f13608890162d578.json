@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-f13608890162d578",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "classic Outlook for Windows で Copilot の設定を直接開けるように",
+        "subtitleJa": "Outlook を離れずに Copilot の設定を確認・調整できます",
+        "en": "Copilot Settings in classic Outlook for Windows [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["outlook", "edge-windows"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": {
+          "text": "**classic Outlook for Windows で Copilot を使う人**と、IT 管理者",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Copilot Settings in classic Outlook for Windows", "retrievedAt": "2026-10-28T09:00:00Z" }]
+        },
+        "change": {
+          "text": "Outlook の中で Copilot の設定にアクセスできる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Copilot Settings in classic Outlook for Windows", "retrievedAt": "2026-10-28T09:00:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "対応は不要。File メニューの Copilot settings から設定を確認できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-10-28T09:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Copilot の設定は Outlook の外で行う必要がありました",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T09:00:00Z" }]
+        },
+        "after": {
+          "text": "classic Outlook for Windows の**中**で Copilot の各種設定にアクセスできます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T09:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "対象は Windows 版の classic Outlook",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "タイトル [Windows]", "retrievedAt": "2026-10-28T09:00:00Z" }]
+            },
+            {
+              "text": "別のポータルやアプリを使わずに設定を構成できる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T09:00:00Z" }]
+            },
+            {
+              "text": "既存の Outlook クライアント設定に紐づくセキュリティ ポリシーは尊重される",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-10-28T09:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認の手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "classic Outlook を開き、File メニューから Copilot settings を選ぶ",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-10-28T09:00:00Z" }]
+            },
+            {
+              "text": "IT 管理者は Copilot のポリシーをより一貫して適用しやすくなる",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Business impact", "retrievedAt": "2026-10-28T09:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "classic-outlook",
+          "term": "classic Outlook for Windows",
+          "type": "product",
+          "oneLine": {
+            "text": "Windows 向けの従来型の Outlook デスクトップ クライアント。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "label-update",
+          "term": "アップデート",
+          "type": "label",
+          "oneLine": {
+            "text": "既存機能に対する変更を知らせるリリース ノートの区分。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "提供時期はいつですか？",
+          "answer": {
+            "text": "リリース ノートには 2026 年 10 月 27 日付で掲載されていますが、月単位の提供時期は記載されていません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "October 27, 2026", "retrievedAt": "2026-10-28T09:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
