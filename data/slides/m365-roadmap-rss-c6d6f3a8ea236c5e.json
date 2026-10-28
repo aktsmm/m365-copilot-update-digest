@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c6d6f3a8ea236c5e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot アプリのチャットが、より適したモードへの切り替えを提案（開発中）",
+        "subtitleJa": "プロンプトの内容に合わせて、Cowork などのモードを案内します",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot app mode handoffs"
+      },
+      "meta": {
+        "publishedJst": "2026-10-28",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot アプリのチャットを使う人**（作成者向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プロンプトに合ったモードを、チャット上のカードで案内してもらえる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中の段階のため、現時点で必要な対応は公表されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "チャットでプロンプトを送ると、**より適したモードの提案カード**が表示されます。Cowork など、今後対応するモードも対象です", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot アプリのチャットが、プロンプトに応じて適したモードを提案", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プロンプト送信後に提案カードを表示し、モードの説明を添える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提案先の例は Cowork など、対応が進むモード", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は月単位でも示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォームは Web、クラウドは Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "提案先モードの例: Cowork",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Cowork は、メール送信や会議設定などのタスクを代行する。実行前に承認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/", "locator": "冒頭・制御を維持する", "retrievedAt": "2026-10-28T06:10:00Z" }] },
+            { "text": "職場または学校のアカウント向けの Cowork は一般提供されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/", "locator": "Note", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Cowork", "type": "feature", "oneLine": { "text": "ユーザーに代わって、メール送信や会議設定などのタスクを実行する Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/", "locator": "冒頭", "retrievedAt": "2026-10-28T06:10:00Z" }] } },
+        { "termKey": "mode-handoff", "term": "モードの切り替え提案", "type": "feature", "oneLine": { "text": "チャットで送ったプロンプトに合う別のモードを、カードで案内する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能を開発している段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Cowork は誰でも使えますか？",
+          "answer": { "text": "職場または学校のアカウント向けの Cowork は一般提供されています。個人用アカウントの Cowork はプレビューです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/", "locator": "Note", "retrievedAt": "2026-10-28T06:10:00Z" }] }
+        },
+        {
+          "question": "提供はいつ始まりますか？",
+          "answer": { "text": "ロードマップでは開発中の段階で、提供時期の月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577841",
+        "learn": [{ "title": "Copilot Cowork の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
