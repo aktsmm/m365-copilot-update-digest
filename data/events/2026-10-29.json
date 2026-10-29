@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generatedAt": "2026-10-29T05:46:32.187Z",
+  "generatedAt": "2026-10-29T12:59:22.646Z",
   "events": [
     {
       "id": "m365-roadmap-rss-d0a9bb85668fa032",
@@ -57,7 +57,7 @@
       "productArea": "Microsoft 365 Copilot",
       "section": "Microsoft 365 Copilot",
       "title": "Microsoft 365 Admin Center: Usage reports - Message consumption for Pay-as-you-go experiences in Copilot Chat.",
-      "titleJa": "Microsoft 365 Copilot の会議・チャット機能を更新",
+      "titleJa": "Microsoft 365 管理センター: 使用状況レポート - Copilot チャットでの従量課金制エクスペリエンスのメッセージ消費量。",
       "titleEn": "Microsoft 365 Admin Center: Usage reports - Message consumption for Pay-as-you-go experiences in Copilot Chat.",
       "summary": "A new report to help IT admins manage costs for billed messages that are Pay-as-you-go enabled for Copilot Chat. Reporting includes drill down of billed messages per user, per billing policy, per agent-level and agent-user level pair. #copilotcontrolsystem",
       "summaryJa": "IT 管理者が Copilot Chat に対して従量課金制が有効になっている請求メッセージのコストを管理するのに役立つ新しいレポート。レポートには、ユーザーごと、請求ポリシーごと、エージェント レベルおよびエージェントとユーザー レベルのペアごとの請求メッセージのドリルダウンが含まれます。 #copilotcontrolsystem",
@@ -200,6 +200,16 @@
       "summaryJa": "ユーザー グループを使用したブルズアイ ルーティングにより、会話の待ち時間が増加するにつれて、適格な代表者のプールを自動的に拡大する段階的な割り当て戦略が可能になります。このアプローチでは、固定プールから割り当てたり、オーバーフロー ルールがトリガーされるのを待ったりするのではなく、同心円状の可用性が段階的に拡大されます。",
       "summaryEn": "Bullseye routing with user groups enables a tiered assignment strategy that automatically expands the pool of eligible representatives as conversation wait time increases. Rather than assigning from a fixed pool or waiting for overflow rules to trigger, this approach progressively widens availability in concentric...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576606",
+      "relatedDocuments": [
+        {
+          "title": "ユーザーグループでブルズアイルーティングを使って会話をオーケストレーションします",
+          "sourceTitle": "Use bullseye routing with user groups to orchestrate conversations",
+          "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations#feature-details",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=576606",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: bullseye, rout, group, orchestrate, conversation"
+        }
+      ],
       "publishedAt": "2026-10-29T12:00:00.000Z",
       "capturedAt": "2026-10-29T05:46:32.187Z",
       "sourceLastSeen": "2026-10-29T05:46:32.187Z",
@@ -219,17 +229,7 @@
         "作成者向け"
       ],
       "importanceScore": 97,
-      "importanceReason": "管理やガバナンスへの影響が大きいため / 会議やコミュニケーションの業務導線に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "ユーザーグループでブルズアイルーティングを使って会話をオーケストレーションします",
-          "sourceTitle": "Use bullseye routing with user groups to orchestrate conversations",
-          "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations#feature-details",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=576606",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: bullseye, rout, group, orchestrate, conversation"
-        }
-      ]
+      "importanceReason": "管理やガバナンスへの影響が大きいため / 会議やコミュニケーションの業務導線に直結するため"
     }
   ]
 }
