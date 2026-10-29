@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-33ebd6729e9ea43b",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Chat の従量課金メッセージ消費レポートを開発中",
+        "subtitleJa": "課金対象メッセージのコストを、ユーザーやエージェント単位で確認できます",
+        "en": "Microsoft 365 Admin Center: Usage reports - Message consumption for Pay-as-you-go experiences in Copilot Chat."
+      },
+      "meta": {
+        "publishedJst": "2026-10-29",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["copilot-chat", "admin"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Copilot Chat の従量課金を使う組織の **IT 管理者**とエージェント作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "従量課金の対象メッセージのコストを、詳細に把握して管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "従量課金が有効な Copilot Chat の課金対象メッセージについて、**ユーザー別・課金ポリシー別・エージェント別**に内訳を確認できるレポートが追加されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "レポートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Copilot Chat で従量課金が有効な、課金対象メッセージ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザー別・課金ポリシー別に、課金メッセージを掘り下げて確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エージェント別、エージェントとユーザーの組み合わせ別でも確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在は Power Platform 管理センターで容量の使用状況を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "Power Platform 管理センターで Copilot Chat の使用状況と容量を監視する", "retrievedAt": "2026-10-29T06:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "課金ポリシーは Microsoft 365 管理センターの [Copilot] > [課金と使用状況] で設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "手順 2. 請求構成を設定する", "retrievedAt": "2026-10-29T06:00:00Z" }] },
+            { "text": "容量の使用量に近づいたときの通知を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "超過通知", "retrievedAt": "2026-10-29T06:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related",
+          "heading": "関連する課金の仕組み",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "従量課金制の課金ポリシーは、単独でも、容量パックの超過分処理としても使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "容量パック、従量課金ポリシー、Copilot クレジット ポリシーの違いを理解する", "retrievedAt": "2026-10-29T06:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "payg", "term": "従量課金", "type": "term", "oneLine": { "text": "利用したクレジットの分だけ、接続した Azure サブスクリプションに課金される仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "従量課金制の課金ポリシー", "retrievedAt": "2026-10-29T06:00:00Z" }] } },
+        { "termKey": "billing-policy", "term": "課金ポリシー", "type": "feature", "oneLine": { "text": "従量課金の請求先となる Azure サブスクリプションと、対象ユーザーを結び付ける設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "Copilot クレジット ポリシー", "retrievedAt": "2026-10-29T06:00:00Z" }] } },
+        { "termKey": "copilot-credit", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "AI 対話のための Copilot Chat と SharePoint エージェントの消費単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "冒頭", "retrievedAt": "2026-10-29T06:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期は示されていません。時期が公開された時点で改めて確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "今、使用状況を確認する方法はありますか？",
+          "answer": {
+            "text": "Power Platform 管理センターの [ライセンス] > [Copilot Studio] の概要タブで、プリペイド容量パックの消費クレジット数と残りを確認できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locator": "Power Platform 管理センターで Copilot Chat の使用状況と容量を監視する", "retrievedAt": "2026-10-29T06:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=490738",
+        "learn": [
+          { "title": "Copilot Chat エージェントと SharePoint エージェントに Copilot Studio 容量パックを使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/pay-as-you-go/copilot-capacity-packs", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
