@@ -8,11 +8,11 @@
       "label": "開発中",
       "title": {
         "ja": "Copilot Studio のエージェントが Web を閲覧・操作（開発中）",
-        "subtitleJa": "GitHub Copilot ハーネス上で、Web の操作とファイル取得を任せられます",
-        "en": "Copilot Studio: Computer Use for web browsing on GitHub Copilot Harness"
+        "subtitleJa": "Microsoft Copilot ハーネス上で、Web の操作とファイル取得を任せられます",
+        "en": "Copilot Studio: Computer Use for web browsing on Microsoft Copilot Harness"
       },
       "meta": {
-        "publishedJst": "2026-10-20",
+        "publishedJst": "2026-10-29",
         "availability": [],
         "status": "In development",
         "products": ["Copilot Studio", "Microsoft Copilot Studio"],
@@ -42,7 +42,7 @@
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "GitHub Copilot ハーネスのネイティブ機能として、Web の閲覧と操作を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft Copilot ハーネスのネイティブ機能として、Web の閲覧と操作を提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
             { "text": "Web ページの移動、情報の抽出、ファイルのダウンロードを自然言語で指示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
             { "text": "提供対象は Web、クラウドは Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
@@ -54,8 +54,8 @@
           "priority": "core",
           "items": [
             { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "GitHub Copilot ハーネスのエージェントは Copilot クレジットを使用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T23:30:00Z" }] },
-            { "text": "Copilot Studio 上では、顧客データは GitHub Copilot サービスに送信・処理されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用（Important）", "retrievedAt": "2026-10-20T23:30:00Z" }] }
+            { "text": "ハーネスは、モデルとエージェントの間でモデルやツールの呼び出しを制御するランタイム", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "冒頭", "retrievedAt": "2026-10-29T05:55:00Z" }] },
+            { "text": "使用するハーネスにより、課金や利用できる機能が変わる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "なぜハーネスが重要なのか", "retrievedAt": "2026-10-29T05:55:00Z" }] }
           ]
         },
         {
@@ -70,7 +70,6 @@
         }
       ],
       "glossary": [
-        { "termKey": "gh-harness", "term": "GitHub Copilot ハーネス", "type": "feature", "oneLine": { "text": "推論重視の多段階エージェントやワークフローを支える Copilot Studio の実行基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "GitHub Copilot の活用", "retrievedAt": "2026-10-20T23:30:00Z" }] } },
         { "termKey": "harness", "term": "ハーネス", "type": "term", "oneLine": { "text": "モデルとエージェントの間で動くランタイムで、モデルやツールの呼び出しを制御する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview", "locator": "冒頭", "retrievedAt": "2026-10-20T23:30:00Z" }] } },
         { "termKey": "computer-use", "term": "コンピューターの使用", "type": "feature", "oneLine": { "text": "エージェントが画面上のボタンや入力欄を操作してタスクを自動化するツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/computer-use", "locator": "冒頭", "retrievedAt": "2026-10-20T23:30:00Z" }] } },
         { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
@@ -78,7 +77,7 @@
       "qa": [
         {
           "question": "現在の「コンピューターの使用」と何が違いますか？",
-          "answer": { "text": "現行ツールは Windows コンピューター上でアプリや Web を操作します。今回の更新は GitHub Copilot ハーネスのネイティブな Web 閲覧機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/computer-use", "locator": "冒頭", "retrievedAt": "2026-10-20T23:30:00Z" }] }
+          "answer": { "text": "現行ツールは Windows コンピューター上でアプリや Web を操作します。今回の更新は Microsoft Copilot ハーネスのネイティブな Web 閲覧機能です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/computer-use", "locator": "冒頭", "retrievedAt": "2026-10-20T23:30:00Z" }] }
         },
         {
           "question": "いつ使えるようになりますか？",
