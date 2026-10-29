@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ac6c729f229a3be0",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Dynamics 365 Contact Center: ユーザー グループのブルズアイ ルーティングで会話を振り分け",
+        "subtitleJa": "待ち時間に応じて、割り当て対象の担当者を段階的に広げられます",
+        "en": "Dynamics 365 Contact Center: Use bullseye routing with user groups to orchestrate conversations"
+      },
+      "meta": {
+        "publishedJst": "2026-10-29",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Dynamics 365 Contact Center"],
+        "categories": ["dynamics"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Contact Center",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Contact Center の管理者・作成者**と、顧客対応の担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": {
+          "text": "固定プールで待たされる状況を減らし、最適な担当者への割り当てと待ち時間の短縮を両立できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "ビジネス価値", "retrievedAt": "2026-10-29T07:50:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者がユーザー グループをキューに関連付け、階層ごとの待機時間の閾値を設定すると利用できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "会話の待ち時間が長くなるにつれ、**対象となる担当者のプールが自動で拡大**されます。最適な担当者から始めて、必要に応じて広げます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "待ち時間が長くなるごとに、ユーザー グループの階層を順に有効化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "ビジネス価値", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "会話オーケストレーションが待ち時間を監視し、閾値で対象プールを自動拡大", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "例: 0–30 秒は Tier 1、30–60 秒は Tier 2 を含め、60 秒以降は全員が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者がユーザー グループをキューに関連付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "階層ごとに待機時間の閾値を定義する（階層数は必要に応じて設定可能）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "リリース プラン上のパブリック プレビューは 2026 年 7 月 9 日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "冒頭の提供時期の表", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "対応リージョンと言語は、Microsoft の Feature Geography / Language レポートで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "地域・利用可能な言語", "retrievedAt": "2026-10-29T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "クラウド: Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プラットフォーム: Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "動的な優先度エスカレーションやオーバーフローなど、他の会話オーケストレーション シナリオと連携できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "まず専門性の高い少人数のグループを Tier 1 にして、閾値を調整しながら試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "bullseye-routing", "term": "ブルズアイ ルーティング", "type": "feature", "oneLine": { "text": "待ち時間に応じて、割り当て対象の担当者を同心円状に広げる階層的な割り当て方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] } },
+        { "termKey": "user-group", "term": "ユーザー グループ", "type": "term", "oneLine": { "text": "管理者が階層ごとに定義し、キューに関連付ける担当者のまとまり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] } },
+        { "termKey": "conversation-orchestration", "term": "会話オーケストレーション", "type": "feature", "oneLine": { "text": "各会話の待ち時間を監視し、閾値で対象プールを自動的に拡大する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "従来の固定プールによる割り当てと何が違いますか？",
+          "answer": { "text": "従来は各キューの固定された代表者プールを使うため、誰もいないと顧客が待たされがちでした。ブルズアイ ルーティングは待ち時間に応じて対象を広げます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "ビジネス価値", "retrievedAt": "2026-10-29T07:50:00Z" }] }
+        },
+        {
+          "question": "手動での操作は必要ですか？",
+          "answer": { "text": "拡大は待機時間の閾値で自動的に行われ、手動の介入は不要です。設定は管理者が事前に行います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576606",
+        "learn": [
+          {
+            "title": "ユーザーグループでブルズアイルーティングを使って会話をオーケストレーションします",
+            "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
