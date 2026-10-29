@@ -3,68 +3,87 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-d0a9bb85668fa032",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "Copilot Studio でメーカー間のエージェント共有が可能に（開発中）",
-        "subtitleJa": "新しいハーネスで、他のメーカーに閲覧用・編集用の権限を付与できます",
+        "ja": "Copilot Studio で作成者間のエージェント共有が可能に（提供開始）",
+        "subtitleJa": "新しい Microsoft Copilot ハーネスで、他の作成者に閲覧・編集の権限を付与できます",
         "en": "Microsoft Copilot Studio: Agent Sharing amongst makers"
       },
       "meta": {
-        "publishedJst": "2026-08-29",
+        "publishedJst": "2026-10-29",
         "availability": [],
-        "status": "In development",
+        "status": "Launched",
         "products": ["Copilot Studio"],
         "categories": ["copilot-studio", "agents"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Copilot Studio",
         "sourceName": "Microsoft 365 Roadmap"
       },
       "audience": {
-        "who": { "text": "**Copilot Studio でエージェントを作るメーカー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "エージェントを他のメーカーと共有し、役割に応じた権限を付与できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントを他の作成者と共有し、分析・評価の閲覧や共同編集ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "required": "optional",
+        "summary": { "text": "共同編集で共有するには、共有側にシステム管理者ロールが必要な場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-29T07:50:00Z" }] }
       },
       "beforeAfter": {
-        "after": { "text": "新しい GHCP ハーネスで、他のメーカーに **Agent Viewer** または **Editor** の権限を付与してエージェントを共有できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "after": { "text": "新しい Microsoft Copilot ハーネスで、**他の作成者にエージェントを共有**できます。権限は閲覧中心の Agent Viewer か、編集まで可能な Editor から選べます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "提供内容",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
             { "text": "Agent Viewer：分析・評価の閲覧のみ可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
             { "text": "Editor：エージェントの表示・編集・構成・共有・公開が可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "権限に応じたセキュリティ ロールは自動で割り当てられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "セキュリティ ロールは自動で割り当てられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "提供範囲・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "段階は開発中。提供範囲は Worldwide（標準マルチテナント）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "現行の標準ハーネスでは、共同編集の共有に Environment Maker ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+            { "text": "エージェントを開き、「...」>「共有」から共有先を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "共有先は Copilot Studio のユーザー ライセンスが必要（トライアル登録も可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "冒頭の Note", "retrievedAt": "2026-10-29T07:50:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "今から確認できること",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "現行の共同編集の共有は、組織内の個々のユーザーに対してのみ可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-20T12:00:00Z" }] },
-            { "text": "現行でも「エージェント ビューアー」ロールで評価を閲覧・実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "エージェントの評価を共有しましょう", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+            { "text": "共同編集者には Environment Maker の Dataverse ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "共有後、相手の環境で使えるまで最大 10 分かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-29T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "チャット共有は、セキュリティ グループや組織全体に利用を許可する方法", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "冒頭", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "共同編集の共有では、エージェントの削除はできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-29T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "評価担当者には Agent Viewer、開発メンバーには Editor を割り当てる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
@@ -72,12 +91,12 @@
         { "termKey": "agent-viewer", "term": "Agent Viewer", "type": "feature", "oneLine": { "text": "エージェントの評価ページへのアクセスを共有する、閲覧・実行用のロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "エージェント・ビューワーの役割とは何ですか?", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
         { "termKey": "editor", "term": "Editor", "type": "feature", "oneLine": { "text": "エージェントの表示・編集・構成・共有・公開ができる権限。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "environment-maker", "term": "Environment Maker", "type": "term", "oneLine": { "text": "共同編集者に必要な Dataverse セキュリティ ロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-20T12:00:00Z" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能がまだ開発段階にあることを示す。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
-          "question": "現在の Copilot Studio でもエージェントを共同編集できますか？",
-          "answer": { "text": "はい。共同編集者に表示・編集・構成・共有・発行の権限を付与できます。削除はできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-10-20T12:00:00Z" }] }
+          "question": "共有先に必要なライセンスは？",
+          "answer": { "text": "Copilot Studio のユーザー ライセンスを持つユーザーに共有できます。未所有でもトライアルに登録できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "冒頭の Note", "retrievedAt": "2026-10-20T12:00:00Z" }] }
         },
         {
           "question": "共同編集者にはどのロールが必要ですか？",
