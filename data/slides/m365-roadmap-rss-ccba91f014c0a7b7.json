@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ccba91f014c0a7b7",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のコスト管理を Microsoft 365 管理センターに拡張",
+        "subtitleJa": "Copilot クレジットの支出を、管理センターで一元的に管理できるようになります",
+        "en": "Microsoft Copilot Studio: Copilot studio cost controls in MAC"
+      },
+      "meta": {
+        "publishedJst": "2026-10-30",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio", "Microsoft 365 admin center"],
+        "categories": ["copilot-studio", "admin"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft 365 管理者**と、Copilot Studio でエージェントを作る人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "使用量ベースの AI ワークロードの Copilot クレジット支出を、一か所で管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため今は対応不要。現行のコスト管理の設定内容を把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Studio のコスト管理が**Microsoft 365 管理センター**に加わり、Copilot クレジットの支出を一元的に管理できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Studio のコスト管理を Microsoft 365 管理センターに拡張", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "使用量ベースの AI ワークロード全体の Copilot クレジット支出を管理", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Power Platform 管理センターのコスト管理機能も引き続き利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（Standard Multi-Tenant）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センターの Copilot > Cost Management で使用量ベースの請求を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locator": "使用量ベースの課金の概要", "retrievedAt": "2026-10-30T05:56:00Z" }] },
+            { "text": "支出ポリシーで月間の使用制限とアラートを設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locator": "使用量ベースの課金の概要", "retrievedAt": "2026-10-30T05:56:00Z" }] }
+          ]
+        },
+        {
+          "id": "roles",
+          "heading": "関連する管理者ロール",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "グローバル管理者と課金管理者が請求方法を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locator": "ロールと要件", "retrievedAt": "2026-10-30T05:56:00Z" }] },
+            { "text": "AI 閲覧者などの閲覧者ロールは消費状況を読み取り専用で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locator": "ロールと要件", "retrievedAt": "2026-10-30T05:56:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-credit", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "使用量ベースの請求で、Microsoft Copilot の AI 機能の利用量を測る単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locator": "冒頭", "retrievedAt": "2026-10-30T05:56:00Z" }] } },
+        { "termKey": "spending-policy", "term": "支出ポリシー", "type": "feature", "oneLine": { "text": "グループやサービスごとに、月間の使用制限とアラートを定める設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locator": "使用量ベースの課金の概要", "retrievedAt": "2026-10-30T05:56:00Z" }] } },
+        { "termKey": "mac", "term": "Microsoft 365 管理センター", "type": "product", "oneLine": { "text": "Copilot > Cost Management ノードでコスト管理ダッシュボードを提供する管理ポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locator": "使用量ベースの課金の概要", "retrievedAt": "2026-10-30T05:56:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Power Platform 管理センターのコスト管理はなくなりますか？",
+          "answer": { "text": "いいえ。ロードマップによると、Copilot Studio のコスト管理機能は Power Platform 管理センターでも引き続き利用できます。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップには提供月が示されていないため、現時点では未確定です。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577834",
+        "learn": [
+          { "title": "Copilot クレジットの使用量ベースの請求を設定する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/usage-based-billing-copilot-credits-setup", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
