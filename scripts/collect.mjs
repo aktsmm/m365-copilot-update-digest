@@ -483,6 +483,10 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/microsoft copilot studio: copilot studio cost controls in mac/.test(text)) {
+    return "Microsoft Copilot Studio のコスト管理を Microsoft 365 管理センターに拡張します。管理者は、Power Platform 管理センターの既存機能を維持したまま、使用量ベースの AI ワークロードにおける Copilot クレジットの支出を一元管理できます。";
+  }
+
   if (/ai citations analytics for documents and pages/.test(text)) {
     return "Copilot と AI エージェントによる SharePoint のドキュメント、ニュース、ページの利用状況を追跡できます。各ページやファイルが Copilot の応答で参照された頻度を確認でき、サイト コンテンツの引用状況も把握できます。";
   }
