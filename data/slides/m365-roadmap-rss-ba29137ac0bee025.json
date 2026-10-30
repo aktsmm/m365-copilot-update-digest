@@ -3,18 +3,18 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-ba29137ac0bee025",
-      "kind": "in-development",
+      "kind": "rolling-out",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "展開中",
       "title": {
         "ja": "Outlook の Copilot Chat が受信トレイ・予定表・組織データを横断して推論",
         "subtitleJa": "Microsoft Copilot ライセンスがなくても、メールや予定を踏まえた回答を得られます",
         "en": "Microsoft Copilot (Microsoft 365): Copilot Chat in Outlook expands to reason over inbox, calendar, and enterprise data"
       },
       "meta": {
-        "publishedJst": "2026-09-26",
+        "publishedJst": "2026-10-30",
         "availability": [],
-        "status": "In development",
+        "status": "Rolling out",
         "products": ["Microsoft 365 Copilot", "Outlook", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["copilot-chat", "outlook"],
         "importance": "normal",
@@ -30,7 +30,7 @@
       },
       "action": {
         "required": "no",
-        "summary": { "text": "利用者側の作業は不要。提供範囲（GCC / GCC High / DoD）を確認しておく", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "summary": { "text": "利用者側の作業は不要。展開は GCC / GCC High / DoD 向けに進行中", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "beforeAfter": {
         "after": {
@@ -43,41 +43,61 @@
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "対象: Copilot Chat in Outlook（Android / デスクトップ / iOS / Mac / Web）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "提供範囲は GCC / GCC High / DoD（ロードマップ上は開発中）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "メール全体の検索・要約、対応事項の抽出、予定表の確認などを依頼できる（商用版の例）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+            { "text": "推論の範囲が、単一のメール スレッドから受信トレイ全体・予定表・会議などへ拡大（商用版の説明）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-30T05:50:00Z" }] },
+            { "text": "対象は、ユーザーが Microsoft 365 ですでにアクセスできるデータ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-30T05:50:00Z" }] },
+            { "text": "メールの検索・要約、対応事項の抽出、予定表の確認などを依頼できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-30T05:50:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "推論の対象は、ユーザーが Microsoft 365 ですでにアクセスできるデータ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-21T21:50:00Z" }] },
-            { "text": "従来は直近のメッセージ範囲に限られていた（商用版の説明）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+            { "text": "Outlook を開いて Copilot Chat を起動する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook（Try this）", "retrievedAt": "2026-10-30T05:50:00Z" }] },
+            { "text": "予定表や受信トレイの内容に関する質問をして、回答を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook（Try this）", "retrievedAt": "2026-10-30T05:50:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "利用前の準備",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "商用版の案内: Outlook で Copilot Chat を開き、予定表や受信トレイの質問を試す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook（Try this）", "retrievedAt": "2026-10-21T21:50:00Z" }] },
-            { "text": "提供時期は決まっていないため、ロードマップの更新を定期的に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "Microsoft Copilot ライセンスのない Copilot Chat ユーザーが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "従来の推論は、直近のメッセージ範囲に限られていた（商用版の説明）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-30T05:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Outlook の Android / デスクトップ / iOS / Mac / Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラウドは GCC / GCC High / DoD（ロードマップ上は展開中）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "「上司からのプロジェクト X の最新の連絡は？」のように、メール全体から情報を探す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-30T05:50:00Z" }] },
+            { "text": "予定表の直近の予定や空きを確認し、スケジュール調整に役立てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-30T05:50:00Z" }] }
           ]
         }
       ],
       "glossary": [
         { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "feature", "oneLine": { "text": "Outlook などで使える、Microsoft Copilot ライセンスなしでも利用できるチャット体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-21T21:50:00Z" }] } },
         { "termKey": "enterprise-data", "term": "組織データ", "type": "term", "oneLine": { "text": "受信トレイ・予定表・会議など、ユーザーが Microsoft 365 経由ですでにアクセスできるデータ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locator": "2026年7月1日 Outlook", "retrievedAt": "2026-10-21T21:50:00Z" }] } },
-        { "termKey": "label-indev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供が段階的に始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
