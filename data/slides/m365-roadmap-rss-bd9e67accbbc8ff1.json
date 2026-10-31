@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-bd9e67accbbc8ff1",
+      "kind": "rolling-out",
+      "kindSource": "ring",
+      "label": "展開中",
+      "title": {
+        "ja": "Teach で複数週にわたる単元計画を作成可能に（教育）",
+        "subtitleJa": "授業計画やクイズを単元単位でまとめて整理できます",
+        "en": "Microsoft Copilot (Microsoft 365): [Education] Create multi-week unit plans with Teach"
+      },
+      "meta": {
+        "publishedJst": "2026-10-31",
+        "availability": [],
+        "status": "Rolling out",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**教育者（教職員）**と、Teach の利用を管理する IT 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "複数の授業計画とクイズを、単元単位でつなげて整理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "Teach は既定で有効。無効にしたい場合は管理者が Copilot Chat へのアクセスを削除する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "Teach で、**複数の授業やクイズを束ねた単元計画**を作成できます。計画の構成要素は教育者が調整できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teach で数週間にわたる構造化された単元計画を作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "計画の構成要素をカスタマイズし、授業計画やクイズを単元内で関連付け", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Teach は授業計画の作成や、テスト・ルーブリックなどの資料の下書きを支援する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web・Windows・Mac の Microsoft Copilot アプリの Teach から利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] },
+            { "text": "教職員向け A1/A3/A5 の SKU が割り当てられ、Copilot Chat が有効なユーザーが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "学生、企業の顧客、個人アカウントでは Teach を利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] },
+            { "text": "Teach の無効化は、Copilot Chat へのアクセス削除の手順で行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲: Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象プラットフォーム: デスクトップ、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず数名の教育者で単元計画を試し、計画の構成を共有する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "teach", "term": "Teach", "type": "feature", "oneLine": { "text": "教育者が AI 搭載の教育ツールにアクセスする、Microsoft Copilot アプリ内のホーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] } },
+        { "termKey": "copilot-chat", "term": "Copilot Chat", "type": "product", "oneLine": { "text": "Teach の利用には、Copilot Chat が有効であることが必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] } },
+        { "termKey": "unit-plan", "term": "単元計画", "type": "term", "oneLine": { "text": "複数の授業計画やクイズを、数週間単位でまとめた計画。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-rolling", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Teach を使えるのはどのユーザーですか？",
+          "answer": { "text": "教職員向け Microsoft 365 A1/A3/A5 または Office 365 A1/A1 Plus/A3/A5 が割り当てられ、Copilot Chat が有効なユーザーです。学生や個人アカウントは対象外です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] }
+        },
+        {
+          "question": "管理者は Teach を無効にできますか？",
+          "answer": { "text": "Teach は既定で有効です。選択したユーザーまたは全ユーザーの Copilot Chat へのアクセスを削除することで無効にできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locator": "Microsoft Copilot アプリで教える", "retrievedAt": "2026-10-31T05:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577392",
+        "learn": [
+          { "title": "Microsoft 365 for Education の AI 機能を管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/education/guide/1-reference/manage-microsoft-365-education-ai-features", "locale": "ja-jp" }
+        ]
+      }
+    }
+  ]
+}
