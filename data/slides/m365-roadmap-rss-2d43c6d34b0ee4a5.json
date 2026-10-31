@@ -3,96 +3,115 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-2d43c6d34b0ee4a5",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "Federated Copilot コネクタで作成・更新・削除アクションに対応予定（開発中）",
-        "subtitleJa": "外部サービスの操作を、Copilot Chat から離れずに実行できるようになります",
+        "ja": "Federated Copilot Connectors が書き込み・更新・削除アクションに対応（提供開始）",
+        "subtitleJa": "外部サービスの作成・更新・削除を、Copilot Chat から実行できます",
         "en": "Microsoft Copilot (Microsoft 365): Federated Copilot Connectors will support write, update and delete actions"
       },
       "meta": {
-        "publishedJst": "2026-09-23",
+        "publishedJst": "2026-10-31",
         "availability": [],
-        "status": "In development",
-        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["agents"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Desktop", "Web"],
         "productArea": "Microsoft 365 Copilot",
         "sourceName": "Microsoft 365 Roadmap"
       },
       "audience": {
-        "who": { "text": "**Federated Copilot コネクタを使うユーザー**と、コネクタを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "メールからの課題作成や CRM レコードの更新を、Copilot Chat から実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-17T00:00:00Z" }] },
+        "who": { "text": "**Federated Copilot Connectors を使うユーザー**と、コネクタを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot を離れずに、外部サービスの内容を作成・更新・削除できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "changeNature": "benefit"
       },
       "action": {
         "required": "optional",
-        "summary": { "text": "管理者は、書き込み系ツールを持つコネクタの機能とプライバシー条件を事前に確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "View a connector's tools in the admin center", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        "summary": { "text": "利用には、管理者によるコネクタの有効化とユーザー自身のサインインが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "User experience and controls", "retrievedAt": "2026-10-31T07:40:00Z" }] }
       },
       "beforeAfter": {
-        "after": { "text": "コネクタが対応するツールを提供していれば、外部サービス上で**作成・更新・削除**を Copilot に依頼でき、画面を行き来せず作業を完結できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+        "after": { "text": "コネクタが対応するツールを提供していれば、Copilot Chat から**外部サービスのデータを作成・更新・削除**できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-31T07:40:00Z" }] }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "対応予定の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "MCP 型コネクタの作成・更新・削除ツールを Copilot Chat で利用可能にする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "操作は本人の権限で外部サービス上で実行され、Microsoft 365 にデータは索引化されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-17T00:00:00Z" }] },
-            { "text": "利用できる操作は、コネクタの発行元が公開するツールによって決まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+            { "text": "操作は外部サービス側でユーザーの権限のまま実行される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-31T07:40:00Z" }] },
+            { "text": "データは Microsoft 365 にインデックスされない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-31T07:40:00Z" }] },
+            { "text": "実行前に確認カードが出て、承認するまで何も送信されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-31T07:40:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "作成・更新・削除ツールは、既定でユーザーの明示的な承認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-17T00:00:00Z" }] },
-            { "text": "Researcher エージェントは書き込み系に非対応で、読み取り専用のまま", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Researcher agent", "retrievedAt": "2026-10-17T00:00:00Z" }] },
-            { "text": "書き込みツールはコネクタの一部で、個別に有効化する設定はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Federated connectors in the admin center", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+            { "text": "管理者がコネクタを有効にし、ユーザーが利用できる状態にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "User experience and controls", "retrievedAt": "2026-10-31T07:40:00Z" }] },
+            { "text": "Copilot Chat の「...」→ 設定 → ソース → データ ソースを選び、接続する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "User experience and controls", "retrievedAt": "2026-10-31T07:40:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "事前の準備",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "ユーザー向け案内に、操作は本人の権限で実行されることを追記する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "View a connector's tools in the admin center", "retrievedAt": "2026-10-17T00:00:00Z" }] },
-            { "text": "承認方法は「1 回のみ許可」「会話中は許可」「常に許可」から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+            { "text": "使えるアクションは、コネクタ発行元が公開するツールで決まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-31T07:40:00Z" }] },
+            { "text": "ユーザーは外部サービスに自分の資格情報で接続しておく必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-31T07:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "承認の選択肢",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "「1 回だけ許可」「会話中は許可」「常に許可」「キャンセル」から選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-31T07:40:00Z" }] },
+            { "text": "発行元がツールを追加・変更すると、承認が必要な状態に戻る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Manage tool permissions for write, update, and delete", "retrievedAt": "2026-10-31T07:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エスカレーションのメールを、プロジェクト管理ツールの課題にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-31T07:40:00Z" }] },
+            { "text": "CRM のレコード更新や、チケットへのコメント追加を Copilot Chat から行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Write, update, and delete actions", "retrievedAt": "2026-10-31T07:40:00Z" }] }
           ]
         }
       ],
       "glossary": [
-        { "termKey": "federated-connector", "term": "Federated Copilot コネクタ", "type": "feature", "oneLine": { "text": "Model Context Protocol を使い、外部サービスのデータをリアルタイムに取得する Copilot コネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
-        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
-        { "termKey": "connectors-gallery", "term": "コネクタ ギャラリー", "type": "feature", "oneLine": { "text": "Microsoft 公開、またはパートナーが提出し承認されたフェデレーテッド コネクタが並ぶ一覧。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Federated connectors in the Connectors Gallery", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "federated-connector", "term": "Federated Copilot Connectors", "type": "feature", "oneLine": { "text": "外部データをインデックスせず、ライブで取得して Copilot で使うコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-31T07:40:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Dynamic tooling through MCP", "retrievedAt": "2026-10-31T07:40:00Z" }] } },
+        { "termKey": "synced-connector", "term": "同期型コネクタ", "type": "term", "oneLine": { "text": "データを Microsoft Graph にインデックスするタイプのコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "FAQs", "retrievedAt": "2026-10-31T07:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
-          "question": "いつから使えるようになりますか？",
-          "answer": { "text": "Learn には 2026 年 10 月初旬から段階的に展開が始まると記載されています。Copilot の体験ごとの提供状況は、Learn の該当セクションで確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Note", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          "question": "同期型コネクタとの違いは何ですか？",
+          "answer": { "text": "同期型は Microsoft Graph にデータをインデックスしますが、Federated は都度ライブで取得し、インデックスしません。接続にはユーザー自身の資格情報が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "FAQs", "retrievedAt": "2026-10-31T07:40:00Z" }] }
         },
         {
           "question": "ユーザーが意図しない変更が行われることはありますか？",
-          "answer": { "text": "作成・更新・削除は既定で承認が必要で、承認前は外部サービスに何も送信されません。拒否した操作は実行されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          "answer": { "text": "作成・更新・削除は既定で承認が必要で、承認前は外部サービスに何も送信されません。拒否した操作は実行されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-31T07:40:00Z" }] }
         },
         {
-          "question": "管理者は使えるツールを確認できますか？",
-          "answer": { "text": "対応するコネクタでは、管理センターの詳細ページの「Tools」に、データを変更・削除できるツールを含む一覧が表示される予定です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "View a connector's tools in the admin center", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          "question": "MCP サーバーが IP アドレスで制限している場合は？",
+          "answer": { "text": "ファイアウォールで、Microsoft 365 Copilot の静的エグレス IP アドレスを許可します。MCP 型では静的エグレスが既定で有効です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Network requirements", "retrievedAt": "2026-10-31T07:40:00Z" }] }
         }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570964",
         "learn": [
-          { "title": "Federated connectors overview（書き込み・更新・削除アクション）", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview#write,-update,-and-delete-actions-coming-soon", "locale": "en-us" }
+          { "title": "Federated connectors overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locale": "en-us" }
         ]
       },
       "render": { "continuationRequired": false }
