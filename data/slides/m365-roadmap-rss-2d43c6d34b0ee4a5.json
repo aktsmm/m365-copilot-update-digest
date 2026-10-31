@@ -89,9 +89,9 @@
         }
       ],
       "glossary": [
-        { "termKey": "federated-connector", "term": "Federated Copilot Connectors", "type": "feature", "oneLine": { "text": "外部データをインデックスせず、ライブで取得して Copilot で使うコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
-        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
-        { "termKey": "connectors-gallery", "term": "コネクタ ギャラリー", "type": "feature", "oneLine": { "text": "Microsoft 公開、またはパートナーが提出し承認されたフェデレーテッド コネクタが並ぶ一覧。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Federated connectors in the Connectors Gallery", "retrievedAt": "2026-10-17T00:00:00Z" }] } },
+        { "termKey": "federated-connector", "term": "Federated Copilot Connectors", "type": "feature", "oneLine": { "text": "外部データをインデックスせず、ライブで取得して Copilot で使うコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "What are federated connectors?", "retrievedAt": "2026-10-31T07:40:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のツールやデータにつながるための共通の仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Dynamic tooling through MCP", "retrievedAt": "2026-10-31T07:40:00Z" }] } },
+        { "termKey": "synced-connector", "term": "同期型コネクタ", "type": "term", "oneLine": { "text": "データを Microsoft Graph にインデックスするタイプのコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "FAQs", "retrievedAt": "2026-10-31T07:40:00Z" }] } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
@@ -101,7 +101,7 @@
         },
         {
           "question": "ユーザーが意図しない変更が行われることはありますか？",
-          "answer": { "text": "作成・更新・削除は既定で承認が必要で、承認前は外部サービスに何も送信されません。拒否した操作は実行されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-17T00:00:00Z" }] }
+          "answer": { "text": "作成・更新・削除は既定で承認が必要で、承認前は外部サービスに何も送信されません。拒否した操作は実行されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/federated-connectors-overview", "locator": "Confirm an action", "retrievedAt": "2026-10-31T07:40:00Z" }] }
         },
         {
           "question": "MCP サーバーが IP アドレスで制限している場合は？",
