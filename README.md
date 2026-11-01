@@ -245,7 +245,7 @@ workflow / validator 変更は **Validate automation workflows** が GitHub 上�
 
 `maintenance.md`（gh-aw）が約 2 週間ごと（15 日と 29 日の 03:30 JST）に、収集・要約・スライド・自動マージ・デプロイが回り続けているかを点検します。一時的な失敗は該当 workflow を再起動し、検証ルールの行き過ぎなど小さな不具合は `[maintenance]` PR で直し、トークン失効などは Issue で知らせます。問題がなければ `Pipeline healthy` の Issue を作り、本家（azure-update-digest）の新しい更新も一覧にします。モデルは `claude-sonnet-5.5` です。
 
-**スライド生成の失敗は、自動で直して再発を防ぎます。** 同じ更新が 3 回続けて失敗（保留）すると、保守エージェントがすぐ起動して、`data/slide-retry.json` の失敗理由を読みます。検証ルールが厳しすぎれば `scripts/lib/slides.mjs` を、エージェントが同じ間違いを繰り返すなら `config/slide-learned-rules.md`（スライド生成エージェントが毎回最初に読む学習ルール）に 1 行足す PR を出し、直した更新の保留を解除します。この PR は、変更が許可したファイルだけで、危ない書き方がなく、別ジョブでテスト一式を通ったときに、`auto-merge-maintenance.yml` が自動でマージします。それ以外（資料がなくて作れないなど）は Issue で知らせます。
+**スライド生成の失敗は、自動で直して再発を防ぎます。** 同じ更新が 3 回続けて失敗（保留）すると、保守エージェントがすぐ起動して、`data/slide-retry.json` の失敗理由を読みます。検証ルールが厳しすぎれば `scripts/lib/slides.mjs` を、エージェントが同じ間違いを繰り返すなら `config/slide-learned-rules.md`（スライド生成エージェントが毎回最初に読む学習ルール）に 1 行足す PR を出し、直した更新の保留を解除します。この PR は、変更が許可したファイルだけで、危ない書き方がなく、別ジョブでテスト一式を通ったときに、`auto-merge-maintenance.yml` が自動でマージします。それ以外（資料がなくて作れないなど）は Issue で知らせます。 想定問答（Q&A）が根拠不足で作れないスライドは、config/qa-skip.json に載せて毎回の再試行から外します（同じ失敗の繰り返しを防ぎます）。
 
 ### 必要な設定
 

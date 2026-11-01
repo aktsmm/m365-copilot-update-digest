@@ -89,6 +89,8 @@ You keep this repository's automation running without human help. Run a health c
 3. For every held update whose cause you fixed in your pull request, remove its record with `node scripts/slide-retry.mjs reset <id>` so the dispatcher retries it after the fix is merged. Never reset an update whose cause is not fixed.
 4. Explain in the pull request body: which ids, the common error, the rule or learned prompt rule you changed, and why it prevents a repeat.
 
+Slide Q&A is separate: when `slide-qa.lock.yml` fails repeatedly for the same slide (the agent could not confirm any answer, so it finished without output), add that slide's id to `skip` in `config/qa-skip.json`. `scripts/pending-qa.mjs` then stops dispatching it. Remove an id from that list when the slide gains Learn references.
+
 Your pull request is merged automatically when its checks pass and it only touches the allowed paths (`scripts/lib/`, `scripts/*.mjs`, `tests/`, `config/`, `docs/`, `data/slide-retry.json`). Keep to those paths.
 
 ## Procedure

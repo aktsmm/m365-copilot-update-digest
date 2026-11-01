@@ -56,6 +56,11 @@ post-steps:
       SLIDE_ID: ${{ inputs.id }}
     run: |
       npm ci
+      # 確認できる Q&A がなく、何も編集しなかった場合（noop を呼ばずに終えたときも）は、失敗にせず終える
+      if git diff --quiet -- "data/slides/${SLIDE_ID}.json"; then
+        echo "no changes to the slide; nothing to validate"
+        exit 0
+      fi
       node scripts/check-qa-only.mjs "$SLIDE_ID"
       npm run validate:slides
 safe-outputs:

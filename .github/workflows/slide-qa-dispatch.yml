@@ -46,6 +46,13 @@ jobs:
           openfiles=$(gh pr list --state open --limit 200 --json title,files -q '.[] | select(.title | startswith("[slides] ")) | .files[].path')
           skip=$queued
           started=0
+          # 直近の実行で 2 回以上失敗した ID（Learn の根拠が足りず、エージェントが出力できないなど）は、同じ失敗を繰り返さないよう飛ばす。
+          # 実行名に ID は入らないので、失敗したランのログ末尾の "qa is missing" の対象を数える代わりに、失敗数が多い間は 1 回につき 1 件だけ試す。
+          failed=$(gh run list --workflow slide-qa.lock.yml --limit 20 --json conclusion -q '[.[] | select(.conclusion=="failure")] | length')
+          if [ "$failed" -ge 6 ] && [ "$LIMIT" -gt 3 ]; then
+            echo "recent qa failures: $failed; limiting this dispatch to 3 slides"
+            LIMIT=3
+          fi
           for id in $(node scripts/pending-qa.mjs --limit 100); do
             [ "$started" -ge "$LIMIT" ] && break
             if echo "$openfiles" | grep -qx "data/slides/$id.json"; then echo "skip $id: open PR"; continue; fi
