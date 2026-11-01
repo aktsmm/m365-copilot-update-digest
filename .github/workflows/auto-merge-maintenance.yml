@@ -37,7 +37,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          allow='^(scripts/lib/(slides|slide-html|slide-retry|agent-summaries)\.mjs|scripts/(validate-slides|slide-input|pending-slides|slide-retry|pending-qa|check-qa-only)\.mjs|schema/slide\.schema\.json|config/slide-learned-rules\.md|data/slide-retry\.json|docs/slide-schema\.md|tests/[A-Za-z0-9._-]+\.mjs)$'
+          allow='^(scripts/lib/(slides|slide-html|slide-retry|agent-summaries)\.mjs|scripts/(validate-slides|slide-input|pending-slides|slide-retry|pending-qa|check-qa-only)\.mjs|schema/slide\.schema\.json|config/(slide-learned-rules\.md|qa-skip\.json)|data/slide-retry\.json|docs/slide-schema\.md|tests/[A-Za-z0-9._-]+\.mjs)$'
           while read -r n sha; do
             echo "== PR #$n @ $sha"
             files=$(gh api "repos/$GH_REPO/pulls/$n/files" --paginate --jq '.[] | "\(.status) \(.filename)"')
