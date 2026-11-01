@@ -187,15 +187,16 @@ Learn MCP は公開文書用の認証不要サービスです。cloud agent の�
 | 収集 | `collect-updates.yml` | 6 時間ごと | 5 系統の更新を取得し、データを main へ push（拒否されたら rebase して最大 3 回再試行）。Pages を再デプロイ |
 | 日本語要約 | `summarize.md`（gh-aw） | 6 時間ごと | 重要・注目の更新に見出し・要約・対象読者・対応を付ける。定型文だけの要約は検証で弾く |
 | スライド生成 | `slide-dispatch.yml` → `slide.md`（gh-aw） | 毎日 03:00 / 11:00 / 19:00 JST（各最大 30 件）と、収集が新しい更新を見つけたとき（最大 10 件） | 直近 3 か月の更新（重要度は問わず、重要なものから順）を 1 件 1 枚のスライド JSON にする。原文が変わって（段階が進んだ・タイトルが変わった）古くなったスライドは、先頭に並べて作り直す。起動済み・PR 済みの更新は飛ばす |
-| 想定問答の追加 | `slide-qa-dispatch.yml` → `slide-qa.md`（gh-aw） | 毎日 04:00 / 16:00 JST（各最大 20 件） | 既存スライドへ `qa` を追加する。`qa` 以外が変わったら失敗にする |
-| 自動マージ | `auto-merge-slides.yml` / `auto-merge-summaries.yml` | 3 時間ごと＋実行完了時 | 検証・描画確認を通った PR だけマージ。通らない PR はクローズし、次回の生成で作り直す |
+| 想定問答の追加 | `slide-qa-dispatch.yml` → `slide-qa.md`（gh-aw） | 毎日 04:00 / 16:00 JST（各最大 20 件） | 既存スライドへ `qa` を追加する。`qa` 以外が変わったら失敗にする。何も編集せず終えたときは失敗にしない。根拠が足りず作れないスライドは `config/qa-skip.json` で外し、失敗が続く間は 1 回の起動を 3 件に絞る |
+| 自動マージ | `auto-merge-slides.yml` / `auto-merge-summaries.yml` | 3 時間ごと＋実行完了時 | 検証・描画確認を通った PR だけマージ。通らない PR、main と衝突した PR（同じスライドを先に取り込み済み）はクローズし、次回の生成で作り直す。PR を作れず issue になった重複分も、スライドが main にあれば閉じる |
 | 見張り（AI なし） | `watchdog.yml` | 毎日 05:41 JST | 40 分を超えて動くエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 |
 | 失敗の自動修復 | `auto-merge-slides.yml` / `data/slide-retry.json` / `scripts/slide-retry.mjs` | スライド生成の失敗のたび | 検証・描画確認に落ちた理由を更新ごとに記録し、次の再試行でエージェントに渡す。3 回続けて失敗したら保留にして保守エージェントを起動する |
 | 保守 PR の自動マージ | `auto-merge-maintenance.yml` | 3 時間ごと＋保守の完了時 | 保守エージェントの [maintenance] PR を、許可したファイルだけの変更で、危ない書き方がなく、書き込み権限のない別ジョブでテスト一式を通ったときだけマージする |
 | 保守エージェント | `maintenance.md`（gh-aw） | 約 2 週間ごと | パイプライン全体を点検し、再起動・小修正・Issue で知らせる（下記） |
 | 失敗時の自動起動（AI なし） | `heal-on-failure.yml` | 収集・デプロイ・自動マージ・生成ディスパッチが失敗したとき | 保守エージェントを前倒しで起動する（6 時間以内に動いていれば何もしない） |
 | 毎日のフルテスト（AI なし） | `full-tests.yml` | 毎日 06:30 JST | main で検証とテスト一式（サイトのビルド・内部リンク検査を含む）を実行する。コードを変えなくても、データの更新だけで起きる不具合を見つける。スライドの充足率も確認する（`config/slide-coverage.json`。48 時間より前に出たのに本物のスライドがない更新が上限を超える、または保留が多いと失敗する。追いつき中の 2026-10-25 までは警告だけ）。失敗すると保守エージェントを前倒しで起動する |
-| 状況レポート（AI なし） | `pipeline-status.yml` / `npm run health` | 毎日 06:10 JST | 「Pipeline status」Issue を 1 つだけ保ち、件数・未作成・各ワークフローの成否・開いている PR/Issue を毎日更新する |
+| 状況レポート（AI なし） | `pipeline-status.yml` / `npm run health` | 毎日 06:10 JST | 「Pipeline status」Issue を 1 つだけ保ち、件数・未作成・各ワークフローの成否・開いている PR/Issue、公開サイトのスライド件数（リポジトリと一致しているか）を毎日更新する。未作成が 0 件のときは、1 日以上たったスライド生成失敗の Issue を自動で閉じる |
+| 補助の仕組み（AI なし） | `deploy-pages.yml` / `redeploy-pages-after-generated-pr-merge.yml` / `auto-merge-generated-pr.yml` / `reconcile-generated-prs.yml`（30 分ごと）/ `validate-generated-pr.yml` / `validate-automation-workflows.yml` / `rerun-blocked-copilot-workflows.yml` / `request-copilot-review.yml` / `author-automation-pr.yml` | 状況に応じて | Pages のデプロイ、生成 PR の検証・マージ・つじつま合わせ、承認待ちで止まった Copilot ワークフローの再実行、自動化 PR のレビュー依頼。サイトの固定・非表示は `config/overrides.json`、サイト名や紹介文は `config/site.json` |
 | トークン期限チェック | `token-expiry.yml` | 毎週月曜 | `COPILOT_GITHUB_TOKEN` の期限が 14 日以内なら Issue を作る（期限なしのトークンなら何もしない） |
 
 gh-aw のモデルは、日本語要約・スライド生成・想定問答・保守のすべて `claude-sonnet-5.5` です。変えるときは各 `.md` の `model:` を書き換えて `gh aw compile` を実行します。
