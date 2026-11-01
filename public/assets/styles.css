@@ -53,6 +53,26 @@ a {
   display: none !important;
 }
 
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  z-index: 100;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #0b2a4a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+main:focus {
+  outline: none;
+}
+
 .page-shell {
   width: min(1240px, calc(100% - 32px));
   margin: 0 auto;

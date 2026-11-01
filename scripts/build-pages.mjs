@@ -69,6 +69,7 @@ const TEXT = {
     navAbout: "About",
     navRepository: "Repository",
     demoNavLabel: "デモ一覧",
+    skipToContent: "本文へ移動",
     unofficialBadge: "Unofficial update digest",
     headerLead: "非公式アップデートダイジェスト",
     themeToggle: "ダークモード切り替え",
@@ -165,6 +166,7 @@ const TEXT = {
     navAbout: "About",
     navRepository: "Repository",
     demoNavLabel: "Demo sites",
+    skipToContent: "Skip to content",
     unofficialBadge: "Unofficial update digest",
     headerLead: "Unofficial update digest",
     themeToggle: "Toggle dark mode",
@@ -727,10 +729,13 @@ function renderLayout({
     <link rel="stylesheet" href="${escapeHtml(assetHref)}" />
   </head>
   <body class="${escapeHtml(bodyClass)}" ${bodyAttributes}>
+    <a class="skip-link" href="#main">${escapeHtml(TEXT[locale].skipToContent)}</a>
     <div class="page-shell">
       ${renderNav(locale, depth, activeNav, siteMeta, alternatePath)}
       ${renderDemoNav(locale)}
+      <main id="main" tabindex="-1">
       ${content}
+      </main>
       <footer class="site-footer">
         <p>${escapeHtml(TEXT[locale].footerLead)}</p>
       </footer>
@@ -995,7 +1000,7 @@ function renderExplorerShell(locale) {
   return `
     <section class="section-block explorer" data-explorer data-locale="${escapeHtml(locale)}">
       <h2 class="explorer-title">${escapeHtml(t.title)}</h2>
-      <p class="explorer-period" data-explorer-period></p>
+      <p class="explorer-period" data-explorer-period role="status" aria-live="polite"></p>
       <div class="filter-panel">
         <div class="filter-row">
           <label>${escapeHtml(t.start)} <input type="date" data-ex-start /></label>
@@ -1009,7 +1014,7 @@ function renderExplorerShell(locale) {
           <span class="export-selection">${escapeHtml(t.exportLabel)}: <strong data-ex-selcount>0</strong>
             <button type="button" class="btn-outline" data-ex-selall>${escapeHtml(t.selectAll)}</button>
             <button type="button" class="btn-outline" data-ex-selnone>${escapeHtml(t.selectNone)}</button></span>
-          <span class="download-status" data-download-status></span>
+          <span class="download-status" data-download-status role="status" aria-live="polite"></span>
           <a class="btn-outline" data-ex-sample href="#" target="_blank" rel="noopener" hidden>${escapeHtml(t.sample)}</a>
           <button type="button" class="btn-outline" data-ex-json>${escapeHtml(t.json)}</button>
           <button type="button" class="btn-outline" data-download-merged hidden>${escapeHtml(t.pdf)}</button>
