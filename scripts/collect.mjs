@@ -483,6 +483,14 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/planner capabilities in copilot chat \(m365 copilot\)/.test(text)) {
+    return "Microsoft 365 Copilot チャットで Planner のタスクやプランを作成し、Planner の情報を検索できるようになります。Copilot と Planner の間で、タスクやプランをシームレスに管理できます。";
+  }
+
+  if (/\[education\] create multi-week unit plans with teach/.test(text)) {
+    return "教育者は Microsoft 365 Copilot の Teach を使って、複数の授業または複数週にわたる体系的な単元計画を作成できます。計画の構成要素を調整し、単元内の関連する授業案やクイズを整理できます。";
+  }
+
   if (/microsoft copilot studio: copilot studio cost controls in mac/.test(text)) {
     return "Microsoft Copilot Studio のコスト管理を Microsoft 365 管理センターに拡張します。管理者は、Power Platform 管理センターの既存機能を維持したまま、使用量ベースの AI ワークロードにおける Copilot クレジットの支出を一元管理できます。";
   }
@@ -770,6 +778,14 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/planner capabilities in copilot chat \(m365 copilot\)/.test(text)) {
+    return "Microsoft 365 Copilot チャットで Planner のタスク・プラン管理に対応";
+  }
+
+  if (/\[education\] create multi-week unit plans with teach/.test(text)) {
+    return "[教育] Teach で複数週にわたる単元計画を作成";
+  }
 
   if (/microsoft copilot studio: supercharge your workflows with computer use/.test(text)) {
     return "Microsoft Copilot Studio: コンピューターの使用でワークフローを強化します";
