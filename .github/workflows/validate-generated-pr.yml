@@ -13,6 +13,11 @@ permissions:
   contents: write
   pull-requests: read
 
+# 同じ PR で続けて起きるイベント（opened / synchronize / edited）が競合し、古い実行の push が拒否されて失敗扱いになるのを防ぐ。新しい実行だけが残る
+concurrency:
+  group: validate-generated-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     if: github.event.pull_request.head.repo.full_name == github.repository
