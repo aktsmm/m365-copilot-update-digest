@@ -483,6 +483,10 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/federated copilot connectors will support write, update and delete actions/.test(text)) {
+    return "Federated Copilot コネクタは、サードパーティ サービスのデータをリアルタイムに読み取れるほか、Copilot Chat からコンテンツを作成・更新・削除できるようになります。";
+  }
+
   if (/microsoft copilot studio: copilot studio cost controls in mac/.test(text)) {
     return "Microsoft Copilot Studio のコスト管理を Microsoft 365 管理センターに拡張します。管理者は、Power Platform 管理センターの既存機能を維持したまま、使用量ベースの AI ワークロードにおける Copilot クレジットの支出を一元管理できます。";
   }
