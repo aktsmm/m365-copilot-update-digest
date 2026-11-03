@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-ab7cfadb41ce5999",
-      "kind": "rolling-out",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "展開中",
+      "label": "提供開始",
       "title": {
-        "ja": "GCC 向け Excel の Edit with Copilot（Web・Win32・Mac）が展開開始",
+        "ja": "GCC 向け Excel の Edit with Copilot（Web・Win32・Mac）が提供開始",
         "subtitleJa": "政府機関向けクラウドでも、Copilot と並んでブックを作成・編集できます",
         "en": "Microsoft Copilot (Microsoft 365): Edit with Copilot in Excel (Web, Win32, Mac) - GCC"
       },
       "meta": {
-        "publishedJst": "2026-10-20",
+        "publishedJst": "2026-11-03",
         "availability": [],
-        "status": "Rolling out",
+        "status": "Launched",
         "products": ["Microsoft Copilot (Microsoft 365)", "Excel"],
         "categories": ["office-apps"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["GCC", "GCC High", "DoD"],
         "platforms": ["Desktop", "Mac", "Web"],
         "productArea": "Microsoft 365 Copilot",
@@ -30,7 +30,7 @@
       },
       "action": {
         "required": "optional",
-        "summary": { "text": "展開中のため、利用できるようになった後に小規模なブックで試す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "summary": { "text": "対応は不要。利用したいユーザーに使い方を案内し、小規模なブックで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
       "beforeAfter": {
         "after": { "text": "予算の更新や財務モデルの作成、データ分析で、Copilot が Excel の強力なツールを使って**ブックの作成・編集を支援**します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
@@ -63,8 +63,7 @@
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "Microsoft Copilot は特定のライセンス前提条件を持つアドオン プラン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "利用可能なプラン", "retrievedAt": "2026-10-21T05:10:00Z" }] },
-            { "text": "提供までは、構造化された Excel データの分析機能が影響を受ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性（注 6）", "retrievedAt": "2026-10-21T05:10:00Z" }] }
+            { "text": "Microsoft Copilot は特定のライセンス前提条件を持つアドオン プラン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "利用可能なプラン", "retrievedAt": "2026-10-21T05:10:00Z" }] }
           ]
         },
         {
@@ -83,8 +82,7 @@
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "予算表など小規模なブックで試し、結果を確認してから展開する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
-            { "text": "テナントへの反映時期は、ロードマップで確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "予算表など小規模なブックで試し、結果を確認してから展開する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
@@ -92,16 +90,16 @@
         { "termKey": "edit-with-copilot", "term": "Edit with Copilot", "type": "feature", "oneLine": { "text": "Copilot と並んでブックを作成・編集し、Excel のテーブル・グラフ・数式などを使ってデータ作業を進める機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "gcc", "term": "GCC / GCC High / DoD", "type": "term", "oneLine": { "text": "Microsoft 365 の政府機関向けクラウド環境。ワールドワイドとは機能の提供状況が異なる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-19T14:00:00Z" }] } },
         { "termKey": "pivot", "term": "ピボットテーブル", "type": "term", "oneLine": { "text": "Excel でデータを集計・分析するためのテーブル機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "label-rollout", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
           "question": "ワールドワイド環境ではすでに使えますか？",
-          "answer": { "text": "サービスの説明では、Edit with Copilot はワールドワイドで利用可と示されています。政府機関向けクラウドは、このページの掲載時点では「現在利用できません」でした。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-19T14:00:00Z" }] }
+          "answer": { "text": "サービスの説明では、Edit with Copilot はワールドワイドで利用可と示されています。政府機関向けクラウドは、当時のページ内容では「現在利用できません」でした。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot", "locator": "機能の可用性", "retrievedAt": "2026-10-19T14:00:00Z" }] }
         },
         {
           "question": "提供時期はいつですか？",
-          "answer": { "text": "ロードマップには提供月が示されておらず、展開中の段階です。時期はロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          "answer": { "text": "ロードマップのステータスは提供開始（Launched）です。提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
         }
       ],
       "references": {
