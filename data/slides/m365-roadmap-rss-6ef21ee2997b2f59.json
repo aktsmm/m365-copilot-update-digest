@@ -3,19 +3,19 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-6ef21ee2997b2f59",
-      "kind": "in-development",
+      "kind": "rolling-out",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "展開中",
       "title": {
-        "ja": "Microsoft Cowork で Planner のプランやタスクを操作可能に（開発中）",
-        "subtitleJa": "アプリを切り替えずに、プラン・バケット・目標・タスクを扱えるようになります",
+        "ja": "Planner の機能が Microsoft Cowork で利用可能に",
+        "subtitleJa": "アプリを切り替えずに、プランやタスクの確認・更新・実行ができます",
         "en": "Planner: Capabilities in Microsoft Cowork"
       },
       "meta": {
-        "publishedJst": "2026-09-15",
+        "publishedJst": "2026-11-03",
         "availability": [],
-        "status": "In development",
-        "products": ["Planner", "Microsoft Copilot"],
+        "status": "Rolling out",
+        "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["agents", "office-apps"],
         "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
@@ -24,70 +24,95 @@
         "sourceName": "Microsoft 365 Roadmap"
       },
       "audience": {
-        "who": { "text": "**Planner でタスクを管理し、Cowork を使う人**と、管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "Cowork 内で Planner のプラン・バケット・目標・タスクを表示・作成・更新できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "who": { "text": "**Planner と Cowork を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アプリを切り替えず、Cowork 上でプランやタスクを扱える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        "required": "optional",
+        "summary": { "text": "管理者は Planner プラグインをインストールするか、利用可能にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "プラグインをデプロイする", "retrievedAt": "2026-11-03T01:00:00Z" }] }
       },
       "beforeAfter": {
-        "after": { "text": "Cowork の中で Planner を操作でき、メールの下書きと送信など、Microsoft 365 全体での Planner タスクの実行も Cowork が支援します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "after": { "text": "Cowork で**プラン・バケット・目標・タスクの表示、作成、更新**ができ、メール作成や予定調整などタスクの実行も支援します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "予定されている範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "Cowork から Planner のプラン、バケット、目標、タスクを表示・作成・更新", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Planner タスクの実行を、Microsoft 365 全体で Cowork が支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Cowork はメール送信・会議設定・文書作成・Teams 投稿などを代行するエージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "Coworkとは?", "retrievedAt": "2026-10-19T13:40:00Z" }] }
+            { "text": "Planner プラグインが Planner と Copilot を接続し、AI アシスタント経由でプランとタスクを管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "Planner プラグインの内容", "retrievedAt": "2026-11-03T01:00:00Z" }] },
+            { "text": "サインインしたユーザーに代わって、プラン・タスク・バケット・目標を読み取り、更新する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "Planner プラグインの内容", "retrievedAt": "2026-11-03T01:00:00Z" }] },
+            { "text": "Planner への変更は、ユーザーが確認・承認してから書き込まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "重要", "retrievedAt": "2026-11-03T01:00:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "提供範囲・制約",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "ロードマップ上の提供範囲は Worldwide（Standard Multi-Tenant）、Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Cowork は重要な操作の前に承認を求める（送信・投稿など）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "制御を維持する", "retrievedAt": "2026-10-19T13:40:00Z" }] }
+            { "text": "管理者が管理センターの［エージェント］>［ツール］で Planner プラグインをインストールする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "プラグインをデプロイする", "retrievedAt": "2026-11-03T01:00:00Z" }] },
+            { "text": "ユーザーは Microsoft Copilot の［プラグイン］>［Cowork］タブで見つけられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "Planner プラグインの内容", "retrievedAt": "2026-11-03T01:00:00Z" }] },
+            { "text": "初回は、ユーザー自身が接続（サインイン）を完了する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "認証とアクセス許可", "retrievedAt": "2026-11-03T01:00:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "備えておくこと",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "職場・学校アカウントの Cowork は一般提供済み。まず現行機能を確認しておく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "Coworkとは?", "retrievedAt": "2026-10-19T13:40:00Z" }] },
-            { "text": "提供時期の続報はロードマップで確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "Microsoft 365 Copilot ライセンスと、組織での Copilot Cowork の有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "前提条件", "retrievedAt": "2026-11-03T01:00:00Z" }] },
+            { "text": "可用性は国・地域では絞り込めず、セキュリティ グループで制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "可用性の制御", "retrievedAt": "2026-11-03T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供先は Worldwide（Standard Multi-Tenant）、対象は Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まずパイロット用のセキュリティ グループに配布してから、全ユーザーへ広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "プラグインはユーザーが既にアクセスできるプランとタスクだけを扱う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "認証とアクセス許可", "retrievedAt": "2026-11-03T01:00:00Z" }] }
           ]
         }
       ],
       "glossary": [
-        { "termKey": "cowork", "term": "Microsoft Cowork", "type": "product", "oneLine": { "text": "あなたに代わって、Microsoft 365 全体でメール送信や会議設定などのタスクを実行する Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "冒頭", "retrievedAt": "2026-10-19T13:40:00Z" }] } },
-        { "termKey": "planner", "term": "Planner", "type": "product", "oneLine": { "text": "カンバン ボードとタスク カードで、タスク ベースの取り組みを計画・管理するコラボレーション ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/office365/servicedescriptions/project-online-service-description/microsoft-planner-service-description", "locator": "Microsoft Planner service description", "retrievedAt": "2026-10-19T13:40:00Z" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "プラグインでツールやデータを接続して拡張できる、Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "冒頭", "retrievedAt": "2026-11-03T01:00:00Z" }] } },
+        { "termKey": "planner-plugin", "term": "Planner プラグイン", "type": "feature", "oneLine": { "text": "Microsoft が作成した、AI アシスタントから Planner のプランとタスクを管理するためのプラグイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "Planner プラグインの内容", "retrievedAt": "2026-11-03T01:00:00Z" }] } },
+        { "termKey": "connector", "term": "コネクタ", "type": "term", "oneLine": { "text": "サインインしたユーザーに代わってプランやタスクを読み取り、更新する、プラグイン内の接続部分。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "Planner プラグインの内容", "retrievedAt": "2026-11-03T01:00:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
-          "question": "Cowork で Planner を使えるのはいつからですか？",
-          "answer": { "text": "ロードマップは「近日中に」とのみ記載しており、具体的な月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          "question": "Planner プラグインを使うのに必要なライセンスは？",
+          "answer": { "text": "Microsoft 365 Copilot ライセンスが必要です。あわせて、組織で Copilot Cowork が有効で、ユーザーが Planner にアクセスできる必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "前提条件", "retrievedAt": "2026-11-03T01:00:00Z" }] }
         },
         {
-          "question": "Cowork は勝手にタスクを更新・送信しますか？",
-          "answer": { "text": "Cowork は送信や投稿などの重要な操作の前に承認を求めます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locator": "制御を維持する", "retrievedAt": "2026-10-19T13:40:00Z" }] }
+          "question": "Cowork が Planner の内容を勝手に変更することはありますか？",
+          "answer": { "text": "ありません。変更はユーザーに表示されて承認が必要で、タスクも確認後にのみ完了になります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "ユーザーに対する表示", "retrievedAt": "2026-11-03T01:00:00Z" }] }
+        },
+        {
+          "question": "管理者はプラグインを止められますか？",
+          "answer": { "text": "はい。［エージェント］>［ツール］で Planner プラグインをブロックできます。ブロックは新しい会話に適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locator": "可用性の制御", "retrievedAt": "2026-11-03T01:00:00Z" }] }
         }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567315",
         "learn": [
-          { "title": "Copilot Cowork の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/", "locale": "ja-jp" },
-          { "title": "Copilot Cowork に関するよくある質問", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-faq", "locale": "ja-jp" }
+          { "title": "Copilot Cowork の Planner プラグインを管理する", "url": "https://learn.microsoft.com/ja-jp/planner/manage-planner-plugin-cowork", "locale": "ja-jp" },
+          { "title": "Copilot Cowork で使用可能なプラグイン", "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locale": "ja-jp" }
         ]
       },
       "render": { "continuationRequired": false }
