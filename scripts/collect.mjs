@@ -847,6 +847,10 @@ function knownJapaneseRoadmapTitle(event) {
     return "Microsoft 365 管理センターに Copilot コネクタの利用状況レポートを追加";
   }
 
+  if (/new microsoft 365 copilot usage reports for copilot search, connectors, and agents for us government customers/.test(text)) {
+    return "米国政府機関向けに Microsoft 365 Copilot の使用状況レポートを提供";
+  }
+
   if (/improve customer outcomes with service agent in microsoft 365 copilot/.test(text)) {
     return "Dynamics 365 Customer Service の Service Agent で顧客対応を改善";
   }
