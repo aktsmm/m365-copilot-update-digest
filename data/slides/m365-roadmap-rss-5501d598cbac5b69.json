@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5501d598cbac5b69",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot の使用状況レポートが米国政府向けクラウドに対応予定",
+        "subtitleJa": "Copilot 検索・コネクタ・エージェントの利用状況を、GCC / GCC High / DoD の管理者が確認できます",
+        "en": "Microsoft Copilot (Microsoft 365): New Microsoft 365 Copilot usage reports for Copilot Search, Connectors, and Agents for US Government customers"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "agents", "admin"],
+        "importance": "notable",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**GCC / GCC High / DoD 環境の Microsoft Copilot 管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot 検索・コネクタ・エージェントの利用状況を、組織単位とユーザー単位で把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "**Copilot 検索・コネクタ・エージェントの使用状況レポート**を、米国政府向けの GCC Moderate・GCC High・DoD でも使えるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Copilot 検索、Copilot コネクタ、Copilot エージェントの 3 種類のレポート", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は GCC Moderate、GCC High、DoD の各環境", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "組織レベルとユーザーレベルの洞察を管理者に提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "商用向けのコネクタ使用状況レポートは、現在パブリック プレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭の注", "retrievedAt": "2026-11-03T01:30:00Z" }] },
+            { "text": "ユーザー名などの個人情報は、既定でレポートに表示されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "ユーザー アクティビティ テーブルの注", "retrievedAt": "2026-11-03T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "商用向けレポートで事前に確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センターの［レポート］→［使用状況］→［Microsoft Copilot］→［コネクタ］で表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "使用状況レポートを表示する", "retrievedAt": "2026-11-03T01:30:00Z" }] },
+            { "text": "過去 7 日間または 30 日間で絞り込め、データは操作から 1 時間以内に更新", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "レポートを解釈する", "retrievedAt": "2026-11-03T01:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connectors", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "組織のコネクタ コンテンツを根拠に、Copilot Chat・エージェント・検索が応答できる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-11-03T01:30:00Z" }] } },
+        { "termKey": "usage-report", "term": "使用状況レポート", "type": "feature", "oneLine": { "text": "Microsoft 365 管理センターで、組織内の Copilot の利用状況を確認できるレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-11-03T01:30:00Z" }] } },
+        { "termKey": "gcc-high-dod", "term": "GCC / GCC High / DoD", "type": "term", "oneLine": { "text": "米国政府機関向けに提供される Microsoft 365 のクラウド環境。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップには具体的な提供月が示されていません。開発中の段階のため、内容や時期は変わる可能性があります。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "商用クラウドのレポートとは何が違いますか？",
+          "answer": { "text": "商用向けにはコネクタの使用状況レポートが公開されています。今回の更新は、米国政府向けクラウドで Copilot 検索・コネクタ・エージェントのレポートを提供するものです。", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locator": "冒頭", "retrievedAt": "2026-11-03T01:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573170",
+        "learn": [{ "title": "Microsoft 365 Copilot コネクタの使用状況レポート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/activity-reports/microsoft-365-copilot-connectors-usage", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
