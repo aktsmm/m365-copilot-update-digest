@@ -3,6 +3,7 @@ name: Watchdog
 # AI を使わず、GitHub 側で詰まったときにパイプラインを前に進める。
 #  - 40 分を超えて動き続けているエージェント実行を取り消す（直列キューが何時間も止まるのを防ぐ）
 #  - 直近の Pages デプロイが失敗していたら 1 回だけ再実行する（デプロイが同時に終わると衝突することがある）
+#  - main の最新コミットより新しい Pages デプロイが無ければ（収集からのデプロイ起動が API の一時エラーで落ちたとき）、デプロイを起動する
 #  - 1 時間以上たっても開いたままの [slides] / [summaries] の PR があれば、自動マージを起動する（定期実行が間引かれて PR が滞るのを防ぐ）
 on:
   schedule:
@@ -52,6 +53,18 @@ jobs:
             gh run rerun "$id" --failed
           else
             echo "deploy ok or already retried ($concl, attempt $attempt)"
+          fi
+      - name: Deploy when main is newer than the last deploy
+        run: |
+          head=$(gh api "repos/$GH_REPO/commits/main" -q '.commit.committer.date')
+          read -r last status < <(gh run list --workflow deploy-pages.yml --limit 1 --json createdAt,status -q '.[0] | "\(.createdAt) \(.status)"')
+          age=$(( $(date +%s) - $(date -d "$head" +%s) ))
+          # 最新コミットから 20 分以上たち、その後にデプロイが一度も始まっていなければ起動する（直後は収集側の起動を待つ）
+          if [ "$status" != "in_progress" ] && [ "$status" != "queued" ] && [ "$status" != "pending" ] && [ "$age" -gt 1200 ] && [[ "$last" < "$head" ]]; then
+            echo "main ($head) is newer than the last deploy ($last); starting deploy"
+            gh workflow run deploy-pages.yml --ref main
+          else
+            echo "deploy is up to date ($last, main $head)"
           fi
       - name: Start auto-merge when generated PRs are waiting
         run: |
