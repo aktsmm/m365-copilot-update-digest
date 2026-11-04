@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-b1c3e5adebecbe1a",
-      "kind": "rolling-out",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "展開中",
+      "label": "提供開始",
       "title": {
         "ja": "Teams のインテリジェント要約を、トランスクリプトを保存せずに利用可能に",
         "subtitleJa": "文字起こしや録画を残さずに、会議の AI 要約を作れます",
         "en": "Microsoft Teams: Intelligent meeting recap available without saving transcript"
       },
       "meta": {
-        "publishedJst": "2026-10-14",
+        "publishedJst": "2026-11-04",
         "availability": [],
-        "status": "Rolling out",
+        "status": "Launched",
         "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["teams"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
         "productArea": "Microsoft Teams",
@@ -81,12 +81,12 @@
           ]
         },
         {
-          "id": "rollout-scope",
+          "id": "related-features",
           "heading": "提供範囲・管理",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "Worldwide（Standard Multi-Tenant）で Targeted Release として展開中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Worldwide（Standard Multi-Tenant）で提供開始。Android・iOS・Mac・Web・デスクトップが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
             { "text": "要約文書は既定で 120 日後に期限切れ。1〜9999 日または無期限（-1）に変更可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-without-saving-transcripts", "locator": "AI 概要ドキュメントの有効期限を構成する", "retrievedAt": "2026-10-21T01:10:00Z" }] }
           ]
         },
@@ -105,7 +105,7 @@
         { "termKey": "intelligent-recap", "term": "インテリジェント要約", "type": "feature", "oneLine": { "text": "AI で会議のメモや推奨タスクなどを生成する Teams の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "会議のインテリジェント要約", "retrievedAt": "2026-10-21T01:10:00Z" }] } },
         { "termKey": "transcript", "term": "トランスクリプト", "type": "term", "oneLine": { "text": "会議の発言を文字に起こした記録。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "ポリシー", "retrievedAt": "2026-10-21T01:10:00Z" }] } },
         { "termKey": "teams-meeting-policy", "term": "Teams 会議ポリシー", "type": "term", "oneLine": { "text": "Set-CsTeamsMeetingPolicy で、会議機能の利用可否を制御するポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-without-saving-transcripts", "locator": "インテリジェント要約をオフにする", "retrievedAt": "2026-10-21T01:10:00Z" }] } },
-        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
@@ -117,8 +117,8 @@
           "answer": { "text": "開催者の OneDrive の [会議] フォルダーに、読み取り専用の Word 文書として保存されます。開催者は [要約] タブまたは OneDrive から削除でき、片方で削除すると他方からも削除されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-without-saving-transcripts", "locator": "概要 / FAQ", "retrievedAt": "2026-10-21T01:10:00Z" }] }
         },
         {
-          "question": "提供段階はどうなっていますか？",
-          "answer": { "text": "ロードマップでは展開中ですが、Microsoft Learn の該当記事ではパブリック プレビューと記載されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-without-saving-transcripts", "locator": "冒頭の注意", "retrievedAt": "2026-10-21T01:10:00Z" }] }
+          "question": "通常のインテリジェント要約との違いは？",
+          "answer": { "text": "通常の要約は文字起こしが前提で、Teams Premium か Copilot ライセンスで使えます。本機能は Copilot ライセンスが必要で、トランスクリプトを保存しません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-calls-meetings", "locator": "前提条件", "retrievedAt": "2026-11-04T08:20:00Z" }, { "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-recap-without-saving-transcripts", "locator": "概要", "retrievedAt": "2026-11-04T08:20:00Z" }] }
         }
       ],
       "references": {
