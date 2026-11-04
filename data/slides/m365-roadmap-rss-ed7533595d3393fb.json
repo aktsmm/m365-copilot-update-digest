@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ed7533595d3393fb",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Confluence Copilot コネクタでクエリ フィルターの調整が可能に",
+        "subtitleJa": "ページ ID や作成・更新日時で、取り込む Confluence ページを絞り込めます",
+        "en": "Microsoft Copilot (Microsoft 365): Support for refining query filters for Confluence Copilot connectors"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Confluence コネクタを設定する管理者**と、コネクタ経由で Confluence を検索する Microsoft Copilot ユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "取り込み対象を絞り込む操作が簡単になり、作業効率が上がり人為的ミスも減る", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象を絞りたい場合に、コネクタの絞り込み設定を見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Confluence Cloud と On-premises の両コネクタでクエリ フィルターが標準化・強化。Cloud では**ページ ID・作成日時・最終更新日時**で簡単に絞り込めます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cloud コネクタで、ページ ID・作成日時・最終更新日時による絞り込みが簡単に", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Cloud と On-premises の両コネクタでクエリ フィルターを標準化", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "従来から、スペースの指定や CQL クエリでの絞り込みが可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Connector capabilities and limitations", "retrievedAt": "2026-11-04T08:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者がコネクタを構成し、Confluence サイトのデータをインデックス化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Overview", "retrievedAt": "2026-11-04T08:20:00Z" }] },
+            { "text": "既定ではすべてのスペースのページとブログ投稿を取り込む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Connector capabilities and limitations", "retrievedAt": "2026-11-04T08:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Cloud コネクタは Confluence Cloud のみ対応。Server / Data Center は On-premises コネクタが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Connector capabilities and limitations", "retrievedAt": "2026-11-04T08:20:00Z" }] },
+            { "text": "Confluence の ID と Entra ID の UPN が異なる場合は、ID マッピングが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Connector capabilities and limitations", "retrievedAt": "2026-11-04T08:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Confluence のスペース権限とページ制限が、検索結果にも適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Permissions model and access control", "retrievedAt": "2026-11-04T08:20:00Z" }] },
+            { "text": "Copilot Studio などで作るエージェントの知識ソースにも使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Build agents with the Confluence Cloud connector", "retrievedAt": "2026-11-04T08:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "更新日時で絞り、最新のページだけを取り込む運用を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ページ ID を指定し、少数のページから先に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "confluence-connector", "term": "Confluence コネクタ", "type": "feature", "oneLine": { "text": "Confluence のページやブログ投稿を Microsoft 365 に取り込み、Copilot や検索で使えるようにするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Overview", "retrievedAt": "2026-11-04T08:20:00Z" }] } },
+        { "termKey": "cql", "term": "CQL", "type": "term", "oneLine": { "text": "Confluence Query Language。メタデータで取り込み対象を絞り込むクエリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Connector capabilities and limitations", "retrievedAt": "2026-11-04T08:20:00Z" }] } },
+        { "termKey": "identity-mapping", "term": "ID マッピング", "type": "term", "oneLine": { "text": "Confluence ユーザーを Microsoft Entra ID アカウントに対応付ける設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Connector capabilities and limitations", "retrievedAt": "2026-11-04T08:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "On-premises コネクタも対象ですか？",
+          "answer": { "text": "はい。ロードマップでは、Cloud と On-premises の両コネクタでクエリ フィルターが標準化・強化されるとされています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "ユーザーごとの権限の扱いは変わりますか？",
+          "answer": { "text": "Learn では、コネクタは Confluence の権限を尊重すると説明されています。今回の更新で変わるかは、ソースからは確認できません。", "origin": "learn", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locator": "Permissions model and access control", "retrievedAt": "2026-11-04T08:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=503571",
+        "learn": [{ "title": "Confluence Cloud Copilot connector overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-overview", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
