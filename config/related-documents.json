@@ -15,17 +15,32 @@
     "mcpStatus": "verified"
   },
   "copilot-studio-techcommunity-blog-048f25616916eaf7": {
-    "inputFingerprint": "a2ed79b182c009aec37ea94a7b5a5b49a0249bca2f3051b688b2c519453dc5c7",
+    "inputFingerprint": "92ddd6427af29ee283c1a843a68b8e116d85127f1fb24e715e45738a1fa91b90",
     "status": "verified",
-    "checkedAt": "2026-10-14T05:32:00.000Z",
+    "checkedAt": "2026-11-04T19:45:20.567Z",
     "localePreference": "ja-jp",
     "documents": [
       {
-        "title": "他のエージェントの概要を追加 - Microsoft Copilot Studio",
-        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents",
-        "provenance": "reference",
+        "title": "エージェント向けスキル概要(GitHub Copilot)",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview",
+        "provenance": "article",
         "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/4559073",
-        "evidence": "公式日本語ページの本文で、Copilot Studio エージェントをモジュール化して拡張する方法、子エージェントと接続エージェントの使い分け、ツール数の増加と性能低下への対応を確認。元記事の大規模エージェントの設計・分割という主題に対応する。今回の確認は既知の公式 URL の本文取得で行い、MCP 利用とは区別する。"
+        "supplemental": true
+      },
+      {
+        "title": "接続エージェント概要(GitHub Copilot)",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents",
+        "provenance": "article",
+        "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/4559073",
+        "supplemental": true
+      },
+      {
+        "title": "ツール検索を使用してオンデマンドでツールを読み込む",
+        "url": "https://docs.github.com/ja/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/tool-search",
+        "provenance": "article",
+        "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/4559073",
+        "evidence": "The GitHub Copilot harness includes runtime capabilities designed for reasoning-heavy, multistep work. One example is tool search. When the available tool set becomes large, tool search can hold external tool definitions back and load the relevant ones on demand instead of placing every full schema in the model's context.",
+        "supplemental": true
       }
     ]
   },
@@ -5760,21 +5775,11 @@
     ]
   },
   "copilot-studio-techcommunity-blog-fb6ebb9ca14b4c1e": {
-    "inputFingerprint": "7a66a2e7191c8d1b6c90f42ce60224c2c46bad6375480b4e602de4f68ae9faf3",
-    "status": "verified",
-    "checkedAt": "2026-10-14T07:27:55.391Z",
+    "inputFingerprint": "da546c565e0e5ae392558f491f6777400b6bc430ceaec1cfd8cc730bd9823166",
+    "status": "not-found",
+    "checkedAt": "2026-11-04T19:45:20.567Z",
     "localePreference": "ja-jp",
-    "documents": [
-      {
-        "title": "Copilot Studio のエージェント ハーネスを比較する",
-        "sourceTitle": "Compare Copilot Studio agent harnesses",
-        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness",
-        "provenance": "mcp",
-        "evidenceUrl": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/white-paper-choosing-between-the-github-copilot-and-standard/ba-p/4552385",
-        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: choos, between, github, standard, harnesse, studio"
-      }
-    ],
-    "mcpStatus": "verified"
+    "documents": []
   },
   "m365-roadmap-rss-319db06fb2af18ad": {
     "inputFingerprint": "d67330812759a66b2af75afea53e69cf6512533daa80dc3589e773a717b53f5c",
@@ -11122,11 +11127,11 @@
   "m365-copilot-release-notes-efb3806a2e9d5d8b": {
     "inputFingerprint": "1db217b6815721b0ceeed869220526b987e37f65cd8abcb79e81813820ea7c9e",
     "status": "not-found",
-    "checkedAt": "2026-10-25T11:30:53.532Z",
+    "checkedAt": "2026-11-04T19:45:31.671Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-01T11:30:53.532Z"
+    "mcpRetryAfter": "2026-11-11T19:45:31.671Z"
   },
   "m365-roadmap-rss-810f8921717da2c6": {
     "inputFingerprint": "81aa46f462b01c1a30717c3d814f2d21cf7d2e8466af81681de0915fb303db50",
@@ -36796,9 +36801,9 @@
     "mcpStatus": "verified"
   },
   "m365-roadmap-rss-ed7533595d3393fb": {
-    "inputFingerprint": "5e4f06213f954b4d815e11aae619f3c2388d11bf7835b25e56411a63466cdb18",
+    "inputFingerprint": "e3d2d9e1f526384ce3ee83020bb76998f3d05a48768ddb15c51b3096bd064114",
     "status": "not-found",
-    "checkedAt": "2026-11-04T06:21:05.860Z",
+    "checkedAt": "2026-11-04T19:45:20.567Z",
     "localePreference": "ja-jp",
     "documents": []
   },
@@ -39110,11 +39115,11 @@
   "m365-copilot-release-notes-058c8661f6b11b9b": {
     "inputFingerprint": "04af9a1966bb9304749ac5133dbb77c4d232b4c34cf3efddbdcbdb3639295427",
     "status": "not-found",
-    "checkedAt": "2026-10-28T12:54:34.928Z",
+    "checkedAt": "2026-11-04T19:45:31.671Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-04T12:54:34.928Z"
+    "mcpRetryAfter": "2026-11-11T19:45:31.671Z"
   },
   "m365-copilot-release-notes-065ecbca62e77b57": {
     "inputFingerprint": "1fbe1d01c8342a88632d26a101fc7964dafc32783f5c489ed7077c5f3d528468",
@@ -39128,11 +39133,11 @@
   "m365-copilot-release-notes-1e0c98f5ac74e7f3": {
     "inputFingerprint": "a4602d8ab5a562113f79bb12853ab1bae5a581d37c3a8f514c43dfbf45f26c0c",
     "status": "not-found",
-    "checkedAt": "2026-10-28T12:54:34.928Z",
+    "checkedAt": "2026-11-04T19:45:31.671Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-04T12:54:34.928Z"
+    "mcpRetryAfter": "2026-11-11T19:45:31.671Z"
   },
   "m365-copilot-release-notes-210e8e9019809cd5": {
     "inputFingerprint": "52219261c2f5312b930d137f84a75964c4384fb7e5826fe0e526935cc9d6ebde",
@@ -39233,20 +39238,20 @@
   "m365-copilot-release-notes-712d7fa06e59c214": {
     "inputFingerprint": "280056dc8219f301ca369aa76279ae9c9d43ab82c82d55aec810bca3dc20bb98",
     "status": "not-found",
-    "checkedAt": "2026-10-28T12:54:34.928Z",
+    "checkedAt": "2026-11-04T19:45:31.671Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-04T12:54:34.928Z"
+    "mcpRetryAfter": "2026-11-11T19:45:31.671Z"
   },
   "m365-copilot-release-notes-91376557ef5d9790": {
     "inputFingerprint": "31a4351f6be2cab4ab9bf74d9f307effe680e3b1bc80712baa62cd3729188c42",
     "status": "not-found",
-    "checkedAt": "2026-10-28T12:54:34.928Z",
+    "checkedAt": "2026-11-04T19:45:31.671Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-04T12:54:34.928Z"
+    "mcpRetryAfter": "2026-11-11T19:45:31.671Z"
   },
   "m365-copilot-release-notes-a4ef7be179f9aa25": {
     "inputFingerprint": "da28b5df10b300604e3bb68fc76ccd7e002c4be03f6f8340e6cdf6465bbe3f34",
@@ -39285,11 +39290,11 @@
   "m365-copilot-release-notes-b0c89516765fd57d": {
     "inputFingerprint": "f1f7fcb1dfe660310045fd71dac32327e1aa5c750c4dfb3b138bdd20153cb8cb",
     "status": "not-found",
-    "checkedAt": "2026-10-28T12:54:34.928Z",
+    "checkedAt": "2026-11-04T19:45:31.671Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-04T12:54:34.928Z"
+    "mcpRetryAfter": "2026-11-11T19:45:31.671Z"
   },
   "m365-copilot-release-notes-c064bc94af3d1864": {
     "inputFingerprint": "d8e8403c50b9cd448705f0fce12b1e8b4ece9d9dbdf9f8813e857927b650f339",
@@ -39410,5 +39415,25 @@
       }
     ],
     "mcpStatus": "verified"
+  },
+  "copilot-studio-whats-new-5dc825d4ce1c3e83": {
+    "inputFingerprint": "179adda32f5b236d6918cf22f737faac3fd0bbc6da79bb2eaf91e60b9bc1ffcb",
+    "status": "verified",
+    "checkedAt": "2026-11-04T19:45:20.567Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilot Studioのハーネス",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview#standard-harness",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-custom-metrics"
+      },
+      {
+        "title": "Copilot Studioの概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-what-is-copilot-studio",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/analytics-custom-metrics"
+      }
+    ]
   }
 }

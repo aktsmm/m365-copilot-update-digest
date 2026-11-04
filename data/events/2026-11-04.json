@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generatedAt": "2026-11-04T06:32:08.547Z",
+  "generatedAt": "2026-11-04T19:44:17.867Z",
   "events": [
     {
       "id": "m365-roadmap-rss-ed7533595d3393fb",
@@ -153,6 +153,97 @@
       ],
       "importanceScore": 122,
       "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
+    },
+    {
+      "id": "copilot-studio-techcommunity-blog-048f25616916eaf7",
+      "sourceId": "copilot-studio-techcommunity-blog",
+      "sourceName": "Copilot Studio Blog",
+      "sourceFamily": "Tech Community",
+      "productArea": "Copilot Studio",
+      "section": "Copilot Studio",
+      "title": "Are bigger agents better? How to design agents that scale",
+      "titleJa": "大規模なエージェントほど優れているのか？スケーラブルなエージェントの設計方法",
+      "titleEn": "Are bigger agents better? How to design agents that scale",
+      "summary": "Editors' note: The GitHub Copilot harness is now the Microsoft Copilot harness. Learn more.\nThere is a moment every maker hits. An agent works, so you add another tool. Then another knowledge source. Then instructions for an exception that appeared last week or an entirely new...",
+      "summaryJa": "エージェントを作成する人なら誰もが経験する瞬間があります。エージェントが動くと、ツールをもう 1 つ追加します。さらにナレッジ ソースを追加し、先週発生した例外への対応や、エージェントに任せたい新しいユースケースに関する指示も追加します。個々の追加はそれぞれ単独では有用ですが...",
+      "summaryEn": "Editors' note: The GitHub Copilot harness is now the Microsoft Copilot harness. Learn more.\nThere is a moment every maker hits. An agent works, so you add another tool. Then another knowledge source. Then instructions for an exception that appeared last week or an entirely new...",
+      "url": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/ba-p/4559073",
+      "relatedDocuments": [
+        {
+          "title": "他のエージェントの概要を追加 - Microsoft Copilot Studio",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-add-other-agents",
+          "provenance": "reference",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/4559073",
+          "evidence": "公式日本語ページの本文で、Copilot Studio エージェントをモジュール化して拡張する方法、子エージェントと接続エージェントの使い分け、ツール数の増加と性能低下への対応を確認。元記事の大規模エージェントの設計・分割という主題に対応する。今回の確認は既知の公式 URL の本文取得で行い、MCP 利用とは区別する。"
+        },
+        {
+          "title": "エージェント向けスキル概要(GitHub Copilot)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/4559073",
+          "supplemental": true
+        },
+        {
+          "title": "接続エージェント概要(GitHub Copilot)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents",
+          "provenance": "article",
+          "evidenceUrl": "https://techcommunity.microsoft.com/blog/copilot-studio-blog/are-bigger-agents-better-how-to-design-agents-that-scale/4559073",
+          "supplemental": true
+        }
+      ],
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "capturedAt": "2026-10-09T06:07:47.752Z",
+      "sourceLastSeen": "2026-10-09T06:07:47.752Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 84,
+      "importanceReason": "エージェント構築や品質管理に関わるため / 検索やナレッジ活用の精度に影響するため"
+    },
+    {
+      "id": "copilot-studio-techcommunity-blog-fb6ebb9ca14b4c1e",
+      "sourceId": "copilot-studio-techcommunity-blog",
+      "sourceName": "Copilot Studio Blog",
+      "sourceFamily": "Tech Community",
+      "productArea": "Copilot Studio",
+      "section": "Copilot Studio",
+      "title": "White paper: Choosing between the GitHub Copilot and Standard harnesses in Copilot Studio",
+      "titleJa": "ホワイト ペーパー: Copilot Studio での GitHub Copilot ハーネスと標準ハーネスの選択",
+      "titleEn": "White paper: Choosing between the GitHub Copilot and Standard harnesses in Copilot Studio",
+      "summary": "Editors' note: The GitHub Copilot harness is now the Microsoft Copilot harness. Learn more.\nThe Standard harness and GitHub Copilot harness are two authoring and runtime options within Microsoft Copilot Studio. A harness is the operating layer between the model and the agent’s...",
+      "summaryJa": "標準ハーネスと GitHub Copilot ハーネスは、Microsoft Copilot Studio 内の 2 つのオーサリングおよびランタイム オプションです。ハーネスは、モデルとエージェントの構成の間のオペレーティング層です。モデルがコンテキストを受け取る方法、命令やツールを使用する方法などが決定されます。",
+      "summaryEn": "Editors' note: The GitHub Copilot harness is now the Microsoft Copilot harness. Learn more.\nThe Standard harness and GitHub Copilot harness are two authoring and runtime options within Microsoft Copilot Studio. A harness is the operating layer between the model and the agent’s...",
+      "url": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/white-paper-choosing-between-the-github-copilot-and-standard/ba-p/4552385",
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "capturedAt": "2026-09-03T04:34:15.057Z",
+      "sourceLastSeen": "2026-09-03T04:34:15.057Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 72,
+      "importanceReason": "エージェント構築や品質管理に関わるため / 作成者の構築判断に関わるため",
+      "relatedDocuments": [
+        {
+          "title": "Copilot Studio のエージェント ハーネスを比較する",
+          "sourceTitle": "Compare Copilot Studio agent harnesses",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness",
+          "provenance": "mcp",
+          "evidenceUrl": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/white-paper-choosing-between-the-github-copilot-and-standard/ba-p/4552385",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: choos, between, github, standard, harnesse, studio"
+        }
+      ]
     }
   ]
 }
