@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-0cef69dd4e596f98",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "SharePoint のフォームから Power Automate で文書を生成（開発中）",
+        "ja": "SharePoint のフォームから Power Automate で文書を生成",
         "subtitleJa": "テンプレートの項目にデータを割り当て、文書を自動で作れます",
         "en": "Microsoft Copilot (Microsoft 365): Generate documents using forms in SharePoint with Power Automate"
       },
       "meta": {
-        "publishedJst": "2026-09-02",
+        "publishedJst": "2026-11-04",
         "availability": [],
-        "status": "In development",
+        "status": "Launched",
         "products": ["Power Automate", "SharePoint", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["office-apps", "sharepoint"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Microsoft 365 Copilot",
@@ -29,42 +29,62 @@
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "現時点で対応は不要。提供が近づいたらテンプレートとフローの設計を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        "required": "optional",
+        "summary": { "text": "使うなら、Copilot ライセンスとライブラリの編集権限が先に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "前提条件", "retrievedAt": "2026-11-04T06:30:00Z" }] }
       },
       "beforeAfter": {
-        "after": { "text": "Power Automate の新しいアクション「Generate document from form」で、SharePoint のドキュメント生成フォームのテンプレート項目にデータを割り当てて文書を作れます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "after": { "text": "**「フォームからドキュメントを生成する」アクション**で、入力データをテンプレートの項目に割り当てて文書を作り、SharePoint ライブラリに保存できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "構造化ドキュメント生成で Power Automate を使用する", "retrievedAt": "2026-11-04T06:30:00Z" }] }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "SharePoint のドキュメント生成（DocGen）フォームを使う Power Automate の新アクション", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "アクション名は「Generate document from form（プレビュー）」", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "入力データを、定義済みのテンプレート項目に割り当てて文書を生成", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "Word テンプレートを、送信で文書が作られるフォームに変換する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "冒頭", "retrievedAt": "2026-11-04T06:30:00Z" }] },
+            { "text": "フォーム送信済み: フォームの送信をきっかけに承認や通知のフローを開始", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "構造化ドキュメント生成で Power Automate を使用する", "retrievedAt": "2026-11-04T06:30:00Z" }] },
+            { "text": "フォーム メタデータの取得: フォーム構造を取得し、手動設定なしで項目へ割り当て", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "構造化ドキュメント生成で Power Automate を使用する", "retrievedAt": "2026-11-04T06:30:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "対象は Web、Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "ドキュメント ライブラリで Word（.docx）からテンプレートとフォームを作成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "前提条件", "retrievedAt": "2026-11-04T06:30:00Z" }] },
+            { "text": "Power Automate で SharePoint の各アクションを追加し、出力先ライブラリを指定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "構造化ドキュメント生成で Power Automate を使用する", "retrievedAt": "2026-11-04T06:30:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "今できる準備",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "コンテンツ アセンブリでは、既存レポートからモダン テンプレートを作り、フィールドを SharePoint リストの列に関連付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "定期的なメンテナンス レポート 手順 3", "retrievedAt": "2026-10-22T13:00:00Z" }] },
-            { "text": "ドキュメント生成アクションとリストのトリガーを使うフローで、新規エントリごとに文書を生成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "手順 4", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+            { "text": "フォーム作成者に Microsoft Copilot ライセンスとライブラリの編集権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "前提条件", "retrievedAt": "2026-11-04T06:30:00Z" }] },
+            { "text": "テンプレートは .docx のみ。秘密度ラベルが有効だと PDF 生成は動作しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "要件と制限事項", "retrievedAt": "2026-11-04T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Power Automate は条件付き表示を適用しないため、非表示の必須項目も文書に出る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "条件付きフィールド", "retrievedAt": "2026-11-04T06:30:00Z" }] },
+            { "text": "フォームの設定で、生成ファイルを Word か PDF から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "ファイルタイプの選択", "retrievedAt": "2026-11-04T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "契約書・発注書・請求書・提案書など、定型文書の作成に向く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "冒頭", "retrievedAt": "2026-11-04T06:30:00Z" }] },
+            { "text": "ビジネス イベントをきっかけに、報告書を自動生成する流れも組める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "構造化ドキュメント生成で Power Automate を使用する", "retrievedAt": "2026-11-04T06:30:00Z" }] }
           ]
         }
       ],
@@ -72,17 +92,26 @@
         { "termKey": "docgen", "term": "ドキュメント生成（DocGen）フォーム", "type": "feature", "oneLine": { "text": "SharePoint でテンプレートの項目にデータを割り当てて文書を作るためのフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "content-assembly", "term": "コンテンツ アセンブリ", "type": "feature", "oneLine": { "text": "定期的に作成するファイルの最新テンプレートを作り、手動要求や自動化で文書を生成するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "冒頭", "retrievedAt": "2026-10-22T13:00:00Z" }] } },
         { "termKey": "power-automate", "term": "Power Automate", "type": "product", "oneLine": { "text": "トリガーとアクションを組み合わせて、業務をフローとして自動化するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "手順 4", "retrievedAt": "2026-10-22T13:00:00Z" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
+          "question": "フォームの送信者にも Copilot ライセンスが必要ですか？",
+          "answer": { "text": "Learn が前提とするのはフォーム作成者のライセンスです。送信者に必要なのはフォームのリンクで、テンプレートの読み取り権限は自動で付与されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "要件と制限事項", "retrievedAt": "2026-11-04T06:30:00Z" }] }
+        },
+        {
+          "question": "生成された文書を送信者は見られますか？",
+          "answer": { "text": "自動では見られません。ライブラリの閲覧権限を別に付与するか、作成者が領収書オプションを有効にします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locator": "要件と制限事項", "retrievedAt": "2026-11-04T06:30:00Z" }] }
+        },
+        {
           "question": "文書生成のトリガーには SharePoint リスト以外も使えますか？",
-          "answer": { "text": "Learn のシナリオでは、必要な Power Automate コネクタにアクセスできれば任意のデータ ソースをトリガーにできるとされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "注", "retrievedAt": "2026-10-22T13:00:00Z" }] }
+          "answer": { "text": "Learn のシナリオでは、必要な Power Automate コネクタにアクセスできれば任意のデータ ソースをトリガーにできるとされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locator": "注", "retrievedAt": "2026-11-04T06:30:00Z" }] }
         }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561026",
         "learn": [
+          { "title": "SharePoint ドキュメント ライブラリで構造化ドキュメントを生成する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-structured-document-generation", "locale": "ja-jp" },
           { "title": "ドキュメント処理でルーチン ドキュメントを自動生成するシナリオ", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/documentprocessing/scenario-generate-routine-documents", "locale": "ja-jp" }
         ]
       },
