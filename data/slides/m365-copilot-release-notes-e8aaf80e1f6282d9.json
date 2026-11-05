@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-e8aaf80e1f6282d9",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "新しい Outlook の Copilot サイド ペインにアカウント セレクターが追加",
+        "subtitleJa": "予定表で、使用中の Copilot アカウントを確認して切り替えられます",
+        "en": "Account Selector in Outlook Copilot Side Pane [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "新しい Outlook で**複数の Copilot 対応アカウント**を使っている人", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook", "retrievedAt": "2026-11-05T08:40:00Z" }] },
+        "change": { "text": "Copilot が使っているアカウントを確認でき、サイド ペインから直接切り替えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook", "retrievedAt": "2026-11-05T08:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者側の設定は案内されていない。利用者は新しい UI を知っておけばよい", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "アカウントの文脈は、Outlook 全体の UI のアカウント コンテキストに依存していました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / What changed", "retrievedAt": "2026-11-05T08:40:00Z" }] },
+        "after": { "text": "Copilot サイド ペインの**アカウント ドロップダウン**で、使用中のアカウントを明確に確認し、直接切り替えられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / What changed", "retrievedAt": "2026-11-05T08:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は新しい Outlook の予定表にある Copilot サイド ペイン（Web）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook", "retrievedAt": "2026-11-05T08:40:00Z" }] },
+            { "text": "Copilot 対応アカウントが 2 つ以上ある場合にドロップダウンが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / What changed", "retrievedAt": "2026-11-05T08:40:00Z" }] },
+            { "text": "意図しないアカウントでの操作による混乱を減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / Why", "retrievedAt": "2026-11-05T08:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "新しい Outlook で予定表を開き、Copilot サイド ペインを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / Try this", "retrievedAt": "2026-11-05T08:40:00Z" }] },
+            { "text": "アカウント ドロップダウンで別のアカウントを選び、そのまま Copilot を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / Try this", "retrievedAt": "2026-11-05T08:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-side-pane", "term": "Copilot サイド ペイン", "type": "feature", "oneLine": { "text": "新しい Outlook の予定表などで、Copilot を呼び出して使う画面横のペイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook", "retrievedAt": "2026-11-05T08:40:00Z" }] } },
+        { "termKey": "new-outlook", "term": "新しい Outlook", "type": "product", "oneLine": { "text": "複数のアカウントを追加して使える、新世代の Outlook。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook", "retrievedAt": "2026-11-05T08:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の改善。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "アカウントが 1 つだけの場合も表示されますか？",
+          "answer": { "text": "リリース ノートでは、Copilot 対応アカウントが複数ある場合にドロップダウンが含まれると説明されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / What changed", "retrievedAt": "2026-11-05T08:40:00Z" }] }
+        },
+        {
+          "question": "組織にとってのメリットは何ですか？",
+          "answer": { "text": "複数の職場アカウントを扱う組織で、予定表に関する Copilot 作業でのアカウント取り違えを減らせるとされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / Outlook / Business impact", "retrievedAt": "2026-11-05T08:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [{ "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
