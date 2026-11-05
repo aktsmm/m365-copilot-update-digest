@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-50c9a1d2e826e15c",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "SharePoint リスト エージェントで、プロンプトから Microsoft Lists を作成",
+        "subtitleJa": "リストの構造と初期設定を、Copilot が自動で提案します",
+        "en": "SharePoint list agent [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["agents", "sharepoint"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot でリストを作る人**と、情報を整理するチーム", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "自然言語で説明するだけで、リストの構造と設定を自動生成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / SharePoint list agent", "retrievedAt": "2026-11-05T20:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対応は不要。利用者は Copilot でリストの説明を入力して試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / SharePoint list agent", "retrievedAt": "2026-11-05T20:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot にほしいリストを説明するだけで、**リストの構造と設定が自動生成**され、Copilot の回答や構造化情報も Microsoft Lists に変換できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / What changed", "retrievedAt": "2026-11-05T20:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web 版の Copilot で、自然言語のプロンプトからリストを作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-05T20:00:00Z" }] },
+            { "text": "入力した情報から、リストの構造とセットアップを生成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-05T20:00:00Z" }] },
+            { "text": "構造化された情報と Copilot の回答を、リストに変換できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-05T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot を開き、作りたいリストを説明する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-11-05T20:00:00Z" }] },
+            { "text": "生成された構造と提案フィールドを確認し、リストを作成して内容を調整", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-11-05T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "why",
+          "heading": "導入の意味",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "手作業での計画や設定の手間を減らし、情報整理を速くする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why", "retrievedAt": "2026-11-05T20:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sharepoint-list-agent", "term": "SharePoint リスト エージェント", "type": "feature", "oneLine": { "text": "プロンプトからリストの構造と設定を生成し、Microsoft Lists への変換を助けるエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "SharePoint list agent", "retrievedAt": "2026-11-05T20:00:00Z" }] } },
+        { "termKey": "microsoft-lists", "term": "Microsoft Lists", "type": "product", "oneLine": { "text": "情報を構造化して追跡できるリスト機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why this matters", "retrievedAt": "2026-11-05T20:00:00Z" }] } },
+        { "termKey": "schema", "term": "スキーマ", "type": "term", "oneLine": { "text": "リストの列（フィールド）などの構造のこと。", "origin": "derived", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [
+          { "title": "Microsoft 365 Copilot release notes", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
