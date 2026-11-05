@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-0ac3bf688dc9c95c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Cowork がローカルの Microsoft Edge を使えるように",
+        "subtitleJa": "ログイン済みのサイトでの Web 操作を、Cowork に任せられます",
+        "en": "Copilot Cowork supports local Microsoft Edge browser use [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "edge-windows"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Cowork を使うユーザー**と、テナントの管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "管理者の制御", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+        "change": { "text": "ログイン済みのサイトでの Web 操作を、会話を続けたまま Cowork に任せられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "冒頭", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者が「Cowork の閲覧」を有効にするまで使えない（既定は無効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "管理者の制御", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Cowork が**自分の Edge の非表示タブ**で Web 作業を行い、進行状況は Cowork の会話で確認できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "ブラウザーの利用の仕組み", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web 版 Cowork（Microsoft Edge）で対応。デスクトップ アプリとモバイルは未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "ブラウザーを使用できる場所", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "既存のシングルサインオン、Cookie、セッションを使い、権限は手動で閲覧する場合と同じ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "ブラウザーの利用の仕組み", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "CAPTCHA・パスワード・多要素認証などでは、ブラウザーをユーザーに引き継ぐ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "Cowork がブラウザーをユーザーに返すタイミング", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Edge の推奨最小バージョンは 152.0.4191.53 以降。Cowork と同じ職場アカウントでサインインが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "Requirements", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "初回は同意通知で「理解しました」を選ぶ。InPrivate とゲスト プロファイルでは実行できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "最初の実行の同意", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "admin-control",
+          "heading": "管理者の制御",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot → 設定 → Cowork の設定で「ブラウザーへのアクセスを許可する」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "管理者の制御", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "条件付きアクセス・DLP・サイト制限を引き継ぎ、各タスクは監査ログに記録される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-admin-governance", "locator": "ブラウザーの使用", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage-notes",
+          "heading": "利用時の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ブラウザーでのタスクも使用量ベースの課金の対象になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-admin-governance", "locator": "使用量ベースの課金", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "中断したタスクは一時停止され、同じ会話で「続行」と送ると再開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "中断されたブラウザー タスクを再開する", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "ブラウザー自動化などのタスクをユーザーに代わって実行する Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "冒頭", "retrievedAt": "2026-11-05T07:00:00Z" }] } },
+        { "termKey": "cowork-browsing", "term": "Cowork の閲覧（Cowork Browsing）", "type": "feature", "oneLine": { "text": "Cowork による Edge の利用を、テナント単位で有効にする管理設定（既定は無効）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "管理者の制御", "retrievedAt": "2026-11-05T07:00:00Z" }] } },
+        { "termKey": "dlp", "term": "DLP（データ漏洩防止）", "type": "term", "oneLine": { "text": "Microsoft Purview の機能で、Cowork のブラウザー操作にも適用される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "組織がブロックするサイト", "retrievedAt": "2026-11-05T07:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新を示す段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Edge 以外のブラウザーでも使えますか？",
+          "answer": {
+            "text": "いいえ。ブラウザー タスクは現在 Microsoft Edge のみ対応です。Edge 以外では、ブラウザーを必要としない手順だけを実行します。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locator": "Microsoft Edgeをお使いでない場合", "retrievedAt": "2026-11-05T07:00:00Z" }]
+          }
+        },
+        {
+          "question": "機密性の高い操作は勝手に実行されませんか？",
+          "answer": {
+            "text": "中・高リスクの操作はリスク表示と明示的な承認が必要で、支払い確認などは Cowork がユーザーに引き継ぎます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/copilot/cowork/responsible-ai/cowork-responsible-ai-faq", "locator": "How does Cowork use the local browser responsibly?", "retrievedAt": "2026-11-05T07:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [
+          { "title": "Copilot Cowork でローカルのブラウザーを使用する", "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-local-browser", "locale": "ja-jp" },
+          { "title": "組織の Copilot Cowork を管理する", "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-admin-governance", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
