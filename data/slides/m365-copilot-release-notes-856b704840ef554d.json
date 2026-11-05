@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-856b704840ef554d",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Teams の Workflows アプリで AI Workflows が利用可能に",
+        "subtitleJa": "Copilot を使った定期実行プロンプトで、日々の作業を自動化できます",
+        "en": "AI Workflows in Workflows app [Windows, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": ["Teams"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Teams の Workflows アプリを使うユーザー**と、Teams の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "AI Workflows in Workflows app", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+        "change": { "text": "Copilot を使ったスケジュール実行のプロンプトで、複雑な作業を自動化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用させるには、管理者が Workflows アプリを有効にする（既定ではオフ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Workflows アプリで、**Copilot を使ったスケジュール実行のプロンプト（AI Workflows）**を使い、日々の作業を自動化できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams の Workflows アプリで AI Workflows が利用可能（Windows、Mac）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "AI Workflows in Workflows app", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+            { "text": "カスタムの AI テンプレートを選び、業務プロセスに合わせて調整して使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "Try this", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+            { "text": "管理者は Teams アプリ管理の設定でアクセスを制御する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Workflows アプリが有効でない組織では、AI Workflows は既定でオフ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+            { "text": "Workflows アプリの利用には、Teams 管理センターでの有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/teams/teams-app-create", "locator": "既知の問題", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する動作",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Workflows アプリで作成したフローは、組織の既定環境に作られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/teams/teams-app-create", "locator": "既知の問題", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+            { "text": "作成したフローは Power Automate からも管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/teams/teams-app-create", "locator": "冒頭", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は Workflows アプリの有効状況を確認し、小規模なチームで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "workflows-app", "term": "Workflows アプリ", "type": "feature", "oneLine": { "text": "Teams 内でテンプレートやゼロからフローを作成し、管理できるアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/teams/teams-app-create", "locator": "冒頭", "retrievedAt": "2026-11-05T07:30:00Z" }] } },
+        { "termKey": "ai-workflows", "term": "AI Workflows", "type": "feature", "oneLine": { "text": "Workflows アプリで使える、Copilot を使ったスケジュール実行のプロンプト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] } },
+        { "termKey": "teams-admin-center", "term": "Teams 管理センター", "type": "term", "oneLine": { "text": "Teams のアプリを有効化・管理する管理者向けの画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/teams/teams-app-create", "locator": "既知の問題", "retrievedAt": "2026-11-05T07:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、機能の変更・提供に関する更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "AI Workflows はすぐに使えますか？",
+          "answer": { "text": "管理者が Workflows アプリを有効にしていない場合、AI Workflows は既定でオフです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+        },
+        {
+          "question": "作成したフローはどこに保存されますか？",
+          "answer": { "text": "Workflows アプリから作成したフローは、組織の既定環境に作成されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-automate/teams/teams-app-create", "locator": "既知の問題", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [
+          { "title": "Microsoft Teams でフローを作成する", "url": "https://learn.microsoft.com/ja-jp/power-automate/teams/teams-app-create", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
