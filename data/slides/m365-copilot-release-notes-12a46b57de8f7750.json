@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-12a46b57de8f7750",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Copilot 検索で、権限のあるコンテンツを管理センターから管理",
+        "subtitleJa": "信頼できる SharePoint サイトを指定し、検索結果での関連性を高めます",
+        "en": "Authoritative content management for Microsoft 365 Copilot Search [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "admin"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot 検索を管理する管理者**と、検索を使うユーザー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04", "locator": "Authoritative content management", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+        "change": { "text": "公式な SharePoint サイトを指定し、検索での関連性とランキングを高められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04", "locator": "Authoritative content management", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "信頼できるサイトを指定したい場合のみ、管理センターで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04", "locator": "Authoritative content management", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "権限のあるソースを一元管理する画面はありませんでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04", "locator": "Authoritative content management", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+        "after": { "text": "管理センターの Copilot > 検索 > **権限のあるコンテンツ**で、SharePoint サイトを最大 100 件まで追加・管理できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04", "locator": "Authoritative content management", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Global admin / Global reader ロールが、サイトの表示・追加・削除、一括インポート・エクスポートを行える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04", "locator": "Authoritative content management", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "対象は SharePoint サイトで、Copilot 検索での関連性とランキングを高める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04", "locator": "Authoritative content management", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "指定したサイトは信頼できるものとして認識され、「From your organization」ラベルで識別できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "指定できるのは最大 100 サイト。個人用サイトは指定できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "反映まで最大 72 時間かかることがある。Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項 / トラブルシューティング", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-search", "term": "Microsoft Copilot 検索", "type": "feature", "oneLine": { "text": "メール・ファイル・チャット・会議・外部システムを横断して探せる、AI を活用した企業向け検索。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locator": "冒頭", "retrievedAt": "2026-11-05T07:00:00Z" }] } },
+        { "termKey": "authoritative-site", "term": "権限のあるサイト", "type": "feature", "oneLine": { "text": "公式で組織が管理する SharePoint ソースとして、管理者が指定したサイト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "冒頭", "retrievedAt": "2026-11-05T07:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能の変更（段階の区分なし）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "権限のあるサイトは何件まで指定できますか？",
+          "answer": { "text": "最大 100 サイトです。個人用サイトは指定できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "制限事項", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+        },
+        {
+          "question": "PowerShell でも設定できますか？",
+          "answer": { "text": "Learn には、Set-SPOSite の -IsAuthoritative で指定する手順があります。一括操作には CSOM も使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locator": "SharePoint Online 管理シェルを使用して権限のあるサイトを構成する", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [
+          { "title": "Copilot 検索の SharePoint 権限のあるサイト", "url": "https://learn.microsoft.com/ja-jp/sharepoint/sharepoint-authoritative-sites", "locale": "ja-jp" },
+          { "title": "Copilot connectors and Copilot Search", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/copilot-search", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
