@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-50c9a1d2e826e15c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "SharePoint リスト エージェント（Web）",
+        "subtitleJa": "プロンプトから Microsoft Lists のリストを手早く作れます",
+        "en": "SharePoint list agent [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "sharepoint"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot でリストを作成するユーザー**（作成者向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "プロンプトだけで、リストの設計と作成を Copilot に任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "Microsoft Copilot ライセンスのあるユーザーが対象で、管理者の事前作業は特に示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "プロンプトから**適切な列構成（スキーマ）を自動生成**してリストを作成でき、構造化された情報や Copilot の回答を Microsoft Lists にまとめられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Web 版で、プロンプトによるリスト作成をエージェントが支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "スキーマの生成とセットアップをインテリジェントに実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "構造化情報や Copilot の回答を Microsoft Lists に変換", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認しておきたい点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "SharePoint の Copilot は、ページやライブラリと並びリストの作成・編集に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-11-05T07:00:00Z" }] },
+            { "text": "日常的な利用はアクティブな Microsoft Copilot ライセンスに含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-11-05T07:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "list-agent", "term": "SharePoint リスト エージェント", "type": "feature", "oneLine": { "text": "プロンプトからリストの作成とスキーマ生成を支援するエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "microsoft-lists", "term": "Microsoft Lists", "type": "product", "oneLine": { "text": "構造化された情報を列と行で管理するリストのアプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "schema", "term": "スキーマ", "type": "term", "oneLine": { "text": "リストの列の名前や種類など、データの構造の定義。", "origin": "editorial", "assertion": "fact", "verification": "unverified" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能の更新情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [
+          { "title": "Copilot in SharePoint の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
