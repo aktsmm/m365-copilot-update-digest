@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-7716ecb0111a076c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot で画像を添付・参照してプレゼン作成",
+        "subtitleJa": "画像を添えて指示すると、その内容を踏まえたスライドが作れます",
+        "en": "Attach and reference an image when creating a presentation with Copilot in PowerPoint [Windows, Web, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot を使ってプレゼンを作る人**（Windows・Web・Mac）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Attach and reference an image when creating a presentation with Copilot in PowerPoint", "retrievedAt": "2026-11-05T08:50:00Z" }] },
+        "change": { "text": "テキストだけでなく、画像を材料にしてスライドを生成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed / Why", "retrievedAt": "2026-11-05T08:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "リリースノートでは、セキュリティとプライバシーの制御は変わらないとされている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-11-05T08:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "画像の参照は未対応で、生成の材料はテキストに限られていました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-11-05T08:50:00Z" }] },
+        "after": { "text": "Copilot ペインのプロンプトに**画像を添付**すると、その画像を参照したスライドが生成されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-11-05T08:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PowerPoint の Copilot でプレゼン作成時に、画像を参照できるようになった", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "冒頭", "retrievedAt": "2026-11-05T08:50:00Z" }] },
+            { "text": "対象は Windows・Web・Mac の PowerPoint", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "見出しの対象プラットフォーム", "retrievedAt": "2026-11-05T08:50:00Z" }] },
+            { "text": "画像と生成テキストを組み合わせ、文脈に合った資料を作れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Why", "retrievedAt": "2026-11-05T08:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "試し方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "新しいプレゼンを開き、Copilot ペインに画像を添付してプロンプトを入力", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-11-05T08:50:00Z" }] },
+            { "text": "生成されたスライドに、参照した画像が反映されているか確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-11-05T08:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-powerpoint", "term": "Copilot in PowerPoint", "type": "feature", "oneLine": { "text": "PowerPoint 上で、プロンプトからスライドの作成や編集を支援する Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-11-05T08:50:00Z" }] } },
+        { "termKey": "copilot-pane", "term": "Copilot ペイン", "type": "term", "oneLine": { "text": "PowerPoint 内で Copilot にプロンプトを入力する作業ウィンドウ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "Try this", "retrievedAt": "2026-11-05T08:50:00Z" }] } },
+        { "termKey": "release-notes", "term": "リリース ノート", "type": "term", "oneLine": { "text": "Microsoft 365 Copilot の新機能と機能強化を日付順に掲載する Microsoft Learn のページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "冒頭", "retrievedAt": "2026-11-05T08:50:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "同じ時期に、他にも参照できる情報は増えていますか。",
+          "answer": { "text": "リリースノートには、メールや Web ソースを参照してプレゼンを作成できる更新も別項目で載っています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "PowerPoint", "retrievedAt": "2026-11-05T08:50:00Z" }] }
+        },
+        {
+          "question": "管理者側で必要な設定はありますか。",
+          "answer": { "text": "リリースノートでは、セキュリティやプライバシーの制御は変わらないと説明されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27", "locator": "What changed", "retrievedAt": "2026-11-05T08:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-27",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
