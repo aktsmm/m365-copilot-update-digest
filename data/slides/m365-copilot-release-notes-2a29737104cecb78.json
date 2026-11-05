@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-2a29737104cecb78",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Microsoft Edge の Copilot の新しいタブ ページが刷新",
+        "subtitleJa": "検索・チャット・仕事のコンテンツを 1 つの検索ボックスから使えます",
+        "en": "Copilot New Tab Page in Microsoft Edge [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["edge-windows"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Edge と Microsoft Copilot を使うユーザー**と、Edge の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-11-05T07:15:00Z" }] },
+        "change": { "text": "新しいタブから検索・チャット・作業の開始までを 1 画面で行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は Edge 管理サービスまたはポリシーで有効化を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "1 つの検索ボックスで**検索・チャット・Web の探索**ができ、Copilot の提案アクションや仕事のコンテンツ、ニュースも表示されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "検索ボックスから、サイトへの移動・Web 検索・Microsoft 365 Copilot への質問ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "ユーザーに表示される内容", "retrievedAt": "2026-11-05T07:15:00Z" }] },
+            { "text": "サイド レールからチャット、エージェントとスキル、タスク、Cowork にアクセスできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "ユーザーに表示される内容", "retrievedAt": "2026-11-05T07:15:00Z" }] },
+            { "text": "ワーク カードに、ファイルや予定表イベントなどの組織のコンテンツを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "冒頭", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "管理者の確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "CopilotNewTabPageEnabled ポリシーで可用性を構成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-11-05T07:15:00Z" }] },
+            { "text": "有効化しないユーザーは、従来の新しいタブ ページのまま変わらない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "適用範囲", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "admin-setup",
+          "heading": "有効化の手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Edge 管理サービスの [Copilot] タブで新しいタブ ページを [有効] にして割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "構成手順", "retrievedAt": "2026-11-05T07:15:00Z" }] },
+            { "text": "対象ユーザーを含む Microsoft Entra グループを先に用意する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "前提条件", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "limits",
+          "heading": "制限・注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Edge 148 では、サポート外の言語市場だとフィードが表示されないことがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "重要", "retrievedAt": "2026-11-05T07:15:00Z" }] },
+            { "text": "Edge 153 以降は、フィードの検出と切り替え機能が制限される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "重要", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "user-controls",
+          "heading": "ユーザーの操作",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "サイド レールの折りたたみ・展開ができ、設定は次回以降も保持される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "FAQ とトラブルシューティング", "retrievedAt": "2026-11-05T07:15:00Z" }] },
+            { "text": "ワーク カードは、新しいタブ ページの設定でオフにできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "FAQ とトラブルシューティング", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-ntp", "term": "Copilot の新しいタブ ページ", "type": "feature", "oneLine": { "text": "Microsoft 365 Copilot チャット、Web 検索、仕事のコンテンツを 1 つの入口にまとめた Edge のスタート画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "冒頭", "retrievedAt": "2026-11-05T07:15:00Z" }] } },
+        { "termKey": "side-rail", "term": "Copilot サイド レール", "type": "feature", "oneLine": { "text": "新しいタブ ページから、チャット、エージェントとスキル、タスク、Cowork に入れるサイド パネル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "ユーザーに表示される内容", "retrievedAt": "2026-11-05T07:15:00Z" }] } },
+        { "termKey": "work-cards", "term": "ワーク カード", "type": "feature", "oneLine": { "text": "ファイルや予定表イベントなどの組織のコンテンツを表示するカード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "冒頭", "retrievedAt": "2026-11-05T07:15:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、既存機能の更新の段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "全ユーザーに自動で表示されますか？",
+          "answer": { "text": "いいえ。組織が有効にしたユーザーにのみ表示され、それ以外のユーザーは従来の新しいタブ ページが続きます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "FAQ とトラブルシューティング", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+        },
+        {
+          "question": "ポリシーの反映にどれくらいかかりますか？",
+          "answer": { "text": "構成プロファイルの対象デバイスへの反映に、最大 90 分かかることがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "有効になっていることを確認する", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+        },
+        {
+          "question": "ユーザーが自分で無効にできますか？",
+          "answer": { "text": "組織の設定によっては可能です。新しいタブ ページの設定から edge://settings/ai を開き、Copilot の新しいタブ ページをオフにします。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locator": "このエクスペリエンスをオフにする操作方法", "retrievedAt": "2026-11-05T07:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [
+          { "title": "Copilot の新しいタブ ページを構成する", "url": "https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-management-configure-the-copilot-new-tab-page", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
