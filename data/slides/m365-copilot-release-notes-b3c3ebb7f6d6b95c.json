@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b3c3ebb7f6d6b95c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot で、添付デッキのスタイルを新規プレゼンに引き継げます",
+        "subtitleJa": "既存のデッキを参照して、テーマとスタイルをそろえた資料を作成できます",
+        "en": "Reference an attached PowerPoint deck’s style when creating a new presentation in PowerPoint [Windows, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint で Copilot を使って資料を作る人**と、その管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / PowerPoint", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+        "change": { "text": "既存デッキのテーマとスタイルを新しい資料に自動で反映でき、手作業の書式設定が減る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / PowerPoint / Why", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者が既存の PowerPoint ファイルを添付して使う機能で、管理者向けの設定手順は案内されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / PowerPoint / Try this", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "これまでは、Copilot で作る新しいプレゼンに既定のテーマが使われていました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / PowerPoint / What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+        "after": { "text": "既存のプレゼンを添付すると、その**テーマとスタイルが新しいデッキに適用**され、デザインの一貫性を保てます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / PowerPoint / What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot in PowerPoint が、新規作成・編集時の既存プレゼン添付に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+            { "text": "添付したファイルのテーマとスタイルを、新しいデッキに適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+            { "text": "対象プラットフォームは Windows と Mac", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "項目タイトル [Windows, Mac]", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "手順: Copilot で新規プレゼンを作成し、「ファイルを添付」で既存デッキを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-11-05T07:30:00Z" }] },
+            { "text": "社内テンプレートのデッキを添付し、ブランドに沿った資料になるか試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-powerpoint", "term": "Copilot in PowerPoint", "type": "feature", "oneLine": { "text": "PowerPoint 上でプレゼンの作成や編集を支援する Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "PowerPoint", "retrievedAt": "2026-11-05T07:30:00Z" }] } },
+        { "termKey": "theme", "term": "テーマ", "type": "term", "oneLine": { "text": "新しいデッキに適用される、デッキ全体のデザインの組み合わせ（既定では既定のテーマ）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] } },
+        { "termKey": "release-notes", "term": "リリース ノート", "type": "term", "oneLine": { "text": "Microsoft Copilot の最新機能と機能強化を一覧にした Learn のページ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "冒頭", "retrievedAt": "2026-11-05T07:30:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "項目タイトルでは Windows と Mac が対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "項目タイトル", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+        },
+        {
+          "question": "添付すると何が新しいデッキに反映されますか？",
+          "answer": { "text": "リリース ノートでは、添付したファイルのテーマとスタイルが適用されると説明されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-05T07:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
