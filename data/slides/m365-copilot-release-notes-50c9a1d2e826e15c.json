@@ -72,6 +72,28 @@
         { "termKey": "microsoft-lists", "term": "Microsoft Lists", "type": "product", "oneLine": { "text": "情報を構造化して追跡できるリスト機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Why this matters", "retrievedAt": "2026-11-05T20:00:00Z" }] } },
         { "termKey": "schema", "term": "スキーマ", "type": "term", "oneLine": { "text": "リストの列（フィールド）などの構造のこと。", "origin": "derived", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "リストは Copilot の回答内容からも作れますか？",
+          "answer": {
+            "text": "はい。構造化された情報だけでなく、Copilot が生成した回答も Microsoft Lists に変換できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / SharePoint list agent / What changed", "retrievedAt": "2026-11-05T23:58:00Z" }]
+          }
+        },
+        {
+          "question": "ロードマップ上の ID は何ですか？",
+          "answer": {
+            "text": "Microsoft 365 ロードマップの Roadmap ID は 534606 です。提供状況の確認に使えます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "November 4, 2026 / SharePoint list agent / Roadmap ID", "retrievedAt": "2026-11-05T23:58:00Z" }]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-04",
         "learn": [
