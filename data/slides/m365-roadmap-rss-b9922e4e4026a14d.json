@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b9922e4e4026a14d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Excel と Cowork に会計業務向けの機能を追加（開発中）",
+        "subtitleJa": "勘定の照合など、繰り返しの手作業を普段の場所で減らせます",
+        "en": "Microsoft 365 Copilot (Microsoft 365): Accounting skills"
+      },
+      "meta": {
+        "publishedJst": "2026-11-06",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Excel"],
+        "categories": ["office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Excel や Cowork を使う経理・会計担当者**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "繰り返しの手作業を減らし、普段の作業場所で会計業務を進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Excel と Cowork の新しい会計機能で、**残高や取引の比較、差異の特定、調整項目の準備**ができます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Excel と Cowork に会計担当者向けの新機能を追加する計画", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "残高と取引を比較し、差異を特定して調整項目を準備する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Cowork の会計プラグインには、勘定の調整や仕訳の下書きなどのスキルがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "コワークの会計 (フロンティア)", "retrievedAt": "2026-11-06T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Cowork の会計プラグインは現在 Frontier プログラムのユーザーが利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "コワークの会計 (フロンティア)", "retrievedAt": "2026-11-06T07:50:00Z" }] },
+            { "text": "出力は AI 生成で不正確な場合があり、専門家の判断の代わりにならない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "Important", "retrievedAt": "2026-11-06T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は Microsoft 365 管理センターでプラグインの提供可否を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "役割ベースと業界のプラグインを見つける", "retrievedAt": "2026-11-06T07:50:00Z" }] },
+            { "text": "転記や提出の前に、出力を元の記録や社内ルールで確認する運用を決めておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "ツールやデータをプラグインで接続して、仕事を任せられる Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "冒頭", "retrievedAt": "2026-11-06T07:50:00Z" }] } },
+        { "termKey": "accounting-plugin", "term": "Cowork の会計プラグイン", "type": "feature", "oneLine": { "text": "会計担当者が作業の準備・分析・調整・文書化を行うのを助けるプラグイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "コワークの会計 (フロンティア)", "retrievedAt": "2026-11-06T07:50:00Z" }] } },
+        { "termKey": "reconciliation", "term": "勘定の照合（調整）", "type": "term", "oneLine": { "text": "残高や取引を突き合わせて差異を特定し、調整項目を整理する作業。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能を開発している段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いまの Cowork の会計機能は誰が使えますか？",
+          "answer": { "text": "Cowork の会計プラグインは、現在 Frontier プログラムのユーザーが利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "コワークの会計 (フロンティア)", "retrievedAt": "2026-11-06T07:50:00Z" }] }
+        },
+        {
+          "question": "会計に関するスキルには何が含まれますか？",
+          "answer": { "text": "予算と予測、財務プレゼンテーション、財務諸表、仕訳、照合、税務準備などのスキルが含まれます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locator": "含まれるスキル", "retrievedAt": "2026-11-06T07:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=578864",
+        "learn": [{ "title": "Copilot Cowork で使用可能なプラグイン", "url": "https://learn.microsoft.com/ja-jp/copilot/cowork/cowork-available-plugins", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
