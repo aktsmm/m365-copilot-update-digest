@@ -483,6 +483,10 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/microsoft copilot studio: use mcp-compliant tools in agent workflows/.test(text)) {
+    return "MCP をサポートし、独自のシステム、動的なナレッジ ソース、カスタム アクションをエージェント ワークフローに統合できます。ワークフローの信頼性を保ちながら拡張性を高め、エージェントやワークフロー間で連携を再利用しやすくし、統合の重複を減らします。";
+  }
+
   if (/federated copilot connectors will support write, update and delete actions/.test(text)) {
     return "Federated Copilot コネクタは、サードパーティ サービスのデータをリアルタイムに読み取れるほか、Copilot Chat からコンテンツを作成・更新・削除できるようになります。";
   }
@@ -774,6 +778,14 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/microsoft copilot \(microsoft 365\): \[copilot extensibility\] users can create agents scoped on custom connector containers/.test(text)) {
+    return "カスタム コネクタのコンテナーを対象としたエージェントを作成";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): \[copilot extensibility\] user can create agents scoped on specific item\/ container using url/.test(text)) {
+    return "URL で特定のアイテムまたはコンテナーを対象とするエージェントを作成";
+  }
 
   if (/microsoft copilot studio: supercharge your workflows with computer use/.test(text)) {
     return "Microsoft Copilot Studio: コンピューターの使用でワークフローを強化します";
