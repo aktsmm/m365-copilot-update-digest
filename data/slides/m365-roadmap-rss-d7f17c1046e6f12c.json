@@ -70,6 +70,33 @@
         { "termKey": "maker", "term": "作成者（Maker）", "type": "term", "oneLine": { "text": "エージェントを作成する人。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "ロードマップ上で、項目が終了または削除される段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "現在のエージェント ビルダーでも URL をナレッジに指定できますか？",
+          "answer": {
+            "text": "はい。エージェント ビルダーでは、一般向け Web サイトの URL（最大 4 つ）や SharePoint の URL をナレッジ ソースとして追加できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge",
+                "locator": "ナレッジ ソースの制限の表、および SharePoint の URL を入力する節",
+                "retrievedAt": "2026-11-06T14:50:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "この項目の削除後、代わりに何を確認すればよいですか？",
+          "answer": {
+            "text": "ロードマップには移行先が示されていないため、必要な機能は現在のナレッジ ソースの対応範囲と今後のロードマップで確認するのが無難です。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502547",
         "learn": []
