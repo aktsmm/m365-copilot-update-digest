@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-915900f316faf75b",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "カスタム コネクタのコンテナーを範囲にしたエージェント作成（ロードマップから削除予定）",
+        "subtitleJa": "この項目は内容が正確でなくなったとして、ロードマップから削除されます",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Users can create agents scoped on Custom connector containers"
+      },
+      "meta": {
+        "publishedJst": "2026-11-06",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントの作成者**と、カスタム コネクタを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "予定されていた機能の案内が取り下げられ、ロードマップから削除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この項目の機能を前提にした計画がある場合は、見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "作成者が、カスタム コネクタのデータをコンテナー単位に絞ってエージェントを作成できる、という内容で掲載されていました。ロードマップの項目は「正確ではなくなったため削除される」と案内されています", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Web 版、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステージは Retirement", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップの説明: この項目は正確ではなくなり、削除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "コンテナー単位の範囲指定を前提にした計画がないか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップの項目で最新の案内を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "custom-connector", "term": "カスタム コネクタ", "type": "term", "oneLine": { "text": "ロードマップの説明で、エージェントが参照するデータの接続元として挙げられている項目。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "container", "term": "コンテナー", "type": "term", "oneLine": { "text": "ロードマップの説明で、コネクタ作成・更新時に定義され、データの範囲を絞る単位とされている項目。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了や項目の取り下げを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能は提供されますか？",
+          "answer": { "text": "ロードマップの説明では、この項目は正確ではなくなったためロードマップから削除されるとされています。提供時期の案内はありません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現場にはどう案内すべきですか？",
+          "answer": { "text": "この機能を前提にした計画がなければ対応は不要です。ある場合は、計画を見直すよう案内するのが無難です。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502546",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
