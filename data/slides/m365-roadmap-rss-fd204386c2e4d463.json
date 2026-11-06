@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fd204386c2e4d463",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Studio のエージェント ワークフローで MCP 対応ツールを利用可能に",
+        "subtitleJa": "MCP サーバーのツールを、エージェントの動きに組み込めます",
+        "en": "Microsoft Copilot Studio: Use MCP-compliant tools in agent workflows"
+      },
+      "meta": {
+        "publishedJst": "2026-11-06",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Copilot Studio", "Microsoft Copilot (Microsoft 365)", "Microsoft Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**（作成者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "独自システムや動的なナレッジ、カスタム アクションを MCP 経由でエージェントに組み込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには、エージェントの [ツール] から MCP サーバーを追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locator": "手順", "retrievedAt": "2026-11-06T07:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**MCP 対応ツール**をエージェントのワークフローで使えます。エージェントやワークフロー間で連携を再利用でき、重複した統合を減らせます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MCP サーバーに接続すると、リソース・ツール・プロンプトを利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locator": "モデル コンテキスト プロトコルとは?", "retrievedAt": "2026-11-06T07:20:00Z" }] },
+            { "text": "サーバー側のツール更新・削除は Copilot Studio に動的に反映される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locator": "MCP のしくみ", "retrievedAt": "2026-11-06T07:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントの [ツール] → [ツールの追加] → [モデル コンテキスト プロトコル] を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locator": "手順", "retrievedAt": "2026-11-06T07:20:00Z" }] },
+            { "text": "コネクタを選び、接続を承認して [追加と構成] を選択する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locator": "手順", "retrievedAt": "2026-11-06T07:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "MCP を使うには生成オーケストレーションを有効にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locator": "MCP のしくみ", "retrievedAt": "2026-11-06T07:20:00Z" }] },
+            { "text": "Copilot Studio が現在サポートするのは MCP のツールとリソース", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locator": "モデル コンテキスト プロトコルとは?", "retrievedAt": "2026-11-06T07:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "管理と関連する設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "MCP サーバーへのアクセスは Power Platform コネクタのデータ ポリシーに従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locator": "MCP サーバー ツールとデータ ポリシー", "retrievedAt": "2026-11-06T07:20:00Z" }] },
+            { "text": "[すべて許可] をオフにすると、不要なツールを個別に無効化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locator": "ツールの選択をカスタマイズする", "retrievedAt": "2026-11-06T07:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず必要なツールだけを有効にし、小さなエージェントで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "既存のナレッジ サーバーやデータ ソースにエージェントがつながるための共通プロトコル（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locator": "モデル コンテキスト プロトコルとは?", "retrievedAt": "2026-11-06T07:20:00Z" }] } },
+        { "termKey": "mcp-tool", "term": "MCP ツール", "type": "feature", "oneLine": { "text": "言語モデルがアクションを実行するために呼び出せる関数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locator": "モデル コンテキスト プロトコルとは?", "retrievedAt": "2026-11-06T07:20:00Z" }] } },
+        { "termKey": "mcp-resource", "term": "MCP リソース", "type": "feature", "oneLine": { "text": "API 応答やファイルの内容など、エージェントが読み取れるファイルに似たデータ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locator": "モデル コンテキスト プロトコルとは?", "retrievedAt": "2026-11-06T07:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "MCP サーバーのツールの一部だけを使えますか？",
+          "answer": { "text": "はい。[すべて許可] をオフにして、個々のツールを切り替えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locator": "ツールの選択をカスタマイズする", "retrievedAt": "2026-11-06T07:20:00Z" }] }
+        },
+        {
+          "question": "リソースもエージェントから使えますか？",
+          "answer": { "text": "はい。ただし MCP サーバー所有者が、いずれかのツールの出力としてリソースを構成する必要があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locator": "Important", "retrievedAt": "2026-11-06T07:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562221",
+        "learn": [
+          { "title": "モデル コンテキスト プロトコルを使用してエージェントを拡張する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-extend-action-mcp", "locale": "ja-jp" },
+          { "title": "MCP サーバーからエージェントにツールとリソースを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/mcp-add-components-to-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
