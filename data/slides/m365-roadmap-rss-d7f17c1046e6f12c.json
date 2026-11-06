@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d7f17c1046e6f12c",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "URL 指定でエージェントを作成する機能のロードマップ項目が削除",
+        "subtitleJa": "項目の内容が正確でなくなったため、ロードマップから取り下げられます",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] User can create agents scoped on specific item/ container using URL"
+      },
+      "meta": {
+        "publishedJst": "2026-11-06",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントの作成者**と、この機能を待っていた管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "この項目で予告されていた機能は、ロードマップの予定として扱えなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この項目を前提にした計画があれば見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "作成者が**サードパーティの URL を指定してエージェントを作る**構想でしたが、項目は「内容が正確でなくなった」としてロードマップから削除されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: URL でアイテム単位またはコンテナー単位を指定するエージェント作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "例: Azure DevOps のチケット、エリア パス", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ項目は正確でなくなったため削除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core",
+          "items": []
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応の目安",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この項目を前提にした展開計画があれば見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "代替の機能が必要なら、公式の提供予定を改めて確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "roadmap", "term": "Microsoft 365 ロードマップ", "type": "term", "oneLine": { "text": "Microsoft 365 の今後の機能と提供状況を公開しているページ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "maker", "term": "作成者（Maker）", "type": "term", "oneLine": { "text": "エージェントを作成する人。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "ロードマップ上で、項目が終了または削除される段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502547",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
