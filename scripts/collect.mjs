@@ -483,6 +483,14 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/users can create agents scoped on custom connector containers/.test(text)) {
+    return "メーカーは、特定のコンテナーにあるカスタム コネクタ データを対象とするエージェントを作成できます。コンテナーは、カスタム コネクタの作成または更新時に定義します。注: このロードマップ項目は現状に即しておらず、ロードマップから削除される予定です。";
+  }
+
+  if (/user can create agents scoped on specific item\/ container using url/.test(text)) {
+    return "メーカーはサードパーティの URL を指定してエージェントを作成できます。指定できるのは個別アイテムの URL またはコンテナーの URL（例: Azure DevOps のチケットやエリア パス）です。注: このロードマップ項目は現状に即しておらず、ロードマップから削除される予定です。";
+  }
+
   if (/microsoft copilot studio: use mcp-compliant tools in agent workflows/.test(text)) {
     return "MCP をサポートし、独自のシステム、動的なナレッジ ソース、カスタム アクションをエージェント ワークフローに統合できます。ワークフローの信頼性を保ちながら拡張性を高め、エージェントやワークフロー間で連携を再利用しやすくし、統合の重複を減らします。";
   }
