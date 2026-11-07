@@ -491,6 +491,14 @@ function knownJapaneseRoadmapSummary(event) {
     return "メーカーはサードパーティの URL を指定してエージェントを作成できます。指定できるのは個別アイテムの URL またはコンテナーの URL（例: Azure DevOps のチケットやエリア パス）です。注: このロードマップ項目は現状に即しておらず、ロードマップから削除される予定です。";
   }
 
+  if (/users can explore third-party content in copilot chat with deep citations and side-by-side previews/.test(text)) {
+    return "Copilot Chat では、サードパーティ コンテンツを利用する際に、詳細な引用やインライン引用、並列プレビューを表示して内容を確認できます。注: このロードマップ項目は現状に即しておらず、ロードマップから削除される予定です。";
+  }
+
+  if (/admins can govern and manage federated copilot connectors in microsoft 365 admin center/.test(text)) {
+    return "管理者は Microsoft 365 管理センターでフェデレーション Copilot コネクタのガバナンスと管理を行えます。";
+  }
+
   if (/microsoft copilot studio: use mcp-compliant tools in agent workflows/.test(text)) {
     return "MCP をサポートし、独自のシステム、動的なナレッジ ソース、カスタム アクションをエージェント ワークフローに統合できます。ワークフローの信頼性を保ちながら拡張性を高め、エージェントやワークフロー間で連携を再利用しやすくし、統合の重複を減らします。";
   }
@@ -793,6 +801,14 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/microsoft copilot \(microsoft 365\): \[copilot extensibility\] user can create agents scoped on specific item\/ container using url/.test(text)) {
     return "URL で特定のアイテムまたはコンテナーを対象とするエージェントを作成";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): \[copilot extensibility\] users can explore third-party content in copilot chat with deep citations and side-by-side previews/.test(text)) {
+    return "Copilot Chat でサードパーティ コンテンツを詳細な引用と並列プレビューで表示";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): \[copilot extensibility\] admins can govern and manage federated copilot connectors in microsoft 365 admin center/.test(text)) {
+    return "Microsoft 365 管理センターでフェデレーション Copilot コネクタを管理";
   }
 
   if (/microsoft copilot studio: supercharge your workflows with computer use/.test(text)) {
