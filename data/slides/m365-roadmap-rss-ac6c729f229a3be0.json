@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-ac6c729f229a3be0",
-      "kind": "rolling-out",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "展開中",
+      "label": "提供開始",
       "title": {
-        "ja": "Dynamics 365 Contact Center: ユーザー グループのブルズアイ ルーティングで会話を振り分け",
+        "ja": "Dynamics 365 Contact Center: ユーザー グループのブルズアイ ルーティングが提供開始",
         "subtitleJa": "待ち時間に応じて、割り当て対象の担当者を段階的に広げられます",
         "en": "Dynamics 365 Contact Center: Use bullseye routing with user groups to orchestrate conversations"
       },
       "meta": {
-        "publishedJst": "2026-10-29",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "Rolling out",
-        "products": ["Dynamics 365 Contact Center"],
+        "status": "Launched",
+        "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["dynamics"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Dynamics 365 Contact Center",
@@ -81,12 +81,12 @@
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "リリース プラン上のパブリック プレビューは 2026 年 7 月 9 日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "冒頭の提供時期の表", "retrievedAt": "2026-10-29T07:50:00Z" }] },
+            { "text": "リリース プランのページは 2026 年 10 月時点でアーカイブされ、更新されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "冒頭の注記", "retrievedAt": "2026-11-07T06:40:00Z" }] },
             { "text": "対応リージョンと言語は、Microsoft の Feature Geography / Language レポートで確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "地域・利用可能な言語", "retrievedAt": "2026-10-29T07:50:00Z" }] }
           ]
         },
         {
-          "id": "rollout-scope",
+          "id": "related-features",
           "heading": "提供範囲",
           "availability": "present",
           "priority": "detail",
@@ -110,7 +110,7 @@
         { "termKey": "bullseye-routing", "term": "ブルズアイ ルーティング", "type": "feature", "oneLine": { "text": "待ち時間に応じて、割り当て対象の担当者を同心円状に広げる階層的な割り当て方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] } },
         { "termKey": "user-group", "term": "ユーザー グループ", "type": "term", "oneLine": { "text": "管理者が階層ごとに定義し、キューに関連付ける担当者のまとまり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] } },
         { "termKey": "conversation-orchestration", "term": "会話オーケストレーション", "type": "feature", "oneLine": { "text": "各会話の待ち時間を監視し、閾値で対象プールを自動的に拡大する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/use-bulls-eye-routing-user-groups-orchestrate-conversations", "locator": "機能の詳細", "retrievedAt": "2026-10-29T07:50:00Z" }] } },
-        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進んでいる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（Launched）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
