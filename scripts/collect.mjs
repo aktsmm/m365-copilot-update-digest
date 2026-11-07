@@ -811,6 +811,18 @@ function knownJapaneseRoadmapTitle(event) {
     return "Microsoft 365 管理センターでフェデレーション Copilot コネクタを管理";
   }
 
+  if (/microsoft copilot \(microsoft 365\): \[copilot extensibility\] improve discovery of champion connector prompts for users/.test(text)) {
+    return "Champion コネクタ プロンプトの検出を改善";
+  }
+
+  if (/onenote: summary and q&a in onenote mobile with copilot \(iphone\)/.test(text)) {
+    return "Copilot を使用した OneNote モバイルの概要と Q&A (iPhone)";
+  }
+
+  if (/work iq: execute \(recipes\)/.test(text)) {
+    return "Work IQ: レシピを実行";
+  }
+
   if (/microsoft copilot studio: supercharge your workflows with computer use/.test(text)) {
     return "Microsoft Copilot Studio: コンピューターの使用でワークフローを強化します";
   }
