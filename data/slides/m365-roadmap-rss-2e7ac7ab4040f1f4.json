@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2e7ac7ab4040f1f4",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "サードパーティ コンテンツの詳細引用表示のロードマップ項目が削除へ",
+        "subtitleJa": "チャットでの詳細な引用とサイド バイ サイド プレビューの項目が対象です",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Users can explore third-party content in Copilot chat with deep citations and side-by-side previews"
+      },
+      "meta": {
+        "publishedJst": "2026-11-07",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot チャットでサードパーティ コンテンツを使う管理者と作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "この機能のロードマップ項目は、内容が現状と合わなくなったため削除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ項目の削除の告知で、利用者側に必要な操作は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ロードマップ項目は「現状と合わなくなった」ため**削除される予定**です。Microsoft は不便をわびています", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は、サードパーティ コンテンツの詳細な引用・インライン引用・サイド バイ サイド プレビューの項目", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "項目は現状と合わないため、ロードマップから削除される予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "代わりに使えるもの",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot コネクタの内容は、チャットの回答で引用元として示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Microsoft Copilot and connectors", "retrievedAt": "2026-11-07T13:00:00Z" }] },
+            { "text": "ユーザーは参照された項目を開いて、詳細を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Microsoft Copilot and connectors", "retrievedAt": "2026-11-07T13:00:00Z" }] },
+            { "text": "ユーザーがアクセス権を持つコンテンツだけが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Microsoft Copilot and connectors", "retrievedAt": "2026-11-07T13:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "確認のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ項目を根拠に導入計画を立てていた場合は、計画を見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "外部データの利用は、同期コネクタとフェデレーション コネクタの違いで整理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-11-07T13:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connector", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "Microsoft 365 外のデータにつなぎ、Copilot や検索で使えるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "冒頭", "retrievedAt": "2026-11-07T13:00:00Z" }] } },
+        { "termKey": "federated-connector", "term": "フェデレーション コネクタ", "type": "feature", "oneLine": { "text": "MCP を使い、インデックスせずに外部データをリアルタイムで取得するコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Federated connectors", "retrievedAt": "2026-11-07T13:00:00Z" }] } },
+        { "termKey": "synced-connector", "term": "同期コネクタ", "type": "feature", "oneLine": { "text": "外部データを Microsoft Graph にインデックスするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Synced connectors", "retrievedAt": "2026-11-07T13:00:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "ロードマップ上で、項目が終了または削除される段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "機能そのものが使えなくなるのですか？",
+          "answer": { "text": "告知は、ロードマップ項目が現状と合わなくなり削除されるという内容です。機能の提供終了を示す記述はありません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "サードパーティ コンテンツを Copilot チャットで使うにはどうすればよいですか？",
+          "answer": { "text": "Copilot コネクタ（同期またはフェデレーション）を使います。回答では参照元の項目を開いて確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-11-07T13:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502543",
+        "learn": [{ "title": "Copilot コネクタの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
