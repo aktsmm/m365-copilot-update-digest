@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-009336dd54a760c0",
-      "kind": "in-development",
+      "kind": "rolling-out",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "展開中",
       "title": {
-        "ja": "Planner エージェントで AI によるステータス レポートを作成（開発中）",
+        "ja": "Planner エージェントで AI によるステータス レポートを作成（展開中）",
         "subtitleJa": "プランのデータから、関係者向けの報告を数分で作れるようになります",
         "en": "Planner: AI-generated Status Reports in Planner Agent"
       },
       "meta": {
-        "publishedJst": "2026-10-07",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "In development",
+        "status": "Rolling out",
         "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
-        "categories": ["agents", "m365-apps"],
-        "importance": "notable",
+        "categories": ["agents", "office-apps"],
+        "importance": "normal",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Desktop", "Web"],
         "productArea": "Planner",
@@ -37,33 +37,54 @@
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
             { "text": "Planner エージェントにレポートを依頼すると、プランのタスク データを取得", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "全体の状況・進捗・リスク・次の予定を、読みやすい文章にまとめる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "全体の状況・進捗・リスク・次の予定を、読みやすい文章にまとめる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "レポートは Loop で開き、プランの SharePoint フォルダーに保存される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/understand-how-disabling-loop-affects-planner", "locator": "Planner エージェントの状態レポート", "retrievedAt": "2026-11-07T08:00:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "ロードマップ上は開発中の段階で、提供範囲は Worldwide（標準マルチテナント）の Desktop と Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Planner エージェントの利用には Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-10-14T22:10:00Z" }] }
+            { "text": "Planner エージェントに状況報告を依頼する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザーに Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "前提条件とライセンス", "retrievedAt": "2026-11-07T08:00:00Z" }] },
+            { "text": "管理者は Set-PlannerConfiguration の -AllowPlannerCopilot で有効・無効を切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-11-07T08:00:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備しておくこと",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "有効・無効は Set-PlannerConfiguration の -AllowPlannerCopilot で切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T22:10:00Z" }] },
-            { "text": "設定の反映に最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T22:10:00Z" }] }
+            { "text": "テナントで Loop が有効である必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/understand-how-disabling-loop-affects-planner", "locator": "Planner エージェントの Loop アクセス", "retrievedAt": "2026-11-07T08:00:00Z" }] },
+            { "text": "Loop が無効だと、[レポート] タブは表示されてもレポートを開けず生成もできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/understand-how-disabling-loop-affects-planner", "locator": "Planner エージェントの状態レポート", "retrievedAt": "2026-11-07T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上は展開中で、Worldwide（標準マルチテナント）の Desktop と Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "設定の反映に最大 1 時間かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-11-07T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Conditional Access などで Loop がブロックされていないか事前に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
@@ -71,16 +92,17 @@
         { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-14T22:10:00Z" }] } },
         { "termKey": "status-report", "term": "ステータス レポート", "type": "term", "oneLine": { "text": "プランの状況・進捗・リスク・次の予定をまとめた報告。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-14T22:10:00Z" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が進められている段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
+        { "question": "Loop を無効にしている組織ではどうなりますか？", "answer": { "text": "[レポート] タブは表示されますが、レポートを開いたり生成したりできません。Conditional Access などのポリシーで Loop がブロックされた場合も同様です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/understand-how-disabling-loop-affects-planner", "locator": "Planner エージェントの状態レポート", "retrievedAt": "2026-11-07T08:00:00Z" }] } },
         { "question": "特定のユーザーだけに使わせることはできますか？", "answer": { "text": "はい。-PlannerCopilotAllowedGroupId にセキュリティ グループ ID を指定すると、そのグループ（入れ子のメンバーを含む）のユーザーだけに有効化できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-16T22:40:00Z" }] } },
         { "question": "Planner エージェントを無効にすると他の機能にも影響しますか？", "answer": { "text": "はい。Planner エージェントをオフにすると、Facilitator のドキュメント作成スキルも無効になります。他の Facilitator スキルは影響を受けません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する（注）", "retrievedAt": "2026-10-16T22:40:00Z" }] } },
         { "question": "管理者が設定を変えてから反映までどれくらいかかりますか？", "answer": { "text": "ポリシーの変更が組織全体に反映されるまで、最大 1 時間かかる場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-16T22:40:00Z" }] } }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=567886",
-        "learn": [{ "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }]
+        "learn": [{ "title": "Planner エージェントと Planner エージェント チャットへのアクセスをオフまたは制限する", "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locale": "ja-jp" }, { "title": "Loop を無効にした場合の Planner への影響を理解する", "url": "https://learn.microsoft.com/ja-jp/planner/understand-how-disabling-loop-affects-planner", "locale": "ja-jp" }]
       },
       "render": { "continuationRequired": false }
     }
