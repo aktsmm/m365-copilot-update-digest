@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-33ddf53a72227078",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Teams の Facilitator に「フォローアップ モード」が登場予定",
+        "subtitleJa": "毎回メンションしなくても、Facilitator に自然に話しかけられるようになります",
+        "en": "Microsoft Teams: Facilitator follow-up mode"
+      },
+      "meta": {
+        "publishedJst": "2026-11-07",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["teams"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop"],
+        "productArea": "Microsoft Teams",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議で Facilitator を使う人**と、Teams の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Facilitator に話しかけるたびにタグ付けする手間が減る", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "今は対応不要。Facilitator の許可設定は Teams 管理センターで確認できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議にファシリテーターを許可する", "retrievedAt": "2026-11-07T08:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "チャットで Facilitator に依頼するには、@Facilitator とメンションして話しかける",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "一般提供されている機能", "retrievedAt": "2026-11-07T08:30:00Z" }]
+        },
+        "after": {
+          "text": "毎回タグ付けしなくても、Facilitator と**自然に会話**できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "予定されている範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Facilitator とのやり取りでタグ付けが不要になる「フォローアップ モード」", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は Worldwide（標準マルチテナント）の Desktop", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は公開されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在の Facilitator は 1 対 1・グループ チャット、外部の会議では未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "ファシリテーターの制限事項", "retrievedAt": "2026-11-07T08:30:00Z" }] },
+            { "text": "Facilitator を開始できるのは Microsoft Copilot ライセンスを持つユーザーのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "ファシリテーターの制限事項", "retrievedAt": "2026-11-07T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Teams 管理センターで Facilitator が許可されているか確認（既定は許可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議にファシリテーターを許可する", "retrievedAt": "2026-11-07T08:30:00Z" }] },
+            { "text": "会議で使うには Teams の Loop エクスペリエンスをオンにする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議の Facilitator 用に Teams で Loop エクスペリエンスを有効にする", "retrievedAt": "2026-11-07T08:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "facilitator", "term": "Facilitator", "type": "feature", "oneLine": { "text": "議題の表示、進行状況の追跡、要点の記録で会議の進行を支援する、Teams の AI エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "冒頭", "retrievedAt": "2026-11-07T08:30:00Z" }] } },
+        { "termKey": "loop-experience", "term": "Teams の Loop エクスペリエンス", "type": "feature", "oneLine": { "text": "会議で Facilitator を使うためにオンにする必要がある設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "会議の Facilitator 用に Teams で Loop エクスペリエンスを有効にする", "retrievedAt": "2026-11-07T08:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能の開発が進められている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Facilitator は誰でも使えますか？",
+          "answer": {
+            "text": "Facilitator は Microsoft Copilot ライセンスに含まれます。ライセンスのないユーザーは開始できませんが、他の人のやり取りやメモは見られます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "ライセンス要件", "retrievedAt": "2026-11-07T08:30:00Z" }]
+          }
+        },
+        {
+          "question": "Facilitator は Teams の Copilot と何が違いますか？",
+          "answer": {
+            "text": "Copilot のやり取りは個人に限定されますが、Facilitator への依頼と応答は会議の参加者全員に表示されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locator": "Teams でのファシリテーターの動作", "retrievedAt": "2026-11-07T08:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=566523",
+        "learn": [{ "title": "Microsoft Teams でファシリテーターを設定する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/facilitator-teams", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
