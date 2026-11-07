@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-270309ed0fe5ae0a",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "コネクタ管理者向けに OAuth の認証手順を簡素化",
+        "subtitleJa": "Microsoft Copilot のコネクタを、数クリックで接続できます",
+        "en": "Microsoft Copilot (Microsoft 365): Streamlined Authentication process with OAuth for Connector Admins"
+      },
+      "meta": {
+        "publishedJst": "2026-11-07",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft 365 Copilot", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot の**コネクタ管理者**と、コネクタを作成する人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "OAuth による認証が一本化され、数クリックで接続できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "新しくコネクタを接続する管理者は、OAuth の登録 ID を準備して手順を確認する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "OAuth 2.0 / コネクタを作成する", "retrievedAt": "2026-11-07T06:50:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "**OAuth で認証を一本化**し、コネクタ管理者が数クリックで接続できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "OAuth 認証で、ユーザーは外部 ID プロバイダーのアカウントでサインインする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "OAuth 2.0", "retrievedAt": "2026-11-07T06:50:00Z" }] },
+            { "text": "カスタム フェデレーション コネクタは、MCP サーバー経由で社内データを Copilot につなぐ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "冒頭", "retrievedAt": "2026-11-07T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams 開発者ポータルで OAuth クライアントを登録し、登録 ID を控える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "Teams 開発者ポータルで OAuth アプリを登録する", "retrievedAt": "2026-11-07T06:50:00Z" }] },
+            { "text": "管理センターの Copilot > コネクタ > ギャラリーで、コネクタを作成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "コネクタを作成する", "retrievedAt": "2026-11-07T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Global Administrator または AI Administrator ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "前提条件", "retrievedAt": "2026-11-07T06:50:00Z" }] },
+            { "text": "OAuth プロバイダーが対応していれば、PKCE を有効にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "OAuth 2.0", "retrievedAt": "2026-11-07T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の認証方法との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Entra SSO は Microsoft 365 の資格情報、OAuth 2.0 は外部 ID プロバイダーで認証", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "認証を設定する", "retrievedAt": "2026-11-07T06:50:00Z" }] },
+            { "text": "認証が不要なデータ ソース向けに「認証なし」も選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "認証を設定する", "retrievedAt": "2026-11-07T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ステージング展開で一部のユーザーに限定して試してから、全ユーザーへ展開する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "展開をステージングする", "retrievedAt": "2026-11-07T06:50:00Z" }] },
+            { "text": "設定の変更が Microsoft 365 全体に反映されるまで、最大 10 分かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "コネクタを管理する", "retrievedAt": "2026-11-07T06:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "oauth", "term": "OAuth 2.0", "type": "term", "oneLine": { "text": "データ ソースが外部 ID プロバイダーでユーザーを認証するときに使う方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "OAuth 2.0", "retrievedAt": "2026-11-07T06:50:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Copilot が社内システムのデータや操作につながるための仕組み（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "冒頭", "retrievedAt": "2026-11-07T06:50:00Z" }] } },
+        { "termKey": "federated-connector", "term": "カスタム フェデレーション コネクタ", "type": "feature", "oneLine": { "text": "MCP サーバーを通じて、組織独自のデータを Microsoft Copilot に取り込むコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "冒頭", "retrievedAt": "2026-11-07T06:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "OAuth と Microsoft Entra SSO はどう使い分けますか？",
+          "answer": {
+            "text": "MCP サーバーが Microsoft Entra ID でアクセス制御していれば Entra SSO、外部 ID プロバイダーなら OAuth 2.0 を選びます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "認証を設定する", "retrievedAt": "2026-11-07T06:50:00Z" }]
+          }
+        },
+        {
+          "question": "コネクタを一部のユーザーだけに公開できますか？",
+          "answer": {
+            "text": "はい。ステージング展開でユーザーまたはグループを指定でき、準備ができたら全ユーザーに展開できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locator": "展開をステージングする", "retrievedAt": "2026-11-07T06:50:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502530",
+        "learn": [{ "title": "カスタム フェデレーション コネクタを設定する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/set-up-custom-federated-connectors", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
