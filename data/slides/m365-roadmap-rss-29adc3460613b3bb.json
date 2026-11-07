@@ -3,90 +3,106 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-29adc3460613b3bb",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "Contact Center: 以前対応したエキスパートへ会話を自動割り当て",
-        "subtitleJa": "統合ルーティングで、顧客を事情を知る担当者につなぎ直せます",
+        "ja": "Contact Center: 以前対応した専門家へ会話を自動割り当て",
+        "subtitleJa": "過去にやり取りした担当者や指名の担当者へ、会話を再び振り分けられます",
         "en": "Dynamics 365 Contact Center: Unified routing - Assign conversation to expert who engaged with the customer previously"
       },
       "meta": {
-        "publishedJst": "2026-10-17",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "In development",
+        "status": "Launched",
         "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["dynamics"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Dynamics 365 Contact Center",
         "sourceName": "Microsoft 365 Roadmap"
       },
       "audience": {
-        "who": { "text": "**Dynamics 365 Contact Center のルーティング管理者・設定担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "顧客を、すでに経緯を知るエキスパートへ再接続しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "who": { "text": "**Dynamics 365 Contact Center の管理者・作成者**と、コンタクト センターの担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "以前対応した専門家へ再接続でき、顧客が同じ説明を繰り返さずに済む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Business value", "retrievedAt": "2026-11-07T06:30:00Z" }] },
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "開発中のため今すぐの対応は不要。関連機能は Learn で確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "required": "optional",
+        "summary": { "text": "利用するには、管理者が会話オーケストレーションで割り当てロジックを設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] }
       },
       "beforeAfter": {
-        "after": { "text": "過去の対応履歴・キュー所属・エキスパートの空き状況をもとに、**以前対応した（または優先の）エキスパートへ自動で割り当て**ます。不在時は通常の割り当てに戻ります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "after": { "text": "過去にやり取りした専門家や指名の専門家へ**自動で割り当て**、不在時は次に適した専門家へ切り替えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "想定される範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "以前に関与した担当者・優先担当者への割り当てを、履歴とキュー所属に基づいて行う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "関連する Learn の機能では、割り当て前にプレゼンス・キュー所属・直近期間を検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "該当者が不在のときは、キューの割り当て方法で次善の担当者へ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "過去のやり取り、キュー所属、専門家の空き状況をもとに割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] },
+            { "text": "前回または指名の専門家が不在なら、次に適した専門家へ自動で切り替わる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] },
+            { "text": "非同期会話では、プレゼンスと同時対応数の上限を確認して割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "ロードマップ上は開発中。提供時期・仕様は今後変わることがある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "関連する Learn の機能は、プレイブックを使う方式がプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "優先担当者へのルーティングは、プッシュベースのワークストリームの会話で機能する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "優先代表へのルーティングのしくみ", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+            { "text": "管理者が、会話オーケストレーションの自然言語プレイブックで割り当てロジックを定義", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] },
+            { "text": "前回の専門家を探す期間を、ルックバック期間で設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備のヒント",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "割り当てる担当者は、ルーティング先キューのメンバーである必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "前提条件", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "現行の優先担当者ルーティングの設定を棚卸ししておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連する機能",
+          "availability": "not-stated",
+          "priority": "detail",
+          "items": []
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "再問い合わせやフォローアップの会話を、直近または指名の専門家へ振り分ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Business value", "retrievedAt": "2026-11-07T06:30:00Z" }] },
+            { "text": "対応時間の短縮と顧客満足度の向上が見込まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Business value", "retrievedAt": "2026-11-07T06:30:00Z" }] }
           ]
         }
       ],
       "glossary": [
-        { "termKey": "preferred-expert", "term": "優先担当者", "type": "feature", "oneLine": { "text": "連絡先にマップされた担当者。1 つの連絡先に最大 3 人まで設定できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "連絡先の優先担当者を構成する", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
-        { "termKey": "playbook", "term": "会話オーケストレーション プレイブック", "type": "feature", "oneLine": { "text": "自然言語で割り当てロジックを定義する仕組み。優先順位やルックバック期間を設定できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
-        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供開始前の開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "unified-routing", "term": "統合ルーティング", "type": "feature", "oneLine": { "text": "Dynamics 365 Contact Center で会話を適切な専門家に振り分ける仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "playbook", "term": "プレイブック", "type": "feature", "oneLine": { "text": "会話オーケストレーションで、割り当てロジックを自然言語で定義するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] } },
+        { "termKey": "lookback", "term": "ルックバック期間", "type": "term", "oneLine": { "text": "以前に対応した専門家をさかのぼって探す期間の設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
-          "question": "どのくらい前の対応まで遡れますか？",
-          "answer": { "text": "関連する Learn の説明では、直近期間は 7・10・30 日などで設定でき、上限は 30 日です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "会話オーケストレーション プレイブック (プレビュー)", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          "question": "以前の専門家が不在のときはどうなりますか？",
+          "answer": { "text": "次に適した専門家へ自動で切り替わり、サービス レベルが維持されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] }
         },
         {
-          "question": "優先担当者は何人まで設定できますか？",
-          "answer": { "text": "既存の優先代表ルーティングでは、1 つの連絡先に最大 3 人まで設定でき、上位から順に割り当てられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locator": "連絡先の優先担当者を構成する", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          "question": "非同期会話では何が考慮されますか？",
+          "answer": { "text": "専門家の現在のプレゼンスと同時対応数の上限が確認され、余力がある場合のみ割り当てられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locator": "Feature details", "retrievedAt": "2026-11-07T06:30:00Z" }] }
         }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576746",
-        "learn": [{ "title": "優先担当者または以前に関与した担当者へのルーティングを構成する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/administer/configure-preferred-agent", "locale": "ja-jp" }]
+        "learn": [{ "title": "以前に顧客とやり取りした専門家に会話を割り当てる", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/assign-conversation-expert-who-engaged-customer-previously", "locale": "ja-jp" }]
       },
       "render": { "continuationRequired": false }
     }
