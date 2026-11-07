@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-e719250ea47e0442",
-      "kind": "rolling-out",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "展開中",
+      "label": "提供開始",
       "title": {
-        "ja": "Planner の基本プランで Planner Agent チャットが利用可能に（展開中）",
+        "ja": "Planner の基本プランで Planner Agent チャットが提供開始",
         "subtitleJa": "自然言語での質問応答やタスクの検索を、プラン内のチャットで行えます",
         "en": "Planner: Planner Agent chat in Basic Plans"
       },
       "meta": {
-        "publishedJst": "2026-09-10",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "Rolling out",
+        "status": "Launched",
         "products": ["Planner", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["agents", "office-apps"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Desktop", "Web"],
         "productArea": "Planner",
@@ -80,7 +80,7 @@
           "priority": "detail",
           "items": [
             { "text": "Worldwide（標準マルチテナント）向けで、Desktop と Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "ロードマップ上の段階は「展開中」（Targeted Release）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "ロードマップ上の段階は「提供開始」（Launched）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
         },
         {
@@ -98,7 +98,7 @@
         { "termKey": "planner-agent", "term": "Planner エージェント", "type": "feature", "oneLine": { "text": "チームの計画の作成とタスクの実行を自動化するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-19T14:55:00Z" }] } },
         { "termKey": "planner-agent-chat", "term": "Planner エージェント チャット", "type": "feature", "oneLine": { "text": "アプリ内の自然言語チャットで、プランの更新依頼や概要の取得ができる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "概要", "retrievedAt": "2026-10-19T14:55:00Z" }] } },
         { "termKey": "security-group", "term": "セキュリティ グループ", "type": "term", "oneLine": { "text": "Microsoft Entra ID のグループ。入れ子のメンバーも対象になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/planner/turn-off-planner-agent", "locator": "アクセスを管理する", "retrievedAt": "2026-10-19T14:55:00Z" }] } },
-        { "termKey": "label-rolling-out", "term": "展開中（Rolling out）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
