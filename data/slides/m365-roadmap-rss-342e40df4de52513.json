@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-342e40df4de52513",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "Dynamics 365 Contact Center の会話配信を自然言語プレイブックで制御（開発中）",
+        "ja": "Dynamics 365 Contact Center の会話配信を自然言語プレイブックで制御",
         "subtitleJa": "会話の開始から解決まで、状況に応じて配信を調整できます",
         "en": "Dynamics 365 Contact Center: Unified routing - Orchestrate conversation distribution with natural language playbooks"
       },
       "meta": {
-        "publishedJst": "2026-10-23",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "In development",
+        "status": "Launched",
         "products": ["Dynamics 365 Contact Center"],
         "categories": ["dynamics"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Dynamics 365 Contact Center",
@@ -37,35 +37,54 @@
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "対象範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "条件の変化を監視し、プレイブックに従って関連アクションを自動実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "冒頭", "retrievedAt": "2026-10-23T07:00:00Z" }] },
-            { "text": "動的な優先順位付け、オーバーフロー処理、信頼する専門家への割り当てに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "サポートされているシナリオ", "retrievedAt": "2026-10-23T07:00:00Z" }] },
-            { "text": "音声およびメッセージ チャネルのみで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "冒頭", "retrievedAt": "2026-10-23T07:00:00Z" }] }
+            { "text": "条件の変化を監視し、プレイブックに従って関連アクションを自動実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "冒頭", "retrievedAt": "2026-11-07T06:10:00Z" }] },
+            { "text": "プレイブックは、キュー・トリガー イベント・チャネル・条件・アクションで構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "プレイブックを理解する", "retrievedAt": "2026-11-07T06:10:00Z" }] },
+            { "text": "音声およびメッセージ チャネルのみで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "冒頭", "retrievedAt": "2026-11-07T06:10:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "Learn では運用対応のプレビュー機能とされ、追加使用条件が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "Important", "retrievedAt": "2026-10-23T07:00:00Z" }] },
-            { "text": "条件は最大 10 個で、各条件のコンテキスト変数は最大 2 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "プレイブックを理解する", "retrievedAt": "2026-10-23T07:00:00Z" }] },
-            { "text": "同じシナリオ・同じキューで複数のアクティブなプレイブックは作成できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "競合", "retrievedAt": "2026-10-23T07:00:00Z" }] }
+            { "text": "「会話オーケストレーション」でプロンプト ギャラリーからテンプレートを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "プレイブックを作成する", "retrievedAt": "2026-11-07T06:10:00Z" }] },
+            { "text": "チャネルと適用キューを選び、下書き保存後に発行してアクティブ化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "プレイブックを作成する", "retrievedAt": "2026-11-07T06:10:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "事前準備",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "システム管理者またはオムニチャネル管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "前提条件", "retrievedAt": "2026-10-23T07:00:00Z" }] },
-            { "text": "統合ルーティングの有効化と、キュー・ワークストリーム・チャネルの構成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "前提条件", "retrievedAt": "2026-10-23T07:00:00Z" }] }
+            { "text": "システム管理者またはオムニチャネル管理者ロールと、統合ルーティングの有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "前提条件", "retrievedAt": "2026-11-07T06:10:00Z" }] },
+            { "text": "条件は最大 10 個。プレイブックを公開した場合のみ Copilot クレジットを消費", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "冒頭 / プレイブックを理解する", "retrievedAt": "2026-11-07T06:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との関係",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "動的な優先順位付けは既存のオーバーフロー ルール・割り当てルールと連携", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "サポートされているシナリオ", "retrievedAt": "2026-11-07T06:10:00Z" }] },
+            { "text": "同じシナリオ・同じキューで複数のアクティブなプレイブックは作成できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "同一キューに対する複数のプレイブック", "retrievedAt": "2026-11-07T06:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "対応シナリオ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "動的な優先順位付け、オーバーフロー処理、優先・過去の担当者への割り当て", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "サポートされているシナリオ", "retrievedAt": "2026-11-07T06:10:00Z" }] },
+            { "text": "ユーザー グループ経由のブルズアイ ルーティングにも対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "サポートされているシナリオ", "retrievedAt": "2026-11-07T06:10:00Z" }] }
           ]
         }
       ],
@@ -73,7 +92,7 @@
         { "termKey": "conversation-orchestration", "term": "会話オーケストレーション", "type": "feature", "oneLine": { "text": "会話のライフサイクル全体で、条件の変化に応じて各会話を管理する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "冒頭", "retrievedAt": "2026-10-23T07:00:00Z" }] } },
         { "termKey": "playbook", "term": "自然言語プレイブック", "type": "feature", "oneLine": { "text": "トリガー イベントと、実行する条件・アクションを自然言語で定義したもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "プレイブックを理解する", "retrievedAt": "2026-10-23T07:00:00Z" }] } },
         { "termKey": "unified-routing", "term": "統合ルーティング", "type": "feature", "oneLine": { "text": "会話オーケストレーションの利用前に、環境で有効にしておく必要があるルーティング機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locator": "前提条件", "retrievedAt": "2026-10-23T07:00:00Z" }] } },
-        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能が開発されている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
@@ -87,7 +106,7 @@
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577788",
-        "learn": [{ "title": "自然言語プレイブックを使用して会話オーケストレーションを構成する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locale": "ja-jp" }]
+        "learn": [{ "title": "自然言語プレイブックを使用して会話オーケストレーションを構成する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/contact-center/administer/configure-conversation-orchestration", "locale": "ja-jp" }]
       },
       "render": { "continuationRequired": false }
     }
