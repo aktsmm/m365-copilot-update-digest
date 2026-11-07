@@ -3,18 +3,18 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-10b8a339d09675e5",
-      "kind": "in-development",
+      "kind": "rolling-out",
       "kindSource": "tags",
-      "label": "開発中",
+      "label": "展開中",
       "title": {
-        "ja": "Microsoft Copilot Chat の会話内で使える対話型アプリ「App Blocks」",
+        "ja": "Microsoft Copilot Chat の会話内で使える対話型アプリ「App Blocks」が展開開始",
         "subtitleJa": "依頼やデータから、計算ツールやダッシュボードをその場で作れます",
         "en": "Microsoft Copilot (Microsoft 365): App Blocks"
       },
       "meta": {
-        "publishedJst": "2026-10-27",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "In development",
+        "status": "Rolling out",
         "products": ["Microsoft 365 Copilot"],
         "categories": ["other"],
         "importance": "notable",
@@ -29,40 +29,56 @@
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        "required": "unknown",
+        "summary": { "text": "展開中のため、自社テナントでの表示を確認するとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
       "beforeAfter": {
         "after": { "text": "依頼内容とデータから、**電卓・ダッシュボード・フォーム**などの対話型アプリを会話内で利用できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
             { "text": "ユーザーの依頼とデータを、会話内のリッチな対話型体験に変換する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
             { "text": "電卓、ダッシュボード、フォーム、プランナー、可視化、シミュレーションなど", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Android・iOS・Mac・デスクトップ・Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "静的な回答にとどまらない体験が会話内で使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "not-stated",
           "priority": "core"
         },
         {
-          "id": "prepare",
-          "heading": "準備",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Worldwide (Standard Multi-Tenant) で展開中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Android・iOS・Mac・デスクトップ・Web が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
           "availability": "not-stated",
           "priority": "detail"
         }
       ],
       "glossary": [
         { "termKey": "app-blocks", "term": "App Blocks", "type": "feature", "oneLine": { "text": "Copilot Chat の会話内で、依頼やデータから対話型の体験を生成する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップ上で、まだ提供が始まっていない段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップ上で、提供の展開が始まっている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577743"
