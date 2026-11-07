@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-7a2d55d405a38c6b",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Champion コネクタのプロンプトを見つけやすく改善（提供開始）",
+        "subtitleJa": "入力の前後に出る提案とプロンプト ライブラリで、使えるプロンプトに気づきやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Improve discovery of Champion connector prompts for Users"
+      },
+      "meta": {
+        "publishedJst": "2026-11-07",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Champion コネクタを使うユーザー**と、拡張機能の作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コネクタ向けのプロンプトを探す手間が減り、使い始めやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "ロードマップ上は利用者向けの発見性の改善で、管理者の対応は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Champion コネクタのプロンプトが、**入力の前後に出るインライン提案**と**プロンプト ライブラリ**で見つけやすくなります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "入力の前後にプロンプトを提案するインライン提案を表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プロンプト ライブラリからもコネクタのプロンプトを探せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant)、対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップの状態は Launched（提供開始）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "not-stated"
+          ,"priority": "detail"
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との関係",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Web 版の Microsoft Copilot でコネクタを使う場面で、提案とライブラリを試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "champion-connector", "term": "Champion コネクタ", "type": "feature", "oneLine": { "text": "ロードマップで、Copilot の拡張機能（Copilot Extensibility）に分類されているコネクタ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "inline-suggestion", "term": "インライン提案", "type": "feature", "oneLine": { "text": "プロンプトの入力前後に表示される、プロンプトの提案。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "prompt-library", "term": "プロンプト ライブラリ", "type": "feature", "oneLine": { "text": "利用できるプロンプトを一覧から探せる場所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502542"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
