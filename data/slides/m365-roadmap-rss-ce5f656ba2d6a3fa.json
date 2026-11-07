@@ -3,310 +3,108 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-ce5f656ba2d6a3fa",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "Contact Center の統合ルーティング：キュー終了・無人時の待機会話を処理",
-        "subtitleJa": "稼働時間外や担当者不在でも、待機中の顧客を設定済みの代替先へ誘導します",
+        "ja": "Contact Center でキュー終了・無人時の待機会話を処理可能に",
+        "subtitleJa": "営業時間外や担当者不在でも、待機中の会話を取りこぼしません",
         "en": "Dynamics 365 Contact Center: Unified routing - Handle waiting conversations when queues close or become unstaffed"
       },
       "meta": {
-        "publishedJst": "2026-10-17",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "In development",
+        "status": "Launched",
         "products": ["Dynamics 365 Contact Center", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["dynamics"],
-        "importance": "normal",
+        "importance": "notable",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Dynamics 365 Contact Center",
         "sourceName": "Microsoft 365 Roadmap"
       },
       "audience": {
-        "who": {
-          "text": "**Contact Center のキューやルーティングを設定する管理者・作成者**",
-          "origin": "learn",
-          "assertion": "fact",
-          "verification": "verified",
-          "evidence": [
-            {
-              "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-              "locator": "対象となる場合は有効",
-              "retrievedAt": "2026-10-21T00:35:00Z"
-            }
-          ]
-        },
-        "change": {
-          "text": "待機中の顧客を放置せず、ボイスメール・コールバック・別キューへ案内できる",
-          "origin": "learn",
-          "assertion": "fact",
-          "verification": "verified",
-          "evidence": [
-            {
-              "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-              "locator": "ビジネス価値",
-              "retrievedAt": "2026-10-21T00:35:00Z"
-            }
-          ]
-        },
+        "who": { "text": "**Dynamics 365 Contact Center の管理者**と、キューを運用するチーム", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "冒頭の表", "retrievedAt": "2026-11-07T07:55:00Z" }] },
+        "change": { "text": "担当者が不在でも、顧客の待ち時間と放棄を減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "ビジネス価値", "retrievedAt": "2026-11-07T07:55:00Z" }] },
         "changeNature": "benefit"
       },
       "action": {
         "required": "optional",
-        "summary": {
-          "text": "現時点で対応は不要。提供開始後にフォールバック動作を設定する",
-          "origin": "editorial",
-          "assertion": "recommendation",
-          "verification": "unverified"
-        }
+        "summary": { "text": "管理者は、会話オーケストレーションで自然言語プロンプトを使い動作を構成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] }
       },
       "beforeAfter": {
-        "after": {
-          "text": "キューが**稼働時間外**になった時や**担当者が全員サインアウト**した時に、構成済みのフォールバックが自動で働きます",
-          "origin": "learn",
-          "assertion": "fact",
-          "verification": "verified",
-          "evidence": [
-            {
-              "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-              "locator": "機能の詳細",
-              "retrievedAt": "2026-10-21T00:35:00Z"
-            }
-          ]
-        }
+        "after": { "text": "キューが稼働時間外になったり担当者が全員サインアウトしても、**構成済みのフォールバック アクションが自動で適用**されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "ビジネス価値", "retrievedAt": "2026-11-07T07:55:00Z" }] }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "対象範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            {
-              "text": "稼働時間外への移行時、待機中の会話に管理者定義のオーバーフロー動作を適用",
-              "origin": "learn",
-              "assertion": "fact",
-              "verification": "verified",
-              "evidence": [
-                {
-                  "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                  "locator": "機能の詳細",
-                  "retrievedAt": "2026-10-21T00:35:00Z"
-                }
-              ]
-            },
-            {
-              "text": "担当者が全員サインアウトすると、オーバーフロータイマーを待たず即時にフォールバック",
-              "origin": "learn",
-              "assertion": "fact",
-              "verification": "verified",
-              "evidence": [
-                {
-                  "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                  "locator": "機能の詳細",
-                  "retrievedAt": "2026-10-21T00:35:00Z"
-                }
-              ]
-            },
-            {
-              "text": "顧客はボイスメール、コールバック要求、別の利用可能なキューへ案内される",
-              "origin": "learn",
-              "assertion": "fact",
-              "verification": "verified",
-              "evidence": [
-                {
-                  "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                  "locator": "ビジネス価値",
-                  "retrievedAt": "2026-10-21T00:35:00Z"
-                }
-              ]
-            }
+            { "text": "稼働時間外への移行時、待機中の会話に管理者定義のオーバーフロー アクションを適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] },
+            { "text": "担当者が全員サインアウトすると、オーバーフロー タイマーを待たず直ちにフォールバックを実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] },
+            { "text": "顧客はボイスメール、コールバック要求、別キューへの転送のいずれかに案内される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            {
-              "text": "ロードマップ上は開発中で、提供時期は変更される可能性がある",
-              "origin": "learn",
-              "assertion": "fact",
-              "verification": "verified",
-              "evidence": [
-                {
-                  "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                  "locator": "Important",
-                  "retrievedAt": "2026-10-21T00:35:00Z"
-                }
-              ]
-            },
-            {
-              "text": "提供範囲は Worldwide（Standard Multi-Tenant）、プラットフォームは Web",
-              "origin": "mrc",
-              "assertion": "fact",
-              "verification": "verified",
-              "evidence": [
-                {
-                  "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576759",
-                  "locator": "Roadmap 576759",
-                  "retrievedAt": "2026-10-21T00:35:00Z"
-                }
-              ]
-            }
+            { "text": "管理者は会話オーケストレーションで、自然言語プロンプトにより両シナリオを構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] },
+            { "text": "対象ユーザーは、管理者、作成者、またはアナリスト", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "冒頭の表", "retrievedAt": "2026-11-07T07:55:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備のポイント",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            {
-              "text": "管理者は会話オーケストレーションで自然言語プロンプトを使って両シナリオを構成する",
-              "origin": "learn",
-              "assertion": "fact",
-              "verification": "verified",
-              "evidence": [
-                {
-                  "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                  "locator": "機能の詳細",
-                  "retrievedAt": "2026-10-21T00:35:00Z"
-                }
-              ]
-            },
-            {
-              "text": "ボイスメールや代替キューなど、フォールバック先を事前に整理しておく",
-              "origin": "editorial",
-              "assertion": "recommendation",
-              "verification": "unverified"
-            }
+            { "text": "提供地域は Explore Feature Geography レポートで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "地域", "retrievedAt": "2026-11-07T07:55:00Z" }] },
+            { "text": "利用できる言語は Explore Feature Language レポートで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "利用可能な言語", "retrievedAt": "2026-11-07T07:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "大量ログアウト、予期しない休憩、営業時間内に捕捉されない休日などの場面で有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] },
+            { "text": "手作業でのキュー解消やシフト延長が不要になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "ビジネス価値", "retrievedAt": "2026-11-07T07:55:00Z" }] }
           ]
         }
       ],
       "glossary": [
-        {
-          "termKey": "unified-routing",
-          "term": "統合ルーティング",
-          "type": "feature",
-          "oneLine": {
-            "text": "Contact Center で会話をキューや担当者へ振り分ける仕組みで、本更新はその待機会話の扱いを強化します。",
-            "origin": "learn",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [
-              {
-                "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                "locator": "機能の詳細",
-                "retrievedAt": "2026-10-21T00:35:00Z"
-              }
-            ]
-          }
-        },
-        {
-          "termKey": "overflow",
-          "term": "オーバーフロー アクション",
-          "type": "term",
-          "oneLine": {
-            "text": "キューで会話を処理できない時に、管理者が定義して自動適用する対応です。",
-            "origin": "learn",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [
-              {
-                "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                "locator": "機能の詳細",
-                "retrievedAt": "2026-10-21T00:35:00Z"
-              }
-            ]
-          }
-        },
-        {
-          "termKey": "fallback",
-          "term": "フォールバック",
-          "type": "term",
-          "oneLine": {
-            "text": "担当者が不在の時に会話を回す、ボイスメール・コールバック・代替キューなどの構成済みの代替手段です。",
-            "origin": "learn",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [
-              {
-                "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                "locator": "ビジネス価値",
-                "retrievedAt": "2026-10-21T00:35:00Z"
-              }
-            ]
-          }
-        },
-        {
-          "termKey": "label-in-development",
-          "term": "開発中",
-          "type": "label",
-          "oneLine": {
-            "text": "ロードマップ上で、機能がまだ提供開始前の開発段階にあることを示します。",
-            "origin": "mrc",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [
-              {
-                "url": "https://www.microsoft.com/microsoft-365/roadmap?id=576759",
-                "locator": "Roadmap 576759",
-                "retrievedAt": "2026-10-21T00:35:00Z"
-              }
-            ]
-          }
-        }
+        { "termKey": "unified-routing", "term": "統合ルーティング", "type": "feature", "oneLine": { "text": "会話をキューや担当者へ振り分ける Contact Center の機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "queue", "term": "キュー", "type": "term", "oneLine": { "text": "担当者への割り当てを待つ会話が並ぶ待機の列。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "overflow-action", "term": "オーバーフロー アクション", "type": "term", "oneLine": { "text": "待機が続く会話に対し、管理者が定義する代替の処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
-          "question": "いつ使えるようになりますか？",
-          "answer": {
-            "text": "リリース計画ではパブリック プレビューが 2026 年 6 月 20 日、一般公開が 2026 年 10 月とされています。時期は変更される可能性があります。",
-            "origin": "learn",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [
-              {
-                "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                "locator": "対象となる場合は有効",
-                "retrievedAt": "2026-10-21T00:35:00Z"
-              }
-            ]
-          }
+          "question": "稼働時間外や担当者不在のとき、顧客はどこへ案内されますか？",
+          "answer": { "text": "ボイスメール、コールバック要求、別の使用可能なキューへの転送など、管理者が構成した動作に案内されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] }
         },
         {
-          "question": "利用可能な地域や言語は？",
-          "answer": {
-            "text": "Learn のページは、Explore Feature Geography と Explore Feature Language のレポートで確認するよう案内しています。",
-            "origin": "learn",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [
-              {
-                "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-                "locator": "地域",
-                "retrievedAt": "2026-10-21T00:35:00Z"
-              }
-            ]
-          }
+          "question": "構成はどのように行いますか？",
+          "answer": { "text": "会話オーケストレーションで自然言語プロンプトを使って構成します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locator": "機能の詳細", "retrievedAt": "2026-11-07T07:55:00Z" }] }
         }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=576759",
-        "learn": [
-          {
-            "title": "キューが閉じたり、スタッフが割り当てられていないときに待機中の会話を処理する",
-            "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed",
-            "locale": "ja-jp"
-          }
-        ]
+        "learn": [{ "title": "キューが閉じたり、スタッフが割り当てられていないときに待機中の会話を処理する", "url": "https://learn.microsoft.com/ja-jp/dynamics365/release-plan/2026wave1/service/dynamics365-contact-center/handle-waiting-conversations-when-queues-close-or-become-unstaffed", "locale": "ja-jp" }]
       },
-      "render": {
-        "continuationRequired": false
-      }
+      "render": { "continuationRequired": false }
     }
   ]
 }
