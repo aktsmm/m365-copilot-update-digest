@@ -3,42 +3,42 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-00c2e8b339e8a2a4",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "OneDrive の Copilot にプロンプト ギャラリーが登場（開発中）",
-        "subtitleJa": "ファイル作業向けのプロンプトから、Copilot の使い方を探せます",
+        "ja": "OneDrive の Copilot にプロンプト ギャラリーが登場",
+        "subtitleJa": "ファイル作業向けのすぐ使えるプロンプトから、Copilot を試せます",
         "en": "OneDrive: Prompt gallery for Copilot"
       },
       "meta": {
-        "publishedJst": "2026-09-29",
+        "publishedJst": "2026-11-07",
         "availability": [],
-        "status": "In development",
-        "products": ["OneDrive", "Microsoft Copilot (Microsoft 365)"],
+        "status": "Launched",
+        "products": ["Microsoft 365", "OneDrive", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["sharepoint"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Web"],
         "productArea": "Microsoft 365",
         "sourceName": "Microsoft 365 Roadmap"
       },
       "audience": {
-        "who": { "text": "**OneDrive で Copilot を使うユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "ファイル作業向けのプロンプトから始められ、自分向けにカスタマイズできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "who": { "text": "**OneDrive で Microsoft Copilot を使うユーザー**（作成者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ファイル作業向けのプロンプトを選んで始められ、自分向けにカスタマイズできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "changeNature": "benefit"
       },
       "action": {
         "required": "no",
-        "summary": { "text": "ユーザー向けの利用支援機能のため、現時点で必須の対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+        "summary": { "text": "ユーザー向けの利用支援機能のため、必須の対応はない", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
       "beforeAfter": {
         "after": { "text": "OneDrive の Copilot で、**ファイル作業向けのすぐに使えるプロンプト**を選んで始められます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
@@ -48,17 +48,26 @@
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "ロードマップ上は開発中の段階で、提供範囲は Worldwide（標準マルチテナント）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "OneDrive 版の提供時期や詳細な仕様は、ロードマップの更新を待つ必要がある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "OneDrive 右下の Copilot ボタンからプロンプト ギャラリーを開く", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
         },
         {
-          "id": "prepare",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "認証されていないユーザーはプロンプトの閲覧のみ可能。試すには認証が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "コンプライアンスに関する考慮事項", "retrievedAt": "2026-11-07T06:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
           "heading": "参考: Copilot のプロンプト ギャラリー",
           "availability": "present",
           "priority": "detail",
@@ -72,7 +81,7 @@
         { "termKey": "prompt-gallery", "term": "プロンプト ギャラリー", "type": "feature", "oneLine": { "text": "ユーザーが Copilot を理解して使うための、プロンプト・ビデオ・記事のリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "prompt", "term": "プロンプト", "type": "term", "oneLine": { "text": "Copilot にタスクを依頼するために入力する指示文。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
         { "termKey": "onedrive", "term": "OneDrive", "type": "product", "oneLine": { "text": "ファイルを保存・共有する Microsoft のクラウド ストレージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
@@ -82,10 +91,6 @@
         {
           "question": "プロンプトを保存してチームと共有できますか？",
           "answer": { "text": "Microsoft Copilot のプロンプト ギャラリーでは可能です。保存したプロンプトはチーム間で共有でき、各プロンプトには個人用設定のヒントも付いています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/copilot-prompt-gallery", "locator": "概要", "retrievedAt": "2026-10-18T22:10:00Z" }] }
-        },
-        {
-          "question": "OneDrive 版はいつ使えるようになりますか？",
-          "answer": { "text": "ロードマップは開発中の段階で、提供時期は示されていません。ロードマップの更新を確認するのが確実です。", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
         }
       ],
       "references": {
