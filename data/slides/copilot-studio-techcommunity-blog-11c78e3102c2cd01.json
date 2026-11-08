@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-11c78e3102c2cd01",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio の GitHub Copilot ハーネスで複雑なタスクを実行（論文）",
+        "subtitleJa": "会話向けの標準ハーネスと、長時間タスク向けのハーネスの違いを解説します",
+        "en": "Paper: How utilizing the Microsoft Copilot harness in Copilot Studio enabled complex task execution"
+      },
+      "meta": {
+        "publishedJst": "2026-11-08",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "複数ターンにわたる業務タスクに、どのハーネスが向くかを判断しやすくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "ハーネス選びの基本原則", "retrievedAt": "2026-11-08T06:00:00Z" }] },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既存の標準ハーネスのエージェントが問題なく動くなら、移行は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "シナリオレベルの利益のためだけに移行してください", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "標準ハーネスは会話向け。**長時間・多段階の業務タスク**は、GitHub Copilot ハーネスで扱う考え方が示されています", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "標準とGitHub Copilotハーネスの違い", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "標準ハーネスは会話向けで、1 ターンに複数の独立したモデル呼び出しを行う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "GitHub Copilot ハーネスは、長時間タスクや大きなファイル、永続メモリに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "標準とGitHub Copilotハーネスの違い", "retrievedAt": "2026-11-08T06:00:00Z" }] },
+            { "text": "推論モデルや一部の新しいエージェント機能は、GitHub Copilot ハーネスでのみ利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "ハーネス選びの基本原則", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "単純なシナリオでは、不要な推論・遅延・Copilot クレジット消費が増えることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "ハーネスのトレードオフを比較する", "retrievedAt": "2026-11-08T06:00:00Z" }] },
+            { "text": "標準ハーネスのエージェントは、既存の Copilot Studio ライセンスモデルのまま", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "消費とガバナンスを考えてみましょう", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration-tips",
+          "heading": "移行の考え方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "移行はコンポーネント変換ではなく、エージェントの再構築として扱う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "シナリオレベルの利益のためだけに移行してください", "retrievedAt": "2026-11-08T06:00:00Z" }] },
+            { "text": "まず必須タスク・成果・評価基準を定義してから、必要な機能を対応付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "シナリオレベルの利益のためだけに移行してください", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "harness", "term": "ハーネス", "type": "term", "oneLine": { "text": "モデルとエージェント設定の間にあり、コンテキストやツールの扱いを決めるオペレーティング レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "冒頭", "retrievedAt": "2026-11-08T06:00:00Z" }] } },
+        { "termKey": "standard-harness", "term": "標準ハーネス", "type": "feature", "oneLine": { "text": "限られたデータやツールで、多段階の業務を一貫して実行するためのハーネス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "標準とGitHub Copilotハーネスの違い", "retrievedAt": "2026-11-08T06:00:00Z" }] } },
+        { "termKey": "github-copilot-harness", "term": "GitHub Copilot ハーネス", "type": "feature", "oneLine": { "text": "長時間タスク、大きなファイル、並列処理、永続メモリに対応するハーネス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "標準とGitHub Copilotハーネスの違い", "retrievedAt": "2026-11-08T06:00:00Z" }] } },
+        { "termKey": "agentic-loop", "term": "エージェントループ", "type": "term", "oneLine": { "text": "エージェントが進捗を評価し、継続・別の方法・委任・停止を判断する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "適応経路にはエージェントループを用いる", "retrievedAt": "2026-11-08T06:00:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "標準ハーネスのエージェントは移行が必要ですか？",
+          "answer": { "text": "いいえ。正常に動作している標準ハーネスのエージェントは、別のハーネスがあっても移行する必要はありません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "シナリオレベルの利益のためだけに移行してください", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+        },
+        {
+          "question": "課金の違いはありますか？",
+          "answer": { "text": "GitHub Copilot ハーネスのソリューションは、AI の作成と利用に使用量ベースの課金です。標準ハーネスは既存のライセンスモデルを維持します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locator": "消費とガバナンスを考えてみましょう", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+        },
+        {
+          "question": "どんなシナリオが GitHub Copilot ハーネス向きですか？",
+          "answer": { "text": "顧客会議の準備、買掛金の照合、コンプライアンス監査など、複数のシステムをまたいで複数の成果物を出す業務が例に挙げられています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-copilot-studio/guidance/choose-harness#compare-harnesses-at-a-glance", "locator": "Example scenarios", "retrievedAt": "2026-11-08T06:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/paper-how-utilizing-the-microsoft-copilot-harness-in-copilot/ba-p/4571157",
+        "learn": [
+          { "title": "Copilot Studio のエージェント ハーネスを比較する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/choose-harness", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
