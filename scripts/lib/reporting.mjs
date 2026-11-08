@@ -348,6 +348,12 @@ export function importanceScore(event) {
 export function importanceReason(event, locale = "ja") {
   const reasons = [];
 
+  if (/paper: how utilizing the microsoft copilot harness in copilot studio enabled complex task execution/.test(analysisText(event))) {
+    return locale === "ja"
+      ? "複数ターンにわたる複雑な業務タスクの実行を支援するため"
+      : "because it enables complex multi-turn business task execution";
+  }
+
   if (event.releaseStage === "Retirement") {
     reasons.push(
       locale === "ja"

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-08",
-  "generatedAt": "2026-11-08T05:59:08.162Z",
+  "generatedAt": "2026-11-08T13:29:48.046Z",
   "events": [
     {
       "id": "copilot-studio-techcommunity-blog-11c78e3102c2cd01",
@@ -13,7 +13,7 @@
       "titleJa": "論文: Copilot Studio で Microsoft Copilot ハーネスを利用することで複雑なタスクの実行がどのように可能になったか",
       "titleEn": "Paper: How utilizing the Microsoft Copilot harness in Copilot Studio enabled complex task execution",
       "summary": "Abstract:\nCopilot Studio's Standard harness is built for conversation: several isolated model calls per turn, a reply within seconds, and control handed back to the user as soon as a step needs input. Many business tasks are not simple Q&A. They run for many turns, touch...",
-      "summaryJa": "要約:\nCopilot Studio の標準ハーネスは会話用に構築されています。ターンごとに複数の独立したモデル呼び出し、数秒以内の応答、ステップで入力が必要になるとすぐに制御がユーザーに返されます。多くのビジネスタスクは単純な Q&A ではありません。彼らは何ターンも走り、タッチします...",
+      "summaryJa": "論文では、標準ハーネスは短い会話向けとし、複数ターンで大量のレコードを扱い、コード・ファイル・再試行を伴う業務タスクには、安全なコンテナー内で動く単一モデル中心のエージェント ループとコマンドライン／ファイル ツールを備えた Microsoft Copilot ハーネスを評価しています。効率的なキャッシュにより、タスクあたりのモデル呼び出しが2倍でも、コスト換算のトークン消費を15～21%削減し、評価通過率をモデルに応じて10.8～22.1ポイント高めたと報告しています。",
       "summaryEn": "Abstract:\nCopilot Studio's Standard harness is built for conversation: several isolated model calls per turn, a reply within seconds, and control handed back to the user as soon as a step needs input. Many business tasks are not simple Q&A. They run for many turns, touch...",
       "url": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/paper-how-utilizing-the-microsoft-copilot-harness-in-copilot/ba-p/4571157",
       "publishedAt": "2026-11-08T12:00:00.000Z",
@@ -29,7 +29,7 @@
         "作成者向け"
       ],
       "importanceScore": 94,
-      "importanceReason": "エージェント構築や品質管理に関わるため / 会議やコミュニケーションの業務導線に直結するため"
+      "importanceReason": "複数ターンにわたる複雑な業務タスクの実行を支援するため"
     }
   ]
 }
