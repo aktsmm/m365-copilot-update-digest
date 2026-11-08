@@ -483,6 +483,10 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/paper: how utilizing the microsoft copilot harness in copilot studio enabled complex task execution/.test(text)) {
+    return "論文では、標準ハーネスは短い会話向けとし、複数ターンで大量のレコードを扱い、コード・ファイル・再試行を伴う業務タスクには、安全なコンテナー内で動く単一モデル中心のエージェント ループとコマンドライン／ファイル ツールを備えた Microsoft Copilot ハーネスを評価しています。効率的なキャッシュにより、タスクあたりのモデル呼び出しが2倍でも、コスト換算のトークン消費を15～21%削減し、評価通過率をモデルに応じて10.8～22.1ポイント高めたと報告しています。";
+  }
+
   if (/users can create agents scoped on custom connector containers/.test(text)) {
     return "メーカーは、特定のコンテナーにあるカスタム コネクタ データを対象とするエージェントを作成できます。コンテナーは、カスタム コネクタの作成または更新時に定義します。注: このロードマップ項目は現状に即しておらず、ロードマップから削除される予定です。";
   }
@@ -2267,7 +2271,7 @@ function shouldPreferKnownFallbackSummary(event) {
             text,
           )))) ||
     (event.sourceFamily === "Tech Community" &&
-      /are bigger agents better\? how to design agents that scale/.test(text))
+      /(?:are bigger agents better\? how to design agents that scale|paper: how utilizing the microsoft copilot harness in copilot studio enabled complex task execution)/.test(text))
   );
 }
 
