@@ -84,6 +84,40 @@
         { "termKey": "prompt-library", "term": "プロンプト ライブラリ", "type": "feature", "oneLine": { "text": "利用できるプロンプトを一覧から探せる場所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "プロンプト ライブラリでは他にどんなプロンプトを探せますか？",
+          "answer": {
+            "text": "Microsoft が用意したプロンプトのほか、ユーザー自身が保存したプロンプトやチームで共有したプロンプトも扱えます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/copilot/manage/copilot-prompt-gallery",
+                "locator": "Overview",
+                "retrievedAt": "2026-11-08T22:45:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "管理者はプロンプトの利用状況を把握できますか？",
+          "answer": {
+            "text": "はい。管理者は、ユーザーが保存・高評価・共有したプロンプトなどの利用状況を、分析やレポートで確認できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/copilot/manage/copilot-prompt-gallery",
+                "locator": "冒頭の管理者向け説明",
+                "retrievedAt": "2026-11-08T22:45:00Z"
+              }
+            ]
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=502542"
       },
