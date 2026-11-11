@@ -3,18 +3,18 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-7599fe561b22ee9e",
-      "kind": "in-development",
+      "kind": "ga",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "提供開始",
       "title": {
-        "ja": "GCC High でカスタム エンジン エージェントが利用可能に（開発中）",
-        "subtitleJa": "GCC High のユーザーが、カスタム エンジン エージェントを使えるようになります",
+        "ja": "GCC High でカスタム エンジン エージェントが利用可能に",
+        "subtitleJa": "GCC High のユーザーが、カスタム エンジン エージェントを使えるようになりました",
         "en": "Microsoft Copilot (Microsoft 365): [Copilot Extensibility] Users in GCC-H will be able to use custom engine agents"
       },
       "meta": {
-        "publishedJst": "2026-10-06",
+        "publishedJst": "2026-11-11",
         "availability": [],
-        "status": "In development",
+        "status": "Launched",
         "products": ["Microsoft 365 Copilot"],
         "categories": ["agents"],
         "importance": "normal",
@@ -25,46 +25,65 @@
       },
       "audience": {
         "who": { "text": "**GCC High テナントのユーザー**と、そのテナントの管理者・エージェント開発者", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] },
-        "change": { "text": "GCC High でも、カスタム エンジン エージェントを利用できるようになる予定", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] },
+        "change": { "text": "GCC High でも、カスタム エンジン エージェントを利用できるようになった", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] },
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "開発中のため、現時点で必要な対応はなし。提供時期の公開を待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] }
+        "required": "optional",
+        "summary": { "text": "利用する場合は、開発アプローチとホスティング先を整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
       "beforeAfter": {
-        "after": { "text": "オーケストレーションや AI モデルを自分で選べる**カスタム エンジン エージェント**を、GCC High でも使えるようになります", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントとは", "retrievedAt": "2026-10-21T15:40:00Z" }] }
+        "after": { "text": "オーケストレーションや AI モデルを自分で選べる**カスタム エンジン エージェント**を、GCC High でも使えるようになりました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントとは", "retrievedAt": "2026-10-21T15:40:00Z" }] }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "提供範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "対象クラウドは GCC High、対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] },
-            { "text": "オーケストレーション・AI モデル・データ統合を完全に制御できるエージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "冒頭", "retrievedAt": "2026-10-21T15:40:00Z" }] },
-            { "text": "ロードマップ上は開発中で、まだ提供は始まっていない", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] }
+            { "text": "独自のオーケストレーターと AI モデルを使う、完全にカスタマイズされた AI アシスタント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-11-11T06:30:00Z" }] },
+            { "text": "複雑なワークフローや外部 API 呼び出しを制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-11-11T06:30:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "独自のオーケストレーションとモデルを使うため、ホスティングやコストの検討が別途必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "ライセンス、消費、ホスティングのコスト", "retrievedAt": "2026-10-21T15:40:00Z" }] },
-            { "text": "カスタム エンジン エージェントにはアプリ マニフェスト バージョン 1.21 以降が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "要件", "retrievedAt": "2026-10-21T15:40:00Z" }] }
+            { "text": "Copilot Studio、Visual Studio、VS Code、Agents Toolkit などで構築する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-11-11T06:30:00Z" }] },
+            { "text": "Microsoft 365 Copilot や Teams、Word、Excel などで実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-11-11T06:30:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備しておくこと",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "作成方法は Copilot Studio、Agents SDK、Teams SDK、Microsoft Foundry から選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "冒頭", "retrievedAt": "2026-10-21T15:40:00Z" }] },
-            { "text": "利用に向け、開発アプローチとホスティング先を事前に整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "Microsoft 365 外のホスティングが必要で、通常は追加料金がかかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-11-11T06:30:00Z" }] },
+            { "text": "コンプライアンス・セキュリティ・RAI は利用者側で確保する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェント", "retrievedAt": "2026-11-11T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "宣言型エージェントとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "宣言型は Copilot のオーケストレーターとモデルを使い、追加ホスティング不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "宣言型エージェント", "retrievedAt": "2026-11-11T06:30:00Z" }] },
+            { "text": "カスタム エンジンは AI モデルやオーケストレーションを自由に選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "比較表", "retrievedAt": "2026-11-11T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シーン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "独自 AI モデルやプロアクティブ メッセージングが必要な場面に向く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/agents-overview", "locator": "カスタム エンジン エージェントを構築する場合", "retrievedAt": "2026-11-11T06:30:00Z" }] },
+            { "text": "まず小さな業務で試し、ホスティング構成を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
@@ -72,12 +91,12 @@
         { "termKey": "custom-engine-agent", "term": "カスタム エンジン エージェント", "type": "feature", "oneLine": { "text": "オーケストレーション、AI モデル、データ統合を完全に制御できる、特定のエンタープライズ シナリオ向けの Copilot エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントとは", "retrievedAt": "2026-10-21T15:40:00Z" }] } },
         { "termKey": "copilot-studio", "term": "Copilot Studio", "type": "product", "oneLine": { "text": "カスタム エンジン エージェントの構築を簡素化する、フル マネージドの SaaS プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "ローコード アプローチ", "retrievedAt": "2026-10-21T15:40:00Z" }] } },
         { "termKey": "gcc-high", "term": "GCC High", "type": "term", "oneLine": { "text": "ロードマップで対象クラウド インスタンスとして示されている区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] } },
-        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] } }
+        { "termKey": "label-ga", "term": "提供開始", "type": "label", "oneLine": { "text": "ロードマップ上で、提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] } }
       ],
       "qa": [
         {
-          "question": "いつから GCC High で使えますか？",
-          "answer": { "text": "ロードマップには提供月が示されておらず、現時点で時期は公開されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] }
+          "question": "GCC High のどの環境が対象ですか？",
+          "answer": { "text": "ロードマップでは、対象クラウドは GCC High、対象プラットフォームは Web とされています。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=503771" }] }
         },
         {
           "question": "カスタム エンジン エージェントとは何ですか？",
