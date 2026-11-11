@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9759f151a33d80c7",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot のユーザー データ コネクタで、アクセス制御付きの人事データを取り込み（開発中）",
+        "subtitleJa": "外部システムのユーザー データを、アクセス制御リスト（ACL）とあわせて Microsoft 365 に取り込めます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot People Connectors introduces people data ingestions with differentiated access control"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot の管理者**と、コネクタを作成する開発者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ソース システムで定義された権限を尊重した形で、Copilot がユーザー データを扱える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供時期はロードマップで確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "外部システムのユーザー データを**アクセス制御リスト（ACL）付き**で Microsoft 365 に取り込めるようになります。Copilot は、ソース側で定義された既存の権限を尊重します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "想定される範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "外部システムのユーザー データを、ACL とあわせて Microsoft 365 に取り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ユーザー データ コネクタで、人事・採用・人材システムの情報を Microsoft 365 に取り込む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "冒頭", "retrievedAt": "2026-11-11T07:00:00Z" }] },
+            { "text": "取り込んだ情報は Copilot、Microsoft Search、プロファイル カード、組織エクスプローラーで使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "冒頭", "retrievedAt": "2026-11-11T07:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "現在のコネクタ データは既定でテナント内の全ユーザーに表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "データの可視性", "retrievedAt": "2026-11-11T07:00:00Z" }] },
+            { "text": "コネクタを構成できるのは、グローバル管理者と Copilot 管理者のロールを持つユーザーのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "認証と承認", "retrievedAt": "2026-11-11T07:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から確認できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft 製コネクタは、管理センターのコネクタ ギャラリー（人事 & 採用）にある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "Microsoft 製コネクタ", "retrievedAt": "2026-11-11T07:00:00Z" }] },
+            { "text": "独自のコネクタを作る場合は、ユーザー データ コネクタの構築ガイドを参照", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "独自のコネクタを構築する", "retrievedAt": "2026-11-11T07:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "people-connector", "term": "ユーザー データ コネクタ", "type": "feature", "oneLine": { "text": "人事・採用・人材などの外部システムから、信頼できるユーザー情報を Microsoft 365 に取り込むコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "冒頭", "retrievedAt": "2026-11-11T07:00:00Z" }] } },
+        { "termKey": "acl", "term": "アクセス制御リスト（ACL）", "type": "term", "oneLine": { "text": "データにアクセスできるユーザーやグループを定義する、ソース側の権限情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "profile-priority", "term": "プロファイル ソースの優先順位", "type": "term", "oneLine": { "text": "複数のソースが同じプロファイル プロパティを提供するとき、どれを優先するかを決める設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "プロファイルの構成と優先順位を構成する", "retrievedAt": "2026-11-11T07:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、まだ提供が始まっていない開発段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "現在のユーザー データ コネクタのデータは誰に見えますか？",
+          "answer": { "text": "既定では、Copilot コネクタ経由のユーザー データはテナント内のすべてのユーザーに表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "データの可視性", "retrievedAt": "2026-11-11T07:00:00Z" }] }
+        },
+        {
+          "question": "コネクタを設定できるのは誰ですか？",
+          "answer": { "text": "グローバル管理者ロールと Copilot 管理者ロールを持つユーザーのみです。OAuth 2.0 認証が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locator": "認証と承認", "retrievedAt": "2026-11-11T07:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=561326",
+        "learn": [
+          { "title": "Microsoft 365 Copilot でユーザー データ コネクタを使用する", "url": "https://learn.microsoft.com/ja-jp/graph/peopleconnectors", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
