@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-c0dc922ef4ed7bf0",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "チャットの Pages で PowerPoint のアウトラインを編集する項目がロードマップから削除",
+        "subtitleJa": "この項目は内容が正確でなくなったため、ロードマップから取り下げられます",
+        "en": "Microsoft Copilot (Microsoft 365): Edit your Copilot-generated PowerPoint presentation outline via Pages in Chat"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot でプレゼン資料を作る人**と、ロードマップを追う管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アウトラインを Pages で編集できるという案内は、現在は正確ではない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "この項目を前提にした計画や案内がある場合は、見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot が生成した**プレゼンのアウトライン**を、デッキ作成の前に Pages で編集・共同作業できるという項目でした。ロードマップ上では「内容が正確でなくなった」として削除されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Web 版、Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上のステージは Retirement", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "項目の記載は不正確になったため、ロードマップから削除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この機能の提供を前提にした社内案内や展開計画があれば見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "最新の状況は、元のロードマップ項目で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "pages", "term": "Pages", "type": "feature", "oneLine": { "text": "Copilot の回答を、編集や共同作業ができるページとして扱う機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "outline", "term": "アウトライン", "type": "term", "oneLine": { "text": "PowerPoint デッキを作成する前に Copilot が生成する、プレゼンの構成案。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、項目の提供終了や取り下げを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この機能は提供されなくなるのですか？",
+          "answer": { "text": "ロードマップには「項目の内容が正確でなくなったため削除する」とあります。提供終了日や代替手段は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "管理者が設定を変更する必要はありますか？",
+          "answer": { "text": "ソースには、管理者に求められる作業は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=501785",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
