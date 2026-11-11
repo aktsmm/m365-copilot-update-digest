@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5181080a31ee4224",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "米国政府向けクラウドで MCP ベースのエージェントが利用可能に",
+        "subtitleJa": "MCP サーバーを使った Copilot エージェントを GCC / GCC High / DoD で構築できます",
+        "en": "Microsoft Copilot (Microsoft 365): MCP-Based Agent Enablement for U.S. Government Clouds"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["GCC", "GCC High", "DoD"],
+        "platforms": ["Desktop", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**米国政府向けクラウド（GCC / GCC High / DoD）でエージェントを作る開発者**と管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "MCP サーバーを使った Copilot エージェントを構築し、使い慣れた画面から利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用前に、自分のクラウド環境でのエージェント サポート範囲を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-declarative-agent", "locator": "全国クラウドのサポート", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**MCP サーバーを使ったエージェント**を、米国政府向けクラウドでも構築・利用できます。拡張性とエージェントの能力が高まります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "宣言型エージェントが、プラグイン経由で MCP サーバーや REST API と対話する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "冒頭", "retrievedAt": "2026-11-11T06:50:00Z" }] },
+            { "text": "Copilot は既定で、実行時に MCP サーバーからツールを動的に取得する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "Copilot が MCP サーバー ツールを検出する方法", "retrievedAt": "2026-11-11T06:50:00Z" }] },
+            { "text": "MCP サーバーの応答をもとに、エージェントが回答を生成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "プラグインのしくみ", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "宣言型エージェントに、指示・知識・MCP ベースのツールを定義して構築する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-declarative-agent", "locator": "エージェントの貢献内容を理解する", "retrievedAt": "2026-11-11T06:50:00Z" }] },
+            { "text": "Agents Toolkit で、既存の MCP サーバーからプラグイン パッケージを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "宣言型エージェント プラグインを構築する", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GCC は完全サポート。GCC High は Agents Toolkit のプロコード エージェントに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-declarative-agent", "locator": "全国クラウドのサポート", "retrievedAt": "2026-11-11T06:50:00Z" }] },
+            { "text": "DoD は制限付きサポートで、エージェント ビルダーは使用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-declarative-agent", "locator": "全国クラウドのサポート", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "MCP プラグインは宣言型エージェント内のアクションで、単独の機能としては有効にならない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "重要", "retrievedAt": "2026-11-11T06:50:00Z" }] },
+            { "text": "プラグインが 5 つまでなら常に挿入され、それ以上は説明をもとに選ばれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "制限事項", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず少数のツールを持つ MCP サーバーで、小さく試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ツールが 10 を超えると、応答の品質が低下することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "制限事項", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントが外部のサーバーとやり取りするための共通プロトコル（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "冒頭", "retrievedAt": "2026-11-11T06:50:00Z" }] } },
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "feature", "oneLine": { "text": "目的・指示・知識・アクションを定義して作る、目標指向の会話エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-declarative-agent", "locator": "冒頭", "retrievedAt": "2026-11-11T06:50:00Z" }] } },
+        { "termKey": "plugin", "term": "プラグイン", "type": "feature", "oneLine": { "text": "宣言型エージェントが MCP サーバーや REST API と対話するためのカスタム アクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "冒頭", "retrievedAt": "2026-11-11T06:50:00Z" }] } },
+        { "termKey": "gov-cloud", "term": "GCC / GCC High / DoD", "type": "term", "oneLine": { "text": "米国政府向けの Microsoft 365 クラウド環境で、順に分離性が高くなる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/gov-overview", "locator": "Microsoft 米国政府クラウド環境の概要", "retrievedAt": "2026-11-11T06:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "GCC High や DoD でもすべてのエージェント機能が使えますか？",
+          "answer": { "text": "いいえ。GCC は完全サポートですが、DoD は Agents Toolkit で構築するプロコード エージェントのみで、エージェント ビルダーは使えません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-declarative-agent", "locator": "全国クラウドのサポート", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+        },
+        {
+          "question": "MCP プラグインだけを単独で使えますか？",
+          "answer": { "text": "いいえ。MCP プラグインは宣言型エージェント内のアクションとしてサポートされ、単独のエクスペリエンスとしては有効になりません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locator": "重要", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+        },
+        {
+          "question": "政府クラウドでは機能の提供が遅れますか？",
+          "answer": { "text": "遅れる場合があります。ソブリン クラウドの要件により、商用環境より Copilot 機能の導入が遅れることがあります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/gov-overview", "locator": "米国政府クラウド環境での Microsoft Copilot", "retrievedAt": "2026-11-11T06:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=564607",
+        "learn": [
+          { "title": "宣言型エージェント用の MCP および API プラグイン", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-plugins", "locale": "ja-jp" },
+          { "title": "Microsoft 365 Copilot 用の宣言型エージェント", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-declarative-agent", "locale": "ja-jp" },
+          { "title": "米国政府クラウド環境を理解する", "url": "https://learn.microsoft.com/ja-jp/copilot/plan/gov-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
