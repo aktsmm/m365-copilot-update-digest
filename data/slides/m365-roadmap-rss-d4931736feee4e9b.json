@@ -3,18 +3,18 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-d4931736feee4e9b",
-      "kind": "in-development",
+      "kind": "rolling-out",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "展開中",
       "title": {
-        "ja": "SharePoint で HTML ページを作成・表示できるように（開発中）",
+        "ja": "SharePoint で HTML ページの展開が開始",
         "subtitleJa": "Copilot で作成、または持ち込んだ HTML を、ページとして表示・編集・共有できます",
         "en": "SharePoint: HTML pages"
       },
       "meta": {
-        "publishedJst": "2026-08-12",
+        "publishedJst": "2026-11-11",
         "availability": [],
-        "status": "In development",
+        "status": "Rolling out",
         "products": ["SharePoint", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["sharepoint"],
         "importance": "normal",
@@ -29,16 +29,16 @@
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "required": "optional",
+        "summary": { "text": "必須の対応はなく、利用は任意。使う場合は Microsoft Copilot ライセンスを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
       "beforeAfter": {
         "after": { "text": "Copilot in SharePoint で HTML を作成するか、他で作った HTML をアップロードして、**ページとして表示・編集・共有**できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
@@ -48,24 +48,43 @@
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "ロードマップ上は開発中で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "提供範囲は Worldwide（標準マルチテナント）、対象は Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "Copilot in SharePoint の利用には、有効な Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-10-23T10:30:00Z" }] }
+            { "text": "HTML を作成、または既存の HTML をアップロードしてページ ライブラリに保存する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot in SharePoint の利用には、有効な Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "前提条件", "retrievedAt": "2026-11-11T06:40:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備のポイント",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "Copilot in SharePoint は、すでに HTML ファイルの作成に対応している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-10-23T10:30:00Z" }] },
-            { "text": "提供前に、組織で HTML ページを使う方針を作成者と確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+            { "text": "HTML ファイルの作成は、Microsoft Copilot ライセンスに含まれる日常機能として案内されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "ライセンスと Copilot クレジット", "retrievedAt": "2026-11-11T06:40:00Z" }] },
+            { "text": "対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "展開範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲は Worldwide（標準マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上は Targeted Release のタグがあり、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "HTML ならではの表現で、既存の ASPX ページと並べてコンテンツを見せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "まず小規模なサイトで HTML ページを試し、表示を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         }
       ],
@@ -73,12 +92,12 @@
         { "termKey": "copilot-in-sharepoint", "term": "Copilot in SharePoint", "type": "product", "oneLine": { "text": "自然言語で質問やワークフロー実行、サイト・ページ・Office ファイルの作成ができる SharePoint の Copilot。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/copilot-in-sharepoint-get-started", "locator": "冒頭", "retrievedAt": "2026-10-23T10:30:00Z" }] } },
         { "termKey": "html-page", "term": "HTML ページ", "type": "feature", "oneLine": { "text": "ページ ライブラリに保存した HTML を、SharePoint のページとして表示できる機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "aspx-page", "term": "ASPX ページ", "type": "term", "oneLine": { "text": "SharePoint の既存のページ形式。HTML ページはこれと並んで使える。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にある状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-rollout", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の展開が始まっている状態（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
           "question": "いつから使えるようになりますか？",
-          "answer": { "text": "ロードマップに提供月は示されておらず、現在は開発中の段階です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          "answer": { "text": "ロードマップに提供月は示されておらず、展開中の段階です。反映時期は Roadmap の更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
         },
         {
           "question": "利用にライセンスは必要ですか？",
