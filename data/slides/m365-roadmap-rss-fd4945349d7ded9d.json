@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fd4945349d7ded9d",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Cowork で Work IQ 経由の業務アプリ利用が可能に（開発中）",
+        "subtitleJa": "業務アプリのデータに基づき、業務プロセスを最後まで実行できる予定です",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Cowork: Access Business Applications with Work IQ"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Microsoft Dataverse", "Work IQ"],
+        "categories": ["agents", "work-iq"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Cowork を使う業務担当者**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "業務アプリを探す手間を減らし、データに基づく業務の実行まで Cowork で進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Work IQ 経由で**業務アプリケーションにアクセス**し、ビジネス スキルで業務プロセスを最後まで実行できます。コンテキストの切り替えが減ります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Cowork から Work IQ を通じて業務アプリケーションにアクセス", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ビジネス スキルで、企業データとアプリに基づく業務プロセスを実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Dynamics 365 や Power Apps の情報について、自然言語で質問できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-work-iq", "locator": "冒頭", "retrievedAt": "2026-11-11T08:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連するプレビュー機能は、公式リリース前の先行提供で変更されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-work-iq", "locator": "Important", "retrievedAt": "2026-11-11T08:40:00Z" }] },
+            { "text": "Cowork は組織で設定済みのロールベースのアクセス権を尊重する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-work-iq", "locator": "コントロールを維持します", "retrievedAt": "2026-11-11T08:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プレビュー版では、管理者がビジネス アプリ プラグインを先にインストールする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-work-iq", "locator": "プラグインをインストールする", "retrievedAt": "2026-11-11T08:40:00Z" }] },
+            { "text": "提供前に、対象にしたい業務アプリと試すユーザーを洗い出しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "licensing",
+          "heading": "ライセンスと管理",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ の利用は使用量ベースの課金で、管理センターでコストを管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-11-11T08:40:00Z" }] },
+            { "text": "Work IQ はすべてのツール呼び出しをログに記録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "セキュリティ、承認、ガバナンス", "retrievedAt": "2026-11-11T08:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "feature", "oneLine": { "text": "Dynamics 365 や Power Apps の情報と連携し、自然言語の依頼で作業を進められる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-work-iq", "locator": "冒頭", "retrievedAt": "2026-11-11T08:40:00Z" }] } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "エージェントが組織やビジネス データ、ツールにアクセスして推論できるようにするインテリジェンス レイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "冒頭", "retrievedAt": "2026-11-11T08:40:00Z" }] } },
+        { "termKey": "business-skills", "term": "ビジネス スキル", "type": "term", "oneLine": { "text": "企業データとアプリに基づく業務プロセスの実行に使うスキル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期の月は示されていません。最新の状況はロードマップで確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "すでに試せる類似機能はありますか？",
+          "answer": { "text": "Cowork 向けの「ビジネス アプリ（プレビュー）」プラグインがあり、管理者のインストール後にユーザーが接続して使います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-work-iq", "locator": "プラグインをインストールする", "retrievedAt": "2026-11-11T08:40:00Z" }] }
+        },
+        {
+          "question": "Work IQ の利用に Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "Work IQ API の利用は Copilot ライセンスとは無関係で、使用量ベースの課金です。ライセンスを持つユーザーは Copilot の各エクスペリエンスで利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locator": "アクセスと価格", "retrievedAt": "2026-11-11T08:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=573293",
+        "learn": [
+          { "title": "Cowork の Work IQ プラグインにあるビジネス アプリケーションを使用する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/cowork/cowork-work-iq", "locale": "ja-jp" },
+          { "title": "Work IQ の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
