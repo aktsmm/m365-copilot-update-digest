@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generatedAt": "2026-11-12T07:08:25.806Z",
+  "generatedAt": "2026-11-12T07:16:32.648Z",
   "events": [
     {
       "id": "m365-roadmap-rss-2271c83248fe8add",
@@ -138,20 +138,6 @@
       "summaryJa": "(一般提供) GitHub Copilot ハーネスを利用するすべての新しいエージェントにデフォルトで追加された Work IQ を使用して、組織のファイル、電子メール、会議、チャットからのエージェントの応答をリアルタイムのコンテキストで基にします。書き込み操作はデフォルトで有効になっています...",
       "summaryEn": "(General availability) Use Work IQ, now added by default to every new agent powered by the GitHub Copilot harness, to ground your agent's responses in real-time context from your organization's files, emails, meetings, and chats. Write operations are enabled by default,...",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/add-work-iq",
-      "publishedAt": "2026-10-01T12:00:00.000Z",
-      "capturedAt": "2026-11-12T07:08:25.806Z",
-      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
-      "roadmapIds": [],
-      "releaseStage": "GA",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Copilot Studio",
-        "作成者向け"
-      ],
-      "importanceScore": 137,
-      "importanceReason": "GA になり実運用へ直結するため / 更新まとめや公式リリース整理として追いやすいため",
       "relatedDocuments": [
         {
           "title": "使用率に基づく請求の概要",
@@ -165,7 +151,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/add-work-iq"
         }
-      ]
+      ],
+      "publishedAt": "2026-10-01T12:00:00.000Z",
+      "capturedAt": "2026-11-12T07:08:25.806Z",
+      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
+      "roadmapIds": [],
+      "releaseStage": "GA",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 137,
+      "importanceReason": "GA になり実運用へ直結するため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-roadmap-rss-f846cdcffc0a6963",
@@ -466,6 +466,20 @@
       "summaryJa": "(プレビュー) エージェントの会話の開始時に表示されるプライバシー ステートメントのリンクを構成すると、ユーザーはエージェントとチャットする前に組織のプライバシー ポリシーを確認できます。",
       "summaryEn": "(Preview) Configure a privacy statement link that appears at the start of agent conversations, so users can review your organization's privacy policy before they chat with your agent.",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-privacy-statement-link",
+      "relatedDocuments": [
+        {
+          "title": "Copilot Studio のハーネス",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview#standard-harness",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-privacy-statement-link"
+        },
+        {
+          "title": "Copilot Studioの概要",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-what-is-copilot-studio",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-privacy-statement-link"
+        }
+      ],
       "publishedAt": "2026-10-01T12:00:00.000Z",
       "capturedAt": "2026-11-12T07:08:25.806Z",
       "sourceLastSeen": "2026-11-12T07:08:25.806Z",
@@ -481,21 +495,7 @@
         "作成者向け"
       ],
       "importanceScore": 130,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
-      "relatedDocuments": [
-        {
-          "title": "Copilot Studio のハーネス",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview#standard-harness",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-privacy-statement-link"
-        },
-        {
-          "title": "Copilot Studioの概要",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-what-is-copilot-studio",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-privacy-statement-link"
-        }
-      ]
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-roadmap-rss-e26239bbe4669415",
@@ -867,6 +867,14 @@
       "summaryJa": "(プレビュー) 新しい Customer Conversation ハーネスを活用したエージェントを構築し、音声やチャットで顧客との会話を処理します。専門のサブエージェントは、コンタクト センターと同様に、未解決の問題を人間の担当者にエスカレーションできます。から構築を開始します...",
       "summaryEn": "(Preview) Build agents powered by the new Customer Conversation harness to handle customer-facing conversations over speech and chat, with specialized sub-agents that can escalate unresolved issues to a human representative, similar to a contact center. Start building from...",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview-customer-conversation",
+      "relatedDocuments": [
+        {
+          "title": "エージェントを作成 (顧客との会話) (プレビュー)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/build-new-agent-customer-conversation#create-from-copilot-studio-or-the-microsoft-contact-center-intelligence-portal",
+          "provenance": "source",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+        }
+      ],
       "publishedAt": "2026-10-01T12:00:00.000Z",
       "capturedAt": "2026-11-12T07:08:25.806Z",
       "sourceLastSeen": "2026-11-12T07:08:25.806Z",
@@ -880,15 +888,7 @@
         "作成者向け"
       ],
       "importanceScore": 120,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
-      "relatedDocuments": [
-        {
-          "title": "エージェントを作成 (顧客との会話) (プレビュー)",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/build-new-agent-customer-conversation#create-from-copilot-studio-or-the-microsoft-contact-center-intelligence-portal",
-          "provenance": "source",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
-        }
-      ]
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-roadmap-rss-d095e94d441a012f",
@@ -1309,20 +1309,6 @@
       "summaryJa": "(プレビュー) 新しい SharePoint アイテム、電子メールの受信、スケジュールされた時間など、接続されたサービスでイベントが発生したときにエージェントを自律的に実行するトリガーを追加します。自律エージェントを他のユーザーと共有すると、他のユーザーは自分の資格情報で自律エージェントを実行できるようになります。",
       "summaryEn": "(Preview) Add triggers to run your agent autonomously when an event happens in a connected service, such as a new SharePoint item, an incoming email, or a scheduled time. Share the autonomous agent with others so they can run it with their own credentials.",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger",
-      "publishedAt": "2026-10-01T12:00:00.000Z",
-      "capturedAt": "2026-11-12T07:08:25.806Z",
-      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
-      "roadmapIds": [],
-      "releaseStage": "Preview",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Copilot Studio",
-        "作成者向け"
-      ],
-      "importanceScore": 110,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
       "relatedDocuments": [
         {
           "title": "使用率に基づく請求の概要",
@@ -1337,7 +1323,21 @@
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger",
           "supplemental": true
         }
-      ]
+      ],
+      "publishedAt": "2026-10-01T12:00:00.000Z",
+      "capturedAt": "2026-11-12T07:08:25.806Z",
+      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
+      "roadmapIds": [],
+      "releaseStage": "Preview",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 110,
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "copilot-studio-whats-new-6c7fe682057a79ae",
@@ -1353,20 +1353,6 @@
       "summaryJa": "(プレビュー) 新しい MCP および Agent2Agent (A2A) チャネルを使用して、外部クライアントをエージェントに接続します。エージェントをリモート MCP サーバーまたは A2A エージェントとして公開すると、他のツール、IDE、およびオーケストレーターが Microsoft Entra ID で認証されてエージェントを呼び出すことができます。",
       "summaryEn": "(Preview) Connect external clients to your agent with the new MCP and Agent2Agent (A2A) channels. Expose your agent as a remote MCP server or A2A agent so other tools, IDEs, and orchestrators can call it, authenticated with Microsoft Entra ID.",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent",
-      "publishedAt": "2026-10-01T12:00:00.000Z",
-      "capturedAt": "2026-11-12T07:08:25.806Z",
-      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
-      "roadmapIds": [],
-      "releaseStage": "Preview",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Copilot Studio",
-        "作成者向け"
-      ],
-      "importanceScore": 110,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
       "relatedDocuments": [
         {
           "title": "早期リリースサイクル環境",
@@ -1380,7 +1366,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent"
         }
-      ]
+      ],
+      "publishedAt": "2026-10-01T12:00:00.000Z",
+      "capturedAt": "2026-11-12T07:08:25.806Z",
+      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
+      "roadmapIds": [],
+      "releaseStage": "Preview",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 110,
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "copilot-studio-whats-new-52e586fc26aceb00",
@@ -1396,20 +1396,6 @@
       "summaryJa": "(プレビュー) Microsoft Entra ID、メールボックス、および Microsoft Teams および組織のディレクトリ内のプレゼンスを備えた独自のアカウントをエージェントに与えます。これにより、エージェントはビジネス プロセスを最初から最後まで実行し、電子メール、Teams メッセージ、Office コメントに応答できるようになります...",
       "summaryEn": "(Preview) Give your agent its own account, with a Microsoft Entra ID, mailbox, and presence in Microsoft Teams and your organization's directory. Your agent can then take a business process from start to finish, responding to email, Teams messages, and Office comments with its...",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-agent-account",
-      "publishedAt": "2026-10-01T12:00:00.000Z",
-      "capturedAt": "2026-11-12T07:08:25.806Z",
-      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
-      "roadmapIds": [],
-      "releaseStage": "Preview",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Copilot Studio",
-        "作成者向け"
-      ],
-      "importanceScore": 110,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
       "relatedDocuments": [
         {
           "title": "使用率に基づく請求の概要",
@@ -1423,7 +1409,21 @@
           "provenance": "article",
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-agent-account"
         }
-      ]
+      ],
+      "publishedAt": "2026-10-01T12:00:00.000Z",
+      "capturedAt": "2026-11-12T07:08:25.806Z",
+      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
+      "roadmapIds": [],
+      "releaseStage": "Preview",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 110,
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "copilot-studio-whats-new-35a148f9b37f36e5",
@@ -1439,6 +1439,21 @@
       "summaryJa": "Microsoft Purview 機密ラベルのサポートにより、エージェントのナレッジ ソースとして OneDrive for Business を追加します。また、[ナレッジの追加] ダイアログでは、関連するソースが提案され、SharePoint ドキュメントのタイトルが使用されて、エージェントが回答を見つける方法が向上します。",
       "summaryEn": "Add OneDrive for Business as a knowledge source for your agent, with support for Microsoft Purview sensitivity labels. The Add knowledge dialog also suggests relevant sources and uses SharePoint document titles to improve how your agent finds answers.",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sources-overview",
+      "relatedDocuments": [
+        {
+          "title": "使用率に基づく請求の概要",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sources-overview"
+        },
+        {
+          "title": "会話にファイルを添付する(GitHub Copilot)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sources-overview",
+          "supplemental": true
+        }
+      ],
       "publishedAt": "2026-10-01T12:00:00.000Z",
       "capturedAt": "2026-11-12T07:08:25.806Z",
       "sourceLastSeen": "2026-11-12T07:08:25.806Z",
@@ -1454,22 +1469,7 @@
         "作成者向け"
       ],
       "importanceScore": 110,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "使用率に基づく請求の概要",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sources-overview"
-        },
-        {
-          "title": "会話にファイルを添付する(GitHub Copilot)",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/attachments-overview",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sources-overview",
-          "supplemental": true
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "copilot-studio-whats-new-6ea525acd6130c70",
@@ -2117,20 +2117,6 @@
       "summaryJa": "(プレビュー) マーケットプレイスで共有されているスキルを参照してエージェントに追加し、自分のスキルを特定の人または組織全体と共有します。共有スキルを更新すると、受信者に通知が届きます。",
       "summaryEn": "(Preview) Browse and add marketplace-shared skills to your agent, and share your own skills with specific people or your whole organization. Recipients get notified when you update a shared skill.",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/skills-manage",
-      "publishedAt": "2026-10-01T12:00:00.000Z",
-      "capturedAt": "2026-11-12T07:08:25.806Z",
-      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
-      "roadmapIds": [],
-      "releaseStage": "Preview",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Copilot Studio",
-        "作成者向け"
-      ],
-      "importanceScore": 98,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
       "relatedDocuments": [
         {
           "title": "エージェント向けのスキル作成(顧客会話)(プレビュー)",
@@ -2145,7 +2131,21 @@
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/skills-manage",
           "supplemental": true
         }
-      ]
+      ],
+      "publishedAt": "2026-10-01T12:00:00.000Z",
+      "capturedAt": "2026-11-12T07:08:25.806Z",
+      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
+      "roadmapIds": [],
+      "releaseStage": "Preview",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 98,
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-roadmap-rss-c06f3dc86e9731ab",
@@ -2278,20 +2278,6 @@
       "summaryJa": "Visual Studio Code や GitHub Copilot CLI などの MCP 互換ツールを Copilot Studio MCP に接続すると、既に使用しているツールを離れることなく、エージェントとワークフローを作成、テスト、デプロイ、監視できます。",
       "summaryEn": "Connect MCP-compatible tools, like Visual Studio Code and GitHub Copilot CLI, to Copilot Studio MCP so you can create, test, deploy, and monitor your agents and workflows without leaving the tool you already use.",
       "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp",
-      "publishedAt": "2026-10-01T12:00:00.000Z",
-      "capturedAt": "2026-11-12T07:08:25.806Z",
-      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
-      "roadmapIds": [],
-      "releaseStage": "Update",
-      "roleTags": [
-        "作成者向け"
-      ],
-      "tags": [
-        "Copilot Studio",
-        "作成者向け"
-      ],
-      "importanceScore": 88,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため",
       "relatedDocuments": [
         {
           "title": "ツールとしてエージェントにモデルコンテキストプロトコル(MCP)サーバーを追加してください(GitHub Copilot)(プレビュー版)",
@@ -2307,7 +2293,21 @@
           "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp",
           "supplemental": true
         }
-      ]
+      ],
+      "publishedAt": "2026-10-01T12:00:00.000Z",
+      "capturedAt": "2026-11-12T07:08:25.806Z",
+      "sourceLastSeen": "2026-11-12T07:08:25.806Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 88,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
     }
   ]
 }
