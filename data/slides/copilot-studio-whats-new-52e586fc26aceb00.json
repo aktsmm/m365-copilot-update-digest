@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-52e586fc26aceb00",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Copilot Studio のエージェントに専用アカウントを付与（プレビュー）",
+        "subtitleJa": "Entra ID・メールボックス・Teams 上の存在を持つ「同僚」として動きます",
+        "en": "(Preview) Give your agent its own account, with a Microsoft Entra ID, mailbox, and presence in Microsoft Teams and your..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、テナント管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "アカウントを有効にする", "retrievedAt": "2026-11-12T07:40:00Z" }] },
+        "change": { "text": "エージェントが自分のメールや Teams で、業務を最初から最後まで進められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "冒頭", "retrievedAt": "2026-11-12T07:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、管理者による 2 段階の有効化と Frontier 参加が先に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "前提条件", "retrievedAt": "2026-11-12T07:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが**専用の Entra ID・メールボックス・Teams 上の存在**を持ち、メール・Teams・Office コメントでやり取りできます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "冒頭", "retrievedAt": "2026-11-12T07:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "公開すると、メールボックス・Teams・ディレクトリ登録・Entra Agent ID が用意される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "アカウントを有効にするために公開する", "retrievedAt": "2026-11-12T07:40:00Z" }] },
+            { "text": "Frontier プレビュー プログラムの機能で、早期リリース サイクルの環境が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "前提条件", "retrievedAt": "2026-11-12T07:40:00Z" }] },
+            { "text": "管理者が Microsoft 365 管理センターでテンプレートを有効化し、Power Platform 管理センターで有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "エージェント アカウントを有効にする", "retrievedAt": "2026-11-12T07:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "テナント外のユーザーには応答せず、Office コメントでの文書編集も未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "現在の制限事項", "retrievedAt": "2026-11-12T07:40:00Z" }] },
+            { "text": "機密ラベルで保護された文書は読めない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "保護されたドキュメント", "retrievedAt": "2026-11-12T07:40:00Z" }] },
+            { "text": "メモリは共有で、ユーザー間のプライバシー境界はなく、オプトアウトもできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "メモリ", "retrievedAt": "2026-11-12T07:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "作成者ライセンスは Microsoft 365 E5 + Agent 365 または E7、公開時に Frontier for AI Teammates ライセンスを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "前提条件", "retrievedAt": "2026-11-12T07:40:00Z" }] },
+            { "text": "メールアドレスは公開後に変更不可。公開前に ID を計画する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "アカウントを持つエージェントを作成する", "retrievedAt": "2026-11-12T07:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-account", "term": "エージェント アカウント", "type": "feature", "oneLine": { "text": "エージェントに独自の Entra ID、メールボックス、Microsoft 365 上の存在を与えるアカウント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "冒頭", "retrievedAt": "2026-11-12T07:40:00Z" }] } },
+        { "termKey": "frontier", "term": "Frontier プログラム", "type": "term", "oneLine": { "text": "Microsoft の最新の AI イノベーションを先行して試せるプレビュー プログラム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "Important", "retrievedAt": "2026-11-12T07:40:00Z" }] } },
+        { "termKey": "early-release", "term": "早期リリース サイクル", "type": "term", "oneLine": { "text": "Power Platform 環境の更新を早く受け取るリリース サイクル設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "前提条件", "retrievedAt": "2026-11-12T07:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "提供状況や機能が今後変更される可能性のある先行提供の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "Important", "retrievedAt": "2026-11-12T07:40:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "ライセンスと課金はどうなりますか？",
+          "answer": { "text": "アカウントには Frontier for AI Teammates ライセンスが必要で、利用に応じた Copilot クレジットの課金は別に発生します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "ライセンスと使用コスト", "retrievedAt": "2026-11-12T07:40:00Z" }] }
+        },
+        {
+          "question": "誰でもアカウント付きエージェントを作れますか？",
+          "answer": { "text": "いいえ。テンプレート有効化時に管理者が選んだユーザーまたはグループのメンバーのみ作成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locator": "Microsoft 管理センターで Copilot Studio エージェント テンプレートを有効にする", "retrievedAt": "2026-11-12T07:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-agent-account",
+        "learn": [
+          { "title": "エージェントにアカウントを付与する（Frontier）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-agent-account", "locale": "ja-jp" },
+          { "title": "早期リリース サイクル環境", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/early-release", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
