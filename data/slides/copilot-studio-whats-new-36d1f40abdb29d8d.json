@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-36d1f40abdb29d8d",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "イベント発生時にエージェントを自律実行するトリガーを追加（プレビュー）",
+        "subtitleJa": "SharePoint やメールなどのイベントで、エージェントを自動的に動かせます",
+        "en": "(Preview) Add triggers to run your agent autonomously when an event happens in a connected service, such as a new..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、共有された自律型エージェントを使う人", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "他のユーザーと共有", "retrievedAt": "2026-11-12T09:10:00Z" }] },
+        "change": { "text": "イベントの発生をきっかけに、エージェントが人の操作なしで動き出せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、ツールと指示を整えてからトリガーを追加し、公開して有効化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "トリガーを追加する前に", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "SharePoint のアイテム作成、メール受信、予定時刻などの**トリガー**で、エージェントを自律的に実行できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "接続サービスのイベントで自律型エージェントを実行（GitHub Copilot ハーネス）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] },
+            { "text": "トリガーはイベントの詳細を送り、扱いはエージェントの指示とツールが決める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] },
+            { "text": "共有すると、他のユーザーが自分の資格情報でエージェントを実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "自律エージェントを公開し有効化する", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレリリースの文書で、内容は変更されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] },
+            { "text": "使用量ベースの課金で、Copilot クレジットが消費されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "Note", "retrievedAt": "2026-11-12T09:10:00Z" }] },
+            { "text": "公開するまで自動では動かず、変更後は再公開が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "自律エージェントを公開し有効化する", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "公開前に「聴き始める」か過去のイベントで、各トリガーをテストする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "エージェントのテストと公開", "retrievedAt": "2026-11-12T09:10:00Z" }] },
+            { "text": "共有時はオプションごとに「ユーザーごとに編集可能」を切り替えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "トリガーの追加と設定", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず自分用に有効化し、メール受信など 1 つのトリガーで小規模に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "trigger", "term": "トリガー", "type": "feature", "oneLine": { "text": "接続サービスでイベントが起きたときに、エージェントへ詳細を送って実行を始める仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] } },
+        { "termKey": "autonomous-agent", "term": "自律型エージェント", "type": "term", "oneLine": { "text": "接続されたサービスでイベントが発生すると作動するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "エージェントの使用・構築・テスト・評価で消費されることがある、使用量ベース課金の単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "Note", "retrievedAt": "2026-11-12T09:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "プレリリースの段階で、内容が変更されることがある先行提供。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "冒頭", "retrievedAt": "2026-11-12T09:10:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "自律型エージェントはいつから動き始めますか？",
+          "answer": { "text": "エージェントを公開し、自分用に有効化するか他のユーザーと共有するまで、自動では動きません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "自律エージェントを公開し有効化する", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+        },
+        {
+          "question": "共有した場合、誰の資格情報で実行されますか？",
+          "answer": { "text": "受信者が自分の資格情報で実行します。受信者は必要な接続を完了し、許可されたトリガーオプションだけを編集できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "他のユーザーと共有", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+        },
+        {
+          "question": "課金はどうなりますか？",
+          "answer": { "text": "使用量ベースの課金で、各エンドユーザーの利用量は、エージェントがホストされている環境を通じて合計・請求されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locator": "他のユーザーと共有", "retrievedAt": "2026-11-12T09:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger",
+        "learn": [
+          { "title": "エージェントにトリガーを追加する（GitHub Copilot）（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-event-trigger", "locale": "ja-jp" },
+          { "title": "使用率に基づく請求の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locale": "ja-jp" },
+          { "title": "エージェントにツールを追加する（GitHub Copilot）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-tools-custom-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
