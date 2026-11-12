@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-288aed2266c17afc",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "VS Code や GitHub Copilot CLI から Copilot Studio MCP に接続",
+        "subtitleJa": "使い慣れたツールから、エージェントとワークフローを作成・テスト・監視できます",
+        "en": "Connect MCP-compatible tools, like Visual Studio Code and GitHub Copilot CLI, to Copilot Studio MCP so you can..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントやワークフローを作る人**（開発者・作成者）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "冒頭", "retrievedAt": "2026-11-12T09:30:00Z" }] },
+        "change": { "text": "作業中のツールを離れずに、エージェントのライフサイクル全体を扱える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "冒頭", "retrievedAt": "2026-11-12T09:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使う場合は、アカウントの権限と組織のポリシーで npm パッケージの実行が許可されているか確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-configure", "locator": "前提条件", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "MCP 互換のクライアントから**作成・テスト・デプロイ・監視**まで、コンテキストを切り替えずに行えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "冒頭・ライフサイクル全体にわたる作業", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 公開の npm パッケージを npx で起動し、stdio で通信する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "MCPサーバーを入手してください", "retrievedAt": "2026-11-12T09:30:00Z" }] },
+            { "text": "探索・作成と設定・テスト・公開・監視・管理のライフサイクルに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "ライフサイクル全体にわたる作業", "retrievedAt": "2026-11-12T09:30:00Z" }] },
+            { "text": "主なツールは manage_agents、manage_workflows、discover_resources など", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "ツールとガイダンスを確認する", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "必要なもの: Copilot Studio の権限があるアカウント、Node.js と npx、対象環境へのアクセス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-configure", "locator": "前提条件", "retrievedAt": "2026-11-12T09:30:00Z" }] },
+            { "text": "サインイン後に環境を選ぶ。初期評価には開発環境を推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-configure", "locator": "アクセスを準備する", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "setup-steps",
+          "heading": "接続の設定",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "VS Code は .vscode/mcp.json、GitHub Copilot CLI は /mcp add で登録できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-vscode-copilot-cli", "locator": "Visual Studio Code / GitHub Copilot CLI", "retrievedAt": "2026-11-12T09:30:00Z" }] },
+            { "text": "サーバーの登録だけでは、環境の権限やコネクタ接続は付与されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-configure", "locator": "冒頭", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "caution",
+          "heading": "利用時の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "変更・公開・削除の前に、対象の成果物と環境を確認して承認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "変更を確認し、承認する", "retrievedAt": "2026-11-12T09:30:00Z" }] },
+            { "text": "FedRAMP High が必要な組織では、GitHub Copilot ハーネス エージェントは実行時にオフになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "Note", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-studio-mcp", "term": "Copilot Studio MCP", "type": "feature", "oneLine": { "text": "Copilot Studio のツールを MCP 互換のクライアントから使えるようにするサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "冒頭", "retrievedAt": "2026-11-12T09:30:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "アプリケーションをツールやコンテキストに接続するためのオープンスタンダード（Model Context Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "冒頭", "retrievedAt": "2026-11-12T09:30:00Z" }] } },
+        { "termKey": "npx", "term": "npx", "type": "term", "oneLine": { "text": "クライアントが Copilot Studio MCP の npm パッケージを起動するために使うコマンド。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "MCPサーバーを入手してください", "retrievedAt": "2026-11-12T09:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "What's new in Copilot Studio に掲載された、機能の更新情報。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "リモート MCP サーバーの URL を設定するのですか？",
+          "answer": { "text": "いいえ。クライアントが npx で npm パッケージを起動し、リモート MCP の URL の入力やソースのクローンは不要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "MCPサーバーを入手してください", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+        },
+        {
+          "question": "この機能は、エージェントを別の MCP サーバーにつなぐ機能と同じですか？",
+          "answer": { "text": "いいえ。これは Copilot Studio を自分のクライアントから MCP サーバーとして使う機能です。エージェントにツールとして MCP サーバーを追加する方法は別の記事にまとまっています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "Note", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+        },
+        {
+          "question": "利用できるツールは固定ですか？",
+          "answer": { "text": "いいえ。サービスの展開状況、環境、権限、クライアントのポリシーによって変わるため、接続後にサーバーが公開するツールを確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locator": "ツールとガイダンスを確認する", "retrievedAt": "2026-11-12T09:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp",
+        "learn": [
+          { "title": "MCP で Microsoft Copilot Studio に接続", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp", "locale": "ja-jp" },
+          { "title": "Visual Studio Code と GitHub Copilot CLI で Copilot Studio MCP に接続する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-vscode-copilot-cli", "locale": "ja-jp" },
+          { "title": "Copilot Studio MCP へのアクセスを設定する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-configure", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
