@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-35a148f9b37f36e5",
+      "kind": "update",
+      "kindSource": "tags",
+      "label": "アップデート",
+      "title": {
+        "ja": "OneDrive for Business をエージェントのナレッジソースに追加可能に",
+        "subtitleJa": "秘密度ラベルに対応し、ナレッジ追加ダイアログも使いやすくなります",
+        "en": "Add OneDrive for Business as a knowledge source for your agent, with support for Microsoft Purview sensitivity..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents", "sharepoint", "security-compliance"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、管理者", "origin": "learn", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "OneDrive に保存したファイルを、エージェントの回答の根拠にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "OneDrive for Business (注目)", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うなら、ナレッジを追加する際にソースを選ぶだけで始められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "知識源の種類", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**OneDrive for Business** のファイルをナレッジとして追加でき、Microsoft Purview の秘密度ラベルにも対応します", "origin": "learn", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "OneDrive for Business に接続し、個人または共有 OneDrive のファイルを参照", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "OneDrive for Business (注目)", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "Microsoft Purview の秘密度ラベルに対応", "origin": "learn", "assertion": "fact", "verification": "source-only" },
+            { "text": "「知識を追加」ダイアログが、状況に応じて関連するソースを提案", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "知識追加ダイアログでの提案", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "SharePoint ではドキュメントのタイトルが検索の手がかりになる。説明的なタイトルが有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "SharePointタイトルマッチング", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "提案されたソースは出発点として扱い、追加前に内容を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "知識追加ダイアログでの提案", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "billing",
+          "heading": "課金の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェントの使用・構築・テスト・評価で Copilot クレジットが消費されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "knowledge-source", "term": "ナレッジソース", "type": "term", "oneLine": { "text": "作成者が設計時にエージェントへ与えるコンテンツで、全ユーザーに同じ基盤を提供する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "onedrive-business", "term": "OneDrive for Business", "type": "product", "oneLine": { "text": "個人または共有 OneDrive に保存されたファイルを、エージェントが参照できるソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "OneDrive for Business (注目)", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "sensitivity-label", "term": "秘密度ラベル", "type": "term", "oneLine": { "text": "Microsoft Purview で、コンテンツの機密レベルを示すために付けるラベル。", "origin": "learn", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "What's new in Copilot Studio で紹介された機能の更新。", "origin": "learn", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ナレッジソースと添付ファイルは何が違いますか？",
+          "answer": { "text": "ナレッジソースは作成者が設計時に与える共通の基盤です。エンドユーザーが会話に持ち込むファイルは添付ファイルです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+        },
+        {
+          "question": "表示されるソースは全員同じですか？",
+          "answer": { "text": "いいえ。環境やライセンスによって、「知識を追加」ダイアログに表示されるソースは異なります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/knowledge-sources-overview",
+        "learn": [
+          { "title": "エージェント向けの利用可能な知識ソース", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview", "locale": "ja-jp" },
+          { "title": "使用率に基づく請求の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
