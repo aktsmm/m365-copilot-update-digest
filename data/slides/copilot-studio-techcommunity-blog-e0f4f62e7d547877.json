@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-e0f4f62e7d547877",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio のエージェントはどこで管理する？",
+        "subtitleJa": "エージェント ユーザー アカウントの登場で広がるガバナンスの考え方",
+        "en": "Where do I govern my Copilot Studio agents?"
+      },
+      "meta": {
+        "publishedJst": "2026-11-12",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio のエージェントを作る人**と、Power Platform・Microsoft 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "ゾーニングガバナンス戦略", "retrievedAt": "2026-11-12T09:20:00Z" }] },
+        "change": { "text": "環境・テナント・エージェントの各レベルで、使い方と作成権限を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "セキュリティと管理のコントロール", "retrievedAt": "2026-11-12T09:20:00Z" }] },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は、環境の分け方とポリシーの適用範囲を一度見直しておくとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが自律的に動くようになる中、**どの層で何を管理するか**を整理して判断できます", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/where-do-i-govern-my-copilot-studio-agents/ba-p/4572592", "locator": "冒頭" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "ブログの要点と管理の層",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェント ユーザー アカウントでは、対応エージェントが自分の Microsoft 365 アカウントとディレクトリ プロファイルを持てる", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/where-do-i-govern-my-copilot-studio-agents/ba-p/4572592", "locator": "冒頭" }] },
+            { "text": "エージェントは常に Power Platform 環境内で作成・管理する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "Note", "retrievedAt": "2026-11-12T09:20:00Z" }] },
+            { "text": "コントロールはテナント・環境・エージェントの 3 レベルで設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "Copilot Studio の機能コントロール", "retrievedAt": "2026-11-12T09:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "管理者の確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "テナントではデータ ポリシーで、ナレッジ ソースやコネクターの許可・ブロックを強制できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "テナント", "retrievedAt": "2026-11-12T09:20:00Z" }] },
+            { "text": "環境ルーティングで、作成者を専用の開発者環境へ自動で誘導できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/default-environment-routing", "locator": "冒頭", "retrievedAt": "2026-11-12T09:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "zones",
+          "heading": "ゾーニングガバナンス",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "作成を市民開発・パートナー開発・プロ開発の 3 ゾーンに分け、リスクに応じて方針を変える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "ゾーン 1〜3", "retrievedAt": "2026-11-12T09:20:00Z" }] },
+            { "text": "環境グループのルールで、複数環境へ共有制限や生成 AI 設定を一括適用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/environment-groups", "locator": "ルール", "retrievedAt": "2026-11-12T09:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-user-account", "term": "エージェント ユーザー アカウント", "type": "feature", "oneLine": { "text": "対応エージェントが自分の Microsoft 365 アカウントや組織図上の関係を持てる仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/where-do-i-govern-my-copilot-studio-agents/ba-p/4572592", "locator": "冒頭" }] } },
+        { "termKey": "environment-routing", "term": "環境ルーティング", "type": "feature", "oneLine": { "text": "作成者を既定の環境ではなく、個人用の開発者環境へ自動で誘導する管理機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/default-environment-routing", "locator": "冒頭", "retrievedAt": "2026-11-12T09:20:00Z" }] } },
+        { "termKey": "environment-group", "term": "環境グループ", "type": "feature", "oneLine": { "text": "マネージド環境をまとめ、共通のルールで一括管理するための「フォルダー」。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/environment-groups", "locator": "冒頭", "retrievedAt": "2026-11-12T09:20:00Z" }] } },
+        { "termKey": "zoned-governance", "term": "ゾーニングガバナンス", "type": "term", "oneLine": { "text": "環境を分け、エージェントの目的やリスクに応じて異なる方針を適用する考え方。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "冒頭", "retrievedAt": "2026-11-12T09:20:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "環境ルーティングを使うのに必要な権限や条件は？",
+          "answer": { "text": "有効化できるのは Power Platform テナント管理者のみで、新しく作られる開発者環境はマネージド環境になります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/default-environment-routing", "locator": "前提条件", "retrievedAt": "2026-11-12T09:20:00Z" }] }
+        },
+        {
+          "question": "環境グループにはどんな環境を入れられる？",
+          "answer": { "text": "マネージド環境のみです。各環境は 1 つのグループにだけ属し、グループの重複や入れ子はできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/environment-groups", "locator": "注", "retrievedAt": "2026-11-12T09:20:00Z" }] }
+        },
+        {
+          "question": "エージェント レベルでは何を制御できる？",
+          "answer": { "text": "生成オーケストレーションや生成型の回答の有効・無効、エージェント認証の設定、ウェブチャネルのセキュリティ強制などです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locator": "エージェント", "retrievedAt": "2026-11-12T09:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/where-do-i-govern-my-copilot-studio-agents/ba-p/4572592",
+        "learn": [
+          { "title": "ゾーニングガバナンス戦略の実施", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/guidance/sec-gov-phase2", "locale": "ja-jp" },
+          { "title": "環境ルーティング", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/default-environment-routing", "locale": "ja-jp" },
+          { "title": "環境グループ", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/environment-groups", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
