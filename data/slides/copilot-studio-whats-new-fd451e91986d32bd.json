@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-fd451e91986d32bd",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "WhatsApp チャネルに、2026 年 10 月 23 日以降は新規接続できなくなります",
+        "subtitleJa": "Azure Communication Services ベースの接続が対象。接続済みのエージェントは引き続き動作します",
+        "en": "Starting October 23, 2026, you can no longer connect new agents to WhatsApp through the Azure Communication..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio で WhatsApp にエージェントを公開したい作成者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] },
+        "change": { "text": "10 月 23 日以降は、ACS ベースの体験で新しい WhatsApp 接続を作れなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "未接続のエージェントを WhatsApp に出す予定なら、10 月 23 日より前に接続する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**2026 年 10 月 23 日より前に接続済みのエージェント**は引き続き WhatsApp チャネルで動作します。以降の新規接続はできません", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "背景: Azure Communication Services（ACS）の廃止に伴う変更", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] },
+            { "text": "接続済みのエージェントは、10 月 23 日以降も WhatsApp チャネルで動作", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] },
+            { "text": "ACS の既存連携は、新機能なしで移行期間中は既存機能がサポートされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "ACSアドバンスドメッセージング(WhatsApp)", "retrievedAt": "2026-11-12T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "判定基準は、10 月 23 日以前に WhatsApp へ接続していたか（作成時期ではない）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] },
+            { "text": "2026 年 5 月作成でも、期限前に未接続なら期限後は接続できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Important", "retrievedAt": "2026-11-12T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "alternatives",
+          "heading": "代替の検討",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ACS の WhatsApp 利用者は、Microsoft Marketplace で Infobip や Telesign などのパートナー製品を検討する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "ACSアドバンスドメッセージング(WhatsApp)", "retrievedAt": "2026-11-12T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "data-sharing",
+          "heading": "データ共有の注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "WhatsApp に公開すると、チャット内容などが WhatsApp と共有され、組織の地理的境界の外に出る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Note", "retrievedAt": "2026-11-12T20:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "acs", "term": "Azure Communication Services（ACS）", "type": "product", "oneLine": { "text": "WhatsApp チャネルの接続基盤として使われる Azure の通信サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "WhatsApp を使用するようにエージェントを設定する", "retrievedAt": "2026-11-12T20:00:00Z" }] } },
+        { "termKey": "whatsapp-channel", "term": "WhatsApp チャネル", "type": "feature", "oneLine": { "text": "公開済みのエージェントを WhatsApp ユーザーに提供するための公開先。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "冒頭", "retrievedAt": "2026-11-12T20:00:00Z" }] } },
+        { "termKey": "standard-harness", "term": "標準ハーネス", "type": "term", "oneLine": { "text": "この記事の機能が前提とする、エージェントを駆動する実行基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locator": "Note", "retrievedAt": "2026-11-12T20:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の変更を知らせる What's new の項目。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "既に WhatsApp に接続しているエージェントはどうなりますか？",
+          "answer": {
+            "text": "10 月 23 日以降も WhatsApp チャネルで引き続き動作します。ACS の既存連携も、新機能はないものの移行期間中は既存機能がサポートされます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "ACSアドバンスドメッセージング(WhatsApp)", "retrievedAt": "2026-11-12T20:00:00Z" }]
+          }
+        },
+        {
+          "question": "電話番号を別のプロバイダーへ移せますか？",
+          "answer": {
+            "text": "WhatsApp の電話番号移行プロセスで、ACS から別のビジネスソリューションプロバイダーへ移せます。ただし移行先がこのプロセスをサポートしている場合に限ります。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "ACSアドバンスドメッセージング(WhatsApp)", "retrievedAt": "2026-11-12T20:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-whatsapp",
+        "learn": [
+          { "title": "エージェントを WhatsApp に公開する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/publication-add-bot-to-whatsapp", "locale": "ja-jp" },
+          { "title": "Azure Communication Services の退職および変更に関する詳細ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
