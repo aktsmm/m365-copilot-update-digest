@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-795df4f64e9ef1e7",
+      "kind": "preview",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Copilot Studio の接続エージェントが対応先を拡大（プレビュー）",
+        "subtitleJa": "Foundry・Agents SDK・A2A のエージェントにも作業を委任できます",
+        "en": "Connected agents now support more options:"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**（作成者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Copilot Studio の外で作られたエージェントにも、メインのエージェントから作業を任せられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、新しいエージェント体験で作ったエージェントと接続先エージェントが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "Prerequisites", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**接続済みエージェントの追加**ダイアログから、Foundry・Agents SDK・A2A のエージェントもまとめて追加できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Studio のエージェント、Foundry、A2A、Agents SDK のエージェントを接続できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "A2A は、エージェントカードから接続先を検出し、実行時にタスクを委任する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "A2A の認証は、認証なし・API キー・OAuth 2.0 に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "Prerequisites", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "GitHub Copilot ハーネスで作成したメインのエージェントが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "Prerequisites", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "A2A のリモートエージェントは、パブリックインターネット経由で到達できる必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "Prerequisites", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "ハーネスは使用量ベースの課金で、Copilot クレジットが消費されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locator": "Note", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "委任時にタスク記述は言い換えられるため、元のプロンプトの転送に依存しない設計にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locator": "コネクテッドエージェントの仕組み", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "説明（30〜1,000 文字）はルーティングの判断材料。他のエージェントと重複させない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "A2A エージェントを追加", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "handoff-limits",
+          "heading": "引き継ぎの注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ペイロード制限のため、サイズ超過のファイルはメインのエージェントに届かないことがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locator": "Note", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "外部エージェントの利用は利用者が責任を負い、データフローや権限の確認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "Note", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "connected-agent", "term": "接続エージェント", "type": "feature", "oneLine": { "text": "会話中にメインのエージェントが呼び出せる、別のエージェントのこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] } },
+        { "termKey": "a2a", "term": "Agent2Agent (A2A)", "type": "term", "oneLine": { "text": "エージェント間の通信と協働のためのオープンスタンダードなプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] } },
+        { "termKey": "agent-card", "term": "エージェントカード", "type": "term", "oneLine": { "text": "A2A のリモートエージェントのエンドポイントや能力を示す情報で、接続時に読み取られる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "正式提供の前に、先行して試せる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "A2A エージェントはオンプレミスや仮想ネットワーク内でも接続できますか？",
+          "answer": { "text": "A2A 接続はカスタムコネクタの基盤を使うため、オンプレミスや仮想ネットワーク内のエージェントにも接続できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "Prerequisites の Note", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+        },
+        {
+          "question": "OAuth 2.0 で接続する際に事前にやることは？",
+          "answer": { "text": "ウィザードが生成するリダイレクト URL を、接続前に ID プロバイダーのアプリ登録へ追加します。未登録だと最初の認証が失敗します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locator": "リダイレクト URL を追加", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-add-other-agents",
+        "learn": [
+          { "title": "接続エージェント概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/authoring-add-other-agents", "locale": "ja-jp" },
+          { "title": "A2A エージェントを接続エージェントとして追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
