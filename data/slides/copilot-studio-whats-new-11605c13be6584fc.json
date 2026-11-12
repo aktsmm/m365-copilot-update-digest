@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-11605c13be6584fc",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "エージェント会話の冒頭にプライバシーステートメントのリンクを表示可能に（プレビュー）",
+        "subtitleJa": "会話を始める前に、組織のプライバシーポリシーを確認してもらえます",
+        "en": "(Preview) Configure a privacy statement link that appears at the start of agent conversations, so users can review your..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "high",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Power Platform 管理者**と、Copilot Studio でエージェントを作る人", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "前提条件 / メーカー向け", "retrievedAt": "2026-11-12T08:55:00Z" }] },
+        "change": { "text": "エージェントの利用者が、チャット開始時に組織のプライバシーポリシーを確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "冒頭", "retrievedAt": "2026-11-12T08:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うなら、管理者が環境ごとにプライバシーポリシーの URL を設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "プライバシーステートメントリンクの設定", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Power Platform 管理者が**環境レベルでプライバシーポリシーの URL を設定**すると、エージェントとの会話の開始時にリンクが表示されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "冒頭", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "管理者が管理環境、または環境グループのルールで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "プライバシーステートメントリンクの設定", "retrievedAt": "2026-11-12T08:55:00Z" }] },
+            { "text": "対象は標準ハーネスで動くエージェントとエージェント フロー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "Note", "retrievedAt": "2026-11-12T08:55:00Z" }] },
+            { "text": "メーカーはテスト用 Web チャットで表示を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "メーカー向け", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "表示されるメッセージは定型で、編集できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "Limitations", "retrievedAt": "2026-11-12T08:55:00Z" }] },
+            { "text": "設定は環境単位。エージェント単位やテナント全体では設定できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "Limitations", "retrievedAt": "2026-11-12T08:55:00Z" }] },
+            { "text": "対象は会話型（テキスト）エージェントのみ。音声エージェントは未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "Limitations", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "保存後に新しいテスト会話を開き、メッセージとリンク先を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "プライバシーステートメントリンクの設定", "retrievedAt": "2026-11-12T08:55:00Z" }] },
+            { "text": "外部ユーザーが使う場合は、ポリシーの URL も外部から開けるようにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "Important", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "privacy-statement-link", "term": "プライバシーステートメントリンク", "type": "feature", "oneLine": { "text": "エージェントとの会話の開始時に、組織のプライバシーポリシーへのリンクを表示する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "冒頭", "retrievedAt": "2026-11-12T08:55:00Z" }] } },
+        { "termKey": "managed-environment", "term": "管理環境", "type": "term", "oneLine": { "text": "Power Platform 管理センターで、環境単位にこの設定を行える対象の一つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "管理環境用のプライバシーステートメントリンクを設定", "retrievedAt": "2026-11-12T08:55:00Z" }] } },
+        { "termKey": "environment-group-rule", "term": "環境グループのルール", "type": "term", "oneLine": { "text": "環境グループの「ルール」タブで追加でき、グループ内の環境へ設定を適用する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "環境グループ内のルールを使って設定する", "retrievedAt": "2026-11-12T08:55:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "本番用途向けではなく、機能が制限されることがある先行提供の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "Important", "retrievedAt": "2026-11-12T08:55:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "エージェントごとに別のプライバシーリンクを設定できますか？",
+          "answer": { "text": "いいえ。管理者が環境レベルで設定し、メーカーがエージェント単位で別のリンクを設定することはできません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "メーカー向け", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+        },
+        {
+          "question": "グループチャットや接続されたエージェントではどう表示されますか？",
+          "answer": { "text": "グループチャットではエージェントの追加時に表示され、同じチャットで再び表示されません。接続されたエージェントでは会話の冒頭に一度だけ表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "エンド ユーザー向け", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+        },
+        {
+          "question": "表示をやめるにはどうしますか？",
+          "answer": { "text": "管理環境の設定、または環境グループのルールで「エンドユーザーにプライバシーリンクを表示する」をオフにして保存します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locator": "プライバシーに関する声明のリンクを非表示にする", "retrievedAt": "2026-11-12T08:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-privacy-statement-link",
+        "learn": [
+          { "title": "プライバシーステートメントリンクの設定（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/configure-privacy-statement-link", "locale": "ja-jp" },
+          { "title": "Copilot Studio のハーネス", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview#standard-harness", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
