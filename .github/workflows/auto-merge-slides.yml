@@ -55,6 +55,9 @@ jobs:
             if [ "$(git rev-parse FETCH_HEAD)" != "$sha" ]; then echo "skip: head moved while checking"; continue; fi
             git reset -q --hard origin/main
             git checkout -q FETCH_HEAD -- "$f"
+            # 列挙値の軽微な取り違え（大文字・別名）は、検証の前に決定的に直す。直せないものだけが検証に落ちる
+            repaired=false
+            if node scripts/repair-slide.mjs "$id" | grep -q '^repaired '; then repaired=true; fi
             if ! vout=$(npm run -s validate:slides 2>&1); then
               echo "skip: validation failed"; git reset -q --hard origin/main
               msg=$(printf '%s\n' "$vout" | grep -E '^\s+\[' | head -5 | tr '\n' ' ')
@@ -67,6 +70,22 @@ jobs:
               msg="描画確認に失敗: $(printf '%s\n' "$rout" | tail -3 | tr '\n' ' ')"
               printf '%s\t%s\n' "$id" "$msg" >> "$failures"
               gh pr close "$n" -c "描画確認に失敗したためクローズします。理由は記録され、次回のスライド生成で作り直されます: ${msg}" || true
+              continue
+            fi
+            if [ "$repaired" = "true" ]; then
+              # 直した内容は PR のブランチに入っていないので、そのまま PR をマージすると直す前の内容が入る。
+              # 直したファイルを main に直接コミットし、PR は理由を添えて閉じる（スライドは main に入る）
+              git add "$f"
+              git commit -q -m "fix(slides): repair enum slips in $id before merge (from #$n)"
+              if git push origin HEAD:"${{ github.event.repository.default_branch }}"; then
+                gh pr close "$n" -c "列挙値の軽微な取り違えを自動で直し、main に取り込みました（このスライドは公開されます）。" || true
+                merged=true
+              else
+                echo "push of repaired slide failed; leaving PR #$n for the next run"
+              fi
+              git reset -q --hard origin/main
+              git clean -fdq data/slides
+              rm -rf .slide-check
               continue
             fi
             git reset -q --hard origin/main
