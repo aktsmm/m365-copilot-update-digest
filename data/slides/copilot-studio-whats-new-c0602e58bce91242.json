@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-c0602e58bce91242",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Copilot Studio のエージェントを GitHub Copilot ハーネスへアップグレード（プレビュー）",
+        "subtitleJa": "標準ハーネスのエージェントを、チャットの依頼だけでコピー移行できます",
+        "en": "(Preview) Ask Copilot Studio to upgrade an agent from the standard harness to the GitHub Copilot harness. The upgrade..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**標準ハーネスでエージェントを作成している Copilot Studio の作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "指示・ツール・推奨プロンプトを引き継いだコピーを、GitHub Copilot ハーネス上に作れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試す場合は、アップグレードでクレジットが消費される点を事前に確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Note", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Studio に「エージェントをアップグレード」と依頼すると、**GitHub Copilot ハーネス上にエージェントのコピー**が作られ、移行結果のレポートも得られます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "指示・ツール・推奨プロンプトを新しいエージェントへ引き継ぐ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] },
+            { "text": "カスタム トピックは、スキルまたはワークフローとして再構築できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] },
+            { "text": "移行済み・要対応・スキップの各項目をレポートで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ナレッジ ソース、Power Fx 式、子エージェントは移行されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Limitations", "retrievedAt": "2026-11-12T09:40:00Z" }] },
+            { "text": "Azure AI 検索は GitHub Copilot ハーネスで使えず、Foundry IQ やコネクターで再構成する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Limitations", "retrievedAt": "2026-11-12T09:40:00Z" }] },
+            { "text": "プレビューは運用環境向けではなく、機能が制限される場合がある。アップグレードはクレジットを消費する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Important", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ホーム画面の入力欄に「〇〇エージェントをアップグレード」と入力して依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "手順 1", "retrievedAt": "2026-11-12T09:40:00Z" }] },
+            { "text": "完了後、新しいエージェントのタイルには「（アップグレード済み）」と表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "手順 2", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず小規模なエージェントで試し、レポートの要対応項目を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "harness", "term": "ハーネス", "type": "term", "oneLine": { "text": "Copilot Studio でエージェントを動かす実行基盤。標準ハーネスと GitHub Copilot ハーネスがある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] } },
+        { "termKey": "github-copilot-harness", "term": "GitHub Copilot ハーネス", "type": "feature", "oneLine": { "text": "アップグレード後のエージェントが動く基盤。使用量ベースの請求で Copilot クレジットを消費する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Note", "retrievedAt": "2026-11-12T09:40:00Z" }] } },
+        { "termKey": "skills-workflows", "term": "スキル / ワークフロー", "type": "feature", "oneLine": { "text": "標準ハーネスのカスタム トピックの再構築先となる形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "運用環境での使用を想定しておらず、機能が制限される可能性がある先行提供の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Important", "retrievedAt": "2026-11-12T09:40:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "元のエージェントはアップグレードで変更されますか？",
+          "answer": { "text": "元のエージェントのコピーが GitHub Copilot ハーネス上に作成されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "冒頭", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+        },
+        {
+          "question": "アップグレードに費用はかかりますか？",
+          "answer": { "text": "はい。アップグレードは Copilot クレジットを消費します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Note", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+        },
+        {
+          "question": "ナレッジ ソースはどうなりますか？",
+          "answer": { "text": "移行されないため、新しいエージェントで再設定が必要です。Azure AI 検索は Foundry IQ やコネクターのツール経由で再構成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locator": "Limitations", "retrievedAt": "2026-11-12T09:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness",
+        "learn": [
+          { "title": "エージェントを GitHub Copilot ハーネスにアップグレード（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/upgrade-to-github-copilot-from-standard-harness", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
