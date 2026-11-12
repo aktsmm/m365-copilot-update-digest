@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-d5d397b0014b949b",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "新しい既定モデルへの更新後も最大 30 日間は現行モデルを維持可能",
+        "subtitleJa": "旧モデルの終了前に、テストと移行を進める猶予が得られます",
+        "en": "Keep your agent on its current AI model for up to 30 days after Copilot Studio upgrades it to a new default, giving you..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": null,
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**（標準ハーネスのエージェント）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "冒頭の注記", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+        "change": { "text": "自動アップグレード後も 30 日間は旧モデルを使え、互換性の確認に時間を取れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "旧モデルを延長したい場合は、エージェントの設定でオンにする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "この機能を使用するには", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "自動アップグレード後も最大 **30 日間**、廃止されたモデルを使い続けられます。期間中は旧モデルと新モデルをいつでも切り替えられます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "冒頭", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "既定モデルは、より高性能な新モデルの提供開始に合わせて定期的にアップグレードされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルリリースタイプ", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "延長できるのは廃止後最大 30 日まで。モデルによっては延長できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルの提供終了日と延長の利用可能性", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "延長の対象外の例: GPT-5.5 チャット（2026 年 10 月 31 日に廃止）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルの提供終了日と延長の利用可能性", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行の進め方",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントの[設定]→[モデル]で「廃止されたモデルの使用を続行する」をオン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "この機能を使用するには", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "30 日間は、廃止されたモデルとアップグレード後のモデルを切り替えて確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "本文", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "設定は、オフにするまで将来のモデル アップグレードにも適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "本文", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応プラン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象モデルの廃止日と延長可否を、提供終了日の一覧で確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルの提供終了日と延長の利用可能性", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "延長期間内に新モデルで回答品質を試験し、問題がなければ切り替える", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "retire-schedule",
+          "heading": "廃止日の例（標準ハーネス）",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GPT-4.1 / GPT-5 チャット / GPT-5 オート / GPT-5 の推論: 2026 年 11 月 12 日（延長可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルの提供終了日と延長の利用可能性", "retrievedAt": "2026-11-12T18:00:00Z" }] },
+            { "text": "置き換え先は「最新の GPT チャット」", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルの提供終了日と延長の利用可能性", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "notes",
+          "heading": "留意点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "FedRAMP テナントや、クロスジオ移動が制限された環境では GPT-4.1 と GPT-5 は廃止されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "Note", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "retired-model", "term": "廃止されたモデル", "type": "term", "oneLine": { "text": "サポートが終了した AI モデル。一部は終了後最大 30 日まで延長できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルリリースタイプ", "retrievedAt": "2026-11-12T18:00:00Z" }] } },
+        { "termKey": "default-model", "term": "既定モデル", "type": "term", "oneLine": { "text": "すべてのエージェントの標準モデルで、新モデルの提供開始に合わせて定期的にアップグレードされる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルリリースタイプ", "retrievedAt": "2026-11-12T18:00:00Z" }] } },
+        { "termKey": "cross-geo", "term": "クロスジオ", "type": "term", "oneLine": { "text": "組織の地理的境界外でデータの処理や保存が必要になる場合があることを示すタグ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルリリースタイプ", "retrievedAt": "2026-11-12T18:00:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "機能やモデルのサポートが終了する段階（Retirement）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "すべての廃止モデルを 30 日延長できますか？",
+          "answer": { "text": "いいえ。一覧で延長が「はい」のモデルのみです。たとえば GPT-5.5 チャットは延長できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "モデルの提供終了日と延長の利用可能性", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+        },
+        {
+          "question": "この設定はエージェントごとに行いますか？",
+          "answer": { "text": "はい。エージェントの[設定]ページのモデル セクションでオンにします。オフにするまで将来のアップグレードにも適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locator": "この機能を使用するには", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+        },
+        {
+          "question": "「最新の GPT チャット」では新メジャー バージョンへの移行はどう扱われますか？",
+          "answer": { "text": "新しいメジャー モデル バージョンへの移行は別の変更として扱われ、少なくとも 30 日前に通知されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locator": "Important", "retrievedAt": "2026-11-12T18:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-retired-model",
+        "learn": [
+          { "title": "廃止された AI モデルを引き続き使用する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-retired-model", "locale": "ja-jp" },
+          { "title": "エージェントのために主要な AI モデルを選択する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
