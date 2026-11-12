@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-6ea525acd6130c70",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio のナレッジ ソースを管理センターから制御",
+        "subtitleJa": "メイカーが追加できる知識ソースの種類を、管理者が制限できます",
+        "en": "Control which knowledge sources makers can add to their agents from the Power Platform admin center. Restrict access to..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents", "admin", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "Power Platform の**管理者**と、Copilot Studio でエージェントを作るメイカー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "冒頭", "retrievedAt": "2026-11-12T07:50:00Z" }] },
+        "change": { "text": "ローカル ファイル、SharePoint・OneDrive、公開 Web サイトの利用を、データ ガバナンス方針に合わせて制限できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "冒頭", "retrievedAt": "2026-11-12T07:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "制限したい場合は、管理者が Power Platform 管理センターで設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "エージェントのナレッジ ソースを管理する", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**ナレッジ ソースの種類ごと**に、メイカーがエージェントへ追加できるかを管理センターで制御できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "冒頭", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "制御できる範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ローカル デバイスからのファイル アップロード（ドキュメント）を許可・不許可にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "表", "retrievedAt": "2026-11-12T07:50:00Z" }] },
+            { "text": "SharePoint + OneDrive を、なし・すべて・カスタム（URL ごとに許可・拒否）で制御", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "手順 8", "retrievedAt": "2026-11-12T07:50:00Z" }] },
+            { "text": "公開 Web サイトも、なし・すべて・カスタムで制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "手順 8", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ドキュメントを不許可にしても、SharePoint・OneDrive からの追加は防げない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "Important", "retrievedAt": "2026-11-12T07:50:00Z" }] },
+            { "text": "SharePoint・OneDrive を止めるには、SharePoint + OneDrive を不許可にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "Important", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "admin-steps",
+          "heading": "設定の場所",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理センター → セキュリティ → データとプライバシー → エージェントのナレッジ ソース", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "手順 1〜4", "retrievedAt": "2026-11-12T07:50:00Z" }] },
+            { "text": "環境または環境グループごとに設定。グループで設定した制御は環境側で変更できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "冒頭", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related",
+          "heading": "関連する制御",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "特定の SharePoint や公開 Web サイトのエンドポイントだけを許可・拒否するなら、エンドポイント フィルタリングを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "Important の後", "retrievedAt": "2026-11-12T07:50:00Z" }] },
+            { "text": "管理センター側の解説ページは、プレリリース ドキュメント（プレビュー）と表記されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "タイトル", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず現在のエージェントが使う知識ソースを棚卸しし、制限の影響を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "knowledge-source", "term": "ナレッジ ソース", "type": "term", "oneLine": { "text": "エージェントが参照できる情報源（SharePoint、公開 Web サイト、ドキュメントなど）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "冒頭", "retrievedAt": "2026-11-12T07:50:00Z" }] } },
+        { "termKey": "ppac", "term": "Power Platform 管理センター", "type": "product", "oneLine": { "text": "エージェントのナレッジ ソース設定を含む、セキュリティ設定を管理者が構成する場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "エージェントのナレッジ ソースを管理する", "retrievedAt": "2026-11-12T07:50:00Z" }] } },
+        { "termKey": "env-group", "term": "環境グループ", "type": "term", "oneLine": { "text": "グループで設定した制御が環境レベルに配布され、環境側では変更できない単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "冒頭", "retrievedAt": "2026-11-12T07:50:00Z" }] } },
+        { "termKey": "endpoint-filtering", "term": "エンドポイント フィルタリング", "type": "feature", "oneLine": { "text": "SharePoint や公開 Web サイトの特定エンドポイントを許可・拒否する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "Important の後", "retrievedAt": "2026-11-12T07:50:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "設定は環境ごとにしかできませんか？",
+          "answer": { "text": "いいえ。環境と環境グループの両方で設定でき、グループで設定した制御は環境側で変更できません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locator": "冒頭", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+        },
+        {
+          "question": "ドキュメントを不許可にすればファイル追加は全て防げますか？",
+          "answer": { "text": "いいえ。ローカル ファイルのアップロードだけが対象です。SharePoint・OneDrive からの追加は別に制御します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locator": "Important", "retrievedAt": "2026-11-12T07:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/choose-knowledge-sources",
+        "learn": [
+          { "title": "Copilot Studio で作成したエージェント用のナレッジ ソースを選択する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/choose-knowledge-sources", "locale": "ja-jp" },
+          { "title": "Power Platform 管理センターでエージェントのナレッジ ソースを構成する", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/knowledge-sources-for-agents-rule", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
