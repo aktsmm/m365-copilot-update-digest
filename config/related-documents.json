@@ -4888,11 +4888,11 @@
   "m365-roadmap-rss-84f0c65ab85db17d": {
     "inputFingerprint": "13214eba7a950c1cb88ecdec4f17891440f3902709457645de1c332a8cbf1c98",
     "status": "not-found",
-    "checkedAt": "2026-11-03T00:58:40.834Z",
+    "checkedAt": "2026-11-12T19:54:14.817Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-10T00:58:40.834Z"
+    "mcpRetryAfter": "2026-11-19T19:54:14.817Z"
   },
   "m365-roadmap-rss-2e41bfafadbb41ad": {
     "inputFingerprint": "ffe405074b68351d9284ccea49512de061ad99d17949d5eb7261f43a9966e535",
@@ -9207,11 +9207,11 @@
   "m365-roadmap-rss-f5e7704c7e6861f8": {
     "inputFingerprint": "741c740cc9ffd4241ed8e255fe7c53da6b3722bbcc5aba45227da66101f0e50f",
     "status": "not-found",
-    "checkedAt": "2026-11-03T00:58:40.834Z",
+    "checkedAt": "2026-11-12T19:54:14.817Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-10T00:58:40.834Z"
+    "mcpRetryAfter": "2026-11-19T19:54:14.817Z"
   },
   "m365-roadmap-rss-14ab5e0c5e2758a8": {
     "inputFingerprint": "200d33d500cdd818ec416a65f58c0ad5ec9d0f0024001f58a6ba273856bf5b07",
@@ -12504,22 +12504,16 @@
     ]
   },
   "copilot-studio-whats-new-4799909369064f0d": {
-    "inputFingerprint": "acdfa4078e789144d831f74eee33ba70d20fb769ef5da8434a1f62dbcbb5f861",
+    "inputFingerprint": "4f9b5530379ac08d3bb761efbceed63206d3d2955163c2fc1d209af15cbfc228",
     "status": "verified",
-    "checkedAt": "2026-10-14T07:35:56.768Z",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
     "localePreference": "ja-jp",
     "documents": [
       {
-        "title": "エージェントの応答で機密ラベルを確認する (プレビュー)",
-        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/sensitivity-label-copilot-studio",
-        "provenance": "article",
-        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/attachments-overview"
-      },
-      {
-        "title": "エージェント向けの利用可能な知識ソース(GitHub Copilot)",
-        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/knowledge-sources-overview",
-        "provenance": "article",
-        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/attachments-overview",
+        "title": "エージェントが作成するファイル(GitHub Copilot)(プレビュー版)",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/created-files-overview",
+        "provenance": "source",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
         "supplemental": true
       }
     ]
@@ -39322,11 +39316,11 @@
   "m365-copilot-release-notes-b0c89516765fd57d": {
     "inputFingerprint": "f1f7fcb1dfe660310045fd71dac32327e1aa5c750c4dfb3b138bdd20153cb8cb",
     "status": "not-found",
-    "checkedAt": "2026-11-04T19:45:31.671Z",
+    "checkedAt": "2026-11-12T19:54:14.817Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-11T19:45:31.671Z"
+    "mcpRetryAfter": "2026-11-19T19:54:14.817Z"
   },
   "m365-copilot-release-notes-c064bc94af3d1864": {
     "inputFingerprint": "d8e8403c50b9cd448705f0fce12b1e8b4ece9d9dbdf9f8813e857927b650f339",
@@ -39781,9 +39775,17 @@
   "copilot-studio-whats-new-288aed2266c17afc": {
     "inputFingerprint": "c0119af882673456ce18e630e46ae378cb14358470701553871a4a42f8aa6681",
     "status": "verified",
-    "checkedAt": "2026-11-12T07:09:46.229Z",
+    "checkedAt": "2026-11-12T19:54:14.817Z",
     "localePreference": "ja-jp",
     "documents": [
+      {
+        "title": "Visual Studio CodeとGitHub Copilot CLIでCopilot Studio MCPに接続する",
+        "sourceTitle": "Connect to Copilot Studio MCP with Visual Studio Code and GitHub Copilot CLI",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/copilot-studio-mcp-vscode-copilot-cli",
+        "provenance": "mcp",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: connect, mcp-compatible, tool, like, visual, studio, code, github, cli, mcp, you"
+      },
       {
         "title": "ツールとしてエージェントにモデルコンテキストプロトコル(MCP)サーバーを追加してください(GitHub Copilot)(プレビュー版)",
         "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-mcp-server",
@@ -39798,7 +39800,8 @@
         "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/copilot-studio-mcp",
         "supplemental": true
       }
-    ]
+    ],
+    "mcpStatus": "verified"
   },
   "copilot-studio-whats-new-35a148f9b37f36e5": {
     "inputFingerprint": "dce73d81f1d634f4d165eb3885859936eee2627592af12b7598b6da19929ecc4",
@@ -39898,10 +39901,238 @@
   },
   "copilot-studio-whats-new-6ea525acd6130c70": {
     "inputFingerprint": "474c2076ae56e5fdedfde23f6a637f2ad2e2b578c73e3c734a10081dafc458b6",
-    "status": "error",
-    "checkedAt": "2026-11-12T07:09:46.229Z",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:14.817Z",
     "localePreference": "ja-jp",
-    "documents": [],
-    "error": "Related document request budget reached"
+    "documents": [
+      {
+        "title": "Copilot Studio のセキュリティに関する FAQ",
+        "sourceTitle": "Security FAQs for Copilot Studio",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-faq#how-can-i-control-generative-ai-capabilities-in-copilot-studio",
+        "provenance": "mcp",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: control, which, knowledge, source, maker, add, agent, power, platform, admin, center, restrict, acces"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "copilot-studio-whats-new-795df4f64e9ef1e7": {
+    "inputFingerprint": "c4b5cb58f5e4753658d0499f92a67055eedb1d785a3c9f79ce56100c649d9f57",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:14.817Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Agent2Agent(A2A)エージェントを接続エージェントとして追加する(GitHub Copilot)",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-agent-to-agent",
+        "provenance": "source",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+        "supplemental": true
+      }
+    ],
+    "mcpStatus": "not-found",
+    "mcpRetryAfter": "2026-11-19T19:54:14.817Z"
+  },
+  "copilot-studio-whats-new-b312a619c09ebbfa": {
+    "inputFingerprint": "4db076b683cff6980cd407126c7aa418c1dfeef5113c3d72ff8fc0377d3a24f6",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilot Studio のハーネス",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview#standard-harness",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model"
+      },
+      {
+        "title": "複雑なタスクに深層推論モデルを使用する (プレビュー)",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-reasoning-models",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-c0602e58bce91242": {
+    "inputFingerprint": "96e1e4803749cd73c16c4f320d8ee81ea741defbbda2a73ef399e3b693024dcd",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Upgrade agents to the Microsoft Copilot harness (preview)",
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness"
+      },
+      {
+        "title": "使用率に基づく請求の概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness"
+      },
+      {
+        "title": "Copilot Studioの概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-what-is-copilot-studio",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-d19eb65333687279": {
+    "inputFingerprint": "3a9b03593011e1db538b42c946ec2a8b203189e5b9ccb9817c825be5522ba0d4",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Upgrade agents to the Microsoft Copilot harness (preview)",
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness"
+      },
+      {
+        "title": "使用率に基づく請求の概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness"
+      },
+      {
+        "title": "Copilot Studioの概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/fundamentals-what-is-copilot-studio",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/upgrade-to-microsoft-copilot-from-standard-harness"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-d5d397b0014b949b": {
+    "inputFingerprint": "41c3773542ccc4b2f2be02d99900042cf0752b8bf145e5ff6e07a2c12d06decb",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilot Studio のハーネス",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview#standard-harness",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-retired-model"
+      },
+      {
+        "title": "エージェントのために主要なAIモデルを選択してください",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-retired-model"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-fd451e91986d32bd": {
+    "inputFingerprint": "eb841d8625741d36e9bda7212a41666bd771e64f6cace9dcc634504f90660b92",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilot Studio のハーネス",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview#standard-harness",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-whatsapp"
+      },
+      {
+        "title": "Azure Communication Servicesの退職および変更に関する詳細ガイド",
+        "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide#acs-advanced-messaging-whatsapp",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-whatsapp"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-feb9090abee1633d": {
+    "inputFingerprint": "8fb4752b164d86c8331ba4dc74423dd538dfd16dc5cbfd1ff54b7bd76760a140",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilot Studio のハーネス",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/harnesses-overview",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/add-work-iq"
+      },
+      {
+        "title": "使用率に基づく請求の概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/add-work-iq"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-ad69814c13cb8b7b": {
+    "inputFingerprint": "f1a76a8d953954baf8cb1e351d458f86730cd7861ddfbff17ad18ae6e111a4bc",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "使用率に基づく請求の概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability"
+      },
+      {
+        "title": "早期リリースサイクル環境",
+        "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/early-release",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/authoring-agent-model-availability"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-fa62ab1c5b7f9760": {
+    "inputFingerprint": "dbd5581ae697afdd64bf7664ebb9f134cf03d02eb6fdcabdaf39c7a8ab1be7cb",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilotクレジットの購入と管理",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits",
+        "provenance": "source",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+      }
+    ]
+  },
+  "copilot-studio-whats-new-a57aab49e2bbbe63": {
+    "inputFingerprint": "57cc7bf0917067006812cd406c3ff8e41305b464f470fd9846076bfde54ed779",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "ツールとしてエージェントにモデルコンテキストプロトコル(MCP)サーバーを追加してください(GitHub Copilot)(プレビュー版)",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/tools-add-mcp-server",
+        "provenance": "source",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+        "supplemental": true
+      }
+    ]
+  },
+  "copilot-studio-whats-new-3bddc434710db9b6": {
+    "inputFingerprint": "e7613b25d6d95edd80e2260dbe51db3de6b395b6b5943d783110016e00d97314",
+    "status": "verified",
+    "checkedAt": "2026-11-12T19:54:11.120Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "メモ（顧客との会話）（プレビュー）",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/memory-overview-customer-conversation",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/memory-overview"
+      },
+      {
+        "title": "GitHub Copilot Harnessによるエージェント概要",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/overview",
+        "provenance": "article",
+        "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/memory-overview",
+        "supplemental": true
+      }
+    ]
   }
 }
