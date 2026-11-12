@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-b312a619c09ebbfa",
+      "kind": "ga",
+      "kindSource": "manual",
+      "label": "提供開始",
+      "title": {
+        "ja": "標準ハーネスの既定モデルが GPT-5.5 チャットに、Claude Opus 4.8 も GA",
+        "subtitleJa": "Copilot Studio のエージェントで、用途に合わせて主要モデルを選べます",
+        "en": "Use GPT-5.5 Chat as the new default model for agents on the standard harness. Claude Opus 4.8 is now generally..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "GA",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": {
+          "text": "**Copilot Studio でエージェントを作る作成者**と、モデル設定を管理する管理者",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "既定モデルが新しくなり、Claude Opus 4.8 など用途に合うモデルを本番用に選べる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "特定のモデルを使うエージェントは、モデルの提供終了日を確認する",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+              "locator": "モデルの提供終了日と延長の利用可能性",
+              "retrievedAt": "2026-11-12T08:00:00Z"
+            }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "標準ハーネスのエージェントは**既定で GPT-5.5 チャット**を使えます。**Claude Opus 4.8** は GA、GPT-5.3 チャットはプレビューで選択できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "主要モデルが、エージェントの生成オーケストレーションを駆動する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "「最新の GPT チャット」は対応する最新の GPT チャットモデルを使い続ける",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "標準ハーネスの入手可能性",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Claude Opus 4.8 は「ディープ」タグ。多段階の推論やツールを使う処理向け",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "モデル使用カテゴリ",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "エージェントの「概要」ページの「モデル」セクションで主要モデルを選ぶ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "エージェントの AI モデルを変更する",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "選んだモデルが使えない場合は、既定モデルがフォールバックになる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "モデルリリースタイプ",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "クロスジオ表記のモデルは、組織の地理的境界外でデータが処理されることがある",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "モデルリリースタイプ",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "プレビュー・実験モデルは本番運用に推奨されず、利用には管理者設定が必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "AI モデルの選択に対する管理者コントロール",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "主要モデルの選択は、ディープ推論や生成応答、プロンプトビルダーの設定とは別",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "外部モデルの追加は管理者の許可が別途必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "外部モデルの管理コントロールと要件",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "複雑な分析には「ディープ」、日常的な応答には「全般」を選ぶ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                  "locator": "モデル使用カテゴリ",
+                  "retrievedAt": "2026-11-12T08:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "まず試験用エージェントでモデルを切り替え、応答の質と速度を比べる",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "standard-harness",
+          "term": "標準ハーネス",
+          "type": "term",
+          "oneLine": {
+            "text": "Copilot Studio のエージェントやエージェントフローを駆動する、標準の実行基盤。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                "locator": "冒頭の注記",
+                "retrievedAt": "2026-11-12T08:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "primary-model",
+          "term": "主要モデル",
+          "type": "feature",
+          "oneLine": {
+            "text": "エージェントの生成オーケストレーションを駆動する AI モデル。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                "locator": "冒頭",
+                "retrievedAt": "2026-11-12T08:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "cross-geo",
+          "term": "クロスジオ",
+          "type": "term",
+          "oneLine": {
+            "text": "組織の地理的境界外でデータの処理や保存が必要になることを示すタグ。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                "locator": "モデルリリースタイプ",
+                "retrievedAt": "2026-11-12T08:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "提供開始（GA）",
+          "type": "label",
+          "oneLine": {
+            "text": "一般提供が始まり、本番環境での利用を想定した段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                "locator": "モデルリリースタイプ",
+                "retrievedAt": "2026-11-12T08:00:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "GPT-5.3 チャットは本番で使えますか？",
+          "answer": {
+            "text": "標準ハーネスでは、リージョン表で GPT-5.3 チャットはプレビューと示されており、本番運用は推奨されません。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                "locator": "標準ハーネスの入手可能性",
+                "retrievedAt": "2026-11-12T08:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "新しいメジャーモデルへの移行は事前に通知されますか？",
+          "answer": {
+            "text": "はい。「最新の GPT チャット」の新しいメジャーモデルバージョンへの移行は別の変更として扱われ、少なくとも 30 日前に通知されます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                "locator": "標準ハーネスの入手可能性",
+                "retrievedAt": "2026-11-12T08:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "提供終了したモデルは延長して使えますか？",
+          "answer": {
+            "text": "モデルにより、提供終了後最大 30 日の延長が可能です。対象は Learn の提供終了日の表で確認できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+                "locator": "モデルの提供終了日と延長の利用可能性",
+                "retrievedAt": "2026-11-12T08:00:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model",
+        "learn": [
+          {
+            "title": "エージェントのために主要なAIモデルを選択してください",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/authoring-select-agent-model",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
