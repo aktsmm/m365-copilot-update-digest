@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-06cf1e337f3a4f2d",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Copilot Studio でマーケットプレイスのスキルを追加・共有（プレビュー）",
+        "subtitleJa": "共有されたスキルをエージェントに追加し、自作スキルも共有できます",
+        "en": "(Preview) Browse and add marketplace-shared skills to your agent, and share your own skills with specific people or..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "normal",
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**とスキルの作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "共有スキルを再利用でき、更新があれば通知で気づける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスのスキルを閲覧して利用する", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、Build タブの Skills から「スキルの閲覧（プレビュー）」を開く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスのスキルを閲覧して利用する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**マーケットプレイスのスキルを閲覧してエージェントに追加**でき、自作スキルは自分だけ、または組織内の特定の人やグループと共有できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスでスキルを共有する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Build タブの Skills で「スキルの閲覧（プレビュー）」から共有スキルを追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスのスキルを閲覧して利用する", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "追加時はスナップショットを取得し、元のスキルへの参照も保持", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスのスキルを閲覧して利用する", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "共有先は「あなただけ」または組織内の特定のユーザー・グループ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスでスキルを共有する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "プレビューは運用環境向けではなく、機能が制限されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "Important", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "使用量ベースの課金のハーネスで、Copilot クレジットを消費することがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "プラグインの一般的なサポートは、まだ利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスのスキルを閲覧して利用する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "古い版を使うエージェントを開くと更新通知が届き、更新ボタンで新版へ更新", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスのスキルを閲覧して利用する", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "共有済みスキルを編集したら、再度共有して最新版を届ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスでスキルを共有する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず検証用のエージェントで共有スキルを追加し、動作を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "skill", "term": "スキル", "type": "feature", "oneLine": { "text": "名前・説明・指示（Markdown）で、エージェントの動作を導く要素。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "スキルを編集する", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "marketplace-skill", "term": "マーケットプレイスのスキル", "type": "feature", "oneLine": { "text": "管理者やスキルの所有者が共有した、追加して使えるスキル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスのスキルを閲覧して利用する", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "harness", "term": "ハーネス", "type": "term", "oneLine": { "text": "エージェントの構築に使う基盤。GitHub Copilot ハーネスは使用量ベースの課金を使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "運用環境での使用を想定せず、機能が制限される可能性がある先行提供の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "Important", "retrievedAt": "2026-11-12T09:00:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "共有スキルを更新したら、使っている人にはどう届きますか？",
+          "answer": { "text": "共有元が再度共有すると最新版が届きます。利用側は、エージェントを開いたときの更新通知から更新ボタンで切り替えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "マーケットプレイスでスキルを共有する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+        },
+        {
+          "question": "本番のエージェントで使ってよいですか？",
+          "answer": { "text": "プレビュー機能は運用環境での使用を想定しておらず、機能が制限される可能性があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locator": "Important", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/skills-manage",
+        "learn": [
+          { "title": "エージェントのスキル管理と削除（GitHub Copilot）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-manage", "locale": "ja-jp" },
+          { "title": "アップロードしたスキルの追加と管理（GitHub Copilot）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/skills-add-existing#download-a-skill", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
