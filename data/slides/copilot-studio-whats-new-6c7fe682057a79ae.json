@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-6c7fe682057a79ae",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "MCP と A2A チャネルで外部クライアントからエージェントに接続可能（プレビュー）",
+        "subtitleJa": "エージェントをリモート MCP サーバーや A2A エージェントとして公開できます",
+        "en": "(Preview) Connect external clients to your agent with the new MCP and Agent2Agent (A2A) channels. Expose your agent..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Microsoft Entra の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "前提条件", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+        "change": { "text": "IDE や他のエージェントなど、Copilot Studio 以外のアプリからエージェントを呼び出せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すなら、エージェントの公開と Entra のアプリ登録が先に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "前提条件", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "公開済みエージェントを**リモート MCP サーバーまたは A2A エージェント**として公開し、他のツールやオーケストレーターから呼び出せます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "MCP クライアント: 開発ツールや IDE がエージェントをツールとして呼び出す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "A2A クライアント: 他のエージェントやオーケストレーターがタスクを送れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "Entra ID でサインインしたユーザーのアクセス権を確認してから応答", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "初期リリースサイクル環境でのみ利用でき、記事も変更されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "クライアントは OAuth 2.0 認証コード フローに対応している必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "前提条件", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "使用量ベースの課金で、Copilot クレジットが消費されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "アプリ登録に MCS.InvokeAsMCP / MCS.InvokeAsA2A の委任アクセス許可を追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "Copilot Studio の権限を追加", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "1 つのアプリ登録で複数のクライアントとエージェントに対応できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "前提条件: アプリ登録を作成する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "connect-steps",
+          "heading": "接続の手順",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "チャネル → チャネルを追加 → MCP クライアント / A2A クライアント で URL をコピー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "エージェントエンドポイントをコピー", "retrievedAt": "2026-11-12T09:00:00Z" }] },
+            { "text": "クライアントのリダイレクト URI をアプリ登録に追加してから接続を完了", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "クライアントのリダイレクトURIを登録する", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "Model Context Protocol。クライアントがエージェントをツールとして発見し、呼び出すための仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "a2a", "term": "A2A", "type": "term", "oneLine": { "text": "Agent2Agent プロトコル。他のエージェントがタスクを送り、応答を受け取るための仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "early-release", "term": "初期リリースサイクル環境", "type": "term", "oneLine": { "text": "このチャネルが現時点で利用できる環境。表示されない環境は展開の対象外。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "Note", "retrievedAt": "2026-11-12T09:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "先行提供の段階。ドキュメントも変更されることがある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "冒頭", "retrievedAt": "2026-11-12T09:00:00Z" }] } }
+      ],
+      "qa": [
+        {
+          "question": "チャネルが表示されない場合は？",
+          "answer": { "text": "初期リリースサイクル環境でのみ利用できるため、環境が展開の対象外の可能性があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "Troubleshooting", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+        },
+        {
+          "question": "Entra に API が見つからないときは？",
+          "answer": { "text": "アプリケーション ID で検索し、出ない場合は Copilot Studio でチャネルを一度開くとエンタープライズ アプリが作成されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locator": "Troubleshooting", "retrievedAt": "2026-11-12T09:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent",
+        "learn": [
+          { "title": "MCP と A2A チャネルでクライアントをエージェントに接続する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/publication-channels-mcp-agent-to-agent", "locale": "ja-jp" },
+          { "title": "早期リリースサイクル環境", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/early-release", "locale": "ja-jp" },
+          { "title": "使用率に基づく請求の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
