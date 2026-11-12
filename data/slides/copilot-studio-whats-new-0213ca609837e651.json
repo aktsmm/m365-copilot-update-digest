@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-whats-new-0213ca609837e651",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Studio の新規エージェントに Work IQ が既定で追加（一般提供）",
+        "subtitleJa": "GitHub Copilot ハーネスのエージェントが、組織の仕事の文脈を使って回答します",
+        "en": "(General availability) Use Work IQ, now added by default to every new agent powered by the GitHub Copilot harness, to..."
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents", "work-iq"],
+        "importance": "high",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "What's new in Copilot Studio"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェントを作る人**と、Microsoft 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "ワークIQの主な特徴", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+        "change": { "text": "ファイル・メール・会議・チャットの文脈に基づく回答を、手動設定なしで得られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "書き込み操作が既定でオン。不要なワークロードは絞り込んでおく", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "ワークIQの主な特徴 Note", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "GitHub Copilot ハーネスで作る**新しいエージェントに Work IQ が既定で追加**され、ツールを手動で足さずに設定できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "ワークIQの主な特徴", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "データ・メモリ・推論の 3 層で、エージェントに仕事の文脈を提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+            { "text": "ワークロード（SharePoint、Outlook メール、Teams など）単位で対象を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントのワークロードを選択します", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+            { "text": "管理者は Microsoft 365 管理センターで Work IQ MCP を管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "ワークIQの主な特徴", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ビルド タブの［ツール］で Work IQ を選び、接続を確認して［完了］", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントを Work IQ に接続する", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+            { "text": "既存のエージェントに無い場合は、ツールとして追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントを Work IQ に接続する", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+            { "text": "Outlook メールを選んだ場合は「今日の未読メールを要約して」などで動作確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントをWork IQでテストしてみてください", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "GitHub Copilot ハーネスと Copilot クレジット（使用量ベースの課金）を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+            { "text": "テナントの有効化には、課金プランとグローバル管理者による 1 回限りの設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locator": "前提条件", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "従来ツールとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "メール・Teams などの従来のワークロード別ツールは Work IQ の別名ではなく、新構成では選ばない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Important", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+            { "text": "従来ツールは標準ハーネスと標準の Copilot Studio 課金を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Important", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "会議準備のエージェントは、カレンダーと Outlook メールだけに絞る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントのワークロードを選択します", "retrievedAt": "2026-11-12T07:15:00Z" }] },
+            { "text": "書き込みが既定でオンのため、用途に合わせてワークロードを見直す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Copilot とエージェントを、組織全体のリアルタイムで共有されたコンテキストに根ざさせるインテリジェンス層。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "冒頭", "retrievedAt": "2026-11-12T07:15:00Z" }] } },
+        { "termKey": "github-copilot-harness", "term": "GitHub Copilot ハーネス", "type": "feature", "oneLine": { "text": "Work IQ を動かすランタイム。Copilot クレジットによる使用量ベースの課金を使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-11-12T07:15:00Z" }] } },
+        { "termKey": "workload", "term": "ワークロード", "type": "term", "oneLine": { "text": "Work IQ が参照する製品サービスの単位（SharePoint、OneDrive、Outlook メール、Teams、カレンダー、People）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントのワークロードを選択します", "retrievedAt": "2026-11-12T07:15:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "Work IQ の使用量ベース課金で消費される単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "Note", "retrievedAt": "2026-11-12T07:15:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "一般に提供が始まった段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "プレビューのワークロードも使えますか？",
+          "answer": { "text": "Work IQ は一般提供ですが、「ビジネス アプリ（プレビュー）」などは個別にプレビューです。エージェント設定で「プレビュー ワークロードを有効にする」をオンにすると表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "プレビュー ワークロードを有効にする", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+        },
+        {
+          "question": "サイトやメールボックス単位で絞れますか？",
+          "answer": { "text": "いいえ。選択はワークロード全体に限られ、個々のサイトやメールボックスは選べません。組織の権限とポリシーは引き続き適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "エージェントのワークロードを選択します", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+        },
+        {
+          "question": "管理センターでの許可・拒否は使えますか？",
+          "answer": { "text": "ツールや MCP サーバーを許可・拒否する機能は、地域によってまだ利用できない場合があります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locator": "ワークIQの主な特徴 Note", "retrievedAt": "2026-11-12T07:15:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/add-work-iq",
+        "learn": [
+          { "title": "Copilot Studio（GitHub Copilot）での Work IQ", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/add-work-iq", "locale": "ja-jp" },
+          { "title": "Work IQ のテナントを有効にする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/enable-work-iq", "locale": "ja-jp" },
+          { "title": "使用率に基づく請求の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
