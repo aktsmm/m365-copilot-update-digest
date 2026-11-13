@@ -29,7 +29,9 @@ export function featureTerms(event) {
 export function documentationProduct(event) {
   const title = event.titleEn || event.title;
   const prefix = title.includes(":") ? title.slice(0, title.indexOf(":")).trim() : "";
-  if (/^Microsoft Copilot \((?:Microsoft )?(?:M365|365)\)$/i.test(prefix)) return "Microsoft 365 Copilot";
+  if (/^Microsoft Copilot \((?:Microsoft )?(?:M365|365)\)$/i.test(prefix)) {
+    return /:\s*Viva Engage\b/i.test(title) ? "Microsoft Viva Engage" : "Microsoft 365 Copilot";
+  }
   return /^(Microsoft|Dynamics 365|Power Apps|Power Automate|Work IQ|Copilot Studio|Outlook|Word|Excel|PowerPoint|OneNote|SharePoint|Planner|Visio)\b/i.test(prefix)
     ? prefix : event.productArea || "";
 }
@@ -45,6 +47,7 @@ export function matchesProduct(event, document) {
   const path = new URL(document.url).pathname.replace(/^\/[a-z]{2}-[a-z]{2}(?=\/)/i, "");
   const allowed = /purview/i.test(product) ? /^\/purview\//
     : /copilot studio/i.test(product) ? /^\/microsoft-copilot-studio\//
+    : /viva engage/i.test(product) ? /^\/viva\/engage\//
     : /microsoft 365 copilot/i.test(product) ? /^\/(?:microsoft-365(?:-[a-z]+)?|microsoftsearch|copilot)\//
     : /microsoft teams/i.test(product) ? /^\/microsoftteams\//
     : /power apps/i.test(product) ? /^\/(?:power-apps|power-platform|microsoft-365(?:-copilot)?|microsoft-copilot-studio)\//
