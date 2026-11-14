@@ -807,6 +807,10 @@ function knownJapaneseRoadmapTitle(event) {
     return "組織プロンプトの公開をユーザーやグループに委任";
   }
 
+  if (/microsoft copilot \(microsoft 365\): microsoft 365 copilot search supports sharepoint online custom properties search/.test(text)) {
+    return "Microsoft 365 Copilot Search で SharePoint Online のカスタム プロパティ検索に対応";
+  }
+
   if (/microsoft copilot \(microsoft 365\): \[copilot extensibility\] users can create agents scoped on custom connector containers/.test(text)) {
     return "カスタム コネクタのコンテナーを対象としたエージェントを作成";
   }
