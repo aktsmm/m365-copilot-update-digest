@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-cda78661af99e017",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot 検索で SharePoint のカスタム プロパティから人を検索可能に",
+        "subtitleJa": "社内独自のプロファイル項目で、同僚を見つけやすくなります",
+        "en": "Microsoft Copilot (Microsoft 365): Microsoft 365 Copilot Search Supports SharePoint Online Custom Properties Search"
+      },
+      "meta": {
+        "publishedJst": "2026-11-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "sharepoint"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot 検索で同僚を探すユーザー**と、SharePoint のユーザー プロファイルを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "会社独自のプロファイル プロパティを手がかりに、人を見つけられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必須の対応はなし。開発中のため、提供開始を待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot 検索で、**SharePoint Online のカスタム プロファイル プロパティ**に基づいて人を検索・発見できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot 検索が SharePoint Online のカスタム プロパティ検索に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Web、Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot 検索は Microsoft Copilot アプリの検索モジュールとして提供される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage/copilot-search-overview", "locator": "Copilot 検索と Microsoft Copilot のしくみ", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot 検索の利用には対象の Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage/copilot-search-overview", "locator": "アクセスと適格性", "retrievedAt": "2026-11-14T06:30:00Z" }] },
+            { "text": "SharePoint のカスタム プロパティは Microsoft Entra ID に同期されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/add-and-edit-user-profile-properties", "locator": "冒頭", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プロパティは SharePoint 管理センターの「ユーザー プロパティの管理」で追加・編集する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/add-and-edit-user-profile-properties", "locator": "ユーザー プロファイルのプロパティを追加する", "retrievedAt": "2026-11-14T06:30:00Z" }] },
+            { "text": "「インデックス付き」を選ぶと、その値の検索で一致するプロファイルが返る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/add-and-edit-user-profile-properties", "locator": "検索設定", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-search", "term": "Microsoft Copilot 検索", "type": "feature", "oneLine": { "text": "組織向けに最適化された、AI 搭載のユニバーサル検索エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage/copilot-search-overview", "locator": "冒頭", "retrievedAt": "2026-11-14T06:30:00Z" }] } },
+        { "termKey": "custom-profile-property", "term": "カスタム プロファイル プロパティ", "type": "term", "oneLine": { "text": "音声言語や緊急連絡先など、SharePoint で独自に作成できるユーザー プロパティ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/add-and-edit-user-profile-properties", "locator": "冒頭", "retrievedAt": "2026-11-14T06:30:00Z" }] } },
+        { "termKey": "indexed", "term": "インデックス付き", "type": "term", "oneLine": { "text": "プロパティ値の検索で、一致するユーザー プロファイルを返す設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/add-and-edit-user-profile-properties", "locator": "検索設定", "retrievedAt": "2026-11-14T06:30:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot 検索の利用に追加費用は必要ですか？",
+          "answer": { "text": "対象の Microsoft Copilot ライセンスを持つユーザーは、追加料金なしで利用できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage/copilot-search-overview", "locator": "アクセスと適格性", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+        },
+        {
+          "question": "カスタム プロパティは Entra ID の情報と同期されますか？",
+          "answer": { "text": "されません。SharePoint のユーザー プロパティは Microsoft Entra ID に同期されません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sharepoint/add-and-edit-user-profile-properties", "locator": "冒頭", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=508526",
+        "learn": [
+          { "title": "Microsoft Copilot 検索", "url": "https://learn.microsoft.com/ja-jp/copilot/manage/copilot-search-overview", "locale": "ja-jp" },
+          { "title": "SharePoint でユーザー プロファイルのプロパティを追加および編集する", "url": "https://learn.microsoft.com/ja-jp/sharepoint/add-and-edit-user-profile-properties", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
