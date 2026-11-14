@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1ce9bc2b8f606680",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Sales エージェントで、推奨されたリードと営業案件のアクションを実行（開発中）",
+        "subtitleJa": "優先順位付け済みの推奨を、1 つの一覧から確認して実行できます",
+        "en": "Microsoft Copilot (Microsoft 365): Discover and act on recommended lead and opportunity actions in Sales agent"
+      },
+      "meta": {
+        "publishedJst": "2026-11-14",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Sales エージェントを使う営業担当者（セラー）**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "優先順位付け済みの推奨を 1 つの一覧で確認でき、エージェントごとに見張る必要がなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "リードと営業案件の**推奨アクションが優先順位付きの 1 つの一覧**に集まり、各アクションを確認して実行できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Sales エージェントで、リードと営業案件の推奨アクションを確認・実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "優先順位付け済みの一覧のため、セラー自身で優先順位を付けなくてよい", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エージェントごとに個別に監視する必要がない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Web、Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に知っておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Sales エージェントは、CRM のデータや過去のメール・Teams 会議から情報を取得する会話型エージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "セールス エージェントは何に役立ちますか?", "retrievedAt": "2026-11-14T06:30:00Z" }] },
+            { "text": "CRM のクエリはセキュリティ アクセス レベルに従い、権限のないデータは提供されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "セールス エージェントは何に役立ちますか?", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-agent", "term": "Sales エージェント", "type": "product", "oneLine": { "text": "Microsoft Copilot 内で使える、営業向けの会話型エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "概要", "retrievedAt": "2026-11-14T06:30:00Z" }] } },
+        { "termKey": "crm", "term": "CRM", "type": "term", "oneLine": { "text": "顧客や営業案件の情報を管理する販売管理システム。Sales エージェントはこれに接続して使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "概要", "retrievedAt": "2026-11-14T06:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Sales エージェントは何ができるエージェントですか？",
+          "answer": { "text": "自然言語で、接続された CRM のデータや過去のメール、Teams 会議・メッセージからインサイトを取得できる会話型エージェントです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "セールス エージェントは何に役立ちますか?", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+        },
+        {
+          "question": "Sales エージェントの導入では管理者の準備が必要ですか？",
+          "answer": { "text": "Sales エージェントは、販売データと対話できるよう管理者が構成します。今回の更新で変わるかは、ロードマップでは示されていません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locator": "作業の開始", "retrievedAt": "2026-11-14T06:30:00Z" }] }
+        },
+        {
+          "question": "提供時期はいつですか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=579977",
+        "learn": [
+          { "title": "Microsoft 365 Copilot の販売エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-sales-copilot/sales-chat-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
