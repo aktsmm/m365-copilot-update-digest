@@ -78,6 +78,99 @@ export function matchesProduct(event, document) {
   return true;
 }
 
+/** Roadmap の ID（例: 573349）。イベントの URL（?id=...）から取る。 */
+export function roadmapId(event) {
+  for (const value of [event.publicationUrl, event.url]) {
+    const id = String(value || "").match(/[?&]id=(\d{4,})\b/)?.[1];
+    if (id) return id;
+  }
+  return "";
+}
+
+/** Learn の「What's new」「リリース プラン」のように、機能を Roadmap ID 付きの表で一覧しているページか。 */
+export function listsRoadmapId(text, id) {
+  return Boolean(id) && new RegExp(`roadmap\\?id=${id}\\b`, "i").test(String(text || ""));
+}
+
+/**
+ * 製品名・タイトル・要約で検索しても、リリース ノート形式のページ（Business Central の update 29.0 など）は
+ * 機能語の一致率が低くて落ちる。そこで機能名と Roadmap ID だけで検索し、ページがその ID を一覧していれば採用する。
+ * 検索（search）と本文取得（fetchArticle）は差し替えられる（テスト用）。
+ */
+export async function findByRoadmapId(event, { search, fetchArticle, maxFetches = 2 }) {
+  const id = roadmapId(event);
+  if (!id) return [];
+  const title = event.titleEn || event.title;
+  const feature = title.includes(":") ? title.slice(title.indexOf(":") + 1).trim() : title;
+  const results = await search(`${feature} ${id}`);
+  const seen = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
+  let fetches = 0;
+  for (const result of results) {
+    const url = documentUrl(result.contentUrl);
+    if (!url || new URL(url).hostname !== "learn.microsoft.com" ||
+      isSupplementaryDocument({ ...result, url }) ||
+      seen.has(urlKey(url)) || !matchesProduct(event, { ...result, url })) {
+      continue;
+    }
+    seen.add(urlKey(url));
+    let listed = listsRoadmapId(result.content, id);
+    if (!listed && fetches < maxFetches) {
+      fetches += 1;
+      listed = listsRoadmapId(await fetchArticle(url), id);
+    }
+    if (listed) {
+      return [{
+        title: result.title,
+        sourceTitle: result.title,
+        url,
+        provenance: "mcp",
+        evidenceUrl: event.publicationUrl || event.url,
+        evidence: `Microsoft Learn の「${result.title}」の機能一覧に、この更新の Roadmap ID（${id}）が掲載されていることを MCP の検索・本文取得で確認`,
+      }];
+    }
+  }
+  return [];
+}
+
+const plainTitle = (value) => String(value || "").toLowerCase().replace(/[*_`"'\u2018\u2019\u201c\u201d()[\]]/g, " ").replace(/\s+/g, " ").trim();
+
+/** タイトルの「製品名:」より後ろ（機能名）。末尾の [Windows, Mac] のような提供先の注記は除く。 */
+export function featureTitle(event) {
+  const title = event.titleEn || event.title || "";
+  const feature = title.includes(":") ? title.slice(title.indexOf(":") + 1) : title;
+  return feature.replace(/\s*\[[^\]]*\]\s*$/, "").trim();
+}
+
+/**
+ * 機能名がそのまま書かれた Learn のページ（Microsoft 365 Copilot の release notes など）を採用する。
+ * 製品別のパス制限は外すので、誤採用を避けるため、機能名が長く具体的な（25 文字以上・4 語以上）ときだけ使う。
+ */
+export async function findByExactTitle(event, { search }) {
+  const title = featureTitle(event);
+  if (title.length < 25 || title.split(/\s+/).filter(Boolean).length < 4) return [];
+  const needle = plainTitle(title);
+  const seen = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
+  for (const result of await search(`"${title}"`)) {
+    const url = documentUrl(result.contentUrl);
+    if (!url || new URL(url).hostname !== "learn.microsoft.com" ||
+      isSupplementaryDocument({ ...result, url }) || seen.has(urlKey(url))) {
+      continue;
+    }
+    seen.add(urlKey(url));
+    if (plainTitle(result.content).includes(needle)) {
+      return [{
+        title: result.title,
+        sourceTitle: result.title,
+        url,
+        provenance: "mcp",
+        evidenceUrl: event.publicationUrl || event.url,
+        evidence: `Microsoft Learn の「${result.title}」に、この更新と同じ機能名「${title}」の記載があることを MCP の検索で確認`,
+      }];
+    }
+  }
+  return [];
+}
+
 export function matchesFeature(terms, text, { rejectUnsupported = true } = {}) {
   const normalized = text.toLowerCase();
   return terms.length >= 2 &&
@@ -164,6 +257,25 @@ export async function createLearnLookup() {
             });
             break;
           }
+        }
+        if (!documents.length) {
+          const tools = {
+            search: async (query) => {
+              const found = JSON.parse(resultText(await client.callTool({ name: "microsoft_docs_search", arguments: { query } })));
+              if (!Array.isArray(found.results)) throw new Error("Learn MCP search response has no results array");
+              return found.results;
+            },
+            fetchArticle: async (url) => {
+              const key = urlKey(url);
+              if (!articles.has(key)) {
+                articles.set(key, resultText(await client.callTool({ name: "microsoft_docs_fetch", arguments: { url } })));
+              }
+              return articles.get(key);
+            },
+          };
+          // 製品・タイトル・要約の検索で見つからなかった更新は、リリース ノート形式のページを 2 つの確実な手がかりで探す
+          const byId = await findByRoadmapId(event, tools);
+          return byId.length ? byId : findByExactTitle(event, tools);
         }
         return documents;
       },

@@ -91,9 +91,11 @@ npm test
 
 この通常補完は公開・認証不要の `https://learn.microsoft.com/api/mcp` に接続するため、GitHub の Copilot cloud agent 用 MCP 設定やブラウザーサインインを待ちません。初期化後にツール一覧を取得し、検索と本文取得のみを使います。製品・プラットフォーム・機能語を保守的に照合し、別の製品、特定ベンダー向けの手順、原文そのものの重複は採用しません。自動で照合できない資料は、根拠を記録した個別確認で補います。
 
+**依頼された候補は必ず調べ直されます。** 自動化 Issue が調査を依頼した候補（最大 6 件）と別の候補をエージェントが調べて PR を出しても、`validate-generated-pr.yml` の「Resolve the document candidates requested by the automation issue」が、PR に紐づく Issue の候補一覧と `config/related-documents.json` を照合し、未調査の依頼分を Learn MCP で調べてブランチへ反映します（`scripts/resolve-requested-candidates.mjs`）。
+
 M365 / Copilot Studio の主資料は **Microsoft Learn MCP で確認する対象製品の Microsoft 公式ドキュメント**です。GitHub Copilot は調査を実行するエージェントであって、GitHub の製品資料を M365 の主資料にするという意味ではありません。GitHub 連携など更新との関係が確認できる場合は、`docs.github.com` の公式資料も根拠付きの補足として採用できます。表示は Microsoft の主資料を先に並べます。GitHub 資料しかない項目は、Microsoft 主資料の MCP 調査候補として残します。
 
-一覧型の release notes / what's new / Roadmap ページ全体から、別の更新の資料を拾うことはしません。Tech Community の公開ページデータも記事 ID を照合し、該当記事の本文だけを使います。原文と同じ文書、重複、非公式ホスト、不正な URL は除外します。資料が見つからない場合は関連資料欄を省略し、原文・日次リンクは維持します。資料の存在は、その機能の GA やすべての環境での提供を保証するものではありません。
+一覧型の release notes / what's new / Roadmap ページは、**その更新自体が載っていると確認できたときだけ**資料にします。確認できる手がかりは 2 つです。(1) ページがその更新の Roadmap ID（`roadmap?id=…`）を一覧している（Business Central の update 29.0 など）、(2) 25 文字以上・4 語以上の具体的な機能名が、そのままページに書かれている（Microsoft 365 Copilot の release notes など）。製品名・タイトル・要約の検索で見つからないときの 2 段目の探索で、どちらも機能名と ID だけで再検索し、別の更新の資料を拾うことはしません（`scripts/lib/learn-mcp.mjs` の `findByRoadmapId` / `findByExactTitle`）。Tech Community の公開ページデータも記事 ID を照合し、該当記事の本文だけを使います。原文と同じ文書、重複、非公式ホスト、不正な URL は除外します。資料が見つからない場合は関連資料欄を省略し、原文・日次リンクは維持します。資料の存在は、その機能の GA やすべての環境での提供を保証するものではありません。
 
 **関連ドキュメントは日本語版を優先**します。`ja-jp` 版を実際に取得して文書の本文・見出しを確認し、英語へリダイレクトされただけの場合は日本語版ありと扱いません。日本語版が確認できないときは元の確認済み文書を残します。既存の英語資料も補完バッチの対象となり、日本語確認後は `localePreference: "ja-jp"` を記録して繰り返し照会を防ぎます。原文リンクそのものは元ソースの URL を維持します。
 
