@@ -1,4 +1,4 @@
-import { pendingDocumentEvents } from "./related-documents.mjs";
+import { matchingRecord, pendingDocumentEvents } from "./related-documents.mjs";
 
 /** 自動化 Issue の本文（```json の候補一覧）から、調査を依頼された更新を取り出す。 */
 export function parseRequestedCandidates(body) {
@@ -27,4 +27,27 @@ export function unresolvedCandidates(requested, events, cache, now = new Date().
   return pendingDocumentEvents(events, cache, Math.max(events.length, 1), now)
     .filter((item) => wanted.has(item.id))
     .map((item) => item.id);
+}
+
+/**
+ * 依頼された更新の調査が終わっていない理由ごとの一覧。どれか 1 つでもあれば「未完了」。
+ * - unresolved: まだ調査していない
+ * - errored: 調査したが Learn MCP のエラーで終わった（再試行待ち）
+ * - missing: 依頼された更新が、いまのイベントデータに無い（調べようがない）
+ */
+export function incompleteCandidates(requested, events, cache, now = new Date().toISOString()) {
+  const byId = new Map(events.map((event) => [event.id, event]));
+  const errored = requested
+    .map((item) => byId.get(item.id))
+    .filter(Boolean)
+    .filter((event) => {
+      const record = matchingRecord(event, cache);
+      return Boolean(record) && (record.status === "error" || record.mcpStatus === "error");
+    })
+    .map((event) => event.id);
+  return {
+    unresolved: unresolvedCandidates(requested, events, cache, now),
+    errored,
+    missing: requested.filter((item) => !byId.has(item.id)).map((item) => item.id),
+  };
 }

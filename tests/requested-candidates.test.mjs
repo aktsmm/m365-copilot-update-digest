@@ -42,3 +42,18 @@ test("a requested update stays unresolved until the cache records it; other cand
   const goodCache = { a: verifiedRecord(a), b: notFound(b) };
   assert.deepEqual(unresolvedCandidates(requested, [a, b, other], goodCache, now), []);
 });
+
+import { incompleteCandidates } from "../scripts/lib/requested-candidates.mjs";
+
+test("incompleteCandidates reports unresolved, errored and missing requested updates", () => {
+  const a = event("a", "2026-10-01T00:00:00Z");
+  const b = event("b", "2026-10-02T00:00:00Z");
+  const c = event("c", "2026-10-03T00:00:00Z");
+  const now = "2026-11-15T12:00:00.000Z";
+  const errored = { ...verifiedRecord(b), status: "error", mcpStatus: "error", mcpRetryAfter: "2026-11-16T00:00:00.000Z", error: "Learn MCP: HTTP 503" };
+  const cache = { b: errored, c: verifiedRecord(c) };
+  const result = incompleteCandidates([{ id: "a" }, { id: "b" }, { id: "c" }, { id: "gone" }], [a, b, c], cache, now);
+  assert.deepEqual(result, { unresolved: ["a"], errored: ["b"], missing: ["gone"] });
+  const complete = incompleteCandidates([{ id: "c" }], [a, b, c], cache, now);
+  assert.deepEqual(complete, { unresolved: [], errored: [], missing: [] });
+});
