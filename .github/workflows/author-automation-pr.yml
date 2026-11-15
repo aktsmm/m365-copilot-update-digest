@@ -214,8 +214,17 @@ jobs:
             });
             const existing = issues.find((issue) => issue.title === title && !issue.pull_request);
 
+            // Copilot が担当に付いて作業中の Issue は、本文（調査候補の一覧）を上書きしない。
+            // 収集のたびに一覧を差し替えると、エージェントが依頼どおりに調べた PR と Issue の本文が食い違い、
+            // 「別の候補を調べている」ように見えてしまう（Issue #1446 / PR #1447）。作業が終わって閉じたあとの収集で、新しい Issue が作られる。
+            const copilotWorking = Boolean(existing) &&
+              (existing.assignees || []).some((assignee) => copilotLogins.has(assignee.login));
+
             let issueNumber;
-            if (existing) {
+            if (existing && copilotWorking) {
+              core.info(`Issue #${existing.number} is assigned to Copilot; keeping its original request so the pull request matches it.`);
+              issueNumber = existing.number;
+            } else if (existing) {
               await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
