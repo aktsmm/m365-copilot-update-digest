@@ -101,3 +101,36 @@ test("when the ID-anchored query finds nothing, the feature-name query is tried 
   assert.match(queries[1], /Diagnose AL MCP server activity with file logging 573349$/);
   assert.equal(documents.length, 1);
 });
+
+test("a later chunk of a page whose first chunk did not match is still considered (roadmap id)", async () => {
+  const first = { ...whatsNew, contentUrl: `${whatsNew.contentUrl}#overview`, content: "Intro text without the id" };
+  const later = { ...whatsNew, contentUrl: `${whatsNew.contentUrl}#new-and-updated-features`, content: row };
+  const documents = await findByRoadmapId(event, {
+    search: async () => [first, later],
+    fetchArticle: async () => assert.fail("the later chunk already lists the id; no download is needed"),
+  });
+  assert.equal(documents.length, 1);
+  assert.match(documents[0].url, /#new-and-updated-features$/);
+});
+
+test("the full article is downloaded once per page even when several chunks of it are returned", async () => {
+  const chunks = [1, 2, 3].map((n) => ({ ...whatsNew, contentUrl: `${whatsNew.contentUrl}#part-${n}`, content: "no id here" }));
+  let fetches = 0;
+  const documents = await findByRoadmapId(event, { search: async () => chunks, fetchArticle: async () => { fetches += 1; return row; }, maxFetches: 2 });
+  assert.equal(fetches, 1);
+  assert.equal(documents.length, 1);
+});
+
+test("a later chunk of a page whose first chunk lacked the feature name is still considered (exact title)", async () => {
+  const { findByExactTitle } = await import("../scripts/lib/learn-mcp.mjs");
+  const queues = { titleEn: "Microsoft Teams: Use Copilot Chat after a call in Queues app", url: "https://www.microsoft.com/microsoft-365/roadmap?id=568933" };
+  const base = "https://learn.microsoft.com/microsoft-365/copilot/release-notes";
+  const found = await findByExactTitle(queues, {
+    search: async () => [
+      { title: "Microsoft 365 Copilot release notes", contentUrl: `${base}#october-20,-2026`, content: "Other features only" },
+      { title: "Microsoft 365 Copilot release notes", contentUrl: `${base}#october-27,-2026`, content: "**Use Copilot Chat after a call in Queues app** [Windows, Mac]" },
+    ],
+  });
+  assert.equal(found.length, 1);
+  assert.match(found[0].url, /#october-27,-2026$/);
+});

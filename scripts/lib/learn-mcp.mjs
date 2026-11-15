@@ -104,32 +104,38 @@ export async function findByRoadmapId(event, { search, fetchArticle, maxFetches 
   const title = event.titleEn || event.title;
   const feature = title.includes(":") ? title.slice(title.indexOf(":") + 1).trim() : title;
   const queries = [`Roadmap ID ${id} what's new release ${documentationProduct(event)}`.trim(), `${feature} ${id}`];
-  const seen = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
+  const source = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
+  const checked = new Set();
   let fetches = 0;
+  const adopt = (result, url) => [{
+    title: result.title,
+    sourceTitle: result.title,
+    url,
+    provenance: "mcp",
+    evidenceUrl: event.publicationUrl || event.url,
+    evidence: `Microsoft Learn の「${result.title}」の機能一覧に、この更新の Roadmap ID（${id}）が掲載されていることを MCP の検索・本文取得で確認`,
+  }];
   for (const query of queries) {
+    const eligible = [];
     for (const result of await search(query)) {
       const url = documentUrl(result.contentUrl);
       if (!url || new URL(url).hostname !== "learn.microsoft.com" ||
         isSupplementaryDocument({ ...result, url }) ||
-        seen.has(urlKey(url)) || !matchesProduct(event, { ...result, url })) {
+        source.has(urlKey(url)) || !matchesProduct(event, { ...result, url })) {
         continue;
       }
-      seen.add(urlKey(url));
-      let listed = listsRoadmapId(result.content, id);
-      if (!listed && fetches < maxFetches) {
-        fetches += 1;
-        listed = listsRoadmapId(await fetchArticle(url), id);
-      }
-      if (listed) {
-        return [{
-          title: result.title,
-          sourceTitle: result.title,
-          url,
-          provenance: "mcp",
-          evidenceUrl: event.publicationUrl || event.url,
-          evidence: `Microsoft Learn の「${result.title}」の機能一覧に、この更新の Roadmap ID（${id}）が掲載されていることを MCP の検索・本文取得で確認`,
-        }];
-      }
+      eligible.push({ result, url });
+    }
+    // 検索は同じページを断片（チャンク）ごとに返す。先頭の断片に無くても、後ろの断片に ID があれば採用する
+    const hit = eligible.find(({ result }) => listsRoadmapId(result.content, id));
+    if (hit) return adopt(hit.result, hit.url);
+    // どの断片にも無いときは、ページごとに 1 回だけ本文全体を確認する（上限つき）
+    for (const { result, url } of eligible) {
+      const key = urlKey(url);
+      if (checked.has(key) || fetches >= maxFetches) continue;
+      checked.add(key);
+      fetches += 1;
+      if (listsRoadmapId(await fetchArticle(url), id)) return adopt(result, url);
     }
   }
   return [];
@@ -152,14 +158,14 @@ export async function findByExactTitle(event, { search }) {
   const title = featureTitle(event);
   if (title.length < 25 || title.split(/\s+/).filter(Boolean).length < 4) return [];
   const needle = plainTitle(title);
-  const seen = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
+  const source = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
+  // 同じページの断片が複数返るので、先頭の断片に機能名が無くても後ろの断片を見る
   for (const result of await search(`"${title}"`)) {
     const url = documentUrl(result.contentUrl);
     if (!url || new URL(url).hostname !== "learn.microsoft.com" ||
-      isSupplementaryDocument({ ...result, url }) || seen.has(urlKey(url))) {
+      isSupplementaryDocument({ ...result, url }) || source.has(urlKey(url))) {
       continue;
     }
-    seen.add(urlKey(url));
     if (plainTitle(result.content).includes(needle)) {
       return [{
         title: result.title,
