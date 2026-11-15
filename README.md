@@ -91,6 +91,8 @@ npm test
 
 この通常補完は公開・認証不要の `https://learn.microsoft.com/api/mcp` に接続するため、GitHub の Copilot cloud agent 用 MCP 設定やブラウザーサインインを待ちません。初期化後にツール一覧を取得し、検索と本文取得のみを使います。製品・プラットフォーム・機能語を保守的に照合し、別の製品、特定ベンダー向けの手順、原文そのものの重複は採用しません。自動で照合できない資料は、根拠を記録した個別確認で補います。
 
+**依頼の一覧は、担当エージェントの作業中に書き換わりません。** `author-automation-pr.yml` は収集のたびに自動化 Issue を更新しますが、Copilot が担当に付いた Issue の本文（調査候補の一覧）は上書きしません。作業中に一覧が差し替わると、依頼どおりに調べた PR が「別の候補を調べている」ように見えるためです。作業が終わって Issue が閉じたあとの収集で、新しい一覧の Issue が作られます。
+
 **依頼された候補は必ず調べ直されます。** 自動化 Issue が調査を依頼した候補（最大 6 件）と別の候補をエージェントが調べて PR を出しても、`validate-generated-pr.yml` の「Resolve the document candidates requested by the automation issue」が、PR に紐づく Issue の候補一覧と `config/related-documents.json` を照合し、未調査の依頼分を Learn MCP で調べてブランチへ反映します（`scripts/resolve-requested-candidates.mjs`）。
 
 M365 / Copilot Studio の主資料は **Microsoft Learn MCP で確認する対象製品の Microsoft 公式ドキュメント**です。GitHub Copilot は調査を実行するエージェントであって、GitHub の製品資料を M365 の主資料にするという意味ではありません。GitHub 連携など更新との関係が確認できる場合は、`docs.github.com` の公式資料も根拠付きの補足として採用できます。表示は Microsoft の主資料を先に並べます。GitHub 資料しかない項目は、Microsoft 主資料の MCP 調査候補として残します。

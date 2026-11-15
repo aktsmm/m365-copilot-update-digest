@@ -95,38 +95,41 @@ export function listsRoadmapId(text, id) {
 /**
  * 製品名・タイトル・要約で検索しても、リリース ノート形式のページ（Business Central の update 29.0 など）は
  * 機能語の一致率が低くて落ちる。そこで機能名と Roadmap ID だけで検索し、ページがその ID を一覧していれば採用する。
- * 検索（search）と本文取得（fetchArticle）は差し替えられる（テスト用）。
+ * 検索クエリは 2 通り試す。(1) ID を主役にしたクエリ（機能名が長いと、話題の近いトレーニング資料が上位を占めて
+ * リリース ノートが出ないため）、(2) 機能名＋ID。検索（search）と本文取得（fetchArticle）は差し替えられる（テスト用）。
  */
 export async function findByRoadmapId(event, { search, fetchArticle, maxFetches = 2 }) {
   const id = roadmapId(event);
   if (!id) return [];
   const title = event.titleEn || event.title;
   const feature = title.includes(":") ? title.slice(title.indexOf(":") + 1).trim() : title;
-  const results = await search(`${feature} ${id}`);
+  const queries = [`Roadmap ID ${id} what's new release ${documentationProduct(event)}`.trim(), `${feature} ${id}`];
   const seen = new Set([event.url, event.publicationUrl].filter(Boolean).map(urlKey));
   let fetches = 0;
-  for (const result of results) {
-    const url = documentUrl(result.contentUrl);
-    if (!url || new URL(url).hostname !== "learn.microsoft.com" ||
-      isSupplementaryDocument({ ...result, url }) ||
-      seen.has(urlKey(url)) || !matchesProduct(event, { ...result, url })) {
-      continue;
-    }
-    seen.add(urlKey(url));
-    let listed = listsRoadmapId(result.content, id);
-    if (!listed && fetches < maxFetches) {
-      fetches += 1;
-      listed = listsRoadmapId(await fetchArticle(url), id);
-    }
-    if (listed) {
-      return [{
-        title: result.title,
-        sourceTitle: result.title,
-        url,
-        provenance: "mcp",
-        evidenceUrl: event.publicationUrl || event.url,
-        evidence: `Microsoft Learn の「${result.title}」の機能一覧に、この更新の Roadmap ID（${id}）が掲載されていることを MCP の検索・本文取得で確認`,
-      }];
+  for (const query of queries) {
+    for (const result of await search(query)) {
+      const url = documentUrl(result.contentUrl);
+      if (!url || new URL(url).hostname !== "learn.microsoft.com" ||
+        isSupplementaryDocument({ ...result, url }) ||
+        seen.has(urlKey(url)) || !matchesProduct(event, { ...result, url })) {
+        continue;
+      }
+      seen.add(urlKey(url));
+      let listed = listsRoadmapId(result.content, id);
+      if (!listed && fetches < maxFetches) {
+        fetches += 1;
+        listed = listsRoadmapId(await fetchArticle(url), id);
+      }
+      if (listed) {
+        return [{
+          title: result.title,
+          sourceTitle: result.title,
+          url,
+          provenance: "mcp",
+          evidenceUrl: event.publicationUrl || event.url,
+          evidence: `Microsoft Learn の「${result.title}」の機能一覧に、この更新の Roadmap ID（${id}）が掲載されていることを MCP の検索・本文取得で確認`,
+        }];
+      }
     }
   }
   return [];

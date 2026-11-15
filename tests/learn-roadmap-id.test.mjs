@@ -26,7 +26,7 @@ test("a release-notes page that lists the roadmap id is adopted, using the full 
   const fetched = [];
   const documents = await findByRoadmapId(event, {
     search: async (query) => {
-      assert.match(query, /Diagnose AL MCP server activity with file logging 573349/);
+      assert.match(query, /^Roadmap ID 573349 what's new release Dynamics 365 Business Central$/);
       return [whatsNew];
     },
     fetchArticle: async (url) => { fetched.push(url); return `# Update 29.0\n${row}`; },
@@ -88,4 +88,16 @@ test("findByExactTitle ignores short or generic feature names and pages without 
   const other = { title: "Queues app on Teams phones", contentUrl: "https://learn.microsoft.com/microsoftteams/phones/queues-app", content: "Queues app is a Microsoft Teams native solution" };
   const event = { titleEn: "Microsoft Teams: Use Copilot Chat after a call in Queues app", url: "https://x" };
   assert.deepEqual(await findByExactTitle(event, { search: async () => [other] }), []);
+});
+
+test("when the ID-anchored query finds nothing, the feature-name query is tried second", async () => {
+  const queries = [];
+  const documents = await findByRoadmapId(event, {
+    search: async (query) => { queries.push(query); return queries.length === 1 ? [] : [{ ...whatsNew, content: row }]; },
+    fetchArticle: async () => assert.fail("the chunk already lists the id"),
+  });
+  assert.equal(queries.length, 2);
+  assert.match(queries[0], /^Roadmap ID 573349/);
+  assert.match(queries[1], /Diagnose AL MCP server activity with file logging 573349$/);
+  assert.equal(documents.length, 1);
 });
