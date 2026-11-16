@@ -173,6 +173,66 @@ jobs:
               core.info(`Normalized ${normalizedCount} generated PR(s).`);
             }
 
+      - name: Release transient human-review holds
+        uses: actions/github-script@v8
+        with:
+          script: |
+            // 自動マージは、PR 本文に出所マーカー（Generated from data/events/….json）が無いと needs-human-review を付けて止める。
+            // しかし Copilot が作業中に本文を書き換えて一時的にマーカーが無くなることがあり、整形（上の手順）が戻したあとも、
+            // ラベルが残って自動マージされない（PR #1457）。理由が「マーカー欠落」だけで、今はマーカーがあるときに限り、ラベルを外して自動マージを起動する。
+            const bodyPattern = /^Generated from `?data\/events\/\d{4}-\d{2}-\d{2}\.json`?/m;
+            const missingMarker = /Auto-merge stopped: PR #\d+ body is missing the source marker\./;
+            const stopped = /Auto-merge stopped:/;
+
+            const pulls = await github.paginate(github.rest.pulls.list, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+
+            let released = 0;
+            for (const pr of pulls) {
+              const labels = new Set((pr.labels || []).map((label) => label.name));
+              if (!labels.has('needs-human-review') || !(labels.has('auto-pr') || /copilot/i.test(pr.user?.login || ''))) continue;
+              if (!bodyPattern.test(pr.body || '')) continue;
+
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                per_page: 100,
+              });
+              const reasons = comments.filter((comment) => stopped.test(comment.body || ''));
+              // 理由が「マーカー欠落」だけのときだけ解除する。他の理由（許可外ファイル・題名の不一致）や、人が付けたラベルは触らない
+              if (reasons.length === 0 || !reasons.every((comment) => missingMarker.test(comment.body || ''))) continue;
+              // 人が付けた可能性を除く: ラベルを付けたのが github-actions[bot] のときだけ
+              const events = await github.paginate(github.rest.issues.listEvents, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                per_page: 100,
+              });
+              const labeledBy = events.filter((event) => event.event === 'labeled' && event.label?.name === 'needs-human-review');
+              if (labeledBy.length === 0 || !labeledBy.every((event) => event.actor?.login === 'github-actions[bot]')) continue;
+
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                name: 'needs-human-review',
+              });
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: '<!-- generated-pr-hold-released -->\nThe source marker is back in the PR body, so the temporary human-review hold was released and auto-merge will continue.',
+              });
+              released += 1;
+              core.info(`Released the temporary human-review hold on PR #${pr.number}.`);
+            }
+            core.info(released === 0 ? 'No transient human-review holds to release.' : `Released ${released} hold(s).`);
+
       - name: Close stale no-op generated PRs
         uses: actions/github-script@v8
         with:
