@@ -38,3 +38,13 @@ test("the stuck-PR merge judges only the latest check per name, so an old cancel
   // the raw list must no longer be filtered directly
   assert.doesNotMatch(merge, /const relevantChecks = checks\.filter/);
 });
+
+test("releasing a hold also dispatches the auto-merge workflow for that PR, which accepts a pr_number input", () => {
+  const reconcile = fs.readFileSync(".github/workflows/reconcile-generated-prs.yml", "utf8");
+  const autoMerge = fs.readFileSync(".github/workflows/auto-merge-generated-pr.yml", "utf8");
+  const releaseStep = reconcile.slice(reconcile.indexOf("- name: Release transient human-review holds"), reconcile.indexOf("- name: Close stale no-op generated PRs"));
+  assert.match(releaseStep, /createWorkflowDispatch\(\{[\s\S]*workflow_id: 'auto-merge-generated-pr\.yml'[\s\S]*inputs: \{ pr_number: String\(pr\.number\) \}/);
+  assert.match(autoMerge, /workflow_dispatch:\s+inputs:\s+pr_number:/);
+  assert.match(autoMerge, /if: github\.event_name == 'workflow_dispatch' \|\| github\.event\.workflow_run\.conclusion == 'success'/);
+  assert.match(autoMerge, /INPUT_PR_NUMBER: \$\{\{ inputs\.pr_number \}\}/);
+});
