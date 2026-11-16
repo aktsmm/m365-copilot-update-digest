@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generatedAt": "2026-11-16T06:26:39.518Z",
+  "generatedAt": "2026-11-16T06:33:17.168Z",
   "events": [
     {
       "id": "m365-copilot-release-notes-4daf931b60e8e803",
@@ -618,6 +618,16 @@
       "summaryJa": "Microsoft 365 管理センターに新しい専用のライセンス リクエスト ページを導入し、管理者がユーザーから送信された Microsoft 365 Copilot ライセンス リクエストをより簡単に検出、確認、管理できるようにします。",
       "summaryEn": "We are introducing a new dedicated License Requests page in the Microsoft 365 Admin Center to help admins more easily discover, review, and manage Microsoft 365 Copilot license requests submitted by users.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 管理センターの概要",
+          "sourceTitle": "Overview of the Microsoft 365 admin center",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/admin-overview/admin-center-overview#admin-center-features-and-settings",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: dedicat, license, request, page, admin, center"
+        }
+      ],
       "publishedAt": "2026-09-23T12:00:00.000Z",
       "capturedAt": "2026-09-24T21:30:25.825Z",
       "sourceLastSeen": "2026-09-24T21:30:25.825Z",
@@ -633,17 +643,7 @@
         "管理者向け"
       ],
       "importanceScore": 98,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / ライセンス設計や展開判断に直結するため",
-      "relatedDocuments": [
-        {
-          "title": "Microsoft 365 管理センターの概要",
-          "sourceTitle": "Overview of the Microsoft 365 admin center",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/admin-overview/admin-center-overview#admin-center-features-and-settings",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: dedicat, license, request, page, admin, center"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / ライセンス設計や展開判断に直結するため"
     },
     {
       "id": "m365-copilot-release-notes-bf7c901323230899",
@@ -1126,6 +1126,16 @@
       "summaryJa": "Copilot を利用できるようにトピック割り当てパイプラインをアップグレードし、アンケートのコメントを関連トピックに分類する精度が大幅に向上しました。",
       "summaryEn": "We're upgrading our topic assignment pipeline to be powered by Copilot, delivering significantly improved accuracy in categorizing survey comments into relevant topics.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-09-23",
+      "relatedDocuments": [
+        {
+          "title": "Viva Glint のコメント レポートを使用する",
+          "sourceTitle": "Use Viva Glint's Comments report",
+          "url": "https://learn.microsoft.com/ja-jp/viva/glint/reports/comments-report#how-viva-glint-assigns-topics-to-comments",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP で検索・本文取得し、Viva Glint コメント レポートの本文に、組織設定に応じて Copilot で強化されたトピック割り当てを使う場合があると記載されていることを確認。更新の Copilot によるアンケート コメントのトピック分類と対応する。日本語版の本文と到達性も確認。"
+        }
+      ],
       "publishedAt": "2026-09-23T12:00:00.000Z",
       "capturedAt": "2026-09-24T21:30:25.825Z",
       "sourceLastSeen": "2026-09-24T21:30:25.825Z",
