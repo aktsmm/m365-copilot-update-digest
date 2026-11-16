@@ -230,6 +230,14 @@ jobs:
               });
               released += 1;
               core.info(`Released the temporary human-review hold on PR #${pr.number}.`);
+              // ラベルを外しただけでは、自動マージの手順（ドラフト解除・自動マージの有効化）は動かない。この PR の分を起動する
+              await github.rest.actions.createWorkflowDispatch({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                workflow_id: 'auto-merge-generated-pr.yml',
+                ref: context.payload.repository?.default_branch || 'main',
+                inputs: { pr_number: String(pr.number) },
+              });
             }
             core.info(released === 0 ? 'No transient human-review holds to release.' : `Released ${released} hold(s).`);
 
