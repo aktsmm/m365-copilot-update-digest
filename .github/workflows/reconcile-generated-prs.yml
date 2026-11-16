@@ -651,7 +651,17 @@ jobs:
                 per_page: 20,
               });
               const hasGeneratedPrValidationRun = validateRuns.some((run) => run.conclusion === 'success');
-              const relevantChecks = checks.filter((check) =>
+              // 同じ名前の検査が複数あるとき（同じ PR で opened / edited が続けて起き、古い実行が concurrency で cancelled になった場合）は、
+              // 最新の結果だけを見る。古い cancelled が残っているだけでマージが止まらないようにする（PR #1457）。
+              const latestByName = new Map();
+              for (const check of checks) {
+                const key = `${check.app?.slug || ''}/${check.name}`;
+                const previous = latestByName.get(key);
+                const time = Date.parse(check.started_at || check.completed_at || 0) || 0;
+                const previousTime = previous ? Date.parse(previous.started_at || previous.completed_at || 0) || 0 : -1;
+                if (!previous || time > previousTime || (time === previousTime && check.id > previous.id)) latestByName.set(key, check);
+              }
+              const relevantChecks = [...latestByName.values()].filter((check) =>
                 ['Validate generated PR', 'Request Copilot review', 'GitGuardian Security Checks'].includes(check.name) ||
                 check.app?.slug === 'github-actions',
               );

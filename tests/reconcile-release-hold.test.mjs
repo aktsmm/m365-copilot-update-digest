@@ -27,3 +27,14 @@ test("the stop message produced by auto-merge is the one the reconciler looks fo
   assert.match(autoMerge, /body is missing the source marker\./);
   assert.match(step, /Auto-merge stopped: PR #\\d\+ body is missing the source marker\\\./);
 });
+
+test("the stuck-PR merge judges only the latest check per name, so an old cancelled run does not block it", () => {
+  const merge = fs.readFileSync(".github/workflows/reconcile-generated-prs.yml", "utf8");
+  const i = merge.indexOf("const latestByName = new Map()");
+  assert.ok(i > 0, "latestByName must exist");
+  const block = merge.slice(i, i + 900);
+  assert.match(block, /latestByName\.set\(key, check\)/);
+  assert.match(merge, /const relevantChecks = \[\.\.\.latestByName\.values\(\)\]\.filter/);
+  // the raw list must no longer be filtered directly
+  assert.doesNotMatch(merge, /const relevantChecks = checks\.filter/);
+});
