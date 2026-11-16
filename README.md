@@ -91,6 +91,8 @@ npm test
 
 この通常補完は公開・認証不要の `https://learn.microsoft.com/api/mcp` に接続するため、GitHub の Copilot cloud agent 用 MCP 設定やブラウザーサインインを待ちません。初期化後にツール一覧を取得し、検索と本文取得のみを使います。製品・プラットフォーム・機能語を保守的に照合し、別の製品、特定ベンダー向けの手順、原文そのものの重複は採用しません。自動で照合できない資料は、根拠を記録した個別確認で補います。
 
+**本文の書き換え中に付いた一時的な保留は、自動で外れます。** Copilot が作業中に PR 本文を書き換え、出所マーカー（`Generated from data/events/….json`）が一時的に無くなると、自動マージが `needs-human-review` を付けて止めます。整形がマーカーを戻したあともラベルが残り、永久にマージされませんでした（PR #1457）。`reconcile-generated-prs.yml` の「Release transient human-review holds」が、止めた理由が「マーカー欠落」だけで、ラベルを付けたのが `github-actions[bot]` のときに限り、ラベルを外して自動マージを続けます。許可外ファイルや題名の不一致で止めたもの、人が付けたラベルは外しません。
+
 **依頼の一覧は、担当エージェントの作業中に書き換わりません。** `author-automation-pr.yml` は収集のたびに自動化 Issue を更新しますが、Copilot が担当に付いた Issue の本文（調査候補の一覧）は上書きしません。作業中に一覧が差し替わると、依頼どおりに調べた PR が「別の候補を調べている」ように見えるためです。作業が終わって Issue が閉じたあとの収集で、新しい一覧の Issue が作られます。
 
 **依頼された候補は必ず調べ直されます。** 自動化 Issue が調査を依頼した候補（最大 6 件）と別の候補をエージェントが調べて PR を出しても、`validate-generated-pr.yml` の「Resolve the document candidates requested by the automation issue」が、PR に紐づく Issue の候補一覧と `config/related-documents.json` を照合し、未調査の依頼分を Learn MCP で調べてブランチへ反映します（`scripts/resolve-requested-candidates.mjs`）。調べ直しても完了しない場合は、検証を**成功にせず失敗**させ、自動マージしません。対象は、依頼された更新が Learn MCP のエラーで終わった、イベントデータに無い、紐づく Issue を読めない、Copilot の PR が Issue に紐づいていない、のいずれかです（終了コード 1）。
