@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-06a04e905e8fe6b4",
+      "kind": "in-development",
+      "kindSource": "manual",
+      "label": "開発中",
+      "title": {
+        "ja": "Dynamics 365 Sales：すべての営業 AI をまとめる「エージェント型ホーム」",
+        "subtitleJa": "ダッシュボードの代わりに、Sales agent が営業担当者の最初の画面になります",
+        "en": "Dynamics 365 Sales: An agentic home for all sales AI"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Dynamics 365 Sales"],
+        "categories": ["dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Dynamics 365 Sales",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Sales の営業担当者**と、管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対応が必要な事項と顧客対応の準備を 1 か所で把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。提供開始に備え、AI エージェントの前提条件を確認しておくとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Dynamics 365 Sales を開くと、従来のダッシュボードではなく、営業 AI を集約した Sales agent に着地します", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Sales agent が、すべての営業 AI の入口となるエージェント型ホームになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "構造化されたワークフローで、エージェントの推奨と顧客対応の準備を統合", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide (Standard Multi-Tenant) の Web 版", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中。提供時期は公開されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存の組み込み営業エージェントの利用には、Copilot Studio 容量などの前提条件がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/prerequisites-for-all-agents", "locator": "前提条件の確認", "retrievedAt": "2026-11-17T21:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Power Platform 管理センターで AI エージェントと AI プロンプトの設定を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/prerequisites-for-all-agents", "locator": "前提条件の確認 手順 5・7", "retrievedAt": "2026-11-17T21:20:00Z" }] },
+            { "text": "Sales Enterprise などのライセンスには Sales agent の基本機能が含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/dynamics365/sales/buy-dynamics-365-sales", "locator": "Note", "retrievedAt": "2026-11-17T21:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sales-agent", "term": "Sales agent", "type": "product", "oneLine": { "text": "営業チームの生産性を高める AI アシスタントで、CRM の洞察を Outlook や Teams に届ける。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/microsoft-sales-copilot/introduction", "locator": "冒頭", "retrievedAt": "2026-11-17T21:20:00Z" }] } },
+        { "termKey": "d365-sales", "term": "Dynamics 365 Sales", "type": "product", "oneLine": { "text": "顧客との関係構築、リードから受注までの進行、販売資料の作成などを支援する営業アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/overview", "locator": "冒頭", "retrievedAt": "2026-11-17T21:20:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップ上で、まだ提供が始まっていない開発段階のこと。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップは開発中で、提供月は示されていません。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "追加のライセンスは必要ですか？",
+          "answer": { "text": "Sales Enterprise などには Sales agent の基本機能が含まれ、プレミアム機能には Microsoft Copilot ライセンスが必要です。本機能の条件は未公開です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/dynamics365/sales/buy-dynamics-365-sales", "locator": "Note", "retrievedAt": "2026-11-17T21:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=579978",
+        "learn": [
+          { "title": "Dynamics 365 Sales へようこそ", "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/overview", "locale": "ja-jp" },
+          { "title": "すべての販売エージェントに適用できる前提条件", "url": "https://learn.microsoft.com/ja-jp/dynamics365/sales/prerequisites-for-all-agents", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
