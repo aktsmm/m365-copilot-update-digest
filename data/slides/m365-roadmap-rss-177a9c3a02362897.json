@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-177a9c3a02362897",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Copilot Studio のワークフローにエージェント ノードが提供開始",
+        "subtitleJa": "ワークフローの 1 ステップから、エージェントに推論やツール呼び出しを任せられます",
+        "en": "Microsoft Copilot Studio: Invoke agents as workflow steps with the agent node"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Copilot Studio", "Microsoft Copilot (Microsoft 365)", "Microsoft Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でエージェント フローを作成する人**（作成者）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "判断が必要な処理を 1 ステップに組み込め、手作業の引き継ぎを減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "必須の対応はなく、フロー デザイナーで「エージェントの実行」を追加すれば使える",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "エージェント ノードを追加する", "retrievedAt": "2026-11-17T08:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "フローの中でエージェントが**推論し、ツールを呼び出し、結果を返す**ところまでを 1 ステップで実行できます",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "エージェントが推論・ツール呼び出し・知識源の参照を行い結果を返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "冒頭", "retrievedAt": "2026-11-17T08:00:00Z" }] },
+            { "text": "前の手順の動的コンテンツを含む自然言語の指示を渡せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "既存のエージェントにメッセージを送信する", "retrievedAt": "2026-11-17T08:00:00Z" }] },
+            { "text": "応答は動的コンテンツとなり、後続の手順や条件分岐で使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "エージェントの応答をエージェントフローに活用してください", "retrievedAt": "2026-11-17T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "デザイナーで「新しいアクションの挿入」→「AI 機能」→「エージェントの実行」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "エージェント ノードを追加する", "retrievedAt": "2026-11-17T08:00:00Z" }] },
+            { "text": "発行済みの既存エージェントを選ぶか、新規に作成して発行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "エージェント ノードの既存のエージェントを選択する", "retrievedAt": "2026-11-17T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "インライン エージェントはそのワークフロー内でのみ使え、再利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-17T08:00:00Z" }] },
+            { "text": "「人間の支援を要求」を有効にすると、接続所有者へメールで入力を依頼する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "不明な場合は、人的支援を依頼する", "retrievedAt": "2026-11-17T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "プロンプト ノードとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント ノードは全ツール・全ナレッジ ソースを使え、人によるレビューも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "エージェント ノードを使用する必要があるタイミングと、プロンプト ノードを使用する必要があるタイミング", "retrievedAt": "2026-11-17T08:00:00Z" }] },
+            { "text": "プロンプト ノードは 1 ターンで終わる単純なタスク向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "エージェント ノードを使用する必要があるタイミングと、プロンプト ノードを使用する必要があるタイミング", "retrievedAt": "2026-11-17T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用シナリオ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "受信したサポート チケットの優先度付けと返信の下書き作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "受信したサポートチケットの優先順位を決定する", "retrievedAt": "2026-11-17T08:00:00Z" }] },
+            { "text": "ポリシーに沿った経費報告書の確認と、承認または人のレビューへの振り分け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "ポリシーに沿って経費報告書を確認する", "retrievedAt": "2026-11-17T08:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-node", "term": "エージェント ノード", "type": "feature", "oneLine": { "text": "フローの処理をエージェントに渡し、推論やツール呼び出しの結果を返させるステップ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "冒頭", "retrievedAt": "2026-11-17T08:00:00Z" }] } },
+        { "termKey": "agent-flow", "term": "エージェント フロー", "type": "feature", "oneLine": { "text": "Copilot Studio で作成する、エージェントを組み込める自動化ワークフロー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "エージェント ノードを追加する", "retrievedAt": "2026-11-17T08:00:00Z" }] } },
+        { "termKey": "inline-agent", "term": "インライン エージェント", "type": "term", "oneLine": { "text": "特定のワークフロー専用で、指示・ツール・知識がそのワークフローと共に動くエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-17T08:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "インライン エージェントと既存のエージェントはどう使い分けますか？",
+          "answer": {
+            "text": "ジョブが 1 つのワークフロー固有ならインライン エージェント、複数のワークフローや Teams などで共有するか別チームが所有するなら既存のエージェントを使います。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-17T08:00:00Z" }]
+          }
+        },
+        {
+          "question": "エージェントが判断できないときはどうなりますか？",
+          "answer": {
+            "text": "「人間の支援を要求」を有効にしておくと、エージェントは接続所有者にメールで入力要求を送り、人が判断できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locator": "不明な場合は、人的支援を依頼する", "retrievedAt": "2026-11-17T08:00:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=562222",
+        "learn": [
+          { "title": "エージェント フローにエージェント ノードを追加する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-node-workflow", "locale": "ja-jp" }
+        ]
+      }
+    }
+  ]
+}
