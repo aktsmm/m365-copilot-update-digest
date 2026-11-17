@@ -839,6 +839,10 @@ function knownJapaneseRoadmapTitle(event) {
     return "Work IQ: レシピを実行";
   }
 
+  if (/work iq: dynamic skills/.test(text)) {
+    return "Work IQ: 動的スキル";
+  }
+
   if (/microsoft copilot studio: supercharge your workflows with computer use/.test(text)) {
     return "Microsoft Copilot Studio: コンピューターの使用でワークフローを強化します";
   }
@@ -905,6 +909,10 @@ function knownJapaneseRoadmapTitle(event) {
 
   if (/word: legal plugins in copilot/.test(text)) {
     return "Copilot の法務プラグイン";
+  }
+
+  if (/^word: legal plugin\b/.test(text)) {
+    return "Word: 法務プラグイン";
   }
 
   if (/microsoft 365 admin center:\s*usage reports?\s*[–—-]\s*microsoft 365 copilot connectors/.test(text)) {
@@ -1818,6 +1826,10 @@ function roadmapProductArea(title, categories, source) {
 
   if (/^outlook:/.test(text)) {
     return "Outlook";
+  }
+
+  if (/^power apps:/.test(text)) {
+    return "Power Apps";
   }
 
   if (/^dynamics 365 field service:/.test(text)) {
