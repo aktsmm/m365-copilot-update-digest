@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9e5a7ae39609c236",
+      "kind": "in-development",
+      "kindSource": "manual",
+      "label": "開発中",
+      "title": {
+        "ja": "Power Apps: Copilot Cowork でモデル駆動型アプリを構築",
+        "subtitleJa": "自然言語の要件から、アプリの仕様とビルド計画を経てアプリを作成します",
+        "en": "Power Apps: Build model-driven apps with Copilot Cowork"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot", "Power Apps"],
+        "categories": ["agents", "dynamics"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**モデル駆動型アプリを作る担当者（作成者）**。業務部門の情報ワーカーも対象", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 説明" }] },
+        "change": { "text": "ビジネス シナリオを書くだけで、アプリの作成と改善を Copilot Cowork に任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 説明" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため対応は不要。提供開始に備え、Power Platform 環境と権限を確認しておくとよい", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Cowork の**モデル アプリ ビルダー スキル**で、自然言語の要件からモデル駆動型アプリを作成・改善できます", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 説明" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象と進め方",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "業務シナリオからアプリ仕様とビルド計画を作り、確認後にアプリを作成", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 説明" }] },
+            { "text": "モデル駆動型アプリと、それを支える Power Apps / Dataverse の成果物を作成", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 説明" }] },
+            { "text": "同名スキルでは、プランを承認するまでアプリ成果物は作成されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "モデル アプリ ビルダー スキルの動作のしくみ", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Web・Worldwide（Standard Multi-Tenant）。現在は開発中", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 項目" }] },
+            { "text": "共有前に、正確性・セキュリティ・アクセシビリティ・組織標準を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "モデル アプリ ビルダー スキルの動作のしくみ", "retrievedAt": "2026-11-18T00:00:00Z" }] },
+            { "text": "同名スキルは全ての成果物や概念には未対応。残りはデザイナーで編集", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "Power Apps でのカスタマイズと拡張の継続", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "AI コード生成ツール版では、Dataverse とアプリ成果物を作成・変更できる権限を持つ Power Platform 環境が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "Prerequisites", "retrievedAt": "2026-11-18T00:00:00Z" }] },
+            { "text": "要件は、業務プロセス・利用者・目的から書き始めると進めやすい", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "ベスト プラクティス", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "ロードマップでは、モデル アプリ ビルダー スキルを使ってアプリを作れる Copilot の機能として記載されている。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 説明" }] } },
+        { "termKey": "model-driven", "term": "モデル駆動型アプリ", "type": "term", "oneLine": { "text": "Dataverse のテーブル、フォーム、ビューなどで構成される Power Apps のアプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "コア機能", "retrievedAt": "2026-11-18T00:00:00Z" }] } },
+        { "termKey": "model-app-builder", "term": "モデル アプリ ビルダー スキル", "type": "feature", "oneLine": { "text": "自然言語の要件からモデル駆動型アプリを構築・編集するスキル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "冒頭", "retrievedAt": "2026-11-18T00:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ提供開始前の開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979", "locator": "Roadmap 項目" }] } }
+      ],
+      "qa": [
+        {
+          "question": "提供開始はいつですか？",
+          "answer": { "text": "ロードマップには提供月が示されていないため、時期は不明です。ロードマップの更新を確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579979" }] }
+        },
+        {
+          "question": "Copilot Cowork を使わず、今すぐ試せますか？",
+          "answer": { "text": "GitHub Copilot CLI や Claude Code などの AI コード生成ツールで、同名のモデル アプリ ビルダー スキルを使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locator": "冒頭・Prerequisites", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=579979",
+        "learn": [
+          { "title": "AI コード生成ツールを使用してモデル駆動型アプリを構築および編集する", "url": "https://learn.microsoft.com/ja-jp/power-apps/maker/model-driven-apps/model-driven-app-external-tools", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
