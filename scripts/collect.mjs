@@ -427,6 +427,25 @@ function shouldPreservePastLocalization(event, nowIso) {
   return eventDate < refreshWindowStart;
 }
 
+// The machine translator returns a different wording on every call, so re-translating
+// text that only differs by an excerpt cut would make the generated files oscillate forever.
+export function isSameSourceText(left, right) {
+  const strip = (value) =>
+    normalizeWhitespace(value)
+      .replace(/(?:\.{3}|…)$/, "")
+      .trim();
+  const a = strip(left);
+  const b = strip(right);
+  if (!a || !b) {
+    return false;
+  }
+  if (a === b) {
+    return true;
+  }
+  const [shorter, longer] = a.length <= b.length ? [a, b] : [b, a];
+  return shorter.length >= 40 && longer.includes(shorter);
+}
+
 function findExistingEvent(event, existingById, existingByLogicalKey) {
   return (
     existingById.get(event.id) ??
@@ -2629,7 +2648,7 @@ async function localizeJapaneseSummaries(
     const cached = summaryCache[event.id];
     if (
       cached &&
-      cached.summary === event.summaryEn &&
+      isSameSourceText(cached.summary, event.summaryEn) &&
       cached.summaryJa &&
       !shouldIgnoreCachedJapaneseSummary(source, cached.summaryJa)
     ) {
