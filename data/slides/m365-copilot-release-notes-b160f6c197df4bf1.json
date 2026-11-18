@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-b160f6c197df4bf1",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Teams の高速音声登録（Windows・Mac）",
+        "subtitleJa": "会議中の発話から音声プロファイルを作成し、音声分離や話者識別に活用できます",
+        "en": "Express voice enrollment in Microsoft Teams [Windows, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["copilot-chat", "teams"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Teams 会議の参加者**と、Teams を管理する管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "管理設定", "retrievedAt": "2026-11-18T09:30:00Z" }] },
+        "change": { "text": "手動で録音しなくても、会議中の発話から音声プロファイルを作れる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1", "retrievedAt": "2026-11-18T09:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用はユーザーのオプトイン制。管理者は既定でオンの設定を確認するとよい", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Teams の **[設定] > [認識]** でオプトインすると、会議中の発話から音声プロファイルが作成・更新されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "音声プロファイルは、話者識別・文字起こし・音声分離に使われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2", "retrievedAt": "2026-11-18T09:30:00Z" }] },
+            { "text": "プロファイルの生成には、通常、数回の会議が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1", "retrievedAt": "2026-11-18T09:30:00Z" }] },
+            { "text": "Teams Rooms の会議室では、話者属性と Microsoft Copilot の精度向上に寄与", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "概要", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "CsTeamsAIPolicy の PassiveVoiceEnrollment（既定は有効）で、ユーザーやグループ単位に制御", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2", "retrievedAt": "2026-11-18T09:30:00Z" }] },
+            { "text": "高速登録では通話の音声は保持されず、1 年間未使用のプロファイルは自動削除", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "データ保持", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "limits",
+          "heading": "注意点",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "音声と顔の登録は GCC まで対応で、GCCH と DOD では利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-18T09:30:00Z" }] },
+            { "text": "登録できる言語は Teams アプリの言語で決まる。登録解除はいつでも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "管理者は PassiveVoiceEnrollment の設定を確認し、利用方針を周知する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "express-enrollment", "term": "高速登録（express enrollment）", "type": "feature", "oneLine": { "text": "Teams 会議中の発話から音声プロファイルを自動で作成・更新する登録方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1", "retrievedAt": "2026-11-18T09:30:00Z" }] } },
+        { "termKey": "active-enrollment", "term": "アクティブ登録", "type": "feature", "oneLine": { "text": "認識設定で、ユーザーが音声や顔を手動で送信して登録する方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "概要", "retrievedAt": "2026-11-18T09:30:00Z" }] } },
+        { "termKey": "cs-teams-ai-policy", "term": "CsTeamsAIPolicy", "type": "term", "oneLine": { "text": "音声・顔の登録を PowerShell で管理する Teams のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2", "retrievedAt": "2026-11-18T09:30:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された更新情報であることを示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "管理者は高速音声登録を無効にできますか？",
+          "answer": { "text": "はい。CsTeamsAIPolicy の PassiveVoiceEnrollment を Disabled にすると、対象ユーザーは高速登録を使えません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 2", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+        },
+        {
+          "question": "ユーザーが登録した後に取り消せますか？",
+          "answer": { "text": "はい。管理者が登録を無効にした後でも、ユーザーは Teams デスクトップ アプリでプロファイルを削除できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "手順 1", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+        },
+        {
+          "question": "登録に失敗する場合の確認点は？",
+          "answer": { "text": "ネットワーク制限で *.speech.microsoft.com がブロックされていないか確認します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-18T09:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+        "learn": [
+          { "title": "音声と顔の登録の概要と構成", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
