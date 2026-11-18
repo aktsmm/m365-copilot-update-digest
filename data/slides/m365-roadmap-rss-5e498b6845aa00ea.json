@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-5e498b6845aa00ea",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "学習エージェントが Teams で AI・Copilot のスキルアップ通知を配信（開発中）",
+        "subtitleJa": "役割や Copilot の利用状況に合わせた学習のきっかけが、Teams に届きます",
+        "en": "Microsoft Copilot (Microsoft 365): AI and Copilot Upskilling Nudges in Microsoft Teams by Learning Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "teams"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot を使う従業員**と、学習エージェントを展開する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "役割・Copilot の習熟度・利用状況に合った学習の案内が、Teams 上で届く", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で対応は不要。学習エージェントの展開は管理センターで行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "For admins", "retrievedAt": "2026-11-17T21:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "学習エージェントが、役割や Copilot の利用状況に合わせた**スキルアップ通知を Teams に届け**、仕事の流れの中で学習機会を見つけられます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Teams で AI・Copilot のスキルアップ通知を能動的に配信", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "通知は役割・Copilot 習熟段階・利用パターンに合わせて調整", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "学習エージェントは Copilot 活用のヒントや課題の通知（ナッジ）を備える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Benefits", "retrievedAt": "2026-11-17T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期は未定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）、対象プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "学習エージェントは現在プレビューで、サポート言語は英語（en-US）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Supported languages / Agent setup", "retrievedAt": "2026-11-17T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Microsoft Copilot ライセンスが必要。Viva Suite / Premium は必須ではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Agent setup", "retrievedAt": "2026-11-17T21:30:00Z" }] },
+            { "text": "管理者は Microsoft 365 管理センターの「エージェント」ページから全員または特定グループに展開", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "For admins", "retrievedAt": "2026-11-17T21:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "learning-agent", "term": "学習エージェント（Learning agent）", "type": "feature", "oneLine": { "text": "役割やスキルに合わせた学習提案や学習パスを届ける、Microsoft の AI 搭載エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Introduction", "retrievedAt": "2026-11-17T21:30:00Z" }] } },
+        { "termKey": "nudge", "term": "ナッジ", "type": "term", "oneLine": { "text": "必要なトレーニングを見逃さないよう、利用者にそっと知らせる通知。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Benefits", "retrievedAt": "2026-11-17T21:30:00Z" }] } },
+        { "termKey": "frontier", "term": "Frontier プログラム", "type": "term", "oneLine": { "text": "AI の先進的な機能を先行して試せる Microsoft のプログラム。学習エージェントはこれを通じてプレビュー中。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Frontier Agent Setting", "retrievedAt": "2026-11-17T21:30:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "学習エージェントを使うにはどのライセンスが必要ですか？",
+          "answer": {
+            "text": "Microsoft Copilot ライセンスが必要です。Viva Learning Premium はカスタム アカデミーや課題などの高度な機能で使います。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Frequently asked questions", "retrievedAt": "2026-11-17T21:30:00Z" }]
+          }
+        },
+        {
+          "question": "学習エージェントは個人のファイルやチャットを読みますか？",
+          "answer": {
+            "text": "組織での役割や学習設定を使いますが、プライベート ファイルや Teams チャットにはアクセスしないと説明されています。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/viva/learning/learning-agent-overview-deployment-steps", "locator": "Frequently asked questions", "retrievedAt": "2026-11-17T21:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=579905",
+        "learn": [
+          { "title": "学習エージェント", "url": "https://learn.microsoft.com/ja-jp/viva/learning/learning-agent-overview-deployment-steps", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
