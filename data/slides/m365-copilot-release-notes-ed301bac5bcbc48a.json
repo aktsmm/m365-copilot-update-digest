@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-ed301bac5bcbc48a",
+      "kind": "update",
+      "label": "アップデート",
+      "title": {
+        "ja": "Outlook（Web）でカスタム エンジン エージェントを直接利用可能に",
+        "subtitleJa": "メール業務の自動化エージェントを、Outlook を離れずに実行できます",
+        "en": "Access custom engine agents directly in Outlook [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": "Update",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "outlook"],
+        "importance": "normal",
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Outlook（Web）でエージェントを使うユーザー**と、エージェントを作成する開発者", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "Access custom engine agents directly in Outlook [Web]", "retrievedAt": "2026-11-18T09:55:00Z" }] },
+        "change": { "text": "Outlook を離れずに、カスタム エンジン エージェントでメール関連の作業を自動化できる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "What changed", "retrievedAt": "2026-11-18T09:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うだけなら特別な対応は不要。Outlook のエージェント一覧から選んで実行する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "Try this", "retrievedAt": "2026-11-18T09:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "カスタム エンジン エージェントを**Outlook 内**で実行でき、メール関連のワークフローを別のツールに移らず自動化できます", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "What changed", "retrievedAt": "2026-11-18T09:55:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Outlook（Web）で、カスタム エンジン エージェントにアクセスできるようになった", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "見出し", "retrievedAt": "2026-11-18T09:55:00Z" }] },
+            { "text": "以前は、これらのエージェントの利用に別のツールやプラットフォームが必要だった", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "What changed", "retrievedAt": "2026-11-18T09:55:00Z" }] },
+            { "text": "Microsoft 365 の各アプリで一貫したエージェント体験を提供する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "What changed", "retrievedAt": "2026-11-18T09:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Outlook でエージェント ペインを開き、一覧から選んで実行する", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "Try this", "retrievedAt": "2026-11-18T09:55:00Z" }] },
+            { "text": "作成は Copilot Studio、Agents SDK、Teams SDK、Foundry などで行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントの開発アプローチ", "retrievedAt": "2026-11-18T09:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "custom-engine-agent", "term": "カスタム エンジン エージェント", "type": "feature", "oneLine": { "text": "オーケストレーション、AI モデル、データ統合を開発者が完全に制御できる、特定の業務向けの Copilot エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントとは", "retrievedAt": "2026-11-18T09:55:00Z" }] } },
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "term", "oneLine": { "text": "開発者が独自のオーケストレーションを持ち込まない、カスタム エンジン エージェントとは異なる種類のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントとは", "retrievedAt": "2026-11-18T09:55:00Z" }] } },
+        { "termKey": "agents-sdk", "term": "Microsoft 365 エージェント SDK", "type": "product", "oneLine": { "text": "Copilot、Teams、Web サイトなど複数チャネルで動くエージェントを構築するためのフレームワーク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "プロコード アプローチ", "retrievedAt": "2026-11-18T09:55:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された、機能の変更や改善の告知。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "このアップデートの対象は Outlook のどの環境ですか？",
+          "answer": { "text": "リリース ノートの見出しは「[Web]」で、Outlook（Web）向けです。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17", "locator": "見出し", "retrievedAt": "2026-11-18T09:55:00Z" }] }
+        },
+        {
+          "question": "カスタム エンジン エージェントはどのように作成しますか？",
+          "answer": { "text": "Copilot Studio でのローコード開発のほか、Microsoft 365 エージェント SDK、Teams SDK、Microsoft Foundry で作成できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locator": "カスタム エンジン エージェントの開発アプローチ", "retrievedAt": "2026-11-18T09:55:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+        "learn": [
+          { "title": "Microsoft 365 用カスタム エンジン エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/overview-custom-engine-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
