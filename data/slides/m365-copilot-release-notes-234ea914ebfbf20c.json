@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-234ea914ebfbf20c",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Outlook のメッセージ一覧の並べ替えを改善（Windows）",
+        "subtitleJa": "並べ替えの基準になっている値が、列として表示されます",
+        "en": "Sort improvements to the message list [Windows]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": "Update",
+        "products": ["Outlook"],
+        "categories": ["outlook"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Outlook（Web 版・Windows 版）でメール一覧を並べ替えて使う人**", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] },
+        "change": { "text": "並べ替えの基準の値（例: サイズ）が列で見え、フラグの期限でも並べ替えられる", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "管理者・利用者の設定作業は、リリースノートに記載されていない", "origin": "editorial", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "並べ替えの基準が「差出人・件名・受信日時」以外のとき、その値の**追加の列**が表示されます。**フラグの期限**での並べ替えにも対応します", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "変更の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Outlook の Web 版と Windows 版での並べ替え", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] },
+            { "text": "基準が差出人・件名・受信日時以外なら、その値（例: サイズ）の列を追加表示", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] },
+            { "text": "フラグの期限での並べ替えに対応", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "並べ替えの基準を切り替えたとき、一覧に列が増えることを案内しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sort-by", "term": "並べ替えの基準（Sort By）", "type": "feature", "oneLine": { "text": "メッセージ一覧を並べる際に使う項目で、差出人・件名・受信日時などから選ぶ。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] } },
+        { "termKey": "flag-due-date", "term": "フラグの期限", "type": "feature", "oneLine": { "text": "フラグを付けたメッセージに設定する期限で、今回から並べ替えの基準に使える。", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all", "locator": "November 17, 2026", "retrievedAt": "2026-11-18T08:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の改善を示す、リリースノート上の段階表記。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+        "learn": []
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
