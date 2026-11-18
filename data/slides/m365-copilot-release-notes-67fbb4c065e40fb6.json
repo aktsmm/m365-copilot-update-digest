@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-67fbb4c065e40fb6",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "Teams 通話の録音・文字起こし通知メッセージを管理者がカスタマイズ可能に",
+        "subtitleJa": "同意メッセージとプライバシー ポリシーの URL を、組織向けに変更できます",
+        "en": "Ability for IT admins to customize the user notification messages for recording and transcription in calls [Windows, Mac]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": "Update",
+        "products": ["Teams"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Teams の IT 管理者**と、録音・文字起こしを行う会議の参加者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "録音・文字起こし開始時の通知メッセージを、組織の方針に合わせた文面にできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-11-18T08:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使うには、Teams 管理センターの会議ポリシーで設定をオンにし、CSV を登録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "管理者が**同意メッセージとプライバシー ポリシーの URL** を変更でき、言語・シナリオごとに文面を設定できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "通知バナーの同意メッセージとプライバシー ポリシー URL をカスタマイズできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-11-18T08:10:00Z" }] },
+            { "text": "ポリシー割り当てユーザーが開く会議では、全参加者が開催者の設定に従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-11-18T08:10:00Z" }] },
+            { "text": "1:1 の通話ではカスタム メッセージはサポートされていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "設定と制限の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "会議ポリシーで設定をオンにし、CSV テンプレートに言語別で入力する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-11-18T08:10:00Z" }] },
+            { "text": "メッセージは 200 文字まで。未設定の言語・シナリオは既定メッセージを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "CSV テンプレートを入力する方法", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "clients",
+          "heading": "クライアントごとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Windows・macOS・Web で対応。iOS と Android は現在プレーン テキストのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-11-18T08:10:00Z" }] },
+            { "text": "通知バナーは HTML の a タグが使え、同意ダイアログはプレーン テキストのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず特定の会議ポリシーで試し、プレビューで表示を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "meeting-policy", "term": "会議ポリシー", "type": "term", "oneLine": { "text": "Teams 管理センターで、会議の機能をユーザーごとに制御する設定の単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "カスタマイズする方法", "retrievedAt": "2026-11-18T08:10:00Z" }] } },
+        { "termKey": "explicit-consent", "term": "明示的な同意", "type": "term", "oneLine": { "text": "記録や文字起こしへの同意を、参加者が示す必要がある会議の設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "概要", "retrievedAt": "2026-11-18T08:10:00Z" }] } },
+        { "termKey": "csv-template", "term": "CSV テンプレート", "type": "feature", "oneLine": { "text": "言語とシナリオごとのカスタム メッセージを入力して登録するファイル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "CSV テンプレートを入力する方法", "retrievedAt": "2026-11-18T08:10:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能の変更を示す、リリース ノート上の区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "iOS と Android でも使えますか？",
+          "answer": { "text": "現在はプレーン テキストのみ対応で、完全なカスタマイズは近日公開予定とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+        },
+        {
+          "question": "参加者側の設定は必要ですか？",
+          "answer": { "text": "不要です。全参加者は、開催者の会議ポリシーにあるカスタム メッセージ設定に従います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "Teams での動作", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+        },
+        {
+          "question": "CSV を編集するときの注意点は？",
+          "answer": { "text": "ヨーロッパ系などの言語設定では区切り記号が異なるため、Excel ではなくテキスト エディターで編集します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locator": "CSV テンプレートを入力する方法", "retrievedAt": "2026-11-18T08:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+        "learn": [
+          { "title": "記録と文字起こしのためのカスタム会議内通知", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/recording-transcription-custom-message", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
