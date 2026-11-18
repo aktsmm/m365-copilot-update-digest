@@ -73,6 +73,20 @@
         { "termKey": "on-canvas-edit", "term": "キャンバス上の編集", "type": "term", "oneLine": { "text": "チャットの返答ではなく、ページ上で直接 Copilot に内容を編集させること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Copilot Pages のページはどこに保存されますか？",
+          "answer": { "text": "2025 年 11 月以降に作成したページは OneDrive for Business に保存され、ユーザーの OneDrive の容量に含まれます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage?view=o365-worldwide", "locator": "重要な事実", "retrievedAt": "2026-11-18T16:10:00Z" }] }
+        },
+        {
+          "question": "管理者はページの作成を制限できますか？",
+          "answer": { "text": "はい。Copilot ページ/ノートブックの作成ポリシーを無効にすると、ページが作成されないようにできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage?view=o365-worldwide", "locator": "重要な事実", "retrievedAt": "2026-11-18T16:10:00Z" }] }
+        },
+        {
+          "question": "2025 年 11 月より前に作成したページの保存先は変わりますか？",
+          "answer": { "text": "以前のページは OneDrive for Business へ移行されず、ユーザー所有の SharePoint Embedded コンテナーに残ります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/loop/cpcn-storage?view=o365-worldwide", "locator": "従来のページとノートブック", "retrievedAt": "2026-11-18T16:10:00Z" }] }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=580449",
         "learn": [
