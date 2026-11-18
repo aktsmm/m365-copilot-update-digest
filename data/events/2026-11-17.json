@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generatedAt": "2026-11-18T07:27:33.740Z",
+  "generatedAt": "2026-11-18T07:43:04.232Z",
   "events": [
     {
       "id": "m365-roadmap-rss-177a9c3a02362897",
@@ -62,6 +62,20 @@
       "summaryJa": "この機能により、管理者は Confluence Cloud コネクタのインデックスの内容をより詳細に制御できるようになります。デフォルトでは、コネクタはすべてのブログとページにインデックスを付けます。管理者は特定のスペースを含めたり除外したりできるようになりました。高度なシナリオでは、Confluence クエリ言語 (CQL) 文字列を作成できます。",
       "summaryEn": "This feature gives admins more control over what the Confluence Cloud connector indexes. By default, the connector indexes all blogs and pages. Admins can now include or exclude specific spaces. For advanced scenarios, they can write a Confluence Query Language (CQL) string that...",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment#include-or-exclude-data",
+      "relatedDocuments": [
+        {
+          "title": "Deploy connectors in the Microsoft 365 admin center",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment"
+        },
+        {
+          "title": "Set up the Confluence Cloud service for connector ingestion",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-admin-setup",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment"
+        }
+      ],
       "publishedAt": "2026-11-17T12:00:00.000Z",
       "capturedAt": "2026-11-18T07:27:33.740Z",
       "sourceLastSeen": "2026-11-18T07:27:33.740Z",
@@ -79,21 +93,7 @@
         "作成者向け"
       ],
       "importanceScore": 128,
-      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
-      "relatedDocuments": [
-        {
-          "title": "Deploy connectors in the Microsoft 365 admin center",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment"
-        },
-        {
-          "title": "Set up the Confluence Cloud service for connector ingestion",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-admin-setup",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment"
-        }
-      ]
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため"
     },
     {
       "id": "m365-roadmap-rss-2c2b125dc847a06b",
@@ -208,6 +208,16 @@
       "summaryJa": "お客様は、Microsoft Copilot を Tableau に接続し、Copilot コネクタを介してダッシュボードと視覚化を探索および解釈できます。",
       "summaryEn": "Customers can connect Microsoft Copilot with Tableau to explore and interpret dashboards and visualizations through a Copilot connector.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "relatedDocuments": [
+        {
+          "title": "Tableau Cloud connector overview",
+          "sourceTitle": "Tableau Cloud connector overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: connect, tableau, data"
+        }
+      ],
       "publishedAt": "2026-11-17T12:00:00.000Z",
       "capturedAt": "2026-11-18T07:27:33.740Z",
       "sourceLastSeen": "2026-11-18T07:27:33.740Z",
@@ -223,17 +233,7 @@
         "作成者向け"
       ],
       "importanceScore": 92,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 導入状況の可視化や分析に関わるため",
-      "relatedDocuments": [
-        {
-          "title": "Tableau Cloud connector overview",
-          "sourceTitle": "Tableau Cloud connector overview",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview",
-          "provenance": "mcp",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: connect, tableau, data"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 導入状況の可視化や分析に関わるため"
     },
     {
       "id": "m365-copilot-release-notes-0387166406ce7314",
@@ -249,6 +249,20 @@
       "summaryJa": "Microsoft 365 Organizational Data Service に、組織が選択したカスタム組織属性を Microsoft 365 people Store と共有できるようにする新機能が導入されています。",
       "summaryEn": "We're introducing a new capability in Microsoft 365 Organizational Data Service that enables organizations to share selected custom organizational attributes with the Microsoft 365 people store.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications",
+      "relatedDocuments": [
+        {
+          "title": "People Skills の概要",
+          "url": "https://learn.microsoft.com/ja-jp/copilot/manage/people-skills-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications"
+        },
+        {
+          "title": "Microsoft Viva Insights の紹介",
+          "url": "https://learn.microsoft.com/ja-jp/viva/insights/introduction",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications"
+        }
+      ],
       "publishedAt": "2026-11-17T12:00:00.000Z",
       "capturedAt": "2026-11-18T07:27:33.740Z",
       "sourceLastSeen": "2026-11-18T07:27:33.740Z",
@@ -264,21 +278,7 @@
         "作成者向け"
       ],
       "importanceScore": 92,
-      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "People Skills の概要",
-          "url": "https://learn.microsoft.com/ja-jp/copilot/manage/people-skills-overview",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications"
-        },
-        {
-          "title": "Microsoft Viva Insights の紹介",
-          "url": "https://learn.microsoft.com/ja-jp/viva/insights/introduction",
-          "provenance": "article",
-          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications"
-        }
-      ]
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-copilot-release-notes-ed301bac5bcbc48a",
@@ -294,6 +294,16 @@
       "summaryJa": "ユーザーは Outlook 内のカスタム エンジン エージェントにアクセスして、タスクを自動化し、電子メール ワークフローを拡張できるようになりました。",
       "summaryEn": "Users can now access custom engine agents within Outlook to automate tasks and extend email workflows.",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "relatedDocuments": [
+        {
+          "title": "Microsoft 365 管理センターでエージェントを管理する",
+          "sourceTitle": "Prerequisites for managing agents in Microsoft 365",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/admin/manage-copilot-agents-integrated-apps",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: acces, custom, engine, agent, outlook"
+        }
+      ],
       "publishedAt": "2026-11-17T12:00:00.000Z",
       "capturedAt": "2026-11-18T07:27:33.740Z",
       "sourceLastSeen": "2026-11-18T07:27:33.740Z",
@@ -323,6 +333,15 @@
       "summaryJa": "高速音声登録により、Teams に音声を迅速かつ簡単に登録できます。プロファイルにより、音声分離、話者認識、会議室での識別、トランスクリプト、Microsoft 365 Copilot からの強化された会議の要約や洞察などの機能が有効になります。そうしないと...",
       "summaryEn": "Express voice enrollment makes registering your voice in Teams fast and easy. Your profile enables features like voice isolation, speaker recognition, identification in a meeting room, transcripts, and enhanced meeting recaps and insights from Microsoft 365 Copilot. If you don’t...",
       "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "relatedDocuments": [
+        {
+          "title": "音声と顔の登録の概要と構成",
+          "url": "https://learn.microsoft.com/ja-jp/microsoftteams/rooms/voice-and-face-recognition",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP で検索・本文取得し、Teams 会議から音声プロファイルを明示登録する手順と、そのプロファイルが Teams の音声・話者認識に使われることを確認"
+        }
+      ],
       "publishedAt": "2026-11-17T12:00:00.000Z",
       "capturedAt": "2026-11-18T07:27:33.740Z",
       "sourceLastSeen": "2026-11-18T07:27:33.740Z",
