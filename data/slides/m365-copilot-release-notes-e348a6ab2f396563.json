@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-e348a6ab2f396563",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Tableau のデータを Microsoft Copilot につなげて活用",
+        "subtitleJa": "Copilot コネクタ経由で、ダッシュボードやビジュアルを探して読み解けます",
+        "en": "Connect Tableau data to Copilot [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Tableau Cloud を使う組織の Microsoft Copilot ユーザー**と、コネクタを構成する管理者・エージェント作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Tableau Cloud のダッシュボードを Copilot で探し、要点を自然な言葉で尋ねられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "冒頭", "retrievedAt": "2026-11-18T09:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用するには管理者がコネクタを導入し、Tableau Cloud のシートをインデックスする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "冒頭", "retrievedAt": "2026-11-18T09:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Tableau Cloud のシート（ワークシート・ダッシュボード・ストーリー）を**Copilot で検索・要約**でき、Tableau と行き来する手間が減ります", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Why use the Tableau Cloud connector to index your data?", "retrievedAt": "2026-11-18T09:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "アップデートの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Tableau Cloud のシートを Copilot、Copilot Search、Microsoft Search で利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "冒頭", "retrievedAt": "2026-11-18T09:40:00Z" }] },
+            { "text": "セマンティック検索で、キーワードや文脈に合うコンテンツを取得", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Tableau Cloud connector capabilities and limitations", "retrievedAt": "2026-11-18T09:40:00Z" }] },
+            { "text": "Copilot Studio などで作る宣言型エージェントの知識ソースにも使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Build agents with the Tableau Cloud connector", "retrievedAt": "2026-11-18T09:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Tableau Cloud のみ対応で、Tableau Server は非対応。個人用スペースのシートは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Tableau Cloud connector capabilities and limitations", "retrievedAt": "2026-11-18T09:40:00Z" }] },
+            { "text": "Tableau Cloud のアクセス権を尊重し、権限のあるシートのみ表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Permissions model and access control", "retrievedAt": "2026-11-18T09:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "tableau-cloud-connector", "term": "Tableau Cloud コネクタ", "type": "feature", "oneLine": { "text": "Tableau Cloud のシートを Microsoft 365 に統合する Copilot コネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "冒頭", "retrievedAt": "2026-11-18T09:40:00Z" }] } },
+        { "termKey": "copilot-search", "term": "Copilot Search", "type": "feature", "oneLine": { "text": "コネクタでインデックスしたコンテンツを探せる Microsoft 365 の検索体験の一つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "冒頭", "retrievedAt": "2026-11-18T09:40:00Z" }] } },
+        { "termKey": "declarative-agent", "term": "宣言型エージェント", "type": "term", "oneLine": { "text": "コネクタを知識ソースとして、Copilot Studio などで作成できるエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Build agents with the Tableau Cloud connector", "retrievedAt": "2026-11-18T09:40:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能への更新や追加が公開された段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Tableau Server のデータも使えますか？",
+          "answer": { "text": "いいえ。Tableau Cloud のみ対応で、Tableau Server はサポートされません。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Tableau Cloud connector capabilities and limitations", "retrievedAt": "2026-11-18T09:40:00Z" }] }
+        },
+        {
+          "question": "Tableau のシートを見られるのは誰ですか？",
+          "answer": { "text": "対応する Tableau Cloud のシートへのアクセス権があるユーザーだけが、インデックス済みコンテンツを閲覧できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locator": "Permissions model and access control", "retrievedAt": "2026-11-18T09:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+        "learn": [{ "title": "Tableau Cloud connector overview", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
