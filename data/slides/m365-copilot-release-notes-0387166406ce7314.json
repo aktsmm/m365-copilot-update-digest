@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-0387166406ce7314",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "カスタム組織属性を Microsoft 365 の人物体験と共有できるように",
+        "subtitleJa": "選んだ組織属性を Microsoft 365 の people store へ共有できます",
+        "en": "Share custom organizational attributes with Microsoft 365 people experiences [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": "Update",
+        "products": [],
+        "categories": ["admin"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft 365 の管理者**と、組織データを取り込む作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "選んだカスタム組織属性を Microsoft 365 の people store と共有できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "共有する属性は管理者が選べる。利用するなら、インポート作成時に配布先を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "アプリケーションへのアクセス", "retrievedAt": "2026-11-18T08:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Organizational Data Service の**カスタム組織属性のうち選んだもの**を、Microsoft 365 の people store と共有できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "更新の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Organizational Data Service に、選んだカスタム属性を people store と共有する機能が加わる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "組織データは Microsoft 365 プロファイル、Microsoft Copilot、People Skills、Insights、Viva Glint などへ配布できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "冒頭", "retrievedAt": "2026-11-18T08:00:00Z" }] },
+            { "text": "インポート作成時に、組織データを受け取る Microsoft アプリを選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "アプリケーションへのアクセス", "retrievedAt": "2026-11-18T08:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "影響の確認",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Insights や Viva Glint では、配布するカスタム属性とアプリ固有属性を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "各アプリケーションの属性アクセス", "retrievedAt": "2026-11-18T08:00:00Z" }] },
+            { "text": "グローバル属性は、プロファイル カードや Copilot などで自動的に使用可能になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "各アプリケーションの属性アクセス", "retrievedAt": "2026-11-18T08:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "odsvc", "term": "Microsoft 365 Organizational Data Service", "type": "feature", "oneLine": { "text": "サポート対象の Microsoft サービス向けの、一元化された組織データ プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "冒頭", "retrievedAt": "2026-11-18T08:00:00Z" }] } },
+        { "termKey": "people-store", "term": "people store", "type": "term", "oneLine": { "text": "今回の更新で、選んだカスタム組織属性の共有先とされる Microsoft 365 の人物データの保管先。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "global-attr", "term": "グローバル属性", "type": "term", "oneLine": { "text": "プロファイル カードや Copilot などで自動的に使える、公開の組織属性。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "各アプリケーションの属性アクセス", "retrievedAt": "2026-11-18T08:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "提供開始やプレビューなどの段階に当てはまらない、機能変更の更新。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "共有する属性は管理者が選べますか？",
+          "answer": { "text": "はい。管理者は、アプリごとに配布するカスタム属性やアプリ固有属性を選べます。対象は Insights や Viva Glint などのサポート先です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "各アプリケーションの属性アクセス", "retrievedAt": "2026-11-18T08:00:00Z" }] }
+        },
+        {
+          "question": "組織データを配布しないと機能は使えませんか？",
+          "answer": { "text": "配布は必須ではありません。ただし配布すると、対応アプリの機能が強化されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locator": "冒頭の注", "retrievedAt": "2026-11-18T08:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications",
+        "learn": [{ "title": "Microsoft 365 Organizational Data Service を利用したアプリケーション", "url": "https://learn.microsoft.com/ja-jp/microsoft-365-apps/org-data-service/distribute/applications", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
