@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-fc8cceeb93c4387e",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "プレビュー",
+      "title": {
+        "ja": "Confluence Cloud コネクタでクエリフィルターの調整に対応（プレビュー）",
+        "subtitleJa": "インデックス対象を、スペース指定や CQL で細かく絞り込めます",
+        "en": "Support for refining query filters for the Confluence Cloud Copilot connector [Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-11-17",
+        "availability": [],
+        "status": "Preview",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "Confluence Cloud コネクタを運用する **Microsoft 365 管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Prerequisites", "retrievedAt": "2026-11-19T00:00:00Z" }] },
+        "change": { "text": "インデックス対象のスペースや更新日時を、管理者が細かく制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "取り込みを絞りたい場合に、コネクタの Custom setup で設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Customize settings (optional)", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "既定のすべてのブログとページだけでなく、**スペースの包含・除外**や CQL 文字列で取り込み対象を指定できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "既定ではコネクタはすべてのブログとページをインデックスする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] },
+            { "text": "特定のスペースをインデックス対象に含める、または除外できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] },
+            { "text": "高度な用途では CQL 文字列で同期するページの条件を指定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "設定にはテナントの Microsoft 365 管理者の権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Prerequisites", "retrievedAt": "2026-11-19T00:00:00Z" }] },
+            { "text": "クロール用サービス アカウントに、対象スペースとページの読み取り権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Prerequisites", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "CQL の例: lastModified >= \"2024/12/31\" で更新日時により絞り込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] },
+            { "text": "「Preview results」で、選択したプロパティと CQL 文字列のサンプル値を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "confluence-connector", "term": "Confluence Cloud コネクタ", "type": "feature", "oneLine": { "text": "Confluence の wiki ページやブログを Copilot や Microsoft Search に表示できるようにするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "冒頭", "retrievedAt": "2026-11-19T00:00:00Z" }] } },
+        { "termKey": "cql", "term": "CQL", "type": "term", "oneLine": { "text": "Confluence Query Language。同期するページの条件を指定するための検索言語。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] } },
+        { "termKey": "incremental-crawl", "term": "増分クロール", "type": "term", "oneLine": { "text": "新規および更新されたコンテンツを同期する処理。既定では 15 分ごとに実行される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Customize sync intervals", "retrievedAt": "2026-11-19T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "ロードマップ上で、正式提供の前に先行して公開されている段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "既定の動作は変わりますか？",
+          "answer": { "text": "既定ではすべてのブログとページがインデックスされます。スペースや CQL の指定は任意の調整です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+        },
+        {
+          "question": "フィルターの結果は事前に確認できますか？",
+          "answer": { "text": "「Preview results」で、選択したプロパティと CQL 文字列のサンプル値を確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locator": "Include or exclude data", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment#include-or-exclude-data",
+        "learn": [
+          { "title": "Deploy the Confluence Cloud connector in the Microsoft 365 admin center", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment", "locale": "en-us" },
+          { "title": "Set up the Confluence Cloud service for connector ingestion", "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-admin-setup", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
