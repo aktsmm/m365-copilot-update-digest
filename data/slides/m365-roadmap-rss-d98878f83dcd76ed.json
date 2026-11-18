@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d98878f83dcd76ed",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Workspaces が Work IQ による提案と共同作業を強化（開発中）",
+        "subtitleJa": "現在の取り組みに合うワークスペースを提案し、共同作業を支えます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Workspaces updates"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mobile", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Workspaces を使うチーム**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "関連するワークスペースの提案で素早く作業を始められ、共同作業の状況も把握しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現時点で必要な対応は公表されていない。開発中のため動向を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Work IQ が**現在の取り組みに合うワークスペースを提案**し、チームは共有ドキュメントで共同作業できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ が現在の取り組みに基づき、関連するワークスペースを提案", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ワークスペース内で、チームが共有ドキュメントを使って共同作業", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot が変更点や未解決の事項を示す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は「開発中」で、提供時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Worldwide（標準マルチテナント）。デスクトップ・モバイル・Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップを定期的に確認し、提供開始の案内を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-workspaces", "term": "Copilot Workspaces", "type": "feature", "oneLine": { "text": "チームが共有ドキュメントで共同作業し、Copilot が作業の流れを把握する場所。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "今回の更新で、現在の取り組みに合うワークスペースの提案を担う仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=579889"
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
