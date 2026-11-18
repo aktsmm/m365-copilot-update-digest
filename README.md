@@ -97,7 +97,7 @@ npm test
 
 **依頼された候補は必ず調べ直されます。** 自動化 Issue が調査を依頼した候補（最大 6 件）と別の候補をエージェントが調べて PR を出しても、`validate-generated-pr.yml` の「Resolve the document candidates requested by the automation issue」が、PR に紐づく Issue の候補一覧と `config/related-documents.json` を照合し、未調査の依頼分を Learn MCP で調べてブランチへ反映します（`scripts/resolve-requested-candidates.mjs`）。調べ直しても完了しない場合は、検証を**成功にせず失敗**させ、自動マージしません。対象は、依頼された更新が Learn MCP のエラーで終わった、イベントデータに無い、紐づく Issue を読めない、Copilot の PR が Issue に紐づいていない、のいずれかです（終了コード 1）。
 
-**自動再生成は 3 回までです。** `validate-generated-pr.yml` の「Auto-fix canonical generated outputs」は、PR ブランチと正規の生成物が食い違うと再生成してコミットし、再検証に回します。再生成のたびに内容が変わり続ける（機械翻訳の揺れなど）と無限に繰り返して失敗の通知が溢れるため、PR のベース以降の `chore: regenerate canonical digest outputs` が 3 件に達したら、それ以上プッシュせず「do not converge」で失敗して止めます（`tests/autofix-loop-cap.test.mjs`）。
+**自動再生成は 3 回までです。** `validate-generated-pr.yml` の「Auto-fix canonical generated outputs」は、PR ブランチと正規の生成物が食い違うと再生成してコミットし、再検証に回します。再生成のたびに内容が変わり続ける（機械翻訳の揺れなど）と無限に繰り返して失敗の通知が溢れるため、PR のベース以降の `chore: regenerate canonical digest outputs` が 3 件に達したら、それ以上プッシュせず「do not converge」で失敗して止めます(`tests/autofix-loop-cap.test.mjs`)。機械翻訳は呼ぶたびに訳文が変わるため、元文が抜粋の切り方や先頭文の有無だけで違う場合（`isSameSourceText`）は、キャッシュ済みの日本語訳を再利用して再翻訳しません。
 
 M365 / Copilot Studio の主資料は **Microsoft Learn MCP で確認する対象製品の Microsoft 公式ドキュメント**です。GitHub Copilot は調査を実行するエージェントであって、GitHub の製品資料を M365 の主資料にするという意味ではありません。GitHub 連携など更新との関係が確認できる場合は、`docs.github.com` の公式資料も根拠付きの補足として採用できます。表示は Microsoft の主資料を先に並べます。GitHub 資料しかない項目は、Microsoft 主資料の MCP 調査候補として残します。
 
