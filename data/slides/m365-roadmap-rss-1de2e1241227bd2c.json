@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-1de2e1241227bd2c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft 365 の Service Agent：専任のサービス担当エージェント（開発中）",
+        "subtitleJa": "社内ナレッジとエスカレーション ルールを設定して、数分で「採用」できます",
+        "en": "Microsoft Copilot (Microsoft 365): Service Agent in Microsoft 365 - your dedicated service specialist"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントを作成・採用する担当者**と、カスタマーサービスを運用するマネージャー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "社内ナレッジや対応ルールを設定した専任エージェントを、数分で受け入れられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はありません", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Service Agent を**社内ナレッジ・コミュニケーション ガイドライン・エスカレーション ルール**で数分で受け入れ、Microsoft 365 とネイティブに連携して 24 時間対応できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ナレッジ、コミュニケーション ガイドライン、エスカレーション ルールを設定して受け入れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "マネージャーが半自律または完全自律のモードを選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Microsoft 365 エコシステムとネイティブに接続し、24 時間サポート", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Worldwide（標準マルチテナント）、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "関連ページでは、Service Agent のパブリック プレビューは 2026 年 12 月 1 日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "機能の可用性", "retrievedAt": "2026-11-18T07:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前に確認しておくこと",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プレビューには Frontier プログラム登録と、Microsoft 365 Copilot または E7 のライセンスが 1 つ以上必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "ライセンス条項", "retrievedAt": "2026-11-18T07:40:00Z" }] },
+            { "text": "エージェントの責任者は従量課金（Copilot クレジット）を有効にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "ライセンス条項", "retrievedAt": "2026-11-18T07:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "resources",
+          "heading": "エージェントのリソース",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント用のアカウント、メールボックスと予定表、OneDrive ワークスペースが提供される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "機能の可用性", "retrievedAt": "2026-11-18T07:40:00Z" }] },
+            { "text": "Work IQ により Word・Excel・PowerPoint・Teams などの体験にアクセスできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "機能の可用性", "retrievedAt": "2026-11-18T07:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "service-agent", "term": "Service Agent", "type": "feature", "oneLine": { "text": "Dynamics 365 Customer Service のケース情報の取得・要約・更新などを支援する Microsoft 365 Copilot のエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/service-agent-overview", "locator": "冒頭", "retrievedAt": "2026-11-18T07:40:00Z" }] } },
+        { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "Microsoft Graph と Dataverse のデータに基づく回答を支える仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/service-agent-overview", "locator": "サービスエージェントができること", "retrievedAt": "2026-11-18T07:40:00Z" }] } },
+        { "termKey": "frontier", "term": "Frontier プログラム", "type": "term", "oneLine": { "text": "パブリック プレビューの提供を受けるために登録が必要なプログラム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "ライセンス条項", "retrievedAt": "2026-11-18T07:40:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えますか？",
+          "answer": { "text": "ロードマップに提供月の記載はありません。関連ページでは、Service Agent のパブリック プレビューは 2026 年 12 月 1 日とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "機能の可用性", "retrievedAt": "2026-11-18T07:40:00Z" }] }
+        },
+        {
+          "question": "追加の費用は発生しますか？",
+          "answer": { "text": "関連ページでは、エージェントのアカウントとリソースに月あたり 100 Copilot クレジットの定期料金が発生し、利用は従量課金とされています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locator": "課金情報", "retrievedAt": "2026-11-18T07:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577829",
+        "learn": [
+          { "title": "エージェント向けの Microsoft 365 リソース", "url": "https://learn.microsoft.com/ja-jp/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-resources-for-agents", "locale": "ja-jp" },
+          { "title": "サービス エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/use/service-agent-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
