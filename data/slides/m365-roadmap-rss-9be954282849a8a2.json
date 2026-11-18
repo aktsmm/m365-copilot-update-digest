@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9be954282849a8a2",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Pages のキャンバス上で Copilot が直接編集できるようになります",
+        "subtitleJa": "ページ内のコメントから Copilot に質問や編集を依頼できます",
+        "en": "Microsoft Copilot (Microsoft 365): Use Copilot to make on canvas edits on Pages"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Pages で共同作業する作成者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャットだけでなく、ページ上のコメントで Copilot に質問・編集を依頼できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ページにコメントを残すだけで、Copilot への質問や**ページ上での的を絞った編集依頼**ができます。人と Copilot が同じページで作業し、互いの存在と変更も見えます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "予定されている内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ページ上のコメントで Copilot に質問や編集を直接依頼できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "人と Copilot がページ全体で共同作業し、存在と変更が見える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "チャット欄の外で、共同作業の流れの中に Copilot が入る", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上の段階は開発中で、内容は今後変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（標準マルチテナント）の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在の Copilot Pages の共同作業の使い方を、利用者に周知しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ロードマップの更新を確認し、提供時期の確定を待つ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-pages", "term": "Copilot Pages", "type": "feature", "oneLine": { "text": "Copilot の回答を、編集や共有ができる永続的なページとして残せる共同作業用のキャンバス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes", "locator": "2025年5月13日", "retrievedAt": "2026-11-18T07:55:00Z" }] } },
+        { "termKey": "on-canvas-edit", "term": "キャンバス上の編集", "type": "term", "oneLine": { "text": "チャットの返答ではなく、ページ上で直接 Copilot に内容を編集させること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示すステータス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=580449",
+        "learn": [
+          { "title": "Microsoft 365 Copilot リリース ノート（2025）", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/previous-year-release-notes#may-13,-2025", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
