@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-2ca1a792885c0d5c",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Word の法務プラグイン（開発中）",
+        "subtitleJa": "法的文書の理解・要約・編集・レビュー・下書きを Copilot が支援",
+        "en": "Word: legal plugin"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot"],
+        "categories": ["agents", "office-apps"],
+        "importance": "normal",
+        "cloudInstances": ["GCC"],
+        "platforms": ["Desktop"],
+        "productArea": "Word",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Word デスクトップで法的文書を扱う人**と、Microsoft 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "アクセスの管理", "retrievedAt": "2026-11-18T01:00:00Z" }] },
+        "change": { "text": "法的文書の理解・要約・編集・レビュー・下書きを Word の Copilot に任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571885" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は Microsoft 365 Apps 管理センターのポリシーで利用を制御できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "Copilot in Word の法的事項プラグイン", "retrievedAt": "2026-11-18T01:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Word 上で、Copilot が**法的文書**の理解・要約・編集・レビュー・下書きを支援します", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571885" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Word（Desktop）。クラウドインスタンスは GCC", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571885" }] },
+            { "text": "法的文書の理解、要約、編集、レビュー、下書きを支援", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571885" }] },
+            { "text": "Microsoft は法律専門家のワークフローに合う法務プラグインを提供している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "冒頭", "retrievedAt": "2026-11-18T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は「開発中」の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571885" }] },
+            { "text": "法務プラグインは Word 用と Copilot Cowork 用の 2 種類で、管理方法が異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "冒頭", "retrievedAt": "2026-11-18T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "事前準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Word 用の管理は Microsoft 365 Apps 管理センターのポリシー管理で行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "Copilot in Word の法的事項プラグイン", "retrievedAt": "2026-11-18T01:00:00Z" }] },
+            { "text": "ポリシー名は「M365 Copilot in Word の法的スキル」", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "Copilot in Word の法的事項プラグイン", "retrievedAt": "2026-11-18T01:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "legal-plugin", "term": "法務プラグイン", "type": "feature", "oneLine": { "text": "法律専門家の理解、要約、下書き、レッドライン、レビューを支援する Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "冒頭", "retrievedAt": "2026-11-18T01:00:00Z" }] } },
+        { "termKey": "cowork", "term": "Copilot Cowork", "type": "product", "oneLine": { "text": "利用者が法務プラグイン（Legal for Cowork）を追加して使える Copilot の環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "Copilot Cowork の法的事項プラグイン", "retrievedAt": "2026-11-18T01:00:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "Microsoft 365 ロードマップで、機能が開発段階にあることを示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only", "evidence": [{ "url": "https://www.microsoft.com/microsoft-365/roadmap?id=571885" }] } }
+      ],
+      "qa": [
+        {
+          "question": "Word の法務プラグインは管理者が制御できますか？",
+          "answer": { "text": "できます。Microsoft 365 Apps 管理センターのポリシー管理ツールでポリシーを作成し、アクセスを制御します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "Copilot in Word の法的事項プラグイン", "retrievedAt": "2026-11-18T01:00:00Z" }] }
+        },
+        {
+          "question": "Copilot Cowork の法務プラグインとの違いは？",
+          "answer": { "text": "Cowork では利用者がプラグインを追加し、管理者は Microsoft 365 管理センターの［エージェント ツール］ページで制御します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locator": "Copilot Cowork の法的事項プラグイン", "retrievedAt": "2026-11-18T01:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571885",
+        "learn": [
+          { "title": "法務部門の Copilot を管理する", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-copilot-for-legal", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
