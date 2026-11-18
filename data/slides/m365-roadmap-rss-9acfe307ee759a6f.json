@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-9acfe307ee759a6f",
+      "kind": "in-development",
+      "kindSource": "tags",
+      "label": "開発中",
+      "title": {
+        "ja": "Microsoft Copilot に自然言語でアプリを作る Copilot Code が登場（開発中）",
+        "subtitleJa": "説明するだけで動くソフトウェアを作り、管理されたアプリとして公開できます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot Code"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**業務アプリを自分で作りたいビジネス ユーザーや開発者**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コードを書けなくても、説明からアプリやダッシュボードを作って組織内で共有できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "Copilot Managed Runtime にアプリをビルドして発行", "retrievedAt": "2026-11-18T00:54:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試す場合は、支出ポリシーに含まれるユーザーだけがアプリを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "Copilot Code でアプリをビルドできるユーザーの制御", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft Copilot で**作りたいものを自然言語で説明**すると、Copilot Code がライブ プレビュー付きでアプリを構築し、Copilot Managed Runtime に公開できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "Copilot Managed Runtime にアプリをビルドして発行", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "トラッカー、フォーム、ダッシュボードなどを説明から構築", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "作りたいものを説明してください", "retrievedAt": "2026-11-18T00:54:00Z" }] },
+            { "text": "Work IQ に基づく作業内容から、日常業務を起点にアプリ作成を開始", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "公開は別の操作で、共有先は組織内の人やグループを選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "アプリを公開する・アプリを共有する", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Managed Runtime への発行はプレビュー機能で、Frontier プログラムへの参加が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "Important", "retrievedAt": "2026-11-18T00:54:00Z" }] },
+            { "text": "プレビュー機能は機能が制限され、一般提供前に変更されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "Important", "retrievedAt": "2026-11-18T00:54:00Z" }] },
+            { "text": "実行には Power Apps Premium か Copilot クレジットの支出ポリシーが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "ライセンスと請求", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ビルドは Microsoft 365 管理センターの支出ポリシーで課金・制御される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "ライセンスと請求", "retrievedAt": "2026-11-18T00:54:00Z" }] },
+            { "text": "試す前に、利用者を限定した支出ポリシーの案を管理者と相談する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "governance",
+          "heading": "管理とガバナンス",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "アプリは Entra 認証、条件付きアクセス、DLP などが自動適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "既定で安全", "retrievedAt": "2026-11-18T00:54:00Z" }] },
+            { "text": "管理者は管理センターでアプリの使用状況や正常性を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "大規模なガバナンス", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+          ]
+        },
+        {
+          "id": "run-modes",
+          "heading": "実行場所と権限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ローカルまたはクラウドで実行でき、クラウドは分離された環境で動く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "ローカルまたはクラウドで実行する", "retrievedAt": "2026-11-18T00:54:00Z" }] },
+            { "text": "フォルダー外へのアクセスやネットワーク接続の前に承認を求める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "制御を維持する", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-code", "term": "Copilot Code", "type": "feature", "oneLine": { "text": "説明から動作するソフトウェアを構築する Microsoft Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "冒頭", "retrievedAt": "2026-11-18T00:54:00Z" }] } },
+        { "termKey": "managed-runtime", "term": "Copilot Managed Runtime", "type": "product", "oneLine": { "text": "IT ガバナンス ポリシーに自動準拠する社内業務アプリを構築・実行するための基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "冒頭", "retrievedAt": "2026-11-18T00:54:00Z" }] } },
+        { "termKey": "spending-policy", "term": "支出ポリシー", "type": "term", "oneLine": { "text": "Copilot クレジットの利用を、管理センターでユーザーごとに設定する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "ライセンスと請求", "retrievedAt": "2026-11-18T00:54:00Z" }] } },
+        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、提供に向けて開発が進んでいる段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "誰でも Copilot Code でアプリを作れますか？",
+          "answer": { "text": "Copilot Code で作成できるのは、Copilot Code の支出ポリシーに含まれるユーザーだけです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "アプリ作成の管理", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+        },
+        {
+          "question": "作ったアプリを使う人にも費用はかかりますか？",
+          "answer": { "text": "共有しても実行コストは賄われず、実行する各人に Power Apps Premium か該当する支出ポリシーが必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locator": "ライセンスと請求", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+        },
+        {
+          "question": "アプリを共有するとデータも共有されますか？",
+          "answer": { "text": "共有されません。共有先には、接続先ソースで既に権限のあるデータだけが表示されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locator": "アプリを共有する", "retrievedAt": "2026-11-18T00:54:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=571887",
+        "learn": [
+          { "title": "Copilot Code を使用 (Frontier)", "url": "https://learn.microsoft.com/ja-jp/copilot/code/use-code", "locale": "ja-jp" },
+          { "title": "管理者向けの Copilot マネージド ランタイムの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/apps/", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
