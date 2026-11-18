@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-copilot-release-notes-d061297547369296",
+      "kind": "update",
+      "kindSource": "manual",
+      "label": "アップデート",
+      "title": {
+        "ja": "PowerPoint の Copilot で SharePoint・OneDrive のファイルを参照",
+        "subtitleJa": "ファイル名を書くだけで、保存済みの資料からスライドを作れます",
+        "en": "Reference files saved in SharePoint libraries and OneDrive folders when creating a presentation with Copilot in PowerPoint [Windows, Mac, Web]"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [],
+        "status": "Update",
+        "products": ["PowerPoint"],
+        "categories": ["office-apps", "sharepoint"],
+        "importance": "normal",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Microsoft Copilot",
+        "sourceName": "Microsoft 365 Copilot release notes"
+      },
+      "audience": {
+        "who": { "text": "**PowerPoint でプレゼンテーションを作成する人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ファイルを手動で添付・アップロードせず、保存済みの資料を文脈に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "October 06, 2026 / PowerPoint / What changed", "retrievedAt": "2026-11-18T10:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "利用者は、プロンプトにファイル名を書くだけで使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-11-18T10:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "SharePoint や OneDrive のファイルは、プロンプトで暗黙的に参照できませんでした", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-18T10:00:00Z" }] },
+        "after": { "text": "ファイル名などを書くと、Copilot が**保存先のファイルを認識**し、文脈として使って作成します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-18T10:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Windows・Mac・Web 版の PowerPoint の Copilot", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "PowerPoint [Windows, Mac, Web]", "retrievedAt": "2026-11-18T10:00:00Z" }] },
+            { "text": "参照できる保存先は SharePoint ライブラリと OneDrive フォルダー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-18T10:00:00Z" }] },
+            { "text": "ファイル名やドキュメントの所有者を指定して参照する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-11-18T10:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "使い方の例",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "PowerPoint で Copilot を開き、プロンプトにファイル名や所有者を書く", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-11-18T10:00:00Z" }] },
+            { "text": "例: 「（文書名）の主な調査結果をまとめたプレゼンテーションを作成して」", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Try this", "retrievedAt": "2026-11-18T10:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "benefit-detail",
+          "heading": "期待できる効果",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "組織: クラウド上の資料を活用し、アプリを切り替えずに作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Business impact", "retrievedAt": "2026-11-18T10:00:00Z" }] },
+            { "text": "個人: 資料を探して取り込む手間が減る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "Personal impact", "retrievedAt": "2026-11-18T10:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-in-powerpoint", "term": "Copilot in PowerPoint", "type": "feature", "oneLine": { "text": "PowerPoint でプロンプトからプレゼンテーションを作成できる Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "PowerPoint", "retrievedAt": "2026-11-18T10:00:00Z" }] } },
+        { "termKey": "implicit-file-reference", "term": "暗黙的なファイル参照", "type": "term", "oneLine": { "text": "ファイルを添付せず、プロンプト内のファイル名などで対象ファイルを示す方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-18T10:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "リリース ノートに掲載された機能の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "ファイルを手動で添付する必要はなくなりますか？",
+          "answer": { "text": "SharePoint と OneDrive のファイルは、ファイル名などをプロンプトに書けば Copilot が認識します。手動の添付やアップロードなしで使えます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "What changed", "retrievedAt": "2026-11-18T10:00:00Z" }] }
+        },
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "リリース ノートでは Windows、Mac、Web が対象として示されています。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes", "locator": "PowerPoint [Windows, Mac, Web]", "retrievedAt": "2026-11-18T10:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-10-06",
+        "learn": [
+          { "title": "Microsoft 365 Copilot のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
