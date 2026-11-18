@@ -28,6 +28,7 @@ jobs:
       PR_BODY: ${{ github.event.pull_request.body }}
       PR_USER_LOGIN: ${{ github.event.pull_request.user.login }}
       PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+      PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
       PR_IS_DRAFT: ${{ github.event.pull_request.draft }}
       DIGEST_DOCUMENT_ENRICHMENT: "0"
 
@@ -264,6 +265,20 @@ jobs:
             exit 0
           fi
 
+          # 再生成した出力が収束しない（翻訳 API が同じ原文で違う訳を返す、など）と、押す→検証が再実行→また差分、を無限に繰り返す。
+          # 2026-11-18 には 1 つの PR で 300 回以上コミットされ、検証の失敗が 200 件に達した。
+          # この PR ブランチで、すでに自動で再生成したコミットが上限に達していたら、これ以上押さずに失敗として止める。
+          max_autofix=3
+          base_sha="${PR_BASE_SHA:-origin/main}"
+          prior=$(git log "$base_sha..HEAD" --grep='^chore: regenerate canonical digest outputs$' --format='%h' 2>/dev/null | wc -l | tr -d ' ')
+          if [ "${prior:-0}" -ge "$max_autofix" ]; then
+            echo "::error::Canonical outputs still change after $prior automatic regenerations on this PR branch, so they do not converge. Stopping instead of pushing again."
+            echo "Changed files in the last regeneration:" >&2
+            git diff --stat -- data summaries drafts config/summary-ja-cache.json config/related-documents.json >&2
+            git diff -- config/summary-ja-cache.json | grep -E '^[+-]\s+"(summaryJa|titleJa|summary|title)"' | head -20 >&2 || true
+            exit 1
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data summaries drafts config/summary-ja-cache.json config/related-documents.json
@@ -275,7 +290,7 @@ jobs:
 
           git commit -m "chore: regenerate canonical digest outputs"
           git push origin "HEAD:${PR_HEAD_REF}"
-          echo "Canonical generated outputs were pushed back to the PR branch. Wait for the rerun." >&2
+          echo "Canonical generated outputs were pushed back to the PR branch (automatic regeneration $((prior + 1)) of $max_autofix). Wait for the rerun." >&2
           exit 1
 
       - name: Validate generated files are canonical

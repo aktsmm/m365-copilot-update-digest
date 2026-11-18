@@ -97,6 +97,8 @@ npm test
 
 **依頼された候補は必ず調べ直されます。** 自動化 Issue が調査を依頼した候補（最大 6 件）と別の候補をエージェントが調べて PR を出しても、`validate-generated-pr.yml` の「Resolve the document candidates requested by the automation issue」が、PR に紐づく Issue の候補一覧と `config/related-documents.json` を照合し、未調査の依頼分を Learn MCP で調べてブランチへ反映します（`scripts/resolve-requested-candidates.mjs`）。調べ直しても完了しない場合は、検証を**成功にせず失敗**させ、自動マージしません。対象は、依頼された更新が Learn MCP のエラーで終わった、イベントデータに無い、紐づく Issue を読めない、Copilot の PR が Issue に紐づいていない、のいずれかです（終了コード 1）。
 
+**自動再生成は 3 回までです。** `validate-generated-pr.yml` の「Auto-fix canonical generated outputs」は、PR ブランチと正規の生成物が食い違うと再生成してコミットし、再検証に回します。再生成のたびに内容が変わり続ける（機械翻訳の揺れなど）と無限に繰り返して失敗の通知が溢れるため、PR のベース以降の `chore: regenerate canonical digest outputs` が 3 件に達したら、それ以上プッシュせず「do not converge」で失敗して止めます（`tests/autofix-loop-cap.test.mjs`）。
+
 M365 / Copilot Studio の主資料は **Microsoft Learn MCP で確認する対象製品の Microsoft 公式ドキュメント**です。GitHub Copilot は調査を実行するエージェントであって、GitHub の製品資料を M365 の主資料にするという意味ではありません。GitHub 連携など更新との関係が確認できる場合は、`docs.github.com` の公式資料も根拠付きの補足として採用できます。表示は Microsoft の主資料を先に並べます。GitHub 資料しかない項目は、Microsoft 主資料の MCP 調査候補として残します。
 
 一覧型の release notes / what's new / Roadmap ページは、**その更新自体が載っていると確認できたときだけ**資料にします。確認できる手がかりは 2 つです。(1) ページがその更新の Roadmap ID（`roadmap?id=…`）を一覧している（Business Central の update 29.0 など）、(2) 25 文字以上・4 語以上の具体的な機能名が、そのままページに書かれている（Microsoft 365 Copilot の release notes など）。製品名・タイトル・要約の検索で見つからないときの 2 段目の探索で（検索は同じページを断片ごとに返すので、先頭の断片に無くても後ろの断片を見ます）、どちらも機能名と ID だけで再検索し、別の更新の資料を拾うことはしません（`scripts/lib/learn-mcp.mjs` の `findByRoadmapId` / `findByExactTitle`）。Tech Community の公開ページデータも記事 ID を照合し、該当記事の本文だけを使います。原文と同じ文書、重複、非公式ホスト、不正な URL は除外します。資料が見つからない場合は関連資料欄を省略し、原文・日次リンクは維持します。資料の存在は、その機能の GA やすべての環境での提供を保証するものではありません。
