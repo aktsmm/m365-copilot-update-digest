@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-40e22e7c178e6e47",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Agent 365 のビジネス分析エクスペリエンス（開発中）",
+        "subtitleJa": "AI の支出・利用状況・価値を一か所で把握できます",
+        "en": "Microsoft Copilot (Microsoft 365): Agent 365 Business Analytics experience"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft Viva", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents", "viva"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)", "GCC", "GCC High", "DoD"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "AI 投資を判断する**リーダーと IT 管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "AI の支出と成果を一緒に見て、次の投資先を判断しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "AI の**支出・利用状況・価値を一か所で確認**でき、投資が向かう先と得られる成果を把握できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "サービス・モデル・エージェント・ユーザー別にコストを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "AI が支えるビジネス ユース ケースと、その価値も把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は商用クラウドに加え GCC・GCC High・DoD、対象は Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中で、提供時期の月は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "現在の関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Agent 365 のコスト管理は、Copilot クレジットの使用量をユーザー・グループ・エージェント・サービス別に表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "ビジネス バリュー", "retrievedAt": "2026-11-18T00:00:00Z" }] },
+            { "text": "Microsoft 365 管理センターのエージェント概要で、利用者数と稼働時間を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "ビジネス バリュー", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "licensing",
+          "heading": "ライセンスの前提",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Agent 365 を有効にするには、少なくとも 1 人に Agent 365 ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "エージェント 365 の可用性と前提条件", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365", "term": "Microsoft Agent 365", "type": "product", "oneLine": { "text": "組織内のエージェントを一つのビューで見られる、AI の可観測性プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "冒頭", "retrievedAt": "2026-11-18T00:00:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "AI の使用量が請求される単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "ビジネス バリュー", "retrievedAt": "2026-11-18T00:00:00Z" }] } },
+        { "termKey": "agent-registry", "term": "エージェント レジストリ", "type": "feature", "oneLine": { "text": "Microsoft 365 管理センターで、組織内のエージェントを一覧表示する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "Management", "retrievedAt": "2026-11-18T00:00:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "いつから使えるようになりますか？",
+          "answer": { "text": "ロードマップ上は開発中で、提供時期の月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在のコスト確認はどこで行えますか？",
+          "answer": { "text": "Agent 365 のコスト管理で、Copilot クレジットの使用量をユーザー、グループ、エージェント、サービス別に確認できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locator": "ビジネス バリュー", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=577548",
+        "learn": [{ "title": "Microsoft Agent 365 の概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-agent-365/overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
