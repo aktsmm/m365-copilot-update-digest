@@ -3,101 +3,115 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-6565bc0c2d0454cd",
-      "kind": "in-development",
+      "kind": "rolling-out",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "展開中",
       "title": {
-        "ja": "Teams の「インテリジェントな通話委任」が開発中",
-        "subtitleJa": "AI が着信に応答して状況を確認し、出るかどうかの判断を助けます",
+        "ja": "Teams のインテリジェント通話委任が展開開始",
+        "subtitleJa": "AI が着信に応答し、出るべき通話かを判断する材料を集めます",
         "en": "Microsoft Teams: Intelligent call delegation"
       },
       "meta": {
-        "publishedJst": "2026-10-06",
+        "publishedJst": "2026-11-18",
         "availability": [],
-        "status": "In development",
+        "status": "Rolling out",
         "products": ["Microsoft Teams", "Microsoft Copilot (Microsoft 365)"],
         "categories": ["teams"],
         "importance": "normal",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
-        "platforms": ["Desktop", "Mac"],
+        "platforms": ["Android", "Desktop", "iOS", "Mac"],
         "productArea": "Microsoft Teams",
         "sourceName": "Microsoft 365 Roadmap"
       },
       "audience": {
-        "who": { "text": "**Teams で通話を多く受ける人**と、Teams 通話を管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "AI が着信に応答して文脈を集め、対応するかの判断を助けてくれる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "who": { "text": "**Teams で着信を受ける Microsoft Copilot ライセンス保有ユーザー**と、Teams 管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "前提条件", "retrievedAt": "2026-11-18T00:50:00Z" }] },
+        "change": { "text": "着信に AI が応答して状況を把握するため、出るかどうかを判断しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "changeNature": "benefit"
       },
       "action": {
-        "required": "no",
-        "summary": { "text": "開発中の段階のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "required": "optional",
+        "summary": { "text": "管理者は個人用応答ポリシーで利用可否を制御でき、既定では有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話の委任を管理する", "retrievedAt": "2026-11-18T00:50:00Z" }] }
       },
       "beforeAfter": {
-        "after": { "text": "AI を活用した通話支援が**着信に応答して状況を確認**し、通話に出るかどうかの判断を助けます。フォローアップの予定調整もできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        "after": { "text": "音声エージェントが**ユーザーに代わって着信に応答**し、発信者の用件を収集。緊急の通話はユーザーにつなぎ、不在時はフォローアップを予約します", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "概要", "retrievedAt": "2026-11-18T00:50:00Z" }] }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "開発中の範囲",
+          "id": "how-it-works",
+          "heading": "仕組み",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "AI が着信に応答し、発信者から文脈を集める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "集めた文脈をもとに、通話に出て話すかをユーザーが判断できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "フォローアップの予定調整にも対応する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "通話に応答し、発信者の理由を収集して、緊急の通話をコンテキスト付きでつなぐ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話委任のしくみ", "retrievedAt": "2026-11-18T00:50:00Z" }] },
+            { "text": "不在時は Microsoft Bookings でコールバックやフォローアップ会議を予約", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "概要", "retrievedAt": "2026-11-18T00:50:00Z" }] },
+            { "text": "ライブ プレビューで通話を監視し、いつでも参加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話委任のしくみ", "retrievedAt": "2026-11-18T00:50:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "how-to-start",
+          "heading": "使い始めるには",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "ロードマップ上は開発中で、提供時期は確定していない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "対象クラウドは Worldwide（標準マルチテナント）、対象環境はデスクトップと Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "ユーザーに Microsoft Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "前提条件", "retrievedAt": "2026-11-18T00:50:00Z" }] },
+            { "text": "管理者は Copilot クレジットの使用量ベース課金と、専用の支出ポリシーを設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "前提条件", "retrievedAt": "2026-11-18T00:50:00Z" }] },
+            { "text": "既定で有効。ユーザーは Teams 設定でオン・オフを選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話の委任を管理する", "retrievedAt": "2026-11-18T00:50:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "今できる準備",
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "既存の通話委任（共有回線）は、他のユーザーが代理で通話を受けられる機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-22T00:00:00Z" }] },
-            { "text": "現行の Teams 通話の Copilot は、Microsoft Copilot ライセンスを持つ参加者が利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "Teams での Microsoft Copilot 通話", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+            { "text": "有効にすると、ユーザーの既存の通話ルーティング設定が置き換えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話委任のしくみ", "retrievedAt": "2026-11-18T00:50:00Z" }] },
+            { "text": "発信者には、人ではなくアテンダントと話していることが通知される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話委任のしくみ", "retrievedAt": "2026-11-18T00:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "rollout-scope",
+          "heading": "提供範囲",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "ロードマップ上の提供先は Worldwide（Standard Multi-Tenant）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応プラットフォームは Android・Desktop・iOS・Mac", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず一部の部署に個人用応答ポリシーを割り当てて試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "管理センターで話し方・応答する通話・実行できる操作を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "ポリシー設定", "retrievedAt": "2026-11-18T00:50:00Z" }] }
           ]
         }
       ],
       "glossary": [
-        { "termKey": "call-delegation", "term": "通話委任", "type": "feature", "oneLine": { "text": "ユーザーの電話回線を共有し、委任者に代わって通話を発信・受信できる Teams 電話の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
-        { "termKey": "teams-calling-copilot", "term": "Teams 通話の Microsoft Copilot", "type": "feature", "oneLine": { "text": "通話中の重要なポイントをキャプチャし、フォローアップ タスクも提案する AI ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "Teams での Microsoft Copilot 通話", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
-        { "termKey": "label-in-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "intelligent-call-delegation", "term": "インテリジェント通話委任", "type": "feature", "oneLine": { "text": "ユーザーに代わって着信に応答する、AI 搭載の音声エージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "概要", "retrievedAt": "2026-11-18T00:50:00Z" }] } },
+        { "termKey": "personal-attendant-policy", "term": "個人用応答ポリシー", "type": "term", "oneLine": { "text": "ユーザーが通話委任を使えるか、使える設定を制御する Teams のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "概要", "retrievedAt": "2026-11-18T00:50:00Z" }] } },
+        { "termKey": "copilot-credits", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "この機能で使われる、使用量ベース課金の単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "前提条件", "retrievedAt": "2026-11-18T00:50:00Z" }] } },
+        { "termKey": "label-rolling-out", "term": "展開中", "type": "label", "oneLine": { "text": "ロードマップ上で、ユーザーへの展開が進んでいる段階（Rolling out）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
-          "question": "既存の通話委任（共有回線）とは何が違いますか？",
-          "answer": {
-            "text": "既存の通話委任は、委任された他のユーザーが代理で通話を受ける機能です。今回の機能は AI が着信に応答して文脈を集める点が異なります。",
-            "origin": "learn",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "委任を呼び出す", "retrievedAt": "2026-10-21T22:10:00Z" }]
-          }
+          "question": "利用に追加の課金設定は必要ですか？",
+          "answer": { "text": "はい。Copilot クレジットの使用量ベース課金の設定と、この機能のみを対象にした支出ポリシーの作成が必要です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "前提条件", "retrievedAt": "2026-11-18T00:50:00Z" }] }
         },
         {
-          "question": "Teams 通話での Copilot 利用を管理者は制御できますか？",
-          "answer": {
-            "text": "現行の Teams 通話の Microsoft Copilot については、管理者が組織内での利用方法を管理できます。今回の開発中機能の管理方法は、ロードマップでは確認できません。",
-            "origin": "learn",
-            "assertion": "fact",
-            "verification": "verified",
-            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locator": "Teams での Microsoft Copilot 通話", "retrievedAt": "2026-10-21T22:10:00Z" }]
-          }
+          "question": "管理者は無効にできますか？",
+          "answer": { "text": "はい。Teams 管理センターの個人向け応答ポリシー、または PowerShell で制御できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話の委任を管理する", "retrievedAt": "2026-11-18T00:50:00Z" }] }
+        },
+        {
+          "question": "有効にすると既存の転送設定はどうなりますか？",
+          "answer": { "text": "ユーザーの既存の通話ルーティング設定が置き換えられます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locator": "インテリジェント通話委任のしくみ", "retrievedAt": "2026-11-18T00:50:00Z" }] }
         }
       ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=565216",
-        "learn": [{ "title": "Teams Calling の機能", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/here-s-what-you-get-with-phone-system", "locale": "ja-jp" }]
+        "learn": [{ "title": "Microsoft Teams でインテリジェントな通話委任を管理する", "url": "https://learn.microsoft.com/ja-jp/microsoftteams/intelligent-call-delegation", "locale": "ja-jp" }]
       },
       "render": { "continuationRequired": false }
     }
