@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generatedAt": "2026-11-17T07:53:38.867Z",
+  "generatedAt": "2026-11-18T07:27:33.740Z",
   "events": [
     {
       "id": "m365-roadmap-rss-177a9c3a02362897",
@@ -49,6 +49,53 @@
       "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
     },
     {
+      "id": "m365-copilot-release-notes-fc8cceeb93c4387e",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Microsoft 365 Copilot extensibility",
+      "title": "Support for refining query filters for the Confluence Cloud Copilot connector [Web]",
+      "titleJa": "Confluence Cloud Copilot コネクタのクエリ フィルターの調整のサポート [Web]",
+      "titleEn": "Support for refining query filters for the Confluence Cloud Copilot connector [Web]",
+      "summary": "This feature gives admins more control over what the Confluence Cloud connector indexes. By default, the connector indexes all blogs and pages. Admins can now include or exclude specific spaces. For advanced scenarios, they can write a Confluence Query Language (CQL) string that...",
+      "summaryJa": "この機能により、管理者は Confluence Cloud コネクタのインデックスの内容をより詳細に制御できるようになります。デフォルトでは、コネクタはすべてのブログとページにインデックスを付けます。管理者は特定のスペースを含めたり除外したりできるようになりました。高度なシナリオでは、Confluence クエリ言語 (CQL) 文字列を作成できます。",
+      "summaryEn": "This feature gives admins more control over what the Confluence Cloud connector indexes. By default, the connector indexes all blogs and pages. Admins can now include or exclude specific spaces. For advanced scenarios, they can write a Confluence Query Language (CQL) string that...",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment#include-or-exclude-data",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [
+        "503571"
+      ],
+      "releaseStage": "Preview",
+      "roleTags": [
+        "管理者向け",
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "管理者向け",
+        "作成者向け"
+      ],
+      "importanceScore": 128,
+      "importanceReason": "Preview の方向性を早めに把握できるため / 更新まとめや公式リリース整理として追いやすいため",
+      "relatedDocuments": [
+        {
+          "title": "Deploy connectors in the Microsoft 365 admin center",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/deployment-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment"
+        },
+        {
+          "title": "Set up the Confluence Cloud service for connector ingestion",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-admin-setup",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/confluence-cloud-deployment"
+        }
+      ]
+    },
+    {
       "id": "m365-roadmap-rss-2c2b125dc847a06b",
       "sourceId": "m365-roadmap-rss",
       "sourceName": "Microsoft 365 Roadmap",
@@ -84,6 +131,249 @@
       ],
       "importanceScore": 118,
       "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
+    },
+    {
+      "id": "m365-copilot-release-notes-7d5b4d5064afc33d",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Microsoft 365 Copilot Studio",
+      "title": "Invoke agents as workflow steps with the agent node [Web]",
+      "titleJa": "エージェント ノードを使用してワークフロー ステップとしてエージェントを呼び出す [Web]",
+      "titleEn": "Invoke agents as workflow steps with the agent node [Web]",
+      "summary": "The agent node lets you embed reasoning directly into your workflow. This means fewer manual handoffs, faster processing times, and workflows that can handle nuanced decisions without additional development effort, helping teams automate more of their end-to-end processes and...",
+      "summaryJa": "エージェント ノードを使用すると、推論をワークフローに直接埋め込むことができます。これは、手動の引き継ぎが減り、処理時間が短縮され、追加の開発労力を必要とせずに微妙な決定を処理できるワークフローを意味し、チームがエンドツーエンドのプロセスをより自動化できるように支援します。",
+      "summaryEn": "The agent node lets you embed reasoning directly into your workflow. This means fewer manual handoffs, faster processing times, and workflows that can handle nuanced decisions without additional development effort, helping teams automate more of their end-to-end processes and...",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [
+        "566998"
+      ],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot Studio",
+        "作成者向け"
+      ],
+      "importanceScore": 100,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / エージェント構築や品質管理に関わるため"
+    },
+    {
+      "id": "m365-copilot-release-notes-67fbb4c065e40fb6",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Teams",
+      "title": "Ability for IT admins to customize the user notification messages for recording and transcription in calls [Windows, Mac]",
+      "titleJa": "IT 管理者が通話の録音と文字起こしのためのユーザー通知メッセージをカスタマイズできる [Windows、Mac]",
+      "titleEn": "Ability for IT admins to customize the user notification messages for recording and transcription in calls [Windows, Mac]",
+      "summary": "This feature enables IT admins to customize a portion of the user notification messages for recording and transcription during Teams calls.",
+      "summaryJa": "この機能を使用すると、IT 管理者は、Teams 通話中の録音と文字起こしのためにユーザー通知メッセージの一部をカスタマイズできます。",
+      "summaryEn": "This feature enables IT admins to customize a portion of the user notification messages for recording and transcription during Teams calls.",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [
+        "567302"
+      ],
+      "releaseStage": "Update",
+      "roleTags": [
+        "管理者向け"
+      ],
+      "tags": [
+        "Teams",
+        "管理者向け"
+      ],
+      "importanceScore": 92,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため"
+    },
+    {
+      "id": "m365-copilot-release-notes-e348a6ab2f396563",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Microsoft 365 Copilot extensibility",
+      "title": "Connect Tableau data to Copilot [Web]",
+      "titleJa": "Tableau データを Copilot に接続 [Web]",
+      "titleEn": "Connect Tableau data to Copilot [Web]",
+      "summary": "Customers can connect Microsoft Copilot with Tableau to explore and interpret dashboards and visualizations through a Copilot connector.",
+      "summaryJa": "お客様は、Microsoft Copilot を Tableau に接続し、Copilot コネクタを介してダッシュボードと視覚化を探索および解釈できます。",
+      "summaryEn": "Customers can connect Microsoft Copilot with Tableau to explore and interpret dashboards and visualizations through a Copilot connector.",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "管理者向け",
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "管理者向け",
+        "作成者向け"
+      ],
+      "importanceScore": 92,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 導入状況の可視化や分析に関わるため",
+      "relatedDocuments": [
+        {
+          "title": "Tableau Cloud connector overview",
+          "sourceTitle": "Tableau Cloud connector overview",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/tableau-cloud-overview",
+          "provenance": "mcp",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: connect, tableau, data"
+        }
+      ]
+    },
+    {
+      "id": "m365-copilot-release-notes-0387166406ce7314",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Microsoft 365 admin center",
+      "title": "Share custom organizational attributes with Microsoft 365 people experiences [Web]",
+      "titleJa": "カスタムの組織属性を Microsoft 365 のユーザー エクスペリエンスと共有する [Web]",
+      "titleEn": "Share custom organizational attributes with Microsoft 365 people experiences [Web]",
+      "summary": "We're introducing a new capability in Microsoft 365 Organizational Data Service that enables organizations to share selected custom organizational attributes with the Microsoft 365 people store.",
+      "summaryJa": "Microsoft 365 Organizational Data Service に、組織が選択したカスタム組織属性を Microsoft 365 people Store と共有できるようにする新機能が導入されています。",
+      "summaryEn": "We're introducing a new capability in Microsoft 365 Organizational Data Service that enables organizations to share selected custom organizational attributes with the Microsoft 365 people store.",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "管理者向け",
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 admin center",
+        "管理者向け",
+        "作成者向け"
+      ],
+      "importanceScore": 92,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 管理やガバナンスへの影響が大きいため",
+      "relatedDocuments": [
+        {
+          "title": "People Skills の概要",
+          "url": "https://learn.microsoft.com/ja-jp/copilot/manage/people-skills-overview",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications"
+        },
+        {
+          "title": "Microsoft Viva Insights の紹介",
+          "url": "https://learn.microsoft.com/ja-jp/viva/insights/introduction",
+          "provenance": "article",
+          "evidenceUrl": "https://learn.microsoft.com/en-us/microsoft-365-apps/org-data-service/distribute/applications"
+        }
+      ]
+    },
+    {
+      "id": "m365-copilot-release-notes-ed301bac5bcbc48a",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Microsoft 365 Copilot extensibility",
+      "title": "Access custom engine agents directly in Outlook [Web]",
+      "titleJa": "Outlook でカスタム エンジン エージェントに直接アクセス [Web]",
+      "titleEn": "Access custom engine agents directly in Outlook [Web]",
+      "summary": "Users can now access custom engine agents within Outlook to automate tasks and extend email workflows.",
+      "summaryJa": "ユーザーは Outlook 内のカスタム エンジン エージェントにアクセスして、タスクを自動化し、電子メール ワークフローを拡張できるようになりました。",
+      "summaryEn": "Users can now access custom engine agents within Outlook to automate tasks and extend email workflows.",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [],
+      "releaseStage": "Update",
+      "roleTags": [
+        "作成者向け"
+      ],
+      "tags": [
+        "Microsoft 365 Copilot extensibility",
+        "作成者向け"
+      ],
+      "importanceScore": 84,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため"
+    },
+    {
+      "id": "m365-copilot-release-notes-b160f6c197df4bf1",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Teams",
+      "title": "Express voice enrollment in Microsoft Teams [Windows, Mac]",
+      "titleJa": "Microsoft Teams での高速音声登録 [Windows、Mac]",
+      "titleEn": "Express voice enrollment in Microsoft Teams [Windows, Mac]",
+      "summary": "Express voice enrollment makes registering your voice in Teams fast and easy. Your profile enables features like voice isolation, speaker recognition, identification in a meeting room, transcripts, and enhanced meeting recaps and insights from Microsoft 365 Copilot. If you don’t...",
+      "summaryJa": "高速音声登録により、Teams に音声を迅速かつ簡単に登録できます。プロファイルにより、音声分離、話者認識、会議室での識別、トランスクリプト、Microsoft 365 Copilot からの強化された会議の要約や洞察などの機能が有効になります。そうしないと...",
+      "summaryEn": "Express voice enrollment makes registering your voice in Teams fast and easy. Your profile enables features like voice isolation, speaker recognition, identification in a meeting room, transcripts, and enhanced meeting recaps and insights from Microsoft 365 Copilot. If you don’t...",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [
+        "537269"
+      ],
+      "releaseStage": "Update",
+      "roleTags": [
+        "管理者向け",
+        "作成者向け"
+      ],
+      "tags": [
+        "Teams",
+        "管理者向け",
+        "作成者向け"
+      ],
+      "importanceScore": 76,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため"
+    },
+    {
+      "id": "m365-copilot-release-notes-234ea914ebfbf20c",
+      "sourceId": "m365-copilot-release-notes",
+      "sourceName": "Microsoft 365 Copilot release notes",
+      "sourceFamily": "Microsoft Learn",
+      "productArea": "Microsoft 365 Copilot",
+      "section": "Outlook",
+      "title": "Sort improvements to the message list [Windows]",
+      "titleJa": "メッセージ リストの並べ替えの改善 [Windows]",
+      "titleEn": "Sort improvements to the message list [Windows]",
+      "summary": "When sorting on Outlook for Web or Outlook for Windows, if the Sort By field is not one of From, Subject, or Date Received, we will now show an additional column for the Sort By value (e.g., Size). We will also support sorting by Flag Due Date.",
+      "summaryJa": "Outlook for Web または Outlook for Windows で並べ替えるときに、並べ替え基準フィールドが差出人、件名、受信日のいずれでもない場合、並べ替え基準の値 (サイズなど) の追加の列が表示されるようになりました。フラグ期限によるソートもサポートします。",
+      "summaryEn": "When sorting on Outlook for Web or Outlook for Windows, if the Sort By field is not one of From, Subject, or Date Received, we will now show an additional column for the Sort By value (e.g., Size). We will also support sorting by Flag Due Date.",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes?tabs=all#2026-11-17",
+      "publishedAt": "2026-11-17T12:00:00.000Z",
+      "capturedAt": "2026-11-18T07:27:33.740Z",
+      "sourceLastSeen": "2026-11-18T07:27:33.740Z",
+      "roadmapIds": [
+        "564803"
+      ],
+      "releaseStage": "Update",
+      "roleTags": [
+        "管理者向け",
+        "作成者向け"
+      ],
+      "tags": [
+        "Outlook",
+        "管理者向け",
+        "作成者向け"
+      ],
+      "importanceScore": 76,
+      "importanceReason": "更新まとめや公式リリース整理として追いやすいため / 会議やコミュニケーションの業務導線に直結するため"
     }
   ]
 }
