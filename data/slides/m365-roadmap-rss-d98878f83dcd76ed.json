@@ -72,6 +72,33 @@
         { "termKey": "work-iq", "term": "Work IQ", "type": "feature", "oneLine": { "text": "今回の更新で、現在の取り組みに合うワークスペースの提案を担う仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "qa": [
+        {
+          "question": "Work IQ とは何で、ライセンスは必要ですか？",
+          "answer": {
+            "text": "Work IQ は、組織のデータやコンテキストをエージェントが活用するためのワークプレイス インテリジェンス レイヤーです。Microsoft Copilot ライセンスを持つユーザーは、すべての Copilot エクスペリエンスで利用できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/",
+                "locator": "アクセスと価格",
+                "retrievedAt": "2026-11-18T01:35:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "提供開始前に管理者は何をしておくとよいですか？",
+          "answer": {
+            "text": "現時点で必須の対応は公表されていないため、ロードマップの更新を確認し、提供が近づいた段階で対象ユーザーや共有ドキュメントの運用を検討するのが無理がありません。",
+            "origin": "editorial",
+            "assertion": "recommendation",
+            "verification": "unverified"
+          }
+        }
+      ],
       "references": {
         "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=579889"
       },
