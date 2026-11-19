@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-e05bb63a5898d5ad",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio の利用状況を取得できる PPAC Reporting API（開発中）",
+        "subtitleJa": "利用データをプログラムから大規模に取得し、レポートやコスト管理に使えます",
+        "en": "Microsoft Copilot Studio: PPAC Reporting API"
+      },
+      "meta": {
+        "publishedJst": "2026-11-19",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio の管理者**と、エージェントの作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "利用データを自動で取得し、ダッシュボードやコスト管理に活用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "従来の非サポートな取得方法に代わり、**環境・ユーザー・エージェント・機能ごとの日次 JSON データ**をプログラムから取得できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Copilot Studio の利用データへ、スケーラブルにプログラムからアクセス", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "環境・ユーザー・エージェント・機能ごとの日次 JSON データを提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ダッシュボード、FinOps レポート、コスト制御の自動化に活用", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "提供範囲は Worldwide (Standard Multi-Tenant) の Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ロードマップ上は開発中の段階で、仕様は今後変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "現在も PPAC で環境・エージェント・ユーザー別の消費レポートをダウンロードできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "locator": "重要", "retrievedAt": "2026-11-19T00:00:00Z" }] },
+            { "text": "まず現在のレポートで、集計したい単位（環境・エージェント別など）を整理しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ppac", "term": "PPAC", "type": "term", "oneLine": { "text": "Power Platform 管理センター。Copilot Studio の容量と消費量を管理者が確認する場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "locator": "重要", "retrievedAt": "2026-11-19T00:00:00Z" }] } },
+        { "termKey": "ppac-reporting-api", "term": "PPAC Reporting API", "type": "feature", "oneLine": { "text": "Copilot Studio の利用データをプログラムから取得するための API。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "finops", "term": "FinOps", "type": "term", "oneLine": { "text": "利用データをもとにクラウドのコストを管理する取り組み。ロードマップでは用途として挙げられている。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能を開発している段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この API はいつ使えるようになりますか？",
+          "answer": { "text": "ロードマップでは開発中の段階で、提供月は示されていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "今、利用状況を確認する方法はありますか？",
+          "answer": { "text": "はい。PPAC の容量管理で、環境・エージェント・ユーザー別の消費レポートをダウンロードできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "locator": "重要", "retrievedAt": "2026-11-19T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=579968",
+        "learn": [{ "title": "Copilot Studio の Copilot クレジットと容量を管理する", "url": "https://learn.microsoft.com/ja-jp/power-platform/admin/manage-copilot-studio-copilot-credits-capacity", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
