@@ -822,6 +822,10 @@ function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/microsoft copilot \(microsoft 365\): copilot workspaces updates/.test(text)) {
+    return "Work IQ による Copilot ワークスペースの提案と共同作業";
+  }
+
   if (/microsoft copilot \(microsoft m365\): delegated prompt publishing for organization prompts/.test(text)) {
     return "組織プロンプトの公開をユーザーやグループに委任";
   }
