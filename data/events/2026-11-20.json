@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generatedAt": "2026-11-20T07:13:39.703Z",
+  "generatedAt": "2026-11-20T07:20:01.873Z",
   "events": [
     {
       "id": "m365-roadmap-rss-4cf166f2eea9560b",
@@ -105,9 +105,9 @@
       "title": "Microsoft Copilot Studio: PPAC Reporting API",
       "titleJa": "PPAC レポート API",
       "titleEn": "Microsoft Copilot Studio: PPAC Reporting API",
-      "summary": "Power Platform reporting API for Copilot credits provides customers with access to Copilot Credit usage from Copilot Studio through the Power Platform API, extending the existing reports available in the Power Platform Admin Center. Details of the API methods are available in the Microsoft Power Platform API reference...",
+      "summary": "Power Platform reporting API for Copilot credits provides customers with access to Copilot Credit usage from Copilot Studio through the Power Platform API, extending the existing reports available in the Power Platform Admin Center. Details of the API methods are available in the Microsoft Power Platform API...",
       "summaryJa": "Copilot クレジット用の Power Platform レポート API を使用すると、顧客は Power Platform API を介して Copilot Studio から Copilot クレジットの使用状況にアクセスできるようになり、Power Platform 管理センターで利用できる既存のレポートが拡張されます。 API メソッドの詳細については、Microsoft Power Platform API リファレンスを参照してください。",
-      "summaryEn": "Power Platform reporting API for Copilot credits provides customers with access to Copilot Credit usage from Copilot Studio through the Power Platform API, extending the existing reports available in the Power Platform Admin Center. Details of the API methods are available in the Microsoft Power Platform API reference...",
+      "summaryEn": "Power Platform reporting API for Copilot credits provides customers with access to Copilot Credit usage from Copilot Studio through the Power Platform API, extending the existing reports available in the Power Platform Admin Center. Details of the API methods are available in the Microsoft Power Platform API...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=579968",
       "publishedAt": "2026-11-20T12:00:00.000Z",
       "capturedAt": "2026-11-18T20:29:47.115Z",
@@ -146,6 +146,16 @@
       "summaryJa": "新しいコード ノードを使用すると、作成者は式やコネクタでは処理できないロジックのワークフローのステップとして Python を実行できます。データ変換、計算、正規表現、および高度な解析。ファイルの変換と解析 (例: PDF → テキスト、CSV、XML)。 AI を使用して自然言語からコードを生成するか、コードを作成して編集します...",
       "summaryEn": "The new Code node lets makers run Python as a step in a workflow for logic that expressions and connectors can't handle. Data transforms, calculations, regex, and advanced parsing. File conversion and parsing (for example PDF → text, CSV, XML). Generate the code from natural language with AI, or write and edit it by...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=580866",
+      "relatedDocuments": [
+        {
+          "title": "コード インタープリターに関する FAQ",
+          "sourceTitle": "FAQ for code interpreter",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580866",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: run, python, code, step, workflow"
+        }
+      ],
       "publishedAt": "2026-11-20T12:00:00.000Z",
       "capturedAt": "2026-11-20T07:13:39.703Z",
       "sourceLastSeen": "2026-11-20T07:13:39.703Z",
@@ -165,17 +175,7 @@
         "作成者向け"
       ],
       "importanceScore": 122,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "コード インタープリターに関する FAQ",
-          "sourceTitle": "FAQ for code interpreter",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580866",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: run, python, code, step, workflow"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-ee3f635e07847b60",
@@ -191,6 +191,16 @@
       "summaryJa": "エージェント ノードは、エージェントが生成したファイル (PDF、Word、Excel、PowerPoint、CSV など) をワークフロー出力として返すことができるようになりました。インライン エージェントと既存の (公開された) エージェントの両方で動作します。生成されたファイルは、下流のステップで使用できる順序付けられたファイル出力 (名前、コンテンツ タイプ、コンテンツ) として表示されます。パス...",
       "summaryEn": "The Agent node can now return files that the agent generates, such as PDF, Word, Excel, PowerPoint, and CSV, as workflow outputs. Works with both inline agents and existing (published) agents. Generated files appear as an ordered files output (name, content type, content) that's available to downstream steps. Pass...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=580865",
+      "relatedDocuments": [
+        {
+          "title": "ワークフローにエージェントノードを追加する(Microsoft Copilot)",
+          "sourceTitle": "Add an agent node to a workflow (Microsoft Copilot)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow#automation-scenarios",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580865",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: generate, document, agent, node, workflow"
+        }
+      ],
       "publishedAt": "2026-11-20T12:00:00.000Z",
       "capturedAt": "2026-11-20T07:13:39.703Z",
       "sourceLastSeen": "2026-11-20T07:13:39.703Z",
@@ -210,17 +220,7 @@
         "作成者向け"
       ],
       "importanceScore": 120,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "ワークフローにエージェントノードを追加する(Microsoft Copilot)",
-          "sourceTitle": "Add an agent node to a workflow (Microsoft Copilot)",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow#automation-scenarios",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580865",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: generate, document, agent, node, workflow"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-dc285f0c33cdb218",
@@ -236,6 +236,16 @@
       "summaryJa": "作成者は、ワークフローを共同所有者として他のユーザーと共有し、ワークフローを表示、編集、管理できるようになります。ワークフロー ページまたはデザイナーから共有します。共有する前に、ワークフローが使用する接続とその権限を確認してください。共有を再度開くときに、ワークフローが誰と共有されているかを確認します。共同所有者は、...を編集して実行できます。",
       "summaryEn": "Makers can share a workflow with other users as co-owners so they can view, edit, and manage it. Share from the workflows page or the designer. Review the connections the workflow uses and their permissions before sharing. See who the workflow is shared with when reopening Share. Co-owners can edit and run the...",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=580864",
+      "relatedDocuments": [
+        {
+          "title": "他のユーザーとエージェントを共有する",
+          "sourceTitle": "Share agents with other users",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots#share-an-agent-for-collaborative-authoring",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580864",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: share, workflow, co-owner, collaborative, edit"
+        }
+      ],
       "publishedAt": "2026-11-20T12:00:00.000Z",
       "capturedAt": "2026-11-20T07:13:39.703Z",
       "sourceLastSeen": "2026-11-20T07:13:39.703Z",
@@ -257,17 +267,7 @@
         "作成者向け"
       ],
       "importanceScore": 120,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "他のユーザーとエージェントを共有する",
-          "sourceTitle": "Share agents with other users",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots#share-an-agent-for-collaborative-authoring",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580864",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: share, workflow, co-owner, collaborative, edit"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-b48e83ee51df8844",
@@ -283,6 +283,16 @@
       "summaryJa": "ワークフローは、名前付きユーザー アカウントではなく、サービス プリンシパル (Microsoft Entra アプリ登録) で所有できるようになりました。",
       "summaryEn": "Workflows can now be owned under a service principal (a Microsoft Entra app registration) instead of a named user account.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=580863",
+      "relatedDocuments": [
+        {
+          "title": "Copilot Studio のセキュリティに関する FAQ",
+          "sourceTitle": "Security FAQs for Copilot Studio",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-faq#copilot-studio-creates-service-principal-and-certificates-in-the-customer's-microsoft-entra-id-tenant-every-time-a-custom-agent-is-created-what-is-the-purpose-of-the-service-principal-and-certificates,-and-how-are-they-governed",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580863",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: service, principal, owner, workflow"
+        }
+      ],
       "publishedAt": "2026-11-20T12:00:00.000Z",
       "capturedAt": "2026-11-20T07:13:39.703Z",
       "sourceLastSeen": "2026-11-20T07:13:39.703Z",
@@ -302,17 +312,7 @@
         "作成者向け"
       ],
       "importanceScore": 118,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Copilot Studio のセキュリティに関する FAQ",
-          "sourceTitle": "Security FAQs for Copilot Studio",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-faq#copilot-studio-creates-service-principal-and-certificates-in-the-customer's-microsoft-entra-id-tenant-every-time-a-custom-agent-is-created-what-is-the-purpose-of-the-service-principal-and-certificates,-and-how-are-they-governed",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580863",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: service, principal, owner, workflow"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-27416457dedf84d9",
