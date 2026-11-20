@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-ee3f635e07847b60",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "ワークフローのエージェント ノードでドキュメントを生成（開発中）",
+        "subtitleJa": "エージェントが作った PDF や Office ファイルを、後続のステップで使えるようになります",
+        "en": "Microsoft Copilot Studio: Generate documents from the Agent node in workflows"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio のワークフローを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントが生成したファイルを、ワークフローの出力として受け取れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で必要な対応はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェント ノードが生成した **PDF・Word・Excel・PowerPoint・CSV** を、ワークフローの出力として返せます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "PDF・Word・Excel・PowerPoint・CSV などの生成ファイルを返せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "インライン エージェントと、公開済みの既存エージェントの両方で動作", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ファイルは順序付きの files 出力（名前・コンテンツ タイプ・内容）として後続ステップへ渡る", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft 365 ロードマップ上は開発中の段階", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エージェントの使用・構築・テストには Copilot クレジットが消費されることがある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locator": "冒頭の Note", "retrievedAt": "2026-11-20T07:50:00Z" }] },
+            { "text": "現在の出力の種類はテキスト応答・構造化出力・カスタム構造化出力の 3 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locator": "アウトプット", "retrievedAt": "2026-11-20T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今できる準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "エージェント ノードは、Copilot Studio の［ワークフロー］の［追加］パネルから追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locator": "エージェント ノードを追加する", "retrievedAt": "2026-11-20T07:50:00Z" }] },
+            { "text": "公開前に、テスト ペインでエージェント ノードの出力を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locator": "エージェント ノードのテスト", "retrievedAt": "2026-11-20T07:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-node", "term": "エージェント ノード", "type": "feature", "oneLine": { "text": "ワークフローの処理を AI エージェントに渡し、結果を後続ステップで使えるようにするノード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locator": "冒頭", "retrievedAt": "2026-11-20T07:50:00Z" }] } },
+        { "termKey": "inline-agent", "term": "インライン エージェント", "type": "feature", "oneLine": { "text": "ワークフロー内のノードで直接作成し、ワークフローと共に移動するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locator": "エージェント ノードの既存のエージェントを選択する", "retrievedAt": "2026-11-20T07:50:00Z" }] } },
+        { "termKey": "structured-output", "term": "構造化出力", "type": "term", "oneLine": { "text": "名前付きフィールドを持つ定義済みのオブジェクトとして、結果を返す出力の種類。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locator": "アウトプット", "retrievedAt": "2026-11-20T07:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "公開済みのエージェントでも使えますか？",
+          "answer": { "text": "はい。インライン エージェントと既存の公開済みエージェントの両方で動作するとされています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どの環境が対象ですか？",
+          "answer": { "text": "Worldwide (Standard Multi-Tenant) が対象で、プラットフォームは Web です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=580865",
+        "learn": [
+          { "title": "ワークフローにエージェントノードを追加する(Microsoft Copilot)", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
