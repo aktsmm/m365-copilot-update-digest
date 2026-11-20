@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b6d2c1ff308d61aa",
+      "kind": "retirement",
+      "kindSource": "tags",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Copilot コネクタが Webhook 通知で更新の鮮度を向上",
+        "subtitleJa": "Webhook イベント通知で、より頻繁に更新を同期します",
+        "en": "Microsoft Copilot (Microsoft 365): Improved content freshness using Copilot connectors with webhooks-led notifications"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクタを管理・作成する人**（Azure DevOps、Jira Cloud、Confluence Cloud など）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Webhook イベント通知により、更新がより頻繁に同期され、コンテンツの鮮度が高まる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "現在の既定は増分クロール 15 分ごと・フル クロール毎日。必要な操作はロードマップに示されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/jira-cloud-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-11-20T09:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "Jira Cloud コネクタの既定では、増分クロールは 15 分ごと、フル クロールは毎日実行されます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/jira-cloud-deployment", "locator": "既定値の表", "retrievedAt": "2026-11-20T09:30:00Z" }] },
+        "after": { "text": "**Webhook イベント通知**を使い、より頻繁に更新を同期して、コンテンツの鮮度を高めます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Azure DevOps、Jira Cloud、Confluence Cloud、Trello、Asana、Bitbucket、GitHub、GitLab コネクタ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Webhook イベント通知で更新を取り込み、同期の頻度を高める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は Worldwide（Standard Multi-Tenant）、Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "現在の同期方式",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "増分クロールは新規・変更データのみ、フル クロールはすべてのデータを同期", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/deployment-overview", "locator": "同期タブ", "retrievedAt": "2026-11-20T09:30:00Z" }] },
+            { "text": "Jira Cloud コネクタの既定: 増分クロール 15 分ごと、フル クロール毎日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/jira-cloud-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-11-20T09:30:00Z" }] },
+            { "text": "増分クロールは権限の更新を処理しない。権限の更新はフル クロールで同期", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/jira-cloud-deployment", "locator": "アクセス許可の注記", "retrievedAt": "2026-11-20T09:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応プラン",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象コネクタの現在の同期間隔と、データの鮮度への要望を確認しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "管理センターの同期タブで、クロールの頻度や開始時刻を設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/deployment-overview", "locator": "同期タブ", "retrievedAt": "2026-11-20T09:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connector", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "外部データ ソースの項目をインデックス化し、Microsoft Search や Copilot で使えるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/jira-cloud-deployment", "locator": "冒頭", "retrievedAt": "2026-11-20T09:30:00Z" }] } },
+        { "termKey": "incremental-crawl", "term": "増分クロール", "type": "term", "oneLine": { "text": "新規または変更されたデータのみを同期するクロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/deployment-overview", "locator": "同期タブ", "retrievedAt": "2026-11-20T09:30:00Z" }] } },
+        { "termKey": "full-crawl", "term": "フル クロール", "type": "term", "oneLine": { "text": "スケジュールした間隔で、すべてのデータを同期するクロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/deployment-overview", "locator": "同期タブ", "retrievedAt": "2026-11-20T09:30:00Z" }] } },
+        { "termKey": "webhook", "term": "Webhook", "type": "term", "oneLine": { "text": "データ ソース側で起きた更新イベントを、通知として受け取る仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Webhook 通知はいつから使えますか？",
+          "answer": { "text": "ロードマップには提供時期の月が示されていません。ロードマップの更新で確認してください。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "現在の同期間隔はどうなっていますか？",
+          "answer": { "text": "Jira Cloud コネクタでは既定で増分クロールが 15 分ごと、フル クロールが毎日です。間隔は変更できます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/jira-cloud-deployment", "locator": "同期間隔のカスタマイズ", "retrievedAt": "2026-11-20T09:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=505441",
+        "learn": [
+          { "title": "Jira Cloud コネクタをデプロイする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/jira-cloud-deployment", "locale": "ja-jp" },
+          { "title": "管理センターでコネクタをデプロイする", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/deployment-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
