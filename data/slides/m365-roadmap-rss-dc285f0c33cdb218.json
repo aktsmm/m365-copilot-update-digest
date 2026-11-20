@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-dc285f0c33cdb218",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のワークフローを共同所有者と共有して共同編集（開発中）",
+        "subtitleJa": "ワークフローを共同所有者として共有し、表示・編集・管理できるようになります",
+        "en": "Microsoft Copilot Studio: Share workflows with co-owners for collaborative editing"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でワークフローを作る人**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ワークフローを共同所有者と共有し、チームで表示・編集・管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中。提供開始までは対応不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ワークフローページまたはデザイナーから共有し、共同所有者が編集・実行できるようになります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ワークフローを共同所有者として共有し、表示・編集・管理が可能に", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "共有はワークフロー ページまたはデザイナーから実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "共有を開き直すと、共有先のユーザーを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供開始の時期は示されていない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Web、クラウドは Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "共有前の準備",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "共有前に、ワークフローが使う接続とその権限を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "参考: エージェントの共同編集では、共同編集者に Environment Maker ロールが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-11-20T07:50:00Z" }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "workflow", "term": "ワークフロー", "type": "feature", "oneLine": { "text": "Copilot Studio のワークフロー ページやデザイナーで作成・管理する自動化。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "co-owner", "term": "共同所有者", "type": "term", "oneLine": { "text": "ワークフローを表示・編集・管理し、実行もできるユーザー。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能がまだ開発段階にあることを示す状態。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "エージェントの共同編集と同じ仕組みですか？",
+          "answer": {
+            "text": "エージェントの共同編集は、表示・編集・構成・共有・発行の権限を付与する仕組みです。ワークフローの共有の詳細は、提供開始後の Learn で確認してください。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots", "locator": "共同編集のためにエージェントを共有する", "retrievedAt": "2026-11-20T07:50:00Z" }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=580864",
+        "learn": [
+          { "title": "他のユーザーとエージェントを共有する", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots#share-an-agent-for-collaborative-authoring", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
