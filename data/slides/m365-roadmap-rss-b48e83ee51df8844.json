@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-b48e83ee51df8844",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のワークフローで、サービス プリンシパルを所有者に指定可能に",
+        "subtitleJa": "特定のユーザー アカウントに依存せず、ワークフローを管理できます",
+        "en": "Microsoft Copilot Studio: Service principal owner for workflows"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio", "Microsoft Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でワークフローを作成・管理する人**と、テナント管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ワークフローの所有者を、名前付きユーザーではなく Microsoft Entra アプリの登録（サービス プリンシパル）にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "現在は開発中のため、対応は不要。提供開始の更新を待つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ワークフローを**サービス プリンシパル（Microsoft Entra アプリの登録）の所有**にでき、特定の個人アカウントに紐づけずに運用できます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ワークフローの所有者に、サービス プリンシパルを指定できるようになる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "サービス プリンシパルは Microsoft Entra のアプリの登録を指す", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Web 版、Worldwide（標準マルチテナント）のテナント", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上のステージは「開発中」で、仕様や提供内容は変わる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "設定手順や必要な権限は、提供開始後に公式ドキュメントで確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "今から準備できること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "所有者が退職・異動した場合、所有者不在のエージェントは管理者が所有権を再割り当てできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-api-reassign-ownership-orphaned-agent", "locator": "冒頭", "retrievedAt": "2026-11-20T07:30:00Z" }] },
+            { "text": "個人所有のワークフローを洗い出し、運用が個人に依存していないか棚卸しする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "service-principal", "term": "サービス プリンシパル", "type": "term", "oneLine": { "text": "Microsoft Entra のアプリの登録に対応する、アプリ用の ID。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "entra-app-registration", "term": "アプリの登録", "type": "term", "oneLine": { "text": "Microsoft Entra ID にアプリを登録し、ID を与える操作。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "workflow-owner", "term": "ワークフローの所有者", "type": "feature", "oneLine": { "text": "ワークフローを管理する主体で、現在は名前付きのユーザー アカウント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "所有者が退職した場合の既存の対処は？",
+          "answer": {
+            "text": "所有者不在のエージェントについては、管理者が Power Platform API の Reassign 操作で所有権を再割り当てできます。ワークフローへの適用可否は、この更新の提供後に確認が必要です。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-api-reassign-ownership-orphaned-agent", "locator": "冒頭", "retrievedAt": "2026-11-20T07:30:00Z" }]
+          }
+        },
+        {
+          "question": "今すぐ対応が必要ですか？",
+          "answer": {
+            "text": "いいえ。現在は開発中の段階で、提供開始までに必要な作業はありません。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=580863",
+        "learn": [
+          { "title": "Power Platform API で孤立したエージェントの所有権を再割り当て", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-api-reassign-ownership-orphaned-agent", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
