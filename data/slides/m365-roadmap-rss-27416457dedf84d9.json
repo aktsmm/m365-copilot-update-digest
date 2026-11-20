@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-27416457dedf84d9",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Copilot コネクタが Webhook 通知で更新の鮮度を向上（GCC / GCC High）",
+        "subtitleJa": "Webhook イベント通知で、外部ツールの更新をより頻繁に同期します",
+        "en": "Microsoft Copilot (Microsoft 365): Improved content freshness using Copilot connectors with webhooks-led notifications"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [],
+        "status": "Retirement",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["agents"],
+        "importance": "notable",
+        "cloudInstances": ["GCC", "GCC High"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot コネクタを使う管理者とコンテンツ作成者**（GCC / GCC High）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Webhook 通知により、外部ツールの更新が Copilot にこれまでより頻繁に同期される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "対象コネクタを使う場合は、Roadmap の更新を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Webhook イベント通知を使い、**更新の同期がより頻繁**になってコンテンツの鮮度が高まります", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象: Azure DevOps、Jira Cloud、Confluence Cloud、Trello、Asana", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象: Bitbucket、GitHub、GitLab のコネクタ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供範囲は GCC と GCC High、プラットフォームは Web", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "コネクタの同期の仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "同期コネクタは外部データを Microsoft Graph にインデックスする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "How Copilot connectors work", "retrievedAt": "2026-11-20T09:20:00Z" }] },
+            { "text": "コネクタは定期的に変更を確認し、同期の頻度は管理者が設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Continuous sync", "retrievedAt": "2026-11-20T09:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan",
+          "heading": "確認のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "対象コネクタを使っている場合は、Roadmap の提供時期を定期的に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Copilot コネクタは GCC / GCC High / DoD の環境でも利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/plugins/overview-copilot-connector", "locator": "Note", "retrievedAt": "2026-11-20T09:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-connector", "term": "Copilot コネクタ", "type": "feature", "oneLine": { "text": "外部データ ソースの内容を Microsoft 365 に取り込み、Copilot や検索で使えるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "How Copilot connectors work", "retrievedAt": "2026-11-20T09:20:00Z" }] } },
+        { "termKey": "synced-connector", "term": "同期コネクタ", "type": "term", "oneLine": { "text": "外部データを Microsoft Graph にインデックスして、Copilot と検索で使えるようにするコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Types of Copilot connectors", "retrievedAt": "2026-11-20T09:20:00Z" }] } },
+        { "termKey": "webhook", "term": "Webhook イベント通知", "type": "term", "oneLine": { "text": "ロードマップでは、更新をより頻繁に同期するために使う通知として記載されている。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上のステージが Retirement であることを示すラベル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "どのコネクタが対象ですか？",
+          "answer": { "text": "Azure DevOps、Jira Cloud、Confluence Cloud、Trello、Asana、Bitbucket、GitHub、GitLab のコネクタです。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "同期の頻度は今も変更できますか？",
+          "answer": {
+            "text": "はい。管理者は同期コネクタの同期頻度を設定でき、フル クロールも実行できます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locator": "Continuous sync", "retrievedAt": "2026-11-20T09:20:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=505442",
+        "learn": [{ "title": "Copilot コネクタの概要", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/connectors/overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
