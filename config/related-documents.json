@@ -37802,11 +37802,11 @@
   "m365-roadmap-rss-915900f316faf75b": {
     "inputFingerprint": "388677159b3b1c18a551c81b6c41aff6c2fa653ed4b9f5147a5b1c3b54367254",
     "status": "not-found",
-    "checkedAt": "2026-11-13T06:44:57.855Z",
+    "checkedAt": "2026-11-20T07:15:27.224Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-20T06:44:57.855Z"
+    "mcpRetryAfter": "2026-11-27T07:15:27.224Z"
   },
   "m365-roadmap-rss-6aae9261990230a8": {
     "inputFingerprint": "a3bea1402d08410f07bc8334c2009e8a9d12a0c1e33437c0cde70ec108003460",
@@ -40622,13 +40622,13 @@
     ]
   },
   "m365-roadmap-rss-e05bb63a5898d5ad": {
-    "inputFingerprint": "1bb109f440ae2ea65bff04ec2b6c60d93926bd637b3094fa7416c29c9f1b9fff",
+    "inputFingerprint": "ee37e7b51734d7c33b0d46ee96b512df811fccb434d55eb368ff1596fed0083f",
     "status": "not-found",
-    "checkedAt": "2026-11-18T20:31:00.731Z",
+    "checkedAt": "2026-11-20T07:15:27.224Z",
     "localePreference": "ja-jp",
     "documents": [],
     "mcpStatus": "not-found",
-    "mcpRetryAfter": "2026-11-25T20:31:00.731Z"
+    "mcpRetryAfter": "2026-11-27T07:15:27.224Z"
   },
   "m365-copilot-release-notes-d061297547369296": {
     "inputFingerprint": "96c56f5732cb3eb941d5378d6db3879bc3be72d165589763bb37d73a1a773b2d",
@@ -40638,5 +40638,73 @@
     "documents": [],
     "mcpStatus": "not-found",
     "mcpRetryAfter": "2026-11-25T20:34:00.215Z"
+  },
+  "m365-roadmap-rss-b48e83ee51df8844": {
+    "inputFingerprint": "f42b0a26cd67771fe5591598c0783d9d2a2395632fd128a8813d3565cbc5498c",
+    "status": "verified",
+    "checkedAt": "2026-11-20T07:15:27.224Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "Copilot Studio のセキュリティに関する FAQ",
+        "sourceTitle": "Security FAQs for Copilot Studio",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/security-faq#copilot-studio-creates-service-principal-and-certificates-in-the-customer's-microsoft-entra-id-tenant-every-time-a-custom-agent-is-created-what-is-the-purpose-of-the-service-principal-and-certificates,-and-how-are-they-governed",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580863",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: service, principal, owner, workflow"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-d38e80e31948875e": {
+    "inputFingerprint": "cd0a5a1f1903eb9778913332f0581ef21a850746f53be87d56c31fca068e39c8",
+    "status": "verified",
+    "checkedAt": "2026-11-20T07:15:27.224Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "コード インタープリターに関する FAQ",
+        "sourceTitle": "FAQ for code interpreter",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580866",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: run, python, code, step, workflow"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-dc285f0c33cdb218": {
+    "inputFingerprint": "1d1bcd97c8c1fd52699987a89fcda8d5f86301d6309c77632ef7a11a828e3836",
+    "status": "verified",
+    "checkedAt": "2026-11-20T07:15:27.224Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "他のユーザーとエージェントを共有する",
+        "sourceTitle": "Share agents with other users",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/admin-share-bots#share-an-agent-for-collaborative-authoring",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580864",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: share, workflow, co-owner, collaborative, edit"
+      }
+    ],
+    "mcpStatus": "verified"
+  },
+  "m365-roadmap-rss-ee3f635e07847b60": {
+    "inputFingerprint": "b4c97580dc53a0e131f7b6d06c50da613b4d6f3e481862c0530427c0fb3f2c69",
+    "status": "verified",
+    "checkedAt": "2026-11-20T07:15:27.224Z",
+    "localePreference": "ja-jp",
+    "documents": [
+      {
+        "title": "ワークフローにエージェントノードを追加する(Microsoft Copilot)",
+        "sourceTitle": "Add an agent node to a workflow (Microsoft Copilot)",
+        "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/workflows-experience/agent-node-workflow#automation-scenarios",
+        "provenance": "mcp",
+        "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=580865",
+        "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: generate, document, agent, node, workflow"
+      }
+    ],
+    "mcpStatus": "verified"
   }
 }
