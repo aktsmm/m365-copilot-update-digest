@@ -3,21 +3,21 @@
   "slides": [
     {
       "key": "m365-roadmap-rss-4cf166f2eea9560b",
-      "kind": "in-development",
+      "kind": "retirement",
       "kindSource": "ring",
-      "label": "開発中",
+      "label": "廃止・終了",
       "title": {
-        "ja": "セルフサービスの同期コネクタで外部データを Copilot に接続（開発中）",
-        "subtitleJa": "Jira や Confluence Cloud の内容を、自分の権限で Copilot から検索できます",
+        "ja": "セルフサービスの同期コネクタが廃止対象に",
+        "subtitleJa": "ユーザーが自分で接続する Jira / Confluence Cloud などの同期コネクタが対象です",
         "en": "Microsoft Copilot (Microsoft 365): Self-serve sync connectors"
       },
       "meta": {
-        "publishedJst": "2026-08-21",
+        "publishedJst": "2026-11-20",
         "availability": [],
-        "status": "In development",
+        "status": "Retirement",
         "products": ["Microsoft Copilot (Microsoft 365)"],
         "categories": ["agents"],
-        "importance": "notable",
+        "importance": "high",
         "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
         "platforms": ["Desktop", "Web"],
         "productArea": "Microsoft 365 Copilot",
@@ -25,47 +25,46 @@
       },
       "audience": {
         "who": { "text": "**外部データ ソースの内容を Copilot で使いたいユーザー**と、Microsoft 365 の管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "自分の資格情報で接続した外部コンテンツを、Copilot Chat と Copilot Search で探せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "Supported Copilot experiences", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-        "changeNature": "benefit"
+        "change": { "text": "自分の資格情報で接続した外部コンテンツを、Copilot Chat と Copilot Search で使う方式が終了対象になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
       },
       "action": {
-        "required": "optional",
-        "summary": { "text": "管理者は管理センターで、コネクタの表示・非表示・無効化を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "What are self-serve sync connectors?", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        "required": "unknown",
+        "summary": { "text": "終了時期はロードマップ項目で確認し、利用中のユーザーを把握しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
       "beforeAfter": {
-        "after": { "text": "ユーザーが**自分の資格情報と同意**で外部データを接続し、アクセスできる内容だけを Microsoft Graph に同期して Copilot で使えます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+        "after": { "text": "これまでは、ユーザーが**自分の資格情報と同意**で外部データを接続し、アクセスできる内容だけを Microsoft Graph に同期して Copilot で使えました", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] }
       },
       "panels": [
         {
-          "id": "scope",
-          "heading": "提供の範囲",
+          "id": "impact",
+          "heading": "影響",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "Jira や Confluence Cloud などの外部データを、ユーザー自身が接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "Supported data sources", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "同期した内容は Copilot Chat と Copilot Search で検索できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "Supported Copilot experiences", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "対象は Microsoft 公開のコネクタのみ。データ ソースは今後追加予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview / Supported data sources", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+            { "text": "対象は Jira / Confluence Cloud など、ユーザーが個別に接続する同期コネクタ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "Supported data sources", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "同期した内容は Copilot Chat と Copilot Search で検索できていた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "Supported Copilot experiences", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "コネクタを切断・無効化すると、同期済みの内容は削除され同期も止まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "What are self-serve sync connectors?", "retrievedAt": "2026-10-21T00:00:00Z" }] }
           ]
         },
         {
-          "id": "constraints",
-          "heading": "制約・注意",
+          "id": "migration",
+          "heading": "移行先",
           "availability": "present",
           "priority": "core",
           "items": [
-            { "text": "Learn 上ではプレビュー扱いで、提供は限られた顧客のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "Important", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "同期されるのは、ユーザー自身がアクセスできる内容だけ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "新しいコネクタは 7 日間の管理者レビューを経てから表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "How to connect and use", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+            { "text": "管理者が組織全体に一度設定する「テナント構成の同期コネクタ」という別方式がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "セルフサービス型は、管理者の全体展開が難しいソース向けの方式", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] }
           ]
         },
         {
-          "id": "prepare",
-          "heading": "準備のポイント",
+          "id": "action-plan",
+          "heading": "対応計画",
           "availability": "present",
           "priority": "detail",
           "items": [
-            { "text": "管理者は管理センターで、コネクタを表示・非表示・無効化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "What are self-serve sync connectors?", "retrievedAt": "2026-10-21T00:00:00Z" }] },
-            { "text": "無効化または切断すると、インデックスされた内容は削除される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "What are self-serve sync connectors?", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+            { "text": "管理センターでは、コネクタの表示・非表示・無効化を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "What are self-serve sync connectors?", "retrievedAt": "2026-10-21T00:00:00Z" }] },
+            { "text": "利用中のユーザーを把握し、代替の接続方式を事前に検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
           ]
         },
         {
@@ -93,7 +92,7 @@
         { "termKey": "self-serve-sync", "term": "セルフサービスの同期コネクタ", "type": "feature", "oneLine": { "text": "ユーザーが自分の資格情報で外部コンテンツを Microsoft Graph に同期する、ユーザー単位のコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
         { "termKey": "tenant-sync", "term": "テナント構成の同期コネクタ", "type": "term", "oneLine": { "text": "管理者がテナント全体に対して一度構成する同期コネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
         { "termKey": "graph", "term": "Microsoft Graph", "type": "term", "oneLine": { "text": "同期した外部コンテンツのインデックス先。Copilot が検索に使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] } },
-        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        { "termKey": "label-retirement", "term": "廃止・終了", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了が示された段階（Retirement）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
       "qa": [
         {
@@ -105,8 +104,8 @@
           "answer": { "text": "テナント構成は管理者が全体に一度設定します。セルフサービスはユーザーごとに設定し、管理者による全体展開が難しいソース向けです。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "overview", "retrievedAt": "2026-10-21T00:00:00Z" }] }
         },
         {
-          "question": "接続してからいつ使えるようになりますか？",
-          "answer": { "text": "初回のインデックスには 30 分から数時間かかり、準備ができると通知されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/personal-sync-connectors-overview", "locator": "How to connect and use", "retrievedAt": "2026-10-21T00:00:00Z" }] }
+          "question": "終了の具体的な時期はいつですか？",
+          "answer": { "text": "今回の情報源には具体的な時期が示されていないため、ロードマップ項目（ID 568788）で最新の状況を確認してください。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
         }
       ],
       "references": {
