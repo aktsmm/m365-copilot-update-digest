@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-d38e80e31948875e",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Copilot Studio のワークフローで Python コードをステップとして実行",
+        "subtitleJa": "式やコネクタでは難しい処理を、Python で書き足せます",
+        "en": "Microsoft Copilot Studio: Run Python code as a step in workflows"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [],
+        "status": "In development",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Copilot Studio",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio でワークフローを作る人**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "式やコネクタでは扱えない処理を、ワークフロー内の Python で実現できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "開発中のため、現時点で対応は不要。提供開始後に試す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": { "text": "新しい **Code ノード**で、ワークフローのステップとして Python を実行できます。コードは自然言語から AI で生成することも、自分で書いて編集することもできます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "開発中の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "式やコネクタでは扱えないロジックを Python で実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "用途: データ変換、計算、正規表現、高度な解析", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "PDF からテキスト、CSV、XML などのファイル変換・解析にも使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上は開発中の段階で、提供開始前に内容が変わることがある", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "対象は Worldwide (Standard Multi-Tenant) の Web 版", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related",
+          "heading": "関連機能: コード インタープリター",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Studio には、Python を安全なサンドボックスで実行するコード インタープリターが既にある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter", "locator": "Copilot Studio のコード インタープリターとは", "retrievedAt": "2026-11-20T07:50:00Z" }] },
+            { "text": "コード インタープリターはパブリック クラウドで利用でき、GCC などのソブリン クラウドは未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter", "locator": "ソブリン クラウドまたはデータ所在地", "retrievedAt": "2026-11-20T07:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず、式やコネクタで書きにくい処理を洗い出しておく", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "参考: コード インタープリターのコードは外部ネットワークに接続できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter", "locator": "外部サービスへのアクセス", "retrievedAt": "2026-11-20T07:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "code-node", "term": "Code ノード", "type": "feature", "oneLine": { "text": "ワークフローのステップとして Python コードを実行するノード。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "workflow", "term": "ワークフロー", "type": "term", "oneLine": { "text": "Copilot Studio で、複数のステップを組み合わせて処理を自動化するしくみ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "code-interpreter", "term": "コード インタープリター", "type": "feature", "oneLine": { "text": "Copilot Studio とプロンプト ビルダーに統合された Python 実行エンジン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter", "locator": "Copilot Studio のコード インタープリターとは", "retrievedAt": "2026-11-20T07:50:00Z" }] } },
+        { "termKey": "label-in-development", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、機能の開発が進んでいる段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "提供開始はいつですか？",
+          "answer": { "text": "ロードマップに提供月は示されておらず、開発中の段階です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "コード インタープリターとは何が違いますか？",
+          "answer": { "text": "コード インタープリターはエージェントやプロンプトが Python を実行する機能です。Code ノードはワークフローのステップとして実行する点が特徴ですが、詳しい違いは公開情報で確認できていません。", "origin": "editorial", "assertion": "inference", "verification": "unverified" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=580866",
+        "learn": [{ "title": "コード インタープリターに関する FAQ", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/faq-code-interpreter", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
