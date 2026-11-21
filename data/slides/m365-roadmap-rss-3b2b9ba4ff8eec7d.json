@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-3b2b9ba4ff8eec7d",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Microsoft Copilot でワークフォース リクエストを管理",
+        "subtitleJa": "休暇などの申請の確認や承認を、自然言語の会話で進められます",
+        "en": "Manage workforce requests in Microsoft 365 Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Dynamics 365 Customer Service"],
+        "categories": ["other"],
+        "importance": "notable",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Dynamics 365 Customer Service のスーパーバイザーとカスタマー サービス担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "労働力管理アプリに移動せず、会話の中で申請の確認や処理ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "アクセスは Dynamics 365 と Dataverse のセキュリティで管理される",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "特権、アクセス、およびセキュリティに関する考慮事項", "retrievedAt": "2026-11-21T07:30:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Dynamics 365 WEM の **MCP ツール**で、休暇・シフト交換・シフト入札の申請を自然言語で扱えます",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "概要", "retrievedAt": "2026-11-21T07:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "MCP ツールが Copilot と Dynamics 365・Dataverse を接続する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "概要", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "ユーザーはサービス エージェントと対話し、ツールの選択と呼び出しは自動", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "概要", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "休暇申請は会話内で承認・拒否でき、却下には理由が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "主な用途", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始めるには", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ツールの応答は、サインインしたユーザーの権限の範囲に限定される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "特権、アクセス、およびセキュリティに関する考慮事項", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "スーパーバイザーは自分の計画グループ、担当者は自分の記録を扱える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "特権、アクセス、およびセキュリティに関する考慮事項", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "決定ツールは休暇申請のみ対象で、シフト交換・入札は承認・拒否しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "特権、アクセス、およびセキュリティに関する考慮事項", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "すでに決定済みの申請は上書きされない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "特権、アクセス、およびセキュリティに関する考慮事項", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "提供ツール", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "list_wem_requests: 申請の一覧表示と絞り込み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "使用可能なツール", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "get_wem_request_details / decide_wem_time_off_request: 詳細取得と休暇の承認・却下", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "使用可能なツール", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "活用例", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "スーパーバイザーが保留中の休暇申請を依頼し、内容を確認して承認・拒否する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "概要", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "wem", "term": "ワークフォース エンゲージメント管理（WEM）", "type": "product", "oneLine": { "text": "Dynamics 365 のスケジューリングや労働力のリクエストを扱う機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "概要", "retrievedAt": "2026-11-21T07:30:00Z" }] } },
+        { "termKey": "mcp", "term": "モデル コンテキスト プロトコル（MCP）", "type": "term", "oneLine": { "text": "AI 体験が標準化されたアクションを呼び出すためのプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "概要", "retrievedAt": "2026-11-21T07:30:00Z" }] } },
+        { "termKey": "dataverse", "term": "Dataverse", "type": "product", "oneLine": { "text": "Dynamics 365 のデータを保持し、アクセス権限でツールの応答範囲を制御する基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "特権、アクセス、およびセキュリティに関する考慮事項", "retrievedAt": "2026-11-21T07:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "担当者も申請を承認できますか？",
+          "answer": { "text": "いいえ。担当者は自分の申請や状況を確認できます。承認・拒否はレビュアーの許可を持つスーパーバイザーが行います。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "Personas", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+        },
+        {
+          "question": "シフト交換の申請も承認できますか？",
+          "answer": { "text": "できません。決定機能は休暇申請のみが対象です。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locator": "特権、アクセス、およびセキュリティに関する考慮事項", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=581992",
+        "learn": [{ "title": "Dynamics 365 Workforce Engagement Management MCPツールの概要", "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
