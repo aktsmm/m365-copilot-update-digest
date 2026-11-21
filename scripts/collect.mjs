@@ -502,6 +502,10 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/onenote: suggested artifact creation in copilot notebooks/.test(text)) {
+    return "Copilot ノートブックでは、Microsoft 365 のナレッジとノートブック内のコンテンツに基づき、Word 文書、Excel ブック、PowerPoint プレゼンテーションなどの作成候補が提案されます。候補を選ぶと、Copilot が該当する成果物を生成します。";
+  }
+
   if (/microsoft copilot \(microsoft m365\): delegated prompt publishing for organization prompts/.test(text)) {
     return "管理者は Copilot アプリのホーム画面に組織向けのカスタム プロンプトをアップロードし、その公開をユーザー、Azure AD セキュリティ グループ、配布グループに委任できます。";
   }
