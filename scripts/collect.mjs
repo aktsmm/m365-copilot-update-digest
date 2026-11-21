@@ -862,6 +862,10 @@ function knownJapaneseRoadmapTitle(event) {
     return "Work IQ: レシピを実行";
   }
 
+  if (/work iq: listen/.test(text)) {
+    return "Work IQ: イベントをリッスン";
+  }
+
   if (/work iq: dynamic skills/.test(text)) {
     return "Work IQ: 動的スキル";
   }

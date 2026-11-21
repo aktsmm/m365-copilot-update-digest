@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "generatedAt": "2026-11-21T07:05:13.050Z",
+  "generatedAt": "2026-11-21T07:09:17.365Z",
   "events": [
     {
       "id": "m365-roadmap-rss-239078ff7442e68a",
@@ -62,6 +62,14 @@
       "summaryJa": "Dynamics 365 Workforce Engagement Management (WEM) は、Model Context Protocol (MCP) ツールを通じて Microsoft 365 Copilot と統合されます。これらのツールは Microsoft 365 Copilot を Dynamics 365 および Dataverse に接続するため、スーパーバイザーや顧客サービス担当者は自然言語を使用して従業員の要求に対応できます。",
       "summaryEn": "Dynamics 365 Workforce Engagement Management (WEM) integrates with Microsoft 365 Copilot through Model Context Protocol (MCP) tools. These tools connect Microsoft 365 Copilot with Dynamics 365 and Dataverse so supervisors and customer service representatives can use natural language to work with workforce requests....",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=581992",
+      "relatedDocuments": [
+        {
+          "title": "Dynamics 365 Workforce Engagement Management MCPツールの概要",
+          "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent",
+          "provenance": "source",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=581992"
+        }
+      ],
       "publishedAt": "2026-11-21T12:00:00.000Z",
       "capturedAt": "2026-11-21T07:05:13.050Z",
       "sourceLastSeen": "2026-11-21T07:05:13.050Z",
@@ -82,15 +90,7 @@
         "作成者向け"
       ],
       "importanceScore": 124,
-      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Dynamics 365 Workforce Engagement Management MCPツールの概要",
-          "url": "https://learn.microsoft.com/ja-jp/dynamics365/customer-service/develop/workforce-mcp-tools-overview-service-agent",
-          "provenance": "source",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=581992"
-        }
-      ]
+      "importanceReason": "提供開始済みで利用可否の確認に直結するため / 管理やガバナンスへの影響が大きいため"
     },
     {
       "id": "m365-roadmap-rss-33ddf53a72227078",
@@ -187,12 +187,22 @@
       "productArea": "Microsoft 365 Copilot",
       "section": "Microsoft 365 Copilot",
       "title": "Work IQ: Listen",
-      "titleJa": "仕事 IQ: 聞いてください",
+      "titleJa": "Work IQ: イベントをリッスン",
       "titleEn": "Work IQ: Listen",
       "summary": "Enable agents to listen for supported Work IQ events and respond as relevant changes occur.",
       "summaryJa": "エージェントがサポートされている Work IQ イベントをリッスンし、関連する変更が発生したときに応答できるようにします。",
       "summaryEn": "Enable agents to listen for supported Work IQ events and respond as relevant changes occur.",
       "url": "https://www.microsoft.com/microsoft-365/roadmap?id=570867",
+      "relatedDocuments": [
+        {
+          "title": "Work IQ Listen 開発者ガイド (プレビュー)",
+          "sourceTitle": "Work IQ Listen developer guide (preview)",
+          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen",
+          "provenance": "mcp",
+          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=570867",
+          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: listen, work iq"
+        }
+      ],
       "publishedAt": "2026-11-21T12:00:00.000Z",
       "capturedAt": "2026-11-21T07:05:13.050Z",
       "sourceLastSeen": "2026-11-21T07:05:13.050Z",
@@ -213,17 +223,7 @@
         "作成者向け"
       ],
       "importanceScore": 92,
-      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため",
-      "relatedDocuments": [
-        {
-          "title": "Work IQ Listen 開発者ガイド (プレビュー)",
-          "sourceTitle": "Work IQ Listen developer guide (preview)",
-          "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen",
-          "provenance": "mcp",
-          "evidenceUrl": "https://www.microsoft.com/microsoft-365/roadmap?id=570867",
-          "evidence": "Microsoft Learn MCP の検索・本文取得で更新の機能語を照合: listen, work iq"
-        }
-      ]
+      "importanceReason": "今後の展開計画や事前準備に影響するため / 管理やガバナンスへの影響が大きいため"
     }
   ]
 }
