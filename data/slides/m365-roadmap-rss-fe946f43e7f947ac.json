@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fe946f43e7f947ac",
+      "kind": "in-development",
+      "kindSource": "ring",
+      "label": "開発中",
+      "title": {
+        "ja": "Work IQ Listen: エージェントが職場イベントに反応",
+        "subtitleJa": "メールや予定表をポーリングせず、変化の通知を受けて動けます",
+        "en": "Work IQ: Listen"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "availability": [],
+        "status": "In development",
+        "products": ["Microsoft 365 Copilot"],
+        "categories": ["work-iq"],
+        "importance": "normal",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**エージェントやアプリを作る開発者**と、Microsoft 365 の管理者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "冒頭・開始する前に", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+        "change": { "text": "条件に合う職場イベントの通知を受け、返信の下書きなどを準備できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "冒頭", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試すには、テナントで Work IQ と Listen の有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "開始する前に", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "エージェントが**Work IQ のイベントをサブスクライブ**し、メールボックスや予定表をポーリングせずに、変化に応じて動けます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "冒頭", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "提供の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Work IQ のイベントを監視し、変化に応じて動くエージェントを実現する機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プレビュー カタログに 7 つのイベント シナリオ（未返信のフラグ付きメール、会議の要約など）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "イベント カタログ", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "既存の Work IQ MCP ツール経由で使う機能で、別の MCP ツールではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "冒頭", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Learn 上では Work IQ Listen はパブリック プレビューで、テナントでの有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "重要", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "機能・ツール名・スキーマは一般公開前に変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "重要", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "代理認証の Work IQ MCP サーバーのみ対応。REST・A2A・アプリのみのアクセスは不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "重要", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prepare",
+          "heading": "準備すること",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Work IQ の有効化、Entra アプリ登録、HTTPS コールバック エンドポイントが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "開始する前に", "retrievedAt": "2026-11-21T07:30:00Z" }] },
+            { "text": "通知は起動の合図のみ。データの読み取りは、ユーザーの委任トークンで別途行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "Listen の仕組み", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "billing",
+          "heading": "課金の目安",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "サブスクリプション作成とコンテキスト取得は Work IQ のクレジット消費率で課金。通知自体はプレビュー中は課金なし", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "クレジットの消費", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "work-iq", "term": "Work IQ", "type": "product", "oneLine": { "text": "Microsoft 365 の仕事のコンテキストを、エージェントやアプリが利用するための基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "開始する前に", "retrievedAt": "2026-11-21T07:30:00Z" }] } },
+        { "termKey": "listen", "term": "Work IQ Listen", "type": "feature", "oneLine": { "text": "エージェントやアプリが職場イベントをサブスクライブし、一致時に通知を受ける機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "冒頭", "retrievedAt": "2026-11-21T07:30:00Z" }] } },
+        { "termKey": "doorbell", "term": "ドアベル モデル", "type": "term", "oneLine": { "text": "通知はエージェントを起こすだけで、作業コンテンツやアクセス権は運ばない仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "Listen の仕組み", "retrievedAt": "2026-11-21T07:30:00Z" }] } },
+        { "termKey": "label-dev", "term": "開発中", "type": "label", "oneLine": { "text": "ロードマップ上で、開発が進められている段階（In development）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "通知を受けると、エージェントはデータを読めますか？",
+          "answer": { "text": "いいえ。通知は起動の合図で、読み取りにはユーザーの委任トークンで Work IQ へ接続して取得します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "Listen の仕組み", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+        },
+        {
+          "question": "課金はどうなりますか？",
+          "answer": { "text": "通知はプレビュー中は課金されず、サブスクリプション呼び出しとフェッチは Work IQ の料金が適用されます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locator": "クレジットの消費", "retrievedAt": "2026-11-21T07:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=570867",
+        "learn": [
+          { "title": "Work IQ Listen 開発者ガイド (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/extensibility/work-iq/listen", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
