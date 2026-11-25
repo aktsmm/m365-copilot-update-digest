@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "copilot-studio-techcommunity-blog-acdfab5dea58cd54",
+      "kind": "update",
+      "kindSource": "ring",
+      "label": "アップデート",
+      "title": {
+        "ja": "Copilot Studio エージェントのコストを管理する方法",
+        "subtitleJa": "使用量の把握・需要の予測・コスト管理の実践ガイドです",
+        "en": "How to manage costs for Copilot Studio agents"
+      },
+      "meta": {
+        "publishedJst": "2026-11-25",
+        "availability": [],
+        "status": "Update",
+        "products": ["Copilot Studio"],
+        "categories": ["copilot-studio", "agents"],
+        "importance": "notable",
+        "cloudInstances": [],
+        "platforms": [],
+        "productArea": "Copilot Studio",
+        "sourceName": "Copilot Studio Blog"
+      },
+      "audience": {
+        "who": { "text": "**Copilot Studio のエージェント作成者**と、利用コストを管理する管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントのクレジット消費を、作成時・運用時・予算計画時に把握しやすくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-11-26T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "使用量ベースの課金を使うなら、見積もりツールとモニターで消費を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "概要", "retrievedAt": "2026-11-26T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "**プレビュー・評価・モニター**でクレジット使用量を確認し、**見積もりツール**で月間消費を予測できます", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-11-26T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "対象の範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "作成中: プレビューと評価で、推定 Copilot クレジットをほぼリアルタイムに確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-11-26T00:00:00Z" }] },
+            { "text": "運用中: モニターの「推定クレジット使用」で、期間ごとの消費を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "最終クレジット消費を見る", "retrievedAt": "2026-11-26T00:00:00Z" }] },
+            { "text": "計画時: エージェント使用量見積もりツールで月間消費を予測", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "概要", "retrievedAt": "2026-11-26T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check",
+          "heading": "確認ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "プレビューと評価の値は近似値で、モニターは 1 日に数回更新される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "冒頭", "retrievedAt": "2026-11-26T00:00:00Z" }] },
+            { "text": "見積もりは保証ではなく、10〜20% のバッファーを上乗せする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "重要な免責事項", "retrievedAt": "2026-11-26T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "estimator-use",
+          "heading": "見積もりツールの使い方",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "低・中・大量のシナリオを比較し、結果を PDF で出力できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "結果をエクスポートする", "retrievedAt": "2026-11-26T00:00:00Z" }] },
+            { "text": "実際の消費は管理センターのレポートでアラート設定と合わせて監視する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "実際の消費量を監視する方法", "retrievedAt": "2026-11-26T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "next",
+          "heading": "次の一歩",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず 1 つのエージェントで見積もりと実績を比べ、差を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-credit", "term": "Copilot クレジット", "type": "term", "oneLine": { "text": "Copilot Studio のエージェント利用で消費される、使用量ベースの課金単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "概要", "retrievedAt": "2026-11-26T00:00:00Z" }] } },
+        { "termKey": "monitor", "term": "モニター", "type": "feature", "oneLine": { "text": "エージェントの最終的なクレジット消費を確認できる分析の画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locator": "最終クレジット消費を見る", "retrievedAt": "2026-11-26T00:00:00Z" }] } },
+        { "termKey": "usage-estimator", "term": "エージェント使用量見積もりツール", "type": "feature", "oneLine": { "text": "エージェント構成から月間の Copilot クレジット消費を予測するツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "概要", "retrievedAt": "2026-11-26T00:00:00Z" }] } },
+        { "termKey": "label-update", "term": "アップデート", "type": "label", "oneLine": { "text": "既存機能や運用に関する情報の更新を示す区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "見積もりツールの結果は、実際の請求額と一致しますか？",
+          "answer": { "text": "いいえ。見積もりは情報提供のみで、実際の消費量は使用パターンによって異なります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-26T00:00:00Z" }] }
+        },
+        {
+          "question": "クレジットが不足するとどうなりますか？",
+          "answer": { "text": "クレジットを追加購入するまで、エージェントは処理を停止します。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-26T00:00:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://techcommunity.microsoft.com/t5/copilot-studio-blog/how-to-manage-costs-for-copilot-studio-agents/ba-p/4576413",
+        "learn": [
+          { "title": "推定クレジット使用量の理解", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agents-experience/billing-credit-understand-display", "locale": "ja-jp" },
+          { "title": "エージェント使用量見積もりツール", "url": "https://learn.microsoft.com/ja-jp/microsoft-copilot-studio/agent-usage-estimator", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
