@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-93bc1a23ad0d092f",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Word の Copilot が既定でドキュメントを直接編集できるように",
+        "subtitleJa": "編集のオン切り替えが不要になり、変更は確認・元に戻せます",
+        "en": "Microsoft Copilot (Microsoft 365): Copilot can edit your document by default in Word"
+      },
+      "meta": {
+        "publishedJst": "2026-11-26",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Word", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Desktop", "Mac", "Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": {
+          "text": "**Word で Microsoft Copilot を使うユーザー**と、その管理者",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "編集をオンに切り替えなくても、Copilot が文書を直接編集してくれる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "ユーザーは必要に応じて、この編集エクスペリエンスをオフにできる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+              "locator": "2026年6月2日 Word",
+              "retrievedAt": "2026-11-26T08:30:00Z"
+            }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ユーザーが編集をオンに切り替えてから、Copilot に文書を編集させる必要がありました",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+              "locator": "2026年6月2日 Word 変更内容",
+              "retrievedAt": "2026-11-26T08:30:00Z"
+            }
+          ]
+        },
+        "after": {
+          "text": "Word の既定のチャットで、Copilot が**ドキュメントを直接編集**します。変更はすべて確認でき、元に戻せます",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+              "locator": "2026年6月2日 Word",
+              "retrievedAt": "2026-11-26T08:30:00Z"
+            }
+          ]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Word の Copilot の既定のチャットで、文書を直接編集できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "編集のオン切り替え操作なしで、Copilot が直接編集を行う",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word 変更内容",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Copilot が行った変更は追跡可能で、元に戻せる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word 変更内容",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Word の Copilot チャットに、段落の書き直しなどを依頼する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word 次の操作を試してください",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "編集内容がドキュメントに直接表示される。変更履歴で確認する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word 次の操作を試してください",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "リリース ノートでは、対象プラットフォームとして Web が記載されている",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "ユーザーは必要に応じてこのエクスペリエンスをオフにできる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能への影響",
+          "availability": "not-stated",
+          "priority": "detail"
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "見出しの調整やセクションの再編成など、書式変更を依頼できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word 次の操作を試してください",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "新しいコンテンツを挿入させ、変更履歴で確認する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                  "locator": "2026年6月2日 Word 次の操作を試してください",
+                  "retrievedAt": "2026-11-26T08:30:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "copilot-in-word",
+          "term": "Word の Copilot",
+          "type": "feature",
+          "oneLine": {
+            "text": "Word で文書の作成や編集を支援する Copilot のチャット体験。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                "locator": "2026年6月2日 Word",
+                "retrievedAt": "2026-11-26T08:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "direct-edit",
+          "term": "直接編集",
+          "type": "term",
+          "oneLine": {
+            "text": "Copilot が文書そのものに変更を加える動作で、変更は確認・元に戻しが可能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                "locator": "2026年6月2日 Word 変更内容",
+                "retrievedAt": "2026-11-26T08:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "track-changes",
+          "term": "変更履歴",
+          "type": "term",
+          "oneLine": {
+            "text": "Copilot が行った変更を確認するために使える、文書内の変更の記録。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                "locator": "2026年6月2日 Word 次の操作を試してください",
+                "retrievedAt": "2026-11-26T08:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "提供開始（GA）",
+          "type": "label",
+          "oneLine": {
+            "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
+      ],
+      "qa": [
+        {
+          "question": "ユーザーは直接編集をオフにできますか？",
+          "answer": {
+            "text": "はい。ユーザーは必要に応じてこのエクスペリエンスをオフにできます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                "locator": "2026年6月2日 Word",
+                "retrievedAt": "2026-11-26T08:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "question": "Copilot の変更を元に戻せますか？",
+          "answer": {
+            "text": "はい。Copilot が行った変更は確認でき、元に戻せます。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+                "locator": "2026年6月2日 Word",
+                "retrievedAt": "2026-11-26T08:30:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=557673",
+        "learn": [
+          {
+            "title": "Microsoft 365 Copilot のリリース ノート",
+            "url": "https://learn.microsoft.com/ja-jp/microsoft-365/copilot/release-notes",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
