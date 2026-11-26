@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-f10b91518e50a80a",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止・終了",
+      "title": {
+        "ja": "Edge のメニューでの要約・翻訳・引用の Microsoft Copilot 対応は提供中止",
+        "subtitleJa": "選択したコンテンツに対するメニュー機能の計画リリースがキャンセルされました",
+        "en": "Microsoft Edge: Summarization, Translation, and Citation will soon be supported by Microsoft Copilot and Microsoft 365 Copilot Chat in our menus"
+      },
+      "meta": {
+        "publishedJst": "2026-11-26",
+        "availability": [],
+        "status": null,
+        "products": ["Microsoft Edge", "Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "edge-windows"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft Edge",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Edge と Microsoft Copilot の利用者**、および管理者・作成者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Edge のメニューから要約・翻訳・引用を行う計画のリリースがキャンセルされた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "新機能は提供されないため、この項目に備えた展開準備は不要", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ブラウザーで強調表示したコンテンツに対し、Edge のメニューから Microsoft Copilot や Microsoft 365 Copilot Chat で要約・翻訳・引用を行う計画でしたが、このリリースはキャンセルされました", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "impact",
+          "heading": "影響",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "ロードマップ上で、計画中のリリースをキャンセルすると明記されている", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は Web、Worldwide (Standard Multi-Tenant) の計画項目", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Edge のサイドバーでは、現在のページ内容を踏まえた Copilot Chat の利用が可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-copilot-page-summary-results", "locator": "冒頭の注", "retrievedAt": "2026-11-26T08:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration",
+          "heading": "移行先",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "action-plan",
+          "heading": "対応計画",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "この機能を前提にした案内や展開計画があれば、取り下げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ページ内容へのアクセスは EdgeEntraCopilotPageContext ポリシーで管理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-copilot-page-summary-results", "locator": "グループ ポリシーを介したページ コンテンツへのエッジ アクセス", "retrievedAt": "2026-11-26T08:35:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "copilot-chat", "term": "Microsoft 365 Copilot Chat", "type": "product", "oneLine": { "text": "Edge のサイドバーなどで、現在のページ内容を踏まえてチャットできる Copilot の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-copilot-page-summary-results", "locator": "冒頭", "retrievedAt": "2026-11-26T08:35:00Z" }] } },
+        { "termKey": "page-context", "term": "コンテキストの根拠", "type": "term", "oneLine": { "text": "現在の Web ページを文脈にしてチャット会話を始める機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-copilot-page-summary-results", "locator": "冒頭の注", "retrievedAt": "2026-11-26T08:35:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止・終了（Retirement）", "type": "label", "oneLine": { "text": "ロードマップ上で、提供の終了や中止を示すステージ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "すでに使えている Edge の Copilot 機能も終了しますか？",
+          "answer": { "text": "ロードマップは、メニューでの要約・翻訳・引用という計画中のリリースのキャンセルを示すもので、既存機能の終了には触れていません。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Copilot による Edge のページ内容の利用を管理者が制限できますか？",
+          "answer": { "text": "はい。EdgeEntraCopilotPageContext グループ ポリシーで、テナント内のページ コンテンツへの Copilot のアクセスをブロックできます。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-copilot-page-summary-results", "locator": "グループ ポリシーを介したページ コンテンツへのエッジ アクセス", "retrievedAt": "2026-11-26T08:35:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=497135",
+        "learn": [
+          { "title": "Edge での Microsoft 365 Copilot Chat とページ コンテンツへのアクセス", "url": "https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-copilot-page-summary-results", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
