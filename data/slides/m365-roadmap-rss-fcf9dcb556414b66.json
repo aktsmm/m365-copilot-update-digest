@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fcf9dcb556414b66",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Word の Copilot Chat Agent mode で文書の作成・編集・改良が可能に",
+        "subtitleJa": "Microsoft Copilot ライセンスがなくても、チャットから文書を作成・編集できます",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Chat] Agent mode in Word enables conversational support to create, edit and refine document content from chat"
+      },
+      "meta": {
+        "publishedJst": "2026-11-26",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)"],
+        "categories": ["copilot-chat", "agents", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Copilot ライセンスを持たない Microsoft 365 ユーザー**と、その管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャットから自然言語で、新規・既存の文書の生成や編集を指示できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "管理者は Copilot コントロールで、Copilot Chat の利用や機能を管理できる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/copilot-overview", "locator": "Copilot コントロール", "retrievedAt": "2026-11-26T21:40:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": { "text": "Copilot Chat の**編集モード**で、新規・既存の文書を自然言語で生成・編集できます。必要に応じて確認の質問があり、変更後は実施内容と次の提案が示されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "チャットの編集モードで、文書の生成や編集を自然言語で指示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot は必要に応じて確認の質問をする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "変更後に、実施した内容と推奨される次のステップを要約", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "対象は Microsoft Copilot ライセンスのない Microsoft 365 ユーザー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Copilot Chat は copilot.cloud.microsoft や Microsoft 365 アプリからアクセスできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/copilot-overview", "locator": "Microsoft 365 Copilot (Basic) のライセンスとエクスペリエンス", "retrievedAt": "2026-11-26T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "提供範囲は Web 版・Worldwide (Standard Multi-Tenant)", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Basic 版の一部機能は公正使用制限の対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/copilot-overview", "locator": "ライセンス比較", "retrievedAt": "2026-11-26T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他の機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Copilot Chat (Basic) は主に Web データを使い、組織コンテンツはプロンプトで明示的に渡す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/copilot-overview", "locator": "Copilot Chat (Basic) ライセンスとエクスペリエンス", "retrievedAt": "2026-11-26T21:40:00Z" }] },
+            { "text": "Copilot アプリの Word エージェントは有料の Microsoft 365 Copilot ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage/wordexcelppt-agents", "locator": "制限事項とサポート", "retrievedAt": "2026-11-26T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "導入のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "まず小規模な文書の下書きや編集で試し、結果を確認してから活用を広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "Agent mode", "type": "feature", "oneLine": { "text": "チャットでの指示をもとに、Copilot が文書の生成や編集を進める動作モード。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-chat-basic", "term": "Copilot Chat (Basic)", "type": "product", "oneLine": { "text": "対象の Microsoft 365 ライセンスに含まれる、主に Web データを使うエンタープライズ対応の AI チャット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/copilot-overview", "locator": "Copilot Chat (Basic) ライセンスとエクスペリエンス", "retrievedAt": "2026-11-26T21:40:00Z" }] } },
+        { "termKey": "copilot-controls", "term": "Copilot コントロール", "type": "feature", "oneLine": { "text": "管理センターで Copilot Chat の体験やエージェントの利用を管理する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/plan/copilot-overview", "locator": "Copilot コントロール", "retrievedAt": "2026-11-26T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "この Agent mode に Microsoft Copilot ライセンスは必要ですか？",
+          "answer": { "text": "いいえ。ロードマップでは、Microsoft Copilot ライセンスを持たない Microsoft 365 ユーザー向けと説明されています。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "Copilot アプリの Word エージェントと同じものですか？",
+          "answer": { "text": "Learn の Word エージェントは有料の Microsoft 365 Copilot ライセンスが必要と記載されており、本更新とは提供対象が異なります。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/manage/wordexcelppt-agents", "locator": "制限事項とサポート", "retrievedAt": "2026-11-26T21:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=543241",
+        "learn": [
+          { "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/plan/copilot-overview", "locale": "ja-jp" },
+          { "title": "Word、Excel、PowerPoint エージェントの使用を開始する", "url": "https://learn.microsoft.com/ja-jp/copilot/manage/wordexcelppt-agents", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
