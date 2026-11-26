@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "slides": [
+    {
+      "key": "m365-roadmap-rss-fcf9dcb556414b66",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "提供開始",
+      "title": {
+        "ja": "Word のエージェント モードで、チャットから文書を作成・編集できるように",
+        "subtitleJa": "Copilot ライセンスがなくても、自然言語で文書の編集を指示できます",
+        "en": "Microsoft Copilot (Microsoft 365): [Copilot Chat] Agent mode in Word enables conversational support to create, edit and refine document content from chat"
+      },
+      "meta": {
+        "publishedJst": "2026-11-26",
+        "availability": [],
+        "status": "Launched",
+        "products": ["Microsoft Copilot (Microsoft 365)", "Word"],
+        "categories": ["copilot-chat", "agents", "office-apps"],
+        "importance": "high",
+        "cloudInstances": ["Worldwide (Standard Multi-Tenant)"],
+        "platforms": ["Web"],
+        "productArea": "Microsoft 365 Copilot",
+        "sourceName": "Microsoft 365 Roadmap"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Copilot ライセンスを持たない **Microsoft 365 ユーザー**と、Word で文書を作る人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "チャットで指示するだけで、新規・既存の文書の作成と編集を進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "unknown",
+        "summary": { "text": "管理者の対応要否は、現時点の公開情報からは判断できません", "origin": "editorial", "assertion": "fact", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "チャットの編集モードで、**自然言語により文書の生成と編集を指示**できます。必要に応じて確認の質問があり、変更後は実施内容と次の提案がまとめて示されます", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "チャットの編集モードで、自然言語により文書の生成と編集を指示する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "必要に応じて Copilot が確認の質問をする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "変更後に、実施した内容と推奨される次の操作がまとめて示される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "使い始めるには",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "Microsoft Copilot ライセンスのない Microsoft 365 ユーザーが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "提供先は Web 版の Word（Worldwide マルチテナント）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "アドオン ライセンスなしの Copilot 機能は、公正使用制限の対象になる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Microsoft 365 Copilot (Basic) のライセンスとエクスペリエンス", "retrievedAt": "2026-11-26T08:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "Basic ライセンスでも Word で文書の下書き・書き換え・要約ができる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Microsoft 365 Copilot (Basic) のアプリ内機能", "retrievedAt": "2026-11-26T08:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "活用のヒント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            { "text": "既存文書の一部の書き直しなどを、チャットで指示して試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-mode", "term": "エージェント モード", "type": "feature", "oneLine": { "text": "チャットから自然言語で文書の生成・編集を指示できるモード。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "copilot-basic", "term": "Microsoft 365 Copilot (Basic)", "type": "term", "oneLine": { "text": "Copilot アドオン ライセンスはないが、Word や Excel などアプリ内の Copilot 機能を使えるユーザーを指す。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Microsoft 365 Copilot (Basic) のライセンスとエクスペリエンス", "retrievedAt": "2026-11-26T08:50:00Z" }] } },
+        { "termKey": "fair-use", "term": "公正使用制限", "type": "term", "oneLine": { "text": "一部の Copilot 機能に適用される利用上の制限。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locator": "Microsoft 365 Copilot (Basic) のライセンスとエクスペリエンス", "retrievedAt": "2026-11-26T08:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "提供開始（GA）", "type": "label", "oneLine": { "text": "ロードマップ上で、一般に提供が始まった段階（Launched）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "qa": [
+        {
+          "question": "Copilot ライセンスがなくても使えますか？",
+          "answer": { "text": "ロードマップでは、Microsoft Copilot ライセンスのない Microsoft 365 ユーザーが対象とされています。ただし一部機能は公正使用制限の対象になることがあります。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "question": "どのプラットフォームで使えますか？",
+          "answer": { "text": "ロードマップのプラットフォームは Web です。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        }
+      ],
+      "references": {
+        "announcement": "https://www.microsoft.com/microsoft-365/roadmap?id=543241",
+        "learn": [
+          { "title": "Microsoft Copilot の概要", "url": "https://learn.microsoft.com/ja-jp/copilot/microsoft-365/microsoft-365-copilot-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
