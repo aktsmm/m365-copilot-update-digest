@@ -842,6 +842,10 @@ function knownJapaneseRoadmapTitle(event) {
     return "Word の Copilot Chat Agent mode で文書を作成・編集・改良";
   }
 
+  if (/microsoft copilot \(microsoft 365\): copilot can edit your document by default in word/.test(text)) {
+    return "Word での Copilot による既定のドキュメント編集";
+  }
+
   if (/microsoft copilot \(microsoft 365\): copilot workspaces updates/.test(text)) {
     return "Work IQ による Copilot ワークスペースの提案と共同作業";
   }
