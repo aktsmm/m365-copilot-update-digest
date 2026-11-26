@@ -502,6 +502,18 @@ function knownJapaneseRoadmapSummary(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
 
+  if (/microsoft edge: summarization, translation, and citation will soon be supported by microsoft copilot and microsoft 365 copilot chat in our menus/.test(text)) {
+    return "ブラウザーで選択したコンテンツから開く Edge のメニューで、Microsoft Copilot と Microsoft 365 Copilot Chat による要約、翻訳、引用を利用できる予定でした。なお、この提供計画は中止されました。";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): \[copilot chat\] agent mode in word enables conversational support to create, edit and refine document content from chat/.test(text)) {
+    return "Microsoft 365 Copilot ライセンスのないユーザーも利用できます。チャットの編集モードで自然言語を使い、新規・既存の Word 文書を作成、編集、改良できます。必要に応じて Copilot が確認質問を行い、編集後に実施内容と推奨する次の手順をまとめます。";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): copilot memory in researcher/.test(text)) {
+    return "Researcher 内の Copilot メモリは、過去のやり取りから関連するコンテキストを引き出し、複雑なトピックの調査時に洞察の根拠付け、出力のパーソナライズ、繰り返し設定の削減に役立ちます。ただし、このロードマップ項目は現状に即していないとして、ロードマップから削除される予定です。";
+  }
+
   if (/microsoft copilot \(microsoft m365\): delegated prompt publishing for organization prompts/.test(text)) {
     return "管理者は Copilot アプリのホーム画面に組織向けのカスタム プロンプトをアップロードし、その公開をユーザー、Azure AD セキュリティ グループ、配布グループに委任できます。";
   }
@@ -821,6 +833,14 @@ function buildJapaneseFallbackSummary(event) {
 function knownJapaneseRoadmapTitle(event) {
   const text =
     `${event.titleEn || event.title || ""}\n${event.summaryEn || event.summary || ""}`.toLowerCase();
+
+  if (/microsoft edge: summarization, translation, and citation will soon be supported by microsoft copilot and microsoft 365 copilot chat in our menus/.test(text)) {
+    return "Edge の選択テキスト向け Copilot 要約・翻訳・引用機能の提供を中止";
+  }
+
+  if (/microsoft copilot \(microsoft 365\): \[copilot chat\] agent mode in word enables conversational support to create, edit and refine document content from chat/.test(text)) {
+    return "Word の Copilot Chat Agent mode で文書を作成・編集・改良";
+  }
 
   if (/microsoft copilot \(microsoft 365\): copilot workspaces updates/.test(text)) {
     return "Work IQ による Copilot ワークスペースの提案と共同作業";
